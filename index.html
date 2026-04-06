@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Threat Intel Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="shield-icon">🛡️</div>
+                    <div>
+                        <h1>Threat Intel Dashboard</h1>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="live-clock">
+                        <div class="time" id="live-time">--:--:--</div>
+                        <div class="updated">Aggiornato: <span id="last-updated-time">--</span></div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-icon" id="theme-toggle" title="Cambia Tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="btn-icon" id="btn-refresh" title="Aggiorna Dati">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                        <button class="btn-telegram" id="btn-telegram-notify">🔔 Notifiche</button>
+                        <button class="btn-telegram" id="btn-export-report" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">📥 Export</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- STATS GRID -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">CVE Critiche Oggi</div>
+                        <div class="stat-value" id="critical-cves-count">0</div>
+                    </div>
+                    <div class="stat-icon">🔴</div>
+                </div>
+                <div class="mini-chart-wrapper">
+                    <canvas id="miniChartCritical" class="mini-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">CISA KEV Attivi</div>
+                        <div class="stat-value" id="cisa-kev-count">0</div>
+                    </div>
+                    <div class="stat-icon">⚠️</div>
+                </div>
+                <div class="stat-sub warning" id="kev-deadline-warning"></div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Tech più Mirata</div>
+                        <div class="stat-value" id="top-targeted-tech" style="font-size: 1.5rem;">-</div>
+                    </div>
+                    <div class="stat-icon">🎯</div>
+                </div>
+                <div class="stat-sub" id="second-targeted-tech"></div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Threat Score Oggi</div>
+                        <div class="stat-value" id="threat-score">0</div>
+                    </div>
+                    <div class="stat-icon">📊</div>
+                </div>
+                <div class="cvss-gauge" id="threat-gauge" data-score="0"></div>
+            </div>
+        </section>
+
+        <!-- THREAT TIMELINE CHART -->
+        <div class="chart-container">
+            <h3 class="chart-title">📈 Timeline Minacce (Ultimi 14 giorni)</h3>
+            <div class="chart-wrapper">
+                <canvas id="threatTimelineChart"></canvas>
+            </div>
+        </div>
+
+        <!-- VENDOR RISK MATRIX -->
+        <div class="vendor-matrix">
+            <h3 class="chart-title">🏢 Matrice Rischio Vendor (Ultimi 7 giorni)</h3>
+            <div class="vendor-grid" id="vendor-grid"></div>
+        </div>
+
+        <!-- FILTERS -->
+        <section class="filter-bar">
+            <div class="filter-group">
+                <label for="severity-filter">Severità Minima (CVSS): <span id="severity-value">7.0</span></label>
+                <input type="range" id="severity-filter" min="0" max="10" step="0.1" value="7.0">
+            </div>
+            <div class="filter-group">
+                <input type="text" id="tech-search" placeholder="Cerca Vendor/Tecnologia...">
+            </div>
+            <div class="filter-group">
+                <select id="source-filter">
+                    <option value="all">Tutte le sorgenti</option>
+                    <option value="nvd">NVD NIST</option>
+                    <option value="cisa">CISA KEV</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <select id="vector-filter">
+                    <option value="all">Tutti i vettori (AV)</option>
+                    <option value="NETWORK">🌐 Network</option>
+                    <option value="ADJACENT">📡 Adjacent</option>
+                    <option value="LOCAL">💻 Local</option>
+                    <option value="PHYSICAL">🔌 Physical</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-reset" id="btn-reset-filters">Reset filtri</button>
+                <div class="filter-badge" id="filter-count" style="display: none;">0</div>
+            </div>
+        </section>
+
+        <!-- TABS -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="threats">🔴 Minacce (CVE)</button>
+            <button class="tab-btn" data-tab="kev">⚠️ CISA KEV Spotlight</button>
+            <button class="tab-btn" data-tab="news">📰 Security News</button>
+            <button class="tab-btn" data-tab="watchlist">⭐ Watchlist</button>
+        </nav>
+
+        <!-- TAB: THREATS -->
+        <div id="threats" class="tab-content active">
+            <div id="threat-cards-container" class="cards-grid">
+                <!-- Threat cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- TAB: KEV SPOTLIGHT -->
+        <div id="kev" class="tab-content">
+            <div id="kev-spotlight-container" class="cards-grid">
+                <!-- KEV cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- TAB: NEWS -->
+        <div id="news" class="tab-content">
+            <div class="news-grid">
+                <div class="news-column">
+                    <h2>HackerNews</h2>
+                    <div id="hn-news-container"></div>
+                </div>
+                <div class="news-column">
+                    <h2>Reddit r/netsec</h2>
+                    <div id="reddit-news-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: WATCHLIST -->
+        <div id="watchlist" class="tab-content">
+            <div class="watchlist-header">
+                <h2>⭐ Le Tue Minacce Monitorate</h2>
+                <p>CVE e tecnologie salvate per un monitoraggio rapido.</p>
+            </div>
+            <div id="watchlist-container" class="cards-grid">
+                <!-- Watchlist items will be inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL FOR CVE DETAILS -->
+    <div id="cveModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-cve-id"></h2>
+                <button class="btn-close" id="btn-close-modal">&times;</button>
+            </div>
+
+            <div class="modal-section">
+                <h3>Descrizione</h3>
+                <p id="modal-description"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>CVSS Vector</h3>
+                <div class="cvss-vector" id="modal-cvss-vector"></div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Versioni Interessate</h3>
+                <div id="modal-affected-versions"></div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Riferimenti</h3>
+                <ul class="references-list" id="modal-references"></ul>
+            </div>
+
+            <div class="modal-actions">
+                <a id="btn-nvd-link" class="btn-primary" target="_blank">Apri in NVD</a>
+                <a id="btn-exploit-db-link" class="btn-secondary" target="_blank">Cerca in Exploit-DB</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELEGRAM NOTIFICATION MODAL -->
+    <div id="telegramModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">🔔 Attiva Notifiche Telegram</h2>
+                <button class="btn-close" id="btn-close-telegram-modal">&times;</button>
+            </div>
+
+            <div class="modal-section">
+                <h3>Come configurare</h3>
+                <ol>
+                    <li>Apri Telegram e cerca <strong>@YourBotName</strong></li>
+                    <li>Invia il comando <code>/start</code></li>
+                    <li>Riceverai notifiche giornaliere sulle minacce critiche</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <p class="success">✅ Notifiche Telegram configurate con successo!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-item active" data-tab="threats">
+            <div class="mobile-nav-icon">🔴</div>
+            <div class="mobile-nav-label">Minacce</div>
+        </div>
+        <div class="mobile-nav-item" data-tab="kev">
+            <div class="mobile-nav-icon">⚠️</div>
+            <div class="mobile-nav-label">KEV</div>
+        </div>
+        <div class="mobile-nav-item" data-tab="news">
+            <div class="mobile-nav-icon">📰</div>
+            <div class="mobile-nav-label">News</div>
+        </div>
+        <div class="mobile-nav-item" data-tab="watchlist">
+            <div class="mobile-nav-icon">⭐</div>
+            <div class="mobile-nav-label">Watchlist</div>
+        </div>
+    </nav>
+
+    <footer style="text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.9rem;">
+        <div id="api-status-container" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.75rem;">
+            <div class="api-status-item"><span class="status-dot" id="status-nvd"></span> NVD NIST</div>
+            <div class="api-status-item"><span class="status-dot" id="status-cisa"></span> CISA KEV</div>
+            <div class="api-status-item"><span class="status-dot" id="status-epss"></span> EPSS FIRST</div>
+        </div>
+        <p>&copy; 2026 Cyber Threat Intelligence Dashboard. Dati da NVD, CISA, HN e Reddit.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
