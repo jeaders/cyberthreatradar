@@ -2,11 +2,174 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-39987",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-04-09T18:17:02.807",
+                "lastModified": "2026-04-23T20:15:29.690",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "marimo is a reactive Python notebook. Prior to 0.23.0, Marimo has a Pre-Auth RCE vulnerability. The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands. Unlike other WebSocket endpoints (e.g., /ws) that correctly call validate_auth() for authentication, the /terminal/ws endpoint only checks the running mode and platform support before accepting connections, completely skipping authentication verification. This vulnerability is fixed in 0.23.0."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-23",
+                "cisaActionDue": "2026-05-07",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Marimo Remote Code Execution Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:coreweave:marimo:*:*:*:*:*:python:*:*",
+                                        "versionEndExcluding": "0.23.0",
+                                        "matchCriteriaId": "EFA40E82-022F-42C3-A141-F4493A2A3E57"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/marimo-team/marimo/commit/c24d4806398f30be6b12acd6c60d1d7c68cfd12a",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/marimo-team/marimo/pull/9098",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-39987",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.sysdig.com/blog/marimo-oss-python-notebook-rce-from-disclosure-to-exploitation-in-under-10-hours",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.069890000",
+                    "percentile": "0.914920000"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-33825",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-04-14T18:17:35.100",
-                "lastModified": "2026-04-22T23:16:31.083",
-                "vulnStatus": "Modified",
+                "lastModified": "2026-04-23T17:26:30.713",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -78,16 +241,22 @@
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33825",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     },
                     {
                         "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.000620000",
-                    "percentile": "0.192660000"
+                    "epss": "0.137620000",
+                    "percentile": "0.943090000"
                 }
             }
         },
@@ -96,7 +265,7 @@
                 "id": "CVE-2026-20122",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-02-25T17:25:28.170",
-                "lastModified": "2026-04-21T11:59:56.777",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -153,6 +322,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-04-23",
+                "cisaRequiredAction": "Please adhere to CISA\u2019s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlines in CISA\u2019s Emergency Directive 26-03 (URL listed below in Notes) and CISA\u2019s \u201cHunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
+                "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability",
                 "weaknesses": [
                     {
                         "source": "psirt@cisco.com",
@@ -227,7 +400,7 @@
                 ],
                 "epss": {
                     "epss": "0.011240000",
-                    "percentile": "0.783160000"
+                    "percentile": "0.783320000"
                 }
             }
         },
@@ -371,7 +544,7 @@
                 ],
                 "epss": {
                     "epss": "0.013900000",
-                    "percentile": "0.803950000"
+                    "percentile": "0.804090000"
                 }
             }
         },
@@ -380,7 +553,7 @@
                 "id": "CVE-2025-2749",
                 "sourceIdentifier": "disclosure@vulncheck.com",
                 "published": "2025-03-24T19:15:52.400",
-                "lastModified": "2026-04-21T12:48:29.933",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -417,6 +590,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-05-04",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Kentico Xperience Path Traversal Vulnerability",
                 "weaknesses": [
                     {
                         "source": "disclosure@vulncheck.com",
@@ -483,8 +660,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.035020000",
-                    "percentile": "0.876340000"
+                    "epss": "0.030240000",
+                    "percentile": "0.866570000"
                 }
             }
         },
@@ -493,7 +670,7 @@
                 "id": "CVE-2023-27351",
                 "sourceIdentifier": "zdi-disclosures@trendmicro.com",
                 "published": "2023-04-20T16:15:07.723",
-                "lastModified": "2026-04-21T12:48:26.657",
+                "lastModified": "2026-04-21T13:00:03.370",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -548,6 +725,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-05-04",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "PaperCut NG/MF Improper Authentication Vulnerability",
                 "weaknesses": [
                     {
                         "source": "zdi-disclosures@trendmicro.com",
@@ -655,7 +836,7 @@
                 ],
                 "epss": {
                     "epss": "0.861040000",
-                    "percentile": "0.993990000"
+                    "percentile": "0.994000000"
                 }
             }
         },
@@ -664,7 +845,7 @@
                 "id": "CVE-2025-48700",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2025-06-23T15:15:27.930",
-                "lastModified": "2026-04-21T12:48:23.763",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -701,6 +882,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-04-23",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
                 "weaknesses": [
                     {
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
@@ -1231,7 +1416,7 @@
                 ],
                 "epss": {
                     "epss": "0.224050000",
-                    "percentile": "0.958520000"
+                    "percentile": "0.958560000"
                 }
             }
         },
@@ -1240,7 +1425,7 @@
                 "id": "CVE-2026-20128",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-02-25T17:25:30.150",
-                "lastModified": "2026-04-21T12:48:20.987",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -1277,6 +1462,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-04-23",
+                "cisaRequiredAction": "Please adhere to CISA\u2019s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlines in CISA\u2019s Emergency Directive 26-03 (URL listed below in Notes) and CISA\u2019s \u201cHunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
+                "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Manager Storing Passwords in a Recoverable Format Vulnerability",
                 "weaknesses": [
                     {
                         "source": "psirt@cisco.com",
@@ -1350,8 +1539,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.000620000",
-                    "percentile": "0.192530000"
+                    "epss": "0.000530000",
+                    "percentile": "0.166460000"
                 }
             }
         },
@@ -1500,8 +1689,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.454070000",
-                    "percentile": "0.976220000"
+                    "epss": "0.421230000",
+                    "percentile": "0.974570000"
                 }
             }
         },
@@ -1510,7 +1699,7 @@
                 "id": "CVE-2024-27199",
                 "sourceIdentifier": "cve@jetbrains.com",
                 "published": "2024-03-04T18:15:09.377",
-                "lastModified": "2026-04-21T12:48:17.757",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -1567,6 +1756,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-05-04",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "JetBrains TeamCity Relative Path Traversal Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@jetbrains.com",
@@ -1652,8 +1845,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.920160000",
-                    "percentile": "0.997070000"
+                    "epss": "0.917440000",
+                    "percentile": "0.996890000"
                 }
             }
         },
@@ -1778,8 +1971,1041 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.596350000",
-                    "percentile": "0.982620000"
+                    "epss": "0.625230000",
+                    "percentile": "0.983790000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2009-0238",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2009-02-25T16:30:00.343",
+                "lastModified": "2026-04-22T16:42:50.857",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Microsoft Office Excel 2000 SP3, 2002 SP3, 2003 SP3, and 2007 SP1; Excel Viewer 2003 Gold and SP3; Excel Viewer; Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP1; and Excel in Microsoft Office 2004 and 2008 for Mac allow remote attackers to execute arbitrary code via a crafted Excel document that triggers an access attempt on an invalid object, as exploited in the wild in February 2009 by Trojan.Mdropper.AC."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Microsoft Office Excel 2000 SP3, 2002 SP3, 2003 SP3 y 2007 SP1; Excel Viewer 2003 Gold y SP3; Excel Viewer; Compatibility Pack para Word, Excel y PowerPoint 2007 File Formats SP1; y Excel de Microsoft Office 2004 y 2008 para Mac; permiten a atacantes remotos ejecutar c\u00f3digo de su elecci\u00f3n a trav\u00e9s de un documento Excel manipulado que provoca un intento de acceso a un objeto no v\u00e1lido, tal y como se ha explotado libremente en Febrero 2009 por MDropper.XR."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "baseScore": 9.3,
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE"
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10.0,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-14",
+                "cisaActionDue": "2026-04-28",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Microsoft Office Remote Code Execution",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:excel:2000:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "439B26BA-376C-4D6B-B7BA-B66B8BDA8E37"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:excel:2002:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "896E23B1-AB34-43FF-96F3-BA6ED7F162AF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:excel:2003:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CEBB33CD-CACF-4EB8-8B5F-8E1CB8D7A440"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:excel:2007:sp1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F703901F-AD7C-42E7-BBFA-529A8C510D83"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:excel_viewer:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "971EC323-267F-4DAF-BA3B-10A47A9F1ADA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2004:*:*:*:*:macos:*:*",
+                                        "matchCriteriaId": "0B191155-67F2-4C6E-BD0C-AF5AF6F04BA1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2008:*:*:*:*:macos:*:*",
+                                        "matchCriteriaId": "421ACF1B-1B21-4416-98ED-BAA5C210EAE5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_compatibility_pack:2007:sp1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C5C94F2C-786B-45E4-B80A-FC668D917014"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_excel_viewer:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4A2613CE-C469-43AE-A590-87CE1FAADA8B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_excel_viewer:2003:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B18C291F-57C2-4328-8FCF-3C1A27B0D18D"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://blogs.zdnet.com/security/?p=2658",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://isc.sans.org/diary.html?storyid=5923",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Press/Media Coverage"
+                        ]
+                    },
+                    {
+                        "url": "http://securitytracker.com/id?1021744",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.microsoft.com/technet/security/advisory/968272.mspx",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/33870",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.symantec.com/business/security_response/writeup.jsp?docid=2009-022310-4202-99",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-104A.html",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "http://www.vupen.com/english/advisories/2009/1023",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-009",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/48875",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A5968",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://blogs.zdnet.com/security/?p=2658",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://isc.sans.org/diary.html?storyid=5923",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Press/Media Coverage"
+                        ]
+                    },
+                    {
+                        "url": "http://securitytracker.com/id?1021744",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.microsoft.com/technet/security/advisory/968272.mspx",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/33870",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.symantec.com/business/security_response/writeup.jsp?docid=2009-022310-4202-99",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-104A.html",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "http://www.vupen.com/english/advisories/2009/1023",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-009",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/48875",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A5968",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2009-0238",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.749130000",
+                    "percentile": "0.988790000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-32201",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-04-14T18:17:27.160",
+                "lastModified": "2026-04-14T19:37:08.297",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper input validation in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                                "baseScore": 6.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.5
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-14",
+                "cisaActionDue": "2026-04-28",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Microsoft SharePoint Server Improper Input Validation Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-20"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
+                                        "versionEndExcluding": "16.0.19725.20210",
+                                        "matchCriteriaId": "5CA92EAC-72F0-43F4-A8E0-FA40C57AEF01"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
+                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32201",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-32201",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.079370000",
+                    "percentile": "0.920740000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2012-1854",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2012-07-10T21:55:05.587",
+                "lastModified": "2026-04-22T16:05:40.017",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Untrusted search path vulnerability in VBE6.dll in Microsoft Office 2003 SP3, 2007 SP2 and SP3, and 2010 Gold and SP1; Microsoft Visual Basic for Applications (VBA); and Summit Microsoft Visual Basic for Applications SDK allows local users to gain privileges via a Trojan horse DLL in the current working directory, as demonstrated by a directory that contains a .docx file, aka \"Visual Basic for Applications Insecure Library Loading Vulnerability,\" as exploited in the wild in July 2012."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de b\u00fasqueda de ruta no confiable (\"Untrusted search path\") en   VBE6.dll en Microsoft Office 2003 SP3, 2007 SP2 y SP3, y 2010 Gold y SP1; Microsoft Visual Basic para Applications (VBA); y Summit Microsoft Visual Basic para Applications SDK permite a usuarios locales conseguir privilegios a trav\u00e9s de un troyano dll en el directorio de trabajo actual, como lo demuestra un directorio que contiene un archivo. docx, tambi\u00e9n conocido como vulnerabilidad \"Visual Basic para la carga de librer\u00edas inseguras\",\" como fue  explotado en julio de 2012."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+                                "baseScore": 6.9,
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE"
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 3.4,
+                            "impactScore": 10.0,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-13",
+                "cisaActionDue": "2026-04-27",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Microsoft Visual Basic for Applications Insecure Library Loading Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-Other"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-426"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2003:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A332D04D-CC8C-4F68-A261-BA2F2D8EAD1E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "08AF794A-435D-4171-9DBB-EB7FAED96DBA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FEECD12A-5BEF-4675-B62E-86CF4A7474D7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x64:*",
+                                        "matchCriteriaId": "649B67CD-30E7-447F-82EA-5B1F5FC124EA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x86:*",
+                                        "matchCriteriaId": "67785194-79D6-40DB-AFBF-81D4E7F5D80C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x64:*",
+                                        "matchCriteriaId": "BA85D64C-DAC2-4B41-AB84-1FF76F02F677"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x86:*",
+                                        "matchCriteriaId": "49D1ACFD-4E9F-4D6F-997B-2BE50D65A35C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "390665EF-39A5-4FB7-93D1-CC5D3DEDEB93"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications_sdk:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "99D0A944-E18D-4E24-8614-CE82FD201384"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://learn.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-046",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2012-1854",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/426.html 'CWE-426: Untrusted Search Path'",
+                "epss": {
+                    "epss": "0.042730000",
+                    "percentile": "0.888680000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-60710",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2025-11-11T18:15:39.073",
+                "lastModified": "2026-04-14T14:44:19.867",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper link resolution before file access ('link following') in Host Process for Windows Tasks allows an authorized attacker to elevate privileges locally."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-13",
+                "cisaActionDue": "2026-04-27",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Microsoft Windows Link Following Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-59"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.0.26100.7392",
+                                        "matchCriteriaId": "8DCD2A6E-7CD0-4FCC-AC11-5A1470776C24"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.0.26200.7392",
+                                        "matchCriteriaId": "8EA08CDD-D682-403D-8B50-879EB4D88C67"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.0.26100.7392",
+                                        "matchCriteriaId": "35BBEADA-D039-479B-A1BA-B2A7E37235BE"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-60710",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2025-60710-detection-script-eop-vulnerability-in-host-process-for-windows-tasks",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2025-60710-mitigation-script-eop-vulnerability-in-host-process-for-windows-tasks",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-60710",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.136110000",
+                    "percentile": "0.942740000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-3502",
+                "sourceIdentifier": "cve@checkpoint.com",
+                "published": "2026-03-30T19:16:27.053",
+                "lastModified": "2026-04-03T11:40:57.390",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "TrueConf Client descarga c\u00f3digo de actualizaci\u00f3n de la aplicaci\u00f3n y lo aplica sin realizar verificaci\u00f3n. Un atacante que es capaz de influir en la ruta de entrega de la actualizaci\u00f3n puede sustituir una carga \u00fatil de actualizaci\u00f3n manipulada. Si la carga \u00fatil es ejecutada o instalada por el actualizador, esto puede resultar en ejecuci\u00f3n de c\u00f3digo arbitrario en el contexto del proceso de actualizaci\u00f3n o del usuario."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@checkpoint.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "REQUIRED",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 6.0
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-02",
+                "cisaActionDue": "2026-04-16",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-494"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf:*:*:*:*:*:windows:*:*",
+                                        "versionEndExcluding": "8.5.3.884",
+                                        "matchCriteriaId": "C61E9BE0-CED2-4518-933B-7538A4E8F890"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://trueconf.com/blog/update/trueconf-8-5",
+                        "source": "cve@checkpoint.com",
+                        "tags": [
+                            "Product",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3502",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.024210000",
+                    "percentile": "0.851740000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-53521",
+                "sourceIdentifier": "f5sirt@f5.com",
+                "published": "2025-10-15T14:15:48.377",
+                "lastModified": "2026-04-02T19:00:01.543",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).\u00a0\u00a0\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "f5sirt@f5.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "f5sirt@f5.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-03-27",
+                "cisaActionDue": "2026-03-30",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "f5sirt@f5.com",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-121"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.1.0",
+                                        "versionEndExcluding": "15.1.10.8",
+                                        "matchCriteriaId": "A7A0C1CA-EDEF-463F-B7C8-8B9E67239FC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "16.1.0",
+                                        "versionEndExcluding": "16.1.6.1",
+                                        "matchCriteriaId": "6494E2A7-1473-46C0-97F8-90827D9466AA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.1.0",
+                                        "versionEndExcluding": "17.1.3",
+                                        "matchCriteriaId": "96D35435-27A7-4A88-9432-1F5AB0112B8C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.5.0",
+                                        "versionEndExcluding": "17.5.1.3",
+                                        "matchCriteriaId": "252ED1A4-5F29-4440-B1BA-9621E6791812"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://my.f5.com/manage/s/article/K000156741",
+                        "source": "f5sirt@f5.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-53521",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.074520000",
+                    "percentile": "0.917890000"
                 }
             }
         },
@@ -2233,12 +3459,178 @@
                 ],
                 "epss": {
                     "epss": "0.008680000",
-                    "percentile": "0.752180000"
+                    "percentile": "0.752380000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-66376",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-01-05T15:15:44.903",
+                "lastModified": "2026-03-18T20:13:37.087",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Zimbra Collaboration (ZCS) 10 before 10.0.18 and 10.1 before 10.1.13 allows Classic UI stored XSS via Cascading Style Sheets (CSS) @import directives in an HTML e-mail message."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                                "baseScore": 7.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.7
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                                "baseScore": 6.1,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 2.7
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-03-18",
+                "cisaActionDue": "2026-04-01",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-79"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.0.0",
+                                        "versionEndExcluding": "10.0.18",
+                                        "matchCriteriaId": "7D423DB3-FCD4-445F-A778-BC5F83E01953"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.1.0",
+                                        "versionEndExcluding": "10.1.13",
+                                        "matchCriteriaId": "7C3F6B1E-1671-461B-A093-7B6854C227FE"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Security_Center",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.18#Security_Fixes",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.1.13#Security_Fixes",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Product"
+                        ]
+                    },
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-66376",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.118150000",
+                    "percentile": "0.937580000"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-39987",
+            "vendorProject": "Marimo",
+            "product": "Marimo",
+            "vulnerabilityName": "Marimo Remote Code Execution Vulnerability",
+            "dateAdded": "2026-04-23",
+            "shortDescription": "Marimo contains an pre-authorization remote code execution vulnerability, allowing an unauthenticated attacked to shell access and execute arbitrary system commands.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-07",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc ; https://nvd.nist.gov/vuln/detail/CVE-2026-39987",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2026-33825",
             "vendorProject": "Microsoft",
@@ -25672,7 +27064,7 @@
             ]
         }
     ],
-    "last_updated": "2026-04-23T08:30:17.632172",
+    "last_updated": "2026-04-24T08:56:46.946167",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
