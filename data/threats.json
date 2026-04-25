@@ -2,6 +2,567 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2025-29635",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2025-03-25T14:15:29.043",
+                "lastModified": "2026-04-24T19:27:15.560",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A command injection vulnerability in D-Link DIR-823X 240126 and 240802 allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function, triggering remote command execution."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de inyecci\u00f3n de comandos en D-Link DIR-823X 240126 y 240802 permite a un atacante autorizado ejecutar comandos arbitrarios en dispositivos remotos enviando una solicitud POST a /goform/set_prohibiting a trav\u00e9s de la funci\u00f3n correspondiente, lo que desencadena la ejecuci\u00f3n remota de comandos."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-24",
+                "cisaActionDue": "2026-05-08",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "D-Link DIR-823X Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-77"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:dlink:dir-823x_firmware:240126:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3C63FF02-C46A-4DD9-AEB0-72FF5D4C2ABF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:dlink:dir-823x_firmware:240802:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "692189D6-6D75-4C87-BA1F-15D9C34FAEF6"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:dlink:dir-823x:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "09CE2627-49F3-4B6F-B48B-F52665C6B8C6"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/mono7s/Dir-823x/blob/main/set_prohibiting/set_prohibiting.md",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://www.akamai.com/blog/security-research/2026/apr/cve-2025-29635-mirai-campaign-targets-d-link-devices",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-29635",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.012500000",
+                    "percentile": "0.793810000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-7399",
+                "sourceIdentifier": "PSIRT@samsung.com",
+                "published": "2024-08-12T13:38:41.550",
+                "lastModified": "2026-04-24T20:23:57.990",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper limitation of a pathname to a restricted directory vulnerability in Samsung MagicINFO 9 Server version before 21.1050 allows attackers to write arbitrary file as system authority."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "La limitaci\u00f3n inadecuada de un nombre de ruta a una vulnerabilidad de directorio restringido en la versi\u00f3n Samsung MagicINFO 9 Server anterior a la 21.1050 permite a los atacantes escribir archivos arbitrarios como autoridad del sistema."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "PSIRT@samsung.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-24",
+                "cisaActionDue": "2026-05-08",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "PSIRT@samsung.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-434"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:samsung:magicinfo_9_server:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "21.1050.0",
+                                        "matchCriteriaId": "98EA3132-512C-4B61-87B1-07C927DEDFBB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security.samsungtv.com/securityUpdates",
+                        "source": "PSIRT@samsung.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://arcticwolf.com/resources/blog-uk/arctic-wolf-observes-exploitation-of-path-traversal-vulnerability-in-samsung-magicinfo-9-server-cve-2024-7399/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-7399",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.709960000",
+                    "percentile": "0.987130000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-57728",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2025-01-15T23:15:09.777",
+                "lastModified": "2026-04-24T19:27:00.700",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "SimpleHelp remote support software v5.5.7 and before allows admin users to upload arbitrary files anywhere on the file system by uploading a crafted zip file (i.e. zip slip). This can be exploited to execute arbitrary code on the host in the context of the SimpleHelp server user."
+                    },
+                    {
+                        "lang": "es",
+                        "value": " El software de soporte remoto SimpleHelp v5.5.7 y versiones anteriores permite a los usuarios administradores cargar archivos arbitrarios en cualquier parte del sistema de archivos mediante la carga de un archivo zip manipulado(es decir, un comprobante zip). Esto se puede aprovechar para ejecutar c\u00f3digo arbitrario en el host en el contexto del usuario del servidor SimpleHelp."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-24",
+                "cisaActionDue": "2026-05-08",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-59"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.5.8",
+                                        "matchCriteriaId": "B51B617B-82A8-4B34-BE2E-2D3C9CDE6D12"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.horizon3.ai/attack-research/disclosures/critical-vulnerabilities-in-simplehelp-remote-support-software/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-57728",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Technical Description"
+                        ]
+                    },
+                    {
+                        "url": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-dragonforce",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.011720000",
+                    "percentile": "0.787290000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-57726",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2025-01-15T23:15:09.520",
+                "lastModified": "2026-04-24T19:26:52.160",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "SimpleHelp remote support software v5.5.7 and before has a vulnerability that allows low-privileges technicians to create API keys with excessive permissions. These API keys can be used to escalate privileges to the server admin role."
+                    },
+                    {
+                        "lang": "es",
+                        "value": " El software de soporte remoto SimpleHelp v5.5.7 y versiones anteriores tiene una vulnerabilidad que permite a los t\u00e9cnicos con pocos privilegios crear claves API con permisos excesivos. Estas claves API se pueden usar para escalar privilegios al rol de administrador del servidor."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.9,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.1,
+                            "impactScore": 6.0
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.9,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.1,
+                            "impactScore": 6.0
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-24",
+                "cisaActionDue": "2026-05-08",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "SimpleHelp Missing Authorization Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-862"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.5.8",
+                                        "matchCriteriaId": "B51B617B-82A8-4B34-BE2E-2D3C9CDE6D12"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.horizon3.ai/attack-research/disclosures/critical-vulnerabilities-in-simplehelp-remote-support-software/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-57726",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Technical Description"
+                        ]
+                    },
+                    {
+                        "url": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-dragonforce",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003080000",
+                    "percentile": "0.539830000"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-39987",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-04-09T18:17:02.807",
@@ -158,8 +719,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.069890000",
-                    "percentile": "0.914920000"
+                    "epss": "0.455270000",
+                    "percentile": "0.976230000"
                 }
             }
         },
@@ -255,8 +816,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.137620000",
-                    "percentile": "0.943090000"
+                    "epss": "0.038180000",
+                    "percentile": "0.881450000"
                 }
             }
         },
@@ -399,8 +960,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.011240000",
-                    "percentile": "0.783320000"
+                    "epss": "0.009660000",
+                    "percentile": "0.766340000"
                 }
             }
         },
@@ -543,8 +1104,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.013900000",
-                    "percentile": "0.804090000"
+                    "epss": "0.011950000",
+                    "percentile": "0.789250000"
                 }
             }
         },
@@ -660,8 +1221,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.030240000",
-                    "percentile": "0.866570000"
+                    "epss": "0.050510000",
+                    "percentile": "0.897960000"
                 }
             }
         },
@@ -836,7 +1397,7 @@
                 ],
                 "epss": {
                     "epss": "0.861040000",
-                    "percentile": "0.994000000"
+                    "percentile": "0.994010000"
                 }
             }
         },
@@ -1415,8 +1976,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.224050000",
-                    "percentile": "0.958560000"
+                    "epss": "0.200040000",
+                    "percentile": "0.954870000"
                 }
             }
         },
@@ -1540,157 +2101,7 @@
                 ],
                 "epss": {
                     "epss": "0.000530000",
-                    "percentile": "0.166460000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-32975",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2025-06-24T15:15:23.710",
-                "lastModified": "2026-04-21T14:09:39.213",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Quest KACE Systems Management Appliance (SMA) 13.0.x before 13.0.385, 13.1.x before 13.1.81, 13.2.x before 13.2.183, 14.0.x before 14.0.341 (Patch 5), and 14.1.x before 14.1.101 (Patch 4) contains an authentication bypass vulnerability that allows attackers to impersonate legitimate users without valid credentials. The vulnerability exists in the SSO authentication handling mechanism and can lead to complete administrative takeover."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Quest KACE Systems Management Appliance (SMA) 13.0.x (anterior a la 13.0.385), 13.1.x (anterior a la 13.1.81), 13.2.x (anterior a la 13.2.183), 14.0.x (anterior a la 14.0.341 [Parche 5]) y 14.1.x (anterior a la 14.1.101 [Parche 4]) contienen una vulnerabilidad de omisi\u00f3n de autenticaci\u00f3n que permite a los atacantes suplantar la identidad de usuarios leg\u00edtimos sin credenciales v\u00e1lidas. Esta vulnerabilidad se encuentra en el mecanismo de gesti\u00f3n de la autenticaci\u00f3n SSO y puede provocar la toma de control administrativo completo."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-20",
-                "cisaActionDue": "2026-05-04",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Quest KACE Systems Management Appliance (SMA) Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:quest:kace_systems_management_appliance:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.0",
-                                        "versionEndExcluding": "13.0.385",
-                                        "matchCriteriaId": "89896426-35FC-4C39-9825-1B2F15062A02"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:quest:kace_systems_management_appliance:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1.81",
-                                        "matchCriteriaId": "6F19C73E-1C5F-4425-AE45-468B42CCB4B3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:quest:kace_systems_management_appliance:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.2",
-                                        "versionEndExcluding": "13.2.183",
-                                        "matchCriteriaId": "F6B8BAB0-CC3B-4509-96E1-34382A156835"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:quest:kace_systems_management_appliance:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.0",
-                                        "versionEndExcluding": "14.0.341",
-                                        "matchCriteriaId": "8EC79AEC-90FA-4416-8DB7-E468F30075A4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:quest:kace_systems_management_appliance:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1.101",
-                                        "matchCriteriaId": "07B00B0E-5ADF-48BC-8191-E7CE8A947130"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://seclists.org/fulldisclosure/2025/Jun/22",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://seralys.com/research/CVE-2025-32975.txt",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.quest.com/kb/4379499/quest-response-to-kace-sma-vulnerabilities-cve-2025-32975-cve-2025-32976-cve-2025-32977-cve-2025-32978",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://seclists.org/fulldisclosure/2025/Jun/25",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-32975",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.421230000",
-                    "percentile": "0.974570000"
+                    "percentile": "0.164630000"
                 }
             }
         },
@@ -1845,134 +2256,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.917440000",
-                    "percentile": "0.996890000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-34197",
-                "sourceIdentifier": "security@apache.org",
-                "published": "2026-04-07T09:16:20.967",
-                "lastModified": "2026-04-16T19:59:38.107",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String).\n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ All: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: before 5.19.4, from 6.0.0 before 6.2.3.\n\n\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue"
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-16",
-                "cisaActionDue": "2026-04-30",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Apache ActiveMQ Improper Input Validation Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@apache.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-20"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-94"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.19.4",
-                                        "matchCriteriaId": "83EF7DD6-C3A9-4561-ADC0-1E6ED5429307"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0.0",
-                                        "versionEndExcluding": "6.2.3",
-                                        "matchCriteriaId": "4C156202-D239-4ECD-B409-2C22E063F030"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:apache:activemq_broker:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.19.4",
-                                        "matchCriteriaId": "ECEF15DD-10E8-40A4-897B-3DA7F12E2C07"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:apache:activemq_broker:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0.0",
-                                        "versionEndExcluding": "6.2.3",
-                                        "matchCriteriaId": "1623B4ED-853E-4562-AD04-804AAF87D937"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://activemq.apache.org/security-advisories.data/CVE-2026-34197-announcement.txt",
-                        "source": "security@apache.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.openwall.com/lists/oss-security/2026/04/06/3",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34197",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.625230000",
-                    "percentile": "0.983790000"
+                    "epss": "0.910110000",
+                    "percentile": "0.996410000"
                 }
             }
         },
@@ -2302,328 +2587,6 @@
         },
         {
             "cve": {
-                "id": "CVE-2026-32201",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-04-14T18:17:27.160",
-                "lastModified": "2026-04-14T19:37:08.297",
-                "vulnStatus": "Undergoing Analysis",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper input validation in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
-                                "baseScore": 6.5,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 2.5
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-14",
-                "cisaActionDue": "2026-04-28",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft SharePoint Server Improper Input Validation Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-20"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
-                                        "versionEndExcluding": "16.0.19725.20210",
-                                        "matchCriteriaId": "5CA92EAC-72F0-43F4-A8E0-FA40C57AEF01"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
-                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32201",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-32201",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.079370000",
-                    "percentile": "0.920740000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2012-1854",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2012-07-10T21:55:05.587",
-                "lastModified": "2026-04-22T16:05:40.017",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Untrusted search path vulnerability in VBE6.dll in Microsoft Office 2003 SP3, 2007 SP2 and SP3, and 2010 Gold and SP1; Microsoft Visual Basic for Applications (VBA); and Summit Microsoft Visual Basic for Applications SDK allows local users to gain privileges via a Trojan horse DLL in the current working directory, as demonstrated by a directory that contains a .docx file, aka \"Visual Basic for Applications Insecure Library Loading Vulnerability,\" as exploited in the wild in July 2012."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad de b\u00fasqueda de ruta no confiable (\"Untrusted search path\") en   VBE6.dll en Microsoft Office 2003 SP3, 2007 SP2 y SP3, y 2010 Gold y SP1; Microsoft Visual Basic para Applications (VBA); y Summit Microsoft Visual Basic para Applications SDK permite a usuarios locales conseguir privilegios a trav\u00e9s de un troyano dll en el directorio de trabajo actual, como lo demuestra un directorio que contiene un archivo. docx, tambi\u00e9n conocido como vulnerabilidad \"Visual Basic para la carga de librer\u00edas inseguras\",\" como fue  explotado en julio de 2012."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 6.9,
-                                "accessVector": "LOCAL",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "MEDIUM",
-                            "exploitabilityScore": 3.4,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-13",
-                "cisaActionDue": "2026-04-27",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Visual Basic for Applications Insecure Library Loading Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "NVD-CWE-Other"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-426"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2003:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A332D04D-CC8C-4F68-A261-BA2F2D8EAD1E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "08AF794A-435D-4171-9DBB-EB7FAED96DBA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FEECD12A-5BEF-4675-B62E-86CF4A7474D7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "649B67CD-30E7-447F-82EA-5B1F5FC124EA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "67785194-79D6-40DB-AFBF-81D4E7F5D80C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "BA85D64C-DAC2-4B41-AB84-1FF76F02F677"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "49D1ACFD-4E9F-4D6F-997B-2BE50D65A35C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications:*:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "390665EF-39A5-4FB7-93D1-CC5D3DEDEB93"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications_sdk:*:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "99D0A944-E18D-4E24-8614-CE82FD201384"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://learn.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-046",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2012-1854",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/426.html 'CWE-426: Untrusted Search Path'",
-                "epss": {
-                    "epss": "0.042730000",
-                    "percentile": "0.888680000"
-                }
-            }
-        },
-        {
-            "cve": {
                 "id": "CVE-2025-60710",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2025-11-11T18:15:39.073",
@@ -2738,65 +2701,61 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.136110000",
-                    "percentile": "0.942740000"
+                    "epss": "0.204110000",
+                    "percentile": "0.955580000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2026-3502",
-                "sourceIdentifier": "cve@checkpoint.com",
-                "published": "2026-03-30T19:16:27.053",
-                "lastModified": "2026-04-03T11:40:57.390",
+                "id": "CVE-2023-21529",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2023-02-14T20:15:11.743",
+                "lastModified": "2026-04-14T14:44:35.520",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "TrueConf Client descarga c\u00f3digo de actualizaci\u00f3n de la aplicaci\u00f3n y lo aplica sin realizar verificaci\u00f3n. Un atacante que es capaz de influir en la ruta de entrega de la actualizaci\u00f3n puede sustituir una carga \u00fatil de actualizaci\u00f3n manipulada. Si la carga \u00fatil es ejecutada o instalada por el actualizador, esto puede resultar en ejecuci\u00f3n de c\u00f3digo arbitrario en el contexto del proceso de actualizaci\u00f3n o del usuario."
+                        "value": "Microsoft Exchange Server Remote Code Execution Vulnerability"
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
                         {
-                            "source": "cve@checkpoint.com",
+                            "source": "secure@microsoft.com",
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
-                                "baseScore": 7.8,
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
                                 "baseSeverity": "HIGH",
-                                "attackVector": "ADJACENT_NETWORK",
+                                "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
                                 "confidentialityImpact": "HIGH",
                                 "integrityImpact": "HIGH",
-                                "availabilityImpact": "LOW"
+                                "availabilityImpact": "HIGH"
                             },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 6.0
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-04-02",
-                "cisaActionDue": "2026-04-16",
+                "cisaExploitAdd": "2026-04-13",
+                "cisaActionDue": "2026-04-27",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+                "cisaVulnerabilityName": "Microsoft Exchange Server Deserialization of Untrusted Data Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "cve@checkpoint.com",
+                        "source": "secure@microsoft.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-494"
+                                "value": "CWE-502"
                             }
                         ]
                     }
@@ -2810,9 +2769,23 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:trueconf:trueconf:*:*:*:*:*:windows:*:*",
-                                        "versionEndExcluding": "8.5.3.884",
-                                        "matchCriteriaId": "C61E9BE0-CED2-4518-933B-7538A4E8F890"
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2013:cumulative_update_23:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DA166F2A-D83B-4D50-AD0B-668D813E0585"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_23:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF76AEDA-E574-40ED-B64F-8FDEF8CAC802"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "435343A4-BF10-461A-ABF2-D511A5FBDA75"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B23C8E3E-5243-4DA6-B9AA-F6053084B55E"
                                     }
                                 ]
                             }
@@ -2821,22 +2794,154 @@
                 ],
                 "references": [
                     {
-                        "url": "https://trueconf.com/blog/update/trueconf-8-5",
-                        "source": "cve@checkpoint.com",
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21529",
+                        "source": "secure@microsoft.com",
                         "tags": [
-                            "Product",
-                            "Release Notes"
+                            "Patch",
+                            "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/",
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21529",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-21529",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "Third Party Advisory"
+                            "US Government Resource"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3502",
+                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Technical Description"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.264570000",
+                    "percentile": "0.963370000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-5281",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2026-04-01T05:16:01.440",
+                "lastModified": "2026-04-02T13:16:01.903",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Use after free in Dawn in Google Chrome prior to 146.0.7680.178 allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-01",
+                "cisaActionDue": "2026-04-15",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Google Dawn Use-After-Free Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "chrome-cve-admin@google.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-416"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "146.0.7680.177",
+                                        "matchCriteriaId": "55B0324F-7911-403B-8235-D71996B55DFB"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_31.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://issues.chromium.org/issues/491518608",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Issue Tracking",
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5281",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -2844,8 +2949,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.024210000",
-                    "percentile": "0.851740000"
+                    "epss": "0.007970000",
+                    "percentile": "0.740740000"
                 }
             }
         },
@@ -3005,33 +3110,248 @@
                 ],
                 "epss": {
                     "epss": "0.074520000",
-                    "percentile": "0.917890000"
+                    "percentile": "0.917850000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2026-20131",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-03-04T18:16:27.153",
-                "lastModified": "2026-03-25T17:39:46.247",
+                "id": "CVE-2026-33017",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-03-20T05:16:15.550",
+                "lastModified": "2026-03-26T13:26:16.393",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "A vulnerability in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary Java code as root&nbsp;on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root.\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced."
+                        "value": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0."
                     },
                     {
                         "lang": "es",
-                        "value": "Una vulnerabilidad en la interfaz de gesti\u00f3n basada en web del software Cisco Secure Firewall Management Center (FMC) podr\u00eda permitir a un atacante remoto no autenticado ejecutar c\u00f3digo Java arbitrario como root en un dispositivo afectado.\nEsta vulnerabilidad se debe a la deserializaci\u00f3n insegura de un flujo de bytes Java proporcionado por el usuario. Un atacante podr\u00eda explotar esta vulnerabilidad enviando un objeto Java serializado dise\u00f1ado a la interfaz de gesti\u00f3n basada en web de un dispositivo afectado. Un exploit exitoso podr\u00eda permitir al atacante ejecutar c\u00f3digo arbitrario en el dispositivo y elevar privilegios a root.\nNota: Si la interfaz de gesti\u00f3n de FMC no tiene acceso p\u00fablico a internet, la superficie de ataque asociada con esta vulnerabilidad se reduce."
+                        "value": "Langflow es una herramienta para construir y desplegar agentes y flujos de trabajo impulsados por IA. En versiones anteriores a la 1.9.0, el endpoint POST /api/v1/build_public_tmp/{flow_id}/flow permite construir flujos p\u00fablicos sin requerir autenticaci\u00f3n. Cuando se suministra el par\u00e1metro opcional data, el endpoint utiliza datos de flujo controlados por el atacante (que contienen c\u00f3digo Python arbitrario en las definiciones de nodos) en lugar de los datos de flujo almacenados en la base de datos. Este c\u00f3digo se pasa a exec() sin ning\u00fan sandboxing, lo que resulta en una ejecuci\u00f3n remota de c\u00f3digo no autenticada. Esto es distinto de CVE-2025-3248, que corrigi\u00f3 /api/v1/validate/code a\u00f1adiendo autenticaci\u00f3n. El endpoint build_public_tmp est\u00e1 dise\u00f1ado para no requerir autenticaci\u00f3n (para flujos p\u00fablicos) pero acepta incorrectamente datos de flujo suministrados por el atacante que contienen c\u00f3digo ejecutable arbitrario. Este problema ha sido solucionado en la versi\u00f3n 1.9.0."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "LOW",
+                                "subIntegrityImpact": "LOW",
+                                "subAvailabilityImpact": "LOW",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-03-25",
+                "cisaActionDue": "2026-04-08",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Langflow Code Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-95"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.8.2",
+                                        "matchCriteriaId": "B38E7511-B77D-4E5F-B33A-458EE5770358"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/advisories/GHSA-rvqx-wpfh-mfx7",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/langflow-ai/langflow/commit/73b6612e3ef25fdae0a752d75b0fabd47328d4f0",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/langflow-ai/langflow/releases/tag/1.8.2",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-33017",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33017",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Press/Media Coverage"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.046960000",
+                    "percentile": "0.893810000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-32432",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2025-04-25T15:15:36.440",
+                "lastModified": "2026-03-20T19:14:20.843",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Craft is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond. Starting from version 3.0.0-RC1 to before 3.9.15, 4.0.0-RC1 to before 4.14.15, and 5.0.0-RC1 to before 5.6.17, Craft is vulnerable to remote code execution. This is a high-impact, low-complexity attack vector. This issue has been patched in versions 3.9.15, 4.14.15, and 5.6.17, and is an additional fix for CVE-2023-41892."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Craft es un CMS flexible e intuitivo para crear experiencias digitales personalizadas en la web y m\u00e1s all\u00e1. Desde la versi\u00f3n 3.0.0-RC1 hasta anteriores a la 3.9.15, desde la 4.0.0-RC1 hasta anteriores a la 4.14.15 y desde la 5.0.0-RC1 hasta anteriores a la 5.6.17, Craft es vulnerable a la ejecuci\u00f3n remota de c\u00f3digo. Este es un vector de ataque de alto impacto y baja complejidad. Este problema se ha corregido en las versiones 3.9.15, 4.14.15 y 5.6.17, y constituye una correcci\u00f3n adicional para CVE-2023-41892."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
                         {
-                            "source": "psirt@cisco.com",
+                            "source": "security-advisories@github.com",
                             "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
                             "cvssData": {
                                 "version": "3.1",
                                 "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
@@ -3051,18 +3371,28 @@
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-03-19",
-                "cisaActionDue": "2026-03-22",
+                "cisaExploitAdd": "2026-03-20",
+                "cisaActionDue": "2026-04-03",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability",
+                "cisaVulnerabilityName": "Craft CMS Code Injection Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "psirt@cisco.com",
+                        "source": "security-advisories@github.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-502"
+                                "value": "CWE-94"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
                             }
                         ]
                     }
@@ -3076,358 +3406,24 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.13:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E0780AD6-4F38-4400-AA63-E41879F74B68"
+                                        "criteria": "cpe:2.3:a:craftcms:craft_cms:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.0.0",
+                                        "versionEndExcluding": "3.9.15",
+                                        "matchCriteriaId": "BCB171F0-5C1B-48AE-831E-711510AA3BB9"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.14:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "86BA5BA6-1F79-4C89-A3F4-A56E2B664AED"
+                                        "criteria": "cpe:2.3:a:craftcms:craft_cms:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.0.0",
+                                        "versionEndExcluding": "4.14.15",
+                                        "matchCriteriaId": "502743C7-CDF1-4644-8371-FFB97DE1A4E6"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.15:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "52C7994F-AA17-467B-919E-A49F0CC9DB47"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.16:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9F007F6B-1EAA-468C-8159-78B020DF1E58"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.17:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9053FDE-A6BE-4535-AE36-A323F8B7ACA4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.18:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6E255975-F952-43AB-A577-B8D331DDB3AB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DFA94312-376E-4785-888F-3C07612E1DF7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.0.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "29E73FBF-2579-4660-AFFA-7F9607004226"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "87FAAFFB-0589-441B-8289-8B8A6E18F705"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.1.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "73B92119-793D-4A43-A056-24DB6826E759"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "093A0BC2-037C-463F-AFC5-EF11C2954EAD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.2.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C4F434FC-CAA4-4DBB-8094-C4ECC28B31E7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "68C70BB3-33B3-4E7E-99D5-FF76D4ED96AE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B881B8DF-A96D-4B64-B98A-71F0D3388641"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.5:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F6A97625-D39C-42D5-89E4-415A868A0972"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5E4D83B4-9697-4071-AC9F-7ADC86A6B529"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8F81F708-ACED-4E42-8CA9-116B5C4F5141"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3C86116B-8475-40A0-A507-D4A7947F5F2C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B98BFDB6-0884-4A5B-B2F6-102AE22665C9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.7:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "44D21149-BF7B-4188-A336-49AA5683BDC1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.8:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "708A721E-11D2-4E9B-9F11-5B82F3FA742C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.8.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "943BDA7B-0E37-4914-B7B2-EDFD58FAF653"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A58A2DA5-3EE7-408D-AAFA-82330F0325B2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7FA98EEC-2059-4CA9-92F1-72C1E0BB7EC6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F4C51EE7-866B-410C-B75E-EF260D5062B0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5F1FFD07-B874-4D3C-8E2C-9A204F1E994E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FB5ACB9E-86AF-4EC1-9F36-A202429CD0F4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.0.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AD1E4527-AAE2-4DA9-AFDA-6375839F7843"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2F0AF047-EAE9-4C77-BCEF-5CB26F84C742"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2ED03874-4071-4382-8A46-8B3A59E601FF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BF84E043-DF3C-4A95-8FDA-B0FDCD795377"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.3.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B9498087-9642-4A86-B3EE-1513C55A86E2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "36C229AB-2851-48D4-815A-63AAB4462A24"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.4.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6DA4BCFC-8237-4F5C-9863-523EE7D8619B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "07693A92-7D84-45A1-ACD6-D83AE41D504B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2C78050A-A5FB-427B-BF0D-0353B240A4FF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "85E76AE7-12AC-4419-AE66-43730B173B4E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.6:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4D803EC9-26EE-4799-A435-C782C92739CF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.7:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6EEF87CD-2335-4886-A65C-4E33775AEC52"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.8:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "953EB81A-1B53-4A57-9F59-D4A7D37E657E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.8.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1CB534BC-3E4D-4484-AFD0-69524B1F07F9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.9:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D6514BF0-5A21-4C3A-9D9D-49677D7A2409"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B291AF23-55FF-4F9A-87AC-76AA3BB3562F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4170B357-C086-483A-BC6C-CB1391FA5831"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0B72005B-FBF0-4B0D-975B-178B511598B1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5D401072-6709-4921-8918-720F28D61E24"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C0EA3467-4205-4C41-AF24-689330F7396B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9BE94E38-5F29-4AE1-8129-7F7582C2CC75"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FEF603AD-D69B-4DD8-A7F4-6BEFD355EF29"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D6BD1665-7824-4D98-A930-432CBDA4EAD5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F8056E69-22FA-4935-A576-916805D90C62"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.1.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6A80BBBE-DB5E-460A-8621-6E28D2BD6E44"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2B33F953-FEF3-4C46-A12A-2A42D8339D6E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B2C8DF03-2280-48B8-AC1E-4AAA31A36BDC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A3CCC30D-FC39-4F59-B338-6753F6094387"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DDE484EB-FFFF-4DBA-8C45-77635BEBCE32"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C663EDB2-E632-4915-BF37-EEE22FF26ED4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "30F378A2-E599-44E7-B81F-845D84E0FDE8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "366D966F-B60E-46B9-AD0C-D0C0692C984F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.5:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3A3E6840-7B1E-45F8-9527-3DB66A9267EF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FCBDBC61-B4B4-462F-B039-8F5C1B189AE2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "73CB0C9D-263A-439C-BAF9-87D1EFE50184"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DE58474E-D8D8-468D-9866-8C67607181E0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.2.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "29F91F5E-7049-400A-9C39-B20A639DD61D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.3:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D71C054A-63FF-4858-A044-03FA72DA2C8D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "388E9714-FCB6-41DD-A5C4-19E73AF2FBCC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5BBDBCE8-CD5E-48BD-B61B-A36376C5A585"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.10:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D098596D-8156-4130-9180-A48D2ECB0910"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.10.1:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34649064-8BCE-4A61-BA3A-17CBC4690C7E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.11:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9CE3E9B1-4817-4734-9EE9-E16698D3F709"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:10.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "05AE4609-A851-4B64-8506-117B0F92F7A9"
+                                        "criteria": "cpe:2.3:a:craftcms:craft_cms:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.0.0",
+                                        "versionEndExcluding": "5.6.17",
+                                        "matchCriteriaId": "EA89FA02-0C55-47CE-8B8B-4A383F6F2E65"
                                     }
                                 ]
                             }
@@ -3436,21 +3432,53 @@
                 ],
                 "references": [
                     {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh",
-                        "source": "psirt@cisco.com",
+                        "url": "https://github.com/craftcms/cms/blob/3.x/CHANGELOG.md#3915---2025-04-10-critical",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes",
+                            "Product"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/craftcms/cms/blob/4.x/CHANGELOG.md#41415---2025-04-10-critical",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Product",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/craftcms/cms/blob/5.x/CHANGELOG.md#5617---2025-04-10-critical",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Product",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/craftcms/cms/commit/e1c85441fa47eeb7c688c2053f25419bc0547b47",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/craftcms/cms/security/advisories/GHSA-f3gw-9ww9-jmc3",
+                        "source": "security-advisories@github.com",
                         "tags": [
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/",
+                        "url": "https://sensepost.com/blog/2025/investigating-an-in-the-wild-campaign-using-rce-in-craftcms/",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "Technical Description"
+                            "Exploit",
+                            "Press/Media Coverage"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20131",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-32432",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -3458,81 +3486,81 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.008680000",
-                    "percentile": "0.752380000"
+                    "epss": "0.883660000",
+                    "percentile": "0.995020000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2025-66376",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2026-01-05T15:15:44.903",
-                "lastModified": "2026-03-18T20:13:37.087",
+                "id": "CVE-2025-43510",
+                "sourceIdentifier": "product-security@apple.com",
+                "published": "2025-12-12T21:15:55.843",
+                "lastModified": "2026-04-03T14:28:19.317",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Zimbra Collaboration (ZCS) 10 before 10.0.18 and 10.1 before 10.1.13 allows Classic UI stored XSS via Cascading Style Sheets (CSS) @import directives in an HTML e-mail message."
+                        "value": "A memory corruption issue was addressed with improved lock state checking. This issue is fixed in iOS 18.7.2 and iPadOS 18.7.2, iOS 26.1 and iPadOS 26.1, macOS Sequoia 15.7.2, macOS Sonoma 14.8.2, macOS Tahoe 26.1, tvOS 26.1, visionOS 26.1, watchOS 26.1. A malicious application may cause unexpected changes in memory shared between processes."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
                         {
-                            "source": "cve@mitre.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 2.7
-                        },
-                        {
                             "source": "nvd@nist.gov",
                             "type": "Primary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-                                "baseScore": 6.1,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
                             },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 2.7
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-03-18",
-                "cisaActionDue": "2026-04-01",
+                "cisaExploitAdd": "2026-03-20",
+                "cisaActionDue": "2026-04-03",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability",
+                "cisaVulnerabilityName": "Apple Multiple Products Improper Locking Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "cve@mitre.org",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-79"
+                                "value": "CWE-667"
                             }
                         ]
                     }
@@ -3546,17 +3574,62 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.0.0",
-                                        "versionEndExcluding": "10.0.18",
-                                        "matchCriteriaId": "7D423DB3-FCD4-445F-A778-BC5F83E01953"
+                                        "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "18.7.2",
+                                        "matchCriteriaId": "819E8F86-A336-49A2-853F-249459279A59"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.1.0",
-                                        "versionEndExcluding": "10.1.13",
-                                        "matchCriteriaId": "7C3F6B1E-1671-461B-A093-7B6854C227FE"
+                                        "criteria": "cpe:2.3:o:apple:ipados:26.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4173F942-2CF6-447E-A942-948F6EF6CE77"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "18.7.2",
+                                        "matchCriteriaId": "7B98B4A6-EFB0-4651-BF56-06917E7CEC85"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:iphone_os:26.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E29A276A-7091-42B2-B893-6A5801A0716E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "14.0",
+                                        "versionEndExcluding": "14.8.2",
+                                        "matchCriteriaId": "9827CBDC-8C03-46BA-B534-8533F0975804"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.0",
+                                        "versionEndExcluding": "15.7.2",
+                                        "matchCriteriaId": "4BE8199E-63D1-496C-B107-52853CFC2311"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:macos:26.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "551159EE-8311-4A13-802D-85871DAB5E77"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "26.1",
+                                        "matchCriteriaId": "290E0D29-CB5B-45A7-9FE3-FD2030B1D1A4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:visionos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "26.1",
+                                        "matchCriteriaId": "7DFD3616-65CA-4E5C-849C-3C20ACBCB610"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "26.1",
+                                        "matchCriteriaId": "9F9D7F76-13FB-407C-94E5-221B93021568"
                                     }
                                 ]
                             }
@@ -3565,43 +3638,78 @@
                 ],
                 "references": [
                     {
-                        "url": "https://wiki.zimbra.com/wiki/Security_Center",
-                        "source": "cve@mitre.org",
+                        "url": "https://support.apple.com/en-us/125632",
+                        "source": "product-security@apple.com",
                         "tags": [
                             "Release Notes",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.18#Security_Fixes",
-                        "source": "cve@mitre.org",
+                        "url": "https://support.apple.com/en-us/125633",
+                        "source": "product-security@apple.com",
                         "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.1.13#Security_Fixes",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories",
-                        "source": "cve@mitre.org",
-                        "tags": [
+                            "Release Notes",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-66376",
+                        "url": "https://support.apple.com/en-us/125634",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/125635",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/125636",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/125637",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/125638",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/125639",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Technical Description"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-43510",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -3609,13 +3717,74 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.118150000",
-                    "percentile": "0.937580000"
+                    "epss": "0.003030000",
+                    "percentile": "0.536280000"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2025-29635",
+            "vendorProject": "D-Link",
+            "product": "DIR-823X",
+            "vulnerabilityName": "D-Link DIR-823X Command Injection Vulnerability",
+            "dateAdded": "2026-04-24",
+            "shortDescription": "D-Link DIR-823X contains a command injection vulnerability that allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-08",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10469 ; https://nvd.nist.gov/vuln/detail/CVE-2025-29635",
+            "cwes": [
+                "CWE-77"
+            ]
+        },
+        {
+            "cveID": "CVE-2024-7399",
+            "vendorProject": "Samsung",
+            "product": "MagicINFO 9 Server",
+            "vulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+            "dateAdded": "2026-04-24",
+            "shortDescription": "Samsung MagicINFO 9 Server contains a path traversal vulnerability that could allow an attacker to write arbitrary files as system authority.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-08",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://security.samsungtv.com/securityUpdates ; https://nvd.nist.gov/vuln/detail/CVE-2024-7399",
+            "cwes": [
+                "CWE-22",
+                "CWE-434"
+            ]
+        },
+        {
+            "cveID": "CVE-2024-57728",
+            "vendorProject": "SimpleHelp ",
+            "product": "SimpleHelp",
+            "vulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
+            "dateAdded": "2026-04-24",
+            "shortDescription": "SimpleHelp contains a path traversal vulnerability that allows admin users to upload arbitrary files anywhere on the file system by uploading a crafted zip file (i.e. zip slip). This can be exploited to execute arbitrary code on the host in the context of the SimpleHelp server user.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-08",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier ; https://nvd.nist.gov/vuln/detail/CVE-2024-57728",
+            "cwes": [
+                "CWE-22"
+            ]
+        },
+        {
+            "cveID": "CVE-2024-57726",
+            "vendorProject": "SimpleHelp ",
+            "product": "SimpleHelp",
+            "vulnerabilityName": "SimpleHelp Missing Authorization Vulnerability",
+            "dateAdded": "2026-04-24",
+            "shortDescription": "SimpleHelp contains a missing authorization vulnerability that could allow low-privileged technicians to create API keys with excessive permissions. These API keys can be used to escalate privileges to the server admin role.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-08",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier ; https://nvd.nist.gov/vuln/detail/CVE-2024-57726",
+            "cwes": [
+                "CWE-862"
+            ]
+        },
         {
             "cveID": "CVE-2026-39987",
             "vendorProject": "Marimo",
@@ -27064,7 +27233,7 @@
             ]
         }
     ],
-    "last_updated": "2026-04-24T08:56:46.946167",
+    "last_updated": "2026-04-25T08:01:42.223957",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
