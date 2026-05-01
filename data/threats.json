@@ -2,6 +2,312 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-41940",
+                "sourceIdentifier": "disclosure@vulncheck.com",
+                "published": "2026-04-29T16:16:25.037",
+                "lastModified": "2026-04-30T19:51:26.270",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "cPanel and WHM versions after 11.40 contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-30",
+                "cisaActionDue": "2026-05-03",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "11.40",
+                                        "versionEndExcluding": "86.0.41",
+                                        "matchCriteriaId": "D018D47F-B020-41B1-8755-9197EB8673D3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "88.0.0",
+                                        "versionEndExcluding": "110.0.97",
+                                        "matchCriteriaId": "9BF3DBAC-D629-44A9-B102-2D8F82709CA2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "112.0.0",
+                                        "versionEndExcluding": "118.0.63",
+                                        "matchCriteriaId": "3EEFF12C-11E8-4A5C-9C72-BA1A422A9E72"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "120.0.0",
+                                        "versionEndExcluding": "126.0.54",
+                                        "matchCriteriaId": "8D08A091-B8A6-4811-9626-DD88367DB0BF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "128.0.0",
+                                        "versionEndExcluding": "130.0.19",
+                                        "matchCriteriaId": "B5FE32EC-AEFB-4B27-AE65-A95432CAA812"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "132.0.0",
+                                        "versionEndExcluding": "132.0.29",
+                                        "matchCriteriaId": "24982921-6C0D-478E-BBF1-7C9DC7023760"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "134.0.0",
+                                        "versionEndExcluding": "134.0.20",
+                                        "matchCriteriaId": "B0213A2B-4A5A-4098-87FF-517E33F96807"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "136.0.0",
+                                        "versionEndExcluding": "136.0.5",
+                                        "matchCriteriaId": "09F99F08-1FB9-4BC6-8C7D-52062BA28479"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "11.40",
+                                        "versionEndExcluding": "86.0.41",
+                                        "matchCriteriaId": "63BE6DEF-A6EA-4545-9A3D-E1BA84A50EC7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "88.0.0",
+                                        "versionEndExcluding": "110.0.97",
+                                        "matchCriteriaId": "74E9C069-EA63-4B95-9229-45AD97563532"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "112.0.0",
+                                        "versionEndExcluding": "118.0.63",
+                                        "matchCriteriaId": "2FCD52CF-3F10-4FFA-8FC7-AA5F370AF9B8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "120.0.0",
+                                        "versionEndExcluding": "126.0.54",
+                                        "matchCriteriaId": "8A7F00EA-1450-40D6-B8A4-32AAE88D4A97"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "128.0.0",
+                                        "versionEndExcluding": "130.0.19",
+                                        "matchCriteriaId": "C6C216F5-330D-4DAA-B042-1A4707FF658E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "132.0.0",
+                                        "versionEndExcluding": "132.0.29",
+                                        "matchCriteriaId": "8793EED8-BDBD-4CC8-9698-FCEE769CFB5B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "134.0.0",
+                                        "versionEndExcluding": "134.0.20",
+                                        "matchCriteriaId": "53AC31A0-AD91-4897-89E7-1C05AF03BF5A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "136.0.0",
+                                        "versionEndExcluding": "136.0.5",
+                                        "matchCriteriaId": "23D646D3-2BDC-44C8-8C5F-9E21B0613A48"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cpanel:wp_squared:*:*:*:*:*:wordpress:*:*",
+                                        "versionEndExcluding": "136.1.7",
+                                        "matchCriteriaId": "80392939-B45D-4C12-ADBB-334E783BDE67"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://docs.cpanel.net/release-notes/release-notes",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://docs.wpsquared.com/changelogs/versions/changelog/#13617",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.cpanel.net/hc/en-us/articles/40073787579671-cPanel-WHM-Security-Update-04-28-2026",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.namecheap.com/status-updates/ongoing-critical-security-vulnerability-in-cpanel-april-28-2026",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vulncheck.com/advisories/cpanel-and-whm-authentication-bypass-via-login-flow",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41940",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.165200000",
+                    "percentile": "0.949250000"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2024-1708",
                 "sourceIdentifier": "9119a7d8-5eab-497f-8521-727c672e3725",
                 "published": "2024-02-21T16:15:50.233",
@@ -392,7 +698,7 @@
                 ],
                 "epss": {
                     "epss": "0.071930000",
-                    "percentile": "0.916140000"
+                    "percentile": "0.916180000"
                 }
             }
         },
@@ -516,7 +822,7 @@
                 ],
                 "epss": {
                     "epss": "0.696940000",
-                    "percentile": "0.986730000"
+                    "percentile": "0.986750000"
                 }
             }
         },
@@ -804,7 +1110,7 @@
                 ],
                 "epss": {
                     "epss": "0.593270000",
-                    "percentile": "0.982500000"
+                    "percentile": "0.982520000"
                 }
             }
         },
@@ -953,7 +1259,7 @@
                 ],
                 "epss": {
                     "epss": "0.459630000",
-                    "percentile": "0.976450000"
+                    "percentile": "0.976470000"
                 }
             }
         },
@@ -1115,8 +1421,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.552090000",
-                    "percentile": "0.980720000"
+                    "epss": "0.560950000",
+                    "percentile": "0.981140000"
                 }
             }
         },
@@ -1213,7 +1519,7 @@
                 ],
                 "epss": {
                     "epss": "0.032990000",
-                    "percentile": "0.872700000"
+                    "percentile": "0.872760000"
                 }
             }
         },
@@ -1357,7 +1663,7 @@
                 ],
                 "epss": {
                     "epss": "0.009880000",
-                    "percentile": "0.769390000"
+                    "percentile": "0.769500000"
                 }
             }
         },
@@ -1501,7 +1807,7 @@
                 ],
                 "epss": {
                     "epss": "0.011200000",
-                    "percentile": "0.783220000"
+                    "percentile": "0.783330000"
                 }
             }
         },
@@ -1618,7 +1924,7 @@
                 ],
                 "epss": {
                     "epss": "0.050510000",
-                    "percentile": "0.897970000"
+                    "percentile": "0.897990000"
                 }
             }
         },
@@ -2373,7 +2679,7 @@
                 ],
                 "epss": {
                     "epss": "0.187570000",
-                    "percentile": "0.953100000"
+                    "percentile": "0.953130000"
                 }
             }
         },
@@ -2497,7 +2803,7 @@
                 ],
                 "epss": {
                     "epss": "0.000430000",
-                    "percentile": "0.128300000"
+                    "percentile": "0.128070000"
                 }
             }
         },
@@ -2647,7 +2953,7 @@
                 ],
                 "epss": {
                     "epss": "0.465020000",
-                    "percentile": "0.976710000"
+                    "percentile": "0.976730000"
                 }
             }
         },
@@ -2803,7 +3109,7 @@
                 ],
                 "epss": {
                     "epss": "0.913550000",
-                    "percentile": "0.996650000"
+                    "percentile": "0.996640000"
                 }
             }
         },
@@ -2929,26 +3235,26 @@
                 ],
                 "epss": {
                     "epss": "0.650690000",
-                    "percentile": "0.984860000"
+                    "percentile": "0.984870000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2009-0238",
+                "id": "CVE-2012-1854",
                 "sourceIdentifier": "secure@microsoft.com",
-                "published": "2009-02-25T16:30:00.343",
-                "lastModified": "2026-04-22T16:42:50.857",
+                "published": "2012-07-10T21:55:05.587",
+                "lastModified": "2026-04-22T16:05:40.017",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Microsoft Office Excel 2000 SP3, 2002 SP3, 2003 SP3, and 2007 SP1; Excel Viewer 2003 Gold and SP3; Excel Viewer; Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP1; and Excel in Microsoft Office 2004 and 2008 for Mac allow remote attackers to execute arbitrary code via a crafted Excel document that triggers an access attempt on an invalid object, as exploited in the wild in February 2009 by Trojan.Mdropper.AC."
+                        "value": "Untrusted search path vulnerability in VBE6.dll in Microsoft Office 2003 SP3, 2007 SP2 and SP3, and 2010 Gold and SP1; Microsoft Visual Basic for Applications (VBA); and Summit Microsoft Visual Basic for Applications SDK allows local users to gain privileges via a Trojan horse DLL in the current working directory, as demonstrated by a directory that contains a .docx file, aka \"Visual Basic for Applications Insecure Library Loading Vulnerability,\" as exploited in the wild in July 2012."
                     },
                     {
                         "lang": "es",
-                        "value": "Microsoft Office Excel 2000 SP3, 2002 SP3, 2003 SP3 y 2007 SP1; Excel Viewer 2003 Gold y SP3; Excel Viewer; Compatibility Pack para Word, Excel y PowerPoint 2007 File Formats SP1; y Excel de Microsoft Office 2004 y 2008 para Mac; permiten a atacantes remotos ejecutar c\u00f3digo de su elecci\u00f3n a trav\u00e9s de un documento Excel manipulado que provoca un intento de acceso a un objeto no v\u00e1lido, tal y como se ha explotado libremente en Febrero 2009 por MDropper.XR."
+                        "value": "Vulnerabilidad de b\u00fasqueda de ruta no confiable (\"Untrusted search path\") en   VBE6.dll en Microsoft Office 2003 SP3, 2007 SP2 y SP3, y 2010 Gold y SP1; Microsoft Visual Basic para Applications (VBA); y Summit Microsoft Visual Basic para Applications SDK permite a usuarios locales conseguir privilegios a trav\u00e9s de un troyano dll en el directorio de trabajo actual, como lo demuestra un directorio que contiene un archivo. docx, tambi\u00e9n conocido como vulnerabilidad \"Visual Basic para la carga de librer\u00edas inseguras\",\" como fue  explotado en julio de 2012."
                     }
                 ],
                 "metrics": {
@@ -2958,10 +3264,10 @@
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
                                 "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
+                                "attackVector": "LOCAL",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "REQUIRED",
@@ -2970,7 +3276,7 @@
                                 "integrityImpact": "HIGH",
                                 "availabilityImpact": "HIGH"
                             },
-                            "exploitabilityScore": 2.8,
+                            "exploitabilityScore": 1.8,
                             "impactScore": 5.9
                         }
                     ],
@@ -2980,30 +3286,30 @@
                             "type": "Primary",
                             "cvssData": {
                                 "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
+                                "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+                                "baseScore": 6.9,
+                                "accessVector": "LOCAL",
                                 "accessComplexity": "MEDIUM",
                                 "authentication": "NONE",
                                 "confidentialityImpact": "COMPLETE",
                                 "integrityImpact": "COMPLETE",
                                 "availabilityImpact": "COMPLETE"
                             },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 3.4,
                             "impactScore": 10.0,
                             "acInsufInfo": false,
-                            "obtainAllPrivilege": true,
+                            "obtainAllPrivilege": false,
                             "obtainUserPrivilege": false,
                             "obtainOtherPrivilege": false,
                             "userInteractionRequired": true
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-04-14",
-                "cisaActionDue": "2026-04-28",
+                "cisaExploitAdd": "2026-04-13",
+                "cisaActionDue": "2026-04-27",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Office Remote Code Execution",
+                "cisaVulnerabilityName": "Microsoft Visual Basic for Applications Insecure Library Loading Vulnerability",
                 "weaknesses": [
                     {
                         "source": "nvd@nist.gov",
@@ -3011,7 +3317,7 @@
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-94"
+                                "value": "NVD-CWE-Other"
                             }
                         ]
                     },
@@ -3021,7 +3327,7 @@
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-94"
+                                "value": "CWE-426"
                             }
                         ]
                     }
@@ -3035,53 +3341,48 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:excel:2000:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "439B26BA-376C-4D6B-B7BA-B66B8BDA8E37"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2003:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A332D04D-CC8C-4F68-A261-BA2F2D8EAD1E"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:excel:2002:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "896E23B1-AB34-43FF-96F3-BA6ED7F162AF"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "08AF794A-435D-4171-9DBB-EB7FAED96DBA"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:excel:2003:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CEBB33CD-CACF-4EB8-8B5F-8E1CB8D7A440"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2007:sp3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FEECD12A-5BEF-4675-B62E-86CF4A7474D7"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:excel:2007:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F703901F-AD7C-42E7-BBFA-529A8C510D83"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x64:*",
+                                        "matchCriteriaId": "649B67CD-30E7-447F-82EA-5B1F5FC124EA"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:excel_viewer:*:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "971EC323-267F-4DAF-BA3B-10A47A9F1ADA"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:-:*:*:*:*:x86:*",
+                                        "matchCriteriaId": "67785194-79D6-40DB-AFBF-81D4E7F5D80C"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2004:*:*:*:*:macos:*:*",
-                                        "matchCriteriaId": "0B191155-67F2-4C6E-BD0C-AF5AF6F04BA1"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x64:*",
+                                        "matchCriteriaId": "BA85D64C-DAC2-4B41-AB84-1FF76F02F677"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office:2008:*:*:*:*:macos:*:*",
-                                        "matchCriteriaId": "421ACF1B-1B21-4416-98ED-BAA5C210EAE5"
+                                        "criteria": "cpe:2.3:a:microsoft:office:2010:sp1:*:*:*:*:x86:*",
+                                        "matchCriteriaId": "49D1ACFD-4E9F-4D6F-997B-2BE50D65A35C"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office_compatibility_pack:2007:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C5C94F2C-786B-45E4-B80A-FC668D917014"
+                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "390665EF-39A5-4FB7-93D1-CC5D3DEDEB93"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office_excel_viewer:*:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4A2613CE-C469-43AE-A590-87CE1FAADA8B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:office_excel_viewer:2003:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B18C291F-57C2-4328-8FCF-3C1A27B0D18D"
+                                        "criteria": "cpe:2.3:a:microsoft:visual_basic_for_applications_sdk:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "99D0A944-E18D-4E24-8614-CE82FD201384"
                                     }
                                 ]
                             }
@@ -3090,327 +3391,126 @@
                 ],
                 "references": [
                     {
-                        "url": "http://blogs.zdnet.com/security/?p=2658",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://isc.sans.org/diary.html?storyid=5923",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Press/Media Coverage"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1021744",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/968272.mspx",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/33870",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.symantec.com/business/security_response/writeup.jsp?docid=2009-022310-4202-99",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-104A.html",
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
                         "source": "secure@microsoft.com",
                         "tags": [
                             "US Government Resource"
                         ]
                     },
                     {
-                        "url": "http://www.vupen.com/english/advisories/2009/1023",
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
                         "source": "secure@microsoft.com",
                         "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-009",
-                        "source": "secure@microsoft.com",
-                        "tags": [
+                            "Mitigation",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/48875",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A5968",
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
                         "source": "secure@microsoft.com",
                         "tags": [
                             "Broken Link"
                         ]
                     },
                     {
-                        "url": "http://blogs.zdnet.com/security/?p=2658",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://isc.sans.org/diary.html?storyid=5923",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Press/Media Coverage"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1021744",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/968272.mspx",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/33870",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.symantec.com/business/security_response/writeup.jsp?docid=2009-022310-4202-99",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-104A.html",
+                        "url": "http://www.us-cert.gov/cas/techalerts/TA12-192A.html",
                         "source": "af854a3a-2127-422b-91ae-364da2661108",
                         "tags": [
                             "US Government Resource"
                         ]
                     },
                     {
-                        "url": "http://www.vupen.com/english/advisories/2009/1023",
+                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2012/ms12-046",
                         "source": "af854a3a-2127-422b-91ae-364da2661108",
                         "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-009",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
+                            "Mitigation",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/48875",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A5968",
+                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A14950",
                         "source": "af854a3a-2127-422b-91ae-364da2661108",
                         "tags": [
                             "Broken Link"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2009-0238",
+                        "url": "https://learn.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-046",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2012-1854",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
                         ]
                     }
                 ],
+                "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/426.html 'CWE-426: Untrusted Search Path'",
                 "epss": {
-                    "epss": "0.749130000",
-                    "percentile": "0.988800000"
+                    "epss": "0.042730000",
+                    "percentile": "0.888740000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2026-32201",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-04-14T18:17:27.160",
-                "lastModified": "2026-04-14T19:37:08.297",
-                "vulnStatus": "Undergoing Analysis",
+                "id": "CVE-2026-21643",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2026-02-06T09:15:49.330",
+                "lastModified": "2026-04-16T16:00:01.953",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Improper input validation in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network."
+                        "value": "An improper neutralization of special elements used in an sql command ('sql injection') vulnerability in Fortinet FortiClientEMS 7.4.4 may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de neutralizaci\u00f3n incorrecta de elementos especiales utilizados en un comando SQL ('inyecci\u00f3n SQL') en Fortinet FortiClientEMS 7.4.4 podr\u00eda permitir a un atacante no autenticado ejecutar c\u00f3digo o comandos no autorizados a trav\u00e9s de solicitudes HTTP espec\u00edficamente dise\u00f1adas."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
                         {
-                            "source": "secure@microsoft.com",
-                            "type": "Primary",
+                            "source": "psirt@fortinet.com",
+                            "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
-                                "baseScore": 6.5,
-                                "baseSeverity": "MEDIUM",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
                                 "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
                                 "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
                             },
                             "exploitabilityScore": 3.9,
-                            "impactScore": 2.5
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-14",
-                "cisaActionDue": "2026-04-28",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft SharePoint Server Improper Input Validation Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-20"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
-                                        "versionEndExcluding": "16.0.19725.20210",
-                                        "matchCriteriaId": "5CA92EAC-72F0-43F4-A8E0-FA40C57AEF01"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
-                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32201",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-32201",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.079370000",
-                    "percentile": "0.920630000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2023-21529",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2023-02-14T20:15:11.743",
-                "lastModified": "2026-04-14T14:44:35.520",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Microsoft Exchange Server Remote Code Execution Vulnerability"
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
                             "impactScore": 5.9
                         }
                     ]
                 },
                 "cisaExploitAdd": "2026-04-13",
-                "cisaActionDue": "2026-04-27",
+                "cisaActionDue": "2026-04-16",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Exchange Server Deserialization of Untrusted Data Vulnerability",
+                "cisaVulnerabilityName": "Fortinet FortiClient EMS SQL Injection Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "secure@microsoft.com",
+                        "source": "psirt@fortinet.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-502"
+                                "value": "CWE-89"
                             }
                         ]
                     }
@@ -3424,23 +3524,8 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2013:cumulative_update_23:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DA166F2A-D83B-4D50-AD0B-668D813E0585"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_23:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FF76AEDA-E574-40ED-B64F-8FDEF8CAC802"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "435343A4-BF10-461A-ABF2-D511A5FBDA75"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B23C8E3E-5243-4DA6-B9AA-F6053084B55E"
+                                        "criteria": "cpe:2.3:a:fortinet:forticlientems:7.4.4:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "552AF7AC-8630-442C-A7A4-66CA789DC3FD"
                                     }
                                 ]
                             }
@@ -3449,272 +3534,21 @@
                 ],
                 "references": [
                     {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21529",
-                        "source": "secure@microsoft.com",
+                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-1142",
+                        "source": "psirt@fortinet.com",
                         "tags": [
-                            "Patch",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21529",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-21529",
+                        "url": "https://github.com/0xBlackash/CVE-2026-21643/blob/main/cve-2026-21643.py",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "US Government Resource"
+                            "Exploit"
                         ]
                     },
                     {
-                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.238350000",
-                    "percentile": "0.960330000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2023-36424",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2023-11-14T18:15:45.990",
-                "lastModified": "2026-04-14T14:44:43.473",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Windows Common Log File System Driver Elevation of Privilege Vulnerability"
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad de elevaci\u00f3n de privilegios del controlador del sistema de archivos de registro com\u00fan de Windows."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-13",
-                "cisaActionDue": "2026-04-27",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Windows Out-of-Bounds Read Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-125"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.10240.20308",
-                                        "matchCriteriaId": "81F826F9-C8B6-4D68-8936-96D2B4AC253F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.10240.20308",
-                                        "matchCriteriaId": "4BE302B4-747A-457D-B0EE-357CC3191C1B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.14393.6452",
-                                        "matchCriteriaId": "4C3EB2B6-8A7D-48D0-8FBD-EDD32A02B0A8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.14393.6452",
-                                        "matchCriteriaId": "1A36FFD9-2FFD-491F-9CB6-80DE6544A735"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.17763.5122",
-                                        "matchCriteriaId": "4F018A9A-D2BC-4EB0-BC64-B92DC4EF68DF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.17763.5122",
-                                        "matchCriteriaId": "455A430D-8451-4B60-8496-E0A0CE27EDE3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.17763.5122",
-                                        "matchCriteriaId": "395069C3-88A4-493F-9437-23BFC54EA6EE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.19044.3693",
-                                        "matchCriteriaId": "D3286F3A-3F82-4433-AC77-F4907D3B1650"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.19045.3693",
-                                        "matchCriteriaId": "85ABCA53-40C8-452B-8D2F-7AAF3624DCD4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_21h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.22000.2600",
-                                        "matchCriteriaId": "7BCCEFB5-50CD-4D8A-B4A8-16B357367487"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.22621.2715",
-                                        "matchCriteriaId": "656DB244-CD92-4288-A4CD-76ED0492D65C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.22631.2715",
-                                        "matchCriteriaId": "EC26CE6D-0DFD-4642-A806-2A312888A451"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "2127D10C-B6F3-4C1D-B9AA-5D78513CC996"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "AB425562-C0A0-452E-AABE-F70522F15E1A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.14393.6452",
-                                        "matchCriteriaId": "62033B83-CCC2-4FE3-91CB-213741FC682A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.17763.5122",
-                                        "matchCriteriaId": "940B3D77-2D2E-41F3-8450-27AF8BB17F18"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.20348.2091",
-                                        "matchCriteriaId": "492944B8-0555-4A6F-9F31-B43D0DAC4CB1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.25398.531",
-                                        "matchCriteriaId": "F942D380-5BD6-4262-A013-89EBFE23C27A"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36424",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36424",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-36424",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21643",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -3722,8 +3556,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.072900000",
-                    "percentile": "0.916840000"
+                    "epss": "0.431380000",
+                    "percentile": "0.975070000"
                 }
             }
         },
@@ -3822,64 +3656,104 @@
                 ],
                 "epss": {
                     "epss": "0.413710000",
-                    "percentile": "0.974150000"
+                    "percentile": "0.974160000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2026-3502",
-                "sourceIdentifier": "cve@checkpoint.com",
-                "published": "2026-03-30T19:16:27.053",
-                "lastModified": "2026-04-03T11:40:57.390",
+                "id": "CVE-2025-53521",
+                "sourceIdentifier": "f5sirt@f5.com",
+                "published": "2025-10-15T14:15:48.377",
+                "lastModified": "2026-04-02T19:00:01.543",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "TrueConf Client descarga c\u00f3digo de actualizaci\u00f3n de la aplicaci\u00f3n y lo aplica sin realizar verificaci\u00f3n. Un atacante que es capaz de influir en la ruta de entrega de la actualizaci\u00f3n puede sustituir una carga \u00fatil de actualizaci\u00f3n manipulada. Si la carga \u00fatil es ejecutada o instalada por el actualizador, esto puede resultar en ejecuci\u00f3n de c\u00f3digo arbitrario en el contexto del proceso de actualizaci\u00f3n o del usuario."
+                        "value": "When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).\u00a0\u00a0\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
                     }
                 ],
                 "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "f5sirt@f5.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
                     "cvssMetricV31": [
                         {
-                            "source": "cve@checkpoint.com",
+                            "source": "f5sirt@f5.com",
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "ADJACENT_NETWORK",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
                                 "confidentialityImpact": "HIGH",
                                 "integrityImpact": "HIGH",
-                                "availabilityImpact": "LOW"
+                                "availabilityImpact": "HIGH"
                             },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 6.0
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-04-02",
-                "cisaActionDue": "2026-04-16",
+                "cisaExploitAdd": "2026-03-27",
+                "cisaActionDue": "2026-03-30",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+                "cisaVulnerabilityName": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "cve@checkpoint.com",
-                        "type": "Secondary",
+                        "source": "f5sirt@f5.com",
+                        "type": "Primary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-494"
+                                "value": "CWE-121"
                             }
                         ]
                     }
@@ -3893,9 +3767,31 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:trueconf:trueconf:*:*:*:*:*:windows:*:*",
-                                        "versionEndExcluding": "8.5.3.884",
-                                        "matchCriteriaId": "C61E9BE0-CED2-4518-933B-7538A4E8F890"
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.1.0",
+                                        "versionEndExcluding": "15.1.10.8",
+                                        "matchCriteriaId": "A7A0C1CA-EDEF-463F-B7C8-8B9E67239FC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "16.1.0",
+                                        "versionEndExcluding": "16.1.6.1",
+                                        "matchCriteriaId": "6494E2A7-1473-46C0-97F8-90827D9466AA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.1.0",
+                                        "versionEndExcluding": "17.1.3",
+                                        "matchCriteriaId": "96D35435-27A7-4A88-9432-1F5AB0112B8C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.5.0",
+                                        "versionEndExcluding": "17.5.1.3",
+                                        "matchCriteriaId": "252ED1A4-5F29-4440-B1BA-9621E6791812"
                                     }
                                 ]
                             }
@@ -3904,22 +3800,14 @@
                 ],
                 "references": [
                     {
-                        "url": "https://trueconf.com/blog/update/trueconf-8-5",
-                        "source": "cve@checkpoint.com",
+                        "url": "https://my.f5.com/manage/s/article/K000156741",
+                        "source": "f5sirt@f5.com",
                         "tags": [
-                            "Product",
-                            "Release Notes"
+                            "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3502",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-53521",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -3927,244 +3815,28 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.024210000",
-                    "percentile": "0.851790000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-43510",
-                "sourceIdentifier": "product-security@apple.com",
-                "published": "2025-12-12T21:15:55.843",
-                "lastModified": "2026-04-03T14:28:19.317",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A memory corruption issue was addressed with improved lock state checking. This issue is fixed in iOS 18.7.2 and iPadOS 18.7.2, iOS 26.1 and iPadOS 26.1, macOS Sequoia 15.7.2, macOS Sonoma 14.8.2, macOS Tahoe 26.1, tvOS 26.1, visionOS 26.1, watchOS 26.1. A malicious application may cause unexpected changes in memory shared between processes."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-03-20",
-                "cisaActionDue": "2026-04-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Apple Multiple Products Improper Locking Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-667"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "18.7.2",
-                                        "matchCriteriaId": "819E8F86-A336-49A2-853F-249459279A59"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:ipados:26.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4173F942-2CF6-447E-A942-948F6EF6CE77"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "18.7.2",
-                                        "matchCriteriaId": "7B98B4A6-EFB0-4651-BF56-06917E7CEC85"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:iphone_os:26.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E29A276A-7091-42B2-B893-6A5801A0716E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.0",
-                                        "versionEndExcluding": "14.8.2",
-                                        "matchCriteriaId": "9827CBDC-8C03-46BA-B534-8533F0975804"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndExcluding": "15.7.2",
-                                        "matchCriteriaId": "4BE8199E-63D1-496C-B107-52853CFC2311"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:26.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "551159EE-8311-4A13-802D-85871DAB5E77"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "26.1",
-                                        "matchCriteriaId": "290E0D29-CB5B-45A7-9FE3-FD2030B1D1A4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:visionos:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "26.1",
-                                        "matchCriteriaId": "7DFD3616-65CA-4E5C-849C-3C20ACBCB610"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "26.1",
-                                        "matchCriteriaId": "9F9D7F76-13FB-407C-94E5-221B93021568"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.apple.com/en-us/125632",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125633",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125634",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125635",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125636",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125637",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125638",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/125639",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-43510",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.003030000",
-                    "percentile": "0.536050000"
+                    "epss": "0.074520000",
+                    "percentile": "0.917840000"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-41940",
+            "vendorProject": "WebPros",
+            "product": "cPanel & WHM and WP2 (WordPress Squared)",
+            "vulnerabilityName": "WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-04-30",
+            "shortDescription": "WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-03",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://support.cpanel.net/hc/en-us/articles/40073787579671-cPanel-WHM-Security-Update-04-28-2026 ; https://docs.cpanel.net/release-notes/release-notes/ ; https://docs.wpsquared.com/changelogs/versions/changelog/#13617 ; https://nvd.nist.gov/vuln/detail/CVE-2026-41940\"",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2024-1708",
             "vendorProject": "ConnectWise",
@@ -27704,7 +27376,7 @@
             ]
         }
     ],
-    "last_updated": "2026-04-30T09:08:29.358917",
+    "last_updated": "2026-05-01T08:54:25.545293",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
