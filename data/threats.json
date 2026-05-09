@@ -2,6 +2,155 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-42208",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-05-08T04:16:19.923",
+                "lastModified": "2026-05-08T19:19:34.537",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.81.16 to before version 1.83.7, a database query used during proxy API key checks mixed the caller-supplied key value into the query text instead of passing it as a separate parameter. An unauthenticated attacker could send a specially crafted Authorization header to any LLM API route (for example POST /chat/completions) and reach this query through the proxy's error-handling path. An attacker could read data from the proxy's database and may be able to modify it, leading to unauthorised access to the proxy and the credentials it manages. This issue has been patched in version 1.83.7."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-08",
+                "cisaActionDue": "2026-05-11",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "BerriAI LiteLLM SQL Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.81.16",
+                                        "versionEndExcluding": "1.83.7",
+                                        "matchCriteriaId": "3A3CA0FD-F124-4495-A36B-96BB1A2AE4E5"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Product",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42208",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.000840000",
+                    "percentile": "0.243070000"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-6973",
                 "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
                 "published": "2026-05-07T16:16:23.163",
@@ -98,7 +247,11 @@
                             "US Government Resource"
                         ]
                     }
-                ]
+                ],
+                "epss": {
+                    "epss": "0.050090000",
+                    "percentile": "0.897760000"
+                }
             }
         },
         {
@@ -1281,8 +1434,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.148970000",
-                    "percentile": "0.945690000"
+                    "epss": "0.046500000",
+                    "percentile": "0.893670000"
                 }
             }
         },
@@ -1291,7 +1444,7 @@
                 "id": "CVE-2026-31431",
                 "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
                 "published": "2026-04-22T09:16:21.270",
-                "lastModified": "2026-05-08T03:16:24.477",
+                "lastModified": "2026-05-08T21:16:27.937",
                 "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
@@ -2727,10 +2880,20 @@
                     },
                     {
                         "url": "http://www.openwall.com/lists/oss-security/2026/05/07/12",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List"
+                        ]
                     },
                     {
                         "url": "http://www.openwall.com/lists/oss-security/2026/05/07/2",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List"
+                        ]
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2026/05/08/13",
                         "source": "af854a3a-2127-422b-91ae-364da2661108",
                         "tags": [
                             "Mailing List"
@@ -2750,6 +2913,10 @@
                             "Exploit",
                             "Third Party Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://www.kb.cert.org/vuls/id/260001",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
                     },
                     {
                         "url": "https://access.redhat.com/security/cve/cve-2026-31431#cve-details-mitigation",
@@ -2791,7 +2958,7 @@
                 ],
                 "epss": {
                     "epss": "0.039120000",
-                    "percentile": "0.883590000"
+                    "percentile": "0.883620000"
                 }
             }
         },
@@ -3522,7 +3689,7 @@
                 ],
                 "epss": {
                     "epss": "0.071930000",
-                    "percentile": "0.916390000"
+                    "percentile": "0.916410000"
                 }
             }
         },
@@ -3934,7 +4101,7 @@
                 ],
                 "epss": {
                     "epss": "0.593270000",
-                    "percentile": "0.982560000"
+                    "percentile": "0.982570000"
                 }
             }
         },
@@ -4089,22 +4256,178 @@
         },
         {
             "cve": {
-                "id": "CVE-2026-39987",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2026-04-09T18:17:02.807",
-                "lastModified": "2026-04-23T20:15:29.690",
+                "id": "CVE-2024-27199",
+                "sourceIdentifier": "cve@jetbrains.com",
+                "published": "2024-03-04T18:15:09.377",
+                "lastModified": "2026-04-21T13:00:03.373",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "marimo is a reactive Python notebook. Prior to 0.23.0, Marimo has a Pre-Auth RCE vulnerability. The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands. Unlike other WebSocket endpoints (e.g., /ws) that correctly call validate_auth() for authentication, the /terminal/ws endpoint only checks the running mode and platform support before accepting connections, completely skipping authentication verification. This vulnerability is fixed in 0.23.0."
+                        "value": "In JetBrains TeamCity before 2023.11.4 path traversal allowing to perform limited admin actions  was possible"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "En JetBrains TeamCity antes de 2023.11.4 era posible un path traversal permitiendo realizar acciones administrativas limitadas"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@jetbrains.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                                "baseScore": 7.3,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.4
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                                "baseScore": 7.3,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.4
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-04-20",
+                "cisaActionDue": "2026-05-04",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "JetBrains TeamCity Relative Path Traversal Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@jetbrains.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-23"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2023.11.4",
+                                        "matchCriteriaId": "66B25AF5-F103-4A5C-8A39-901357131404"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.darkreading.com/cyberattacks-data-breaches/jetbrains-teamcity-mass-exploitation-underway-rogue-accounts-thrive",
+                        "source": "cve@jetbrains.com",
+                        "tags": [
+                            "Press/Media Coverage"
+                        ]
+                    },
+                    {
+                        "url": "https://www.jetbrains.com/privacy-security/issues-fixed/",
+                        "source": "cve@jetbrains.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.darkreading.com/cyberattacks-data-breaches/jetbrains-teamcity-mass-exploitation-underway-rogue-accounts-thrive",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Press/Media Coverage"
+                        ]
+                    },
+                    {
+                        "url": "https://www.jetbrains.com/privacy-security/issues-fixed/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/Stuub/RCity-CVE-2024-27198/blob/main/RCity.py",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-27199",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.913550000",
+                    "percentile": "0.996660000"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-53521",
+                "sourceIdentifier": "f5sirt@f5.com",
+                "published": "2025-10-15T14:15:48.377",
+                "lastModified": "2026-04-02T19:00:01.543",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).\u00a0\u00a0\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV40": [
                         {
-                            "source": "security-advisories@github.com",
+                            "source": "f5sirt@f5.com",
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "4.0",
@@ -4148,8 +4471,8 @@
                     ],
                     "cvssMetricV31": [
                         {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
+                            "source": "f5sirt@f5.com",
+                            "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
                                 "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
@@ -4169,18 +4492,18 @@
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-04-23",
-                "cisaActionDue": "2026-05-07",
+                "cisaExploitAdd": "2026-03-27",
+                "cisaActionDue": "2026-03-30",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Marimo Remote Code Execution Vulnerability",
+                "cisaVulnerabilityName": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
+                        "source": "f5sirt@f5.com",
+                        "type": "Primary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-306"
+                                "value": "CWE-121"
                             }
                         ]
                     }
@@ -4194,9 +4517,31 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:coreweave:marimo:*:*:*:*:*:python:*:*",
-                                        "versionEndExcluding": "0.23.0",
-                                        "matchCriteriaId": "EFA40E82-022F-42C3-A141-F4493A2A3E57"
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.1.0",
+                                        "versionEndExcluding": "15.1.10.8",
+                                        "matchCriteriaId": "A7A0C1CA-EDEF-463F-B7C8-8B9E67239FC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "16.1.0",
+                                        "versionEndExcluding": "16.1.6.1",
+                                        "matchCriteriaId": "6494E2A7-1473-46C0-97F8-90827D9466AA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.1.0",
+                                        "versionEndExcluding": "17.1.3",
+                                        "matchCriteriaId": "96D35435-27A7-4A88-9432-1F5AB0112B8C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.5.0",
+                                        "versionEndExcluding": "17.5.1.3",
+                                        "matchCriteriaId": "252ED1A4-5F29-4440-B1BA-9621E6791812"
                                     }
                                 ]
                             }
@@ -4205,214 +4550,14 @@
                 ],
                 "references": [
                     {
-                        "url": "https://github.com/marimo-team/marimo/commit/c24d4806398f30be6b12acd6c60d1d7c68cfd12a",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/marimo-team/marimo/pull/9098",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Exploit",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-39987",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.sysdig.com/blog/marimo-oss-python-notebook-rce-from-disclosure-to-exploitation-in-under-10-hours",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.787120000",
-                    "percentile": "0.990590000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2023-27351",
-                "sourceIdentifier": "zdi-disclosures@trendmicro.com",
-                "published": "2023-04-20T16:15:07.723",
-                "lastModified": "2026-04-21T13:00:03.370",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of PaperCut NG 22.0.5 (Build 63914). Authentication is not required to exploit this vulnerability. The specific flaw exists within the SecurityRequestFilter class. The issue results from improper implementation of the authentication algorithm. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-19226."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        }
-                    ],
-                    "cvssMetricV30": [
-                        {
-                            "source": "zdi-disclosures@trendmicro.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.0",
-                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-                                "baseScore": 8.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 4.2
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-20",
-                "cisaActionDue": "2026-05-04",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "PaperCut NG/MF Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "zdi-disclosures@trendmicro.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndExcluding": "20.1.7",
-                                        "matchCriteriaId": "B754BD95-F7CC-4A77-A5FB-B627E1E636DB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "21.0.0",
-                                        "versionEndExcluding": "21.2.11",
-                                        "matchCriteriaId": "7D231C34-F58C-4CA1-B158-64778AC17991"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "22.0.0",
-                                        "versionEndExcluding": "22.0.9",
-                                        "matchCriteriaId": "A326E88D-635E-4AC1-B5CE-455306FC9D55"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndExcluding": "20.1.7",
-                                        "matchCriteriaId": "BFB91DE7-FAEA-4F7D-B4B6-6B5211DE4AD0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "21.0.0",
-                                        "versionEndExcluding": "21.2.11",
-                                        "matchCriteriaId": "4DE19845-02F0-4BB9-BECB-49B34FACB55D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "22.0.0",
-                                        "versionEndExcluding": "22.0.9",
-                                        "matchCriteriaId": "C1852E7B-0B3F-4208-A26E-CB117E0C0CD8"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.papercut.com/kb/Main/PO-1216-and-PO-1219",
-                        "source": "zdi-disclosures@trendmicro.com",
+                        "url": "https://my.f5.com/manage/s/article/K000156741",
+                        "source": "f5sirt@f5.com",
                         "tags": [
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-232/",
-                        "source": "zdi-disclosures@trendmicro.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.papercut.com/kb/Main/PO-1216-and-PO-1219",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-232/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-27351",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-53521",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -4420,13 +4565,28 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.869570000",
-                    "percentile": "0.994390000"
+                    "epss": "0.074520000",
+                    "percentile": "0.918080000"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-42208",
+            "vendorProject": "BerriAI",
+            "product": "LiteLLM",
+            "vulnerabilityName": "BerriAI LiteLLM SQL Injection Vulnerability",
+            "dateAdded": "2026-05-08",
+            "shortDescription": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorised access to the proxy and the credentials it manages.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-11",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc ; https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
+            "cwes": [
+                "CWE-89"
+            ]
+        },
         {
             "cveID": "CVE-2026-6973",
             "vendorProject": "Ivanti",
@@ -28026,7 +28186,7 @@
             ]
         }
     ],
-    "last_updated": "2026-05-08T08:19:07.808796",
+    "last_updated": "2026-05-09T08:24:31.707285",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
