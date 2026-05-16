@@ -2,11 +2,320 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-42897",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-05-14T18:16:49.360",
+                "lastModified": "2026-05-15T19:35:52.963",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                                "baseScore": 8.1,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.2
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                                "baseScore": 6.1,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 2.7
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-15",
+                "cisaActionDue": "2026-05-29",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Microsoft Exchange Server Cross-Site Scripting Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-79"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:-:*:*:*:subscription:*:*:*",
+                                        "matchCriteriaId": "C43B55C8-566A-45EE-9E3C-0D270A632803"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8039FBA1-73D4-4FF2-B183-0DCC961CBFF7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "56728785-188C-470A-9692-E6C7235109CA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "63E362CB-CF75-4B7E-A4B1-D6D84AFCBB68"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9BE04790-85A2-4078-88CE-1787BC5172E7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CCF101BE-27FD-4E2D-A694-C606BD3D1ED7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4DF5BDB5-205D-4B64-A49A-0152AFCF4A13"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55284CF7-0D04-4216-83FE-4B1F9CA94207"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CA2CE223-AA49-49E6-AC32-59270EFF55AD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_16:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4830D6A9-AF74-480C-8F69-8648CD619980"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_17:*:*:*:*:*:*",
+                                        "matchCriteriaId": "079E1E3F-FF25-4B0D-AC98-191D6455A014"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_18:*:*:*:*:*:*",
+                                        "matchCriteriaId": "29805EC7-6403-44B9-91EC-109C087E98EB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_19:*:*:*:*:*:*",
+                                        "matchCriteriaId": "28FCA0E8-7D27-4746-9731-91B834CA3E64"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "996163E7-6F3F-4D3B-AEA4-62A7F7E1F54D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_20:*:*:*:*:*:*",
+                                        "matchCriteriaId": "19C1EE0C-B8DD-4B91-BE4B-1C42D72FB718"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_21:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3BE427A4-B0C2-4064-8234-29426325C348"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_22:*:*:*:*:*:*",
+                                        "matchCriteriaId": "449CE85B-E599-44D3-A7C1-5133F6A55E86"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_23:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF76AEDA-E574-40ED-B64F-8FDEF8CAC802"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FE401B0A-DDE4-4A36-8E27-6DB14E094BE2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "450319C4-7C8F-43B7-B7F8-80DA4F1F2817"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "23015889-48AF-40A5-862F-290E73A54E77"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4FC34516-D7E7-4AD9-9B45-5474831548E0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5211792E-5292-41C0-B7E9-8AA63EC606EE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "075E907F-AF2F-4C31-86C7-51972BE412A1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "69AF19DC-3D65-49A8-A85F-511085CDF27B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "40D8A6DB-9225-4A3F-AD76-192F6CCCF002"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "051DE6C4-7456-4C42-BC51-253208AADB4E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B4185347-EEDD-4239-9AB3-410E2EC89D2A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "435343A4-BF10-461A-ABF2-D511A5FBDA75"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B23C8E3E-5243-4DA6-B9AA-F6053084B55E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "583745C7-B802-4CBE-BD88-B5B9AF9B5371"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8C98993B-82A5-48CC-947F-896CEA0CDB7F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EE320413-D2C9-4B28-89BF-361B44A3F0FF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "104F96DC-E280-4E0A-8586-B043B55888C2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "73B3B3FE-7E85-4B86-A983-2C410FFEF4B8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8A9FB275-7F17-48B2-B528-BE89309D2AF5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D4AB3C25-CEA8-4D66-AEE4-953C8B17911A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "36CE5C6D-9A04-41F5-AE7C-265779833649"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "44ECF39A-1DE1-4870-A494-06A53494338D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "71CDF29B-116B-4DE2-AFD0-B62477FF0AEB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42897",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.002200000",
+                    "percentile": "0.445000000"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-20182",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-05-14T17:16:19.387",
-                "lastModified": "2026-05-14T18:16:35.260",
-                "vulnStatus": "Awaiting Analysis",
+                "lastModified": "2026-05-15T12:45:53.990",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -54,20 +363,151 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "20.9.9.1",
+                                        "matchCriteriaId": "5021D679-E23A-4D7F-B3B6-D664634A639C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.10",
+                                        "versionEndExcluding": "20.12.5.4",
+                                        "matchCriteriaId": "26022018-2273-4589-BE4F-AD92DA31CB58"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.12.6",
+                                        "versionEndExcluding": "20.12.6.2",
+                                        "matchCriteriaId": "FDA5CA36-86B6-443D-B772-37A5901F3E83"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.13",
+                                        "versionEndExcluding": "20.15.4.4",
+                                        "matchCriteriaId": "32A83687-B363-476B-89EF-B35C82575237"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.15.5",
+                                        "versionEndExcluding": "20.15.5.2",
+                                        "matchCriteriaId": "709D0805-4B76-46A0-82D3-93C89926B389"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.16",
+                                        "versionEndExcluding": "20.18.2.2",
+                                        "matchCriteriaId": "BB6A9216-3D47-4B33-B502-72B99859992E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.1",
+                                        "versionEndExcluding": "26.1.1.1",
+                                        "matchCriteriaId": "C34C0AB2-3E8E-4B12-BEA2-446F8F248B9A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:20.12.7:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6A03BCEF-DC25-488D-91D3-0A16F3B872E3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "20.9.9.1",
+                                        "matchCriteriaId": "0824EC8B-3153-4298-8570-C115A95FCCF1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.10",
+                                        "versionEndExcluding": "20.12.5.4",
+                                        "matchCriteriaId": "86D90EAF-0EB3-4412-8D15-14F5151E36FA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.12.6",
+                                        "versionEndExcluding": "20.12.6.2",
+                                        "matchCriteriaId": "CAA36394-30A2-4668-AF03-1C596D8AC2E0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.13",
+                                        "versionEndExcluding": "20.15.4.4",
+                                        "matchCriteriaId": "EEC9B48C-3149-4662-9DD4-DC4ACE4460E3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.15.5",
+                                        "versionEndExcluding": "20.15.5.2",
+                                        "matchCriteriaId": "9E964DF6-E2FB-4305-9AD6-42904FC4FE9A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.16",
+                                        "versionEndExcluding": "20.18.2.2",
+                                        "matchCriteriaId": "4D40D018-E4EB-4CC8-A2B0-F8E1DA2E3350"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.1",
+                                        "versionEndExcluding": "26.1.1.1",
+                                        "matchCriteriaId": "788140A2-0378-487E-9C9A-84080C9BC7A5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:20.12.7:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0F4FFF4B-5C26-4014-A9B2-EE342F3FE3C8"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk",
-                        "source": "psirt@cisco.com"
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Not Applicable"
+                        ]
                     },
                     {
                         "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
-                        "source": "psirt@cisco.com"
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20182",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
-                ]
+                ],
+                "epss": {
+                    "epss": "0.015610000",
+                    "percentile": "0.816690000"
+                }
             }
         },
         {
@@ -215,7 +655,7 @@
                 ],
                 "epss": {
                     "epss": "0.431910000",
-                    "percentile": "0.975400000"
+                    "percentile": "0.975410000"
                 }
             }
         },
@@ -319,8 +759,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.063860000",
-                    "percentile": "0.911130000"
+                    "epss": "0.061290000",
+                    "percentile": "0.908980000"
                 }
             }
         },
@@ -1539,7 +1979,7 @@
                 ],
                 "epss": {
                     "epss": "0.144330000",
-                    "percentile": "0.944980000"
+                    "percentile": "0.945010000"
                 }
             }
         },
@@ -3264,7 +3704,7 @@
                 ],
                 "epss": {
                     "epss": "0.025700000",
-                    "percentile": "0.856980000"
+                    "percentile": "0.857070000"
                 }
             }
         },
@@ -3995,7 +4435,7 @@
                 ],
                 "epss": {
                     "epss": "0.071930000",
-                    "percentile": "0.916640000"
+                    "percentile": "0.916730000"
                 }
             }
         },
@@ -4119,979 +4559,27 @@
                 ],
                 "epss": {
                     "epss": "0.581200000",
-                    "percentile": "0.982050000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2024-7399",
-                "sourceIdentifier": "PSIRT@samsung.com",
-                "published": "2024-08-12T13:38:41.550",
-                "lastModified": "2026-04-24T20:23:57.990",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper limitation of a pathname to a restricted directory vulnerability in Samsung MagicINFO 9 Server version before 21.1050 allows attackers to write arbitrary file as system authority."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "La limitaci\u00f3n inadecuada de un nombre de ruta a una vulnerabilidad de directorio restringido en la versi\u00f3n Samsung MagicINFO 9 Server anterior a la 21.1050 permite a los atacantes escribir archivos arbitrarios como autoridad del sistema."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "PSIRT@samsung.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-24",
-                "cisaActionDue": "2026-05-08",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "PSIRT@samsung.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:samsung:magicinfo_9_server:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "21.1050.0",
-                                        "matchCriteriaId": "98EA3132-512C-4B61-87B1-07C927DEDFBB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://security.samsungtv.com/securityUpdates",
-                        "source": "PSIRT@samsung.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://arcticwolf.com/resources/blog-uk/arctic-wolf-observes-exploitation-of-path-traversal-vulnerability-in-samsung-magicinfo-9-server-cve-2024-7399/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-7399",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.813000000",
-                    "percentile": "0.991830000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2024-57728",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2025-01-15T23:15:09.777",
-                "lastModified": "2026-04-24T19:27:00.700",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "SimpleHelp remote support software v5.5.7 and before allows admin users to upload arbitrary files anywhere on the file system by uploading a crafted zip file (i.e. zip slip). This can be exploited to execute arbitrary code on the host in the context of the SimpleHelp server user."
-                    },
-                    {
-                        "lang": "es",
-                        "value": " El software de soporte remoto SimpleHelp v5.5.7 y versiones anteriores permite a los usuarios administradores cargar archivos arbitrarios en cualquier parte del sistema de archivos mediante la carga de un archivo zip manipulado(es decir, un comprobante zip). Esto se puede aprovechar para ejecutar c\u00f3digo arbitrario en el host en el contexto del usuario del servidor SimpleHelp."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-24",
-                "cisaActionDue": "2026-05-08",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-59"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.5.8",
-                                        "matchCriteriaId": "B51B617B-82A8-4B34-BE2E-2D3C9CDE6D12"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.horizon3.ai/attack-research/disclosures/critical-vulnerabilities-in-simplehelp-remote-support-software/",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-57728",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description"
-                        ]
-                    },
-                    {
-                        "url": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-dragonforce",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.593270000",
-                    "percentile": "0.982610000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-48700",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2025-06-23T15:15:27.930",
-                "lastModified": "2026-04-21T13:00:03.373",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An issue was discovered in Zimbra Collaboration (ZCS) 8.8.15 and 9.0 and 10.0 and 10.1. A Cross-Site Scripting (XSS) vulnerability in the Zimbra Classic UI allows attackers to execute arbitrary JavaScript within the user's session, potentially leading to unauthorized access to sensitive information. This issue arises from insufficient sanitization of HTML content, specifically involving crafted tag structures and attribute values that include an @import directive and other script injection vectors. The vulnerability is triggered when a user views a crafted e-mail message in the Classic UI, requiring no additional user interaction."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Se descubri\u00f3 un problema en Zimbra Collaboration (ZCS) 8.8.15, 9.0, 10.0 y 10.1. Una vulnerabilidad de cross-site scripting (XSS) en la interfaz cl\u00e1sica de Zimbra permite a los atacantes ejecutar c\u00f3digo JavaScript arbitrario dentro de la sesi\u00f3n del usuario, lo que podr\u00eda provocar acceso no autorizado a informaci\u00f3n confidencial. Este problema se debe a una limpieza insuficiente del contenido HTML, en particular a estructuras de etiquetas y valores de atributos manipulados que incluyen la directiva @import y otros vectores de inyecci\u00f3n de scripts. La vulnerabilidad se activa cuando un usuario visualiza un mensaje de correo electr\u00f3nico manipulado en la interfaz cl\u00e1sica, sin necesidad de interacci\u00f3n adicional."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-                                "baseScore": 6.1,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 2.7
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-20",
-                "cisaActionDue": "2026-04-23",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-79"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.0.0",
-                                        "versionEndExcluding": "10.0.12",
-                                        "matchCriteriaId": "E603BD7A-730E-410C-BBE1-3E5A8DD2A72F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.1.0",
-                                        "versionEndExcluding": "10.1.4",
-                                        "matchCriteriaId": "55361360-9F77-4731-82AD-82E65E4C5AA0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9E39A855-C0EB-4448-AE96-177757C40C66"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FFE7BE6E-7A9A-40C7-B236-7A21103E9F41"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B5924FFC-BA19-48B3-BF4D-0C2DB3FCD407"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7822D273-C2CB-4EFE-B929-3D34C65E005E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F81528E8-FE3A-4C48-A747-34A3FF28BCAB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p13:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D772D4BA-9ED6-492C-A0D3-0AF4F3D49037"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C2A468FE-B59B-4CE9-B9B2-C836EEAFA3E8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p15:*:*:*:*:*:*",
-                                        "matchCriteriaId": "04BECDE0-F082-49FB-ACA2-5C808902AA17"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p16:*:*:*:*:*:*",
-                                        "matchCriteriaId": "56558FD4-4391-4199-BA6B-B53F5DC30144"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p17:*:*:*:*:*:*",
-                                        "matchCriteriaId": "69A530D3-B84E-427B-BC92-64BBFEF331BE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3C0DCE7F-85A4-44C6-88C8-380B0BBBFA7E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "180AF8B6-55AE-460C-B613-37FB697B5325"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6FCB5528-70FD-4525-A78B-D5537609331A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p20:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34B07279-A26A-4EB1-8B33-885AD854018B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p21:*:*:*:*:*:*",
-                                        "matchCriteriaId": "97402ADA-AB05-4A92-920D-EA5363424FDF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p22:*:*:*:*:*:*",
-                                        "matchCriteriaId": "697A1D34-FF0C-4F9E-8E91-34404A366D70"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p23:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9030D096-87A1-4AFF-BB7C-CE71990005B3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F211A8B1-E33E-49BE-9C18-31B1902EB4FE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p25:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4152CEA2-9DC1-4567-BAB3-9C36F74F77EA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p26:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9BC02B35-7FC4-41AB-8D2E-2CD1896D84C6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p27:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0294CB8B-B0AF-4A5C-B6B2-33F5BFFFBD4C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p28:*:*:*:*:*:*",
-                                        "matchCriteriaId": "968A75B4-6D23-4B83-A8B5-777D8F151E04"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p29:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5E11BC24-56A3-4CAB-B0B2-D2430CD80767"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EF2EE32D-04A5-46EA-92F0-3C8D74A4B82A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p30:*:*:*:*:*:*",
-                                        "matchCriteriaId": "50FB0099-0495-4735-9398-7F7E657F459B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p31:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FAE2858A-6D9E-4D79-AFA6-69C44D6D8C75"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p31.1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5C1D9EB8-E3FE-4BF3-8517-603BA4B126C2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p32:*:*:*:*:*:*",
-                                        "matchCriteriaId": "50A296BC-6DA4-41B2-923A-0633566AD6C1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p33:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C066ED38-1175-48FB-BE05-BE0C19E9EBE7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p34:*:*:*:*:*:*",
-                                        "matchCriteriaId": "89B3EF32-B474-44DB-AE30-CD308CDC5A77"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p35:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A9ECCB00-F3F4-4EB7-9FD0-4CB64678B129"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p36:*:*:*:*:*:*",
-                                        "matchCriteriaId": "37739F7A-490F-42A8-B97D-D09A3EDB85DC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p37:*:*:*:*:*:*",
-                                        "matchCriteriaId": "518662DA-C0F3-4875-86D7-5ED2B2496CC8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p38:*:*:*:*:*:*",
-                                        "matchCriteriaId": "64B28BE5-F35D-4AB0-A321-CEAE21BC26FF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p39:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9DFBABD6-70F2-4E3B-A9C0-82DE76D48542"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BB3C28CA-4C22-423E-B1C7-CBAFBB91F4DB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p40:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0D2D6DBD-560A-4F8E-B2CC-67A564C460A3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BFBC20F8-7F50-4D9D-8442-3397DED4B18B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p42:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D175FCA2-F902-4470-BFF6-5EC2F31BB06D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p43:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5516ED19-5648-4BC8-A9C2-6EE41B1794C7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p44:*:*:*:*:*:*",
-                                        "matchCriteriaId": "28D5F229-EE33-42C4-A26D-23BC760720A5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p45:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A00BE897-F462-4193-BF51-4381B04C076B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p46:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8D93DABB-4E8B-4DB4-BCD5-D495933D0223"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A9A1314A-20C8-42D7-9387-D914999EEAF6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CEF091C5-8DC6-4A41-9E84-F53BE703F71B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ACD65C28-9716-4073-8613-C4AF12684760"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2C58AFFF-848F-490D-A95C-03A267C2DC98"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:8.8.15:p9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B62DC188-89A8-4AEA-90AE-563F0BBEFC54"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "32AFCE22-5ADA-4FF7-A165-5EC12B325DEF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D3577FE6-F1F4-4555-8D27-84D6DE731EA3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "931BD98E-1A5F-4634-945B-BDD7D2FAA8B0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2E7C0A57-A887-4D29-B601-4275313F46B3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B7248B91-D136-4DD5-A631-737E4C220A02"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p13:*:*:*:*:*:*",
-                                        "matchCriteriaId": "494F6FD4-36ED-4E40-8336-7F077FA80FA8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9DF8C0CE-A71D-4BB1-83FB-1EA5ED77E0C9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p15:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E0648498-2EE5-4B68-8360-ED5914285356"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p16:*:*:*:*:*:*",
-                                        "matchCriteriaId": "24282FF8-548B-415B-95CA-1EFD404D21D3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p17:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ACFDF2D9-ED72-4969-AA3B-E8D48CB1922D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2B7D0A8B-7A72-4C1A-85F2-BE336CA47E0B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "019AFC34-289E-4A01-B08B-A5807F7F909A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7E7B3976-DA6F-4285-93E6-2328006F7F4D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p20:*:*:*:*:*:*",
-                                        "matchCriteriaId": "062E586F-0E02-45A6-93AD-895048FC2D4C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p21:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3EE37BEE-4BDB-4E62-8DE3-98CF74DFBE01"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p22:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ADF51BCA-37DD-4642-B201-74A6D1A545FF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p23:*:*:*:*:*:*",
-                                        "matchCriteriaId": "39611F3D-A898-4C35-8915-3334CDFB78E5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40AB56B7-7222-4C44-A271-45DFE3673F72"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p24.1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2AE8F501-4528-4F15-AE50-D4F11FB462DE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p25:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AB9E054B-7790-4E74-A771-40BF6EC71610"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p26:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DD924E57-C77B-430B-A615-537BB39CEA9C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p27:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F43F4AC0-7C82-4CF4-B0C7-3A4C567BC985"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p28:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7991F602-41D7-4377-B888-D66A467EAD67"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p29:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2193FCA2-1AE3-497D-B0ED-5B89727410E3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FA310AFA-492D-4A6C-A7F6-740E82CB6E57"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p30:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FF95618B-0BFB-403C-83BE-C97879FC866D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p31:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A82346A9-9CC2-4B91-BA2F-A815AAA92A7F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p32:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2E800348-E139-418D-910B-7B3A9E1E721C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p33:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C7DE1A7E-573B-42F3-B0A4-D2E676954FE0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p34:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E60BC1D0-8552-4E6B-B2C5-96038448C238"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p35:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3924251E-13B0-420E-8080-D3312C3D54AF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p36:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AEBE75F9-A494-4C78-927A-EA564BDCCE0B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p37:*:*:*:*:*:*",
-                                        "matchCriteriaId": "900BECBA-7FDB-4E35-9603-29706FB87BD2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p38:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5024FD58-A3ED-43B1-83EF-F4570C2573BA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p39:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3CC9D046-4EB4-4608-8AB7-B60AC330A770"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2AF337B5-B296-449B-8848-7636EC7C46C5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p40:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A4535EC5-74D5-41E8-95F1-5C033ADB043E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "408E1BFD-16AA-458C-B040-04870522FEBD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p42:*:*:*:*:*:*",
-                                        "matchCriteriaId": "205B2CDC-6423-4FD9-9FD0-847ADEB64003"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "52232ACA-C158-48C8-A0DB-7689040CB8FB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3B4D0040-86D0-46C3-8A9A-3DD12138B9ED"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D2BB9BC7-078D-4E08-88E4-9432D74CA9BA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F04D4B77-D386-4BC8-8169-9846693F6F11"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "992370FA-F171-4FB3-9C1C-58AC37038CE4"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Security_Center",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-48700",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.187570000",
-                    "percentile": "0.953580000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-1340",
-                "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                "published": "2026-01-29T22:15:53.313",
-                "lastModified": "2026-04-09T14:03:31.767",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A code injection in Ivanti Endpoint Manager Mobile allowing attackers to achieve unauthenticated remote code execution."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Una inyecci\u00f3n de c\u00f3digo en Ivanti Endpoint Manager Mobile que permite a los atacantes lograr ejecuci\u00f3n remota de c\u00f3digo no autenticada."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-08",
-                "cisaActionDue": "2026-04-11",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-94"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
-                                        "versionEndIncluding": "12.7.0.0",
-                                        "matchCriteriaId": "C6499D2A-3DC7-4120-ADBB-36DA63D9C95C"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-1281-CVE-2026-1340",
-                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-1340",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.554210000",
-                    "percentile": "0.980940000"
+                    "percentile": "0.982060000"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-42897",
+            "vendorProject": "Microsoft",
+            "product": "Microsoft",
+            "vulnerabilityName": "Microsoft Exchange Server Cross-Site Scripting Vulnerability",
+            "dateAdded": "2026-05-15",
+            "shortDescription": "Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-29",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42897 ; https://learn.microsoft.com/en-us/exchange/plan-and-deploy/post-installation-tasks/security-best-practices/exchange-emergency-mitigation-service ; https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
+            "cwes": [
+                "CWE-79"
+            ]
+        },
         {
             "cveID": "CVE-2026-20182",
             "vendorProject": "Cisco",
@@ -28721,7 +28209,7 @@
             ]
         }
     ],
-    "last_updated": "2026-05-15T09:40:31.400497",
+    "last_updated": "2026-05-16T08:45:11.554164",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
