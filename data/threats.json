@@ -305,7 +305,7 @@
                 ],
                 "epss": {
                     "epss": "0.123430000",
-                    "percentile": "0.939560000"
+                    "percentile": "0.939620000"
                 }
             }
         },
@@ -506,7 +506,7 @@
                 ],
                 "epss": {
                     "epss": "0.259450000",
-                    "percentile": "0.963340000"
+                    "percentile": "0.963390000"
                 }
             }
         },
@@ -655,7 +655,7 @@
                 ],
                 "epss": {
                     "epss": "0.431910000",
-                    "percentile": "0.975410000"
+                    "percentile": "0.975430000"
                 }
             }
         },
@@ -760,7 +760,7 @@
                 ],
                 "epss": {
                     "epss": "0.061290000",
-                    "percentile": "0.908890000"
+                    "percentile": "0.908900000"
                 }
             }
         },
@@ -1979,7 +1979,7 @@
                 ],
                 "epss": {
                     "epss": "0.144330000",
-                    "percentile": "0.945000000"
+                    "percentile": "0.945070000"
                 }
             }
         },
@@ -3711,7 +3711,7 @@
                 ],
                 "epss": {
                     "epss": "0.025700000",
-                    "percentile": "0.857050000"
+                    "percentile": "0.857070000"
                 }
             }
         },
@@ -4045,8 +4045,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.782930000",
-                    "percentile": "0.990410000"
+                    "epss": "0.878290000",
+                    "percentile": "0.994850000"
                 }
             }
         },
@@ -4205,7 +4205,7 @@
                 ],
                 "epss": {
                     "epss": "0.852710000",
-                    "percentile": "0.993720000"
+                    "percentile": "0.993710000"
                 }
             }
         },
@@ -4442,7 +4442,7 @@
                 ],
                 "epss": {
                     "epss": "0.078880000",
-                    "percentile": "0.920930000"
+                    "percentile": "0.921030000"
                 }
             }
         },
@@ -4566,439 +4566,26 @@
                 ],
                 "epss": {
                     "epss": "0.538020000",
-                    "percentile": "0.980250000"
+                    "percentile": "0.980270000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2024-7399",
-                "sourceIdentifier": "PSIRT@samsung.com",
-                "published": "2024-08-12T13:38:41.550",
-                "lastModified": "2026-04-24T20:23:57.990",
+                "id": "CVE-2023-27351",
+                "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+                "published": "2023-04-20T16:15:07.723",
+                "lastModified": "2026-04-21T13:00:03.370",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Improper limitation of a pathname to a restricted directory vulnerability in Samsung MagicINFO 9 Server version before 21.1050 allows attackers to write arbitrary file as system authority."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "La limitaci\u00f3n inadecuada de un nombre de ruta a una vulnerabilidad de directorio restringido en la versi\u00f3n Samsung MagicINFO 9 Server anterior a la 21.1050 permite a los atacantes escribir archivos arbitrarios como autoridad del sistema."
+                        "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of PaperCut NG 22.0.5 (Build 63914). Authentication is not required to exploit this vulnerability. The specific flaw exists within the SecurityRequestFilter class. The issue results from improper implementation of the authentication algorithm. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-19226."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
-                        {
-                            "source": "PSIRT@samsung.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-24",
-                "cisaActionDue": "2026-05-08",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "PSIRT@samsung.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:samsung:magicinfo_9_server:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "21.1050.0",
-                                        "matchCriteriaId": "98EA3132-512C-4B61-87B1-07C927DEDFBB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://security.samsungtv.com/securityUpdates",
-                        "source": "PSIRT@samsung.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://arcticwolf.com/resources/blog-uk/arctic-wolf-observes-exploitation-of-path-traversal-vulnerability-in-samsung-magicinfo-9-server-cve-2024-7399/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-7399",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.836570000",
-                    "percentile": "0.993000000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2024-57728",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2025-01-15T23:15:09.777",
-                "lastModified": "2026-04-24T19:27:00.700",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "SimpleHelp remote support software v5.5.7 and before allows admin users to upload arbitrary files anywhere on the file system by uploading a crafted zip file (i.e. zip slip). This can be exploited to execute arbitrary code on the host in the context of the SimpleHelp server user."
-                    },
-                    {
-                        "lang": "es",
-                        "value": " El software de soporte remoto SimpleHelp v5.5.7 y versiones anteriores permite a los usuarios administradores cargar archivos arbitrarios en cualquier parte del sistema de archivos mediante la carga de un archivo zip manipulado(es decir, un comprobante zip). Esto se puede aprovechar para ejecutar c\u00f3digo arbitrario en el host en el contexto del usuario del servidor SimpleHelp."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-24",
-                "cisaActionDue": "2026-05-08",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-59"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.5.8",
-                                        "matchCriteriaId": "B51B617B-82A8-4B34-BE2E-2D3C9CDE6D12"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://simple-help.com/kb---security-vulnerabilities-01-2025#security-vulnerabilities-in-simplehelp-5-5-7-and-earlier",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.horizon3.ai/attack-research/disclosures/critical-vulnerabilities-in-simplehelp-remote-support-software/",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-57728",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description"
-                        ]
-                    },
-                    {
-                        "url": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-dragonforce",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.588220000",
-                    "percentile": "0.982400000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-33825",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-04-14T18:17:35.100",
-                "lastModified": "2026-04-23T19:05:04.173",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Insufficient granularity of access control in Microsoft Defender allows an authorized attacker to elevate privileges locally."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-22",
-                "cisaActionDue": "2026-05-06",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Defender Insufficient Granularity of Access Control Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-1220"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:defender_antimalware_platform:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.18.26030.3011",
-                                        "matchCriteriaId": "6EAD29A5-76E3-454D-A56D-46706F02347F"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33825",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33825",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.063780000",
-                    "percentile": "0.911020000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-20133",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-02-25T17:25:30.983",
-                "lastModified": "2026-04-22T16:56:21.973",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in Cisco Catalyst SD-WAN Software could allow an unauthenticated, remote attacker to view sensitive information on an affected system.\r\n\r This vulnerability is due to insufficient file system restrictions. An authenticated attacker with netadmin privileges could exploit this vulnerability by accessing the vshell of an affected system. A successful exploit could allow the attacker to read sensitive information on the underlying operating system."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Una vulnerabilidad en Cisco Catalyst SD-WAN Manager podr\u00eda permitir a un atacante remoto no autenticado ver informaci\u00f3n sensible en un sistema afectado.\n\nEsta vulnerabilidad se debe a restricciones de acceso al sistema de archivos insuficientes. Un atacante podr\u00eda explotar esta vulnerabilidad al acceder a la API de un sistema afectado. Un exploit exitoso podr\u00eda permitir al atacante leer informaci\u00f3n sensible en el sistema operativo subyacente."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 6.5,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 3.6
-                        },
                         {
                             "source": "nvd@nist.gov",
                             "type": "Primary",
@@ -5019,20 +4606,42 @@
                             "exploitabilityScore": 3.9,
                             "impactScore": 3.6
                         }
+                    ],
+                    "cvssMetricV30": [
+                        {
+                            "source": "zdi-disclosures@trendmicro.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+                                "baseScore": 8.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.2
+                        }
                     ]
                 },
                 "cisaExploitAdd": "2026-04-20",
-                "cisaActionDue": "2026-04-23",
-                "cisaRequiredAction": "Please adhere to CISA\u2019s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlines in CISA\u2019s Emergency Directive 26-03 (URL listed below in Notes) and CISA\u2019s \u201cHunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
-                "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+                "cisaActionDue": "2026-05-04",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "PaperCut NG/MF Improper Authentication Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "psirt@cisco.com",
+                        "source": "zdi-disclosures@trendmicro.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-200"
+                                "value": "CWE-287"
                             }
                         ]
                     }
@@ -5046,35 +4655,45 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "20.9.8.2",
-                                        "matchCriteriaId": "0388BD67-C1AD-4E47-8B1A-22EE1634190E"
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.0",
+                                        "versionEndExcluding": "20.1.7",
+                                        "matchCriteriaId": "B754BD95-F7CC-4A77-A5FB-B627E1E636DB"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.10",
-                                        "versionEndExcluding": "20.12.5.3",
-                                        "matchCriteriaId": "ADAB32B5-239D-4DC0-BF30-A6D72ACB3710"
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "21.0.0",
+                                        "versionEndExcluding": "21.2.11",
+                                        "matchCriteriaId": "7D231C34-F58C-4CA1-B158-64778AC17991"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.13",
-                                        "versionEndExcluding": "20.15.4.2",
-                                        "matchCriteriaId": "D284EA84-6C27-4A9C-BDA2-D1C5BF1F2356"
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "22.0.0",
+                                        "versionEndExcluding": "22.0.9",
+                                        "matchCriteriaId": "A326E88D-635E-4AC1-B5CE-455306FC9D55"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.16",
-                                        "versionEndExcluding": "20.18.2.1",
-                                        "matchCriteriaId": "B94E1DC2-5DA5-4238-8040-6D524DDEAA4F"
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "15.0",
+                                        "versionEndExcluding": "20.1.7",
+                                        "matchCriteriaId": "BFB91DE7-FAEA-4F7D-B4B6-6B5211DE4AD0"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:20.12.6:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F5B6E170-73B8-4838-93B4-AD258F3BCA7C"
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "21.0.0",
+                                        "versionEndExcluding": "21.2.11",
+                                        "matchCriteriaId": "4DE19845-02F0-4BB9-BECB-49B34FACB55D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "22.0.0",
+                                        "versionEndExcluding": "22.0.9",
+                                        "matchCriteriaId": "C1852E7B-0B3F-4208-A26E-CB117E0C0CD8"
                                     }
                                 ]
                             }
@@ -5083,14 +4702,37 @@
                 ],
                 "references": [
                     {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v",
-                        "source": "psirt@cisco.com",
+                        "url": "https://www.papercut.com/kb/Main/PO-1216-and-PO-1219",
+                        "source": "zdi-disclosures@trendmicro.com",
                         "tags": [
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20133",
+                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-232/",
+                        "source": "zdi-disclosures@trendmicro.com",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.papercut.com/kb/Main/PO-1216-and-PO-1219",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-232/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-27351",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -5098,120 +4740,61 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.013560000",
-                    "percentile": "0.803280000"
+                    "epss": "0.869570000",
+                    "percentile": "0.994450000"
                 }
             }
         },
         {
             "cve": {
-                "id": "CVE-2020-9715",
+                "id": "CVE-2026-34621",
                 "sourceIdentifier": "psirt@adobe.com",
-                "published": "2020-08-19T14:15:13.407",
-                "lastModified": "2026-04-14T14:45:00.160",
+                "published": "2026-04-11T07:16:03.633",
+                "lastModified": "2026-04-13T21:23:27.000",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Adobe Acrobat and Reader versions 2020.009.20074 and earlier, 2020.001.30002, 2017.011.30171 and earlier, and 2015.006.30523 and earlier have an use-after-free vulnerability. Successful exploitation could lead to arbitrary code execution ."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Adobe Acrobat and Reader versiones 2020.009.20074 y anteriores, versiones 2020.001.30002, 2017.011.30171 y anteriores, y versiones 2015.006.30523 y anteriores, presentan una vulnerabilidad de uso de la memoria previamente liberada. Una explotaci\u00f3n con \u00e9xito podr\u00eda conllevar a una ejecuci\u00f3n de c\u00f3digo arbitraria."
+                        "value": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
                     }
                 ],
                 "metrics": {
                     "cvssMetricV31": [
                         {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "source": "psirt@adobe.com",
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                                "baseScore": 8.6,
                                 "baseSeverity": "HIGH",
                                 "attackVector": "LOCAL",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
+                                "scope": "CHANGED",
                                 "confidentialityImpact": "HIGH",
                                 "integrityImpact": "HIGH",
                                 "availabilityImpact": "HIGH"
                             },
                             "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
+                            "impactScore": 6.0
                         }
                     ]
                 },
                 "cisaExploitAdd": "2026-04-13",
                 "cisaActionDue": "2026-04-27",
                 "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Adobe Acrobat Use-After-Free Vulnerability",
+                "cisaVulnerabilityName": "Adobe Acrobat and Reader Prototype Pollution Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-416"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "source": "psirt@adobe.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-416"
+                                "value": "CWE-1321"
                             }
                         ]
                     }
@@ -5226,55 +4809,15 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:classic:*:*:*",
-                                        "versionStartIncluding": "15.006.30060",
-                                        "versionEndIncluding": "15.006.30523",
-                                        "matchCriteriaId": "FF9AD23D-2478-40F9-8504-3363EC18A582"
-                                    },
-                                    {
-                                        "vulnerable": true,
                                         "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:continuous:*:*:*",
-                                        "versionStartIncluding": "15.008.20082",
-                                        "versionEndIncluding": "20.009.20074",
-                                        "matchCriteriaId": "CC5FFE53-2682-44E5-B888-4A0E3DDBE19C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:classic:*:*:*",
-                                        "versionStartIncluding": "17.011.30059",
-                                        "versionEndIncluding": "17.011.30171",
-                                        "matchCriteriaId": "FB59932A-B454-4F9D-B346-9CB083CCFE9C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_dc:20.001.30002:*:*:*:classic:*:*:*",
-                                        "matchCriteriaId": "A8E2402A-9025-4322-86D2-B65ABB33AFA3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:classic:*:*:*",
-                                        "versionStartIncluding": "15.006.30060",
-                                        "versionEndIncluding": "15.006.30523",
-                                        "matchCriteriaId": "6F4B8A87-4022-4787-9FC4-342732DF35FD"
+                                        "versionEndExcluding": "26.001.21411",
+                                        "matchCriteriaId": "C1D9FFF0-C948-4C17-8E0C-9245DD3ADDCB"
                                     },
                                     {
                                         "vulnerable": true,
                                         "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:continuous:*:*:*",
-                                        "versionStartIncluding": "15.008.20082",
-                                        "versionEndIncluding": "20.009.20074",
-                                        "matchCriteriaId": "38776DFA-9B6F-4417-A664-ACFA8979CA42"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:classic:*:*:*",
-                                        "versionStartIncluding": "17.011.30059",
-                                        "versionEndIncluding": "17.011.30171",
-                                        "matchCriteriaId": "1E735417-A682-4000-978A-E880254A5A23"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:20.001.30002:*:*:*:classic:*:*:*",
-                                        "matchCriteriaId": "8E9B6A3E-04DA-47D9-99E5-8F4030511BE1"
+                                        "versionEndExcluding": "26.001.21411",
+                                        "matchCriteriaId": "6E91BACA-4DE1-4412-BE17-0992FDEEC66B"
                                     }
                                 ]
                             },
@@ -5295,131 +4838,9 @@
                                 ]
                             }
                         ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://blog.exodusintel.com/2021/04/20/analysis-of-a-use-after-free-vulnerability-in-adobe-acrobat-reader-dc/",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Exploit",
-                            "Patch",
-                            "Third Party Advisory"
-                        ]
                     },
                     {
-                        "url": "https://helpx.adobe.com/security/products/acrobat/apsb20-48.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-20-991/",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://blog.exodusintel.com/2021/04/20/analysis-of-a-use-after-free-vulnerability-in-adobe-acrobat-reader-dc/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Patch",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://helpx.adobe.com/security/products/acrobat/apsb20-48.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-20-991/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-9715",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.774990000",
-                    "percentile": "0.990020000"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-21643",
-                "sourceIdentifier": "psirt@fortinet.com",
-                "published": "2026-02-06T09:15:49.330",
-                "lastModified": "2026-04-16T16:00:01.953",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An improper neutralization of special elements used in an sql command ('sql injection') vulnerability in Fortinet FortiClientEMS 7.4.4 may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Una vulnerabilidad de neutralizaci\u00f3n incorrecta de elementos especiales utilizados en un comando SQL ('inyecci\u00f3n SQL') en Fortinet FortiClientEMS 7.4.4 podr\u00eda permitir a un atacante no autenticado ejecutar c\u00f3digo o comandos no autorizados a trav\u00e9s de solicitudes HTTP espec\u00edficamente dise\u00f1adas."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@fortinet.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-13",
-                "cisaActionDue": "2026-04-16",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Fortinet FortiClient EMS SQL Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@fortinet.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-89"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
+                        "operator": "AND",
                         "nodes": [
                             {
                                 "operator": "OR",
@@ -5427,8 +4848,50 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:forticlientems:7.4.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "552AF7AC-8630-442C-A7A4-66CA789DC3FD"
+                                        "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:classic:*:*:*",
+                                        "versionStartIncluding": "24.0.0",
+                                        "versionEndExcluding": "24.001.30362",
+                                        "matchCriteriaId": "0287242D-1301-49AF-B416-C37114304EF4"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:classic:*:*:*",
+                                        "versionStartIncluding": "24.0.0",
+                                        "versionEndExcluding": "24.001.30360",
+                                        "matchCriteriaId": "528A400D-E038-41E4-B3C8-ED5BA10BD63E"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
                                     }
                                 ]
                             }
@@ -5437,21 +4900,14 @@
                 ],
                 "references": [
                     {
-                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-1142",
-                        "source": "psirt@fortinet.com",
+                        "url": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html",
+                        "source": "psirt@adobe.com",
                         "tags": [
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://github.com/0xBlackash/CVE-2026-21643/blob/main/cve-2026-21643.py",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21643",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34621",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -5459,8 +4915,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.625160000",
-                    "percentile": "0.983860000"
+                    "epss": "0.121550000",
+                    "percentile": "0.939060000"
                 }
             }
         }
@@ -29110,7 +28566,7 @@
             ]
         }
     ],
-    "last_updated": "2026-05-19T10:33:57.433130",
+    "last_updated": "2026-05-20T10:20:26.069912",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
