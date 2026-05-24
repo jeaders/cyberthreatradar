@@ -178,21 +178,40 @@ def fetch_epss_data(cve_ids):
     return {}
 
 def main():
+    session = requests.Session()
+    session.headers.update(get_nvd_headers())
+    
     # 1. Recupera CISA KEV prima per avere una lista di CVE critiche reali
     cisa_kev_data = fetch_cisa_kev_data()
     kev_vulnerabilities = cisa_kev_data.get("vulnerabilities", []) if cisa_kev_data else []
 
-    # 2. Recupera i dettagli NVD per le prime 40 CVE del catalogo CISA (garantisce dati reali e critici)
-    print(f"Fetching NVD details for top 40 KEV vulnerabilities...")
+    # 2. Recupera i dettagli NVD per le prime 20 CVE del catalogo CISA (ridotto da 40 per velocità)
+    print(f"Fetching NVD details for top 20 KEV vulnerabilities...")
     nvd_cves = []
     cve_ids_for_epss = []
-    for vuln in kev_vulnerabilities[:40]:
+    
+    # Usiamo un subset più piccolo per evitare di bloccare l'azione GitHub
+    target_kev = kev_vulnerabilities[:20]
+    for i, vuln in enumerate(target_kev):
         cve_id = vuln.get("cveID")
-        details = fetch_nvd_details_for_cve(cve_id)
-        if details:
-            nvd_cves.append(details)
-            cve_ids_for_epss.append(cve_id)
-        time.sleep(0.4) # Rate limit NVD API
+        print(f"[{i+1}/{len(target_kev)}] Fetching details for {cve_id}...")
+        
+        url = f"https://services.nvd.nist.gov/rest/json/cves/2.0?cveId={cve_id}"
+        try:
+            response = session.get(url, timeout=15)
+            if response.status_code == 200:
+                data = response.json()
+                vulns = data.get("vulnerabilities", [])
+                if vulns:
+                    nvd_cves.append(vulns[0])
+                    cve_ids_for_epss.append(cve_id)
+            elif response.status_code == 403:
+                print(f"API Key limit/error for {cve_id}. Skipping remaining NVD detail fetches.")
+                break
+        except Exception as e:
+            print(f"Error fetching {cve_id}: {e}")
+            
+        time.sleep(0.6) # Rate limit NVD API più prudente
 
     # 3. Recupera score EPSS per le CVE trovate
     epss_data = fetch_epss_data(cve_ids_for_epss)
@@ -203,7 +222,8 @@ def main():
         if cve_id in epss_data:
             item["cve"]["epss"] = epss_data[cve_id]
 
-    # 4. Recupera news
+    # 4. Recupera news con log di progresso
+    print("Fetching news from HackerNews and Reddit...")
     hn_news = fetch_hacker_news_data()
     reddit_news = fetch_reddit_netsec_data()
 
