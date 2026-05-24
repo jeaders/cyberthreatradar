@@ -6,7 +6,9 @@
     <title>🛡️ Threat Intel Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
     <header>
@@ -135,14 +137,33 @@
 
         <!-- TABS -->
         <nav class="tabs">
-            <button class="tab-btn active" data-tab="threats">🔴 Minacce (CVE)</button>
+            <button class="tab-btn active" data-tab="radar">📡 Radar Live</button>
+            <button class="tab-btn" data-tab="threats">🔴 Minacce (CVE)</button>
             <button class="tab-btn" data-tab="kev">⚠️ CISA KEV Spotlight</button>
-            <button class="tab-btn" data-tab="news">📰 Security News</button>
+            <button class="tab-btn" data-tab="livecams">🎥 Live Cams</button>
+            <button class="tab-btn" data-tab="news">📰 News dal Mondo</button>
             <button class="tab-btn" data-tab="watchlist">⭐ Watchlist</button>
         </nav>
 
+        <!-- TAB: RADAR -->
+        <div id="radar" class="tab-content active">
+            <div class="radar-container">
+                <div id="radar-map" style="height: 600px; width: 100%; border-radius: 1rem; border: 1px solid var(--border-color);"></div>
+                <div class="radar-overlay">
+                    <div class="radar-legend">
+                        <h4>Legenda Radar</h4>
+                        <ul>
+                            <li><span class="dot critical"></span> Attacco Critico</li>
+                            <li><span class="dot high"></span> Minaccia Elevata</li>
+                            <li><span class="dot medium"></span> Attività Sospetta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- TAB: THREATS -->
-        <div id="threats" class="tab-content active">
+        <div id="threats" class="tab-content">
             <div id="threat-cards-container" class="cards-grid">
                 <!-- Threat cards will be inserted here -->
             </div>
@@ -155,9 +176,46 @@
             </div>
         </div>
 
+        <!-- TAB: LIVE CAMS -->
+        <div id="livecams" class="tab-content">
+            <div class="live-cams-grid">
+                <div class="cam-card">
+                    <h3>Times Square, NY</h3>
+                    <div class="cam-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1-iS7LArMPA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="cam-card">
+                    <h3>Shibuya Crossing, Tokyo</h3>
+                    <div class="cam-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/W_mY_2Y92_U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="cam-card">
+                    <h3>Piazza Navona, Roma</h3>
+                    <div class="cam-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6iOAsO7U0yE?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="cam-card">
+                    <h3>International Space Station</h3>
+                    <div class="cam-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9C25Un7xaM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- TAB: NEWS -->
         <div id="news" class="tab-content">
-            <div class="news-grid">
+            <div class="news-tabs">
+                <button class="news-tab-btn active" data-news-source="world">🌍 World News</button>
+                <button class="news-tab-btn" data-news-source="security">🛡️ Security News</button>
+            </div>
+            <div id="world-news-container" class="news-grid-alt">
+                <!-- World news will be inserted here -->
+            </div>
+            <div id="security-news-container" class="news-grid" style="display: none;">
                 <div class="news-column">
                     <h2>HackerNews</h2>
                     <div id="hn-news-container"></div>
