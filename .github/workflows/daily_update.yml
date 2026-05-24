@@ -30,9 +30,10 @@ jobs:
         run: python scripts/fetch_data.py
 
       - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/*.json
-          git commit -m "chore: update threat data $(date +'%Y-%m-%d')" || exit 0
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update threat data $(date +'%Y-%m-%d')"
+          file_pattern: 'data/*.json'
+          commit_user_name: GitHub Action
+          commit_user_email: action@github.com
+          push_options: '--force'

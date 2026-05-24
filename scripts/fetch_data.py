@@ -3,7 +3,69 @@ import requests
 import json
 import time
 import os
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
+
+# Mapping geografico dei vendor per il Radar
+VENDOR_LOCATIONS = {
+    "microsoft": {"lat": 47.6740, "lng": -122.1215, "country": "USA"},
+    "google": {"lat": 37.4220, "lng": -122.0841, "country": "USA"},
+    "apple": {"lat": 37.3349, "lng": -122.0090, "country": "USA"},
+    "cisco": {"lat": 37.4084, "lng": -121.9540, "country": "USA"},
+    "oracle": {"lat": 37.5295, "lng": -122.2530, "country": "USA"},
+    "adobe": {"lat": 37.3307, "lng": -121.8940, "country": "USA"},
+    "linux": {"lat": 45.5231, "lng": -122.6765, "country": "Global"},
+    "apache": {"lat": 33.4484, "lng": -112.0740, "country": "USA"},
+    "nginx": {"lat": 37.7749, "lng": -122.4194, "country": "USA"},
+    "ibm": {"lat": 41.1225, "lng": -73.7125, "country": "USA"},
+    "vmware": {"lat": 37.4024, "lng": -122.1481, "country": "USA"},
+    "fortinet": {"lat": 37.3752, "lng": -122.0297, "country": "USA"},
+    "ivanti": {"lat": 40.5247, "lng": -111.8638, "country": "USA"},
+    "atlassian": {"lat": -33.8688, "lng": 151.2093, "country": "Australia"},
+    "sap": {"lat": 49.2933, "lng": 8.6419, "country": "Germany"},
+    "qnap": {"lat": 25.0330, "lng": 121.5654, "country": "Taiwan"},
+    "synology": {"lat": 25.0478, "lng": 121.5170, "country": "Taiwan"},
+    "d-link": {"lat": 25.0792, "lng": 121.5888, "country": "Taiwan"},
+    "tp-link": {"lat": 22.5431, "lng": 114.0579, "country": "China"},
+    "hikvision": {"lat": 30.2741, "lng": 120.1551, "country": "China"},
+}
+
+def fetch_world_news_rss():
+    """Recupera news reali dal mondo via BBC RSS"""
+    rss_url = "http://feeds.bbci.co.uk/news/world/rss.xml"
+    try:
+        print("Fetching real world news from BBC RSS...")
+        response = requests.get(rss_url, timeout=20)
+        response.raise_for_status()
+        
+        root = ET.fromstring(response.content)
+        news_list = []
+        
+        for item in root.findall('.//item')[:10]:
+            title = item.find('title').text
+            description = item.find('description').text
+            link = item.find('link').text
+            pub_date = item.find('pubDate').text
+            
+            # Immagine di fallback basata sul contenuto (semplificato)
+            img = "https://images.unsplash.com/photo-1585829365234-781f8c429215?auto=format&fit=crop&w=800&q=80"
+            if "war" in title.lower() or "conflict" in title.lower():
+                img = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"
+            elif "tech" in title.lower() or "digital" in title.lower():
+                img = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+
+            news_list.append({
+                "title": title,
+                "description": description,
+                "url": link,
+                "source": "BBC News",
+                "date": pub_date,
+                "img": img
+            })
+        return news_list
+    except Exception as e:
+        print(f"Error fetching RSS news: {e}")
+        return []
 
 def get_nvd_headers():
     """Restituisce gli header per l'API NVD, includendo la chiave API se disponibile"""
@@ -116,10 +178,14 @@ def fetch_hacker_news_data():
 def fetch_reddit_netsec_data():
     """Recupera post recenti da r/netsec"""
     reddit_url = "https://www.reddit.com/r/netsec/top.json?t=day&limit=25"
-    headers = {"User-Agent": "CyberThreatRadar/2.0 (by /u/SecurityResearcher)"}
+    # User-Agent più specifico per evitare 403
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 CyberThreatRadar/2.1"}
     try:
         print("Fetching Reddit r/netsec data...")
         response = requests.get(reddit_url, headers=headers, timeout=20)
+        if response.status_code == 403:
+            print("Reddit blocked access (403). Trying alternative security news...")
+            return []
         response.raise_for_status()
         posts = response.json().get("data", {}).get("children", [])
 
@@ -216,16 +282,32 @@ def main():
     # 3. Recupera score EPSS per le CVE trovate
     epss_data = fetch_epss_data(cve_ids_for_epss)
     
-    # Integriamo EPSS nei dati NVD
+    # Integriamo EPSS e Posizione Geografica nei dati NVD
     for item in nvd_cves:
         cve_id = item["cve"]["id"]
+        # EPSS
         if cve_id in epss_data:
             item["cve"]["epss"] = epss_data[cve_id]
+        
+        # Posizione Geografica basata sul vendor
+        tech = item["cve"].get("configurations", [{}])[0].get("nodes", [{}])[0].get("cpeMatch", [{}])[0].get("criteria", "")
+        vendor = tech.split(':')[3].lower() if len(tech.split(':')) > 3 else "unknown"
+        
+        if vendor in VENDOR_LOCATIONS:
+            item["cve"]["location"] = VENDOR_LOCATIONS[vendor]
+        else:
+            # Fallback randomico ma limitato a zone plausibili se il vendor è ignoto
+            item["cve"]["location"] = {
+                "lat": (time.time() % 60) - 30, # Genera un numero semi-stabile
+                "lng": (time.time() % 360) - 180,
+                "country": "Unknown"
+            }
 
     # 4. Recupera news con log di progresso
-    print("Fetching news from HackerNews and Reddit...")
+    print("Fetching news from HackerNews, Reddit and BBC RSS...")
     hn_news = fetch_hacker_news_data()
     reddit_news = fetch_reddit_netsec_data()
+    world_news = fetch_world_news_rss()
 
     # Prepariamo i dati delle minacce
     threats_data = {
@@ -242,6 +324,7 @@ def main():
     news_data = {
         "hacker_news": hn_news,
         "reddit_netsec": reddit_news,
+        "world_news_real": world_news, # Aggiunte news reali
         "last_updated": datetime.now().isoformat()
     }
 

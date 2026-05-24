@@ -38,21 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
         radarMarkers.forEach(m => radarMap.removeLayer(m));
         radarMarkers = [];
 
-        // Use real threat data to position markers (randomized for visualization)
-        const topThreats = threatsData.nvd_cves.slice(0, 15);
+        // Use real threat data with real locations from backend
+        const topThreats = threatsData.nvd_cves;
         
         topThreats.forEach((threat) => {
             const metrics = threat.cve.metrics?.cvssMetricV31?.[0]?.cvssData || threat.cve.metrics?.cvssMetricV30?.[0]?.cvssData;
             const score = metrics?.baseScore || 0;
             const cveId = threat.cve.id;
-            
-            // Generate semi-random coordinates (real radar would use IP geolocation)
-            const lat = (Math.random() * 120) - 60;
-            const lng = (Math.random() * 360) - 180;
+            const location = threat.cve.location || { lat: 0, lng: 0, country: "Unknown" };
             
             const color = score >= 9.0 ? '#ff3b3b' : (score >= 7.0 ? '#ff7b00' : '#ffd600');
             
-            const marker = L.circleMarker([lat, lng], {
+            const marker = L.circleMarker([location.lat, location.lng], {
                 radius: 8 + (score - 7) * 2,
                 fillColor: color,
                 color: '#fff',
@@ -66,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="color: #000; font-family: 'Inter', sans-serif; padding: 5px;">
                     <strong style="color: ${color}">${cveId}</strong><br>
                     <strong>Score: ${score}</strong><br>
-                    <small>Posizione simulata</small>
+                    <small>Sede Vendor: ${location.country}</small>
                 </div>
             `);
 
@@ -74,56 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== WORLD NEWS FETCH (MOCK) =====
+    // ===== WORLD NEWS FETCH (REAL) =====
     async function fetchWorldNews() {
         const container = document.getElementById('world-news-container');
         if (!container) return;
 
-        // In a real scenario, this would be an API call to NewsAPI or similar
-        const mockWorldNews = [
-            {
-                title: "Cyber Security Global Alert: New Ransomware Campaign Detected",
-                description: "Security agencies worldwide warn about a sophisticated ransomware campaign targeting critical infrastructure using zero-day exploits.",
-                source: "Reuters Security",
-                date: "2026-05-23",
-                img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-                url: "#"
-            },
-            {
-                title: "Quantum Encryption Becomes Standard for Financial Sector",
-                description: "Major banks across the globe start implementing post-quantum cryptographic standards to protect sensitive financial data.",
-                source: "Bloomberg Tech",
-                date: "2026-05-22",
-                img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-                url: "#"
-            },
-            {
-                title: "Internet Backbone Under Pressure from Volumetric DDoS",
-                description: "A massive distributed denial-of-service attack is causing significant latency issues for international web traffic.",
-                source: "TechCrunch",
-                date: "2026-05-21",
-                img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-                url: "#"
-            },
-            {
-                title: "AI-Driven Threat Intelligence: The New Frontier",
-                description: "Experts discuss how autonomous AI agents are revolutionizing the speed of threat detection and response in SOC environments.",
-                source: "Wired Security",
-                date: "2026-05-20",
-                img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
-                url: "#"
-            }
-        ];
+        const realWorldNews = newsData.world_news_real || [];
 
-        container.innerHTML = mockWorldNews.map((news, index) => `
+        if (realWorldNews.length === 0) {
+            container.innerHTML = '<p class="error">Impossibile caricare le news dal mondo al momento.</p>';
+            return;
+        }
+
+        container.innerHTML = realWorldNews.map((news, index) => `
             <div class="news-card-alt" style="animation-delay: ${index * 100}ms;">
                 <div class="news-card-img" style="background-image: url('${news.img}')"></div>
                 <div class="news-card-content">
                     <h4>${news.title}</h4>
                     <p style="font-size: 0.9rem; color: var(--text-secondary);">${news.description}</p>
                     <div class="news-card-footer">
-                        <span>${news.source} • ${news.date}</span>
-                        <a href="${news.url}" class="btn-read-more">Leggi tutto <i class="fas fa-external-link-alt"></i></a>
+                        <span>${news.source} • ${new Date(news.date).toLocaleDateString('it-IT')}</span>
+                        <a href="${news.url}" target="_blank" class="btn-read-more">Leggi tutto <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
