@@ -2,6 +2,169 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-48172",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-05-21T02:16:33.760",
+                "lastModified": "2026-05-26T20:19:13.460",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exploited in the wild in May 2026. Detection is best done via a command line of grep -rE \"cpanel_jsonapi_func=redisAble\" /var/cpanel/logs /usr/local/cpanel/logs/ 2>/dev/null in Bash. If you get no output, you have not been hit with exploitation of the vulnerability. If there is output, we recommend you examine the IP addresses in the list, determine if they are valid IP addresses, and if not, block them. To determine damage done, examine the system logs for use by the detected IP addresses. The issue is related to mishandling of Redis enable/disable features. The recommended minimum version is 2.4.7."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-26",
+                "cisaActionDue": "2026-05-29",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-266"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:litespeedtech:litespeed_cpanel_plugin:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.4.7",
+                                        "matchCriteriaId": "B64A4D51-C0C2-4925-A49C-97E7CD8CAABD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:litespeedtech:litespeed_whm_plugin:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.3.1.0",
+                                        "matchCriteriaId": "6CBC6C6D-C562-4EB5-A2A0-BE07F716B8AF"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://blog.litespeedtech.com/2026/05/21/security-update-for-litespeed-cpanel-plugin/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.litespeedtech.com/products/litespeed-web-server/control-panel-support/cpanel",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Product"
+                        ]
+                    },
+                    {
+                        "url": "https://www.litespeedtech.com/products/litespeed-web-server/control-panel-support/release-log",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48172",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.079560000",
+                    "percentile": "0.921640000"
+                },
+                "location": {
+                    "lat": 24.6958909034729,
+                    "lng": -125.30410504341125,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-9082",
                 "sourceIdentifier": "mlhess@drupal.org",
                 "published": "2026-05-20T20:16:41.230",
@@ -126,12 +289,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.173340000",
-                    "percentile": "0.951320000"
+                    "epss": "0.341690000",
+                    "percentile": "0.970480000"
                 },
                 "location": {
-                    "lat": 7.560086011886597,
-                    "lng": -82.43990921974182,
+                    "lat": 24.69590139389038,
+                    "lng": -125.30409789085388,
                     "country": "Unknown"
                 }
             }
@@ -292,12 +455,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.304460000",
-                    "percentile": "0.967710000"
+                    "epss": "0.348020000",
+                    "percentile": "0.970880000"
                 },
                 "location": {
-                    "lat": 7.560097932815552,
-                    "lng": -82.43990087509155,
+                    "lat": 24.695905447006226,
+                    "lng": -125.3040943145752,
                     "country": "Unknown"
                 }
             }
@@ -419,12 +582,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.001930000",
-                    "percentile": "0.408560000"
+                    "epss": "0.007510000",
+                    "percentile": "0.733950000"
                 },
                 "location": {
-                    "lat": 7.5601043701171875,
-                    "lng": -82.43989539146423,
+                    "lat": 24.695908546447754,
+                    "lng": -125.30409121513367,
                     "country": "Unknown"
                 }
             }
@@ -943,7 +1106,7 @@
                 ],
                 "epss": {
                     "epss": "0.920780000",
-                    "percentile": "0.997180000"
+                    "percentile": "0.997190000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1387,7 +1550,7 @@
                 "evaluatorImpact": "Per: http://www.microsoft.com/technet/security/advisory/971778.mspx\r\n\r\n\"Microsoft is aware of limited, active attacks that use this exploit code. While our investigation is ongoing, our investigation so far has shown that Windows 2000 Service Pack 4, Windows XP, and Windows Server 2003 are vulnerable; all versions of Windows Vista and Windows Server 2008 are not vulnerable.\"",
                 "epss": {
                     "epss": "0.530160000",
-                    "percentile": "0.979970000"
+                    "percentile": "0.979960000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2896,7 +3059,7 @@
                 "evaluatorComment": "Further information on this vulnerability can be found at the following link from Microsoft:\r\n\r\nhttp://support.microsoft.com/kb/981374",
                 "epss": {
                     "epss": "0.872530000",
-                    "percentile": "0.994630000"
+                    "percentile": "0.994640000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2990,14 +3153,14 @@
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41091",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "US Government Resource",
-                            "Third Party Advisory"
+                            "Third Party Advisory",
+                            "US Government Resource"
                         ]
                     }
                 ],
                 "epss": {
                     "epss": "0.059410000",
-                    "percentile": "0.907420000"
+                    "percentile": "0.907500000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3011,7 +3174,7 @@
                 "id": "CVE-2026-45498",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-05-20T13:16:36.780",
-                "lastModified": "2026-05-20T19:05:46.837",
+                "lastModified": "2026-05-26T20:00:18.077",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -3070,12 +3233,12 @@
                 "cisaVulnerabilityName": "Microsoft Defender Denial of Service Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "nvd@nist.gov",
+                        "source": "secure@microsoft.com",
                         "type": "Primary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "NVD-CWE-noinfo"
+                                "value": "CWE-400"
                             }
                         ]
                     },
@@ -3100,9 +3263,8 @@
                                     {
                                         "vulnerable": true,
                                         "criteria": "cpe:2.3:a:microsoft:defender_antimalware_platform:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "4.18.26030.3011",
                                         "versionEndExcluding": "4.18.26040.7",
-                                        "matchCriteriaId": "EE400D53-CA9B-433A-BB02-048BFDE09034"
+                                        "matchCriteriaId": "7DBA2812-3139-4628-9CE5-FB2241242A6C"
                                     }
                                 ]
                             }
@@ -3128,7 +3290,7 @@
                 ],
                 "epss": {
                     "epss": "0.041060000",
-                    "percentile": "0.887370000"
+                    "percentile": "0.887460000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3442,7 +3604,7 @@
                 ],
                 "epss": {
                     "epss": "0.074860000",
-                    "percentile": "0.918710000"
+                    "percentile": "0.918780000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3648,7 +3810,7 @@
                 ],
                 "epss": {
                     "epss": "0.773240000",
-                    "percentile": "0.990000000"
+                    "percentile": "0.989990000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3802,11 +3964,11 @@
                 ],
                 "epss": {
                     "epss": "0.542620000",
-                    "percentile": "0.980600000"
+                    "percentile": "0.980590000"
                 },
                 "location": {
-                    "lat": 7.560132026672363,
-                    "lng": -82.43986773490906,
+                    "lat": 24.695929050445557,
+                    "lng": -125.30407071113586,
                     "country": "Unknown"
                 }
             }
@@ -3912,7 +4074,7 @@
                 ],
                 "epss": {
                     "epss": "0.049070000",
-                    "percentile": "0.897180000"
+                    "percentile": "0.897250000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -5135,12 +5297,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.043530000",
-                    "percentile": "0.890650000"
+                    "epss": "0.045360000",
+                    "percentile": "0.893040000"
                 },
                 "location": {
-                    "lat": 7.560137987136841,
-                    "lng": -82.43986177444458,
+                    "lat": 24.69593334197998,
+                    "lng": -125.30406665802002,
                     "country": "Unknown"
                 }
             }
@@ -6918,7 +7080,7 @@
                 ],
                 "epss": {
                     "epss": "0.022350000",
-                    "percentile": "0.847540000"
+                    "percentile": "0.847700000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -7257,12 +7419,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.850080000",
-                    "percentile": "0.993640000"
+                    "epss": "0.905300000",
+                    "percentile": "0.996270000"
                 },
                 "location": {
-                    "lat": 7.560143709182739,
-                    "lng": -82.43985605239868,
+                    "lat": 24.695937395095825,
+                    "lng": -125.3040623664856,
                     "country": "Unknown"
                 }
             }
@@ -7425,8 +7587,8 @@
                     "percentile": "0.993780000"
                 },
                 "location": {
-                    "lat": 7.56014609336853,
-                    "lng": -82.43985366821289,
+                    "lat": 24.695939540863037,
+                    "lng": -125.30406045913696,
                     "country": "Unknown"
                 }
             }
@@ -7436,7 +7598,7 @@
                 "id": "CVE-2026-32202",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-04-14T18:17:27.360",
-                "lastModified": "2026-04-28T21:47:02.087",
+                "lastModified": "2026-05-26T20:00:21.270",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -7654,17 +7816,32 @@
                         ]
                     },
                     {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-32202-detection-script-spoofing-vulnerability-in-windows-shell",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-32202-mitigation-script-spoofing-vulnerability-in-windows-shell",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-32202",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "US Government Resource",
-                            "Third Party Advisory"
+                            "Third Party Advisory",
+                            "US Government Resource"
                         ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.129650000",
-                    "percentile": "0.941630000"
+                    "epss": "0.107710000",
+                    "percentile": "0.934490000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -7672,138 +7849,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-29635",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2025-03-25T14:15:29.043",
-                "lastModified": "2026-04-24T19:27:15.560",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A command injection vulnerability in D-Link DIR-823X 240126 and 240802 allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function, triggering remote command execution."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Una vulnerabilidad de inyecci\u00f3n de comandos en D-Link DIR-823X 240126 y 240802 permite a un atacante autorizado ejecutar comandos arbitrarios en dispositivos remotos enviando una solicitud POST a /goform/set_prohibiting a trav\u00e9s de la funci\u00f3n correspondiente, lo que desencadena la ejecuci\u00f3n remota de comandos."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-24",
-                "cisaActionDue": "2026-05-08",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "D-Link DIR-823X Command Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-77"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:dlink:dir-823x_firmware:240126:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3C63FF02-C46A-4DD9-AEB0-72FF5D4C2ABF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:dlink:dir-823x_firmware:240802:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "692189D6-6D75-4C87-BA1F-15D9C34FAEF6"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:dlink:dir-823x:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "09CE2627-49F3-4B6F-B48B-F52665C6B8C6"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/mono7s/Dir-823x/blob/main/set_prohibiting/set_prohibiting.md",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://www.akamai.com/blog/security-research/2026/apr/cve-2025-29635-mirai-campaign-targets-d-link-devices",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-29635",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.199490000",
-                    "percentile": "0.955550000"
-                },
-                "location": {
-                    "lat": 7.56015157699585,
-                    "lng": -82.43984842300415,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-48172",
+            "vendorProject": "LiteSpeed",
+            "product": "cPanel Plugin",
+            "vulnerabilityName": "LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
+            "dateAdded": "2026-05-26",
+            "shortDescription": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-29",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://blog.litespeedtech.com/2026/05/21/security-update-for-litespeed-cpanel-plugin/ ; https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
+            "cwes": [
+                "CWE-266"
+            ]
+        },
         {
             "cveID": "CVE-2026-9082",
             "vendorProject": "Drupal",
@@ -31594,7 +31657,7 @@
             ]
         }
     ],
-    "last_updated": "2026-05-26T14:43:47.350723",
+    "last_updated": "2026-05-27T14:55:01.603536",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
