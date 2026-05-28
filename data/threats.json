@@ -2,6 +2,1280 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-48027",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-05-27T17:16:41.787",
+                "lastModified": "2026-05-27T20:34:24.850",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Nx Console is the user interface for Nx & Lerna. On 19 May 2026, a malicious version of Nx Console, 18.95.0, was published at 12:30 PM UTC and removed soon after at 12:48 PM UTC, leaving it available for ~18 minutes in Visual Studio Marketplace. For OpenVSX, the problem was detected later, and the compromised version was available from 12:33 UTC to 13:09 UTC (~36 minutes). Version 18.100.0 of Nx Console is not compromised and users may remediate by upgrading to that version."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-27",
+                "cisaActionDue": "2026-06-10",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Nx Console Embedded Malicious Code Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-506"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:nx:nx_console:18.95.0:*:*:*:*:visual_studio_code:*:*",
+                                        "matchCriteriaId": "A748F70F-02F7-4793-89AE-7666A2D213F1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/nrwl/nx-console/issues/3139",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/nrwl/nx-console/security/advisories/GHSA-c9j4-9m59-847w",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://nx.dev/blog/nx-console-v18-95-0-postmortem#indicators-of-compromise",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.stepsecurity.io/blog/nx-console-vs-code-extension-compromised",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48027",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.268490000",
+                    "percentile": "0.964380000"
+                },
+                "location": {
+                    "lat": -15.057859182357788,
+                    "lng": 74.94214487075806,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-45321",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-05-12T01:16:46.820",
+                "lastModified": "2026-05-27T20:18:55.940",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "On 2026-05-11, between approximately 19:20 and 19:26 UTC, 84 malicious versions across 42 @tanstack/* packages were published to the npm registry. The publishes were authenticated via the legitimate GitHub Actions OIDC trusted-publisher binding for TanStack/router, but the publish workflow itself was not modified. The attacker chained three known vulnerability classes \u2014 a pull_request_target \"Pwn Request\" misconfiguration, GitHub Actions cache poisoning across the fork\u2194base trust boundary, and runtime memory extraction of the OIDC token from the Actions runner process \u2014 to publish credential-stealing malware under a trusted identity. Each affected package received exactly two malicious versions, published a few minutes apart."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.6,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 6.0
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-27",
+                "cisaActionDue": "2026-06-10",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "TanStack Unspecified Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-506"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/arktype-adapter:1.166.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "D089266B-67D9-4E01-A12A-9EF7359D189F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/arktype-adapter:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "8EDD7BAC-C8F6-4DB7-B547-B4565EE04D29"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/eslint-plugin-router:1.161.9:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "6F878839-DE9A-4883-8EC0-DBF087FE744D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/eslint-plugin-router:1.161.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "1DC99745-A9D2-4F33-A42A-F6A5457A2042"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/eslint-plugin-start:0.0.4:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "BB756F48-FB90-43EC-BC50-4CC10DCDC5DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/eslint-plugin-start:0.0.7:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F12FC2B9-F858-4218-AF3A-437A7D056EE8"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/history:1.161.9:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "42A626A8-DF50-42A9-B582-B44C2F63B97F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/history:1.161.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "5C95EB8A-77B4-4C14-8798-40457E2BB6D4"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/nitro-v2-vite-plugin:1.154.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "5D503DF9-36BA-463F-AB1E-1DBABE46BA82"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/nitro-v2-vite-plugin:1.154.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "69617BE5-65E2-4F4E-9E52-1103732C0C00"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router:1.169.5:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "4E162DAD-4554-4269-A17C-3E9FE548E61A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router:1.169.8:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "313F5FBD-6EE2-4A5C-AE9D-55FE9BC6175E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router-devtools:1.166.16:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "B0516DDF-507E-4370-8C2D-9FE45ADFA44B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router-devtools:1.166.19:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F5DAFBB2-E865-4CE2-8928-49C362EFB907"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router-ssr-query:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "9269D422-A56D-4329-AE76-7655AA1DE4B8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-router-ssr-query:1.166.18:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "8ED80DA2-95B0-43B6-8151-606BDC9E8BE2"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start:1.167.68:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "7235EE5D-9F47-4A1C-B71C-EDC7DA4A0074"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start:1.167.71:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "81CE53FF-DE73-4CC3-A5A6-8FC47A2BF065"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-client:1.166.51:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "DE9FA7FF-222D-4194-B0D7-14C5BE3D3835"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-client:1.166.54:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "271AA5DB-D274-4280-B31C-BB649AB005CF"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-rsc:0.0.47:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "CB10EA60-CFED-4336-B02F-D90ADA489F4C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-rsc:0.0.50:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "7D0A0948-0EC9-482E-B2B0-DCDE83E39B64"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-server:1.166.55:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "7CBA3D9C-0326-485A-9AC6-34765CD16EFA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/react-start-server:1.166.58:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "31989B27-3C14-434F-9C58-A88C151C4DC4"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-cli:1.166.46:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "81242435-7AFF-4A27-939C-FE186A9C7707"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-cli:1.166.49:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "84564FFE-3352-4E74-95B2-459AA74B2699"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-core:1.169.5:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "0E5D56A3-AC95-440C-A46D-0533CCB38836"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-core:1.169.8:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "CD696314-55DA-4D5B-8C18-346F31CBC53A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-devtools:1.166.16:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "57FD0EC0-F9EE-439F-B4FE-0B9EF9280D65"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-devtools:1.166.19:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "DFF0A342-C2FA-4581-9EDE-66AF815C2A5B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-devtools-core:1.167.6:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "BF3992BB-94C7-49F9-9CDF-E0E393E22948"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-devtools-core:1.167.9:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "2729CE47-9087-4FB4-B20C-80D231B6D951"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-generator:1.166.45:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "B0054316-AA0C-448C-BED8-83E18E0D45BF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-generator:1.166.48:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "22F9BDB1-1418-4288-ACC3-271886D75621"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-plugin:1.167.38:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "9955D82B-821D-4CB3-9940-95D43A33FD71"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-plugin:1.167.41:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "01D9DCD5-D9DC-40BB-AB81-1CBCDA3F8E12"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-ssr-query-core:1.168.3:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "39E3139D-9057-4872-880A-643B9ADFD0D0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-ssr-query-core:1.168.6:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "2E091068-FA7D-43A9-8595-5DC313109F4E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-utils:1.161.11:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "D5485276-183A-482D-BBAA-DC6DE06EA0FE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-utils:1.161.14:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "2AB11C2E-5631-4EFE-A8D9-714A854779A4"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-vite-plugin:1.166.53:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C612A5A5-1CC2-49A9-9AC9-A89C9B9A294F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/router-vite-plugin:1.166.56:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "B68FD101-F4EF-4121-AABD-436C2DF3230A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router:1.169.5:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "A2864318-AFD0-4D05-AEC6-D43D7708E2F9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router:1.169.8:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C14986F6-EF60-4D35-AEF1-3F08584E1CE2"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router-devtools:1.166.16:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "33DE352F-C451-4EFC-87E4-41207D615074"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router-devtools:1.166.19:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "272C6F6E-F762-45F7-B482-B89E5401C471"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router-ssr-query:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "498032DA-0F2A-4FF5-AA7D-F0F6625A0B57"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-router-ssr-query:1.166.18:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C71BF529-030F-49F7-A04B-D6A3FDF4811E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start:1.167.65:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "E9C9E346-8F25-46ED-A7B1-D7857A2F8D39"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start:1.167.68:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "14259BF0-ACEB-43FA-A724-1808910F8D3D"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start-client:1.166.50:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "00D4D48E-4F76-45DE-9B18-1452405252AE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start-client:1.166.53:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "A166B3E8-49CC-4A43-A947-3F29AE51A584"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start-server:1.166.54:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "BD086B5E-7AF2-4098-B54B-44501FB8EAFD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/solid-start-server:1.166.57:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C8946A17-7F2E-43F5-B322-4200BF5F11D9"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-client-core:1.168.5:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F7C475D3-2093-4173-AF84-2613F2A6ED7D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-client-core:1.168.8:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "1270E9DB-E6B0-46AA-92D4-C4D4EA9A9FD0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-fn-stubs:1.161.9:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F8CBCC6C-5E15-456E-8B36-7CA56786422B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-fn-stubs:1.161.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "6F37DB35-297B-413B-A47E-50CF172B40F6"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-plugin-core:1.169.23:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F5C850D5-08BF-4D52-912B-C2943C301E70"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-plugin-core:1.169.26:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "2CC73054-C269-48BF-90BC-62927447F6E9"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-server-core:1.167.33:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "EA69076A-7094-4DE7-85DF-D9C95C8BEA89"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-server-core:1.167.36:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "0691D345-799E-4FCE-8C56-910587E88A1B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-static-server-functions:1.166.44:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "300B8DF6-0632-4668-9A8C-F5213E353CFB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-static-server-functions:1.166.47:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "228B7783-CF16-4C45-BE2A-43A205EEC5CD"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-storage-context:1.166.38:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "97706E1B-0025-4B1D-9D52-96F0AF2CB74A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/start-storage-context:1.166.41:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "CB24E218-CA98-4859-BCB9-97D712A51665"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/valibot-adapter:1.166.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "0582C685-BA60-4E98-B21F-9B3624EA45A8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/valibot-adapter:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "05FBBB63-36D9-461B-9467-E5D442E37339"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/virtual-file-routes:1.161.10:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "76675CD4-24DF-4081-80AE-891E9A7E3508"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/virtual-file-routes:1.161.13:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "2B2F909A-1481-4288-8B20-5070C11EF31A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router:1.169.5:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "3673A5CD-037C-4365-8FA2-ACDF1C52DCC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router:1.169.8:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C690C863-9789-459F-9D43-A3885AE52AF7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router-devtools:1.166.16:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "1EA8D53F-8DFC-4703-B8FC-0BBAA36ECA48"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router-devtools:1.166.19:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "AECC0C92-5582-412E-9ADD-446FAEA00FD2"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router-ssr-query:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "8A0505A4-AD80-49D6-BF00-397A06C05E4A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-router-ssr-query:1.166.18:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "D70EFBB9-4E5B-4598-BAA4-D0D0B118AB92"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start:1.167.61:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "9EF1676C-7CB6-456C-8CC3-773126DE7221"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start:1.167.64:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "D8A9C993-4A15-48DF-9C2E-8DF4307FA819"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start-client:1.166.46:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "F9A2FEBC-38C7-4102-989A-E2394D611EFA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start-client:1.166.49:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C52E88B9-E004-4EAA-9C4E-A42A79000BDE"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start-server:1.166.50:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "0AC47592-B517-42B3-8799-4A3158E8D026"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/vue-start-server:1.166.53:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "08057602-9BCB-436E-A4A4-A4BF2252D45D"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/zod-adapter:1.166.12:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "C4961153-A963-41DC-92DC-D8C29E8F58A9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:tanstack:tanstack\\/zod-adapter:1.166.15:*:*:*:*:node.js:*:*",
+                                        "matchCriteriaId": "E2A77E8B-C2F4-4281-A71B-A5F58757CE0A"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/TanStack/router/issues/7383",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-45321",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.150850000",
+                    "percentile": "0.946840000"
+                },
+                "location": {
+                    "lat": -15.057845830917358,
+                    "lng": 74.94215512275696,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-8398",
+                "sourceIdentifier": "vulnerability@kaspersky.com",
+                "published": "2026-05-15T09:16:17.653",
+                "lastModified": "2026-05-28T12:57:00.563",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A supply chain attack compromised the official installation packages of DAEMON Tools Lite (Windows versions 12.5.0.2421 through 12.5.0.2434), distributed from the legitimate website daemon-tools.cc between approximately April 8, 2026, and May 5, 2026. Attackers gained unauthorized access to the vendor's (AVB Disc Soft) build or distribution infrastructure and trojanized three binaries: DTHelper.exe, DiscSoftBusServiceLite.exe, and DTShellHlp.exe. These files were digitally signed with the legitimate AVB Disc Soft code-signing certificate, allowing the malicious installers to appear trustworthy and bypass signature-based detection."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-05-27",
+                "cisaActionDue": "2026-05-30",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Daemon Tools Lite Embedded Malicious Code Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "vulnerability@kaspersky.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-506"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:disc-soft:daemon_tools:12.5.1:*:*:*:lite:*:*:*",
+                                        "matchCriteriaId": "F291E275-397E-40E4-8ABD-292B16A8C90E"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://blog.daemon-tools.cc/post/security-incident",
+                        "source": "vulnerability@kaspersky.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://securelist.com/tr/daemon-tools-backdoor/119654/",
+                        "source": "vulnerability@kaspersky.com",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-8398",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.330240000",
+                    "percentile": "0.969730000"
+                },
+                "location": {
+                    "lat": -15.057839155197144,
+                    "lng": 74.94216108322144,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-48172",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-05-21T02:16:33.760",
@@ -154,11 +1428,11 @@
                 ],
                 "epss": {
                     "epss": "0.079560000",
-                    "percentile": "0.921640000"
+                    "percentile": "0.921750000"
                 },
                 "location": {
-                    "lat": 24.6958909034729,
-                    "lng": -125.30410504341125,
+                    "lat": -15.05783486366272,
+                    "lng": 74.94216561317444,
                     "country": "Unknown"
                 }
             }
@@ -290,11 +1564,11 @@
                 ],
                 "epss": {
                     "epss": "0.341690000",
-                    "percentile": "0.970480000"
+                    "percentile": "0.970550000"
                 },
                 "location": {
-                    "lat": 24.69590139389038,
-                    "lng": -125.30409789085388,
+                    "lat": -15.057830095291138,
+                    "lng": 74.94216990470886,
                     "country": "Unknown"
                 }
             }
@@ -456,11 +1730,11 @@
                 ],
                 "epss": {
                     "epss": "0.348020000",
-                    "percentile": "0.970880000"
+                    "percentile": "0.970940000"
                 },
                 "location": {
-                    "lat": 24.695905447006226,
-                    "lng": -125.3040943145752,
+                    "lat": -15.057825088500977,
+                    "lng": 74.94217491149902,
                     "country": "Unknown"
                 }
             }
@@ -583,11 +1857,11 @@
                 ],
                 "epss": {
                     "epss": "0.007510000",
-                    "percentile": "0.733950000"
+                    "percentile": "0.734470000"
                 },
                 "location": {
-                    "lat": 24.695908546447754,
-                    "lng": -125.30409121513367,
+                    "lat": -15.057821035385132,
+                    "lng": 74.94217944145203,
                     "country": "Unknown"
                 }
             }
@@ -1550,7 +2824,7 @@
                 "evaluatorImpact": "Per: http://www.microsoft.com/technet/security/advisory/971778.mspx\r\n\r\n\"Microsoft is aware of limited, active attacks that use this exploit code. While our investigation is ongoing, our investigation so far has shown that Windows 2000 Service Pack 4, Windows XP, and Windows Server 2003 are vulnerable; all versions of Windows Vista and Windows Server 2008 are not vulnerable.\"",
                 "epss": {
                     "epss": "0.530160000",
-                    "percentile": "0.979960000"
+                    "percentile": "0.980000000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1901,7 +3175,7 @@
                 ],
                 "epss": {
                     "epss": "0.880730000",
-                    "percentile": "0.994990000"
+                    "percentile": "0.995000000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -2497,8 +3771,8 @@
                 ],
                 "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/416.htmlhttp://cwe.mitre.org/data/definitions/416.html\n\nCWE-416: Use After Free",
                 "epss": {
-                    "epss": "0.886770000",
-                    "percentile": "0.995240000"
+                    "epss": "0.887880000",
+                    "percentile": "0.995310000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3059,7 +4333,7 @@
                 "evaluatorComment": "Further information on this vulnerability can be found at the following link from Microsoft:\r\n\r\nhttp://support.microsoft.com/kb/981374",
                 "epss": {
                     "epss": "0.872530000",
-                    "percentile": "0.994640000"
+                    "percentile": "0.994660000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3160,7 +4434,7 @@
                 ],
                 "epss": {
                     "epss": "0.059410000",
-                    "percentile": "0.907500000"
+                    "percentile": "0.907630000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3174,7 +4448,7 @@
                 "id": "CVE-2026-45498",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-05-20T13:16:36.780",
-                "lastModified": "2026-05-26T20:00:18.077",
+                "lastModified": "2026-05-28T10:49:44.453",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -3241,16 +4515,6 @@
                                 "value": "CWE-400"
                             }
                         ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-400"
-                            }
-                        ]
                     }
                 ],
                 "configurations": [
@@ -3290,7 +4554,7 @@
                 ],
                 "epss": {
                     "epss": "0.041060000",
-                    "percentile": "0.887460000"
+                    "percentile": "0.887660000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3604,7 +4868,7 @@
                 ],
                 "epss": {
                     "epss": "0.074860000",
-                    "percentile": "0.918780000"
+                    "percentile": "0.918880000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3964,11 +5228,11 @@
                 ],
                 "epss": {
                     "epss": "0.542620000",
-                    "percentile": "0.980590000"
+                    "percentile": "0.980620000"
                 },
                 "location": {
-                    "lat": 24.695929050445557,
-                    "lng": -125.30407071113586,
+                    "lat": -15.057781219482422,
+                    "lng": 74.94221901893616,
                     "country": "Unknown"
                 }
             }
@@ -4074,7 +5338,7 @@
                 ],
                 "epss": {
                     "epss": "0.049070000",
-                    "percentile": "0.897250000"
+                    "percentile": "0.897420000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -5298,11 +6562,11 @@
                 ],
                 "epss": {
                     "epss": "0.045360000",
-                    "percentile": "0.893040000"
+                    "percentile": "0.893230000"
                 },
                 "location": {
-                    "lat": 24.69593334197998,
-                    "lng": -125.30406665802002,
+                    "lat": -15.05777359008789,
+                    "lng": 74.94222664833069,
                     "country": "Unknown"
                 }
             }
@@ -7080,7 +8344,7 @@
                 ],
                 "epss": {
                     "epss": "0.022350000",
-                    "percentile": "0.847700000"
+                    "percentile": "0.847950000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -7088,770 +8352,52 @@
                     "country": "Global"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-41940",
-                "sourceIdentifier": "disclosure@vulncheck.com",
-                "published": "2026-04-29T16:16:25.037",
-                "lastModified": "2026-05-04T18:09:42.300",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "cPanel and WHM versions after 11.40 contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "disclosure@vulncheck.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "disclosure@vulncheck.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-30",
-                "cisaActionDue": "2026-05-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "disclosure@vulncheck.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "11.40",
-                                        "versionEndExcluding": "86.0.41",
-                                        "matchCriteriaId": "D018D47F-B020-41B1-8755-9197EB8673D3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "88.0.0",
-                                        "versionEndExcluding": "110.0.97",
-                                        "matchCriteriaId": "9BF3DBAC-D629-44A9-B102-2D8F82709CA2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "112.0.0",
-                                        "versionEndExcluding": "118.0.63",
-                                        "matchCriteriaId": "3EEFF12C-11E8-4A5C-9C72-BA1A422A9E72"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "120.0.0",
-                                        "versionEndExcluding": "124.0.35",
-                                        "matchCriteriaId": "5533AA73-5007-4820-A5C6-0460C486882D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "126.0.1",
-                                        "versionEndExcluding": "126.0.54",
-                                        "matchCriteriaId": "15C0513D-8C56-4C5F-B818-E2CE90223AD4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "128.0.0",
-                                        "versionEndExcluding": "130.0.19",
-                                        "matchCriteriaId": "B5FE32EC-AEFB-4B27-AE65-A95432CAA812"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "132.0.0",
-                                        "versionEndExcluding": "132.0.29",
-                                        "matchCriteriaId": "24982921-6C0D-478E-BBF1-7C9DC7023760"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "134.0.0",
-                                        "versionEndExcluding": "134.0.20",
-                                        "matchCriteriaId": "B0213A2B-4A5A-4098-87FF-517E33F96807"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "136.0.0",
-                                        "versionEndExcluding": "136.0.5",
-                                        "matchCriteriaId": "09F99F08-1FB9-4BC6-8C7D-52062BA28479"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "11.40",
-                                        "versionEndExcluding": "86.0.41",
-                                        "matchCriteriaId": "63BE6DEF-A6EA-4545-9A3D-E1BA84A50EC7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "88.0.0",
-                                        "versionEndExcluding": "110.0.97",
-                                        "matchCriteriaId": "74E9C069-EA63-4B95-9229-45AD97563532"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "112.0.0",
-                                        "versionEndExcluding": "118.0.63",
-                                        "matchCriteriaId": "2FCD52CF-3F10-4FFA-8FC7-AA5F370AF9B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "120.0.0",
-                                        "versionEndExcluding": "124.0.35",
-                                        "matchCriteriaId": "2ED81103-D03E-4351-9C19-1B3F120268D6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "126.0.1",
-                                        "versionEndExcluding": "126.0.54",
-                                        "matchCriteriaId": "6DC3D6F0-8D07-4719-977E-DB978AEB7A67"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "128.0.0",
-                                        "versionEndExcluding": "130.0.19",
-                                        "matchCriteriaId": "C6C216F5-330D-4DAA-B042-1A4707FF658E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "132.0.0",
-                                        "versionEndExcluding": "132.0.29",
-                                        "matchCriteriaId": "8793EED8-BDBD-4CC8-9698-FCEE769CFB5B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "134.0.0",
-                                        "versionEndExcluding": "134.0.20",
-                                        "matchCriteriaId": "53AC31A0-AD91-4897-89E7-1C05AF03BF5A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "136.0.0",
-                                        "versionEndExcluding": "136.0.5",
-                                        "matchCriteriaId": "23D646D3-2BDC-44C8-8C5F-9E21B0613A48"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cpanel:wp_squared:*:*:*:*:*:wordpress:*:*",
-                                        "versionEndExcluding": "136.1.7",
-                                        "matchCriteriaId": "80392939-B45D-4C12-ADBB-334E783BDE67"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://docs.cpanel.net/release-notes/release-notes",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.wpsquared.com/changelogs/versions/changelog/#13617",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://support.cpanel.net/hc/en-us/articles/40073787579671-cPanel-WHM-Security-Update-04-28-2026",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.namecheap.com/status-updates/ongoing-critical-security-vulnerability-in-cpanel-april-28-2026",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.vulncheck.com/advisories/cpanel-and-whm-authentication-bypass-via-login-flow",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://labs.watchtowr.com/the-internet-is-falling-down-falling-down-falling-down-cpanel-whm-authentication-bypass-cve-2026-41940/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.bleepingcomputer.com/news/security/critrical-cpanel-flaw-mass-exploited-in-sorry-ransomware-attacks/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Press/Media Coverage"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41940",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.905300000",
-                    "percentile": "0.996270000"
-                },
-                "location": {
-                    "lat": 24.695937395095825,
-                    "lng": -125.3040623664856,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2024-1708",
-                "sourceIdentifier": "9119a7d8-5eab-497f-8521-727c672e3725",
-                "published": "2024-02-21T16:15:50.233",
-                "lastModified": "2026-04-28T21:44:53.770",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "ConnectWise ScreenConnect 23.9.7 and prior are affected by path-traversal vulnerability, which may allow an attacker \n\nthe ability to execute remote code or directly impact confidential data or critical systems.\n\n"
-                    },
-                    {
-                        "lang": "es",
-                        "value": "ConnectWise ScreenConnect 23.9.7 y versiones anteriores se ven afectados por una vulnerabilidad de path traversal, que puede permitir a un atacante ejecutar c\u00f3digo remoto o afectar directamente a datos confidenciales o sistemas cr\u00edticos."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "9119a7d8-5eab-497f-8521-727c672e3725",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-                                "baseScore": 8.4,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.7,
-                            "impactScore": 6.0
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-                                "baseScore": 8.4,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.7,
-                            "impactScore": 6.0
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-28",
-                "cisaActionDue": "2026-05-12",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "ConnectWise ScreenConnect Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:connectwise:screenconnect:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "23.9.8",
-                                        "matchCriteriaId": "26FEBC12-2B0F-4F8F-BCB8-03683D71B37F"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.connectwise.com/company/trust/security-bulletins/connectwise-screenconnect-23.9.8",
-                        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.huntress.com/blog/a-catastrophe-for-control-understanding-the-screenconnect-authentication-bypass",
-                        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.connectwise.com/company/trust/security-bulletins/connectwise-screenconnect-23.9.8",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.huntress.com/blog/a-catastrophe-for-control-understanding-the-screenconnect-authentication-bypass",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-1708",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.854370000",
-                    "percentile": "0.993780000"
-                },
-                "location": {
-                    "lat": 24.695939540863037,
-                    "lng": -125.30406045913696,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-32202",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-04-14T18:17:27.360",
-                "lastModified": "2026-05-26T20:00:21.270",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Protection mechanism failure in Windows Shell allows an unauthorized attacker to perform spoofing over a network."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
-                                "baseScore": 4.3,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 1.4
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-04-28",
-                "cisaActionDue": "2026-05-12",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Windows Protection Mechanism Failure Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-693"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.14393.9060",
-                                        "matchCriteriaId": "158C16A3-547E-4130-8428-8E429C37E573"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.14393.9060",
-                                        "matchCriteriaId": "58E1A340-D49A-4EBB-A750-876922ACD5CA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.17763.8644",
-                                        "matchCriteriaId": "64248504-2307-45FC-8FF3-7A227CFD8675"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.17763.8644",
-                                        "matchCriteriaId": "9B1465B1-BDE6-4634-8F12-43F71D68A4D6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.19044.7184",
-                                        "matchCriteriaId": "88A175C4-E033-4FE7-B2BF-8BAE14321BC4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.19044.7184",
-                                        "matchCriteriaId": "86DBF14A-F486-4FE7-9126-D1D54952FC6C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.19044.7184",
-                                        "matchCriteriaId": "C375372B-D3D4-4B11-AAD8-69AC344C24BC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.19045.7184",
-                                        "matchCriteriaId": "8CE2E268-E776-4697-9E43-33ABA4CDBE05"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.19045.7184",
-                                        "matchCriteriaId": "269B8E88-6473-41DD-BA33-D9184B82CA58"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.19045.7184",
-                                        "matchCriteriaId": "FCBB431B-EF21-4454-BDA3-D8F276BE7A64"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.22631.6936",
-                                        "matchCriteriaId": "B33CE091-B873-4C30-BA05-54A8C1839212"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.22631.6936",
-                                        "matchCriteriaId": "E3AF28F3-D486-4B88-9E0E-371241024174"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.26100.8246",
-                                        "matchCriteriaId": "94EB36C7-1FF2-4B44-AD91-F3540F09393E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.26100.8246",
-                                        "matchCriteriaId": "14B23C3F-C8AC-491A-BCA5-EB6982C8F9E9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.26200.8246",
-                                        "matchCriteriaId": "361B5DAB-8D1F-45D7-A33C-F49EBA56B5F8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.26200.8246",
-                                        "matchCriteriaId": "ADC6CE99-AB5D-4DD5-82A9-892366C4B2FD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_26h1:*:*:*:*:*:*:arm64:*",
-                                        "versionEndExcluding": "10.0.28000.1836",
-                                        "matchCriteriaId": "690E74A8-E72C-47B6-96EB-37C48D69A635"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_11_26h1:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.28000.1836",
-                                        "matchCriteriaId": "13A01FA1-08DC-4E33-9FFC-AB4BCD9634CA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.14393.9060",
-                                        "matchCriteriaId": "982DB0CA-5196-4E42-B2F7-994BE8179715"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.17763.8644",
-                                        "matchCriteriaId": "647CF9B5-8898-469B-9C09-D372A7843187"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.20348.5020",
-                                        "matchCriteriaId": "DC6837B7-5DFD-4AF7-B436-3C6FEF48BA60"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.25398.2274",
-                                        "matchCriteriaId": "55A1F3AB-5299-4495-9A73-FDA23C6FD88D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.26100.32690",
-                                        "matchCriteriaId": "ADF41A14-B9DA-4788-82A8-74DCDCD090E1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32202",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-32202-detection-script-spoofing-vulnerability-in-windows-shell",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-32202-mitigation-script-spoofing-vulnerability-in-windows-shell",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mitigation",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-32202",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.107710000",
-                    "percentile": "0.934490000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-48027",
+            "vendorProject": "Nx",
+            "product": "Nx Console",
+            "vulnerabilityName": "Nx Console Embedded Malicious Code Vulnerability",
+            "dateAdded": "2026-05-27",
+            "shortDescription": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-10",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/nrwl/nx-console/security/advisories/GHSA-c9j4-9m59-847w ; https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
+            "cwes": [
+                "CWE-506"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-45321",
+            "vendorProject": "TanStack",
+            "product": "TanStack",
+            "vulnerabilityName": "TanStack Unspecified Vulnerability",
+            "dateAdded": "2026-05-27",
+            "shortDescription": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-10",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx ; https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
+            "cwes": []
+        },
+        {
+            "cveID": "CVE-2026-8398",
+            "vendorProject": "Daemon",
+            "product": "Daemon Tools Lite",
+            "vulnerabilityName": "Daemon Tools Lite Embedded Malicious Code Vulnerability",
+            "dateAdded": "2026-05-27",
+            "shortDescription": "Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-05-30",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://blog.daemon-tools.cc/post/security-incident ; https://nvd.nist.gov/vuln/detail/CVE-2026-8398",
+            "cwes": [
+                "CWE-506"
+            ]
+        },
         {
             "cveID": "CVE-2026-48172",
             "vendorProject": "LiteSpeed",
@@ -31657,7 +32203,7 @@
             ]
         }
     ],
-    "last_updated": "2026-05-27T14:55:01.603536",
+    "last_updated": "2026-05-28T15:28:27.345499",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
