@@ -2,6 +2,170 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-45247",
+                "sourceIdentifier": "disclosure@vulncheck.com",
+                "published": "2026-05-26T15:16:39.263",
+                "lastModified": "2026-06-03T19:55:00.583",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Mirasvit Full Page Cache Warmer for Magento 2 before version 1.11.12 contains a PHP object injection vulnerability that allows unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie. Attackers can exploit the unrestricted call to PHP's native unserialize() function combined with gadget chains available in Magento and its dependencies to execute arbitrary code on the server."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-03",
+                "cisaActionDue": "2026-06-06",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mirasvit:full_page_cache_warmer:*:*:*:*:*:magento:*:*",
+                                        "versionEndExcluding": "1.11.12",
+                                        "matchCriteriaId": "CB076D19-1909-43DD-B380-98C66858ECC3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://mirasvit.com/package/changelog/?package=mirasvit/module-cache-warmer",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://sansec.io/research/mirasvit-cache-warmer-object-injection",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vulncheck.com/advisories/mirasvit-cache-warmer-for-magento-php-object-injection",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-45247",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.imperva.com/blog/imperva-customers-protected-against-cve-2026-45247-in-mirasvit-full-page-cache-warmer-for-magento/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.061490000",
+                    "percentile": "0.909740000"
+                },
+                "location": {
+                    "lat": -11.07021689414978,
+                    "lng": 138.92978811264038,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2022-0492",
                 "sourceIdentifier": "secalert@redhat.com",
                 "published": "2022-03-03T19:15:08.633",
@@ -722,12 +886,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.263410000",
-                    "percentile": "0.964090000"
+                    "epss": "0.289730000",
+                    "percentile": "0.966590000"
                 },
                 "location": {
-                    "lat": -29.411208391189575,
-                    "lng": -179.41120314598083,
+                    "lat": -11.070202827453613,
+                    "lng": 138.92979788780212,
                     "country": "Unknown"
                 }
             }
@@ -846,7 +1010,7 @@
                 ],
                 "epss": {
                     "epss": "0.004010000",
-                    "percentile": "0.610800000"
+                    "percentile": "0.611000000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -960,7 +1124,7 @@
                 ],
                 "epss": {
                     "epss": "0.896490000",
-                    "percentile": "0.995810000"
+                    "percentile": "0.995800000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -2063,12 +2227,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.363440000",
-                    "percentile": "0.971980000"
+                    "epss": "0.464530000",
+                    "percentile": "0.977170000"
                 },
                 "location": {
-                    "lat": -29.411184072494507,
-                    "lng": -179.41118335723877,
+                    "lat": -11.070188522338867,
+                    "lng": 138.9298119544983,
                     "country": "Unknown"
                 }
             }
@@ -2229,11 +2393,11 @@
                 ],
                 "epss": {
                     "epss": "0.320650000",
-                    "percentile": "0.969150000"
+                    "percentile": "0.969170000"
                 },
                 "location": {
-                    "lat": -29.41117763519287,
-                    "lng": -179.4111773967743,
+                    "lat": -11.070183753967285,
+                    "lng": 138.9298164844513,
                     "country": "Unknown"
                 }
             }
@@ -4584,8 +4748,8 @@
                     "percentile": "0.951110000"
                 },
                 "location": {
-                    "lat": -29.411171674728394,
-                    "lng": -179.41117143630981,
+                    "lat": -11.070178985595703,
+                    "lng": 138.92982125282288,
                     "country": "Unknown"
                 }
             }
@@ -4742,12 +4906,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.154830000",
-                    "percentile": "0.947880000"
+                    "epss": "0.143900000",
+                    "percentile": "0.945450000"
                 },
                 "location": {
-                    "lat": -29.411166667938232,
-                    "lng": -179.41116642951965,
+                    "lat": -11.07017469406128,
+                    "lng": 138.9298255443573,
                     "country": "Unknown"
                 }
             }
@@ -4906,11 +5070,11 @@
                 ],
                 "epss": {
                     "epss": "0.079560000",
-                    "percentile": "0.922050000"
+                    "percentile": "0.922080000"
                 },
                 "location": {
-                    "lat": -29.411161422729492,
-                    "lng": -179.4111611843109,
+                    "lat": -11.070170640945435,
+                    "lng": 138.92982959747314,
                     "country": "Unknown"
                 }
             }
@@ -5041,12 +5205,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.130330000",
-                    "percentile": "0.942200000"
+                    "epss": "0.076650000",
+                    "percentile": "0.920400000"
                 },
                 "location": {
-                    "lat": -29.41115689277649,
-                    "lng": -179.4111566543579,
+                    "lat": -11.070166826248169,
+                    "lng": 138.92983317375183,
                     "country": "Unknown"
                 }
             }
@@ -5208,11 +5372,11 @@
                 ],
                 "epss": {
                     "epss": "0.327460000",
-                    "percentile": "0.969660000"
+                    "percentile": "0.969680000"
                 },
                 "location": {
-                    "lat": -29.411152362823486,
-                    "lng": -179.4111521244049,
+                    "lat": -11.070163249969482,
+                    "lng": 138.9298369884491,
                     "country": "Unknown"
                 }
             }
@@ -5335,11 +5499,11 @@
                 ],
                 "epss": {
                     "epss": "0.010180000",
-                    "percentile": "0.775230000"
+                    "percentile": "0.775330000"
                 },
                 "location": {
-                    "lat": -29.411148071289062,
-                    "lng": -179.41114783287048,
+                    "lat": -11.070159196853638,
+                    "lng": 138.92984104156494,
                     "country": "Unknown"
                 }
             }
@@ -6302,7 +6466,7 @@
                 "evaluatorImpact": "Per: http://www.microsoft.com/technet/security/advisory/971778.mspx\r\n\r\n\"Microsoft is aware of limited, active attacks that use this exploit code. While our investigation is ongoing, our investigation so far has shown that Windows 2000 Service Pack 4, Windows XP, and Windows Server 2003 are vulnerable; all versions of Windows Vista and Windows Server 2008 are not vulnerable.\"",
                 "epss": {
                     "epss": "0.530160000",
-                    "percentile": "0.980100000"
+                    "percentile": "0.980090000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -7912,7 +8076,7 @@
                 ],
                 "epss": {
                     "epss": "0.080130000",
-                    "percentile": "0.922470000"
+                    "percentile": "0.922500000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8032,7 +8196,7 @@
                 ],
                 "epss": {
                     "epss": "0.041060000",
-                    "percentile": "0.887950000"
+                    "percentile": "0.887970000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8345,8 +8509,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.081900000",
-                    "percentile": "0.923430000"
+                    "epss": "0.103440000",
+                    "percentile": "0.933230000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8354,215 +8518,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-20182",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-05-14T17:16:19.387",
-                "lastModified": "2026-05-15T12:45:53.990",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "May 2026: This security advisory provides the details and fix information for a vulnerability that was discovered and fixed after the  was disclosed in February 2026. This new advisory is for a new vulnerability in the control connection handshaking. The  section of this advisory includes Show Control Connections guidance to help with system checks.&nbsp;\r\n\r\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to the affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-14",
-                "cisaActionDue": "2026-05-17",
-                "cisaRequiredAction": "Please adhere to CISA\u2019s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA\u2019s Emergency Directive 26-03 (URL listed below in Notes) and CISA\u2019s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
-                "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "20.9.9.1",
-                                        "matchCriteriaId": "5021D679-E23A-4D7F-B3B6-D664634A639C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.10",
-                                        "versionEndExcluding": "20.12.5.4",
-                                        "matchCriteriaId": "26022018-2273-4589-BE4F-AD92DA31CB58"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.12.6",
-                                        "versionEndExcluding": "20.12.6.2",
-                                        "matchCriteriaId": "FDA5CA36-86B6-443D-B772-37A5901F3E83"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.13",
-                                        "versionEndExcluding": "20.15.4.4",
-                                        "matchCriteriaId": "32A83687-B363-476B-89EF-B35C82575237"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.15.5",
-                                        "versionEndExcluding": "20.15.5.2",
-                                        "matchCriteriaId": "709D0805-4B76-46A0-82D3-93C89926B389"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.16",
-                                        "versionEndExcluding": "20.18.2.2",
-                                        "matchCriteriaId": "BB6A9216-3D47-4B33-B502-72B99859992E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "26.1",
-                                        "versionEndExcluding": "26.1.1.1",
-                                        "matchCriteriaId": "C34C0AB2-3E8E-4B12-BEA2-446F8F248B9A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:20.12.7:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6A03BCEF-DC25-488D-91D3-0A16F3B872E3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "20.9.9.1",
-                                        "matchCriteriaId": "0824EC8B-3153-4298-8570-C115A95FCCF1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.10",
-                                        "versionEndExcluding": "20.12.5.4",
-                                        "matchCriteriaId": "86D90EAF-0EB3-4412-8D15-14F5151E36FA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.12.6",
-                                        "versionEndExcluding": "20.12.6.2",
-                                        "matchCriteriaId": "CAA36394-30A2-4668-AF03-1C596D8AC2E0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.13",
-                                        "versionEndExcluding": "20.15.4.4",
-                                        "matchCriteriaId": "EEC9B48C-3149-4662-9DD4-DC4ACE4460E3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.15.5",
-                                        "versionEndExcluding": "20.15.5.2",
-                                        "matchCriteriaId": "9E964DF6-E2FB-4305-9AD6-42904FC4FE9A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "20.16",
-                                        "versionEndExcluding": "20.18.2.2",
-                                        "matchCriteriaId": "4D40D018-E4EB-4CC8-A2B0-F8E1DA2E3350"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "26.1",
-                                        "versionEndExcluding": "26.1.1.1",
-                                        "matchCriteriaId": "788140A2-0378-487E-9C9A-84080C9BC7A5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:20.12.7:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0F4FFF4B-5C26-4014-A9B2-EE342F3FE3C8"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Not Applicable"
-                        ]
-                    },
-                    {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20182",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.805390000",
-                    "percentile": "0.991560000"
-                },
-                "location": {
-                    "lat": 37.4084,
-                    "lng": -121.954,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-45247",
+            "vendorProject": "Mirasvit",
+            "product": "Mirasvit Full Page Cache Warmer",
+            "vulnerabilityName": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+            "dateAdded": "2026-06-03",
+            "shortDescription": "Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-06",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://mirasvit.com/package/changelog/?package=mirasvit/module-cache-warmer ; https://nvd.nist.gov/vuln/detail/CVE-2026-45247",
+            "cwes": [
+                "CWE-502"
+            ]
+        },
         {
             "cveID": "CVE-2022-0492",
             "vendorProject": "Linux",
@@ -32470,7 +32443,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-03T16:18:17.436613",
+    "last_updated": "2026-06-04T14:35:26.053470",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
