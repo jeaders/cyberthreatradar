@@ -2,6 +2,117 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-28318",
+                "sourceIdentifier": "psirt@solarwinds.com",
+                "published": "2026-06-04T15:16:50.407",
+                "lastModified": "2026-06-05T19:32:38.510",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "SolarWinds Serv-U is susceptible to specially crafted POST requests that crash the Serv-U service without authentication using Content-Encoding: deflate. Mitigation steps are provided to secure customer environments in the SolarWinds Trust Center if you are unable to deploy the update"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@solarwinds.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-05",
+                "cisaActionDue": "2026-06-19",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@solarwinds.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-400"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:solarwinds:serv-u:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "15.5.4",
+                                        "matchCriteriaId": "0879DDA2-3F57-41C7-A689-4B904310687E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:solarwinds:serv-u:15.5.4:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "04BC76FB-A18F-4D63-BF35-71E95E1447C0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://documentation.solarwinds.com/en/success_center/servu/content/release_notes/servu_15-5-4-hotfix-1_release_notes.htm",
+                        "source": "psirt@solarwinds.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.solarwinds.com/trust-center/security-advisories/CVE-2026-28318",
+                        "source": "psirt@solarwinds.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-28318",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.000620000",
+                    "percentile": "0.196500000"
+                },
+                "location": {
+                    "lat": -4.615786552429199,
+                    "lng": -34.615782737731934,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-45247",
                 "sourceIdentifier": "disclosure@vulncheck.com",
                 "published": "2026-05-26T15:16:39.263",
@@ -158,8 +269,8 @@
                     "percentile": "0.909880000"
                 },
                 "location": {
-                    "lat": 4.907532215118408,
-                    "lng": -85.09246301651001,
+                    "lat": -4.615773677825928,
+                    "lng": -34.61577272415161,
                     "country": "Unknown"
                 }
             }
@@ -890,8 +1001,8 @@
                     "percentile": "0.966620000"
                 },
                 "location": {
-                    "lat": 4.907545804977417,
-                    "lng": -85.09245347976685,
+                    "lat": -4.615766763687134,
+                    "lng": -34.615766286849976,
                     "country": "Unknown"
                 }
             }
@@ -2231,8 +2342,8 @@
                     "percentile": "0.977740000"
                 },
                 "location": {
-                    "lat": 4.907586097717285,
-                    "lng": -85.09241342544556,
+                    "lat": -4.615753412246704,
+                    "lng": -34.615753412246704,
                     "country": "Unknown"
                 }
             }
@@ -2396,8 +2507,8 @@
                     "percentile": "0.969210000"
                 },
                 "location": {
-                    "lat": 4.907591819763184,
-                    "lng": -85.09240770339966,
+                    "lat": -4.615749359130859,
+                    "lng": -34.61574912071228,
                     "country": "Unknown"
                 }
             }
@@ -4748,8 +4859,8 @@
                     "percentile": "0.951190000"
                 },
                 "location": {
-                    "lat": 4.907597780227661,
-                    "lng": -85.09240198135376,
+                    "lat": -4.615744352340698,
+                    "lng": -34.6157443523407,
                     "country": "Unknown"
                 }
             }
@@ -4910,8 +5021,8 @@
                     "percentile": "0.945530000"
                 },
                 "location": {
-                    "lat": 4.9076032638549805,
-                    "lng": -85.09239673614502,
+                    "lat": -4.615739822387695,
+                    "lng": -34.615739583969116,
                     "country": "Unknown"
                 }
             }
@@ -5073,8 +5184,8 @@
                     "percentile": "0.922210000"
                 },
                 "location": {
-                    "lat": 4.9076080322265625,
-                    "lng": -85.09239172935486,
+                    "lat": -4.61573600769043,
+                    "lng": -34.61573576927185,
                     "country": "Unknown"
                 }
             }
@@ -5209,8 +5320,8 @@
                     "percentile": "0.920520000"
                 },
                 "location": {
-                    "lat": 4.907613039016724,
-                    "lng": -85.0923867225647,
+                    "lat": -4.615731716156006,
+                    "lng": -34.615731716156006,
                     "country": "Unknown"
                 }
             }
@@ -5375,8 +5486,8 @@
                     "percentile": "0.969730000"
                 },
                 "location": {
-                    "lat": 4.907618045806885,
-                    "lng": -85.09238171577454,
+                    "lat": -4.615727663040161,
+                    "lng": -34.61572742462158,
                     "country": "Unknown"
                 }
             }
@@ -5502,8 +5613,8 @@
                     "percentile": "0.775610000"
                 },
                 "location": {
-                    "lat": 4.907623052597046,
-                    "lng": -85.0923764705658,
+                    "lat": -4.615723371505737,
+                    "lng": -34.61572289466858,
                     "country": "Unknown"
                 }
             }
@@ -8204,323 +8315,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-42897",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-05-14T18:16:49.360",
-                "lastModified": "2026-05-15T19:35:52.963",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-                                "baseScore": 8.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.2
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-                                "baseScore": 6.1,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 2.7
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-15",
-                "cisaActionDue": "2026-05-29",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Exchange Server Cross-Site Scripting Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-79"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:-:*:*:*:subscription:*:*:*",
-                                        "matchCriteriaId": "C43B55C8-566A-45EE-9E3C-0D270A632803"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8039FBA1-73D4-4FF2-B183-0DCC961CBFF7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "56728785-188C-470A-9692-E6C7235109CA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "63E362CB-CF75-4B7E-A4B1-D6D84AFCBB68"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9BE04790-85A2-4078-88CE-1787BC5172E7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CCF101BE-27FD-4E2D-A694-C606BD3D1ED7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_13:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4DF5BDB5-205D-4B64-A49A-0152AFCF4A13"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "55284CF7-0D04-4216-83FE-4B1F9CA94207"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_15:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CA2CE223-AA49-49E6-AC32-59270EFF55AD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_16:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4830D6A9-AF74-480C-8F69-8648CD619980"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_17:*:*:*:*:*:*",
-                                        "matchCriteriaId": "079E1E3F-FF25-4B0D-AC98-191D6455A014"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "29805EC7-6403-44B9-91EC-109C087E98EB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "28FCA0E8-7D27-4746-9731-91B834CA3E64"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "996163E7-6F3F-4D3B-AEA4-62A7F7E1F54D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_20:*:*:*:*:*:*",
-                                        "matchCriteriaId": "19C1EE0C-B8DD-4B91-BE4B-1C42D72FB718"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_21:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3BE427A4-B0C2-4064-8234-29426325C348"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_22:*:*:*:*:*:*",
-                                        "matchCriteriaId": "449CE85B-E599-44D3-A7C1-5133F6A55E86"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_23:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FF76AEDA-E574-40ED-B64F-8FDEF8CAC802"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FE401B0A-DDE4-4A36-8E27-6DB14E094BE2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "450319C4-7C8F-43B7-B7F8-80DA4F1F2817"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "23015889-48AF-40A5-862F-290E73A54E77"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4FC34516-D7E7-4AD9-9B45-5474831548E0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5211792E-5292-41C0-B7E9-8AA63EC606EE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "075E907F-AF2F-4C31-86C7-51972BE412A1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2016:cumulative_update_9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "69AF19DC-3D65-49A8-A85F-511085CDF27B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40D8A6DB-9225-4A3F-AD76-192F6CCCF002"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "051DE6C4-7456-4C42-BC51-253208AADB4E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B4185347-EEDD-4239-9AB3-410E2EC89D2A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "435343A4-BF10-461A-ABF2-D511A5FBDA75"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B23C8E3E-5243-4DA6-B9AA-F6053084B55E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_13:*:*:*:*:*:*",
-                                        "matchCriteriaId": "583745C7-B802-4CBE-BD88-B5B9AF9B5371"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8C98993B-82A5-48CC-947F-896CEA0CDB7F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EE320413-D2C9-4B28-89BF-361B44A3F0FF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "104F96DC-E280-4E0A-8586-B043B55888C2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "73B3B3FE-7E85-4B86-A983-2C410FFEF4B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8A9FB275-7F17-48B2-B528-BE89309D2AF5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D4AB3C25-CEA8-4D66-AEE4-953C8B17911A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "36CE5C6D-9A04-41F5-AE7C-265779833649"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "44ECF39A-1DE1-4870-A494-06A53494338D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "71CDF29B-116B-4DE2-AFD0-B62477FF0AEB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42897",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.078560000",
-                    "percentile": "0.921570000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-28318",
+            "vendorProject": "SolarWinds",
+            "product": "Serv-U",
+            "vulnerabilityName": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+            "dateAdded": "2026-06-05",
+            "shortDescription": "SolarWinds Serv-U contains an uncontrolled resource consumption vulnerability that allows specially crafted POST requests using the Content-Encoding: deflate header to crash the Serv-U service without authentication.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-19",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.solarwinds.com/trust-center/security-advisories/cve-2026-28318 ; https://documentation.solarwinds.com/en/success_center/servu/content/release_notes/servu_15-5-4-hotfix-1_release_notes.htm#link7 ; https://nvd.nist.gov/vuln/detail/CVE-2026-28318",
+            "cwes": [
+                "CWE-400"
+            ]
+        },
         {
             "cveID": "CVE-2026-45247",
             "vendorProject": "Mirasvit",
@@ -32443,7 +32255,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-05T14:25:44.469402",
+    "last_updated": "2026-06-06T13:08:39.700194",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
