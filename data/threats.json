@@ -2,6 +2,243 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-42271",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-05-08T04:16:21.820",
+                "lastModified": "2026-06-09T01:22:09.190",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.74.2 to before version 1.83.7, two endpoints used to preview an MCP server before saving it \u2014 POST /mcp-rest/test/connection and POST /mcp-rest/test/tools/list \u2014 accepted a full server configuration in the request body, including the command, args, and env fields used by the stdio transport. When called with a stdio configuration, the endpoints attempted to connect, which spawned the supplied command as a subprocess on the proxy host with the privileges of the proxy process. The endpoints were gated only by a valid proxy API key, with no role check. Any authenticated user \u2014 including holders of low-privilege internal-user keys \u2014 could therefore run arbitrary commands on the host. This issue has been patched in version 1.83.7."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.7,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "PRESENT",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-08",
+                "cisaActionDue": "2026-06-22",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "BerriAI LiteLLM Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-77"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.74.2",
+                                        "versionEndExcluding": "1.83.7",
+                                        "matchCriteriaId": "D249DFDB-5D0D-4053-A997-0900F77F9A13"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Product",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42271",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.607840000",
+                    "percentile": "0.983240000"
+                },
+                "location": {
+                    "lat": -10.342411279678345,
+                    "lng": -100.34240746498108,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-50751",
+                "sourceIdentifier": "cve@checkpoint.com",
+                "published": "2026-06-08T12:16:32.367",
+                "lastModified": "2026-06-08T21:16:49.373",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A logic flow weakness in Remote Access and Mobile Access certificate validation in deprecated IKEv1 key exchange allows an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.7
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-08",
+                "cisaActionDue": "2026-06-11",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Check Point Security Gateway Improper Authentication Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-287"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.checkpoint.com/results/sk/sk185033",
+                        "source": "cve@checkpoint.com"
+                    },
+                    {
+                        "url": "https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50751",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.176880000",
+                    "percentile": "0.952480000"
+                },
+                "location": {
+                    "lat": -10.342402219772339,
+                    "lng": -100.3424015045166,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-28318",
                 "sourceIdentifier": "psirt@solarwinds.com",
                 "published": "2026-06-04T15:16:50.407",
@@ -102,11 +339,11 @@
                 ],
                 "epss": {
                     "epss": "0.066780000",
-                    "percentile": "0.914030000"
+                    "percentile": "0.914180000"
                 },
                 "location": {
-                    "lat": -11.359834432601929,
-                    "lng": 138.64017152786255,
+                    "lat": -10.342395544052124,
+                    "lng": -100.34239530563354,
                     "country": "Unknown"
                 }
             }
@@ -266,11 +503,11 @@
                 ],
                 "epss": {
                     "epss": "0.061490000",
-                    "percentile": "0.909810000"
+                    "percentile": "0.909980000"
                 },
                 "location": {
-                    "lat": -11.35981822013855,
-                    "lng": 138.64018273353577,
+                    "lat": -10.342390298843384,
+                    "lng": -100.3423900604248,
                     "country": "Unknown"
                 }
             }
@@ -998,11 +1235,11 @@
                 ],
                 "epss": {
                     "epss": "0.337210000",
-                    "percentile": "0.970470000"
+                    "percentile": "0.970510000"
                 },
                 "location": {
-                    "lat": -11.35981035232544,
-                    "lng": 138.64018988609314,
+                    "lat": -10.342385053634644,
+                    "lng": -100.34238505363464,
                     "country": "Unknown"
                 }
             }
@@ -1121,7 +1358,7 @@
                 ],
                 "epss": {
                     "epss": "0.005280000",
-                    "percentile": "0.675080000"
+                    "percentile": "0.675230000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -1234,8 +1471,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.896490000",
-                    "percentile": "0.995820000"
+                    "epss": "0.897420000",
+                    "percentile": "0.995870000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -1249,7 +1486,7 @@
                 "id": "CVE-2026-0257",
                 "sourceIdentifier": "psirt@paloaltonetworks.com",
                 "published": "2026-05-13T19:17:01.040",
-                "lastModified": "2026-06-01T12:33:52.710",
+                "lastModified": "2026-06-09T12:47:03.990",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -2319,6 +2556,33 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -2330,6 +2594,13 @@
                         ]
                     },
                     {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-967325.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0257",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
@@ -2338,12 +2609,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.528500000",
-                    "percentile": "0.980030000"
+                    "epss": "0.587880000",
+                    "percentile": "0.982530000"
                 },
                 "location": {
-                    "lat": -11.35979413986206,
-                    "lng": 138.64020609855652,
+                    "lat": -10.342371940612793,
+                    "lng": -100.34237170219421,
                     "country": "Unknown"
                 }
             }
@@ -2504,11 +2775,11 @@
                 ],
                 "epss": {
                     "epss": "0.320650000",
-                    "percentile": "0.969250000"
+                    "percentile": "0.969290000"
                 },
                 "location": {
-                    "lat": -11.35978889465332,
-                    "lng": 138.64021134376526,
+                    "lat": -10.342367172241211,
+                    "lng": -100.34236693382263,
                     "country": "Unknown"
                 }
             }
@@ -4856,11 +5127,11 @@
                 ],
                 "epss": {
                     "epss": "0.170510000",
-                    "percentile": "0.951210000"
+                    "percentile": "0.951250000"
                 },
                 "location": {
-                    "lat": -11.359783172607422,
-                    "lng": 138.64021706581116,
+                    "lat": -10.34236216545105,
+                    "lng": -100.34236216545105,
                     "country": "Unknown"
                 }
             }
@@ -5018,11 +5289,11 @@
                 ],
                 "epss": {
                     "epss": "0.143900000",
-                    "percentile": "0.945570000"
+                    "percentile": "0.945620000"
                 },
                 "location": {
-                    "lat": -11.359777212142944,
-                    "lng": 138.64022302627563,
+                    "lat": -10.342358112335205,
+                    "lng": -100.34235787391663,
                     "country": "Unknown"
                 }
             }
@@ -5181,11 +5452,11 @@
                 ],
                 "epss": {
                     "epss": "0.079560000",
-                    "percentile": "0.922180000"
+                    "percentile": "0.922320000"
                 },
                 "location": {
-                    "lat": -11.359772205352783,
-                    "lng": 138.6402280330658,
+                    "lat": -10.342353820800781,
+                    "lng": -100.3423535823822,
                     "country": "Unknown"
                 }
             }
@@ -5317,11 +5588,11 @@
                 ],
                 "epss": {
                     "epss": "0.104030000",
-                    "percentile": "0.933580000"
+                    "percentile": "0.933660000"
                 },
                 "location": {
-                    "lat": -11.359767198562622,
-                    "lng": 138.64023303985596,
+                    "lat": -10.342349767684937,
+                    "lng": -100.34234976768494,
                     "country": "Unknown"
                 }
             }
@@ -5483,11 +5754,11 @@
                 ],
                 "epss": {
                     "epss": "0.327460000",
-                    "percentile": "0.969760000"
+                    "percentile": "0.969800000"
                 },
                 "location": {
-                    "lat": -11.35976243019104,
-                    "lng": 138.64023756980896,
+                    "lat": -10.342345714569092,
+                    "lng": -100.34234571456909,
                     "country": "Unknown"
                 }
             }
@@ -5610,11 +5881,11 @@
                 ],
                 "epss": {
                     "epss": "0.010180000",
-                    "percentile": "0.775500000"
+                    "percentile": "0.775700000"
                 },
                 "location": {
-                    "lat": -11.359757661819458,
-                    "lng": 138.64024233818054,
+                    "lat": -10.342341661453247,
+                    "lng": -100.34234142303467,
                     "country": "Unknown"
                 }
             }
@@ -6928,7 +7199,7 @@
                 ],
                 "epss": {
                     "epss": "0.880730000",
-                    "percentile": "0.995020000"
+                    "percentile": "0.995030000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -7525,7 +7796,7 @@
                 "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/416.htmlhttp://cwe.mitre.org/data/definitions/416.html\n\nCWE-416: Use After Free",
                 "epss": {
                     "epss": "0.887880000",
-                    "percentile": "0.995350000"
+                    "percentile": "0.995360000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8094,230 +8365,40 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-41091",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-05-20T13:16:29.173",
-                "lastModified": "2026-05-20T19:06:36.850",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper link resolution before file access ('link following') in Microsoft Defender allows an authorized attacker to elevate privileges locally."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Defender Link Following Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-59"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:malware_protection_engine:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "1.1.26030.3008",
-                                        "versionEndExcluding": "1.1.26040.8",
-                                        "matchCriteriaId": "AD1882FA-1447-46F7-A592-142F55820A60"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41091",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.094750000",
-                    "percentile": "0.929790000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-45498",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-05-20T13:16:36.780",
-                "lastModified": "2026-05-28T10:49:44.453",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Microsoft Defender Denial of Service Vulnerability"
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-                                "baseScore": 4.0,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "LOW"
-                            },
-                            "exploitabilityScore": 2.5,
-                            "impactScore": 1.4
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Defender Denial of Service Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-400"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:defender_antimalware_platform:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.18.26040.7",
-                                        "matchCriteriaId": "7DBA2812-3139-4628-9CE5-FB2241242A6C"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-45498",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.047440000",
-                    "percentile": "0.896230000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-42271",
+            "vendorProject": "BerriAI",
+            "product": "LiteLLM",
+            "vulnerabilityName": "BerriAI LiteLLM Command Injection Vulnerability",
+            "dateAdded": "2026-06-08",
+            "shortDescription": "BerriAI LiteLLM contains a command injection vulnerability that could allow any authenticated user, including holders of low-privilege internal-user keys, to run arbitrary commands on the host.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-22",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "This vulnerability affects a common open-source component, third-party library, or a protocol used by different products. Please check with specific vendors for information on patching status. For more information, please see: https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g ; https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable ; https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
+            "cwes": [
+                "CWE-78",
+                "CWE-77"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-50751",
+            "vendorProject": "Check Point",
+            "product": "Security Gateway",
+            "vulnerabilityName": "Check Point Security Gateway Improper Authentication Vulnerability",
+            "dateAdded": "2026-06-08",
+            "shortDescription": "Check Point Security Gateway contains an improper authentication vulnerability in IKEv1 key exchange that could allow an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-11",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/ ; https://support.checkpoint.com/results/sk/sk185033?_gl=1*1wqeqhc*_gcl_au*MTI1MzE5MjI2LjE3ODA5MzQ1NTM. ; https://nvd.nist.gov/vuln/detail/CVE-2026-50751",
+            "cwes": [
+                "CWE-287"
+            ]
+        },
         {
             "cveID": "CVE-2026-28318",
             "vendorProject": "SolarWinds",
@@ -32255,7 +32336,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-08T15:29:29.053379",
+    "last_updated": "2026-06-09T14:25:30.131317",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
