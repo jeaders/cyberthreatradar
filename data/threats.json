@@ -2,6 +2,1007 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-11645",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2026-06-09T00:16:47.370",
+                "lastModified": "2026-06-09T19:41:08.533",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Out of bounds read and write in V8 in Google Chrome prior to 149.0.7827.103 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)"
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-09",
+                "cisaActionDue": "2026-06-23",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-125"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "149.0.7827.103",
+                                        "matchCriteriaId": "01D24F75-6488-4FA6-B833-42018156D3B4"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://issues.chromium.org/issues/506689381",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-11645",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.054670000",
+                    "percentile": "0.904040000"
+                },
+                "location": {
+                    "lat": 37.422,
+                    "lng": -122.0841,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-7473",
+                "sourceIdentifier": "psirt@arista.com",
+                "published": "2026-06-05T17:17:02.850",
+                "lastModified": "2026-06-09T20:48:49.580",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "On affected platforms running Arista EOS where a tunnel decapsulation configuration\u2014such as VXLAN (Virtual Extensible LAN), decap-groups, or a GRE (Generic Routing Encapsulation) tunnel interface\u2014is present, the switch will incorrectly decapsulate and forward other unexpected tunneled packet with a destination IP matching its configured decapsulation IP. This occurs because the switch does not verify the tunnel protocol type, potentially leading to the unexpected processing of non-configured tunnel traffic.\n\n\n\nThis issue has been reported as being exploited in the wild."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 6.9,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "NONE",
+                                "vulnIntegrityImpact": "LOW",
+                                "vulnAvailabilityImpact": "NONE",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "LOW",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+                                "baseScore": 5.8,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 1.4
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-09",
+                "cisaActionDue": "2026-06-23",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@arista.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-1023"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:arista:eos:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1B40F638-20F7-4AAF-9DD5-5110512382DE"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7020sr-24c2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7781CB15-3452-47D9-A961-8B09F2E9AEC1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7020sr-32c2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "09A31FB8-512E-43EF-8F87-E02E35F5251E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7020srg-24c2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "282FF2E7-CDDC-4F32-89C9-4C79B7518E0E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7020tr-48:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2CBFF922-28D7-42D6-8796-91AD9A178D28"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7020tra-48:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "561B4042-DFD3-4BC0-9C5F-74799A7E92C5"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr-48:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C2060335-B83A-413C-8947-F061FFB2D47D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2-60:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CC31EF21-07C9-485E-8364-9BD7C65AF428"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2a-30:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C8355E97-0CBE-4E3E-AE22-3C859FA284B6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2a-60:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A47E990A-1751-4A5F-8A0A-8B9C8AD3662D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2k-30:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "376D7F0C-57E5-416F-A376-698A1A90F1CD"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2k-60:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5F569286-C19F-48CB-AB24-89C4A1EB6F81"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr2m-30:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E03AE8C4-F3F2-4C2C-BFC5-3FA31823EC8F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3-32d4:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7FEC18B3-7980-4EBF-8E15-F8E92DADD062"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3-32p4:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "87E85F7C-F33B-49C1-A526-ACC1BEF3B65C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3-36s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A3B9CB1B-730E-45C9-A0B1-3C2F4A72A159"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3-96:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2E54F451-CA87-4F32-A088-AE18123CE07A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3a-24d12:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "43B967ED-2212-4558-A9AC-ACA94C94FD39"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3a-48d6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CD7877C6-9DE4-4952-94D2-3A456D02CF1A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3a-72:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2FD635FB-5EA8-4B02-894C-4C016090AAB3"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3ak-24d12:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F567FCB9-80B3-4580-9181-6F2FFEDDEC12"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3ak-48d6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6D184BA0-02CB-4323-9D44-B02AD32067AF"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3ak-72:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F4627CA2-6B54-4588-9F4B-7F19DD0E0C2E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3am-24d12:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "537AAC04-2CA2-46E2-AAE0-381615604B38"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3am-48d6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B08D43DE-AD41-41DE-89D8-DB0EA9B10637"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3am-72:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5F879845-50B7-4202-8831-52CB903D2C8C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3mk-32d4s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "505E2C14-00C7-438C-B57B-559DBEBDE244"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280cr3mk-32p4s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "200851CF-C12B-48E7-9567-E5F731A77AA5"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3-24:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "85D9E9FF-564E-4B16-8070-33A366F48FE9"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3a-36:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DC1F6DBC-212F-4E0B-B039-06955322B0D7"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3a-54:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BC474A71-8D2F-4138-9D65-E2F86B0B62DC"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3ak-36:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1943057A-5776-4B20-97C7-03CE14AEA367"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3ak-54:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1AE86A14-76ED-4427-94CC-7BF335BB9369"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3am-36:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "986DCBF4-E4FB-41EE-BD1B-D62A4EC7237E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280dr3am-54:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4EA04EA0-170A-4B79-96B8-8F09D6FFC261"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280pr3-24:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F14163D2-B236-4C78-9DB4-97DE6D996EBC"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280qr-c36:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "215901AE-83AD-40E7-AFC1-941F33F70DF7"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280qr-c36-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9D0B64D9-BC33-46E0-B7A1-250BD53BD653"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280qr-c72:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5F5B3B25-F299-4408-A1E4-3BDC57F143BD"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280qra-c36s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3B353905-1DCC-4CBE-ADDE-40E206D95D9A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280qra-c36sm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "59717856-6E8E-45ED-AD71-A9102CF0BC30"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr-48c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3785CA56-5A29-4AF4-A63B-A8EF70A79864"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr2-48yc6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4B01EB60-D8A0-4FEF-B060-06DD43B25AE8"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr2-48yc6-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C08856F3-1189-4CEC-BBF4-AF78182860F9"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr2a-48yc6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C2C0E26A-797F-4323-ADC0-AEE4EA57EB26"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr2a-48yc6-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "41592878-3FCD-4A3E-9E36-0C729CE55BE0"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr2k-48c6-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DBA88BC9-6984-4FA2-9170-DF2542BFB0CE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr3-40yc6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D4B5A8D4-43BA-4591-BE00-00031D4BDBE3"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr3-48yc8:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8143579F-AD53-4D74-AE3E-4D465DCD7A57"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sr3m-48yc8:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0355E150-ED9E-4145-B0D8-63E1C8B2A322"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sra-48c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AE925B2E-C1E8-4777-9FAA-F91FE34FD638"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sra-48c6-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "11ADA5CD-E0DE-4F76-812B-D6DDE0E79D4B"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280sram-48c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "04BAED1A-4D9E-4E0D-96B8-697D09F52A55"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280srm-40cx2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "33469955-103C-425E-B15E-F6617030B9E7"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280tr-48c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B894ACAF-73F2-47B1-AA48-CA263B06AD1A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280tr3-40c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "939772F0-4352-46C1-B6D5-38FA12EBF6E1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280tra-48c6:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "ACA1F808-E64F-433D-8640-5F62DE3F13E3"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7280tra-48c6-m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "865F58ED-9A26-415C-8D16-2AF034D87332"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7289r3a-sc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0A375EB2-6D78-4D81-AB8D-4AC501DC0A4F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7289r3ak-sc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E8CA46EA-F9AE-42FA-A0D9-EDB82060AB6D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7289r3am-sc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6F9FD45E-2D76-43A0-AE2A-C6DC59C45984"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8DCF200C-C569-4ABF-B374-E25EDF951F21"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r-36q-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "250E4952-9396-4007-BC02-BDE101CE28BE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r-48s2cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F92D31C2-3A08-4C2F-A4F7-C858659CEA44"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r-8cfpx-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5EF6E3F8-3545-4E43-BB52-7E9D569B4932"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2302DED3-42A3-448F-B3F9-93548E3CE4DC"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2a-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8981EE0B-F108-4A86-BA53-0637D0E54BD8"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2ak-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "83C39158-E78C-4BF5-B86D-BB6013B902F6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2ak-48ycq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2BDE580D-68FF-4492-B239-D7030DADF0E1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2am-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7004254E-EB7B-4201-95C9-EC6B0F013C17"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r2m-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "56F70993-0EEA-4F6A-9894-E984464904A9"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r3-24d:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BE1BB565-2668-4242-8A00-5CC9C30B9AC9"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r3-24p:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "15F1A605-8836-4A64-AC5E-ADAB34F8F104"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r3-36cq:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BE8A047A-9FD9-4AE1-9E47-457A46BAE3A4"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r3k-36cq:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "019B0670-389B-4A4E-8C72-52202E3AA8EF"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500r3k-48y4d:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FCDF5089-5914-4B4F-A2E6-0EB2B40698A5"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7500rm-36cq-lc:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2CC84C4F-4F6A-4640-AE03-AA9368159189"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7504r-fm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7B1FFDEE-7A80-4629-82AD-51B7E792B619"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7504r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8387CCEA-F00C-4F1F-B966-ACF8B16F1D22"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7508r-fm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F4ED498F-C966-48D0-A336-75168D5AD3AD"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7508r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55AE2A1C-A4FD-423B-A77E-2E24C2310A6A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7512r-fm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "309ADDB9-0C47-407A-A1A3-BDE8A19A5A0C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7512r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C4B0D708-B426-4CA1-BE87-08BD14B7EACE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7516-sup2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "59E45FF4-F275-485D-923B-584E2594E41F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7516n-ch:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B100D928-22C2-4437-82DC-A8532070DE55"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7516r-fm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A3C93015-FCEB-4E45-A9F3-59C99C7C5074"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3-36d:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1E49B089-AE52-4B47-A3B4-547D10ACED9A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3-48cq:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "58443CDE-33D8-4460-A861-CDC07431AA22"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3a-36d:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "26FDC60C-860F-40BD-AF13-54712B56C87F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3a-36dm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "70658CB0-D114-40E5-866D-B21875FFF93C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3a-36p:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E6BBA281-F67E-4D13-BDCD-E1164912EC8C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3a-36pm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F3B0C0EE-3C5E-4E3E-9BAE-9D5D06A98CAB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3ak-36dm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "ABAC894C-D39E-4BB2-A968-E2F23C299A29"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3ak-36pm:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D2C6E3F9-0191-4BC5-A89C-58BF13C195B6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3k-48cq:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "64BE8C68-FE98-4162-A3D3-54494D5444F5"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3k-48cqms:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9615121C-4EC0-44F5-8C00-E70271CC04A2"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7800r3k-72y:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F1FD48B9-EC2E-4EB1-BAEA-B6722F8FA070"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7804r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A54F3D32-5A07-4791-90BF-96BD8A24C2F6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7808r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2F078B04-2DA0-4A4B-BB1A-408DC14CB61F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7812r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E9B99200-EC76-404E-9900-5D1DC3B9A758"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7816lr3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "62641256-1C8C-4D6E-B25E-E4C39C82AA43"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:arista:7816r3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5A172A49-1A0E-464B-BDDD-A8F52856D595"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/22872-security-advisory-0137",
+                        "source": "psirt@arista.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24005-security-advisory-0137",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Mitigation"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7473",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.224690000",
+                    "percentile": "0.959610000"
+                },
+                "location": {
+                    "lat": -23.483732223510742,
+                    "lng": 126.51627349853516,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-20245",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-06-04T23:17:31.763",
+                "lastModified": "2026-06-10T12:59:09.600",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, and Cisco Catalyst SD-WAN Validator, formerly SD-WAN vBond, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by uploading a crafted file to the affected system. A successful exploit could allow the attacker to perform command injection attacks on an affected system and elevate their privileges as the root user.&nbsp;\r\nTo exploit this vulnerability, the attacker must have netadmin privileges on the affected system. This would require valid credentials or exploitation of  or . Cisco is not aware of successful exploitation by other methods. Cisco has observed limited cases where the exploitation of this bug resulted in a configuration change pushed to edge devices.\r\nCisco recommends that customers upgrade to the fixed software that is documented in the  that was published on May 14, 2026, and verify the configuration of the edge devices."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-09",
+                "cisaActionDue": "2026-06-23",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-116"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "20.9.9.1",
+                                        "matchCriteriaId": "5021D679-E23A-4D7F-B3B6-D664634A639C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.10",
+                                        "versionEndExcluding": "20.12.5.4",
+                                        "matchCriteriaId": "26022018-2273-4589-BE4F-AD92DA31CB58"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.12.6",
+                                        "versionEndExcluding": "20.12.6.2",
+                                        "matchCriteriaId": "FDA5CA36-86B6-443D-B772-37A5901F3E83"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.13",
+                                        "versionEndExcluding": "20.15.4.4",
+                                        "matchCriteriaId": "32A83687-B363-476B-89EF-B35C82575237"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.15.5",
+                                        "versionEndExcluding": "20.15.5.2",
+                                        "matchCriteriaId": "709D0805-4B76-46A0-82D3-93C89926B389"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.16",
+                                        "versionEndExcluding": "20.18.2.2",
+                                        "matchCriteriaId": "BB6A9216-3D47-4B33-B502-72B99859992E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.1",
+                                        "versionEndExcluding": "26.1.1.1",
+                                        "matchCriteriaId": "C34C0AB2-3E8E-4B12-BEA2-446F8F248B9A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:20.12.7:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6A03BCEF-DC25-488D-91D3-0A16F3B872E3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "20.9.9.1",
+                                        "matchCriteriaId": "0824EC8B-3153-4298-8570-C115A95FCCF1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.10",
+                                        "versionEndExcluding": "20.12.5.4",
+                                        "matchCriteriaId": "86D90EAF-0EB3-4412-8D15-14F5151E36FA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.12.6",
+                                        "versionEndExcluding": "20.12.6.2",
+                                        "matchCriteriaId": "CAA36394-30A2-4668-AF03-1C596D8AC2E0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.13",
+                                        "versionEndExcluding": "20.15.4.4",
+                                        "matchCriteriaId": "EEC9B48C-3149-4662-9DD4-DC4ACE4460E3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.15.5",
+                                        "versionEndExcluding": "20.15.5.2",
+                                        "matchCriteriaId": "9E964DF6-E2FB-4305-9AD6-42904FC4FE9A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "20.16",
+                                        "versionEndExcluding": "20.18.2.2",
+                                        "matchCriteriaId": "4D40D018-E4EB-4CC8-A2B0-F8E1DA2E3350"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.1",
+                                        "versionEndExcluding": "26.1.1.1",
+                                        "matchCriteriaId": "788140A2-0378-487E-9C9A-84080C9BC7A5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:20.12.7:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0F4FFF4B-5C26-4014-A9B2-EE342F3FE3C8"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20245",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003340000",
+                    "percentile": "0.565790000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-42271",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-05-08T04:16:21.820",
@@ -149,11 +1150,11 @@
                 ],
                 "epss": {
                     "epss": "0.607840000",
-                    "percentile": "0.983240000"
+                    "percentile": "0.983260000"
                 },
                 "location": {
-                    "lat": -10.342411279678345,
-                    "lng": -100.34240746498108,
+                    "lat": -23.48371410369873,
+                    "lng": 126.516286611557,
                     "country": "Unknown"
                 }
             }
@@ -163,8 +1164,8 @@
                 "id": "CVE-2026-50751",
                 "sourceIdentifier": "cve@checkpoint.com",
                 "published": "2026-06-08T12:16:32.367",
-                "lastModified": "2026-06-08T21:16:49.373",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-06-09T18:30:55.230",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -212,27 +1213,555 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "r80.40",
+                                        "versionEndExcluding": "r81.20",
+                                        "matchCriteriaId": "8FF872BA-A562-41C5-9BEE-E23DA78F8D35"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C939766C-B8F9-4D87-A0C1-AF184DF24411"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4EC030B6-DA6D-4500-8BFB-9C5336DA5C96"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_101:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FB9F857E-1288-4D34-A0EF-D1CC57C3F507"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_103:*:*:*:*:*:*",
+                                        "matchCriteriaId": "24672DE2-44D1-4C57-97FD-C48932C4377B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_105:*:*:*:*:*:*",
+                                        "matchCriteriaId": "70E8F526-84C1-4EC9-91DE-4696068B4B04"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_111:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A7C872AF-30EA-42C4-B835-04D5437A9B80"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_113:*:*:*:*:*:*",
+                                        "matchCriteriaId": "10254179-61C3-4041-BCD1-64DEBD14B258"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_115:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6DD4809C-AE8F-4DAA-A2F4-6143798BABAC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_118:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1B76E242-925B-49F8-83A7-622F986BA851"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_119:*:*:*:*:*:*",
+                                        "matchCriteriaId": "74290166-AD26-4BAF-B592-1E72ECE8CCC4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_120:*:*:*:*:*:*",
+                                        "matchCriteriaId": "325EDC5E-3FC3-4477-80A5-1A5F4943887A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_122:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6A2CE5CD-F8D1-4B74-93EC-7966DBD51F90"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_126:*:*:*:*:*:*",
+                                        "matchCriteriaId": "875D457D-D955-4F1B-AEF6-A550AD713741"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_127:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2303A0C4-5561-4BE1-ABB2-F285C89CFD1A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "20C8BF97-A587-4444-8A3E-35F35440B60C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_141:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8E30891A-B93F-45E9-962E-61627422F8C7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_24:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8D6F2456-EAB9-4EDB-859A-BCB8DEF708B5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_26:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0EBD5040-8386-4ECA-9F46-97FC8B698A05"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_38:*:*:*:*:*:*",
+                                        "matchCriteriaId": "63F0211F-E2D2-4729-A970-590BA162C668"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_41:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7EEC35AD-A996-472E-809E-D403F06B69B8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_43:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1F3ABB69-FAD0-4030-9A30-3E29862B68A5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_45:*:*:*:*:*:*",
+                                        "matchCriteriaId": "76E00B8C-A53E-44B3-999C-93F042711CD3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_53:*:*:*:*:*:*",
+                                        "matchCriteriaId": "250EBCC5-4EA9-4983-B083-561BEA0F7514"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_54:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0BD508BE-E9C2-4FC1-A170-93C5639F8BA9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_65:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5B2CC1FB-445F-44D0-A881-58F85A88263C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_70:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF225C3C-D9D5-4617-B3FE-9F324B7091FE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_76:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C6A7AEAE-3B59-4149-BC9B-E6AAF712E9D4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_79:*:*:*:*:*:*",
+                                        "matchCriteriaId": "26B917DC-9D52-4A63-B1F7-1EFD84C42EEB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "72839A3A-5111-4663-9736-AD91E04F7B0C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_84:*:*:*:*:*:*",
+                                        "matchCriteriaId": "48A0A735-EB36-4BC8-87BC-2166C1853A56"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_89:*:*:*:*:*:*",
+                                        "matchCriteriaId": "10739520-2269-4423-A964-807C57CDDFAE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_90:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF2A6363-A3E5-4645-BE92-30B9A4491A11"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_92:*:*:*:*:*:*",
+                                        "matchCriteriaId": "36AAAFB6-6041-413A-A09C-6D8F8D46DD87"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_96:*:*:*:*:*:*",
+                                        "matchCriteriaId": "082D680F-D722-4A3F-917E-7B5D2CF4E1B4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_98:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3C101923-462C-4A5D-80CC-9392150FA03E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r81.20:take_99:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A806E4EB-6441-46A6-B856-0BBC01A978A3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A524CEE0-F639-48AB-9A9C-EA0A37F5DE9B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "90AFA6EF-8DAF-47A7-A79C-D868F06CF379"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_103:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DE702A9E-383D-420A-BB0C-DD935F0F241C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AFC6CFAD-65D6-4F73-A486-4ADF2A6AF454"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3EAC6AB8-A27D-4711-A868-028D447554D2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_18:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BDBFA62A-8FCE-48BC-ABDB-69E72ED5AB85"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_19:*:*:*:*:*:*",
+                                        "matchCriteriaId": "486AC6A9-70E5-448A-84DC-CBA79ADCD906"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_25:*:*:*:*:*:*",
+                                        "matchCriteriaId": "26E45155-DD2A-40E3-922D-234C2AD799C1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_33:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4DF60A40-0C6B-4A16-9973-36BE2AE36981"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_34:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DB912857-F1DE-4863-AA55-37545F29B379"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_36:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9D540144-E641-4BF6-8E24-2258093CAEFC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_39:*:*:*:*:*:*",
+                                        "matchCriteriaId": "73B84EDC-67DA-4511-A74B-09312689E51D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_41:*:*:*:*:*:*",
+                                        "matchCriteriaId": "43393362-0C2B-471E-9C0D-03B9D76EA84E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_43:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9CA8BE4D-C71F-48D7-B780-E355BF9ACA7A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_44:*:*:*:*:*:*",
+                                        "matchCriteriaId": "055BD4D8-850C-41A0-9ED5-60874CB667B4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_60:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1F27A6BB-CA50-4448-B116-4B49346C3155"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_73:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E18BFECE-B786-414E-A2C0-5835F313E2C8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82:take_91:*:*:*:*:*:*",
+                                        "matchCriteriaId": "89455890-9888-41A5-B12B-086EC35297B6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82.10:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "50C9BB1A-E214-4018-8849-56F6D9A25968"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82.10:take_19:*:*:*:*:*:*",
+                                        "matchCriteriaId": "53D0B2C1-59F1-4095-8D46-CE7F3D87BA33"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_os:r82.10:take_6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2955157B-8C1C-4241-89FF-6588C440954B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "r80.20.00",
+                                        "versionEndExcluding": "r81.10.17",
+                                        "matchCriteriaId": "4BCFEA43-AB81-4485-B6B1-7948FBB3EC5E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FA48FB0C-7CE1-475D-B685-FF59593C00F7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:build_996004508:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F822BD5E-8829-4752-A979-81D0608FADBE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:build_996004620:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F1A17167-24E5-4A3A-9C72-390518F1E092"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:build_996004653:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E5A0620A-3F9E-4044-87CC-C6382308B59F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:build_996004721:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DB03BA80-3775-44AB-AA24-0D3F381846B6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r81.10.17:build_996004892:*:*:*:*:*:*",
+                                        "matchCriteriaId": "92DF5CB3-6368-452F-9E57-1D18D238D2BB"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1530:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FD21C289-F0A7-40B1-ABA6-DE973A5C12FB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1550:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0691ED2B-98E4-4BEF-88CD-90737C7B54CD"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1570:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9787C7C5-FCB2-424A-B593-0216CE86808F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1570r:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6F000ECB-4189-4B32-8699-421A67C17BDB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1590:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C68DBC96-4248-41AE-8581-8C792ED0A58D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1595r:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "61E5A939-A111-401E-A718-0562F3DA6C35"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1600:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "194E2E0B-23E3-4175-805D-506DF5C491DB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0ECBC553-2864-40D2-8EF3-B15BB002ECEE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1900:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "69D14FCF-84E2-41A1-9EBF-6264F1AFD85A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2000:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D5A672E9-4243-4852-9B91-B0393C98C471"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "r80.20.00",
+                                        "versionEndExcluding": "r82.00.10",
+                                        "matchCriteriaId": "7B6DC80E-B339-4678-BC76-56D06AFDF102"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DECDEDBC-6CEF-45A6-8EEE-C6E053502BEF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998001559:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C413370D-0432-485C-BEA1-3D4F95486DF1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998001562:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9DE1FA66-FD77-4117-9993-A84D871F3B4B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998002110:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2DAB048C-BF9F-4B60-B99B-21CF61FBD377"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998002112:*:*:*:*:*:*",
+                                        "matchCriteriaId": "49932FF8-7281-4F6F-85F9-66A3BF1BCF29"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998002133:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B51A9398-AA4B-407B-9EE6-1C253E99C8CA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:checkpoint:gaia_embedded:r82.00.10:build_998002203:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F0C5B191-9167-4DD8-89F8-1526AA6B37BA"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1535:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "603082FA-896F-4F43-9298-EA821AC8746D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1555:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D432C69F-B100-4D29-AD10-D02DF4D637F6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1575:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D826E703-003D-449C-B190-801FD99CF832"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_1575r:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "618E00E8-09D7-4A64-905F-04650781DB63"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2530:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D363A133-C9E8-4289-9D51-A8284ABF0E9B"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2550:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "492D42C7-BA79-42AC-903E-5A3EF4D00BDA"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2560:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3FE64FE4-F3C6-4924-8E65-BC336D416739"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2570:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "707EC21A-2F9B-4E72-9C60-4382C736D191"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2580:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "994F4EE1-1ADE-4EA3-AD9A-840E96C353A1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:checkpoint:quantum_spark_2590:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C49FBD30-C627-4DDC-90B0-F0C4E6DD927C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://support.checkpoint.com/results/sk/sk185033",
-                        "source": "cve@checkpoint.com"
+                        "source": "cve@checkpoint.com",
+                        "tags": [
+                            "Mitigation",
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50751",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.176880000",
-                    "percentile": "0.952480000"
+                    "epss": "0.118410000",
+                    "percentile": "0.938800000"
                 },
                 "location": {
-                    "lat": -10.342402219772339,
-                    "lng": -100.3424015045166,
+                    "lat": -23.483708143234253,
+                    "lng": 126.51629209518433,
                     "country": "Unknown"
                 }
             }
@@ -338,12 +1867,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.066780000",
-                    "percentile": "0.914180000"
+                    "epss": "0.078370000",
+                    "percentile": "0.921680000"
                 },
                 "location": {
-                    "lat": -10.342395544052124,
-                    "lng": -100.34239530563354,
+                    "lat": -23.483702898025513,
+                    "lng": 126.51629757881165,
                     "country": "Unknown"
                 }
             }
@@ -503,11 +2032,11 @@
                 ],
                 "epss": {
                     "epss": "0.061490000",
-                    "percentile": "0.909980000"
+                    "percentile": "0.910120000"
                 },
                 "location": {
-                    "lat": -10.342390298843384,
-                    "lng": -100.3423900604248,
+                    "lat": -23.483697414398193,
+                    "lng": 126.5163025856018,
                     "country": "Unknown"
                 }
             }
@@ -1234,12 +2763,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.337210000",
-                    "percentile": "0.970510000"
+                    "epss": "0.275780000",
+                    "percentile": "0.965400000"
                 },
                 "location": {
-                    "lat": -10.342385053634644,
-                    "lng": -100.34238505363464,
+                    "lat": -23.48369288444519,
+                    "lng": 126.51630735397339,
                     "country": "Unknown"
                 }
             }
@@ -1358,7 +2887,7 @@
                 ],
                 "epss": {
                     "epss": "0.005280000",
-                    "percentile": "0.675230000"
+                    "percentile": "0.675630000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -1472,7 +3001,7 @@
                 ],
                 "epss": {
                     "epss": "0.897420000",
-                    "percentile": "0.995870000"
+                    "percentile": "0.995880000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -2610,11 +4139,11 @@
                 ],
                 "epss": {
                     "epss": "0.587880000",
-                    "percentile": "0.982530000"
+                    "percentile": "0.982550000"
                 },
                 "location": {
-                    "lat": -10.342371940612793,
-                    "lng": -100.34237170219421,
+                    "lat": -23.483677864074707,
+                    "lng": 126.51632237434387,
                     "country": "Unknown"
                 }
             }
@@ -2775,11 +4304,11 @@
                 ],
                 "epss": {
                     "epss": "0.320650000",
-                    "percentile": "0.969290000"
+                    "percentile": "0.969360000"
                 },
                 "location": {
-                    "lat": -10.342367172241211,
-                    "lng": -100.34236693382263,
+                    "lat": -23.483672618865967,
+                    "lng": 126.51632738113403,
                     "country": "Unknown"
                 }
             }
@@ -5127,11 +6656,11 @@
                 ],
                 "epss": {
                     "epss": "0.170510000",
-                    "percentile": "0.951250000"
+                    "percentile": "0.951320000"
                 },
                 "location": {
-                    "lat": -10.34236216545105,
-                    "lng": -100.34236216545105,
+                    "lat": -23.483667373657227,
+                    "lng": 126.51633262634277,
                     "country": "Unknown"
                 }
             }
@@ -5289,11 +6818,11 @@
                 ],
                 "epss": {
                     "epss": "0.143900000",
-                    "percentile": "0.945620000"
+                    "percentile": "0.945720000"
                 },
                 "location": {
-                    "lat": -10.342358112335205,
-                    "lng": -100.34235787391663,
+                    "lat": -23.483662366867065,
+                    "lng": 126.51633763313293,
                     "country": "Unknown"
                 }
             }
@@ -5452,11 +6981,11 @@
                 ],
                 "epss": {
                     "epss": "0.079560000",
-                    "percentile": "0.922320000"
+                    "percentile": "0.922440000"
                 },
                 "location": {
-                    "lat": -10.342353820800781,
-                    "lng": -100.3423535823822,
+                    "lat": -23.483657360076904,
+                    "lng": 126.51634287834167,
                     "country": "Unknown"
                 }
             }
@@ -5588,11 +7117,11 @@
                 ],
                 "epss": {
                     "epss": "0.104030000",
-                    "percentile": "0.933660000"
+                    "percentile": "0.933780000"
                 },
                 "location": {
-                    "lat": -10.342349767684937,
-                    "lng": -100.34234976768494,
+                    "lat": -23.48365306854248,
+                    "lng": 126.5163471698761,
                     "country": "Unknown"
                 }
             }
@@ -5754,11 +7283,11 @@
                 ],
                 "epss": {
                     "epss": "0.327460000",
-                    "percentile": "0.969800000"
+                    "percentile": "0.969870000"
                 },
                 "location": {
-                    "lat": -10.342345714569092,
-                    "lng": -100.34234571456909,
+                    "lat": -23.483648538589478,
+                    "lng": 126.5163516998291,
                     "country": "Unknown"
                 }
             }
@@ -5881,11 +7410,11 @@
                 ],
                 "epss": {
                     "epss": "0.010180000",
-                    "percentile": "0.775700000"
+                    "percentile": "0.776030000"
                 },
                 "location": {
-                    "lat": -10.342341661453247,
-                    "lng": -100.34234142303467,
+                    "lat": -23.483643293380737,
+                    "lng": 126.51635670661926,
                     "country": "Unknown"
                 }
             }
@@ -6403,8 +7932,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.920780000",
-                    "percentile": "0.997210000"
+                    "epss": "0.918030000",
+                    "percentile": "0.997040000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -6848,1516 +8377,7 @@
                 "evaluatorImpact": "Per: http://www.microsoft.com/technet/security/advisory/971778.mspx\r\n\r\n\"Microsoft is aware of limited, active attacks that use this exploit code. While our investigation is ongoing, our investigation so far has shown that Windows 2000 Service Pack 4, Windows XP, and Windows Server 2003 are vulnerable; all versions of Windows Vista and Windows Server 2008 are not vulnerable.\"",
                 "epss": {
                     "epss": "0.530160000",
-                    "percentile": "0.980120000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2009-3459",
-                "sourceIdentifier": "psirt@adobe.com",
-                "published": "2009-10-13T10:30:00.577",
-                "lastModified": "2026-05-21T12:56:49.133",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Heap-based buffer overflow in Adobe Reader and Acrobat 7.x before 7.1.4, 8.x before 8.1.7, and 9.x before 9.2 allows remote attackers to execute arbitrary code via a crafted PDF file that triggers memory corruption, as exploited in the wild in October 2009. NOTE: some of these details are obtained from third party information."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Un Desbordamiento de b\u00fafer en la regi\u00f3n heap de la memoria en Adobe Reader y Acrobat versi\u00f3n 7.x anterior a versi\u00f3n 7.1.4, versi\u00f3n 8.x anterior a 8.1.7, y versi\u00f3n 9.x anterior a 9.2, permite a los atacantes remotos ejecutar c\u00f3digo arbitrario por medio de un archivo PDF creado que desencadena la corrupci\u00f3n de memoria, tal y como fue explotado \"in the wild\" en octubre de 2009. NOTA: algunos de estos detalles se obtienen de informaci\u00f3n de terceros."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-119"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-122"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0",
-                                        "versionEndExcluding": "7.1.4",
-                                        "matchCriteriaId": "C1329474-A9CD-44C3-828C-A0D53418300B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "8.0",
-                                        "versionEndExcluding": "8.1.7",
-                                        "matchCriteriaId": "59AE2E7E-7C31-483D-B83C-86AAD5086879"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.0",
-                                        "versionEndExcluding": "9.2",
-                                        "matchCriteriaId": "EFB2089C-FCB5-4A74-A188-B59682940C5B"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0",
-                                        "versionEndExcluding": "7.1.4",
-                                        "matchCriteriaId": "8E3F66D5-A623-4E9E-BD9E-E742D71EB876"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "8.0",
-                                        "versionEndExcluding": "8.1.7",
-                                        "matchCriteriaId": "46FA3F32-2426-43B8-9E86-2FA267A25245"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.0",
-                                        "versionEndExcluding": "9.2",
-                                        "matchCriteriaId": "A0D7F6D8-D5A3-4325-9A64-5E4E6EE3AC37"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://blogs.adobe.com/psirt/2009/10/adobe_reader_and_acrobat_issue_1.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://isc.sans.org/diary.html?storyid=7300",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Not Applicable"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/36983",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1023007",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.adobe.com/support/security/bulletins/apsb09-15.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.iss.net/threats/348.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/36600",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-286B.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2009/2851",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2009/2898",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/53691",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6534",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://blogs.adobe.com/psirt/2009/10/adobe_reader_and_acrobat_issue_1.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://isc.sans.org/diary.html?storyid=7300",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Not Applicable"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/36983",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1023007",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.adobe.com/support/security/bulletins/apsb09-15.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.iss.net/threats/348.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/36600",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-286B.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2009/2851",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2009/2898",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/53691",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6534",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2009-3459",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.880730000",
-                    "percentile": "0.995030000"
-                },
-                "location": {
-                    "lat": 37.3307,
-                    "lng": -121.894,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2010-0249",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2010-01-15T17:30:00.533",
-                "lastModified": "2026-05-21T12:57:01.463",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Use-after-free vulnerability in Microsoft Internet Explorer 6, 6 SP1, 7, and 8 on Windows 2000 SP4; Windows XP SP2 and SP3; Windows Server 2003 SP2; Windows Vista Gold, SP1, and SP2; Windows Server 2008 Gold, SP2, and R2; and Windows 7 allows remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object, related to incorrectly initialized memory and improper handling of objects in memory, as exploited in the wild in December 2009 and January 2010 during Operation Aurora, aka \"HTML Object Memory Corruption Vulnerability.\""
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad de uso despu\u00e9s de liberaci\u00f3n en Microsoft Internet Explorer 6, 6 SP1, 7 y 8 en Windows 2000 SP4; Windows XP SP2 y SP3; Windows Server 2003 SP2; Windows Vista Gold SP1 y SP2; Windows Server 2008 Gold, SP2 y R2; y Windows 7; permite a atacantes remotos ejecutar c\u00f3digo de su elecci\u00f3n accediendo a un puntero asociado a un objeto eliminado, como se ha explotado activamente en Enero 2010."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-416"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-416"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:5.0.1:sp4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2EB39B99-91A0-4B70-B12A-BA37F6AFBA83"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D47247A3-7CD7-4D67-9D9B-A94A504DA1BE"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_2000:-:sp4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CA2CBE65-F4B6-49AF-983C-D3CF6C172CC5"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0C69B5E6-D1AF-46F1-8AE6-DD5D4E3D9160"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "9F98AE07-3995-4501-9804-FEA5A87ADFAD"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34DF3B5E-F17F-49B4-9DC8-06749F3C9CC3"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9392D35-7BF5-48E9-879B-BBDE9A9E9AB9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:7.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6BC71FD8-D385-4507-BD14-B75FDD4C79E6"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "9F98AE07-3995-4501-9804-FEA5A87ADFAD"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "32623D48-7000-4C7D-823F-7D2A9841D88C"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:*:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "E20CAA29-B5A9-4D99-9775-4945469C3A9A"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp1:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "889F98DA-4266-470B-AE3D-480BDF6BADB9"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp2:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "08627673-D381-4481-BD04-F56599C43105"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34DF3B5E-F17F-49B4-9DC8-06749F3C9CC3"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9392D35-7BF5-48E9-879B-BBDE9A9E9AB9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:8:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A52E757F-9B41-43B4-9D67-3FEDACA71283"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_7:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E33796DB-4523-4F04-B564-ADF030553D51"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "32623D48-7000-4C7D-823F-7D2A9841D88C"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:*:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "B20DD263-5A62-4CB1-BD47-D1F9A6C67E08"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:*:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "B7674920-AE12-4A25-BE57-34AEDDA74D76"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:*:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "E20CAA29-B5A9-4D99-9775-4945469C3A9A"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp1:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "889F98DA-4266-470B-AE3D-480BDF6BADB9"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp2:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "08627673-D381-4481-BD04-F56599C43105"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34DF3B5E-F17F-49B4-9DC8-06749F3C9CC3"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9392D35-7BF5-48E9-879B-BBDE9A9E9AB9"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://blogs.technet.com/msrc/archive/2010/01/14/security-advisory-979352.aspx",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://news.cnet.com/8301-27080_3-10435232-245.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://osvdb.org/61697",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1023462",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://support.microsoft.com/kb/979352",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.exploit-db.com/exploits/11167",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/492515",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/979352.mspx",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link",
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/37815",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link",
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-055A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link",
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0135",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-002",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/55642",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6835",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://blogs.technet.com/msrc/archive/2010/01/14/security-advisory-979352.aspx",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://news.cnet.com/8301-27080_3-10435232-245.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://osvdb.org/61697",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://securitytracker.com/id?1023462",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://support.microsoft.com/kb/979352",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.exploit-db.com/exploits/11167",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/492515",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/979352.mspx",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/37815",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-055A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0135",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-002",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/55642",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6835",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2010-0249",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "evaluatorComment": "Per: http://cwe.mitre.org/data/definitions/416.htmlhttp://cwe.mitre.org/data/definitions/416.html\n\nCWE-416: Use After Free",
-                "epss": {
-                    "epss": "0.887880000",
-                    "percentile": "0.995360000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2010-0806",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2010-03-10T22:30:01.323",
-                "lastModified": "2026-05-21T12:57:10.303",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Use-after-free vulnerability in the Peer Objects component (aka iepeers.dll) in Microsoft Internet Explorer 6, 6 SP1, and 7 allows remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object, as exploited in the wild in March 2010, aka \"Uninitialized Memory Corruption Vulnerability.\""
-                    },
-                    {
-                        "lang": "es",
-                        "value": "La vulnerabilidad de Uso de la Memoria Previamente Liberada en el componente Peer Objects (tambi\u00e9n se conoce como iepeers.dll) en Microsoft Internet Explorer versiones 6, 6 SP1 y 7 permite a los atacantes remotos ejecutar c\u00f3digo arbitrario por medio de vectores que implican el acceso a un puntero no v\u00e1lido luego de la eliminaci\u00f3n de un objeto, tal y como se explot\u00f3 \"in the wild\" en marzo de 2010, tambi\u00e9n se conoce como \"Uninitialized Memory Corruption Vulnerability\"."
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-399"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-416"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:5.01:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6219D36E-9E2C-4DC7-8FD5-FAD144A333F6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D47247A3-7CD7-4D67-9D9B-A94A504DA1BE"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_2000:*:sp4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "83E7C4A0-78CF-4B56-82BF-EC932BDD8ADF"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:8:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A52E757F-9B41-43B4-9D67-3FEDACA71283"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_7:-:*:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "FE52F111-C761-4011-9AC4-8B9C0E9357D9"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_7:-:*:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "4B2C1DB8-97B9-4D44-906C-3EFA100B01CC"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4D3B5E4F-56A6-4696-BBB4-19DF3613D020"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "2127D10C-B6F3-4C1D-B9AA-5D78513CC996"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "AB425562-C0A0-452E-AABE-F70522F15E1A"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:*:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "B20DD263-5A62-4CB1-BD47-D1F9A6C67E08"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:*:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "B7674920-AE12-4A25-BE57-34AEDDA74D76"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:*:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C162FFF0-1E8F-4DCF-A08F-6C6E324ED878"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0A0D2704-C058-420B-B368-372D1129E914"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9B339C33-8896-4896-88FF-88E74FDBC543"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CE477A73-4EE4-41E9-8694-5A3D5DC88656"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:7:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1A33FA7F-BB2A-4C66-B608-72997A2BD1DB"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4D3B5E4F-56A6-4696-BBB4-19DF3613D020"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "9F98AE07-3995-4501-9804-FEA5A87ADFAD"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "FFFD8C6B-7A46-484C-8701-81D58AB1C2CF"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "2127D10C-B6F3-4C1D-B9AA-5D78513CC996"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x86:*",
-                                        "matchCriteriaId": "AB425562-C0A0-452E-AABE-F70522F15E1A"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:*:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C162FFF0-1E8F-4DCF-A08F-6C6E324ED878"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0A0D2704-C058-420B-B368-372D1129E914"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9B339C33-8896-4896-88FF-88E74FDBC543"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CE477A73-4EE4-41E9-8694-5A3D5DC88656"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "693D3C1C-E3E4-49DB-9A13-44ADDFF82507"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:*:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4D3B5E4F-56A6-4696-BBB4-19DF3613D020"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "9F98AE07-3995-4501-9804-FEA5A87ADFAD"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34DF3B5E-F17F-49B4-9DC8-06749F3C9CC3"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9392D35-7BF5-48E9-879B-BBDE9A9E9AB9"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://blogs.technet.com/msrc/archive/2010/03/09/security-advisory-981374-released.aspx",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://osvdb.org/62810",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/38860",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/744549",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/981374.mspx",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/38615",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-068A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-089A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0567",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0744",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-018",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/56772",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A8446",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://blogs.technet.com/msrc/archive/2010/03/09/security-advisory-981374-released.aspx",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://osvdb.org/62810",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/38860",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/744549",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.microsoft.com/technet/security/advisory/981374.mspx",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/38615",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-068A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA10-089A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0567",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2010/0744",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-018",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/56772",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A8446",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-018",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2010-0806",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "evaluatorComment": "Further information on this vulnerability can be found at the following link from Microsoft:\r\n\r\nhttp://support.microsoft.com/kb/981374",
-                "epss": {
-                    "epss": "0.872530000",
-                    "percentile": "0.994680000"
+                    "percentile": "0.980160000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8368,6 +8388,52 @@
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-11645",
+            "vendorProject": "Google",
+            "product": "Chromium V8",
+            "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+            "dateAdded": "2026-06-09",
+            "shortDescription": "Google Chromium V8 out-of-bounds read and write vulnerability that could allow a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-23",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html ; https://issues.chromium.org/issues/506689381 ; https://nvd.nist.gov/vuln/detail/CVE-2026-11645",
+            "cwes": [
+                "CWE-787",
+                "CWE-125"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-7473",
+            "vendorProject": "Arista",
+            "product": "Extensible Operating System",
+            "vulnerabilityName": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
+            "dateAdded": "2026-06-09",
+            "shortDescription": "Arista Extensible Operating System (EOS) contains an incomplete comparison with missing factors vulnerability when the switch incorrectly decapsulate and forwards other unexpected tunneled packet with a destination IP matching its configured decapsulation IP.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-23",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24005-security-advisory-0137 ; https://nvd.nist.gov/vuln/detail/CVE-2026-7473",
+            "cwes": [
+                "CWE-1023"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-20245",
+            "vendorProject": "Cisco",
+            "product": "Catalyst SD-WAN Manager",
+            "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
+            "dateAdded": "2026-06-09",
+            "shortDescription": "Cisco Catalyst SD-WAN Manager formerly SD-WAN vManage contains an improper encoding or escaping of output vulnerability. This vulnerability could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system.",
+            "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+            "dueDate": "2026-06-23",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx ; https://nvd.nist.gov/vuln/detail/CVE-2026-20245",
+            "cwes": [
+                "CWE-116"
+            ]
+        },
         {
             "cveID": "CVE-2026-42271",
             "vendorProject": "BerriAI",
@@ -8393,7 +8459,7 @@
             "shortDescription": "Check Point Security Gateway contains an improper authentication vulnerability in IKEv1 key exchange that could allow an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2026-06-11",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/ ; https://support.checkpoint.com/results/sk/sk185033?_gl=1*1wqeqhc*_gcl_au*MTI1MzE5MjI2LjE3ODA5MzQ1NTM. ; https://nvd.nist.gov/vuln/detail/CVE-2026-50751",
             "cwes": [
                 "CWE-287"
@@ -32336,7 +32402,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-09T14:25:30.131317",
+    "last_updated": "2026-06-10T14:53:19.537618",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
