@@ -2,6 +2,110 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-35273",
+                "sourceIdentifier": "secalert_us@oracle.com",
+                "published": "2026-06-11T04:16:53.680",
+                "lastModified": "2026-06-12T19:15:27.297",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Updates Environment Management). Supported versions that are affected are 8.61 and 8.62. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise PeopleSoft Enterprise PeopleTools. Successful attacks of this vulnerability can result in takeover of PeopleSoft Enterprise PeopleTools. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secalert_us@oracle.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-12",
+                "cisaActionDue": "2026-06-15",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.61:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "18F15FC6-947A-462A-8329-C52907799A7C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.62:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF0E4EFC-096B-4861-8D55-D8DAA37A21E9"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.oracle.com/security-alerts/alert-cve-2026-35273.html",
+                        "source": "secalert_us@oracle.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-35273",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.000240000",
+                    "percentile": "0.072520000"
+                },
+                "location": {
+                    "lat": 37.5295,
+                    "lng": -122.253,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-10520",
                 "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
                 "published": "2026-06-09T16:16:35.700",
@@ -908,8 +1012,8 @@
                     "percentile": "0.965180000"
                 },
                 "location": {
-                    "lat": 9.72757077217102,
-                    "lng": 99.72757625579834,
+                    "lat": -4.541855573654175,
+                    "lng": -94.54185080528259,
                     "country": "Unknown"
                 }
             }
@@ -1272,8 +1376,8 @@
                     "percentile": "0.983340000"
                 },
                 "location": {
-                    "lat": 9.727588891983032,
-                    "lng": 99.72758936882019,
+                    "lat": -4.541841983795166,
+                    "lng": -94.54184126853943,
                     "country": "Unknown"
                 }
             }
@@ -1879,8 +1983,8 @@
                     "percentile": "0.939050000"
                 },
                 "location": {
-                    "lat": 9.72759485244751,
-                    "lng": 99.72759509086609,
+                    "lat": -4.541836738586426,
+                    "lng": -94.54183650016785,
                     "country": "Unknown"
                 }
             }
@@ -1990,8 +2094,8 @@
                     "percentile": "0.911480000"
                 },
                 "location": {
-                    "lat": 9.727600336074829,
-                    "lng": 99.72760057449341,
+                    "lat": -4.541832208633423,
+                    "lng": -94.54183220863342,
                     "country": "Unknown"
                 }
             }
@@ -2154,8 +2258,8 @@
                     "percentile": "0.910470000"
                 },
                 "location": {
-                    "lat": 9.727606296539307,
-                    "lng": 99.72760653495789,
+                    "lat": -4.541827917098999,
+                    "lng": -94.541827917099,
                     "country": "Unknown"
                 }
             }
@@ -2886,8 +2990,8 @@
                     "percentile": "0.965190000"
                 },
                 "location": {
-                    "lat": 9.727612018585205,
-                    "lng": 99.7276120185852,
+                    "lat": -4.541823387145996,
+                    "lng": -94.54182314872742,
                     "country": "Unknown"
                 }
             }
@@ -4261,8 +4365,8 @@
                     "percentile": "0.982620000"
                 },
                 "location": {
-                    "lat": 9.727627038955688,
-                    "lng": 99.72762703895569,
+                    "lat": -4.541812181472778,
+                    "lng": -94.5418119430542,
                     "country": "Unknown"
                 }
             }
@@ -4426,8 +4530,8 @@
                     "percentile": "0.969490000"
                 },
                 "location": {
-                    "lat": 9.727634191513062,
-                    "lng": 99.72763419151306,
+                    "lat": -4.541807413101196,
+                    "lng": -94.5418074131012,
                     "country": "Unknown"
                 }
             }
@@ -6778,8 +6882,8 @@
                     "percentile": "0.951520000"
                 },
                 "location": {
-                    "lat": 9.727642059326172,
-                    "lng": 99.72764205932617,
+                    "lat": -4.541802167892456,
+                    "lng": -94.54180216789246,
                     "country": "Unknown"
                 }
             }
@@ -6940,8 +7044,8 @@
                     "percentile": "0.945940000"
                 },
                 "location": {
-                    "lat": 9.727647304534912,
-                    "lng": 99.72764730453491,
+                    "lat": -4.54179573059082,
+                    "lng": -94.54179573059082,
                     "country": "Unknown"
                 }
             }
@@ -7103,8 +7207,8 @@
                     "percentile": "0.922780000"
                 },
                 "location": {
-                    "lat": 9.727652788162231,
-                    "lng": 99.72765302658081,
+                    "lat": -4.541792154312134,
+                    "lng": -94.54179191589355,
                     "country": "Unknown"
                 }
             }
@@ -7239,8 +7343,8 @@
                     "percentile": "0.934040000"
                 },
                 "location": {
-                    "lat": 9.727657556533813,
-                    "lng": 99.72765779495239,
+                    "lat": -4.541788101196289,
+                    "lng": -94.54178810119629,
                     "country": "Unknown"
                 }
             }
@@ -7405,8 +7509,8 @@
                     "percentile": "0.973080000"
                 },
                 "location": {
-                    "lat": 9.727662324905396,
-                    "lng": 99.7276623249054,
+                    "lat": -4.5417845249176025,
+                    "lng": -94.5417845249176,
                     "country": "Unknown"
                 }
             }
@@ -7532,537 +7636,29 @@
                     "percentile": "0.774550000"
                 },
                 "location": {
-                    "lat": 9.727666854858398,
-                    "lng": 99.72766709327698,
+                    "lat": -4.541781187057495,
+                    "lng": -94.54178094863892,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2008-4250",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2008-10-23T22:00:01.357",
-                "lastModified": "2026-05-21T12:57:17.353",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary code via a crafted RPC request that triggers the overflow during path canonicalization, as exploited in the wild by Gimmiv.A in October 2008, aka \"Server Service Vulnerability.\""
-                    },
-                    {
-                        "lang": "es",
-                        "value": "El servicio servidor en Microsoft Windows versiones 2000 SP4, XP SP2 y SP3, Server 2003 SP1 y SP2, vista Gold y SP1, Server 2008 y 7 Pre-Beta, permite a los atacantes remotos ejecutar c\u00f3digo arbitrario por medio de una petici\u00f3n RPC creada que desencadena el desbordamiento durante una Canonicalizaci\u00f3n de Path, como explotaci\u00f3n en la naturaleza por Gimmiv.A en octubre de 2008, tambi\u00e9n se conoce como \"Server Service Vulnerability\""
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
-                                "baseScore": 10.0,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "LOW",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 10.0,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": true,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": false
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-05-20",
-                "cisaActionDue": "2026-06-03",
-                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
-                "cisaVulnerabilityName": "Microsoft Windows Buffer Overflow Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-94"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-119"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_2000:-:sp4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CA2CBE65-F4B6-49AF-983C-D3CF6C172CC5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:*:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "E3C43D05-40F8-4769-BA6B-A376420EA972"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "43D64F8D-975A-4A5B-BEDF-D27D65C96A29"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp1:*:*:-:*:itanium:*",
-                                        "matchCriteriaId": "8856A97B-4C43-45E5-B1DB-89EB9C350265"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1D929AA2-EE0B-4AA1-805D-69BCCA11B77F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:itanium:*",
-                                        "matchCriteriaId": "9F98AE07-3995-4501-9804-FEA5A87ADFAD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2003:-:sp2:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "A7371547-290D-4D0D-B98D-CA28B4D2E8B0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:*:*:*:-:*:itanium:*",
-                                        "matchCriteriaId": "87842DF1-F3AC-4585-A117-904B936D5C9F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:*:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "3A118DC8-CD3A-461F-867E-5174F24FBAE9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:*:*:*:-:*:x86:*",
-                                        "matchCriteriaId": "1114016B-B51D-495D-96AC-A0E7992DA551"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7CAEEA81-5037-4B68-98D9-83AAEBC98E20"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:*:*:*:*:*:x64:*",
-                                        "matchCriteriaId": "51160A46-6768-44D5-89CD-6DB9D2268A2E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3A04E39A-623E-45CA-A5FC-25DAA0F275A3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_vista:-:sp1:*:*:-:*:x64:*",
-                                        "matchCriteriaId": "889F98DA-4266-470B-AE3D-480BDF6BADB9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:-:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "4902A7BD-0645-4CAC-8EA8-24BD2D8B893A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "34DF3B5E-F17F-49B4-9DC8-06749F3C9CC3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp2:*:*:professional:*:x64:*",
-                                        "matchCriteriaId": "C6109348-BC79-4ED3-8D41-EA546A540C79"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_xp:-:sp3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C9392D35-7BF5-48E9-879B-BBDE9A9E9AB9"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://blogs.securiteam.com/index.php/archives/1150",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "http://marc.info/?l=bugtraq&m=122703006921213&w=2",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/32326",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/827267",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/archive/1/497808/100/0/threaded",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/archive/1/497816/100/0/threaded",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/31874",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Patch",
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securitytracker.com/id?1021091",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA08-297A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-088A.html",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2008/2902",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/46040",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6093",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6824",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6841",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/7104",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/7132",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://blogs.securiteam.com/index.php/archives/1150",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "http://marc.info/?l=bugtraq&m=122703006921213&w=2",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://secunia.com/advisories/32326",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.kb.cert.org/vuls/id/827267",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/archive/1/497808/100/0/threaded",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/archive/1/497816/100/0/threaded",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/31874",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Patch",
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securitytracker.com/id?1021091",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA08-297A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.us-cert.gov/cas/techalerts/TA09-088A.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "http://www.vupen.com/english/advisories/2008/2902",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/46040",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6093",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6824",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6841",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/7104",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/7132",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2008-4250",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.918030000",
-                    "percentile": "0.997050000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-35273",
+            "vendorProject": "Oracle",
+            "product": " PeopleSoft Enterprise PeopleTools",
+            "vulnerabilityName": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-06-12",
+            "shortDescription": "Oracle PeopleSoft Enterprise PeopleTools contains a missing authentication for critical function vulnerability which could allow an unauthenticated attacker to obtain takeover of PeopleSoft Enterprise PeopleTools.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-06-15",
+            "knownRansomwareCampaignUse": "Known",
+            "notes": "https://www.oracle.com/security-alerts/alert-cve-2026-35273.html ; https://support.oracle.com/signin/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-35273",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2026-10520",
             "vendorProject": "Ivanti",
@@ -32092,7 +31688,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-12T14:34:50.351105",
+    "last_updated": "2026-06-13T13:25:31.690253",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
