@@ -2,28 +2,112 @@
     "nvd_cves": [
         {
             "cve": {
-                "id": "CVE-2026-20230",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-06-03T18:16:20.160",
-                "lastModified": "2026-06-26T05:16:26.640",
-                "vulnStatus": "Undergoing Analysis",
+                "id": "CVE-2026-12569",
+                "sourceIdentifier": "0b655efc-079c-4cb9-9e8d-164871239f4e",
+                "published": "2026-06-18T01:18:12.040",
+                "lastModified": "2026-06-26T14:35:41.477",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default."
+                        "value": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data.\u00a0  *  This advisory also applies to all CPS versions\n  *  The identified vulnerability also impacts Windchill and FlexPLM releases prior to 11.0 M030"
                     }
                 ],
                 "affected": [
                     {
-                        "source": "psirt@cisco.com",
+                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
                         "affectedData": [
                             {
-                                "vendor": "Cisco",
-                                "product": "Cisco Unified Communications Manager",
+                                "vendor": "PTC",
+                                "product": "Windchill PDMLink",
+                                "defaultStatus": "unaffected",
                                 "versions": [
                                     {
-                                        "version": "N/A",
+                                        "version": "0",
+                                        "lessThanOrEqual": "11.0 M030",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.1 M020",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.2.1.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.0.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.1.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.0.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.1.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.1.1.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.1.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.1.3.0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "PTC",
+                                "product": "FlexPLM",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "11.0 M030",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.1 M020",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.2.1.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.0.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.0.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.1.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "12.1.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.0.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.0.3.0",
                                         "status": "affected"
                                     }
                                 ]
@@ -32,40 +116,84 @@
                     }
                 ],
                 "metrics": {
-                    "cvssMetricV31": [
+                    "cvssMetricV40": [
                         {
-                            "source": "psirt@cisco.com",
+                            "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
                             "type": "Secondary",
                             "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:C/RE:X/U:Red",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "LOW",
+                                "subIntegrityImpact": "LOW",
+                                "subAvailabilityImpact": "LOW",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "YES",
+                                "Recovery": "USER",
+                                "valueDensity": "CONCENTRATED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "RED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-                                "baseScore": 8.6,
-                                "baseSeverity": "HIGH",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
                                 "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
                                 "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
+                                "availabilityImpact": "HIGH"
                             },
                             "exploitabilityScore": 3.9,
-                            "impactScore": 4.0
+                            "impactScore": 5.9
                         }
                     ],
                     "ssvcV203": [
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-06-03T00:00:00+00:00",
-                                "id": "CVE-2026-20230",
+                                "timestamp": "2026-06-25T00:00:00+00:00",
+                                "id": "CVE-2026-12569",
                                 "options": [
                                     {
                                         "exploitation": "active"
                                     },
                                     {
-                                        "automatable": "no"
+                                        "automatable": "yes"
                                     },
                                     {
                                         "technicalImpact": "total"
@@ -80,40 +208,165 @@
                 "cisaExploitAdd": "2026-06-25",
                 "cisaActionDue": "2026-06-28",
                 "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+                "cisaVulnerabilityName": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "psirt@cisco.com",
+                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-918"
+                                "value": "CWE-20"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "11.0m030",
+                                        "matchCriteriaId": "9645DC27-47FD-4E68-A73F-380DE6AB9265"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:11.1m020:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1BA9771B-C606-4B0D-ADF1-E0BEA4FD5407"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:11.2.1.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AF4D5C35-1E36-4A6E-86AA-5E26F5375E84"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.0.0.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2A5BC13C-CBF4-4EA8-B5B7-E680BF7B22DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.0.2.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0A7DB804-FA55-456C-8C58-7ACBDA710F45"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.1.3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AABF3817-5BA7-4604-92D3-468B73EEDA75"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:13.0.2.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "33798622-E630-4F62-B675-01BFC99E73CC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:flexplm:13.0.3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5D992EFD-F674-4217-9078-FAD2558168D5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "11.0m030",
+                                        "matchCriteriaId": "A8E8CEE8-BECD-4D33-B14F-BA015EF0E39F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.0m030:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C456B19A-8A53-47AA-8C44-D7E4A99D73D0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.1m020:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6B33DB9C-7883-495B-ACFF-31422ED4A256"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.2.1.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "631EB791-4C82-4A73-8793-465576C47EC2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.0.2.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5AAE2484-F8D6-4842-93E3-EAA12469B800"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.1.2.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FC145374-1ABE-4067-9649-EEE6D031C139"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.0.2.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "925FF6A1-A0A0-4B0F-878A-53CE23ECF2D3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.0.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D9658DCC-7527-4BDE-BEC1-D5C43A7C7B83"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.1.0:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6619674F-DABA-420B-88BC-0CFDF2972309"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.2.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0FF72930-943F-4A01-BC2A-6AEACBD38908"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AD29599D-F30B-4664-A8F7-59C256ABAB61"
+                                    }
+                                ]
                             }
                         ]
                     }
                 ],
                 "references": [
                     {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
-                        "source": "psirt@cisco.com"
+                        "url": "https://www.ptc.com/en/support/article/CS473270",
+                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
+                        "tags": [
+                            "Permissions Required"
+                        ]
                     },
                     {
-                        "url": "https://denizhalil.com/2026/06/12/cve-2026-20230-cisco-unified-cm-ssrf/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20230",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-12569",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.512380000",
-                    "percentile": "0.987950000"
+                    "epss": "0.009310000",
+                    "percentile": "0.561180000"
                 },
                 "location": {
-                    "lat": 23.51306653022766,
-                    "lng": 53.513070583343506,
+                    "lat": -5.8628857135772705,
+                    "lng": 84.13713431358337,
                     "country": "Unknown"
                 }
             }
@@ -334,8 +587,8 @@
                     "percentile": "0.623540000"
                 },
                 "location": {
-                    "lat": 23.513080596923828,
-                    "lng": 53.513081073760986,
+                    "lat": -5.862854719161987,
+                    "lng": 84.13714647293091,
                     "country": "Unknown"
                 }
             }
@@ -1714,8 +1967,8 @@
                     "percentile": "0.995330000"
                 },
                 "location": {
-                    "lat": 23.513086795806885,
-                    "lng": 53.513087034225464,
+                    "lat": -5.862846374511719,
+                    "lng": 84.13715386390686,
                     "country": "Unknown"
                 }
             }
@@ -3135,8 +3388,8 @@
                     "percentile": "0.808360000"
                 },
                 "location": {
-                    "lat": 23.513091564178467,
-                    "lng": 53.513091802597046,
+                    "lat": -5.86284065246582,
+                    "lng": 84.13715982437134,
                     "country": "Unknown"
                 }
             }
@@ -4515,8 +4768,8 @@
                     "percentile": "0.823410000"
                 },
                 "location": {
-                    "lat": 23.513095378875732,
-                    "lng": 53.51309561729431,
+                    "lat": -5.862834930419922,
+                    "lng": 84.13716554641724,
                     "country": "Unknown"
                 }
             }
@@ -4678,8 +4931,8 @@
                     "percentile": "0.998070000"
                 },
                 "location": {
-                    "lat": 23.513100385665894,
-                    "lng": 53.51310062408447,
+                    "lat": -5.86282753944397,
+                    "lng": 84.13717269897461,
                     "country": "Unknown"
                 }
             }
@@ -4869,8 +5122,8 @@
                     "percentile": "0.995710000"
                 },
                 "location": {
-                    "lat": 23.51310443878174,
-                    "lng": 53.51310443878174,
+                    "lat": -5.862821817398071,
+                    "lng": 84.13717842102051,
                     "country": "Unknown"
                 }
             }
@@ -5027,8 +5280,8 @@
                     "percentile": "0.659260000"
                 },
                 "location": {
-                    "lat": 23.51310896873474,
-                    "lng": 53.51310920715332,
+                    "lat": -5.862816095352173,
+                    "lng": 84.1371841430664,
                     "country": "Unknown"
                 }
             }
@@ -7936,8 +8189,8 @@
                     "percentile": "0.530890000"
                 },
                 "location": {
-                    "lat": 23.513128995895386,
-                    "lng": 53.513129234313965,
+                    "lat": -5.862789869308472,
+                    "lng": 84.13721036911011,
                     "country": "Unknown"
                 }
             }
@@ -10454,8 +10707,8 @@
                     "percentile": "0.994440000"
                 },
                 "location": {
-                    "lat": 23.513136386871338,
-                    "lng": 53.51313662528992,
+                    "lat": -5.862780809402466,
+                    "lng": 84.13721942901611,
                     "country": "Unknown"
                 }
             }
@@ -11122,8 +11375,8 @@
                     "percentile": "0.993240000"
                 },
                 "location": {
-                    "lat": 23.513140439987183,
-                    "lng": 53.51314043998718,
+                    "lat": -5.862776041030884,
+                    "lng": 84.1372241973877,
                     "country": "Unknown"
                 }
             }
@@ -11277,8 +11530,214 @@
                     "percentile": "0.952380000"
                 },
                 "location": {
-                    "lat": 23.51314401626587,
-                    "lng": 53.51314425468445,
+                    "lat": -5.862770318984985,
+                    "lng": 84.1372299194336,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-45247",
+                "sourceIdentifier": "disclosure@vulncheck.com",
+                "published": "2026-05-26T15:16:39.263",
+                "lastModified": "2026-06-17T10:51:49.520",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Mirasvit Full Page Cache Warmer for Magento 2 before version 1.11.12 contains a PHP object injection vulnerability that allows unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie. Attackers can exploit the unrestricted call to PHP's native unserialize() function combined with gadget chains available in Magento and its dependencies to execute arbitrary code on the server."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Mirasvit",
+                                "product": "Full Page Cache Warmer for Magento 2",
+                                "defaultStatus": "affected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "1.11.12",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "disclosure@vulncheck.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-06-03T00:00:00+00:00",
+                                "id": "CVE-2026-45247",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-03",
+                "cisaActionDue": "2026-06-06",
+                "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+                "cisaVulnerabilityName": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "disclosure@vulncheck.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mirasvit:full_page_cache_warmer:*:*:*:*:*:magento:*:*",
+                                        "versionEndExcluding": "1.11.12",
+                                        "matchCriteriaId": "CB076D19-1909-43DD-B380-98C66858ECC3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://mirasvit.com/package/changelog/?package=mirasvit/module-cache-warmer",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://sansec.io/research/mirasvit-cache-warmer-object-injection",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vulncheck.com/advisories/mirasvit-cache-warmer-for-magento-php-object-injection",
+                        "source": "disclosure@vulncheck.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-45247",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.imperva.com/blog/imperva-customers-protected-against-cve-2026-45247-in-mirasvit-full-page-cache-warmer-for-magento/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.275460000",
+                    "percentile": "0.978250000"
+                },
+                "location": {
+                    "lat": -5.862764596939087,
+                    "lng": 84.13723564147949,
                     "country": "Unknown"
                 }
             }
@@ -12048,8 +12507,8 @@
                     "percentile": "0.918200000"
                 },
                 "location": {
-                    "lat": 23.513147354125977,
-                    "lng": 53.51314735412598,
+                    "lat": -5.862759351730347,
+                    "lng": 84.13724088668823,
                     "country": "Unknown"
                 }
             }
@@ -36252,7 +36711,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-26T14:04:02.536020",
+    "last_updated": "2026-06-27T13:10:34.583824",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
