@@ -361,13 +361,181 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.009310000",
-                    "percentile": "0.561180000"
+                    "epss": "0.011060000",
+                    "percentile": "0.617130000"
                 },
                 "location": {
-                    "lat": -5.8628857135772705,
-                    "lng": 84.13713431358337,
+                    "lat": -25.745025873184204,
+                    "lng": 64.25497913360596,
                     "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-20230",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-06-03T18:16:20.160",
+                "lastModified": "2026-06-26T14:58:43.440",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Unified Communications Manager",
+                                "versions": [
+                                    {
+                                        "version": "N/A",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-06-03T00:00:00+00:00",
+                                "id": "CVE-2026-20230",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-06-25",
+                "cisaActionDue": "2026-06-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-918"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "14.0",
+                                        "versionEndExcluding": "14su6",
+                                        "matchCriteriaId": "9E708402-3D51-4165-8A97-2B3E68116553"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
+                                        "versionStartIncluding": "14.0",
+                                        "versionEndExcluding": "14su6",
+                                        "matchCriteriaId": "321D5CC9-ECFC-42FD-AAB4-465E3BC399DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "15.0",
+                                        "versionEndIncluding": "15su4a",
+                                        "matchCriteriaId": "EFBE275E-8043-4F8B-ABE8-48774CF11648"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
+                                        "versionStartIncluding": "15.0",
+                                        "versionEndIncluding": "15su4a",
+                                        "matchCriteriaId": "06300542-9590-4FE0-8054-7BD15B2CB3BA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://denizhalil.com/2026/06/12/cve-2026-20230-cisco-unified-cm-ssrf/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20230",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.416940000",
+                    "percentile": "0.985070000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
                 }
             }
         },
@@ -584,11 +752,11 @@
                 ],
                 "epss": {
                     "epss": "0.011310000",
-                    "percentile": "0.623540000"
+                    "percentile": "0.623830000"
                 },
                 "location": {
-                    "lat": -5.862854719161987,
-                    "lng": 84.13714647293091,
+                    "lat": -25.74500584602356,
+                    "lng": 64.25499510765076,
                     "country": "Unknown"
                 }
             }
@@ -1967,8 +2135,8 @@
                     "percentile": "0.995330000"
                 },
                 "location": {
-                    "lat": -5.862846374511719,
-                    "lng": 84.13715386390686,
+                    "lat": -25.744999408721924,
+                    "lng": 64.25500082969666,
                     "country": "Unknown"
                 }
             }
@@ -3385,11 +3553,11 @@
                 ],
                 "epss": {
                     "epss": "0.022690000",
-                    "percentile": "0.808360000"
+                    "percentile": "0.808560000"
                 },
                 "location": {
-                    "lat": -5.86284065246582,
-                    "lng": 84.13715982437134,
+                    "lat": -25.744994401931763,
+                    "lng": 64.25500583648682,
                     "country": "Unknown"
                 }
             }
@@ -4765,11 +4933,11 @@
                 ],
                 "epss": {
                     "epss": "0.024520000",
-                    "percentile": "0.823410000"
+                    "percentile": "0.823570000"
                 },
                 "location": {
-                    "lat": -5.862834930419922,
-                    "lng": 84.13716554641724,
+                    "lat": -25.74498987197876,
+                    "lng": 64.25501036643982,
                     "country": "Unknown"
                 }
             }
@@ -4927,12 +5095,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.921000000",
-                    "percentile": "0.998070000"
+                    "epss": "0.881710000",
+                    "percentile": "0.997470000"
                 },
                 "location": {
-                    "lat": -5.86282753944397,
-                    "lng": 84.13717269897461,
+                    "lat": -25.7449848651886,
+                    "lng": 64.25501537322998,
                     "country": "Unknown"
                 }
             }
@@ -5119,11 +5287,11 @@
                 ],
                 "epss": {
                     "epss": "0.804250000",
-                    "percentile": "0.995710000"
+                    "percentile": "0.995720000"
                 },
                 "location": {
-                    "lat": -5.862821817398071,
-                    "lng": 84.13717842102051,
+                    "lat": -25.744980335235596,
+                    "lng": 64.25502014160156,
                     "country": "Unknown"
                 }
             }
@@ -5277,11 +5445,11 @@
                 ],
                 "epss": {
                     "epss": "0.012610000",
-                    "percentile": "0.659260000"
+                    "percentile": "0.659550000"
                 },
                 "location": {
-                    "lat": -5.862816095352173,
-                    "lng": 84.1371841430664,
+                    "lat": -25.744975328445435,
+                    "lng": 64.25502490997314,
                     "country": "Unknown"
                 }
             }
@@ -6951,7 +7119,7 @@
                 ],
                 "epss": {
                     "epss": "0.076830000",
-                    "percentile": "0.938310000"
+                    "percentile": "0.938370000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7098,7 +7266,7 @@
                 ],
                 "epss": {
                     "epss": "0.897930000",
-                    "percentile": "0.997740000"
+                    "percentile": "0.997750000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -7439,7 +7607,7 @@
                 ],
                 "epss": {
                     "epss": "0.016540000",
-                    "percentile": "0.735960000"
+                    "percentile": "0.736180000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -8186,11 +8354,11 @@
                 ],
                 "epss": {
                     "epss": "0.008360000",
-                    "percentile": "0.530890000"
+                    "percentile": "0.531280000"
                 },
                 "location": {
-                    "lat": -5.862789869308472,
-                    "lng": 84.13721036911011,
+                    "lat": -25.744952917099,
+                    "lng": 64.255047082901,
                     "country": "Unknown"
                 }
             }
@@ -10507,7 +10675,7 @@
                 ],
                 "epss": {
                     "epss": "0.099220000",
-                    "percentile": "0.949920000"
+                    "percentile": "0.949960000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -10704,11 +10872,11 @@
                 ],
                 "epss": {
                     "epss": "0.749930000",
-                    "percentile": "0.994440000"
+                    "percentile": "0.994450000"
                 },
                 "location": {
-                    "lat": -5.862780809402466,
-                    "lng": 84.13721942901611,
+                    "lat": -25.74494504928589,
+                    "lng": 64.25505542755127,
                     "country": "Unknown"
                 }
             }
@@ -11375,8 +11543,8 @@
                     "percentile": "0.993240000"
                 },
                 "location": {
-                    "lat": -5.862776041030884,
-                    "lng": 84.1372241973877,
+                    "lat": -25.744940042495728,
+                    "lng": 64.25506043434143,
                     "country": "Unknown"
                 }
             }
@@ -11527,11 +11695,11 @@
                 ],
                 "epss": {
                     "epss": "0.106590000",
-                    "percentile": "0.952380000"
+                    "percentile": "0.952410000"
                 },
                 "location": {
-                    "lat": -5.862770318984985,
-                    "lng": 84.1372299194336,
+                    "lat": -25.744935750961304,
+                    "lng": 64.25506448745728,
                     "country": "Unknown"
                 }
             }
@@ -11733,11 +11901,11 @@
                 ],
                 "epss": {
                     "epss": "0.275460000",
-                    "percentile": "0.978250000"
+                    "percentile": "0.978270000"
                 },
                 "location": {
-                    "lat": -5.862764596939087,
-                    "lng": 84.13723564147949,
+                    "lat": -25.744930744171143,
+                    "lng": 64.25506949424744,
                     "country": "Unknown"
                 }
             }
@@ -12504,11 +12672,11 @@
                 ],
                 "epss": {
                     "epss": "0.055280000",
-                    "percentile": "0.918200000"
+                    "percentile": "0.918270000"
                 },
                 "location": {
-                    "lat": -5.862759351730347,
-                    "lng": 84.13724088668823,
+                    "lat": -25.74492621421814,
+                    "lng": 64.25507378578186,
                     "country": "Unknown"
                 }
             }
@@ -36711,7 +36879,7 @@
             ]
         }
     ],
-    "last_updated": "2026-06-27T13:10:34.583824",
+    "last_updated": "2026-06-28T13:16:14.906133",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
