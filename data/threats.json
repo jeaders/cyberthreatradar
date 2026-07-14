@@ -2,6 +2,288 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2008-4128",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2008-09-18T20:00:00.530",
+                "lastModified": "2026-07-14T05:16:15.780",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Multiple cross-site request forgery (CSRF) vulnerabilities in the HTTP Administration component in Cisco IOS 12.4 on the 871 Integrated Services Router allow remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.  NOTE: some of these details are obtained from third party information."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad m\u00faltiple de falsificaci\u00f3n de petici\u00f3n en sitios cruzados - CSRF en el componente de administraci\u00f3n HTTP en el IOS Cisco 12.4 en el Router de Servicios Integrados 871, que permite a los atacantes remotos ejecutar arbitrariamente comandos a trav\u00e9s de(1) ciertos comandos que \"muestran lo privilegios\" en /level/15/exec/- URI, y (2) ciertos comandos \"alias exec\" en /level/15/exec/-/configure/http URI. NOTA: algunos de estos detalles fueron obtenidos de informaci\u00f3n de terceros."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "n/a",
+                                "product": "n/a",
+                                "versions": [
+                                    {
+                                        "version": "n/a",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+                                "baseScore": 4.3,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "baseScore": 9.3,
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE"
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10.0,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-13T00:00:00+00:00",
+                                "id": "CVE-2008-4128",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-13",
+                "cisaActionDue": "2026-07-16",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco IOS Cross-Site Request Forgery Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-352"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-352"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:ios:12.4:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9D4D8C72-E7BB-40BF-9AE5-622794D63E09"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:cisco:871_integrated_services_router:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F1A300FE-D6D3-41AC-9792-4D0E28621F72"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "http://jbrownsec.blogspot.com/2008/09/cisco-0day-released.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/31218",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Broken Link",
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/45226",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.exploit-db.com/exploits/6476",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.exploit-db.com/exploits/6477",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "http://jbrownsec.blogspot.com/2008/09/cisco-0day-released.html",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "http://www.securityfocus.com/bid/31218",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Broken Link",
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/45226",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.exploit-db.com/exploits/6476",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://www.exploit-db.com/exploits/6477",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory",
+                            "VDB Entry"
+                        ]
+                    },
+                    {
+                        "url": "https://media.defense.gov/2026/Jul/09/2003959498/-1/-1/1/CSA_IMPROVE_ROUTER_HYGIENE.PDF",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2008-4128",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisco.com/c/en/us/obsolete/ios-nx-os-software/cisco-ios-software-releases-12-4-mainline.html",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Product"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.120360000",
+                    "percentile": "0.956490000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-56291",
                 "sourceIdentifier": "security@joomla.org",
                 "published": "2026-07-09T11:16:40.990",
@@ -185,8 +467,8 @@
                     "percentile": "0.534900000"
                 },
                 "location": {
-                    "lat": 24.70241403579712,
-                    "lng": 114.70242023468018,
+                    "lat": -9.474397659301758,
+                    "lng": -99.4743926525116,
                     "country": "Unknown"
                 }
             }
@@ -415,8 +697,8 @@
                     "percentile": "0.713790000"
                 },
                 "location": {
-                    "lat": 24.702431678771973,
-                    "lng": 114.70243239402771,
+                    "lat": -9.474386930465698,
+                    "lng": -99.47438597679138,
                     "country": "Unknown"
                 }
             }
@@ -629,8 +911,8 @@
                     "percentile": "0.724730000"
                 },
                 "location": {
-                    "lat": 24.702441453933716,
-                    "lng": 114.7024416923523,
+                    "lat": -9.47438097000122,
+                    "lng": -99.47438073158264,
                     "country": "Unknown"
                 }
             }
@@ -800,8 +1082,8 @@
                     "percentile": "0.426860000"
                 },
                 "location": {
-                    "lat": 24.702449083328247,
-                    "lng": 114.70244932174683,
+                    "lat": -9.474376678466797,
+                    "lng": -99.47437644004822,
                     "country": "Unknown"
                 }
             }
@@ -1009,8 +1291,8 @@
                     "percentile": "0.853840000"
                 },
                 "location": {
-                    "lat": 24.702455282211304,
-                    "lng": 114.70245552062988,
+                    "lat": -9.474372625350952,
+                    "lng": -99.47437238693237,
                     "country": "Unknown"
                 }
             }
@@ -1701,8 +1983,8 @@
                     "percentile": "0.634180000"
                 },
                 "location": {
-                    "lat": 24.702476739883423,
-                    "lng": 114.70247673988342,
+                    "lat": -9.474359273910522,
+                    "lng": -99.47435927391052,
                     "country": "Unknown"
                 }
             }
@@ -2072,8 +2354,8 @@
                     "percentile": "0.658500000"
                 },
                 "location": {
-                    "lat": 24.7024827003479,
-                    "lng": 114.7024827003479,
+                    "lat": -9.474355220794678,
+                    "lng": -99.4743549823761,
                     "country": "Unknown"
                 }
             }
@@ -2533,8 +2815,8 @@
                     "percentile": "0.551310000"
                 },
                 "location": {
-                    "lat": 24.70249581336975,
-                    "lng": 114.70249605178833,
+                    "lat": -9.474348306655884,
+                    "lng": -99.4743480682373,
                     "country": "Unknown"
                 }
             }
@@ -3913,8 +4195,8 @@
                     "percentile": "0.995380000"
                 },
                 "location": {
-                    "lat": 24.702502250671387,
-                    "lng": 114.70250225067139,
+                    "lat": -9.474344491958618,
+                    "lng": -99.47434425354004,
                     "country": "Unknown"
                 }
             }
@@ -5334,8 +5616,8 @@
                     "percentile": "0.810150000"
                 },
                 "location": {
-                    "lat": 24.702508211135864,
-                    "lng": 114.70250821113586,
+                    "lat": -9.474340200424194,
+                    "lng": -99.4743402004242,
                     "country": "Unknown"
                 }
             }
@@ -6714,8 +6996,8 @@
                     "percentile": "0.825070000"
                 },
                 "location": {
-                    "lat": 24.702514171600342,
-                    "lng": 114.70251417160034,
+                    "lat": -9.474336624145508,
+                    "lng": -99.47433614730835,
                     "country": "Unknown"
                 }
             }
@@ -6877,8 +7159,8 @@
                     "percentile": "0.997500000"
                 },
                 "location": {
-                    "lat": 24.702521085739136,
-                    "lng": 114.70252108573914,
+                    "lat": -9.474332094192505,
+                    "lng": -99.4743320941925,
                     "country": "Unknown"
                 }
             }
@@ -7068,8 +7350,8 @@
                     "percentile": "0.995760000"
                 },
                 "location": {
-                    "lat": 24.702527284622192,
-                    "lng": 114.70252752304077,
+                    "lat": -9.47432804107666,
+                    "lng": -99.47432804107666,
                     "country": "Unknown"
                 }
             }
@@ -7226,8 +7508,8 @@
                     "percentile": "0.662040000"
                 },
                 "location": {
-                    "lat": 24.702533960342407,
-                    "lng": 114.70253396034241,
+                    "lat": -9.474324226379395,
+                    "lng": -99.47432398796082,
                     "country": "Unknown"
                 }
             }
@@ -9052,176 +9334,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-10520",
-                "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                "published": "2026-06-09T16:16:35.700",
-                "lastModified": "2026-06-17T10:12:16.930",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An OS Command Injection vulnerability\u00a0in Ivanti\u00a0Sentry before\u00a0the\u00a0R10.5.2, R10.6.2 and R10.7.1\u00a0versions\u00a0allows\u00a0a remote unauthenticated user to achieve root-level remote code execution"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                        "affectedData": [
-                            {
-                                "vendor": "ivanti",
-                                "product": "Sentry",
-                                "defaultStatus": "affected",
-                                "versions": [
-                                    {
-                                        "version": "R10.5.2",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "R10.6.2",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "R10.7.1",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-09T00:00:00+00:00",
-                                "id": "CVE-2026-10520",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-11",
-                "cisaActionDue": "2026-06-14",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Ivanti Sentry OS Command Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-78"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ivanti:standalone_sentry:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.5.2",
-                                        "matchCriteriaId": "C33107C3-2CB4-495C-ACB2-F1440ADAA2B0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ivanti:standalone_sentry:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.6.0",
-                                        "versionEndExcluding": "10.6.2",
-                                        "matchCriteriaId": "F5579D89-84ED-45BA-922F-B84DC5E3EE93"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ivanti:standalone_sentry:10.7.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7F16798C-197D-4CED-BCD1-9C93A28D29D2"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US",
-                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/watchtowrlabs/watchTowr-vs-Ivanti-Sentry-RCE-CVE-2026-10520-CVE-2026-10523",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-10520",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.990410000",
-                    "percentile": "0.999270000"
-                },
-                "location": {
-                    "lat": 40.5247,
-                    "lng": -111.8638,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2008-4128",
+            "vendorProject": "Cisco",
+            "product": "IOS",
+            "vulnerabilityName": "Cisco IOS Cross-Site Request Forgery Vulnerability",
+            "dateAdded": "2026-07-13",
+            "shortDescription": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-16",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.cisco.com/c/en/us/obsolete/ios-nx-os-software/cisco-ios-software-releases-12-4-mainline.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
+            "cwes": [
+                "CWE-352"
+            ]
+        },
         {
             "cveID": "CVE-2026-56291",
             "vendorProject": "Balbooa",
@@ -33538,7 +33668,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-13T14:05:06.020236",
+    "last_updated": "2026-07-14T13:07:36.485683",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
