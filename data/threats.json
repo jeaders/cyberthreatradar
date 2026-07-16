@@ -2,10 +2,330 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-46817",
+                "sourceIdentifier": "secalert_us@oracle.com",
+                "published": "2026-05-28T21:16:31.503",
+                "lastModified": "2026-07-16T05:16:20.290",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Vulnerability in the Oracle Payments product of Oracle E-Business Suite (component: File Transmission).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Payments.  Successful attacks of this vulnerability can result in takeover of Oracle Payments. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "secalert_us@oracle.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Oracle Corporation",
+                                "product": "Oracle Payments",
+                                "versions": [
+                                    {
+                                        "version": "12.2.3",
+                                        "lessThanOrEqual": "12.2.15",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secalert_us@oracle.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-15T00:00:00+00:00",
+                                "id": "CVE-2026-46817",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-15",
+                "cisaActionDue": "2026-07-18",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-269"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-287"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:oracle:e-business_suite:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "12.2.3",
+                                        "versionEndIncluding": "12.2.15",
+                                        "matchCriteriaId": "6F291BF4-E862-47A3-8BFC-C7949CD5AC93"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.oracle.com/security-alerts/cspumay2026.html",
+                        "source": "secalert_us@oracle.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-46817",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006770000",
+                    "percentile": "0.481110000"
+                },
+                "location": {
+                    "lat": 37.5295,
+                    "lng": -122.253,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2023-4346",
+                "sourceIdentifier": "ics-cert@hq.dhs.gov",
+                "published": "2023-08-29T20:15:10.300",
+                "lastModified": "2026-07-16T05:16:16.603",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "\nKNX devices that use KNX Connection Authorization and support Option 1 are, depending on the implementation, vulnerable to being locked and users being unable to reset them to gain access to the device. The BCU key feature on the devices can be used to create a password for the device, but this password can often not be reset without entering the current password. If the device is configured to interface with a network, an attacker with access to that network could interface with the KNX installation, purge all devices without additional security options enabled, and set a BCU key, locking the device. Even if a device is not connected to a network, an attacker with physical access to the device could also exploit this vulnerability in the same way. \n\n"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Los dispositivos KNX que utilizan la autorizaci\u00f3n de conexi\u00f3n KNX y admiten la Opci\u00f3n 1 son, seg\u00fan la implementaci\u00f3n, vulnerables a ser bloqueados y los usuarios no pueden restablecerlos para obtener acceso al dispositivo. La funci\u00f3n de clave BCU en los dispositivos se puede usar para crear una contrase\u00f1a para el dispositivo, pero esta contrase\u00f1a a menudo no se puede restablecer sin ingresar la contrase\u00f1a actual. Si el dispositivo est\u00e1 configurado para interactuar con una red, un atacante con acceso a esa red podr\u00eda interactuar con la instalaci\u00f3n KNX, purgar todos los dispositivos sin opciones de seguridad adicionales habilitadas y configurar una clave BCU, bloqueando el dispositivo. Incluso si un dispositivo no est\u00e1 conectado a una red, un atacante con acceso f\u00edsico al dispositivo tambi\u00e9n podr\u00eda aprovechar esta vulnerabilidad de la misma manera.\n"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "ics-cert@hq.dhs.gov",
+                        "affectedData": [
+                            {
+                                "vendor": "KNX Association",
+                                "product": "KNX Protocol Connection Authorization Option 1",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "ics-cert@hq.dhs.gov",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-15T00:00:00+00:00",
+                                "id": "CVE-2023-4346",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-15",
+                "cisaActionDue": "2026-07-29",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "ics-cert@hq.dhs.gov",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-645"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:knx:connection_authorization:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F328E1CB-8666-4D06-B2BC-9532454AF906"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-236-01",
+                        "source": "ics-cert@hq.dhs.gov",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-236-01",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-4346",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.004830000",
+                    "percentile": "0.384380000"
+                },
+                "location": {
+                    "lat": 26.872670650482178,
+                    "lng": -63.12732529640198,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-56155",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-07-14T17:17:09.763",
-                "lastModified": "2026-07-15T05:17:16.027",
+                "lastModified": "2026-07-15T14:18:24.010",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -245,7 +565,7 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-07-09T00:00:00+00:00",
+                                "timestamp": "2026-07-15T03:55:53.880960Z",
                                 "id": "CVE-2026-56155",
                                 "options": [
                                     {
@@ -366,6 +686,10 @@
                         ]
                     }
                 ],
+                "epss": {
+                    "epss": "0.003790000",
+                    "percentile": "0.301190000"
+                },
                 "location": {
                     "lat": 47.674,
                     "lng": -122.1215,
@@ -565,6 +889,10 @@
                         ]
                     }
                 ],
+                "epss": {
+                    "epss": "0.070470000",
+                    "percentile": "0.934650000"
+                },
                 "location": {
                     "lat": 47.674,
                     "lng": -122.1215,
@@ -577,8 +905,8 @@
                 "id": "CVE-2026-15409",
                 "sourceIdentifier": "PSIRT@sonicwall.com",
                 "published": "2026-07-14T20:16:56.783",
-                "lastModified": "2026-07-15T12:21:45.980",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-07-16T05:16:18.293",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -646,7 +974,7 @@
                                 "id": "CVE-2026-15409",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -677,19 +1005,187 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7F861049-5B88-4E18-A0E7-D1E2BC7A4342"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E4A6CA48-E2D9-4F18-8FC8-B1EE7F51789C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EBCE7761-8416-4942-B0BD-426EFC73B57C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CE23BD37-4112-407F-9E34-04CB5A4DA996"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "95E3313E-0647-40ED-9848-5AC01188A84F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "75F6B9CE-73E4-42BE-9CE1-FD79255CDD0B"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55CD7766-9F2D-450D-A878-AA1522E8FF68"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EAF12D10-FA8F-471E-B008-68E0E29089C6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "79920402-165D-4D81-BFD2-9F679A48671A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6842E4D7-BEDA-41FB-AEC3-CEB3692374C2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6AF4557F-ABAF-4795-915A-695383F64EEB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9459507A-A2C8-400D-8669-E8ADBDE61DE0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "571C9CA1-F660-4479-9E91-B3B1714A2090"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "58706C99-B77F-4AE5-BD45-EBA65DEE2485"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9E698DFA-1684-43E3-9964-0E207A7A2CC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F2F44543-2404-4CDF-9D2F-1B851660F5D5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1E14F40F-4AA1-42B4-998E-AC965FBBE519"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "43197E99-0500-4971-8A66-4E70F8138289"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "653B5F4D-7417-4A85-B385-46157A1540A6"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008",
-                        "source": "PSIRT@sonicwall.com"
+                        "source": "PSIRT@sonicwall.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-15409",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
+                "epss": {
+                    "epss": "0.014040000",
+                    "percentile": "0.694830000"
+                },
                 "location": {
-                    "lat": 20.029954195022583,
-                    "lng": 170.0299587249756,
+                    "lat": 26.87268376350403,
+                    "lng": -63.12731575965881,
                     "country": "Unknown"
                 }
             }
@@ -699,8 +1195,8 @@
                 "id": "CVE-2026-15410",
                 "sourceIdentifier": "PSIRT@sonicwall.com",
                 "published": "2026-07-14T20:16:56.903",
-                "lastModified": "2026-07-15T12:21:45.980",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-07-16T05:16:18.470",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -768,7 +1264,7 @@
                                 "id": "CVE-2026-15410",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -799,19 +1295,187 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7F861049-5B88-4E18-A0E7-D1E2BC7A4342"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E4A6CA48-E2D9-4F18-8FC8-B1EE7F51789C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EBCE7761-8416-4942-B0BD-426EFC73B57C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CE23BD37-4112-407F-9E34-04CB5A4DA996"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "95E3313E-0647-40ED-9848-5AC01188A84F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "75F6B9CE-73E4-42BE-9CE1-FD79255CDD0B"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55CD7766-9F2D-450D-A878-AA1522E8FF68"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EAF12D10-FA8F-471E-B008-68E0E29089C6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "79920402-165D-4D81-BFD2-9F679A48671A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6842E4D7-BEDA-41FB-AEC3-CEB3692374C2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6AF4557F-ABAF-4795-915A-695383F64EEB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9459507A-A2C8-400D-8669-E8ADBDE61DE0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03245:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "571C9CA1-F660-4479-9E91-B3B1714A2090"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03387:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "58706C99-B77F-4AE5-BD45-EBA65DEE2485"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03434:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9E698DFA-1684-43E3-9964-0E207A7A2CC1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02283:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F2F44543-2404-4CDF-9D2F-1B851660F5D5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02624:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1E14F40F-4AA1-42B4-998E-AC965FBBE519"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02800:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "43197E99-0500-4971-8A66-4E70F8138289"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "653B5F4D-7417-4A85-B385-46157A1540A6"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008",
-                        "source": "PSIRT@sonicwall.com"
+                        "source": "PSIRT@sonicwall.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-15410",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
+                "epss": {
+                    "epss": "0.016470000",
+                    "percentile": "0.738010000"
+                },
                 "location": {
-                    "lat": 20.029962301254272,
-                    "lng": 170.02996301651,
+                    "lat": 26.872687101364136,
+                    "lng": -63.127312660217285,
                     "country": "Unknown"
                 }
             }
@@ -1089,7 +1753,7 @@
                 ],
                 "epss": {
                     "epss": "0.238570000",
-                    "percentile": "0.975650000"
+                    "percentile": "0.975710000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1280,11 +1944,11 @@
                 ],
                 "epss": {
                     "epss": "0.008360000",
-                    "percentile": "0.535050000"
+                    "percentile": "0.535970000"
                 },
                 "location": {
-                    "lat": 20.029972791671753,
-                    "lng": 170.02997303009033,
+                    "lat": 26.872692584991455,
+                    "lng": -63.127307176589966,
                     "country": "Unknown"
                 }
             }
@@ -1510,11 +2174,11 @@
                 ],
                 "epss": {
                     "epss": "0.015050000",
-                    "percentile": "0.713850000"
+                    "percentile": "0.714510000"
                 },
                 "location": {
-                    "lat": 20.029977083206177,
-                    "lng": 170.02997732162476,
+                    "lat": 26.872695446014404,
+                    "lng": -63.12730407714844,
                     "country": "Unknown"
                 }
             }
@@ -1724,11 +2388,11 @@
                 ],
                 "epss": {
                     "epss": "0.015690000",
-                    "percentile": "0.724840000"
+                    "percentile": "0.725470000"
                 },
                 "location": {
-                    "lat": 20.02998113632202,
-                    "lng": 170.0299813747406,
+                    "lat": 26.872698068618774,
+                    "lng": -63.12730169296265,
                     "country": "Unknown"
                 }
             }
@@ -1895,11 +2559,11 @@
                 ],
                 "epss": {
                     "epss": "0.005600000",
-                    "percentile": "0.426950000"
+                    "percentile": "0.427830000"
                 },
                 "location": {
-                    "lat": 20.029986143112183,
-                    "lng": 170.02998614311218,
+                    "lat": 26.872700691223145,
+                    "lng": -63.127299308776855,
                     "country": "Unknown"
                 }
             }
@@ -2104,11 +2768,11 @@
                 ],
                 "epss": {
                     "epss": "0.029120000",
-                    "percentile": "0.853900000"
+                    "percentile": "0.854260000"
                 },
                 "location": {
-                    "lat": 20.02998995780945,
-                    "lng": 170.02999019622803,
+                    "lat": 26.872703075408936,
+                    "lng": -63.127296686172485,
                     "country": "Unknown"
                 }
             }
@@ -2394,7 +3058,7 @@
                 ],
                 "epss": {
                     "epss": "0.285830000",
-                    "percentile": "0.979100000"
+                    "percentile": "0.979160000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -2577,7 +3241,7 @@
                 ],
                 "epss": {
                     "epss": "0.032190000",
-                    "percentile": "0.867440000"
+                    "percentile": "0.867770000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2796,11 +3460,11 @@
                 ],
                 "epss": {
                     "epss": "0.011600000",
-                    "percentile": "0.634290000"
+                    "percentile": "0.635170000"
                 },
                 "location": {
-                    "lat": 20.030002117156982,
-                    "lng": 170.03000211715698,
+                    "lat": 26.87270998954773,
+                    "lng": -63.12728977203369,
                     "country": "Unknown"
                 }
             }
@@ -3167,11 +3831,11 @@
                 ],
                 "epss": {
                     "epss": "0.012470000",
-                    "percentile": "0.658550000"
+                    "percentile": "0.659340000"
                 },
                 "location": {
-                    "lat": 20.03000545501709,
-                    "lng": 170.03000569343567,
+                    "lat": 26.87271213531494,
+                    "lng": -63.12728786468506,
                     "country": "Unknown"
                 }
             }
@@ -3420,7 +4084,7 @@
                 ],
                 "epss": {
                     "epss": "0.416940000",
-                    "percentile": "0.985240000"
+                    "percentile": "0.985280000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3628,11 +4292,11 @@
                 ],
                 "epss": {
                     "epss": "0.008890000",
-                    "percentile": "0.551460000"
+                    "percentile": "0.552430000"
                 },
                 "location": {
-                    "lat": 20.03001308441162,
-                    "lng": 170.03001308441162,
+                    "lat": 26.872716426849365,
+                    "lng": -63.12728309631348,
                     "country": "Unknown"
                 }
             }
@@ -5008,11 +5672,11 @@
                 ],
                 "epss": {
                     "epss": "0.785550000",
-                    "percentile": "0.995380000"
+                    "percentile": "0.995390000"
                 },
                 "location": {
-                    "lat": 20.030017137527466,
-                    "lng": 170.03001713752747,
+                    "lat": 26.872719049453735,
+                    "lng": -63.127280712127686,
                     "country": "Unknown"
                 }
             }
@@ -6429,1560 +7093,49 @@
                 ],
                 "epss": {
                     "epss": "0.022690000",
-                    "percentile": "0.810220000"
+                    "percentile": "0.810670000"
                 },
                 "location": {
-                    "lat": 20.030020236968994,
-                    "lng": 170.03002071380615,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-34908",
-                "sourceIdentifier": "support@hackerone.com",
-                "published": "2026-05-22T02:16:34.240",
-                "lastModified": "2026-06-24T14:50:41.720",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A malicious actor with access to the network could exploit an Improper Access Control vulnerability found in UniFi OS devices to make unauthorized changes to the system."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "support@hackerone.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UniFi OS Server",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.0.8",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDM",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDM-Pro",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDM-SE",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDM-Pro-Max",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDM-Beast",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.11",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "EFG",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDW",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDR",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDR7",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UDR-5G",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "Express 7",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNVR",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNVR-Pro",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNVR-Instant",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNVR-G2",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNVR-G2-Pro",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "ENVR",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "ENVR-Core",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNAS-2",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.10",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNAS-4",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.10",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNAS-Pro",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.10",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNAS-Pro-4",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.10",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UNAS-Pro-8",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.10",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCKP",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCK",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCK-Enterprise",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCG-Ultra",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCG-Max",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCG-Fiber",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Ubiquiti Inc",
-                                "product": "UCG-Industrial",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "5.1.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "support@hackerone.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-05-22T00:00:00+00:00",
-                                "id": "CVE-2026-34908",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-23",
-                "cisaActionDue": "2026-06-26",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "support@hackerone.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-284"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ui:unifi_os_server:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.0.8",
-                                        "matchCriteriaId": "660F20FA-9862-4FE1-8C27-0AEAEE2F2A69"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloud_gateway_industrial_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "37D51815-9B4B-4753-9907-141E183A29AE"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloud_gateway_industrial:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ABDECBF6-CB92-4AF6-A3AB-D4AA4635B688"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_machine_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "4C302996-B127-48DD-9652-44C120351EE2"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_machine:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "33E04DDA-88A0-47C1-8AE2-2F59B1A08BAF"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_machine_pro_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "B6C4EB63-3ED5-4A5E-9C70-446159333C34"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_machine_pro:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B493983E-8632-4492-9B0A-E8E11E0E0BB2"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_machine_special_edition_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "FFDF1A5E-2127-4F22-88FE-72185E1D102D"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_machine_special_edition:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DEF52155-86F1-458A-8B7E-355B67C5C819"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_machine_pro_max_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "131427ED-219F-44D7-AF4C-1EE2EBF0C0FF"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_machine_pro_max:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "60808A48-C41A-448F-97C4-B1CD8DCCB4DA"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:enterprise_fortress_gateway_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "CDD13CAB-C444-43CF-8E56-D3B3EF5208FC"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:enterprise_fortress_gateway:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8C87C188-7982-4DFF-98F1-58511360F3E3"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_wall_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "4991C6F7-E443-4CA3-8EA5-C71D1252B300"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_wall:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A9B6514E-2878-4AEE-BF1E-08B804C069FE"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_router_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "8D73F0DB-0E95-44B0-9CC0-BFEBB0582ECC"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_router:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B1FF6A5E-A223-4F57-9FFD-F2AE473B3627"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_router_7_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "9BAF5DAD-7403-4811-B2F3-490F72CB5C0D"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_router_7:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A41E5541-FC13-430C-BDCA-CC677B372D7F"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_express_7_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "56E176C6-07DB-4E14-B41C-4AC34CAAC1B7"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_express_7:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5CD0201D-D5C9-4CE7-A302-467F602D73D2"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_network_video_recorder_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "7EC49DF3-4CB0-491E-A4E9-46EE6C2CDD3C"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_network_video_recorder:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A5D7AF0C-CF50-485D-8471-9AB1AA6471CA"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_network_video_recorder_pro_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "D83F4DFB-C975-4E3C-A045-AAE24EB7C54F"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_network_video_recorder_pro:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "87FB08DA-35EA-4C27-AA5F-2B7AE25D58FA"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_network_video_recorder_instant_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "E78B7448-6777-4488-BDA9-C0514FC7BB6B"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_network_video_recorder_instant:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FC8EB74F-F32A-4A5E-B613-58F2F7BC24CB"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:enterprise_network_video_recorder_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "4FFB1B14-CFB2-45D3-AA35-FBA93A4D5606"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:enterprise_network_video_recorder:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "348BBC75-CA5B-4B38-A2CF-28313B7168F5"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloud_gateway_ultra_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "CA783309-29D0-40C6-9B4A-D961A486CBCC"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloud_gateway_ultra:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2C468BFA-A87B-4A3F-B12C-B3BCE225167C"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloud_gateway_max_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "20690D42-B607-4E40-8D87-B8715838BD1F"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloud_gateway_max:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "022225AB-7AF9-4F7A-97A2-CD8700DEA087"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloud_gateway_fiber_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "0C1DF011-B148-4706-90D9-55DB0FD9A3E2"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloud_gateway_fiber:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "01C00466-E414-4DF7-8752-93D3D77C5104"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_router_5g_max_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "8F12DAB1-E58E-4044-A799-792A3DD59642"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_router_5g_max:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EA957B87-E4D2-4B7C-AC27-200BFC44477E"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:enterprise_network_video_recorder_core_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "47600BC6-7DDF-4ABA-A0C6-1E3C6C4E67B1"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:enterprise_network_video_recorder_core:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BD22580F-1E63-48F0-BE9C-1EA9328DD539"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloud_key_plus_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "29802116-2569-4863-B830-AF6C054BCDE2"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloud_key_plus:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4C4ED829-08E6-4330-B105-DC01A3159C90"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloudkey_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "638BF6B4-4DBF-43C7-A355-3FE897029F2D"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloudkey:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A484BC77-24D3-423F-AC16-3341C3396BA1"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_cloudkey_enterprise_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "E132D457-330E-43DF-BC6D-956A9C65E9C5"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_cloudkey_enterprise:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DDD7812E-3548-4B2C-9416-DEE0985AB07C"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_network_video_recorder_g2_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "4FFBED72-FDF6-4487-B6FA-AEF0BBA7BF07"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_network_video_recorder_g2:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E1FF59AE-F5F6-4539-97EC-5157F67FD055"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_network_video_recorder_g2_pro_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.12",
-                                        "matchCriteriaId": "1B19E2F5-A96A-45E5-B625-435C5951BEB0"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_network_video_recorder_g2_pro:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "29A3E3E6-68EF-43E6-9AB3-AD52FCADE57F"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unifi_dream_machine_beast_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.11",
-                                        "matchCriteriaId": "5C1D3765-2301-4C60-BC5E-865650E214E5"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unifi_dream_machine_beast:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "82A0A6D7-4361-49AD-87E3-3FB32A958C4E"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unas_2_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.10",
-                                        "matchCriteriaId": "16AF18D8-1301-4B8D-AD23-5EF5BB2182AA"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unas_2:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5FC98765-1006-49C1-9464-92428738170A"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unas_4_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.10",
-                                        "matchCriteriaId": "522AF8E6-5095-42D0-AAC5-38DBC76536F4"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unas_4:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A68133D0-7571-4E6C-A5F5-AAD2DFE91B80"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unas_pro_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.10",
-                                        "matchCriteriaId": "3ACD7950-1346-460C-9B07-6A57103E1298"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unas_pro:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DF0AD026-E7CD-4783-8B5B-BF50CFEF8F37"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unas_pro_4_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.10",
-                                        "matchCriteriaId": "0B75FAFD-6176-4B36-85B9-9D9FB314FCF0"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unas_pro_4:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6A57444B-B60E-4AE0-A198-C85546D94126"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:ui:unas_pro_8_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.1.10",
-                                        "matchCriteriaId": "DA7EECEA-6628-4CD7-A336-78D8AEBD049A"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:ui:unas_pro_8:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "63EC6593-E65D-4287-BB47-0EC53BCA7BAB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
-                        "source": "support@hackerone.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34908",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.pwndefend.com/2026/06/09/cve-2026-34910-exploitation-itw-building-a-botnet-mirai/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.024520000",
-                    "percentile": "0.825130000"
-                },
-                "location": {
-                    "lat": 20.03002405166626,
-                    "lng": 170.03002405166626,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-20253",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-06-10T18:16:40.760",
-                "lastModified": "2026-06-19T06:17:01.950",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "In Splunk Enterprise 10.2 versions below 10.2.4 and 10 versions below 10.0.7, an unauthenticated user could create or truncate arbitrary files through a PostgreSQL sidecar service endpoint. The vulnerability exists because the PostgreSQL sidecar service endpoint lacks authentication controls, allowing any network-reachable user to invoke file operations without credentials. Splunk Enterprise versions 9.4 and earlier are not affected. If you cannot immediately upgrade to a fixed version, you can mitigate this vulnerability by disabling the PostgreSQL sidecar service."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Splunk",
-                                "product": "Splunk Enterprise",
-                                "versions": [
-                                    {
-                                        "version": "10.2",
-                                        "lessThan": "10.2.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.0",
-                                        "lessThan": "10.0.7",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-10T00:00:00+00:00",
-                                "id": "CVE-2026-20253",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-18",
-                "cisaActionDue": "2026-06-21",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:splunk:splunk:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "10.0.0",
-                                        "versionEndExcluding": "10.0.7",
-                                        "matchCriteriaId": "0C9F1DED-280E-4C76-A867-A7A8FCBD1F7A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:splunk:splunk:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "10.2.0",
-                                        "versionEndExcluding": "10.2.4",
-                                        "matchCriteriaId": "E3B992C0-AD5E-43A1-BAA3-6B11FFD5D750"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://advisory.splunk.com/advisories/SVD-2026-0603",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20253",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.881710000",
-                    "percentile": "0.997500000"
-                },
-                "location": {
-                    "lat": 20.030027151107788,
-                    "lng": 170.03002762794495,
+                    "lat": 26.872721433639526,
+                    "lng": -63.127278566360474,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-46817",
+            "vendorProject": "Oracle",
+            "product": "E-Business Suite",
+            "vulnerabilityName": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
+            "dateAdded": "2026-07-15",
+            "shortDescription": "Oracle E-Business Suite contains an improper privilege management vulnerability that allows an unauthenticated attacker with network access via HTTP to compromise Oracle Payments. Successful attacks of this vulnerability can result in takeover of Oracle Payments.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-18",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.oracle.com/security-alerts/cspumay2026.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-46817",
+            "cwes": [
+                "CWE-269",
+                "CWE-287",
+                "CWE-306"
+            ]
+        },
+        {
+            "cveID": "CVE-2023-4346",
+            "vendorProject": "KNX Association",
+            "product": "KNX Protocol Connection Authorization Option 1",
+            "vulnerabilityName": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
+            "dateAdded": "2026-07-15",
+            "shortDescription": "KNX Association KNX Protocol Connection Authorization Option 1 contains an overly restrictive account lockout mechanism vulnerability that could allow an attacker to purge all devices without additional security options enabled and set a BCU key to lock the device. ",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-29",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-236-01 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2023-4346",
+            "cwes": [
+                "CWE-645"
+            ]
+        },
         {
             "cveID": "CVE-2026-56155",
             "vendorProject": "Microsoft",
@@ -7993,7 +7146,7 @@
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-07-28",
             "knownRansomwareCampaignUse": "Unknown",
-            "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56155 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-56155",
+            "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-56155 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-56155; https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/decommission/adfs-decommission-guide",
             "cwes": [
                 "CWE-1220"
             ]
@@ -32374,7 +31527,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-15T13:12:02.269953",
+    "last_updated": "2026-07-16T13:20:11.847363",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
