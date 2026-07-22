@@ -2,6 +2,706 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-60137",
+                "sourceIdentifier": "contact@wpscan.com",
+                "published": "2026-07-17T20:17:27.790",
+                "lastModified": "2026-07-22T05:17:11.750",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "contact@wpscan.com",
+                        "affectedData": [
+                            {
+                                "vendor": "WordPress",
+                                "product": "WordPress",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "6.8.0",
+                                        "lessThan": "6.8.6",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.9.0",
+                                        "lessThan": "6.9.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.0.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "contact@wpscan.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 5.9,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 3.6
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                                "baseScore": 9.1,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.2
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-21T00:00:00+00:00",
+                                "id": "CVE-2026-60137",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-21",
+                "cisaActionDue": "2026-08-04",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "WordPress Core SQL Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.8",
+                                        "versionEndExcluding": "6.8.6",
+                                        "matchCriteriaId": "AA95FD78-D475-499E-9C1A-A2720E9E968A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.9",
+                                        "versionEndExcluding": "6.9.5",
+                                        "matchCriteriaId": "D5B37C71-893E-460E-8790-88EF786DF56E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.0.2",
+                                        "matchCriteriaId": "02352A0A-26C7-4ABC-83F6-8493C6A3FB5C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf",
+                        "source": "contact@wpscan.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
+                        "source": "contact@wpscan.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-60137",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.040260000",
+                    "percentile": "0.894740000"
+                },
+                "location": {
+                    "lat": -9.641726016998291,
+                    "lng": 20.358278036117554,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-63030",
+                "sourceIdentifier": "contact@wpscan.com",
+                "published": "2026-07-17T20:17:28.490",
+                "lastModified": "2026-07-22T05:17:11.910",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API batch endpoint route confusion issue which, combined with the author__not_in WP_Query SQL Injection (CVE-2026-60137), could allow an attacker to perform SQL Injection and achieve Remote Code Execution."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "contact@wpscan.com",
+                        "affectedData": [
+                            {
+                                "vendor": "WordPress",
+                                "product": "WordPress",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "6.9.0",
+                                        "lessThan": "6.9.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.0.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "contact@wpscan.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-21T00:00:00+00:00",
+                                "id": "CVE-2026-63030",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-21",
+                "cisaActionDue": "2026-07-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "WordPress Core Interpretation Conflict Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-436"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.9",
+                                        "versionEndExcluding": "6.9.5",
+                                        "matchCriteriaId": "D5B37C71-893E-460E-8790-88EF786DF56E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.0.2",
+                                        "matchCriteriaId": "02352A0A-26C7-4ABC-83F6-8493C6A3FB5C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q",
+                        "source": "contact@wpscan.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
+                        "source": "contact@wpscan.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-63030",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.089460000",
+                    "percentile": "0.946790000"
+                },
+                "location": {
+                    "lat": -9.641713619232178,
+                    "lng": 20.35828685760498,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-0770",
+                "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+                "published": "2026-01-23T04:16:04.063",
+                "lastModified": "2026-07-22T05:17:08.693",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Langflow exec_globals Inclusion of Functionality from Untrusted Control Sphere Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Langflow. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of the exec_globals parameter provided to the validate endpoint. The issue results from the inclusion of a resource from an untrusted control sphere. An attacker can leverage this vulnerability to execute code in the context of root. Was ZDI-CAN-27325."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Langflow exec_globals Inclusi\u00f3n de Funcionalidad desde Esfera de Control No Confiable Vulnerabilidad de Ejecuci\u00f3n Remota de C\u00f3digo. Esta vulnerabilidad permite a atacantes remotos ejecutar c\u00f3digo arbitrario en instalaciones afectadas de Langflow. La autenticaci\u00f3n no es requerida para explotar esta vulnerabilidad.\n\nLa falla espec\u00edfica existe dentro del manejo del par\u00e1metro exec_globals proporcionado al endpoint validate. El problema resulta de la inclusi\u00f3n de un recurso desde una esfera de control no confiable. Un atacante puede aprovechar esta vulnerabilidad para ejecutar c\u00f3digo en el contexto de root. Fue ZDI-CAN-27325."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "zdi-disclosures@trendmicro.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Langflow",
+                                "product": "Langflow",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "1.4.2",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "zdi-disclosures@trendmicro.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-01-23T00:00:00+00:00",
+                                "id": "CVE-2026-0770",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-21",
+                "cisaActionDue": "2026-07-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "zdi-disclosures@trendmicro.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-829"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "1.7.3",
+                                        "matchCriteriaId": "3C3221EB-E3C9-4FA9-BBC6-89DA97B5749E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-036/",
+                        "source": "zdi-disclosures@trendmicro.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0770",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.103710000",
+                    "percentile": "0.952250000"
+                },
+                "location": {
+                    "lat": -9.641708374023438,
+                    "lng": 20.35829186439514,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2021-27137",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-07-16T18:16:39.113",
+                "lastModified": "2026-07-22T05:17:07.330",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable UPnP (which is off by default, and only listens on internal interfaces by default). This occurs in ssdp_msearch (reachable by an M-SEARCH request)."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "DD-WRT",
+                                "product": "DD-WRT",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "45724",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.1,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-21T00:00:00+00:00",
+                                "id": "CVE-2021-27137",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-21",
+                "cisaActionDue": "2026-07-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-121"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:dd-wrt:dd-wrt:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "45724",
+                                        "matchCriteriaId": "69D9E341-F731-4BA7-9410-8EEBA216CBCA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://securityaffairs.com/193290/uncategorized/iot-botnet-c0xmo-adds-competitor-killing-capability.html",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://ssd-disclosure.com/ssd-advisory-dd-wrt-upnp-buffer-overflow/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://svn.dd-wrt.com/changeset/45724",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://www.bleepingcomputer.com/news/security/c0xmo-botnet-spreads-via-dd-wrt-router-flaw-kills-rival-malware/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.fortinet.com/blog/threat-research/inside-cross-platform-propagation-of-new-gafgyt-variant-c0xmo",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Exploit"
+                        ]
+                    },
+                    {
+                        "url": "https://ssd-disclosure.com/ssd-advisory-dd-wrt-upnp-buffer-overflow/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-27137",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.054470000",
+                    "percentile": "0.918610000"
+                },
+                "location": {
+                    "lat": -9.641703844070435,
+                    "lng": 20.358296394348145,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-58644",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-07-14T17:17:14.257",
@@ -175,7 +875,7 @@
                 ],
                 "epss": {
                     "epss": "0.014650000",
-                    "percentile": "0.707740000"
+                    "percentile": "0.707920000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -416,7 +1116,7 @@
                 ],
                 "epss": {
                     "epss": "0.361350000",
-                    "percentile": "0.983090000"
+                    "percentile": "0.983110000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -631,7 +1331,7 @@
                 ],
                 "epss": {
                     "epss": "0.841580000",
-                    "percentile": "0.996670000"
+                    "percentile": "0.996680000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -784,7 +1484,7 @@
                 ],
                 "epss": {
                     "epss": "0.010450000",
-                    "percentile": "0.603520000"
+                    "percentile": "0.603780000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -955,11 +1655,11 @@
                 ],
                 "epss": {
                     "epss": "0.008550000",
-                    "percentile": "0.543380000"
+                    "percentile": "0.543650000"
                 },
                 "location": {
-                    "lat": -7.4374680519104,
-                    "lng": 82.5625364780426,
+                    "lat": -9.641684770584106,
+                    "lng": 20.358315467834473,
                     "country": "Unknown"
                 }
             }
@@ -1332,7 +2032,7 @@
                 ],
                 "epss": {
                     "epss": "0.003790000",
-                    "percentile": "0.302780000"
+                    "percentile": "0.302870000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1535,7 +2235,7 @@
                 ],
                 "epss": {
                     "epss": "0.056010000",
-                    "percentile": "0.920510000"
+                    "percentile": "0.920560000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1825,11 +2525,11 @@
                 ],
                 "epss": {
                     "epss": "0.012660000",
-                    "percentile": "0.665210000"
+                    "percentile": "0.665440000"
                 },
                 "location": {
-                    "lat": -7.437449932098389,
-                    "lng": 82.56255054473877,
+                    "lat": -9.641674280166626,
+                    "lng": 20.358325958251953,
                     "country": "Unknown"
                 }
             }
@@ -2115,11 +2815,11 @@
                 ],
                 "epss": {
                     "epss": "0.014860000",
-                    "percentile": "0.711820000"
+                    "percentile": "0.712010000"
                 },
                 "location": {
-                    "lat": -7.4374449253082275,
-                    "lng": 82.56255555152893,
+                    "lat": -9.64167046546936,
+                    "lng": 20.35832977294922,
                     "country": "Unknown"
                 }
             }
@@ -2397,7 +3097,7 @@
                 ],
                 "epss": {
                     "epss": "0.238570000",
-                    "percentile": "0.975810000"
+                    "percentile": "0.975820000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2588,11 +3288,11 @@
                 ],
                 "epss": {
                     "epss": "0.086350000",
-                    "percentile": "0.945100000"
+                    "percentile": "0.945150000"
                 },
                 "location": {
-                    "lat": -7.43743634223938,
-                    "lng": 82.56256365776062,
+                    "lat": -9.641662836074829,
+                    "lng": 20.35833764076233,
                     "country": "Unknown"
                 }
             }
@@ -2818,11 +3518,11 @@
                 ],
                 "epss": {
                     "epss": "0.015050000",
-                    "percentile": "0.715350000"
+                    "percentile": "0.715530000"
                 },
                 "location": {
-                    "lat": -7.437432527542114,
-                    "lng": 82.56256771087646,
+                    "lat": -9.641658782958984,
+                    "lng": 20.358341217041016,
                     "country": "Unknown"
                 }
             }
@@ -3032,11 +3732,11 @@
                 ],
                 "epss": {
                     "epss": "0.015690000",
-                    "percentile": "0.726290000"
+                    "percentile": "0.726490000"
                 },
                 "location": {
-                    "lat": -7.437428712844849,
-                    "lng": 82.56257152557373,
+                    "lat": -9.641655206680298,
+                    "lng": 20.358344793319702,
                     "country": "Unknown"
                 }
             }
@@ -3203,11 +3903,11 @@
                 ],
                 "epss": {
                     "epss": "0.005600000",
-                    "percentile": "0.429080000"
+                    "percentile": "0.429310000"
                 },
                 "location": {
-                    "lat": -7.437424898147583,
-                    "lng": 82.56257510185242,
+                    "lat": -9.64165186882019,
+                    "lng": 20.35834836959839,
                     "country": "Unknown"
                 }
             }
@@ -3412,11 +4112,11 @@
                 ],
                 "epss": {
                     "epss": "0.029120000",
-                    "percentile": "0.854740000"
+                    "percentile": "0.854850000"
                 },
                 "location": {
-                    "lat": -7.437421083450317,
-                    "lng": 82.56257915496826,
+                    "lat": -9.641648054122925,
+                    "lng": 20.358352184295654,
                     "country": "Unknown"
                 }
             }
@@ -3702,7 +4402,7 @@
                 ],
                 "epss": {
                     "epss": "0.285830000",
-                    "percentile": "0.979260000"
+                    "percentile": "0.979270000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -3710,1035 +4410,69 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-45659",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-05-22T23:16:56.273",
-                "lastModified": "2026-07-02T12:16:47.143",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Enterprise Server 2016",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.5552.1002",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server 2019",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.10417.20128",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server Subscription Edition",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.19725.20280",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-05-26T00:00:00+00:00",
-                                "id": "CVE-2026-45659",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-01",
-                "cisaActionDue": "2026-07-04",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-502"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
-                                        "versionEndExcluding": "16.0.19725.20280",
-                                        "matchCriteriaId": "E9919927-DE08-4AE4-B9F6-2A83117EE14A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
-                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45659",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-45659",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.032190000",
-                    "percentile": "0.868240000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-48558",
-                "sourceIdentifier": "disclosure@vulncheck.com",
-                "published": "2026-06-12T18:16:35.317",
-                "lastModified": "2026-06-30T13:03:11.437",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "SimpleHelp versions 5.5.15 and prior and 6.0 pre-release versions contain an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication. No user interaction is required."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "disclosure@vulncheck.com",
-                        "affectedData": [
-                            {
-                                "vendor": "SimpleHelp",
-                                "product": "SimpleHelp",
-                                "defaultStatus": "affected",
-                                "versions": [
-                                    {
-                                        "version": "5.5.0",
-                                        "lessThan": "5.5.16",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.0",
-                                        "lessThan": "6.0 RC2",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "disclosure@vulncheck.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.5,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "PRESENT",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "disclosure@vulncheck.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-12T00:00:00+00:00",
-                                "id": "CVE-2026-48558",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-29",
-                "cisaActionDue": "2026-07-02",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "SimpleHelp Authentication Bypass Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "disclosure@vulncheck.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-347"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.5.16",
-                                        "matchCriteriaId": "60E78059-D944-49AD-B48D-0CFA8BE13598"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:simple-help:simplehelp:6.0:pre-release:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4647570F-9368-4088-9E52-F63091C74B68"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://horizon3.ai/attack-research/disclosures/cve-2026-48558-simplehelp-authentication-bypass-iocs/",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://simple-help.com/release-news",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://simple-help.com/security/simplehelp-security-update-2026-05",
-                        "source": "disclosure@vulncheck.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://blackpointcyber.com/blog/a-djinn-in-the-machine-taskweavers-node-js-intrusion-chain/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Technical Description",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48558",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.011600000",
-                    "percentile": "0.636210000"
-                },
-                "location": {
-                    "lat": -7.437409162521362,
-                    "lng": 82.56259083747864,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-12569",
-                "sourceIdentifier": "0b655efc-079c-4cb9-9e8d-164871239f4e",
-                "published": "2026-06-18T01:18:12.040",
-                "lastModified": "2026-06-30T18:16:43.113",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data.\u00a0  *  This advisory also applies to all CPS versions\n  *  The identified vulnerability also impacts Windchill and FlexPLM releases prior to 11.0 M030"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
-                        "affectedData": [
-                            {
-                                "vendor": "PTC",
-                                "product": "Windchill PDMLink",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThanOrEqual": "11.0 M030",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "11.1 M020",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "11.2.1.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.0.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.1.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.0.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1.0.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1.1.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1.3.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "PTC",
-                                "product": "FlexPLM",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThanOrEqual": "11.0 M030",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "11.1 M020",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "11.2.1.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.0.0.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.0.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.1.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.1.3.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.0.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.0.3.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:C/RE:X/U:Red",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "LOW",
-                                "subIntegrityImpact": "LOW",
-                                "subAvailabilityImpact": "LOW",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "YES",
-                                "Recovery": "USER",
-                                "valueDensity": "CONCENTRATED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "RED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-26T03:56:12.541322Z",
-                                "id": "CVE-2026-12569",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-25",
-                "cisaActionDue": "2026-06-28",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-20"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-502"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:*:*:*:*:*:*:*:*",
-                                        "versionEndIncluding": "11.0m030",
-                                        "matchCriteriaId": "9645DC27-47FD-4E68-A73F-380DE6AB9265"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:11.1m020:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1BA9771B-C606-4B0D-ADF1-E0BEA4FD5407"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:11.2.1.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AF4D5C35-1E36-4A6E-86AA-5E26F5375E84"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.0.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2A5BC13C-CBF4-4EA8-B5B7-E680BF7B22DA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.0.2.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0A7DB804-FA55-456C-8C58-7ACBDA710F45"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:12.1.3.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AABF3817-5BA7-4604-92D3-468B73EEDA75"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:13.0.2.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "33798622-E630-4F62-B675-01BFC99E73CC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:flexplm:13.0.3.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5D992EFD-F674-4217-9078-FAD2558168D5"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "11.0m030",
-                                        "matchCriteriaId": "A8E8CEE8-BECD-4D33-B14F-BA015EF0E39F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.0m030:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C456B19A-8A53-47AA-8C44-D7E4A99D73D0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.1m020:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6B33DB9C-7883-495B-ACFF-31422ED4A256"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.2.1.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "631EB791-4C82-4A73-8793-465576C47EC2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.0.2.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5AAE2484-F8D6-4842-93E3-EAA12469B800"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.1.2.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FC145374-1ABE-4067-9649-EEE6D031C139"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.0.2.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "925FF6A1-A0A0-4B0F-878A-53CE23ECF2D3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D9658DCC-7527-4BDE-BEC1-D5C43A7C7B83"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.1.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6619674F-DABA-420B-88BC-0CFDF2972309"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.2.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0FF72930-943F-4A01-BC2A-6AEACBD38908"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.3.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AD29599D-F30B-4664-A8F7-59C256ABAB61"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.ptc.com/en/support/article/CS473270",
-                        "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-12569",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.012470000",
-                    "percentile": "0.660320000"
-                },
-                "location": {
-                    "lat": -7.437405347824097,
-                    "lng": 82.56259489059448,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-20230",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-06-03T18:16:20.160",
-                "lastModified": "2026-07-01T18:15:24.060",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r\nThis vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\nNote: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\nNote: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Cisco",
-                                "product": "Cisco Unified Communications Manager",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "14",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU4a",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU1a",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13010-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13011-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13012-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13013-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13014-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13015-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13016-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1.13017-1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU3a",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14SU5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15SU4a",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-                                "baseScore": 8.6,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 4.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-03T00:00:00+00:00",
-                                "id": "CVE-2026-20230",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-06-25",
-                "cisaActionDue": "2026-06-28",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-918"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "14.0",
-                                        "versionEndExcluding": "14su6",
-                                        "matchCriteriaId": "9E708402-3D51-4165-8A97-2B3E68116553"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
-                                        "versionStartIncluding": "14.0",
-                                        "versionEndExcluding": "14su6",
-                                        "matchCriteriaId": "321D5CC9-ECFC-42FD-AAB4-465E3BC399DA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndIncluding": "15su4a",
-                                        "matchCriteriaId": "EFBE275E-8043-4F8B-ABE8-48774CF11648"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndIncluding": "15su4a",
-                                        "matchCriteriaId": "06300542-9590-4FE0-8054-7BD15B2CB3BA"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://denizhalil.com/2026/06/12/cve-2026-20230-cisco-unified-cm-ssrf/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20230",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.416940000",
-                    "percentile": "0.985360000"
-                },
-                "location": {
-                    "lat": 37.4084,
-                    "lng": -121.954,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-60137",
+            "vendorProject": "WordPress",
+            "product": "Core",
+            "vulnerabilityName": "WordPress Core SQL Injection Vulnerability",
+            "dateAdded": "2026-07-21",
+            "shortDescription": "WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-04",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+            "cwes": [
+                "CWE-89"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-63030",
+            "vendorProject": "WordPress",
+            "product": "Core",
+            "vulnerabilityName": "WordPress Core Interpretation Conflict Vulnerability",
+            "dateAdded": "2026-07-21",
+            "shortDescription": "WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-24",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+            "cwes": [
+                "CWE-436"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-0770",
+            "vendorProject": "Langflow",
+            "product": "Langflow",
+            "vulnerabilityName": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+            "dateAdded": "2026-07-21",
+            "shortDescription": "Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations. ",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-24",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://github.com/langflow-ai/langflow/releases/tag/v1.9.0 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-0770 ",
+            "cwes": [
+                "CWE-829"
+            ]
+        },
+        {
+            "cveID": "CVE-2021-27137",
+            "vendorProject": "DD-WRT",
+            "product": "DD-WRT",
+            "vulnerabilityName": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
+            "dateAdded": "2026-07-21",
+            "shortDescription": "DD-WRT contains a stack-based buffer overflow vulnerability that could allow an unauthenticated attacker to overflow an internal buffer used by UPnP and trigger a code execution vulnerability.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-24",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "This vulnerability affects a common open-source component, third-party library, proprietary implementation, or a protocol used by different products. Please check with specific vendors for information on patching status. For more information, please see: https://svn.dd-wrt.com/changeset/45724 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2021-27137",
+            "cwes": [
+                "CWE-121"
+            ]
+        },
         {
             "cveID": "CVE-2026-58644",
             "vendorProject": "Microsoft",
@@ -5353,7 +5087,7 @@
             "shortDescription": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2026-06-01",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://security.paloaltonetworks.com/CVE-2026-0257 ; https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
             "cwes": [
                 "CWE-565"
@@ -29207,7 +28941,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-21T13:16:34.403367",
+    "last_updated": "2026-07-22T13:21:35.345755",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
