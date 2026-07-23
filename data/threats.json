@@ -2,6 +2,331 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-16232",
+                "sourceIdentifier": "cve@checkpoint.com",
+                "published": "2026-07-22T14:17:15.513",
+                "lastModified": "2026-07-23T05:16:30.243",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An authentication bypass vulnerability in the Check Point SmartConsole login process allows an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges. Successful exploitation allows the attacker to modify security policies and security configurations. Remote exploitation requires internet access to the Management Server IP address and a configuration that does not restrict Trusted Clients. Check Point is aware that this vulnerability is being exploited and has affected a very small number of customers."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "affectedData": [
+                            {
+                                "vendor": "checkpoint",
+                                "product": "Quantum Security Management",
+                                "versions": [
+                                    {
+                                        "version": "R82.10 with Jumbo Hotfix Take 36 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82 with Jumbo Hotfix Take 118 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.20 with Jumbo Hotfix Take 158 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.10, R81, R80.30, R80.20, R80.10, R80, and R77.30",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "checkpoint",
+                                "product": "Multi-Domain Security Management",
+                                "versions": [
+                                    {
+                                        "version": "R82.10 with Jumbo Hotfix Take 36 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82 with Jumbo Hotfix Take 118 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.20 with Jumbo Hotfix Take 158 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.10, R81, R80.30, R80.20, R80.10, R80, and R77.30",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                                "baseScore": 9.1,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.2
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-22T00:00:00+00:00",
+                                "id": "CVE-2026-16232",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-22",
+                "cisaActionDue": "2026-07-25",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Check Point SmartConsole Improper Authentication Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-287"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.checkpoint.com/results/sk/sk185169",
+                        "source": "cve@checkpoint.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16232",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": 17.12762951850891,
+                    "lng": 167.12763381004333,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-50522",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-07-14T17:17:01.547",
+                "lastModified": "2026-07-23T05:16:36.093",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Enterprise Server 2016",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.5561.1001",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Server 2019",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.10417.20175",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Server Subscription Edition",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.19725.20434",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-13T00:00:00+00:00",
+                                "id": "CVE-2026-50522",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-22",
+                "cisaActionDue": "2026-07-25",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
+                                        "versionEndExcluding": "16.0.19725.20434",
+                                        "matchCriteriaId": "5FA63EA8-B225-4E35-A6A3-DBDECF5AC4C8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
+                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50522",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50522",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.203460000",
+                    "percentile": "0.972140000"
+                },
+                "location": {
+                    "lat": 47.674,
+                    "lng": -122.1215,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-60137",
                 "sourceIdentifier": "contact@wpscan.com",
                 "published": "2026-07-17T20:17:27.790",
@@ -185,12 +510,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.040260000",
-                    "percentile": "0.894740000"
+                    "epss": "0.203950000",
+                    "percentile": "0.972190000"
                 },
                 "location": {
-                    "lat": -9.641726016998291,
-                    "lng": 20.358278036117554,
+                    "lat": 17.12764811515808,
+                    "lng": 167.12764883041382,
                     "country": "Unknown"
                 }
             }
@@ -200,13 +525,17 @@
                 "id": "CVE-2026-63030",
                 "sourceIdentifier": "contact@wpscan.com",
                 "published": "2026-07-17T20:17:28.490",
-                "lastModified": "2026-07-22T05:17:11.910",
+                "lastModified": "2026-07-22T23:10:00.110",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
                         "value": "WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API batch endpoint route confusion issue which, combined with the author__not_in WP_Query SQL Injection (CVE-2026-60137), could allow an attacker to perform SQL Injection and achieve Remote Code Execution."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Las instancias de WordPress 6.9.x anteriores a 6.9.5 y 7.0.x anteriores 7.0.2 est\u00e1n afectadas por un problema de confusi\u00f3n en el enrutamiento del endpoint batch de la API REST que, combinado con una vulnerabilidad de inyeccci\u00f3n SQL en author__not_in en WP_Query (CVE-2026-60137), permite que un atacante realice una inyecci\u00f3n SQL y logre ejecuci\u00f3n remota de c\u00f3digo (RCE)."
                     }
                 ],
                 "affected": [
@@ -367,12 +696,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.089460000",
-                    "percentile": "0.946790000"
+                    "epss": "0.385990000",
+                    "percentile": "0.984250000"
                 },
                 "location": {
-                    "lat": -9.641713619232178,
-                    "lng": 20.35828685760498,
+                    "lat": 17.12765336036682,
+                    "lng": 167.1276535987854,
                     "country": "Unknown"
                 }
             }
@@ -510,12 +839,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.103710000",
-                    "percentile": "0.952250000"
+                    "epss": "0.545030000",
+                    "percentile": "0.989110000"
                 },
                 "location": {
-                    "lat": -9.641708374023438,
-                    "lng": 20.35829186439514,
+                    "lat": 17.127657175064087,
+                    "lng": 167.12765741348267,
                     "country": "Unknown"
                 }
             }
@@ -690,12 +1019,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.054470000",
-                    "percentile": "0.918610000"
+                    "epss": "0.108090000",
+                    "percentile": "0.953770000"
                 },
                 "location": {
-                    "lat": -9.641703844070435,
-                    "lng": 20.358296394348145,
+                    "lat": 17.12766146659851,
+                    "lng": 167.1276617050171,
                     "country": "Unknown"
                 }
             }
@@ -875,7 +1204,7 @@
                 ],
                 "epss": {
                     "epss": "0.014650000",
-                    "percentile": "0.707920000"
+                    "percentile": "0.709000000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -889,13 +1218,17 @@
                 "id": "CVE-2026-25089",
                 "sourceIdentifier": "psirt@fortinet.com",
                 "published": "2026-06-09T16:16:39.943",
-                "lastModified": "2026-07-17T05:16:38.687",
+                "lastModified": "2026-07-23T08:10:00.137",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
                         "value": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.5, FortiSandbox 4.4.0 through 4.4.8, FortiSandbox 4.2 all versions, FortiSandbox Cloud 5.0.4 through 5.0.5, FortiSandbox PaaS 5.0.4 through 5.0.5 may allow an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una neutralizaci\u00f3n inadecuada de elementos especiales utilizados en un comando de sistema operativo ('inyecci\u00f3n de comandos de sistema operativo') vulnerabilidad en Fortinet FortiSandbox 5.0.0 hasta 5.0.5, FortiSandbox 4.4.0 hasta 4.4.8, FortiSandbox 4.2 todas las versiones, FortiSandbox Cloud 5.0.4 hasta 5.0.5, FortiSandbox PaaS 5.0.4 hasta 5.0.5 puede permitir a un atacante no autenticado ejecutar comandos no autorizados a trav\u00e9s de solicitudes HTTP espec\u00edficamente dise\u00f1adas."
                     }
                 ],
                 "affected": [
@@ -1116,7 +1449,7 @@
                 ],
                 "epss": {
                     "epss": "0.361350000",
-                    "percentile": "0.983110000"
+                    "percentile": "0.983170000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -1331,7 +1664,7 @@
                 ],
                 "epss": {
                     "epss": "0.841580000",
-                    "percentile": "0.996680000"
+                    "percentile": "0.996690000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -1484,7 +1817,7 @@
                 ],
                 "epss": {
                     "epss": "0.010450000",
-                    "percentile": "0.603780000"
+                    "percentile": "0.605300000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -1655,11 +1988,11 @@
                 ],
                 "epss": {
                     "epss": "0.008550000",
-                    "percentile": "0.543650000"
+                    "percentile": "0.545440000"
                 },
                 "location": {
-                    "lat": -9.641684770584106,
-                    "lng": 20.358315467834473,
+                    "lat": 17.127684116363525,
+                    "lng": 167.12768459320068,
                     "country": "Unknown"
                 }
             }
@@ -2032,7 +2365,7 @@
                 ],
                 "epss": {
                     "epss": "0.003790000",
-                    "percentile": "0.302870000"
+                    "percentile": "0.304510000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2235,7 +2568,7 @@
                 ],
                 "epss": {
                     "epss": "0.056010000",
-                    "percentile": "0.920560000"
+                    "percentile": "0.920860000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2524,12 +2857,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012660000",
-                    "percentile": "0.665440000"
+                    "epss": "0.162710000",
+                    "percentile": "0.966150000"
                 },
                 "location": {
-                    "lat": -9.641674280166626,
-                    "lng": 20.358325958251953,
+                    "lat": 17.127696990966797,
+                    "lng": 167.12769722938538,
                     "country": "Unknown"
                 }
             }
@@ -2814,12 +3147,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.014860000",
-                    "percentile": "0.712010000"
+                    "epss": "0.182870000",
+                    "percentile": "0.969180000"
                 },
                 "location": {
-                    "lat": -9.64167046546936,
-                    "lng": 20.35832977294922,
+                    "lat": 17.127700805664062,
+                    "lng": 167.12770080566406,
                     "country": "Unknown"
                 }
             }
@@ -3097,7 +3430,7 @@
                 ],
                 "epss": {
                     "epss": "0.238570000",
-                    "percentile": "0.975820000"
+                    "percentile": "0.975910000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3288,11 +3621,11 @@
                 ],
                 "epss": {
                     "epss": "0.086350000",
-                    "percentile": "0.945150000"
+                    "percentile": "0.945350000"
                 },
                 "location": {
-                    "lat": -9.641662836074829,
-                    "lng": 20.35833764076233,
+                    "lat": 17.127708435058594,
+                    "lng": 167.1277084350586,
                     "country": "Unknown"
                 }
             }
@@ -3518,11 +3851,11 @@
                 ],
                 "epss": {
                     "epss": "0.015050000",
-                    "percentile": "0.715530000"
+                    "percentile": "0.716590000"
                 },
                 "location": {
-                    "lat": -9.641658782958984,
-                    "lng": 20.358341217041016,
+                    "lat": 17.12771201133728,
+                    "lng": 167.12771201133728,
                     "country": "Unknown"
                 }
             }
@@ -3732,11 +4065,11 @@
                 ],
                 "epss": {
                     "epss": "0.015690000",
-                    "percentile": "0.726490000"
+                    "percentile": "0.727510000"
                 },
                 "location": {
-                    "lat": -9.641655206680298,
-                    "lng": 20.358344793319702,
+                    "lat": 17.127716064453125,
+                    "lng": 167.1277163028717,
                     "country": "Unknown"
                 }
             }
@@ -3903,516 +4236,47 @@
                 ],
                 "epss": {
                     "epss": "0.005600000",
-                    "percentile": "0.429310000"
+                    "percentile": "0.431370000"
                 },
                 "location": {
-                    "lat": -9.64165186882019,
-                    "lng": 20.35834836959839,
+                    "lat": 17.127719163894653,
+                    "lng": 167.12771940231323,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-56290",
-                "sourceIdentifier": "security@joomla.org",
-                "published": "2026-06-29T15:16:42.360",
-                "lastModified": "2026-07-08T13:37:08.977",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "The Joomla extension Page Builder CK is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@joomla.org",
-                        "affectedData": [
-                            {
-                                "vendor": "joomlack.fr",
-                                "product": "JoomlaCK.fr Page Builder CK extension for Joomla",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "1.0-3.6.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security@joomla.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:Red",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "YES",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "RED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-30T00:00:00+00:00",
-                                "id": "CVE-2026-56290",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-07",
-                "cisaActionDue": "2026-07-10",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Joomlack Page Builder Improper Access Control Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@joomla.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:joomlack:page_builder_ck:*:*:*:*:*:joomla\\!:*:*",
-                                        "versionEndExcluding": "3.6.0",
-                                        "matchCriteriaId": "5181215D-DF24-47CA-B49B-23BCB55C1C60"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.joomlack.fr/",
-                        "source": "security@joomla.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.joomlack.fr/index.php/page-builder-ck/21627-nouvelle-version-de-pbck-et-joomla-3",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Issue Tracking",
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://mysites.guru/blog/pagebuilderck-unauthenticated-file-upload-rce/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-56290",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.029120000",
-                    "percentile": "0.854850000"
-                },
-                "location": {
-                    "lat": -9.641648054122925,
-                    "lng": 20.358352184295654,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-48282",
-                "sourceIdentifier": "psirt@adobe.com",
-                "published": "2026-06-30T16:16:54.533",
-                "lastModified": "2026-07-08T14:58:28.690",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@adobe.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Adobe",
-                                "product": "ColdFusion",
-                                "defaultStatus": "affected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThanOrEqual": "2023.20",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@adobe.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-30T00:00:00+00:00",
-                                "id": "CVE-2026-48282",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-07",
-                "cisaActionDue": "2026-07-10",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Adobe ColdFusion Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@adobe.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B02A37FE-5D31-4892-A3E6-156A8FE62D28"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0AA3D302-CFEE-4DFD-AB92-F53C87721BFF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "645D1B5F-2DAB-4AB8-A465-AC37FF494F95"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ED6D8996-0770-4C9F-BEA5-87EA479D40A5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4836086E-3D4A-4A07-A372-382D385CB490"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update13:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CBC19168-4184-4B59-B9C8-E98844124EED"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A60DCD92-9A5B-411C-9554-642C91D77FAE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update15:*:*:*:*:*:*",
-                                        "matchCriteriaId": "58CC65EF-60A3-4DFA-AA51-E5013F116CEA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update16:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2E3EBFB1-4488-4924-A2E2-B7E422D68345"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update17:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A683F9B2-A0DC-4AA0-BE97-9E74FA200AB1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8689F35F-9A81-45D2-B782-DBA12306BA45"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5FAA5985-4B25-46C5-8064-0713AB251704"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EB88D4FE-5496-4639-BAF2-9F29F24ABF29"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update20:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9E3884AF-7A1A-4604-B653-6694B7BD1E86"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "43E0ED98-2C1F-40B8-AF60-FEB1D85619C0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "76204873-C6E0-4202-8A03-0773270F1802"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C1A22BE9-0D47-4BA8-8BDB-9B12D7A0F7C7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E3A83642-BF14-4C37-BD94-FA76AABE8ADC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A892E1DC-F2C8-4F53-8580-A2D1BEED5A25"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DB97ADBA-C1A9-4EE0-9509-68CB12358AE5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E17C38F0-9B0F-4433-9CBD-6E3D63EA9BDC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "30779417-D4E5-4A01-BE0E-1CE1D134292A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "80D7FC6A-F264-4CB1-A18D-B091EBA47882"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E3DA0D20-93BA-4C76-A400-159853CD7277"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5BAB6F21-61F1-43AB-88BA-553CD9AD6C0E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C85288B9-5D63-49EA-828A-8DB3BB2367F6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3882A011-5A01-48E7-B5E7-5A837B1CE245"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AACCE621-3380-4144-BA1B-AA26FE96B902"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EBC62370-3FA2-4AF7-A201-4155D09051F3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D7616F34-9422-4815-806F-4484F68ED2A8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:adobe:coldfusion:2025:update9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FB078BC9-164F-46D0-99F8-086F93FF2046"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-                        "source": "psirt@adobe.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48282",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.285830000",
-                    "percentile": "0.979270000"
-                },
-                "location": {
-                    "lat": 37.3307,
-                    "lng": -121.894,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-16232",
+            "vendorProject": "Check Point",
+            "product": "SmartConsole",
+            "vulnerabilityName": "Check Point SmartConsole Improper Authentication Vulnerability",
+            "dateAdded": "2026-07-22",
+            "shortDescription": "Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-25",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://support.checkpoint.com/results/sk/sk185169/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-16232",
+            "cwes": [
+                "CWE-287"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-50522",
+            "vendorProject": "Microsoft",
+            "product": "SharePoint",
+            "vulnerabilityName": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
+            "dateAdded": "2026-07-22",
+            "shortDescription": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-25",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50522 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-50522",
+            "cwes": [
+                "CWE-502"
+            ]
+        },
         {
             "cveID": "CVE-2026-60137",
             "vendorProject": "WordPress",
@@ -28941,7 +28805,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-22T13:21:35.345755",
+    "last_updated": "2026-07-23T13:24:02.944065",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
