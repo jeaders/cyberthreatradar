@@ -2,6 +2,420 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2025-68686",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2026-02-10T16:16:09.630",
+                "lastModified": "2026-07-28T05:17:04.113",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An Exposure of Sensitive Information to an Unauthorized Actor vulnerability [CWE-200] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.1, FortiOS 7.4.0 through 7.4.6, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de Exposici\u00f3n de Informaci\u00f3n Sensible a un Actor No Autorizado [CWE-200] en Fortinet FortiOS 7.6.0 a 7.6.1, FortiOS 7.4.0 a 7.4.6, FortiOS 7.2 en todas las versiones, FortiOS 7.0 en todas las versiones, FortiOS 6.4 en todas las versiones puede permitir a un atacante remoto no autenticado eludir el parche desarrollado para el mecanismo de persistencia de enlaces simb\u00f3licos observado en algunos casos post-exploit, a trav\u00e9s de solicitudes HTTP manipuladas. Un atacante necesitar\u00eda primero haber comprometido el producto a trav\u00e9s de otra vulnerabilidad, a nivel del sistema de archivos."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@fortinet.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiOS",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:o:fortinet:fortios:7.6.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.6.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.19:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.18:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.17:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.6.0",
+                                        "lessThanOrEqual": "7.6.1",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "lessThanOrEqual": "7.4.6",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "lessThanOrEqual": "7.2.13",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThanOrEqual": "7.0.19",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.4.0",
+                                        "lessThanOrEqual": "6.4.16",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@fortinet.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 5.9,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-27T00:00:00+00:00",
+                                "id": "CVE-2025-68686",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-27",
+                "cisaActionDue": "2026-08-10",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@fortinet.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-200"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.4.0",
+                                        "versionEndExcluding": "7.4.7",
+                                        "matchCriteriaId": "74C354FE-3415-4844-A89C-A163BC265D71"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndExcluding": "7.6.2",
+                                        "matchCriteriaId": "8563B77B-03AB-4ED2-BE70-DCF636FE0B60"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-934",
+                        "source": "psirt@fortinet.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-68686",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.004770000",
+                    "percentile": "0.384950000"
+                },
+                "location": {
+                    "lat": 37.3752,
+                    "lng": -122.0297,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-16812",
+                "sourceIdentifier": "psirt@arista.com",
+                "published": "2026-07-27T16:17:03.640",
+                "lastModified": "2026-07-28T12:19:30.560",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\n\n\n\nThis functionality was intended to be for internal use only and is not intended to be remotely accessible.\n\n\n\n\nHosted and Dedicated versions of VCO have already been patched in advance of this notice going out.\n\n\n\n\nThis issue was discovered externally and is known to be actively exploited."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@arista.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Arista Networks",
+                                "product": "VeloCloud Orchestrator On-Prem",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "5.2.0",
+                                        "lessThan": "5.2.3.14",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.1.0",
+                                        "lessThan": "6.1.3.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.4.0",
+                                        "lessThan": "6.4.2.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.0.0.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "PRESENT",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-27T00:00:00+00:00",
+                                "id": "CVE-2026-16812",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-27",
+                "cisaActionDue": "2026-07-30",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@arista.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24364-security-advisory-0144",
+                        "source": "psirt@arista.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16812",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": 8.504748582839966,
+                    "lng": 158.5047528743744,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-16232",
                 "sourceIdentifier": "cve@checkpoint.com",
                 "published": "2026-07-22T14:17:15.513",
@@ -783,11 +1197,11 @@
                 ],
                 "epss": {
                     "epss": "0.126850000",
-                    "percentile": "0.958440000"
+                    "percentile": "0.958450000"
                 },
                 "location": {
-                    "lat": -14.169365406036377,
-                    "lng": 75.83063888549805,
+                    "lat": 8.504760503768921,
+                    "lng": 158.50476098060608,
                     "country": "Unknown"
                 }
             }
@@ -1165,8 +1579,8 @@
                     "percentile": "0.995270000"
                 },
                 "location": {
-                    "lat": -14.169348001480103,
-                    "lng": 75.83065271377563,
+                    "lat": 8.504770994186401,
+                    "lng": 158.50477123260498,
                     "country": "Unknown"
                 }
             }
@@ -1351,8 +1765,8 @@
                     "percentile": "0.999070000"
                 },
                 "location": {
-                    "lat": -14.16934323310852,
-                    "lng": 75.83065700531006,
+                    "lat": 8.504775524139404,
+                    "lng": 158.5047755241394,
                     "country": "Unknown"
                 }
             }
@@ -1494,8 +1908,8 @@
                     "percentile": "0.988830000"
                 },
                 "location": {
-                    "lat": -14.169339418411255,
-                    "lng": 75.83066082000732,
+                    "lat": 8.504780054092407,
+                    "lng": 158.504780292511,
                     "country": "Unknown"
                 }
             }
@@ -1674,8 +2088,8 @@
                     "percentile": "0.966560000"
                 },
                 "location": {
-                    "lat": -14.16933536529541,
-                    "lng": 75.83066487312317,
+                    "lat": 8.504785299301147,
+                    "lng": 158.50478529930115,
                     "country": "Unknown"
                 }
             }
@@ -2315,7 +2729,7 @@
                 ],
                 "epss": {
                     "epss": "0.896910000",
-                    "percentile": "0.997740000"
+                    "percentile": "0.997750000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2639,11 +3053,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.561830000"
+                    "percentile": "0.561820000"
                 },
                 "location": {
-                    "lat": -14.16931700706482,
-                    "lng": 75.83068323135376,
+                    "lat": 8.504805326461792,
+                    "lng": 158.50480556488037,
                     "country": "Unknown"
                 }
             }
@@ -3016,7 +3430,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.817720000"
+                    "percentile": "0.817700000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3219,7 +3633,7 @@
                 ],
                 "epss": {
                     "epss": "0.183950000",
-                    "percentile": "0.969300000"
+                    "percentile": "0.969320000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3512,8 +3926,8 @@
                     "percentile": "0.995390000"
                 },
                 "location": {
-                    "lat": -14.16930603981018,
-                    "lng": 75.8306941986084,
+                    "lat": 8.504817247390747,
+                    "lng": 158.50481724739075,
                     "country": "Unknown"
                 }
             }
@@ -3802,8 +4216,8 @@
                     "percentile": "0.994850000"
                 },
                 "location": {
-                    "lat": -14.169302225112915,
-                    "lng": 75.83069801330566,
+                    "lat": 8.504821300506592,
+                    "lng": 158.50482153892517,
                     "country": "Unknown"
                 }
             }
@@ -4081,7 +4495,7 @@
                 ],
                 "epss": {
                     "epss": "0.329530000",
-                    "percentile": "0.981870000"
+                    "percentile": "0.981860000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4272,11 +4686,11 @@
                 ],
                 "epss": {
                     "epss": "0.760660000",
-                    "percentile": "0.994800000"
+                    "percentile": "0.994810000"
                 },
                 "location": {
-                    "lat": -14.169295072555542,
-                    "lng": 75.83070516586304,
+                    "lat": 8.50482988357544,
+                    "lng": 158.50482988357544,
                     "country": "Unknown"
                 }
             }
@@ -4505,399 +4919,44 @@
                     "percentile": "0.976350000"
                 },
                 "location": {
-                    "lat": -14.169291496276855,
-                    "lng": 75.83070850372314,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-48908",
-                "sourceIdentifier": "security@joomla.org",
-                "published": "2026-06-20T13:16:42.080",
-                "lastModified": "2026-07-08T13:57:42.590",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in SP Page Builder for Joomla allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@joomla.org",
-                        "affectedData": [
-                            {
-                                "vendor": "joomshaper.net",
-                                "product": "SP Page Builder extension for Joomla",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "1.0.0-6.6.1",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security@joomla.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:Red",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "YES",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "RED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-07T00:00:00+00:00",
-                                "id": "CVE-2026-48908",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-07",
-                "cisaActionDue": "2026-07-10",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@joomla.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ollyo:sp_page_builder:*:*:*:*:-:joomla\\!:*:*",
-                                        "versionEndExcluding": "6.6.2",
-                                        "matchCriteriaId": "357A3AA5-76BB-4E60-AA71-CB8FB76E2221"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.joomshaper.com/page-builder",
-                        "source": "security@joomla.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://extensions.joomla.org/extension/sp-page-builder/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://mysites.guru/blog/sp-page-builder-zero-day-uploadcustomicon-rce/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48908",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.joomshaper.com/forum/question/45152",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Issue Tracking"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.881300000",
-                    "percentile": "0.997500000"
-                },
-                "location": {
-                    "lat": -14.169288158416748,
-                    "lng": 75.83071208000183,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-55255",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2026-06-23T17:17:08.050",
-                "lastModified": "2026-07-08T13:39:12.593",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.1, an Insecure Direct Object Reference (IDOR) vulnerability in /api/v1/responses endpoint allows an authenticated attacker to execute any flow belonging to another user by specifying the victim's flow ID in the request. This vulnerability is fixed in 1.9.1."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "affectedData": [
-                            {
-                                "vendor": "langflow-ai",
-                                "product": "langflow",
-                                "versions": [
-                                    {
-                                        "version": "< 1.9.1",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "security-advisories@github.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L",
-                                "baseScore": 8.4,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "LOW"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-23T00:00:00+00:00",
-                                "id": "CVE-2026-55255",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-07",
-                "cisaActionDue": "2026-07-10",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-639"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "1.9.1",
-                                        "matchCriteriaId": "E5C0C925-9B95-4B10-BACE-5BBE5A9D24C5"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/langflow-ai/langflow/commit/2c9f498d664a3c32698b57d7c5e752625291060e",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/langflow-ai/langflow/pull/12832",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Exploit",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://webflow.sysdig.com/blog/understanding-langflow-cve-2026-55255-and-why-higher-cvss-vulnerabilities-arent-always-the-most-exploited",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-55255",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.290520000",
-                    "percentile": "0.979640000"
-                },
-                "location": {
-                    "lat": -14.16928505897522,
-                    "lng": 75.83071517944336,
+                    "lat": 8.504833698272705,
+                    "lng": 158.50483393669128,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2025-68686",
+            "vendorProject": "Fortinet",
+            "product": "FortiOS",
+            "vulnerabilityName": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+            "dateAdded": "2026-07-27",
+            "shortDescription": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-10",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-25-934 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-68686",
+            "cwes": [
+                "CWE-200"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-16812",
+            "vendorProject": "Arista",
+            "product": "VeloCloud Orchestrator",
+            "vulnerabilityName": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+            "dateAdded": "2026-07-27",
+            "shortDescription": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-07-30",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24364-security-advisory-0144 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-16812",
+            "cwes": [
+                "CWE-78"
+            ]
+        },
         {
             "cveID": "CVE-2026-16232",
             "vendorProject": "Check Point",
@@ -29456,7 +29515,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-27T14:10:33.532285",
+    "last_updated": "2026-07-28T13:29:48.077607",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
