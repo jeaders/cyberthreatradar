@@ -229,8 +229,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.004770000",
-                    "percentile": "0.384950000"
+                    "epss": "0.012640000",
+                    "percentile": "0.666920000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -244,8 +244,8 @@
                 "id": "CVE-2026-16812",
                 "sourceIdentifier": "psirt@arista.com",
                 "published": "2026-07-27T16:17:03.640",
-                "lastModified": "2026-07-28T12:19:30.560",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-07-28T14:50:33.960",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -397,19 +397,68 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.2.0",
+                                        "versionEndExcluding": "5.2.3.14",
+                                        "matchCriteriaId": "F93AF860-FDF1-4061-813C-364DA582B642"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.1.0",
+                                        "versionEndExcluding": "6.1.3.4",
+                                        "matchCriteriaId": "AD5222D5-45E4-43F9-852C-898D26F8FCDF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.4.0",
+                                        "versionEndExcluding": "6.4.2.4",
+                                        "matchCriteriaId": "C099915D-2F35-4A87-8154-82985B5DA811"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:7.0.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "40BC6B76-2FB0-4D62-9F46-B36A863BDCE9"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24364-security-advisory-0144",
-                        "source": "psirt@arista.com"
+                        "source": "psirt@arista.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16812",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
+                "epss": {
+                    "epss": "0.009800000",
+                    "percentile": "0.586310000"
+                },
                 "location": {
-                    "lat": 8.504748582839966,
-                    "lng": 158.5047528743744,
+                    "lat": 29.532986402511597,
+                    "lng": -0.4670088291168213,
                     "country": "Unknown"
                 }
             }
@@ -1197,11 +1246,11 @@
                 ],
                 "epss": {
                     "epss": "0.126850000",
-                    "percentile": "0.958450000"
+                    "percentile": "0.958460000"
                 },
                 "location": {
-                    "lat": 8.504760503768921,
-                    "lng": 158.50476098060608,
+                    "lat": 29.532996892929077,
+                    "lng": -0.46700263023376465,
                     "country": "Unknown"
                 }
             }
@@ -1381,7 +1430,7 @@
                 ],
                 "epss": {
                     "epss": "0.571010000",
-                    "percentile": "0.989740000"
+                    "percentile": "0.989750000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1579,8 +1628,8 @@
                     "percentile": "0.995270000"
                 },
                 "location": {
-                    "lat": 8.504770994186401,
-                    "lng": 158.50477123260498,
+                    "lat": 29.533005714416504,
+                    "lng": -0.4669938087463379,
                     "country": "Unknown"
                 }
             }
@@ -1765,8 +1814,8 @@
                     "percentile": "0.999070000"
                 },
                 "location": {
-                    "lat": 8.504775524139404,
-                    "lng": 158.5047755241394,
+                    "lat": 29.53300976753235,
+                    "lng": -0.46698999404907227,
                     "country": "Unknown"
                 }
             }
@@ -1904,12 +1953,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.534610000",
-                    "percentile": "0.988830000"
+                    "epss": "0.562670000",
+                    "percentile": "0.989540000"
                 },
                 "location": {
-                    "lat": 8.504780054092407,
-                    "lng": 158.504780292511,
+                    "lat": 29.533013343811035,
+                    "lng": -0.46698641777038574,
                     "country": "Unknown"
                 }
             }
@@ -2085,11 +2134,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966560000"
+                    "percentile": "0.966590000"
                 },
                 "location": {
-                    "lat": 8.504785299301147,
-                    "lng": 158.50478529930115,
+                    "lat": 29.5330171585083,
+                    "lng": -0.4669826030731201,
                     "country": "Unknown"
                 }
             }
@@ -2269,7 +2318,7 @@
                 ],
                 "epss": {
                     "epss": "0.050580000",
-                    "percentile": "0.914210000"
+                    "percentile": "0.914310000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2514,7 +2563,7 @@
                 ],
                 "epss": {
                     "epss": "0.698270000",
-                    "percentile": "0.993020000"
+                    "percentile": "0.993030000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2882,7 +2931,7 @@
                 ],
                 "epss": {
                     "epss": "0.133090000",
-                    "percentile": "0.959910000"
+                    "percentile": "0.959960000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -3053,11 +3102,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.561820000"
+                    "percentile": "0.562280000"
                 },
                 "location": {
-                    "lat": 8.504805326461792,
-                    "lng": 158.50480556488037,
+                    "lat": 29.533034801483154,
+                    "lng": -0.4669651985168457,
                     "country": "Unknown"
                 }
             }
@@ -3430,7 +3479,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.817700000"
+                    "percentile": "0.817910000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3632,8 +3681,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.183950000",
-                    "percentile": "0.969320000"
+                    "epss": "0.201270000",
+                    "percentile": "0.971850000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3926,8 +3975,8 @@
                     "percentile": "0.995390000"
                 },
                 "location": {
-                    "lat": 8.504817247390747,
-                    "lng": 158.50481724739075,
+                    "lat": 29.533045053482056,
+                    "lng": -0.46695470809936523,
                     "country": "Unknown"
                 }
             }
@@ -4216,8 +4265,8 @@
                     "percentile": "0.994850000"
                 },
                 "location": {
-                    "lat": 8.504821300506592,
-                    "lng": 158.50482153892517,
+                    "lat": 29.533048629760742,
+                    "lng": -0.4669511318206787,
                     "country": "Unknown"
                 }
             }
@@ -4495,7 +4544,7 @@
                 ],
                 "epss": {
                     "epss": "0.329530000",
-                    "percentile": "0.981860000"
+                    "percentile": "0.981880000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4689,8 +4738,8 @@
                     "percentile": "0.994810000"
                 },
                 "location": {
-                    "lat": 8.50482988357544,
-                    "lng": 158.50482988357544,
+                    "lat": 29.533056020736694,
+                    "lng": -0.46694374084472656,
                     "country": "Unknown"
                 }
             }
@@ -4916,11 +4965,11 @@
                 ],
                 "epss": {
                     "epss": "0.243470000",
-                    "percentile": "0.976350000"
+                    "percentile": "0.976380000"
                 },
                 "location": {
-                    "lat": 8.504833698272705,
-                    "lng": 158.50483393669128,
+                    "lat": 29.53305983543396,
+                    "lng": -0.46694016456604004,
                     "country": "Unknown"
                 }
             }
@@ -29515,7 +29564,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-28T13:29:48.077607",
+    "last_updated": "2026-07-29T13:45:10.693404",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
