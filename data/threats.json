@@ -2,6 +2,448 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-20316",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-07-29T17:16:51.840",
+                "lastModified": "2026-07-30T13:13:12.683",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\r\n\r\nThis vulnerability is due to the presence of static user credentials for a low-privileged&nbsp;account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.&nbsp;\r\nNote:&nbsp;If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.&nbsp;&nbsp;\r\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Firewall Management Center (FMC)",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "7.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.7",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                                "baseScore": 5.3,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-29T00:00:00+00:00",
+                                "id": "CVE-2026-20316",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-07-29",
+                "cisaActionDue": "2026-08-01",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-259"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0.0",
+                                        "versionEndIncluding": "7.0.9",
+                                        "matchCriteriaId": "7DFD0173-E045-4EF0-BC97-45BBFCFA1502"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.2.0",
+                                        "versionEndIncluding": "7.2.11",
+                                        "matchCriteriaId": "9DBBB745-D7D2-4E11-ACC7-CE880B066D1E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.3.0",
+                                        "versionEndIncluding": "7.3.1.2",
+                                        "matchCriteriaId": "5CA67B3C-60F2-4373-81B6-FCA063518CB1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.4.0",
+                                        "versionEndIncluding": "7.4.7",
+                                        "matchCriteriaId": "CD49AB20-6E0A-4C1A-A775-D2EEA55D45D8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndIncluding": "7.6.5",
+                                        "matchCriteriaId": "9340872F-6A25-467A-BC63-957E1B7E817D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.7.0",
+                                        "versionEndIncluding": "7.7.12",
+                                        "matchCriteriaId": "BF37EF84-93E8-4D2F-BFEF-7754B74D1E3F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.0.0",
+                                        "versionEndIncluding": "10.0.1",
+                                        "matchCriteriaId": "7A5384FA-2700-4284-8AAD-27B8923732F3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20316",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2025-68686",
                 "sourceIdentifier": "psirt@fortinet.com",
                 "published": "2026-02-10T16:16:09.630",
@@ -230,7 +672,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.666920000"
+                    "percentile": "0.667110000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -453,12 +895,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.009800000",
-                    "percentile": "0.586310000"
+                    "epss": "0.008840000",
+                    "percentile": "0.555610000"
                 },
                 "location": {
-                    "lat": 29.532986402511597,
-                    "lng": -0.4670088291168213,
+                    "lat": 8.185506820678711,
+                    "lng": -21.814488649368286,
                     "country": "Unknown"
                 }
             }
@@ -1245,12 +1687,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.126850000",
-                    "percentile": "0.958460000"
+                    "epss": "0.699690000",
+                    "percentile": "0.993080000"
                 },
                 "location": {
-                    "lat": 29.532996892929077,
-                    "lng": -0.46700263023376465,
+                    "lat": 8.185516834259033,
+                    "lng": -21.81448245048523,
                     "country": "Unknown"
                 }
             }
@@ -1430,7 +1872,7 @@
                 ],
                 "epss": {
                     "epss": "0.571010000",
-                    "percentile": "0.989750000"
+                    "percentile": "0.989730000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1444,7 +1886,7 @@
                 "id": "CVE-2026-60137",
                 "sourceIdentifier": "contact@wpscan.com",
                 "published": "2026-07-17T20:17:27.790",
-                "lastModified": "2026-07-22T05:17:11.750",
+                "lastModified": "2026-07-29T20:17:06.270",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -1532,7 +1974,7 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-07-21T00:00:00+00:00",
+                                "timestamp": "2026-07-22T03:55:47.898130Z",
                                 "id": "CVE-2026-60137",
                                 "options": [
                                     {
@@ -1628,8 +2070,8 @@
                     "percentile": "0.995270000"
                 },
                 "location": {
-                    "lat": 29.533005714416504,
-                    "lng": -0.4669938087463379,
+                    "lat": 8.18552541732788,
+                    "lng": -21.81447434425354,
                     "country": "Unknown"
                 }
             }
@@ -1814,8 +2256,8 @@
                     "percentile": "0.999070000"
                 },
                 "location": {
-                    "lat": 29.53300976753235,
-                    "lng": -0.46698999404907227,
+                    "lat": 8.185529232025146,
+                    "lng": -21.814470291137695,
                     "country": "Unknown"
                 }
             }
@@ -1954,11 +2396,11 @@
                 ],
                 "epss": {
                     "epss": "0.562670000",
-                    "percentile": "0.989540000"
+                    "percentile": "0.989520000"
                 },
                 "location": {
-                    "lat": 29.533013343811035,
-                    "lng": -0.46698641777038574,
+                    "lat": 8.18553352355957,
+                    "lng": -21.81446623802185,
                     "country": "Unknown"
                 }
             }
@@ -2134,11 +2576,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966590000"
+                    "percentile": "0.966580000"
                 },
                 "location": {
-                    "lat": 29.5330171585083,
-                    "lng": -0.4669826030731201,
+                    "lat": 8.185537338256836,
+                    "lng": -21.814462661743164,
                     "country": "Unknown"
                 }
             }
@@ -2318,7 +2760,7 @@
                 ],
                 "epss": {
                     "epss": "0.050580000",
-                    "percentile": "0.914310000"
+                    "percentile": "0.914370000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3102,11 +3544,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.562280000"
+                    "percentile": "0.562570000"
                 },
                 "location": {
-                    "lat": 29.533034801483154,
-                    "lng": -0.4669651985168457,
+                    "lat": 8.185556173324585,
+                    "lng": -21.814443588256836,
                     "country": "Unknown"
                 }
             }
@@ -3479,7 +3921,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.817910000"
+                    "percentile": "0.818050000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3975,8 +4417,8 @@
                     "percentile": "0.995390000"
                 },
                 "location": {
-                    "lat": 29.533045053482056,
-                    "lng": -0.46695470809936523,
+                    "lat": 8.185567378997803,
+                    "lng": -21.81443214416504,
                     "country": "Unknown"
                 }
             }
@@ -4265,8 +4707,8 @@
                     "percentile": "0.994850000"
                 },
                 "location": {
-                    "lat": 29.533048629760742,
-                    "lng": -0.4669511318206787,
+                    "lat": 8.185571670532227,
+                    "lng": -21.814428329467773,
                     "country": "Unknown"
                 }
             }
@@ -4544,7 +4986,7 @@
                 ],
                 "epss": {
                     "epss": "0.329530000",
-                    "percentile": "0.981880000"
+                    "percentile": "0.981860000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4738,244 +5180,29 @@
                     "percentile": "0.994810000"
                 },
                 "location": {
-                    "lat": 29.533056020736694,
-                    "lng": -0.46694374084472656,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-48939",
-                "sourceIdentifier": "security@joomla.org",
-                "published": "2026-06-20T13:16:42.433",
-                "lastModified": "2026-07-11T05:16:34.140",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in the iCagenda extension for Joomla allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@joomla.org",
-                        "affectedData": [
-                            {
-                                "vendor": "icagenda.com",
-                                "product": "iCagenda extension for Joomla",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "3.2.1-4.0.7",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security@joomla.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:Red",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "YES",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "RED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-06-24T00:00:00+00:00",
-                                "id": "CVE-2026-48939",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-10",
-                "cisaActionDue": "2026-07-13",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@joomla.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:joomlic:icagenda:*:*:*:*:-:joomla\\!:*:*",
-                                        "versionStartIncluding": "3.2.1",
-                                        "versionEndExcluding": "3.9.15",
-                                        "matchCriteriaId": "7144E5C4-1940-44C7-8EF6-CE9260FC9ECF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:joomlic:icagenda:*:*:*:*:-:joomla\\!:*:*",
-                                        "versionStartIncluding": "4.0.0",
-                                        "versionEndExcluding": "4.0.8",
-                                        "matchCriteriaId": "D76CC345-C89F-46E7-9887-F3ADE379E733"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.icagenda.com/",
-                        "source": "security@joomla.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/Polosss/By-Poloss..-..CVE-2026-48939",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://mysites.guru/blog/icagenda-zero-day-file-upload-rce/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48939",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.icagenda.com/docs/changelog/icagenda-3-9-15",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://www.icagenda.com/docs/changelog/icagenda-4-0-8",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.243470000",
-                    "percentile": "0.976380000"
-                },
-                "location": {
-                    "lat": 29.53305983543396,
-                    "lng": -0.46694016456604004,
+                    "lat": 8.18557858467102,
+                    "lng": -21.8144211769104,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-20316",
+            "vendorProject": "Cisco",
+            "product": "Secure Firewall Management Center (FMC)",
+            "vulnerabilityName": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+            "dateAdded": "2026-07-29",
+            "shortDescription": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-01",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20316",
+            "cwes": [
+                "CWE-259"
+            ]
+        },
         {
             "cveID": "CVE-2025-68686",
             "vendorProject": "Fortinet",
@@ -29564,7 +29791,7 @@
             ]
         }
     ],
-    "last_updated": "2026-07-29T13:45:10.693404",
+    "last_updated": "2026-07-30T13:26:48.219979",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
