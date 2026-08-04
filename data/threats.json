@@ -2,6 +2,158 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-18577",
+                "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                "published": "2026-08-02T23:16:26.210",
+                "lastModified": "2026-08-04T13:06:59.180",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An incomplete patch for CVE-2026-18556 allows for authentication bypass and account takeover in N-central Versions through 2026.3.1"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "affectedData": [
+                            {
+                                "vendor": "N-able",
+                                "product": "N-central",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "2026.3",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2026.3.1.7",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:L/SI:L/SA:L/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "NONE",
+                                "vulnAvailabilityImpact": "NONE",
+                                "subConfidentialityImpact": "LOW",
+                                "subIntegrityImpact": "LOW",
+                                "subAvailabilityImpact": "LOW",
+                                "exploitMaturity": "ATTACKED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-03T00:00:00+00:00",
+                                "id": "CVE-2026-18577",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-03",
+                "cisaActionDue": "2026-08-06",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-288"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://documentation.n-able.com/N-central/Release_Notes/GA/Content/N-central_2026.3_HF1_Release_Notes.htm",
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                    },
+                    {
+                        "url": "https://status.n-able.com/2026/08/02/n-central-2026-3-hotfix-1-mitigation-for-cve-2026-18577/",
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                    },
+                    {
+                        "url": "https://www.cve.org/CVERecord?id=CVE-2026-18556",
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-18577",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.014770000",
+                    "percentile": "0.713200000"
+                },
+                "location": {
+                    "lat": -17.402033805847168,
+                    "lng": 132.5979709625244,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-20316",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-07-29T17:16:51.840",
@@ -437,7 +589,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.526380000"
+                    "percentile": "0.526510000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -676,7 +828,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.668050000"
+                    "percentile": "0.668120000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -900,11 +1052,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.556760000"
+                    "percentile": "0.556870000"
                 },
                 "location": {
-                    "lat": -26.503028392791748,
-                    "lng": 3.496975898742676,
+                    "lat": -17.402008295059204,
+                    "lng": 132.59799218177795,
                     "country": "Unknown"
                 }
             }
@@ -1736,11 +1888,11 @@
                 ],
                 "epss": {
                     "epss": "0.713910000",
-                    "percentile": "0.993530000"
+                    "percentile": "0.993540000"
                 },
                 "location": {
-                    "lat": -26.503019094467163,
-                    "lng": 3.4969818592071533,
+                    "lat": -17.402002096176147,
+                    "lng": 132.59799814224243,
                     "country": "Unknown"
                 }
             }
@@ -2115,11 +2267,11 @@
                 ],
                 "epss": {
                     "epss": "0.790290000",
-                    "percentile": "0.995580000"
+                    "percentile": "0.995590000"
                 },
                 "location": {
-                    "lat": -26.503010034561157,
-                    "lng": 3.496990203857422,
+                    "lat": -17.401992797851562,
+                    "lng": 132.59800720214844,
                     "country": "Unknown"
                 }
             }
@@ -2301,11 +2453,11 @@
                 ],
                 "epss": {
                     "epss": "0.984170000",
-                    "percentile": "0.999140000"
+                    "percentile": "0.999150000"
                 },
                 "location": {
-                    "lat": -26.503005504608154,
-                    "lng": 3.4969944953918457,
+                    "lat": -17.401988983154297,
+                    "lng": 132.59801149368286,
                     "country": "Unknown"
                 }
             }
@@ -2444,11 +2596,11 @@
                 ],
                 "epss": {
                     "epss": "0.562670000",
-                    "percentile": "0.989550000"
+                    "percentile": "0.989540000"
                 },
                 "location": {
-                    "lat": -26.50300145149231,
-                    "lng": 3.4969990253448486,
+                    "lat": -17.401983737945557,
+                    "lng": 132.59801626205444,
                     "country": "Unknown"
                 }
             }
@@ -2624,11 +2776,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966660000"
+                    "percentile": "0.966670000"
                 },
                 "location": {
-                    "lat": -26.502996683120728,
-                    "lng": 3.4970035552978516,
+                    "lat": -17.401978969573975,
+                    "lng": 132.59802103042603,
                     "country": "Unknown"
                 }
             }
@@ -2808,7 +2960,7 @@
                 ],
                 "epss": {
                     "epss": "0.059850000",
-                    "percentile": "0.925760000"
+                    "percentile": "0.925770000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3053,7 +3205,7 @@
                 ],
                 "epss": {
                     "epss": "0.698270000",
-                    "percentile": "0.993040000"
+                    "percentile": "0.993050000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -3592,11 +3744,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.563730000"
+                    "percentile": "0.563820000"
                 },
                 "location": {
-                    "lat": -26.502978563308716,
-                    "lng": 3.4970216751098633,
+                    "lat": -17.40195918083191,
+                    "lng": 132.59804105758667,
                     "country": "Unknown"
                 }
             }
@@ -3969,7 +4121,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.818600000"
+                    "percentile": "0.818630000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4465,8 +4617,8 @@
                     "percentile": "0.995400000"
                 },
                 "location": {
-                    "lat": -26.502968072891235,
-                    "lng": 3.4970321655273438,
+                    "lat": -17.401946544647217,
+                    "lng": 132.59805345535278,
                     "country": "Unknown"
                 }
             }
@@ -4755,8 +4907,8 @@
                     "percentile": "0.994870000"
                 },
                 "location": {
-                    "lat": -26.50296378135681,
-                    "lng": 3.4970362186431885,
+                    "lat": -17.401942253112793,
+                    "lng": 132.5980577468872,
                     "country": "Unknown"
                 }
             }
@@ -5034,7 +5186,7 @@
                 ],
                 "epss": {
                     "epss": "0.329530000",
-                    "percentile": "0.981910000"
+                    "percentile": "0.981920000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -5042,200 +5194,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-56291",
-                "sourceIdentifier": "security@joomla.org",
-                "published": "2026-07-09T11:16:40.990",
-                "lastModified": "2026-07-24T13:30:37.550",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Joomla Extension - balbooa.com - Unauthenticated file upload in Balbooa Forms extension < 2.4.1 - The Joomla extension Balbooa Forms is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@joomla.org",
-                        "affectedData": [
-                            {
-                                "vendor": "balbooa.com",
-                                "product": "balbooa.com Balbooa Forms extension for Joomla",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "1.0-2.4.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security@joomla.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:Red",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "YES",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "RED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-10T00:00:00+00:00",
-                                "id": "CVE-2026-56291",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-10",
-                "cisaActionDue": "2026-07-13",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@joomla.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-434"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:balbooa:forms:*:*:*:*:*:joomla\\!:*:*",
-                                        "versionEndExcluding": "2.4.1",
-                                        "matchCriteriaId": "A5149F96-A82C-4C48-B4A5-D8AD99418D47"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://mysites.guru/blog/balbooa-forms-unauthenticated-file-upload-flaw/",
-                        "source": "security@joomla.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.balbooa.com/joomla-forms",
-                        "source": "security@joomla.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-56291",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.760660000",
-                    "percentile": "0.994820000"
-                },
-                "location": {
-                    "lat": -26.502955436706543,
-                    "lng": 3.497044801712036,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-18577",
+            "vendorProject": "N-able",
+            "product": "N-central",
+            "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+            "dateAdded": "2026-08-03",
+            "shortDescription": "N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-06",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://documentation.n-able.com/N-central/Release_Notes/GA/Content/N-central_2026.3_HF1_Release_Notes.htm ; https://status.n-able.com/2026/08/02/n-central-2026-3-hotfix-1-mitigation-for-cve-2026-18577/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-18577",
+            "cwes": [
+                "CWE-288"
+            ]
+        },
         {
             "cveID": "CVE-2026-20316",
             "vendorProject": "Cisco",
@@ -5487,7 +5463,7 @@
             "shortDescription": "SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-07-17",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-15409",
             "cwes": [
                 "CWE-918"
@@ -5502,7 +5478,7 @@
             "shortDescription": "SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-07-17",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-15410",
             "cwes": [
                 "CWE-94"
@@ -29839,7 +29815,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-03T14:15:18.383396",
+    "last_updated": "2026-08-04T13:47:23.423337",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
