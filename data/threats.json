@@ -2,11 +2,1072 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-18556",
+                "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                "published": "2026-08-01T20:16:37.157",
+                "lastModified": "2026-08-05T05:16:46.967",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Authentication bypass using an alternate path or channel vulnerability in N-able N-central allows Authentication Bypass.\n\nThis issue affects N-central: through 2026.1."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "affectedData": [
+                            {
+                                "vendor": "N-able",
+                                "product": "N-central",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "2026.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "NONE",
+                                "vulnAvailabilityImpact": "NONE",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                                "baseScore": 7.4,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 5.2
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-04T00:00:00+00:00",
+                                "id": "CVE-2026-18556",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-04",
+                "cisaActionDue": "2026-08-07",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-288"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:n-able:n-central:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2026.1",
+                                        "matchCriteriaId": "4BC10DA8-8B50-4BCA-A302-810F4E3CD4CB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://uptime.n-able.com/",
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-18556",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.n-able.com/blog/n-central-security-update-august-2-2026",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.002700000",
+                    "percentile": "0.190530000"
+                },
+                "location": {
+                    "lat": -7.014225721359253,
+                    "lng": -157.01421999931335,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-34486",
+                "sourceIdentifier": "security@apache.org",
+                "published": "2026-04-09T20:16:25.063",
+                "lastModified": "2026-08-05T13:21:57.337",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Missing Encryption of Sensitive Data vulnerability in Apache Tomcat due to the\u00a0fix for CVE-2026-29146 allowing the bypass of the EncryptInterceptor.\n\nThis issue affects Apache Tomcat: 11.0.20, 10.1.53, 9.0.116.\n\nUsers are recommended to upgrade to version 11.0.21, 10.1.54 or 9.0.117, which fix the issue."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security@apache.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Apache Software Foundation",
+                                "product": "Apache Tomcat",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "11.0.20",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.1.53",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.0.116",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "affectedData": [
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 10",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux:10.2"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:10.1.49-3.el10_2",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 10",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat9",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux:10.2"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.117-2.el10_2",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 10.0 Extended Update Support",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux_eus:10.0"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:10.1.36-2.el10_0",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 10.0 Extended Update Support",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat9",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux_eus:10.0"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-6.el10_0",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 7 Extended Lifecycle Support",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/o:redhat:rhel_els:7"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "0:7.0.76-18.el7_9",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 8",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:enterprise_linux:8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-2.el8_10",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 8.8 Telecommunications Update Service",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:rhel_tus:8.8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-2.el8_8",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 8.8 Update Services for SAP Solutions",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:rhel_e4s:8.8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-2.el8_8",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 9",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:enterprise_linux:9"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.117-2.el9_8",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 9.2 Update Services for SAP Solutions",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:rhel_e4s:9.2"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-2.el9_2",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:rhel_e4s:9.4"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-2.el9_4",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 9.6 Extended Update Support",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:rhel_eus:9.6"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1:9.0.87-4.el9_6",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 7.0.0",
+                                "defaultStatus": "unaffected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:7.0"
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 7.0 on RHEL 10",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "jws7-tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:7.0::el10"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "0:11.0.21-5.redhat_00004.1.el10jws",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 7.0 on RHEL 8",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "jws7-tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:7.0::el8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "0:11.0.21-5.redhat_00004.1.el8jws",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 7.0 on RHEL 9",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "jws7-tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:7.0::el9"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "0:11.0.21-5.redhat_00004.1.el9jws",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 6",
+                                "defaultStatus": "unknown",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat6",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux:6"
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 8",
+                                "defaultStatus": "unaffected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "pki-deps:10.6/pki-servlet-engine",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux:8"
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat Enterprise Linux 9",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "pki-servlet-engine",
+                                "cpes": [
+                                    "cpe:/o:redhat:enterprise_linux:9"
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 5",
+                                "defaultStatus": "unaffected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:5"
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
+                                "product": "Red Hat JBoss Web Server 6",
+                                "defaultStatus": "unaffected",
+                                "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+                                "packageName": "tomcat",
+                                "cpes": [
+                                    "cpe:/a:redhat:jboss_enterprise_web_server:6"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        },
+                        {
+                            "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-04T00:00:00+00:00",
+                                "id": "CVE-2026-34486",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-04",
+                "cisaActionDue": "2026-08-07",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security@apache.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-311"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-807"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:apache:tomcat:9.0.116:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CC160F23-A9D6-42DA-92E6-886B1B1F48A6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:apache:tomcat:10.1.53:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0E7A0CE9-EBDF-4305-9C06-E7D4521AF422"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:apache:tomcat:11.0.20:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "64BAAE4D-2355-43D8-83E5-01CA71D5DC0B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:jboss_web_server:7.0.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F764C52A-4533-4C39-A5A2-A5E1FE20960C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux:8.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F4CFF558-3C47-480D-A2F0-BABF26042943"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux:9.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7F6FB57C-2BC7-487C-96DD-132683AEB35D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux:10.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D65C2163-CFC2-4ABB-8F4E-CB09CEBD006C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_els:7.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0460F769-D90A-4446-AC00-24F66BDBF526"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_eus:10.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "34990D09-125F-48CA-B85E-9D9F0EB4BC07"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_tus:8.8:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "22D28543-C7C5-46B0-B909-20435AF7A501"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_update_services_for_sap_solutions:8.8:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "01ED4F33-EBE7-4C04-8312-3DA580EFFB68"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_update_services_for_sap_solutions:9.2:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1FD9BF0E-7ACF-4A83-B754-6E3979ED903F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_update_services_for_sap_solutions:9.4:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "18B7F648-9A31-4EE5-A215-C860616A4AB7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_update_services_for_sap_solutions:9.6:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "554AA8CA-A930-4788-B052-497E09D48381"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://lists.apache.org/thread/9510k5p5zdvt9pkkgtyp85mvwxo2qrly",
+                        "source": "security@apache.org",
+                        "tags": [
+                            "Mailing List",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-34486-detection-script-rce-on-apache-tomcat",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.vicarius.io/vsociety/posts/cve-2026-34486-mitigation-script-rce-on-apache-tomcat",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36787",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36788",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36789",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36790",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36876",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36877",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36878",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:36879",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:37136",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:37137",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:38505",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:39188",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:39189",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/security/cve/CVE-2026-34486",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2457027",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-34486.json",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://socradar.io/blog/snowlight-government-chinese-campaign/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34486",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.426270000",
+                    "percentile": "0.985800000"
+                },
+                "location": {
+                    "lat": 33.4484,
+                    "lng": -112.074,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-9198",
+                "sourceIdentifier": "psirt@us.ibm.com",
+                "published": "2026-07-17T18:17:17.340",
+                "lastModified": "2026-08-05T05:17:15.823",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@us.ibm.com",
+                        "affectedData": [
+                            {
+                                "vendor": "IBM",
+                                "product": "Langflow OSS",
+                                "cpes": [
+                                    "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:ibm:langflow_oss:1.10.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1.0.0",
+                                        "lessThanOrEqual": "1.10.0",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@us.ibm.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-17T00:00:00+00:00",
+                                "id": "CVE-2026-9198",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-04",
+                "cisaActionDue": "2026-08-07",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "IBM Langflow Code Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@us.ibm.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.0.0",
+                                        "versionEndExcluding": "1.10.1",
+                                        "matchCriteriaId": "A32785B1-3CF7-4BD0-B6F8-1AA77D4E565B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.ibm.com/support/pages/node/7278927",
+                        "source": "psirt@us.ibm.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-9198",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.018860000",
+                    "percentile": "0.774740000"
+                },
+                "location": {
+                    "lat": -7.014206171035767,
+                    "lng": -157.01420545578003,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-18577",
                 "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
                 "published": "2026-08-02T23:16:26.210",
-                "lastModified": "2026-08-04T13:06:59.180",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-08-04T14:27:12.530",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -84,11 +1145,33 @@
                             }
                         }
                     ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.1,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 5.9
+                        }
+                    ],
                     "ssvcV203": [
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-08-03T00:00:00+00:00",
+                                "timestamp": "2026-08-04T03:56:18.454615Z",
                                 "id": "CVE-2026-18577",
                                 "options": [
                                     {
@@ -123,31 +1206,74 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:n-able:n-central:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2026.3",
+                                        "matchCriteriaId": "6CEC2750-AFFB-40A4-97E0-88BDAC106F5E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:n-able:n-central:2026.3:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EB21160B-DDC4-4F70-A703-E313DED8CAF2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://documentation.n-able.com/N-central/Release_Notes/GA/Content/N-central_2026.3_HF1_Release_Notes.htm",
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "tags": [
+                            "Patch",
+                            "Release Notes"
+                        ]
                     },
                     {
                         "url": "https://status.n-able.com/2026/08/02/n-central-2026-3-hotfix-1-mitigation-for-cve-2026-18577/",
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "tags": [
+                            "Release Notes"
+                        ]
                     },
                     {
                         "url": "https://www.cve.org/CVERecord?id=CVE-2026-18556",
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "tags": [
+                            "VDB Entry"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-18577",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.n-able.com/blog/n-central-security-update-august-2-2026",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.014770000",
-                    "percentile": "0.713200000"
+                    "epss": "0.025290000",
+                    "percentile": "0.833270000"
                 },
                 "location": {
-                    "lat": -17.402033805847168,
-                    "lng": 132.5979709625244,
+                    "lat": -7.01419997215271,
+                    "lng": -157.01419973373413,
                     "country": "Unknown"
                 }
             }
@@ -589,7 +1715,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.526510000"
+                    "percentile": "0.526680000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -828,7 +1954,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.668120000"
+                    "percentile": "0.668250000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -1052,11 +2178,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.556870000"
+                    "percentile": "0.557050000"
                 },
                 "location": {
-                    "lat": -17.402008295059204,
-                    "lng": 132.59799218177795,
+                    "lat": -7.01416015625,
+                    "lng": -157.01415967941284,
                     "country": "Unknown"
                 }
             }
@@ -1888,11 +3014,11 @@
                 ],
                 "epss": {
                     "epss": "0.713910000",
-                    "percentile": "0.993540000"
+                    "percentile": "0.993530000"
                 },
                 "location": {
-                    "lat": -17.402002096176147,
-                    "lng": 132.59799814224243,
+                    "lat": -7.014153242111206,
+                    "lng": -157.01415276527405,
                     "country": "Unknown"
                 }
             }
@@ -2270,8 +3396,8 @@
                     "percentile": "0.995590000"
                 },
                 "location": {
-                    "lat": -17.401992797851562,
-                    "lng": 132.59800720214844,
+                    "lat": -7.014141798019409,
+                    "lng": -157.01414132118225,
                     "country": "Unknown"
                 }
             }
@@ -2456,8 +3582,8 @@
                     "percentile": "0.999150000"
                 },
                 "location": {
-                    "lat": -17.401988983154297,
-                    "lng": 132.59801149368286,
+                    "lat": -7.01413631439209,
+                    "lng": -157.01413583755493,
                     "country": "Unknown"
                 }
             }
@@ -2599,8 +3725,8 @@
                     "percentile": "0.989540000"
                 },
                 "location": {
-                    "lat": -17.401983737945557,
-                    "lng": 132.59801626205444,
+                    "lat": -7.014129877090454,
+                    "lng": -157.01412963867188,
                     "country": "Unknown"
                 }
             }
@@ -2776,11 +3902,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966670000"
+                    "percentile": "0.966700000"
                 },
                 "location": {
-                    "lat": -17.401978969573975,
-                    "lng": 132.59802103042603,
+                    "lat": -7.014124631881714,
+                    "lng": -157.0141246318817,
                     "country": "Unknown"
                 }
             }
@@ -2960,7 +4086,7 @@
                 ],
                 "epss": {
                     "epss": "0.059850000",
-                    "percentile": "0.925770000"
+                    "percentile": "0.925810000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3573,7 +4699,7 @@
                 ],
                 "epss": {
                     "epss": "0.133090000",
-                    "percentile": "0.960060000"
+                    "percentile": "0.960090000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -3744,11 +4870,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.563820000"
+                    "percentile": "0.564050000"
                 },
                 "location": {
-                    "lat": -17.40195918083191,
-                    "lng": 132.59804105758667,
+                    "lat": -7.01410436630249,
+                    "lng": -157.0141043663025,
                     "country": "Unknown"
                 }
             }
@@ -4121,7 +5247,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.818630000"
+                    "percentile": "0.818710000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4324,7 +5450,7 @@
                 ],
                 "epss": {
                     "epss": "0.224390000",
-                    "percentile": "0.974580000"
+                    "percentile": "0.974590000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4332,871 +5458,54 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-15409",
-                "sourceIdentifier": "PSIRT@sonicwall.com",
-                "published": "2026-07-14T20:16:56.783",
-                "lastModified": "2026-07-16T05:16:18.293",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A Server-side request forgery (SSRF) vulnerability has been identified in the SMA1000 Appliance Work Place interface. A remote unauthenticated attacker could potentially cause the appliance to make requests to unintended location."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "PSIRT@sonicwall.com",
-                        "affectedData": [
-                            {
-                                "vendor": "SonicWall",
-                                "product": "SMA1000",
-                                "defaultStatus": "unknown",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "12.4.3-03245",
-                                        "lessThanOrEqual": "12.4.3-03434",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.5.0-02283",
-                                        "lessThanOrEqual": "12.5.0-02800",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-14T00:00:00+00:00",
-                                "id": "CVE-2026-15409",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-14",
-                "cisaActionDue": "2026-07-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "PSIRT@sonicwall.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-918"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7F861049-5B88-4E18-A0E7-D1E2BC7A4342"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E4A6CA48-E2D9-4F18-8FC8-B1EE7F51789C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EBCE7761-8416-4942-B0BD-426EFC73B57C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CE23BD37-4112-407F-9E34-04CB5A4DA996"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "95E3313E-0647-40ED-9848-5AC01188A84F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "75F6B9CE-73E4-42BE-9CE1-FD79255CDD0B"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "55CD7766-9F2D-450D-A878-AA1522E8FF68"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EAF12D10-FA8F-471E-B008-68E0E29089C6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "79920402-165D-4D81-BFD2-9F679A48671A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6842E4D7-BEDA-41FB-AEC3-CEB3692374C2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6AF4557F-ABAF-4795-915A-695383F64EEB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9459507A-A2C8-400D-8669-E8ADBDE61DE0"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "571C9CA1-F660-4479-9E91-B3B1714A2090"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "58706C99-B77F-4AE5-BD45-EBA65DEE2485"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9E698DFA-1684-43E3-9964-0E207A7A2CC1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F2F44543-2404-4CDF-9D2F-1B851660F5D5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1E14F40F-4AA1-42B4-998E-AC965FBBE519"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "43197E99-0500-4971-8A66-4E70F8138289"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "653B5F4D-7417-4A85-B385-46157A1540A6"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008",
-                        "source": "PSIRT@sonicwall.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-15409",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.784400000",
-                    "percentile": "0.995400000"
-                },
-                "location": {
-                    "lat": -17.401946544647217,
-                    "lng": 132.59805345535278,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-15410",
-                "sourceIdentifier": "PSIRT@sonicwall.com",
-                "published": "2026-07-14T20:16:56.903",
-                "lastModified": "2026-07-16T05:16:18.470",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Post-authentication improper control of generation of code ('Code Injection') vulnerability has been identified in the SMA1000 Appliance Management Console (AMC) which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "PSIRT@sonicwall.com",
-                        "affectedData": [
-                            {
-                                "vendor": "SonicWall",
-                                "product": "SMA1000",
-                                "defaultStatus": "unknown",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "12.4.3-03245",
-                                        "lessThanOrEqual": "12.4.3-03434",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "12.5.0-02283",
-                                        "lessThanOrEqual": "12.5.0-02800",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-14T00:00:00+00:00",
-                                "id": "CVE-2026-15410",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-14",
-                "cisaActionDue": "2026-07-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "PSIRT@sonicwall.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-94"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7F861049-5B88-4E18-A0E7-D1E2BC7A4342"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E4A6CA48-E2D9-4F18-8FC8-B1EE7F51789C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EBCE7761-8416-4942-B0BD-426EFC73B57C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CE23BD37-4112-407F-9E34-04CB5A4DA996"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "95E3313E-0647-40ED-9848-5AC01188A84F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "75F6B9CE-73E4-42BE-9CE1-FD79255CDD0B"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "55CD7766-9F2D-450D-A878-AA1522E8FF68"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EAF12D10-FA8F-471E-B008-68E0E29089C6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "79920402-165D-4D81-BFD2-9F679A48671A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6842E4D7-BEDA-41FB-AEC3-CEB3692374C2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6AF4557F-ABAF-4795-915A-695383F64EEB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9459507A-A2C8-400D-8669-E8ADBDE61DE0"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03245:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "571C9CA1-F660-4479-9E91-B3B1714A2090"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03387:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "58706C99-B77F-4AE5-BD45-EBA65DEE2485"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.4.3-03434:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9E698DFA-1684-43E3-9964-0E207A7A2CC1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02283:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F2F44543-2404-4CDF-9D2F-1B851660F5D5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02624:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1E14F40F-4AA1-42B4-998E-AC965FBBE519"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:12.5.0-02800:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "43197E99-0500-4971-8A66-4E70F8138289"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:sonicwall:sma8200v:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "653B5F4D-7417-4A85-B385-46157A1540A6"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008",
-                        "source": "PSIRT@sonicwall.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-15410",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.763470000",
-                    "percentile": "0.994870000"
-                },
-                "location": {
-                    "lat": -17.401942253112793,
-                    "lng": 132.5980577468872,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2008-4128",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2008-09-18T20:00:00.530",
-                "lastModified": "2026-07-14T05:16:15.780",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Multiple cross-site request forgery (CSRF) vulnerabilities in the HTTP Administration component in Cisco IOS 12.4 on the 871 Integrated Services Router allow remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.  NOTE: some of these details are obtained from third party information."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad m\u00faltiple de falsificaci\u00f3n de petici\u00f3n en sitios cruzados - CSRF en el componente de administraci\u00f3n HTTP en el IOS Cisco 12.4 en el Router de Servicios Integrados 871, que permite a los atacantes remotos ejecutar arbitrariamente comandos a trav\u00e9s de(1) ciertos comandos que \"muestran lo privilegios\" en /level/15/exec/- URI, y (2) ciertos comandos \"alias exec\" en /level/15/exec/-/configure/http URI. NOTA: algunos de estos detalles fueron obtenidos de informaci\u00f3n de terceros."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@mitre.org",
-                        "affectedData": [
-                            {
-                                "vendor": "n/a",
-                                "product": "n/a",
-                                "versions": [
-                                    {
-                                        "version": "n/a",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
-                                "baseScore": 4.3,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 1.4
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
-                                "baseScore": 9.3,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "MEDIUM",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 8.6,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": true
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-13T00:00:00+00:00",
-                                "id": "CVE-2008-4128",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-13",
-                "cisaActionDue": "2026-07-16",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Cisco IOS Cross-Site Request Forgery Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-352"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-352"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:cisco:ios:12.4:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9D4D8C72-E7BB-40BF-9AE5-622794D63E09"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:cisco:871_integrated_services_router:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F1A300FE-D6D3-41AC-9792-4D0E28621F72"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://jbrownsec.blogspot.com/2008/09/cisco-0day-released.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/31218",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Broken Link",
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/45226",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6476",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6477",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://jbrownsec.blogspot.com/2008/09/cisco-0day-released.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/31218",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/45226",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6476",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/6477",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://media.defense.gov/2026/Jul/09/2003959498/-1/-1/1/CSA_IMPROVE_ROUTER_HYGIENE.PDF",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2008-4128",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisco.com/c/en/us/obsolete/ios-nx-os-software/cisco-ios-software-releases-12-4-mainline.html",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Product"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.329530000",
-                    "percentile": "0.981920000"
-                },
-                "location": {
-                    "lat": 37.4084,
-                    "lng": -121.954,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-18556",
+            "vendorProject": "N-able",
+            "product": "N-central",
+            "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+            "dateAdded": "2026-08-04",
+            "shortDescription": "N-able N-central contains an authentication bypass using an alternate path or channel that allows for authentication bypass.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-07",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://uptime.n-able.com/ ; https://status.n-able.com/2026/08/02/n-central-2026-3-hotfix-1-mitigation-for-cve-2026-18577/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-18556",
+            "cwes": [
+                "CWE-288"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-34486",
+            "vendorProject": "Apache",
+            "product": "Tomcat",
+            "vulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+            "dateAdded": "2026-08-04",
+            "shortDescription": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-07",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://lists.apache.org/thread/9510k5p5zdvt9pkkgtyp85mvwxo2qrly ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-34486",
+            "cwes": [
+                "CWE-311"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-9198",
+            "vendorProject": "IBM",
+            "product": "Langflow",
+            "vulnerabilityName": "IBM Langflow Code Injection Vulnerability",
+            "dateAdded": "2026-08-04",
+            "shortDescription": "Langflow contains a code injection vulnerability that allows unauthenticated attackers to achieve full remote code execution on default Langflow deployments.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-07",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.ibm.com/support/pages/node/7278927 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-9198",
+            "cwes": [
+                "CWE-94"
+            ]
+        },
         {
             "cveID": "CVE-2026-18577",
             "vendorProject": "N-able",
@@ -6995,7 +7304,7 @@
             "shortDescription": "SolarWinds Web Help Desk contain a deserialization of untrusted data vulnerability in AjaxProxy that could allow an attacker to run commands on the host machine.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2026-03-12",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://www.solarwinds.com/trust-center/security-advisories/cve-2025-26399 ; https://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_12-8-7-hotfix-1_release_notes.htm ; https://nvd.nist.gov/vuln/detail/CVE-2025-26399",
             "cwes": [
                 "CWE-502"
@@ -29815,7 +30124,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-04T13:47:23.423337",
+    "last_updated": "2026-08-05T13:42:29.821794",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
