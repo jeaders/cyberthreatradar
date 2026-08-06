@@ -2,6 +2,154 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-63077",
+                "sourceIdentifier": "cve@jetbrains.com",
+                "published": "2026-07-27T17:16:38.830",
+                "lastModified": "2026-08-06T05:17:05.170",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 unauthenticated remote code execution was possible via the agent polling protocol"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@jetbrains.com",
+                        "affectedData": [
+                            {
+                                "vendor": "JetBrains",
+                                "product": "TeamCity",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "2026.1.3, 2025.11.7",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@jetbrains.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-07-27T00:00:00+00:00",
+                                "id": "CVE-2026-63077",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-05",
+                "cisaActionDue": "2026-08-08",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@jetbrains.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2025.11.7",
+                                        "matchCriteriaId": "4F865D53-6163-4A62-B8C1-06F45DA28E3C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2026.1",
+                                        "versionEndExcluding": "2026.1.3",
+                                        "matchCriteriaId": "4CD39F06-B4AA-4300-B763-9362E98D50D6"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.jetbrains.com/privacy-security/issues-fixed/",
+                        "source": "cve@jetbrains.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-63077",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006490000",
+                    "percentile": "0.475850000"
+                },
+                "location": {
+                    "lat": 16.012938261032104,
+                    "lng": 106.01294231414795,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-18556",
                 "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
                 "published": "2026-08-01T20:16:37.157",
@@ -182,12 +330,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.002700000",
-                    "percentile": "0.190530000"
+                    "epss": "0.004920000",
+                    "percentile": "0.396050000"
                 },
                 "location": {
-                    "lat": -7.014225721359253,
-                    "lng": -157.01421999931335,
+                    "lat": 16.012950897216797,
+                    "lng": 106.01295137405396,
                     "country": "Unknown"
                 }
             }
@@ -197,7 +345,7 @@
                 "id": "CVE-2026-34486",
                 "sourceIdentifier": "security@apache.org",
                 "published": "2026-04-09T20:16:25.063",
-                "lastModified": "2026-08-05T13:21:57.337",
+                "lastModified": "2026-08-05T15:33:26.557",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -576,20 +724,20 @@
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
                                 "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
                                 "scope": "UNCHANGED",
                                 "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
                             },
                             "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
+                            "impactScore": 5.9
                         },
                         {
                             "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
@@ -616,7 +764,27 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-08-04T00:00:00+00:00",
+                                "timestamp": "2026-08-04T17:42:15.722474Z",
+                                "id": "CVE-2026-34486",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-05T03:56:10.455827Z",
                                 "id": "CVE-2026-34486",
                                 "options": [
                                     {
@@ -906,8 +1074,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.426270000",
-                    "percentile": "0.985800000"
+                    "epss": "0.811600000",
+                    "percentile": "0.995980000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -1051,12 +1219,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.018860000",
-                    "percentile": "0.774740000"
+                    "epss": "0.170530000",
+                    "percentile": "0.967710000"
                 },
                 "location": {
-                    "lat": -7.014206171035767,
-                    "lng": -157.01420545578003,
+                    "lat": 16.012960195541382,
+                    "lng": 106.01296043395996,
                     "country": "Unknown"
                 }
             }
@@ -1268,12 +1436,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.025290000",
-                    "percentile": "0.833270000"
+                    "epss": "0.041030000",
+                    "percentile": "0.897600000"
                 },
                 "location": {
-                    "lat": -7.01419997215271,
-                    "lng": -157.01419973373413,
+                    "lat": 16.012964725494385,
+                    "lng": 106.01296472549438,
                     "country": "Unknown"
                 }
             }
@@ -1715,7 +1883,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.526680000"
+                    "percentile": "0.527020000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1954,7 +2122,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.668250000"
+                    "percentile": "0.668500000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2178,11 +2346,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.557050000"
+                    "percentile": "0.557400000"
                 },
                 "location": {
-                    "lat": -7.01416015625,
-                    "lng": -157.01415967941284,
+                    "lat": 16.01298451423645,
+                    "lng": 106.01298475265503,
                     "country": "Unknown"
                 }
             }
@@ -3017,8 +3185,8 @@
                     "percentile": "0.993530000"
                 },
                 "location": {
-                    "lat": -7.014153242111206,
-                    "lng": -157.01415276527405,
+                    "lat": 16.012991428375244,
+                    "lng": 106.01299166679382,
                     "country": "Unknown"
                 }
             }
@@ -3396,8 +3564,8 @@
                     "percentile": "0.995590000"
                 },
                 "location": {
-                    "lat": -7.014141798019409,
-                    "lng": -157.01414132118225,
+                    "lat": 16.01300358772278,
+                    "lng": 106.01300358772278,
                     "country": "Unknown"
                 }
             }
@@ -3582,8 +3750,8 @@
                     "percentile": "0.999150000"
                 },
                 "location": {
-                    "lat": -7.01413631439209,
-                    "lng": -157.01413583755493,
+                    "lat": 16.013007402420044,
+                    "lng": 106.01300764083862,
                     "country": "Unknown"
                 }
             }
@@ -3722,11 +3890,11 @@
                 ],
                 "epss": {
                     "epss": "0.562670000",
-                    "percentile": "0.989540000"
+                    "percentile": "0.989550000"
                 },
                 "location": {
-                    "lat": -7.014129877090454,
-                    "lng": -157.01412963867188,
+                    "lat": 16.01301121711731,
+                    "lng": 106.01301145553589,
                     "country": "Unknown"
                 }
             }
@@ -3902,11 +4070,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966700000"
+                    "percentile": "0.966730000"
                 },
                 "location": {
-                    "lat": -7.014124631881714,
-                    "lng": -157.0141246318817,
+                    "lat": 16.013015031814575,
+                    "lng": 106.01301527023315,
                     "country": "Unknown"
                 }
             }
@@ -4086,7 +4254,7 @@
                 ],
                 "epss": {
                     "epss": "0.059850000",
-                    "percentile": "0.925810000"
+                    "percentile": "0.925870000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4331,7 +4499,7 @@
                 ],
                 "epss": {
                     "epss": "0.698270000",
-                    "percentile": "0.993050000"
+                    "percentile": "0.993060000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -4546,7 +4714,7 @@
                 ],
                 "epss": {
                     "epss": "0.896910000",
-                    "percentile": "0.997760000"
+                    "percentile": "0.997770000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -4699,7 +4867,7 @@
                 ],
                 "epss": {
                     "epss": "0.133090000",
-                    "percentile": "0.960090000"
+                    "percentile": "0.960130000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -4870,11 +5038,11 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.564050000"
+                    "percentile": "0.564360000"
                 },
                 "location": {
-                    "lat": -7.01410436630249,
-                    "lng": -157.0141043663025,
+                    "lat": 16.013033390045166,
+                    "lng": 106.01303362846375,
                     "country": "Unknown"
                 }
             }
@@ -5247,210 +5415,7 @@
                 ],
                 "epss": {
                     "epss": "0.023330000",
-                    "percentile": "0.818710000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-56164",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-07-14T17:17:09.907",
-                "lastModified": "2026-07-14T21:10:41.693",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Missing authentication for critical function in Microsoft Office SharePoint allows an unauthorized attacker to elevate privileges over a network."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Enterprise Server 2016",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.5561.1001",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server 2019",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.10417.20175",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server Subscription Edition",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.19725.20434",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
-                                "baseScore": 5.3,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 1.4
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-14T18:45:11.388695Z",
-                                "id": "CVE-2026-56164",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-14",
-                "cisaActionDue": "2026-07-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
-                                        "versionEndExcluding": "16.0.19725.20434",
-                                        "matchCriteriaId": "5FA63EA8-B225-4E35-A6A3-DBDECF5AC4C8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
-                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-56164",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.224390000",
-                    "percentile": "0.974590000"
+                    "percentile": "0.818850000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5461,6 +5426,21 @@
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-63077",
+            "vendorProject": "JetBrains",
+            "product": "TeamCity",
+            "vulnerabilityName": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+            "dateAdded": "2026-08-05",
+            "shortDescription": "JetBrains TeamCity contains a deserialization of untrusted data vulnerability that could allow unauthenticated remote code execution via the agent polling protocol.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-08",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://blog.jetbrains.com/teamcity/2026/07/cve-2026-63077/; https://www.jetbrains.com/privacy-security/issues-fixed/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-63077",
+            "cwes": [
+                "CWE-502"
+            ]
+        },
         {
             "cveID": "CVE-2026-18556",
             "vendorProject": "N-able",
@@ -9392,7 +9372,7 @@
             "shortDescription": "RARLAB WinRAR contains a path traversal vulnerability affecting the Windows version of WinRAR. This vulnerability could allow an attacker to execute arbitrary code by crafting malicious archive files.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2025-09-02",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://www.win-rar.com/singlenewsview.html?&L=0&tx_ttnews%5Btt_news%5D=283&cHash=a64b4a8f662d3639dec8d65f47bc93c5 ; https://nvd.nist.gov/vuln/detail/CVE-2025-8088",
             "cwes": [
                 "CWE-35"
@@ -10184,7 +10164,7 @@
             "shortDescription": "SAP NetWeaver Visual Composer Metadata Uploader contains a deserialization vulnerability that allows a privileged attacker to compromise the confidentiality, integrity, and availability of the host system by deserializing untrusted or malicious content.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2025-06-05",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "SAP users must have an account to log in and access the patch: https://me.sap.com/notes/3604119 ; https://nvd.nist.gov/vuln/detail/CVE-2025-42999",
             "cwes": [
                 "CWE-502"
@@ -13374,7 +13354,7 @@
             "shortDescription": "Rejetto HTTP File Server contains an improper neutralization of special elements used in a template engine vulnerability. This allows a remote, unauthenticated attacker to execute commands on the affected system by sending a specially crafted HTTP request.",
             "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2024-07-30",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "The patched Rejetto HTTP File Server (HFS) is version 3: https://github.com/rejetto/hfs?tab=readme-ov-file#installation, https://www.rejetto.com/hfs/ ;   https://nvd.nist.gov/vuln/detail/CVE-2024-23692",
             "cwes": [
                 "CWE-1336"
@@ -30124,7 +30104,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-05T13:42:29.821794",
+    "last_updated": "2026-08-06T13:40:57.074774",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
