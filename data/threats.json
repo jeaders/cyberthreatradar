@@ -2,6 +2,252 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-8037",
+                "sourceIdentifier": "security@progress.com",
+                "published": "2026-06-04T14:16:45.177",
+                "lastModified": "2026-08-08T05:17:10.403",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "OS Command Injection Remote Code Execution Vulnerability in API in Progress ADC Products allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo por inyecci\u00f3n de comandos del sistema operativo en la API en Productos Progress ADC permite a un atacante no autenticado ejecutar comandos arbitrarios en el dispositivo LoadMaster explotando la entrada no saneada en m\u00faltiples puntos finales de comando."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security@progress.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Progress Software",
+                                "product": "LoadMaster",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "V7.2.60.0",
+                                        "lessThan": "V7.2.63.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "V7.2.45.12",
+                                        "lessThan": "V7.2.54.18",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Progress Software",
+                                "product": "ECS Connections Manager",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "V7.2.60.0",
+                                        "lessThan": "V7.2.63.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Progress Software",
+                                "product": "Object Scale Connection Manager",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "V7.2.60.0",
+                                        "lessThan": "V7.2.63.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Progress Software",
+                                "product": "MOVEit WAF",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "V7.2.60.0",
+                                        "lessThan": "V7.2.63.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security@progress.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.6,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 6.0
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-06-04T00:00:00+00:00",
+                                "id": "CVE-2026-8037",
+                                "options": [
+                                    {
+                                        "exploitation": "poc"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-07",
+                "cisaActionDue": "2026-08-10",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Progress LoadMaster Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security@progress.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-77"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:progress:connection_manager_for_objectscale:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "7.2.63.2",
+                                        "matchCriteriaId": "029CD311-B604-4813-A75B-4D21806279D2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:progress:ecs_connection_manager:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "7.2.63.2",
+                                        "matchCriteriaId": "E431D517-8DEE-44FD-AA7B-E5C536574933"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:progress:loadmaster:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "7.2.54.18",
+                                        "matchCriteriaId": "52829479-F76A-464C-93E2-11A4D090AF99"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:progress:loadmaster:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.2.55.0",
+                                        "versionEndExcluding": "7.2.63.2",
+                                        "matchCriteriaId": "B5492541-EE6C-41A7-A826-E4D323EB9CBB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-June-2026-CVE-2026-8037-CVE-2026-33691",
+                        "source": "security@progress.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://labs.watchtowr.com/enterprise-tech-in-shell-out-progress-kemp-loadmaster-uninitialized-heap-to-pre-auth-rce-cve-2026-8037/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Patch",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-8037",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.esentire.com/security-advisories/progress-kemp-loadmaster-vulnerability-targeted-cve-2026-8037",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.847930000",
+                    "percentile": "0.996880000"
+                },
+                "location": {
+                    "lat": -24.368610620498657,
+                    "lng": -54.368605852127075,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-63077",
                 "sourceIdentifier": "cve@jetbrains.com",
                 "published": "2026-07-27T17:16:38.830",
@@ -139,11 +385,11 @@
                 ],
                 "epss": {
                     "epss": "0.010100000",
-                    "percentile": "0.597830000"
+                    "percentile": "0.598270000"
                 },
                 "location": {
-                    "lat": 5.765363454818726,
-                    "lng": 35.76536822319031,
+                    "lat": -24.368598222732544,
+                    "lng": -54.368597745895386,
                     "country": "Unknown"
                 }
             }
@@ -331,11 +577,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.396460000"
+                    "percentile": "0.396970000"
                 },
                 "location": {
-                    "lat": 5.765375137329102,
-                    "lng": 35.76537609100342,
+                    "lat": -24.368592739105225,
+                    "lng": -54.368592500686646,
                     "country": "Unknown"
                 }
             }
@@ -1114,8 +1360,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.799380000",
-                    "percentile": "0.995740000"
+                    "epss": "0.811600000",
+                    "percentile": "0.995980000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -1260,11 +1506,11 @@
                 ],
                 "epss": {
                     "epss": "0.170530000",
-                    "percentile": "0.967740000"
+                    "percentile": "0.967770000"
                 },
                 "location": {
-                    "lat": 5.765383958816528,
-                    "lng": 35.76538419723511,
+                    "lat": -24.368584394454956,
+                    "lng": -54.36858415603638,
                     "country": "Unknown"
                 }
             }
@@ -1477,11 +1723,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.897690000"
+                    "percentile": "0.897810000"
                 },
                 "location": {
-                    "lat": 5.765388011932373,
-                    "lng": 35.76538825035095,
+                    "lat": -24.36858034133911,
+                    "lng": -54.36858010292053,
                     "country": "Unknown"
                 }
             }
@@ -1923,7 +2169,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.527360000"
+                    "percentile": "0.527860000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2162,7 +2408,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.668790000"
+                    "percentile": "0.669120000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2386,11 +2632,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.557700000"
+                    "percentile": "0.558180000"
                 },
                 "location": {
-                    "lat": 5.7653985023498535,
-                    "lng": 35.76539874076843,
+                    "lat": -24.368568420410156,
+                    "lng": -54.36856818199158,
                     "country": "Unknown"
                 }
             }
@@ -3222,11 +3468,11 @@
                 ],
                 "epss": {
                     "epss": "0.713910000",
-                    "percentile": "0.993540000"
+                    "percentile": "0.993550000"
                 },
                 "location": {
-                    "lat": 5.765402793884277,
-                    "lng": 35.765403032302856,
+                    "lat": -24.368563890457153,
+                    "lng": -54.36856389045715,
                     "country": "Unknown"
                 }
             }
@@ -3406,7 +3652,7 @@
                 ],
                 "epss": {
                     "epss": "0.757600000",
-                    "percentile": "0.994750000"
+                    "percentile": "0.994760000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3601,11 +3847,11 @@
                 ],
                 "epss": {
                     "epss": "0.790290000",
-                    "percentile": "0.995590000"
+                    "percentile": "0.995600000"
                 },
                 "location": {
-                    "lat": 5.7654337882995605,
-                    "lng": 35.76543402671814,
+                    "lat": -24.368556261062622,
+                    "lng": -54.36855626106262,
                     "country": "Unknown"
                 }
             }
@@ -3790,8 +4036,8 @@
                     "percentile": "0.999150000"
                 },
                 "location": {
-                    "lat": 5.765439510345459,
-                    "lng": 35.76543951034546,
+                    "lat": -24.368552684783936,
+                    "lng": -54.368552684783936,
                     "country": "Unknown"
                 }
             }
@@ -3930,11 +4176,11 @@
                 ],
                 "epss": {
                     "epss": "0.562670000",
-                    "percentile": "0.989550000"
+                    "percentile": "0.989560000"
                 },
                 "location": {
-                    "lat": 5.76544451713562,
-                    "lng": 35.7654447555542,
+                    "lat": -24.36854910850525,
+                    "lng": -54.36854910850525,
                     "country": "Unknown"
                 }
             }
@@ -4110,11 +4356,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966760000"
+                    "percentile": "0.966800000"
                 },
                 "location": {
-                    "lat": 5.76544976234436,
-                    "lng": 35.76545000076294,
+                    "lat": -24.368545532226562,
+                    "lng": -54.36854529380798,
                     "country": "Unknown"
                 }
             }
@@ -4294,7 +4540,7 @@
                 ],
                 "epss": {
                     "epss": "0.059850000",
-                    "percentile": "0.925950000"
+                    "percentile": "0.926030000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4907,7 +5153,7 @@
                 ],
                 "epss": {
                     "epss": "0.133090000",
-                    "percentile": "0.960170000"
+                    "percentile": "0.960210000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -5078,394 +5324,32 @@
                 ],
                 "epss": {
                     "epss": "0.009070000",
-                    "percentile": "0.564660000"
+                    "percentile": "0.565080000"
                 },
                 "location": {
-                    "lat": 5.765471458435059,
-                    "lng": 35.76547145843506,
+                    "lat": -24.368528604507446,
+                    "lng": -54.36852836608887,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-56155",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-07-14T17:17:09.763",
-                "lastModified": "2026-07-15T14:18:24.010",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Insufficient granularity of access control in Active Directory Federation Services (AD FS) allows an authorized attacker to elevate privileges locally."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows 10 Version 1607",
-                                "platforms": [
-                                    "32-bit Systems",
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.14393.0",
-                                        "lessThan": "10.0.14393.9339",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows 10 Version 1809",
-                                "platforms": [
-                                    "32-bit Systems",
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.17763.0",
-                                        "lessThan": "10.0.17763.9020",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2012",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "6.2.9200.0",
-                                        "lessThan": "6.2.9200.26226",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2012 (Server Core installation)",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "6.2.9200.0",
-                                        "lessThan": "6.2.9200.26226",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2012 R2",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "6.3.9600.0",
-                                        "lessThan": "6.3.9600.23291",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2012 R2 (Server Core installation)",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "6.3.9600.0",
-                                        "lessThan": "6.3.9600.23291",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2016",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.14393.0",
-                                        "lessThan": "10.0.14393.9339",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2016 (Server Core installation)",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.14393.0",
-                                        "lessThan": "10.0.14393.9339",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2019",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.17763.0",
-                                        "lessThan": "10.0.17763.9020",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2019 (Server Core installation)",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.17763.0",
-                                        "lessThan": "10.0.17763.9020",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2022",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.20348.0",
-                                        "lessThan": "10.0.20348.5386",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2025",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.26100.0",
-                                        "lessThan": "10.0.26100.33158",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Windows Server 2025 (Server Core installation)",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "10.0.26100.0",
-                                        "lessThan": "10.0.26100.33158",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-15T03:55:53.880960Z",
-                                "id": "CVE-2026-56155",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-14",
-                "cisaActionDue": "2026-07-28",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability ",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-1220"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.14393.9339",
-                                        "matchCriteriaId": "1A8DB50E-7571-4925-A293-CAB93ECD0EBF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.14393.9339",
-                                        "matchCriteriaId": "A9DC4EC9-4E72-4CBC-BA0B-39CCC45DB8CE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
-                                        "versionEndExcluding": "10.0.17763.9020",
-                                        "matchCriteriaId": "643F21D8-3A5B-477D-AFFC-2451DDC472CC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
-                                        "versionEndExcluding": "10.0.17763.9020",
-                                        "matchCriteriaId": "A68E51D8-C76C-4C9E-9CBD-C7D4D4BCDFAA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.14393.9339",
-                                        "matchCriteriaId": "34D1270A-7D50-46CC-87EE-0A4E25F9C800"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.17763.9020",
-                                        "matchCriteriaId": "D0E1AB94-0B38-4BB7-94EB-988EA266D6D5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.20348.5386",
-                                        "matchCriteriaId": "9E9A0C18-3AD2-4E59-97AF-A2343E466929"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.0.26100.33158",
-                                        "matchCriteriaId": "22BE2FE9-37B9-4FF2-B43A-60A3518E0F08"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56155",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-56155",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.023330000",
-                    "percentile": "0.819040000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-8037",
+            "vendorProject": "Progress",
+            "product": "LoadMaster",
+            "vulnerabilityName": "Progress LoadMaster Command Injection Vulnerability",
+            "dateAdded": "2026-08-07",
+            "shortDescription": "Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-10",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-June-2026-CVE-2026-8037-CVE-2026-33691 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-8037",
+            "cwes": [
+                "CWE-77"
+            ]
+        },
         {
             "cveID": "CVE-2026-63077",
             "vendorProject": "JetBrains",
@@ -30144,7 +30028,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-07T12:39:46.593797",
+    "last_updated": "2026-08-08T12:26:17.791629",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
