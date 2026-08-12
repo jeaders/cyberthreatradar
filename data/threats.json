@@ -2,6 +2,1564 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-20349",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-08-11T17:17:48.833",
+                "lastModified": "2026-08-12T05:17:44.330",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the Remote Access SSL VPN service for Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.&nbsp;\r\n\r\nThis vulnerability is due to insufficient error checking when processing HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to the Remote Access SSL VPN service on an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "9.16.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.1.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.15",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.23",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.39",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.46",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.27",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.53",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.55",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.39",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.56",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.42",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.48",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.27",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.55",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.57",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.21",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.61",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.31",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.29",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.62",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.34",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.67",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.70",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.40",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.71",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.47",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.37",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.76",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.50",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.52",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.53",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.82",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.16",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.42",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.57",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.84",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.66",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.85",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.67",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.68",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.71",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.26",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.89",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.76",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.3.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.92",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.135",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.195",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.30",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.155",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.34",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.82",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.90",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.46",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Firewall Threat Defense (FTD) Software",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "7.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.2",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-11T00:00:00+00:00",
+                                "id": "CVE-2026-20349",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-11",
+                "cisaActionDue": "2026-08-14",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-244"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-vpn-dos-dzv4mQFF",
+                        "source": "psirt@cisco.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20349",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": -3.532888889312744,
+                    "lng": -93.53288340568542,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-68820",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-08-11T17:19:06.357",
+                "lastModified": "2026-08-12T05:19:45.527",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 10 Version 1607",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.14393.0",
+                                        "lessThan": "10.0.14393.9418",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 10 Version 1809",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.17763.0",
+                                        "lessThan": "10.0.17763.9115",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 10 Version 21H2",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "ARM64-based Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.19044.0",
+                                        "lessThan": "10.0.19044.7663",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 10 Version 22H2",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "ARM64-based Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.19045.0",
+                                        "lessThan": "10.0.19045.7663",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 11 version 23H2",
+                                "platforms": [
+                                    "ARM64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.22631.0",
+                                        "lessThan": "10.0.22631.7517",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 11 Version 23H2",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.22631.0",
+                                        "lessThan": "10.0.22631.7517",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 11 Version 24H2",
+                                "platforms": [
+                                    "ARM64-based Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.26100.0",
+                                        "lessThan": "10.0.26100.9168",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 11 Version 25H2",
+                                "platforms": [
+                                    "ARM64-based Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.26200.0",
+                                        "lessThan": "10.0.26200.9168",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows 11 version 26H1",
+                                "platforms": [
+                                    "ARM64-based Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.28000.0",
+                                        "lessThan": "10.0.28000.2704",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2012",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "6.2.9200.0",
+                                        "lessThan": "6.2.9200.26280",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2012 (Server Core installation)",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "6.2.9200.0",
+                                        "lessThan": "6.2.9200.26280",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2012 R2",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "6.3.9600.0",
+                                        "lessThan": "6.3.9600.23338",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2012 R2 (Server Core installation)",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "6.3.9600.0",
+                                        "lessThan": "6.3.9600.23338",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2016",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.14393.0",
+                                        "lessThan": "10.0.14393.9418",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2016 (Server Core installation)",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.14393.0",
+                                        "lessThan": "10.0.14393.9418",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2019",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.17763.0",
+                                        "lessThan": "10.0.17763.9115",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2019 (Server Core installation)",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.17763.0",
+                                        "lessThan": "10.0.17763.9115",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2022",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.20348.0",
+                                        "lessThan": "10.0.20348.5499",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2025",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.26100.0",
+                                        "lessThan": "10.0.26100.33296",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Windows Server 2025 (Server Core installation)",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "10.0.26100.0",
+                                        "lessThan": "10.0.26100.33296",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.0,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.0,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-06T00:00:00+00:00",
+                                "id": "CVE-2026-68820",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-11",
+                "cisaActionDue": "2026-08-25",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-416"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68820",
+                        "source": "secure@microsoft.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-68820",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": -3.5328783988952637,
+                    "lng": -93.53287768363953,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-72898",
+                "sourceIdentifier": "9119a7d8-5eab-497f-8521-727c672e3725",
+                "published": "2026-08-10T18:18:53.300",
+                "lastModified": "2026-08-12T05:19:54.110",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Metabase allows a remote, unauthenticated attacker to inject arbitrary SQL via the '/reset_password' database endpoint and gain administrator access to the connected Metabase instance."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+                        "affectedData": [
+                            {
+                                "vendor": "Metabase",
+                                "product": "Metabase",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "x.58.0",
+                                        "lessThan": "x.58.24",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.58.24",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "x.59.0",
+                                        "lessThan": "x.59.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.59.21",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "x.60.0",
+                                        "lessThan": "x.60.17",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.60.17",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "x.61.0",
+                                        "lessThan": "x.61.11",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.61.11",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "x.62.0",
+                                        "lessThan": "x.62.9",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.62.9",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "x.63.0",
+                                        "lessThan": "x.63.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "x.63.5",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+                            "ssvcData": {
+                                "timestamp": "2026-08-10T17:14:52.872411Z",
+                                "id": "CVE-2026-72898",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-10T00:00:00+00:00",
+                                "id": "CVE-2026-72898",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-11",
+                "cisaActionDue": "2026-08-14",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Metabase SQL Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf",
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725"
+                    },
+                    {
+                        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-222-01.json",
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725"
+                    },
+                    {
+                        "url": "https://www.cve.org/CVERecord?id=CVE-2026-72898",
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725"
+                    },
+                    {
+                        "url": "https://www.metabase.com/blog/security-update",
+                        "source": "9119a7d8-5eab-497f-8521-727c672e3725"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-72898",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006900000",
+                    "percentile": "0.494600000"
+                },
+                "location": {
+                    "lat": -3.5328738689422607,
+                    "lng": -93.53287363052368,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-8037",
                 "sourceIdentifier": "security@progress.com",
                 "published": "2026-06-04T14:16:45.177",
@@ -246,8 +1804,8 @@
                     "percentile": "0.999350000"
                 },
                 "location": {
-                    "lat": 14.972455978393555,
-                    "lng": 104.97246074676514,
+                    "lat": -3.5328681468963623,
+                    "lng": -93.53286814689636,
                     "country": "Unknown"
                 }
             }
@@ -391,11 +1949,11 @@
                 ],
                 "epss": {
                     "epss": "0.107220000",
-                    "percentile": "0.953890000"
+                    "percentile": "0.953960000"
                 },
                 "location": {
-                    "lat": 14.972469806671143,
-                    "lng": 104.97247052192688,
+                    "lat": -3.5328633785247803,
+                    "lng": -93.5328631401062,
                     "country": "Unknown"
                 }
             }
@@ -583,11 +2141,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.396870000"
+                    "percentile": "0.397710000"
                 },
                 "location": {
-                    "lat": 14.972476243972778,
-                    "lng": 104.97247648239136,
+                    "lat": -3.5328593254089355,
+                    "lng": -93.53285908699036,
                     "country": "Unknown"
                 }
             }
@@ -1447,8 +3005,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.811600000",
-                    "percentile": "0.995980000"
+                    "epss": "0.829330000",
+                    "percentile": "0.996430000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -1592,12 +3150,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.170530000",
-                    "percentile": "0.967780000"
+                    "epss": "0.173520000",
+                    "percentile": "0.968250000"
                 },
                 "location": {
-                    "lat": 14.972484827041626,
-                    "lng": 104.9724850654602,
+                    "lat": -3.532850980758667,
+                    "lng": -93.53285098075867,
                     "country": "Unknown"
                 }
             }
@@ -1810,11 +3368,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.897900000"
+                    "percentile": "0.898060000"
                 },
                 "location": {
-                    "lat": 14.97248911857605,
-                    "lng": 104.97248935699463,
+                    "lat": -3.5328471660614014,
+                    "lng": -93.53284692764282,
                     "country": "Unknown"
                 }
             }
@@ -2256,7 +3814,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.527930000"
+                    "percentile": "0.528640000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2495,7 +4053,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.669260000"
+                    "percentile": "0.669760000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2719,11 +4277,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.558290000"
+                    "percentile": "0.559000000"
                 },
                 "location": {
-                    "lat": 14.972501754760742,
-                    "lng": 104.97250175476074,
+                    "lat": -3.5328314304351807,
+                    "lng": -93.53283095359802,
                     "country": "Unknown"
                 }
             }
@@ -3554,12 +5112,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.713910000",
-                    "percentile": "0.993550000"
+                    "epss": "0.732960000",
+                    "percentile": "0.994090000"
                 },
                 "location": {
-                    "lat": 14.972505807876587,
-                    "lng": 104.97250604629517,
+                    "lat": -3.5328266620635986,
+                    "lng": -93.53282642364502,
                     "country": "Unknown"
                 }
             }
@@ -3739,7 +5297,7 @@
                 ],
                 "epss": {
                     "epss": "0.769810000",
-                    "percentile": "0.995030000"
+                    "percentile": "0.995040000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3934,11 +5492,11 @@
                 ],
                 "epss": {
                     "epss": "0.731000000",
-                    "percentile": "0.994040000"
+                    "percentile": "0.994050000"
                 },
                 "location": {
-                    "lat": 14.972513675689697,
-                    "lng": 104.97251415252686,
+                    "lat": -3.5328168869018555,
+                    "lng": -93.53281688690186,
                     "country": "Unknown"
                 }
             }
@@ -4123,8 +5681,8 @@
                     "percentile": "0.998630000"
                 },
                 "location": {
-                    "lat": 14.97251844406128,
-                    "lng": 104.97251844406128,
+                    "lat": -3.5328128337860107,
+                    "lng": -93.53281259536743,
                     "country": "Unknown"
                 }
             }
@@ -4262,12 +5820,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.562670000",
-                    "percentile": "0.989570000"
+                    "epss": "0.568780000",
+                    "percentile": "0.989750000"
                 },
                 "location": {
-                    "lat": 14.972522497177124,
-                    "lng": 104.97252249717712,
+                    "lat": -3.532808780670166,
+                    "lng": -93.53280854225159,
                     "country": "Unknown"
                 }
             }
@@ -4443,11 +6001,11 @@
                 ],
                 "epss": {
                     "epss": "0.164880000",
-                    "percentile": "0.966810000"
+                    "percentile": "0.966870000"
                 },
                 "location": {
-                    "lat": 14.972526550292969,
-                    "lng": 104.97252678871155,
+                    "lat": -3.532804012298584,
+                    "lng": -93.53280377388,
                     "country": "Unknown"
                 }
             }
@@ -4627,7 +6185,7 @@
                 ],
                 "epss": {
                     "epss": "0.063720000",
-                    "percentile": "0.929890000"
+                    "percentile": "0.930010000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4880,548 +6438,54 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-39808",
-                "sourceIdentifier": "psirt@fortinet.com",
-                "published": "2026-04-14T16:16:44.860",
-                "lastModified": "2026-07-17T05:16:38.870",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.8 may allow attacker to execute unauthorized code or commands via <insert attack vector here>"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@fortinet.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Fortinet",
-                                "product": "FortiSandbox",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.8:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.7:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.6:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.5:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.4:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.3:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.2:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.1:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandbox:4.4.0:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "4.4.0",
-                                        "lessThanOrEqual": "4.4.8",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Fortinet",
-                                "product": "FortiSandbox PaaS",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:23.4.4374:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:23.4.4350:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:23.3.4329:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:23.1.4245:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:22.2.4151:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:22.2.4134:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:22.1.4113:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:21.4.4072:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortisandboxpaas:21.3.4055:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "23.4.4374",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "23.4.4350",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "23.3.4329",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "23.1.4245",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "22.2.4151",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "22.2.4134",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "22.1.4113",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "21.4.4072",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "21.3.4055",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@fortinet.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-04-14T00:00:00+00:00",
-                                "id": "CVE-2026-39808",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-16",
-                "cisaActionDue": "2026-07-19",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Fortinet FortiSandbox OS Command Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@fortinet.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-78"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:fortisandbox:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "4.4.0",
-                                        "versionEndIncluding": "4.4.9",
-                                        "matchCriteriaId": "94FFE14D-51FF-4D31-A0FD-5B0877081A04"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-100",
-                        "source": "psirt@fortinet.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/samu-delucas/CVE-2026-39808",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-39808",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.912100000",
-                    "percentile": "0.998000000"
-                },
-                "location": {
-                    "lat": 37.3752,
-                    "lng": -122.0297,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-46817",
-                "sourceIdentifier": "secalert_us@oracle.com",
-                "published": "2026-05-28T21:16:31.503",
-                "lastModified": "2026-07-21T10:10:00.103",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Vulnerability in the Oracle Payments product of Oracle E-Business Suite (component: File Transmission).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Payments.  Successful attacks of this vulnerability can result in takeover of Oracle Payments. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad en el producto Oracle Payments de Oracle E-Business Suite (componente: File Transmission). Las versiones soportadas que est\u00e1n afectadas son 12.2.3-12.2.15. Una vulnerabilidad f\u00e1cilmente explotable permite a un atacante no autenticado con acceso de red v\u00eda HTTP comprometer Oracle Payments. Ataques exitosos de esta vulnerabilidad pueden resultar en la toma de control de Oracle Payments. Puntuaci\u00f3n Base CVSS 3.1 de 9.8 (impactos en Confidencialidad, Integridad y Disponibilidad). Vector CVSS: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secalert_us@oracle.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Oracle Corporation",
-                                "product": "Oracle Payments",
-                                "versions": [
-                                    {
-                                        "version": "12.2.3",
-                                        "lessThanOrEqual": "12.2.15",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secalert_us@oracle.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-15T00:00:00+00:00",
-                                "id": "CVE-2026-46817",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-15",
-                "cisaActionDue": "2026-07-18",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-269"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:e-business_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "12.2.3",
-                                        "versionEndIncluding": "12.2.15",
-                                        "matchCriteriaId": "6F291BF4-E862-47A3-8BFC-C7949CD5AC93"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.oracle.com/security-alerts/cspumay2026.html",
-                        "source": "secalert_us@oracle.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-46817",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.133090000",
-                    "percentile": "0.960240000"
-                },
-                "location": {
-                    "lat": 37.5295,
-                    "lng": -122.253,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2023-4346",
-                "sourceIdentifier": "ics-cert@hq.dhs.gov",
-                "published": "2023-08-29T20:15:10.300",
-                "lastModified": "2026-07-16T05:16:16.603",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "\nKNX devices that use KNX Connection Authorization and support Option 1 are, depending on the implementation, vulnerable to being locked and users being unable to reset them to gain access to the device. The BCU key feature on the devices can be used to create a password for the device, but this password can often not be reset without entering the current password. If the device is configured to interface with a network, an attacker with access to that network could interface with the KNX installation, purge all devices without additional security options enabled, and set a BCU key, locking the device. Even if a device is not connected to a network, an attacker with physical access to the device could also exploit this vulnerability in the same way. \n\n"
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Los dispositivos KNX que utilizan la autorizaci\u00f3n de conexi\u00f3n KNX y admiten la Opci\u00f3n 1 son, seg\u00fan la implementaci\u00f3n, vulnerables a ser bloqueados y los usuarios no pueden restablecerlos para obtener acceso al dispositivo. La funci\u00f3n de clave BCU en los dispositivos se puede usar para crear una contrase\u00f1a para el dispositivo, pero esta contrase\u00f1a a menudo no se puede restablecer sin ingresar la contrase\u00f1a actual. Si el dispositivo est\u00e1 configurado para interactuar con una red, un atacante con acceso a esa red podr\u00eda interactuar con la instalaci\u00f3n KNX, purgar todos los dispositivos sin opciones de seguridad adicionales habilitadas y configurar una clave BCU, bloqueando el dispositivo. Incluso si un dispositivo no est\u00e1 conectado a una red, un atacante con acceso f\u00edsico al dispositivo tambi\u00e9n podr\u00eda aprovechar esta vulnerabilidad de la misma manera.\n"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "ics-cert@hq.dhs.gov",
-                        "affectedData": [
-                            {
-                                "vendor": "KNX Association",
-                                "product": "KNX Protocol Connection Authorization Option 1",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "ics-cert@hq.dhs.gov",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-15T00:00:00+00:00",
-                                "id": "CVE-2023-4346",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-15",
-                "cisaActionDue": "2026-07-29",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "ics-cert@hq.dhs.gov",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-645"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:knx:connection_authorization:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F328E1CB-8666-4D06-B2BC-9532454AF906"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-236-01",
-                        "source": "ics-cert@hq.dhs.gov",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-236-01",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-4346",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.009070000",
-                    "percentile": "0.565200000"
-                },
-                "location": {
-                    "lat": 14.97254467010498,
-                    "lng": 104.97254490852356,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-20349",
+            "vendorProject": "Cisco",
+            "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) ",
+            "vulnerabilityName": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
+            "dateAdded": "2026-08-11",
+            "shortDescription": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) contain a heap inspection vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-14",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-vpn-dos-dzv4mQFF ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20349",
+            "cwes": [
+                "CWE-244"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-68820",
+            "vendorProject": "Microsoft",
+            "product": "Windows Ancillary Function Driver for WinSock ",
+            "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+            "dateAdded": "2026-08-11",
+            "shortDescription": "Microsoft Windows Ancillary Function Driver for WinSock contains a use-after-free vulnerability that allows an authorized attacker to elevate privileges locally.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-25",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2026-68820 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-68820",
+            "cwes": [
+                "CWE-416"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-72898",
+            "vendorProject": "Metabase",
+            "product": "Metabase",
+            "vulnerabilityName": "Metabase SQL Injection Vulnerability",
+            "dateAdded": "2026-08-11",
+            "shortDescription": "Metabase contains a SQL Injection vulnerability that allows an unauthenticated remote attacker to inject arbitrary SQL into the Metabase application database, which can give them administrator access to the instance. From there, the attacker could change the application configuration, steal stored credentials for the connected databases, read any data accessible through those connections, and export data.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-14",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.metabase.com/blog/security-update ; https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-72898",
+            "cwes": [
+                "CWE-89"
+            ]
+        },
         {
             "cveID": "CVE-2026-8037",
             "vendorProject": "Progress",
@@ -30115,7 +31179,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-11T12:40:54.475308",
+    "last_updated": "2026-08-12T12:43:37.784226",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
