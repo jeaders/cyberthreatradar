@@ -2,6 +2,176 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-64849",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-08-17T22:17:23.580",
+                "lastModified": "2026-08-20T04:16:56.280",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. Prior to 3.15.0, the unauthenticated POST /api/2.0/mlflow/webhooks/{id}/test endpoint calls _validate_webhook_url() in mlflow/utils/validation.py only for the original URL while mlflow/webhooks/delivery.py follows redirects and re-resolves the hostname without pinning the validated address, allowing attackers to reach internal or cloud metadata services and receive response_status and response_body. This issue is fixed in version 3.15.0."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "affectedData": [
+                            {
+                                "vendor": "mlflow",
+                                "product": "mlflow",
+                                "versions": [
+                                    {
+                                        "version": "< 3.15.0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.7
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-18T00:00:00+00:00",
+                                "id": "CVE-2026-64849",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-19",
+                "cisaActionDue": "2026-09-02",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-918"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "3.15.0",
+                                        "matchCriteriaId": "D762205E-C76F-495C-94C6-83DB1D4AF018"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/mlflow/mlflow/commit/ba949522477cbd5915aa55d29b0cfad7d5ddf939",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/mlflow/mlflow/issues/24179",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Issue Tracking",
+                            "Mitigation"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/mlflow/mlflow/pull/24258",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/mlflow/mlflow/releases/tag/v3.15.0",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-7gwp-5pfp-969j",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-64849",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.011090000",
+                    "percentile": "0.632800000"
+                },
+                "location": {
+                    "lat": 21.904418468475342,
+                    "lng": -68.0955765247345,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-33824",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-04-14T18:17:34.767",
@@ -525,8 +695,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.558500000",
-                    "percentile": "0.989570000"
+                    "epss": "0.778980000",
+                    "percentile": "0.995360000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -950,8 +1120,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.011400000",
-                    "percentile": "0.639310000"
+                    "epss": "0.024050000",
+                    "percentile": "0.827390000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -1149,8 +1319,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.039710000",
-                    "percentile": "0.895910000"
+                    "epss": "0.054890000",
+                    "percentile": "0.921350000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1354,8 +1524,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.004960000",
-                    "percentile": "0.403660000"
+                    "epss": "0.007510000",
+                    "percentile": "0.521590000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -1557,11 +1727,11 @@
                 ],
                 "epss": {
                     "epss": "0.010150000",
-                    "percentile": "0.603940000"
+                    "percentile": "0.605460000"
                 },
                 "location": {
-                    "lat": -13.389161586761475,
-                    "lng": 136.61084294319153,
+                    "lat": 21.904449701309204,
+                    "lng": -68.0955491065979,
                     "country": "Unknown"
                 }
             }
@@ -3476,7 +3646,7 @@
                 ],
                 "epss": {
                     "epss": "0.008740000",
-                    "percentile": "0.559630000"
+                    "percentile": "0.561300000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4002,7 +4172,7 @@
                 ],
                 "epss": {
                     "epss": "0.003320000",
-                    "percentile": "0.260750000"
+                    "percentile": "0.261970000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4364,11 +4534,11 @@
                 ],
                 "epss": {
                     "epss": "0.104000000",
-                    "percentile": "0.953350000"
+                    "percentile": "0.953540000"
                 },
                 "location": {
-                    "lat": -13.389145374298096,
-                    "lng": 136.61085534095764,
+                    "lat": 21.904463529586792,
+                    "lng": -68.09553575515747,
                     "country": "Unknown"
                 }
             }
@@ -4619,8 +4789,8 @@
                     "percentile": "0.999360000"
                 },
                 "location": {
-                    "lat": -13.389139890670776,
-                    "lng": 136.6108603477478,
+                    "lat": 21.904468774795532,
+                    "lng": -68.09553098678589,
                     "country": "Unknown"
                 }
             }
@@ -4764,11 +4934,11 @@
                 ],
                 "epss": {
                     "epss": "0.107220000",
-                    "percentile": "0.954350000"
+                    "percentile": "0.954540000"
                 },
                 "location": {
-                    "lat": -13.38913607597351,
-                    "lng": 136.61086416244507,
+                    "lat": 21.904472827911377,
+                    "lng": -68.09552693367004,
                     "country": "Unknown"
                 }
             }
@@ -4956,11 +5126,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.401040000"
+                    "percentile": "0.403110000"
                 },
                 "location": {
-                    "lat": -13.389132022857666,
-                    "lng": 136.6108682155609,
+                    "lat": 21.9044771194458,
+                    "lng": -68.09552264213562,
                     "country": "Unknown"
                 }
             }
@@ -5821,7 +5991,7 @@
                 ],
                 "epss": {
                     "epss": "0.829330000",
-                    "percentile": "0.996460000"
+                    "percentile": "0.996470000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -5967,11 +6137,11 @@
                 ],
                 "epss": {
                     "epss": "0.173520000",
-                    "percentile": "0.968510000"
+                    "percentile": "0.968640000"
                 },
                 "location": {
-                    "lat": -13.389123678207397,
-                    "lng": 136.61087656021118,
+                    "lat": 21.904485940933228,
+                    "lng": -68.09551405906677,
                     "country": "Unknown"
                 }
             }
@@ -6184,11 +6354,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.898950000"
+                    "percentile": "0.899350000"
                 },
                 "location": {
-                    "lat": -13.389119386672974,
-                    "lng": 136.61088061332703,
+                    "lat": 21.904489994049072,
+                    "lng": -68.09550976753235,
                     "country": "Unknown"
                 }
             }
@@ -6630,7 +6800,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.531980000"
+                    "percentile": "0.533740000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -6869,7 +7039,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.672350000"
+                    "percentile": "0.673610000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -7093,11 +7263,11 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.562380000"
+                    "percentile": "0.564050000"
                 },
                 "location": {
-                    "lat": -13.389108896255493,
-                    "lng": 136.6108911037445,
+                    "lat": 21.90450167655945,
+                    "lng": -68.09549808502197,
                     "country": "Unknown"
                 }
             }
@@ -7929,11 +8099,11 @@
                 ],
                 "epss": {
                     "epss": "0.732960000",
-                    "percentile": "0.994150000"
+                    "percentile": "0.994170000"
                 },
                 "location": {
-                    "lat": -13.38910436630249,
-                    "lng": 136.6108956336975,
+                    "lat": 21.90450644493103,
+                    "lng": -68.09549355506897,
                     "country": "Unknown"
                 }
             }
@@ -8113,7 +8283,7 @@
                 ],
                 "epss": {
                     "epss": "0.769810000",
-                    "percentile": "0.995090000"
+                    "percentile": "0.995100000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8121,204 +8291,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-60137",
-                "sourceIdentifier": "contact@wpscan.com",
-                "published": "2026-07-17T20:17:27.790",
-                "lastModified": "2026-07-29T20:17:06.270",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "contact@wpscan.com",
-                        "affectedData": [
-                            {
-                                "vendor": "WordPress",
-                                "product": "WordPress",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "6.8.0",
-                                        "lessThan": "6.8.6",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.9.0",
-                                        "lessThan": "6.9.5",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.0.0",
-                                        "lessThan": "7.0.2",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "contact@wpscan.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 5.9,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.2,
-                            "impactScore": 3.6
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-                                "baseScore": 9.1,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.2
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-22T03:55:47.898130Z",
-                                "id": "CVE-2026-60137",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-21",
-                "cisaActionDue": "2026-08-04",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "WordPress Core SQL Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-89"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.8",
-                                        "versionEndExcluding": "6.8.6",
-                                        "matchCriteriaId": "AA95FD78-D475-499E-9C1A-A2720E9E968A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.9",
-                                        "versionEndExcluding": "6.9.5",
-                                        "matchCriteriaId": "D5B37C71-893E-460E-8790-88EF786DF56E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0",
-                                        "versionEndExcluding": "7.0.2",
-                                        "matchCriteriaId": "02352A0A-26C7-4ABC-83F6-8493C6A3FB5C"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf",
-                        "source": "contact@wpscan.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
-                        "source": "contact@wpscan.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-60137",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.731000000",
-                    "percentile": "0.994090000"
-                },
-                "location": {
-                    "lat": -13.389097213745117,
-                    "lng": 136.61090278625488,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-64849",
+            "vendorProject": "MLflow",
+            "product": "MLflow",
+            "vulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
+            "dateAdded": "2026-08-19",
+            "shortDescription": "MLflow contains a server-side request forgery vulnerability that can allow attackers to reach internal or cloud metadata services and receive response_status and response_body.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-02",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://github.com/mlflow/mlflow/pull/24258 ; https://github.com/mlflow/mlflow/issues/24179 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-64849",
+            "cwes": [
+                "CWE-918"
+            ]
+        },
         {
             "cveID": "CVE-2026-33824",
             "vendorProject": "Microsoft",
@@ -33133,7 +33123,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-19T12:23:26.206763",
+    "last_updated": "2026-08-20T12:26:00.400426",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
