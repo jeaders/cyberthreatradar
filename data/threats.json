@@ -2,10 +2,508 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-72530",
+                "sourceIdentifier": "vulnerability@kaspersky.com",
+                "published": "2026-08-19T17:21:01.130",
+                "lastModified": "2026-08-21T04:18:15.903",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A remote unauthorized attacker with network access via port 4307/TCP to the TrueConf server versions 5.3.X to 5.3.9, 5.4.X to 5.4.9, 5.5.X to 5.5.5, and earlier could use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "vulnerability@kaspersky.com",
+                        "affectedData": [
+                            {
+                                "vendor": "TrueConf",
+                                "product": "TrueConf Server",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Windows",
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "*",
+                                        "lessThan": "5.3",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.3",
+                                        "lessThan": "5.3.9",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.4",
+                                        "lessThan": "5.4.9",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.5",
+                                        "lessThan": "5.5.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.5,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "attackRequirements": "PRESENT",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-19T00:00:00+00:00",
+                                "id": "CVE-2026-72530",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-20",
+                "cisaActionDue": "2026-09-03",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "TrueConf Server Code Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "vulnerability@kaspersky.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionEndExcluding": "5.3.9.10013",
+                                        "matchCriteriaId": "223F39D3-6C0B-449C-BBC4-22E9FD1069B0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionEndExcluding": "5.3.9.10015",
+                                        "matchCriteriaId": "651E4015-13F5-467A-B994-8CD8CF096F2B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionStartIncluding": "5.4.0.12689",
+                                        "versionEndExcluding": "5.4.9.10072",
+                                        "matchCriteriaId": "92B109B3-71FC-46C8-9790-602F6E82A1B4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionStartIncluding": "5.4.0.12700",
+                                        "versionEndExcluding": "5.4.9.10019",
+                                        "matchCriteriaId": "991CB573-4063-4F9F-980C-73049E0D86BF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionStartIncluding": "5.5.0.13826",
+                                        "versionEndExcluding": "5.5.5.10010",
+                                        "matchCriteriaId": "BA7EE78E-8CC5-4F6E-8BE2-485C61334D3C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionStartIncluding": "5.5.0.13828",
+                                        "versionEndExcluding": "5.5.5.10009",
+                                        "matchCriteriaId": "1B3BF976-3656-4152-A255-ABA311510C7C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://ics-cert.kaspersky.com/advisories/2026/08/11/trueconf-server-breakout-from-isolated-environment/",
+                        "source": "vulnerability@kaspersky.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-72530",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003400000",
+                    "percentile": "0.271680000"
+                },
+                "location": {
+                    "lat": -14.831169843673706,
+                    "lng": -104.83116555213928,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-72529",
+                "sourceIdentifier": "vulnerability@kaspersky.com",
+                "published": "2026-08-19T17:21:00.990",
+                "lastModified": "2026-08-21T04:18:15.753",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A remote unauthorized attacker with network access via port 4307/TCP to the TrueConf server versions 5.3.X to 5.3.9, 5.4.X to 5.4.9, 5.5.X to 5.5.5, and earlier could execute an arbitrary script by calling an undocumented function."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "vulnerability@kaspersky.com",
+                        "affectedData": [
+                            {
+                                "vendor": "TrueConf",
+                                "product": "TrueConf Server",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Windows",
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "*",
+                                        "lessThan": "5.3",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.3",
+                                        "lessThan": "5.3.9",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.4",
+                                        "lessThan": "5.4.9",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.5",
+                                        "lessThan": "5.5.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "vulnerability@kaspersky.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-19T00:00:00+00:00",
+                                "id": "CVE-2026-72529",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-20",
+                "cisaActionDue": "2026-08-23",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "vulnerability@kaspersky.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionEndExcluding": "5.3.9.10013",
+                                        "matchCriteriaId": "223F39D3-6C0B-449C-BBC4-22E9FD1069B0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionEndExcluding": "5.3.9.10015",
+                                        "matchCriteriaId": "651E4015-13F5-467A-B994-8CD8CF096F2B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionStartIncluding": "5.4.0.12689",
+                                        "versionEndExcluding": "5.4.9.10072",
+                                        "matchCriteriaId": "92B109B3-71FC-46C8-9790-602F6E82A1B4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionStartIncluding": "5.4.0.12700",
+                                        "versionEndExcluding": "5.4.9.10019",
+                                        "matchCriteriaId": "991CB573-4063-4F9F-980C-73049E0D86BF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:windows:*:*",
+                                        "versionStartIncluding": "5.5.0.13826",
+                                        "versionEndExcluding": "5.5.5.10010",
+                                        "matchCriteriaId": "BA7EE78E-8CC5-4F6E-8BE2-485C61334D3C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:trueconf:trueconf_server:*:*:*:*:*:linux_kernel:*:*",
+                                        "versionStartIncluding": "5.5.0.13828",
+                                        "versionEndExcluding": "5.5.5.10009",
+                                        "matchCriteriaId": "1B3BF976-3656-4152-A255-ABA311510C7C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://ics-cert.kaspersky.com/advisories/2026/08/11/trueconf-server-missing-authentication-for-critical-function/",
+                        "source": "vulnerability@kaspersky.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-72529",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.002840000",
+                    "percentile": "0.210510000"
+                },
+                "location": {
+                    "lat": -14.831157922744751,
+                    "lng": -104.83115720748901,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-64849",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-08-17T22:17:23.580",
-                "lastModified": "2026-08-20T04:16:56.280",
+                "lastModified": "2026-08-20T19:16:57.867",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -58,7 +556,7 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-08-18T00:00:00+00:00",
+                                "timestamp": "2026-08-20T03:55:29.820245Z",
                                 "id": "CVE-2026-64849",
                                 "options": [
                                     {
@@ -160,12 +658,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.011090000",
-                    "percentile": "0.632800000"
+                    "epss": "0.081540000",
+                    "percentile": "0.943980000"
                 },
                 "location": {
-                    "lat": 21.904418468475342,
-                    "lng": -68.0955765247345,
+                    "lat": -14.831152200698853,
+                    "lng": -104.83115196228027,
                     "country": "Unknown"
                 }
             }
@@ -696,7 +1194,7 @@
                 ],
                 "epss": {
                     "epss": "0.778980000",
-                    "percentile": "0.995360000"
+                    "percentile": "0.995370000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1121,7 +1619,7 @@
                 ],
                 "epss": {
                     "epss": "0.024050000",
-                    "percentile": "0.827390000"
+                    "percentile": "0.827650000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -1320,7 +1818,7 @@
                 ],
                 "epss": {
                     "epss": "0.054890000",
-                    "percentile": "0.921350000"
+                    "percentile": "0.921540000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1525,7 +2023,7 @@
                 ],
                 "epss": {
                     "epss": "0.007510000",
-                    "percentile": "0.521590000"
+                    "percentile": "0.522090000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -1727,11 +2225,11 @@
                 ],
                 "epss": {
                     "epss": "0.010150000",
-                    "percentile": "0.605460000"
+                    "percentile": "0.606030000"
                 },
                 "location": {
-                    "lat": 21.904449701309204,
-                    "lng": -68.0955491065979,
+                    "lat": -14.831131935119629,
+                    "lng": -104.83113169670105,
                     "country": "Unknown"
                 }
             }
@@ -3646,7 +4144,7 @@
                 ],
                 "epss": {
                     "epss": "0.008740000",
-                    "percentile": "0.561300000"
+                    "percentile": "0.561850000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4172,7 +4670,7 @@
                 ],
                 "epss": {
                     "epss": "0.003320000",
-                    "percentile": "0.261970000"
+                    "percentile": "0.262450000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4534,11 +5032,11 @@
                 ],
                 "epss": {
                     "epss": "0.104000000",
-                    "percentile": "0.953540000"
+                    "percentile": "0.953640000"
                 },
                 "location": {
-                    "lat": 21.904463529586792,
-                    "lng": -68.09553575515747,
+                    "lat": -14.83112096786499,
+                    "lng": -104.83112072944641,
                     "country": "Unknown"
                 }
             }
@@ -4786,11 +5284,11 @@
                 ],
                 "epss": {
                     "epss": "0.993110000",
-                    "percentile": "0.999360000"
+                    "percentile": "0.999370000"
                 },
                 "location": {
-                    "lat": 21.904468774795532,
-                    "lng": -68.09553098678589,
+                    "lat": -14.831116914749146,
+                    "lng": -104.83111643791199,
                     "country": "Unknown"
                 }
             }
@@ -4934,11 +5432,11 @@
                 ],
                 "epss": {
                     "epss": "0.107220000",
-                    "percentile": "0.954540000"
+                    "percentile": "0.954640000"
                 },
                 "location": {
-                    "lat": 21.904472827911377,
-                    "lng": -68.09552693367004,
+                    "lat": -14.83111310005188,
+                    "lng": -104.8311128616333,
                     "country": "Unknown"
                 }
             }
@@ -5126,11 +5624,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.403110000"
+                    "percentile": "0.403540000"
                 },
                 "location": {
-                    "lat": 21.9044771194458,
-                    "lng": -68.09552264213562,
+                    "lat": -14.831109046936035,
+                    "lng": -104.83110904693604,
                     "country": "Unknown"
                 }
             }
@@ -6137,11 +6635,11 @@
                 ],
                 "epss": {
                     "epss": "0.173520000",
-                    "percentile": "0.968640000"
+                    "percentile": "0.968690000"
                 },
                 "location": {
-                    "lat": 21.904485940933228,
-                    "lng": -68.09551405906677,
+                    "lat": -14.831100940704346,
+                    "lng": -104.83110094070435,
                     "country": "Unknown"
                 }
             }
@@ -6354,11 +6852,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.899350000"
+                    "percentile": "0.899550000"
                 },
                 "location": {
-                    "lat": 21.904489994049072,
-                    "lng": -68.09550976753235,
+                    "lat": -14.831097602844238,
+                    "lng": -104.83109736442566,
                     "country": "Unknown"
                 }
             }
@@ -6800,7 +7298,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.533740000"
+                    "percentile": "0.534260000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7039,7 +7537,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.673610000"
+                    "percentile": "0.674070000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -7263,1037 +7761,47 @@
                 ],
                 "epss": {
                     "epss": "0.008840000",
-                    "percentile": "0.564050000"
+                    "percentile": "0.564620000"
                 },
                 "location": {
-                    "lat": 21.90450167655945,
-                    "lng": -68.09549808502197,
+                    "lat": -14.831087827682495,
+                    "lng": -104.8310878276825,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-16232",
-                "sourceIdentifier": "cve@checkpoint.com",
-                "published": "2026-07-22T14:17:15.513",
-                "lastModified": "2026-08-10T19:59:12.073",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An authentication bypass vulnerability in the Check Point SmartConsole login process allows an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges. Successful exploitation allows the attacker to modify security policies and security configurations. Remote exploitation requires internet access to the Management Server IP address and a configuration that does not restrict Trusted Clients. Check Point is aware that this vulnerability is being exploited and has affected a very small number of customers."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@checkpoint.com",
-                        "affectedData": [
-                            {
-                                "vendor": "checkpoint",
-                                "product": "Quantum Security Management",
-                                "versions": [
-                                    {
-                                        "version": "R82.10 with Jumbo Hotfix Take 36 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R82 with Jumbo Hotfix Take 118 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R81.20 with Jumbo Hotfix Take 158 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R81.10, R81, R80.30, R80.20, R80.10, R80, and R77.30",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "checkpoint",
-                                "product": "Multi-Domain Security Management",
-                                "versions": [
-                                    {
-                                        "version": "R82.10 with Jumbo Hotfix Take 36 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R82 with Jumbo Hotfix Take 118 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R81.20 with Jumbo Hotfix Take 158 or below",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "R81.10, R81, R80.30, R80.20, R80.10, R80, and R77.30",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "cve@checkpoint.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-23T03:55:51.690584Z",
-                                "id": "CVE-2026-16232",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-22",
-                "cisaActionDue": "2026-07-25",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Check Point SmartConsole Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cve@checkpoint.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "r77.30",
-                                        "versionEndExcluding": "r81.20",
-                                        "matchCriteriaId": "831A6FD2-2397-40FC-8967-50F52E820F03"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "60E5A48C-4ABB-46DB-BA75-132AFB408BC8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BD16B955-141C-4F13-A9BC-6CCCD96248B4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_101:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F70DA99D-131C-46CC-B582-CB9419DB1B64"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_103:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B06457A0-ED12-4412-BB1D-1D24E0C751EA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_105:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FD7D44D8-C2D1-46C4-B9E4-29664BCFEAB4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_111:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3A7EF92D-B4CC-4868-9026-8F5DA0D14DFC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_113:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4347D905-4E57-4D64-9B57-C406A70DC0C1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_115:*:*:*:*:*:*",
-                                        "matchCriteriaId": "12E1E158-790D-40D4-81FF-622307C4524E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_118:*:*:*:*:*:*",
-                                        "matchCriteriaId": "01DA6EEA-746F-4EB2-81C5-F7C064519D44"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_119:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AD575960-0B66-48F9-BC9D-6F7DAEF0BCBC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_120:*:*:*:*:*:*",
-                                        "matchCriteriaId": "776DF4D6-9CC1-4BC2-93D0-9DE2405716EA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_122:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C0AABCDA-255E-4096-8DEF-483E0373E7F7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_126:*:*:*:*:*:*",
-                                        "matchCriteriaId": "236CB75E-705A-46B3-A531-29E343AA024A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_127:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D1A5645A-D22D-4B5B-86FA-29642111FEDF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B90AA06D-C905-4811-A93A-44F787563FB0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_141:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8A1BC954-296C-4A94-847D-479825CDA84C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_146:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BADA45FE-319D-421F-B4B6-D221D78B69CC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CBA6E4FC-BDCC-425F-9D69-E9183548893A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_26:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6DF70422-7897-49CC-8874-A96D4CA64E11"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_38:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F3240200-0517-43FD-BED2-D8AF844BF6E6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BE6FBF0A-195F-4E52-9FBF-CD9A71EF3A36"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_43:*:*:*:*:*:*",
-                                        "matchCriteriaId": "57B969D9-DCC0-4B06-818F-CE2521C4C0C0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_45:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CA897E69-E1CE-45A1-A0DB-A7BF444484F3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_53:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A13B8B4D-D746-432A-8833-BDF3A5A13CB4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_54:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CF0A7585-591D-4FA1-941E-55FB0207C207"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_65:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2A5B10FC-D9B5-4BB2-AD82-0B9AFB2AD0DE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_70:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ECE1DDA0-9A0A-44D5-919E-24810E7131B0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_76:*:*:*:*:*:*",
-                                        "matchCriteriaId": "491F74B1-998F-459A-A27D-EB01597C9B01"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_79:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A31115EC-8018-4EF3-B5D0-0F1EA2392680"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E415D02C-B30A-4210-8F14-47ABF46D4E64"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_84:*:*:*:*:*:*",
-                                        "matchCriteriaId": "27AED864-AC5B-4FCF-9FD7-6E0D49569BB2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_89:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ABF3E632-8D50-4373-9576-0E710511D21B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_90:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C6229824-D7A7-439E-9FDD-95F753061410"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_92:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B218B25D-7722-435C-AA22-B5411E786277"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_96:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7A49ABD5-57B9-4E06-AFFE-8A1269BB16C8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_98:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3BFA1E0F-A214-4150-A0BD-44B5424A667E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r81.20:take_99:*:*:*:*:*:*",
-                                        "matchCriteriaId": "265683A2-DA16-4CDC-AE9D-CE14BAB28A79"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2D16C37E-3064-4E15-8590-3B3020E4FF7E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C01C66D8-5B48-4255-8246-9301EEA863DA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_103:*:*:*:*:*:*",
-                                        "matchCriteriaId": "22A0D74F-5216-40D9-B07C-8789A8E2D328"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_107:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F2C763B7-B4BD-4915-A33B-9675DC2A1EA5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EC227225-ECF6-4025-B288-992ADE9B6B4B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "673F8F1B-E64E-44D1-A793-F2B4ED56DDBD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "927823EC-B157-4B5C-A4A3-F9D249C88E2C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0DBDDAA3-3CA1-4490-8D43-C8C5C5188A6E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_25:*:*:*:*:*:*",
-                                        "matchCriteriaId": "73AEA72B-8E44-4839-8651-5076EBC609B1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_33:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B11AA664-F3C8-44A6-AD11-14AF6AFAD2E2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_34:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0D511D85-A534-49A5-A9AE-88BC624311B6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_36:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B0A2B178-FC15-4D76-9075-D605F87F350D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_39:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1360EBA1-B59B-472E-9019-9EB560A05699"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F1301887-F38A-4FE6-9614-1FCF8FDE681C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_43:*:*:*:*:*:*",
-                                        "matchCriteriaId": "74DA6820-BE56-4115-A058-45CFF400DAA6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_44:*:*:*:*:*:*",
-                                        "matchCriteriaId": "54ECA176-C752-42C6-A9B2-CF408D8C580E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_60:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D2E35CA7-FED1-44E9-B144-1B51A2D7FB8B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_73:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DBA345D3-0FE7-4BE9-BEBB-96CD4055E546"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82:take_91:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E2D4A292-EE3B-4A3A-9B16-E03626F82832"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82.10:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9381DBDF-5CE2-454C-BE04-859C9A197C90"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82.10:take_19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F7442AF7-C511-4A15-AA85-FCB741F6A733"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82.10:take_24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B9E02250-00AF-4684-A9A0-E9E4032DEA66"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:multi-domain_security_management:r82.10:take_6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "27057734-9870-4BA0-9A29-DB03FDFE485F"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "r77.30",
-                                        "versionEndExcluding": "r81.20",
-                                        "matchCriteriaId": "B5E1C45D-3697-4D7D-B9B6-7A0B31D4703B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A8F7304B-C04F-4C5B-9E98-D736C55A0AE2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A897D6EA-56D9-4246-9985-9BCE0B5B575E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_101:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A93B1873-08AD-45D4-9F27-D76DEBD445E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_103:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C29DD086-7438-45BD-B1DC-B20D2753A7E2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_105:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A7792771-5225-4B15-8B12-94AC5DB158D8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_111:*:*:*:*:*:*",
-                                        "matchCriteriaId": "54CF3193-F101-4BD9-952F-47886308799B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_113:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F012878A-86CE-4881-94C1-CA39420E2888"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_115:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E8A50B35-2459-43C2-840B-D3BC78837C6A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_118:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C62D9794-379F-4722-B467-0CFE65A12B80"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_119:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D92A32EE-259C-423B-B422-A765EF4426F9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_120:*:*:*:*:*:*",
-                                        "matchCriteriaId": "668D309B-DA82-4EC4-9F09-A5772BC17447"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_122:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1230C289-7789-471F-9EA3-2FE2DCDA6981"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_126:*:*:*:*:*:*",
-                                        "matchCriteriaId": "96187221-D11F-4CFA-83AD-0548A528C320"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_127:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AF79E967-AEE7-494E-B8E4-94ABFE8BEFB7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E450F71D-626F-4515-91A2-5F4FCD8FE21D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_141:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6E73C0C0-227D-42EA-9E5F-BD9120E94213"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_146:*:*:*:*:*:*",
-                                        "matchCriteriaId": "926F2DA0-8168-4EED-BB8E-E9A7BC185970"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "273F628E-2889-412C-BC02-82FEEF4CE6AF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_26:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40CC00A2-E57F-49B8-BD9A-A3107258EFF9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_38:*:*:*:*:*:*",
-                                        "matchCriteriaId": "38C33CF8-3FA4-4775-91CF-83B9A4B51B5D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "186C5B76-630C-483E-9C44-27BA00A1365B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_43:*:*:*:*:*:*",
-                                        "matchCriteriaId": "965C32C2-BAD2-415A-B8F3-A5B2A96C077F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_45:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1D7B7908-F110-4937-A16F-E942F7EE94E8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_53:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A7CE4E97-2553-4B54-9B49-2AEFFF1E97DF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_54:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C3BB26FE-A7A4-4C0C-82E0-3B690C08AF4D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_65:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CC0BAF78-22E6-4F90-885D-654A317832C3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_70:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2CEFB387-F28B-4A26-B0BD-A99D88765CF2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_76:*:*:*:*:*:*",
-                                        "matchCriteriaId": "05C5D50F-DD77-4B91-9B98-EA79206E3AEC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_79:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E7A2F23D-A588-4895-91CB-F4726D244E71"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "496C913F-16A4-4710-80EB-0444ED57F981"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_84:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F7B7D466-132A-4584-B6D8-68C05F02E3AE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_89:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B8DDE050-D1E9-4E42-A511-FE85C5482EAD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_90:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2508B0C0-F3F7-4993-A90B-31DBD299C7EB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_92:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EB51FD59-0119-4335-851F-65F108E34885"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_96:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F26A6EE5-5083-42BE-822A-66BB279B68F6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_98:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D3BC31FE-EE44-4919-96F1-A3CD9EB2E6F9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r81.20:take_99:*:*:*:*:*:*",
-                                        "matchCriteriaId": "54AF1EBC-02AE-4303-93E9-ACE2C15831B3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9A4DD35F-132E-4CB4-846C-8C0A0DAE11A3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "28B96884-0ED3-4B3F-9FF2-D9826C6A11C8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_103:*:*:*:*:*:*",
-                                        "matchCriteriaId": "498B5193-9227-408B-BB96-93D47FE6C136"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_107:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5F5BF964-A06C-46B4-BBAF-B992F2BFE5BA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_12:*:*:*:*:*:*",
-                                        "matchCriteriaId": "25CBBD3E-F6BC-44A8-ADF8-A2A683C4FD90"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_14:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A593B6C5-F968-4C08-9CEC-0D04CBCFCBAE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_18:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B08AEDE4-10E7-49B1-A7E3-343C16651E0C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F52CCFD6-8E42-4704-BCDB-8D4743AD8878"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_25:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D1A5BD3C-6C81-4948-BD6E-351AE54E051B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_33:*:*:*:*:*:*",
-                                        "matchCriteriaId": "92E9C407-AAF6-4FE8-ABF8-28E78090C2F5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_34:*:*:*:*:*:*",
-                                        "matchCriteriaId": "17892B1E-CFC8-4A21-A654-0C67AE1CEA02"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_36:*:*:*:*:*:*",
-                                        "matchCriteriaId": "782C1482-BF59-4663-A17F-A10247715223"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_39:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ECB15DB7-ACF9-4D7E-8BAC-C65634E7C813"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_41:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D5E45EF8-9B5E-4AAB-8952-9358AC1625D4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_43:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BAA7ADEB-B8BF-41C3-B8F9-44B3F617A8B6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_44:*:*:*:*:*:*",
-                                        "matchCriteriaId": "539F141A-9129-418A-8C86-8DF565A0106B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_60:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2F1C55C8-9EFD-4B74-A1B9-83E1B8B4B306"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_73:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BC2BB169-1FE9-4DD9-95DD-C2875068B976"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82:take_91:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7924252E-97BB-4ADE-81CA-4EB974B6FD51"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82.10:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4005C231-9EA2-40A5-A2F0-5A94EA498E96"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82.10:take_19:*:*:*:*:*:*",
-                                        "matchCriteriaId": "395F93BF-DAC3-4213-AA34-D708570B5B9F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82.10:take_24:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CF84D1C9-E656-4CBF-85DB-3AE434DF87F0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:checkpoint:quantum_security_management:r82.10:take_6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "05B0445D-E33E-4F3F-B21C-B6988C8F0BBB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.checkpoint.com/results/sk/sk185169",
-                        "source": "cve@checkpoint.com",
-                        "tags": [
-                            "Mitigation",
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16232",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.732960000",
-                    "percentile": "0.994170000"
-                },
-                "location": {
-                    "lat": 21.90450644493103,
-                    "lng": -68.09549355506897,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-50522",
-                "sourceIdentifier": "secure@microsoft.com",
-                "published": "2026-07-14T17:17:01.547",
-                "lastModified": "2026-07-23T15:44:10.873",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Enterprise Server 2016",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.5561.1001",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server 2019",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.10417.20175",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Microsoft",
-                                "product": "Microsoft SharePoint Server Subscription Edition",
-                                "platforms": [
-                                    "x64-based Systems"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "16.0.0",
-                                        "lessThan": "16.0.19725.20434",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secure@microsoft.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-13T00:00:00+00:00",
-                                "id": "CVE-2026-50522",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-22",
-                "cisaActionDue": "2026-07-25",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
-                "weaknesses": [
-                    {
-                        "source": "secure@microsoft.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-502"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
-                                        "versionEndExcluding": "16.0.19725.20434",
-                                        "matchCriteriaId": "5FA63EA8-B225-4E35-A6A3-DBDECF5AC4C8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
-                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50522",
-                        "source": "secure@microsoft.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50522",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.769810000",
-                    "percentile": "0.995100000"
-                },
-                "location": {
-                    "lat": 47.674,
-                    "lng": -122.1215,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-72530",
+            "vendorProject": "TrueConf",
+            "product": "Server",
+            "vulnerabilityName": "TrueConf Server Code Injection Vulnerability",
+            "dateAdded": "2026-08-20",
+            "shortDescription": "TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-03",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories ; https://ics-cert.kaspersky.com/advisories/2026/08/11/trueconf-server-breakout-from-isolated-environment/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-72530",
+            "cwes": [
+                "CWE-94"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-72529",
+            "vendorProject": "TrueConf",
+            "product": "Server",
+            "vulnerabilityName": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-08-20",
+            "shortDescription": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-23",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories ; https://ics-cert.kaspersky.com/advisories/2026/08/11/trueconf-server-missing-authentication-for-critical-function/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-72529",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2026-64849",
             "vendorProject": "MLflow",
@@ -11880,7 +11388,7 @@
             "shortDescription": "Microsoft Windows Common Log File System Driver contains a privilege escalation vulnerability that could allow a local, privileged attacker to bypass certain security mechanisms.",
             "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
             "dueDate": "2025-10-27",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-43226 ; https://nvd.nist.gov/vuln/detail/CVE-2021-43226",
             "cwes": []
         },
@@ -25670,7 +25178,7 @@
             "shortDescription": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause Denial of Service (DoS) and potentially execute arbitrary code by sending a malicious request to the firewall.",
             "requiredAction": "Apply updates per vendor instructions.",
             "dueDate": "2022-04-05",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://nvd.nist.gov/vuln/detail/CVE-2020-5135",
             "cwes": [
                 "CWE-120"
@@ -31426,7 +30934,7 @@
             "shortDescription": "Microsoft MSCOMCTL.OCX contains an unspecified vulnerability that allows for remote code execution, allowing an attacker to take complete control of an affected system under the context of the current user.",
             "requiredAction": "Apply updates per vendor instructions.",
             "dueDate": "2022-05-03",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "notes": "https://nvd.nist.gov/vuln/detail/CVE-2012-0158",
             "cwes": [
                 "CWE-94"
@@ -33123,7 +32631,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-20T12:26:00.400426",
+    "last_updated": "2026-08-21T12:25:26.914883",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
