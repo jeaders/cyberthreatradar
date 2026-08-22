@@ -2,6 +2,161 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-73570",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-08-13T16:19:06.003",
+                "lastModified": "2026-08-22T04:18:14.897",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A remote code execution vulnerability exists in Zimbra Collaboration (ZCS) before 10.1.20 when the optional zimbra-snmp package is installed and SNMP notifications are enabled. Due to improper sanitization of untrusted input during SNMP notification processing, an unauthenticated attacker can send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Zimbra",
+                                "product": "Collaboration",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "10.1.20",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:L",
+                                "baseScore": 8.9,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-13T00:00:00+00:00",
+                                "id": "CVE-2026-73570",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-21",
+                "cisaActionDue": "2026-08-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.1.20",
+                                        "matchCriteriaId": "2DA7AB29-C275-4B2D-AC7F-288B3121779F"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Security_Center",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://moje.cert.pl/komunikaty/2026/145/aktywnie-wykorzystywana-podatnosc-w-zimbra-collaboration-suite/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-73570",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005390000",
+                    "percentile": "0.431830000"
+                },
+                "location": {
+                    "lat": 5.101606369018555,
+                    "lng": -144.89838933944702,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-72530",
                 "sourceIdentifier": "vulnerability@kaspersky.com",
                 "published": "2026-08-19T17:21:01.130",
@@ -239,12 +394,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.003400000",
-                    "percentile": "0.271680000"
+                    "epss": "0.009740000",
+                    "percentile": "0.593990000"
                 },
                 "location": {
-                    "lat": -14.831169843673706,
-                    "lng": -104.83116555213928,
+                    "lat": 5.101619482040405,
+                    "lng": -144.89837980270386,
                     "country": "Unknown"
                 }
             }
@@ -488,12 +643,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.002840000",
-                    "percentile": "0.210510000"
+                    "epss": "0.007850000",
+                    "percentile": "0.533580000"
                 },
                 "location": {
-                    "lat": -14.831157922744751,
-                    "lng": -104.83115720748901,
+                    "lat": 5.101625204086304,
+                    "lng": -144.89837455749512,
                     "country": "Unknown"
                 }
             }
@@ -659,11 +814,11 @@
                 ],
                 "epss": {
                     "epss": "0.081540000",
-                    "percentile": "0.943980000"
+                    "percentile": "0.944050000"
                 },
                 "location": {
-                    "lat": -14.831152200698853,
-                    "lng": -104.83115196228027,
+                    "lat": 5.101630210876465,
+                    "lng": -144.89836955070496,
                     "country": "Unknown"
                 }
             }
@@ -1619,7 +1774,7 @@
                 ],
                 "epss": {
                     "epss": "0.024050000",
-                    "percentile": "0.827650000"
+                    "percentile": "0.827850000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -1818,7 +1973,7 @@
                 ],
                 "epss": {
                     "epss": "0.054890000",
-                    "percentile": "0.921540000"
+                    "percentile": "0.921640000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2023,7 +2178,7 @@
                 ],
                 "epss": {
                     "epss": "0.007510000",
-                    "percentile": "0.522090000"
+                    "percentile": "0.522560000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -2225,11 +2380,11 @@
                 ],
                 "epss": {
                     "epss": "0.010150000",
-                    "percentile": "0.606030000"
+                    "percentile": "0.606440000"
                 },
                 "location": {
-                    "lat": -14.831131935119629,
-                    "lng": -104.83113169670105,
+                    "lat": 5.101650238037109,
+                    "lng": -144.89834928512573,
                     "country": "Unknown"
                 }
             }
@@ -4144,7 +4299,7 @@
                 ],
                 "epss": {
                     "epss": "0.008740000",
-                    "percentile": "0.561850000"
+                    "percentile": "0.562290000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4670,7 +4825,7 @@
                 ],
                 "epss": {
                     "epss": "0.003320000",
-                    "percentile": "0.262450000"
+                    "percentile": "0.262860000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5032,11 +5187,11 @@
                 ],
                 "epss": {
                     "epss": "0.104000000",
-                    "percentile": "0.953640000"
+                    "percentile": "0.953700000"
                 },
                 "location": {
-                    "lat": -14.83112096786499,
-                    "lng": -104.83112072944641,
+                    "lat": 5.101661920547485,
+                    "lng": -144.89833784103394,
                     "country": "Unknown"
                 }
             }
@@ -5287,8 +5442,8 @@
                     "percentile": "0.999370000"
                 },
                 "location": {
-                    "lat": -14.831116914749146,
-                    "lng": -104.83111643791199,
+                    "lat": 5.101666212081909,
+                    "lng": -144.8983335494995,
                     "country": "Unknown"
                 }
             }
@@ -5432,11 +5587,11 @@
                 ],
                 "epss": {
                     "epss": "0.107220000",
-                    "percentile": "0.954640000"
+                    "percentile": "0.954700000"
                 },
                 "location": {
-                    "lat": -14.83111310005188,
-                    "lng": -104.8311128616333,
+                    "lat": 5.101670503616333,
+                    "lng": -144.89832949638367,
                     "country": "Unknown"
                 }
             }
@@ -5624,11 +5779,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.403540000"
+                    "percentile": "0.403970000"
                 },
                 "location": {
-                    "lat": -14.831109046936035,
-                    "lng": -104.83110904693604,
+                    "lat": 5.101674556732178,
+                    "lng": -144.89832520484924,
                     "country": "Unknown"
                 }
             }
@@ -6489,7 +6644,7 @@
                 ],
                 "epss": {
                     "epss": "0.829330000",
-                    "percentile": "0.996470000"
+                    "percentile": "0.996480000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -6635,11 +6790,11 @@
                 ],
                 "epss": {
                     "epss": "0.173520000",
-                    "percentile": "0.968690000"
+                    "percentile": "0.968730000"
                 },
                 "location": {
-                    "lat": -14.831100940704346,
-                    "lng": -104.83110094070435,
+                    "lat": 5.10168194770813,
+                    "lng": -144.8983178138733,
                     "country": "Unknown"
                 }
             }
@@ -6852,11 +7007,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.899550000"
+                    "percentile": "0.899670000"
                 },
                 "location": {
-                    "lat": -14.831097602844238,
-                    "lng": -104.83109736442566,
+                    "lat": 5.101686000823975,
+                    "lng": -144.89831399917603,
                     "country": "Unknown"
                 }
             }
@@ -7298,7 +7453,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.534260000"
+                    "percentile": "0.534750000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7537,7 +7692,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.674070000"
+                    "percentile": "0.674440000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -7545,233 +7700,24 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-16812",
-                "sourceIdentifier": "psirt@arista.com",
-                "published": "2026-07-27T16:17:03.640",
-                "lastModified": "2026-07-28T14:50:33.960",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\n\n\n\nThis functionality was intended to be for internal use only and is not intended to be remotely accessible.\n\n\n\n\nHosted and Dedicated versions of VCO have already been patched in advance of this notice going out.\n\n\n\n\nThis issue was discovered externally and is known to be actively exploited."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@arista.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Arista Networks",
-                                "product": "VeloCloud Orchestrator On-Prem",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "5.2.0",
-                                        "lessThan": "5.2.3.14",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.1.0",
-                                        "lessThan": "6.1.3.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.4.0",
-                                        "lessThan": "6.4.2.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.0.0",
-                                        "lessThan": "7.0.0.1",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "psirt@arista.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "PRESENT",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@arista.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-07-27T00:00:00+00:00",
-                                "id": "CVE-2026-16812",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-07-27",
-                "cisaActionDue": "2026-07-30",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@arista.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-78"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "5.2.0",
-                                        "versionEndExcluding": "5.2.3.14",
-                                        "matchCriteriaId": "F93AF860-FDF1-4061-813C-364DA582B642"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.1.0",
-                                        "versionEndExcluding": "6.1.3.4",
-                                        "matchCriteriaId": "AD5222D5-45E4-43F9-852C-898D26F8FCDF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.4.0",
-                                        "versionEndExcluding": "6.4.2.4",
-                                        "matchCriteriaId": "C099915D-2F35-4A87-8154-82985B5DA811"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:7.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40BC6B76-2FB0-4D62-9F46-B36A863BDCE9"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24364-security-advisory-0144",
-                        "source": "psirt@arista.com",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16812",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.008840000",
-                    "percentile": "0.564620000"
-                },
-                "location": {
-                    "lat": -14.831087827682495,
-                    "lng": -104.8310878276825,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-73570",
+            "vendorProject": "Synacor",
+            "product": "Zimbra Collaboration Suite (ZCS)",
+            "vulnerabilityName": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+            "dateAdded": "2026-08-21",
+            "shortDescription": "Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-08-24",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories ; https://blog.zimbra.com/2026/07/patch-release-update-zimbra-10-1-20/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-73570",
+            "cwes": [
+                "CWE-78"
+            ]
+        },
         {
             "cveID": "CVE-2026-72530",
             "vendorProject": "TrueConf",
@@ -32631,7 +32577,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-21T12:25:26.914883",
+    "last_updated": "2026-08-22T12:18:50.374203",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
