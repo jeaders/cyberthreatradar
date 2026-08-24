@@ -146,11 +146,11 @@
                 ],
                 "epss": {
                     "epss": "0.010420000",
-                    "percentile": "0.614710000"
+                    "percentile": "0.609710000"
                 },
                 "location": {
-                    "lat": 11.93343186378479,
-                    "lng": -138.06656336784363,
+                    "lat": -11.14271879196167,
+                    "lng": -41.14271426200867,
                     "country": "Unknown"
                 }
             }
@@ -395,11 +395,11 @@
                 ],
                 "epss": {
                     "epss": "0.009740000",
-                    "percentile": "0.594140000"
+                    "percentile": "0.589120000"
                 },
                 "location": {
-                    "lat": 11.93344497680664,
-                    "lng": -138.06655406951904,
+                    "lat": -11.14270830154419,
+                    "lng": -41.14270782470703,
                     "country": "Unknown"
                 }
             }
@@ -644,181 +644,11 @@
                 ],
                 "epss": {
                     "epss": "0.007850000",
-                    "percentile": "0.533730000"
+                    "percentile": "0.529550000"
                 },
                 "location": {
-                    "lat": 11.93345046043396,
-                    "lng": -138.06654930114746,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-64849",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2026-08-17T22:17:23.580",
-                "lastModified": "2026-08-20T19:16:57.867",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. Prior to 3.15.0, the unauthenticated POST /api/2.0/mlflow/webhooks/{id}/test endpoint calls _validate_webhook_url() in mlflow/utils/validation.py only for the original URL while mlflow/webhooks/delivery.py follows redirects and re-resolves the hostname without pinning the validated address, allowing attackers to reach internal or cloud metadata services and receive response_status and response_body. This issue is fixed in version 3.15.0."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "affectedData": [
-                            {
-                                "vendor": "mlflow",
-                                "product": "mlflow",
-                                "versions": [
-                                    {
-                                        "version": "< 3.15.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "security-advisories@github.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 4.7
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-08-20T03:55:29.820245Z",
-                                "id": "CVE-2026-64849",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-19",
-                "cisaActionDue": "2026-09-02",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-918"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "3.15.0",
-                                        "matchCriteriaId": "D762205E-C76F-495C-94C6-83DB1D4AF018"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/mlflow/mlflow/commit/ba949522477cbd5915aa55d29b0cfad7d5ddf939",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/mlflow/mlflow/issues/24179",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Exploit",
-                            "Issue Tracking",
-                            "Mitigation"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/mlflow/mlflow/pull/24258",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/mlflow/mlflow/releases/tag/v3.15.0",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-7gwp-5pfp-969j",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Exploit",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-64849",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.081540000",
-                    "percentile": "0.944080000"
-                },
-                "location": {
-                    "lat": 11.933454990386963,
-                    "lng": -138.06654500961304,
+                    "lat": -11.142704725265503,
+                    "lng": -41.142704486846924,
                     "country": "Unknown"
                 }
             }
@@ -1349,7 +1179,7 @@
                 ],
                 "epss": {
                     "epss": "0.778980000",
-                    "percentile": "0.995380000"
+                    "percentile": "0.995510000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1774,7 +1604,7 @@
                 ],
                 "epss": {
                     "epss": "0.024050000",
-                    "percentile": "0.827950000"
+                    "percentile": "0.826700000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -1973,7 +1803,7 @@
                 ],
                 "epss": {
                     "epss": "0.054890000",
-                    "percentile": "0.921660000"
+                    "percentile": "0.922300000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2178,7 +2008,7 @@
                 ],
                 "epss": {
                     "epss": "0.007510000",
-                    "percentile": "0.522720000"
+                    "percentile": "0.518420000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -2380,11 +2210,11 @@
                 ],
                 "epss": {
                     "epss": "0.010000000",
-                    "percentile": "0.601910000"
+                    "percentile": "0.597030000"
                 },
                 "location": {
-                    "lat": 11.93347454071045,
-                    "lng": -138.06652522087097,
+                    "lat": -11.142693042755127,
+                    "lng": -41.14269280433655,
                     "country": "Unknown"
                 }
             }
@@ -4299,7 +4129,7 @@
                 ],
                 "epss": {
                     "epss": "0.010200000",
-                    "percentile": "0.607710000"
+                    "percentile": "0.602870000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4825,7 +4655,7 @@
                 ],
                 "epss": {
                     "epss": "0.003320000",
-                    "percentile": "0.262950000"
+                    "percentile": "0.262340000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5187,11 +5017,11 @@
                 ],
                 "epss": {
                     "epss": "0.104000000",
-                    "percentile": "0.953730000"
+                    "percentile": "0.954480000"
                 },
                 "location": {
-                    "lat": 11.933485507965088,
-                    "lng": -138.06651425361633,
+                    "lat": -11.14268708229065,
+                    "lng": -41.14268660545349,
                     "country": "Unknown"
                 }
             }
@@ -5442,8 +5272,8 @@
                     "percentile": "0.999370000"
                 },
                 "location": {
-                    "lat": 11.933489561080933,
-                    "lng": -138.0665099620819,
+                    "lat": -11.1426842212677,
+                    "lng": -41.1426842212677,
                     "country": "Unknown"
                 }
             }
@@ -5586,12 +5416,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.107220000",
-                    "percentile": "0.954730000"
+                    "epss": "0.120380000",
+                    "percentile": "0.958850000"
                 },
                 "location": {
-                    "lat": 11.93349313735962,
-                    "lng": -138.06650638580322,
+                    "lat": -11.142682313919067,
+                    "lng": -41.14268207550049,
                     "country": "Unknown"
                 }
             }
@@ -5779,11 +5609,11 @@
                 ],
                 "epss": {
                     "epss": "0.004920000",
-                    "percentile": "0.404130000"
+                    "percentile": "0.403070000"
                 },
                 "location": {
-                    "lat": 11.933497190475464,
-                    "lng": -138.06650257110596,
+                    "lat": -11.142680168151855,
+                    "lng": -41.142680168151855,
                     "country": "Unknown"
                 }
             }
@@ -6644,7 +6474,7 @@
                 ],
                 "epss": {
                     "epss": "0.829330000",
-                    "percentile": "0.996480000"
+                    "percentile": "0.996570000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -6790,11 +6620,11 @@
                 ],
                 "epss": {
                     "epss": "0.187840000",
-                    "percentile": "0.970540000"
+                    "percentile": "0.971300000"
                 },
                 "location": {
-                    "lat": 11.933504104614258,
-                    "lng": -138.06649565696716,
+                    "lat": -11.142675399780273,
+                    "lng": -41.14267539978027,
                     "country": "Unknown"
                 }
             }
@@ -7007,11 +6837,11 @@
                 ],
                 "epss": {
                     "epss": "0.041030000",
-                    "percentile": "0.899700000"
+                    "percentile": "0.900140000"
                 },
                 "location": {
-                    "lat": 11.933507680892944,
-                    "lng": -138.06649208068848,
+                    "lat": -11.14267349243164,
+                    "lng": -41.14267325401306,
                     "country": "Unknown"
                 }
             }
@@ -7453,7 +7283,7 @@
                 ],
                 "epss": {
                     "epss": "0.007880000",
-                    "percentile": "0.534900000"
+                    "percentile": "0.530700000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7692,7 +7522,7 @@
                 ],
                 "epss": {
                     "epss": "0.012640000",
-                    "percentile": "0.674600000"
+                    "percentile": "0.669980000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -32577,7 +32407,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-23T12:18:54.510614",
+    "last_updated": "2026-08-24T12:26:27.500004",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
