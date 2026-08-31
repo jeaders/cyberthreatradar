@@ -2,6 +2,292 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-82078",
+                "sourceIdentifier": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                "published": "2026-08-28T16:18:31.240",
+                "lastModified": "2026-08-31T18:10:30.273",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "affectedData": [
+                            {
+                                "vendor": "PaperCut",
+                                "product": "PaperCut MF/NG",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "24.1.10, 25.0.13, 26.0.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.4,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-31T15:25:19.545218Z",
+                                "id": "CVE-2026-82078",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-31",
+                "cisaActionDue": "2026-09-14",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "PaperCut NG/MF Unsafe Reflection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-470"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/",
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4"
+                    },
+                    {
+                        "url": "https://github.com/rapid7/metasploit-framework/pull/21842",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-82078",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.004620000",
+                    "percentile": "0.382550000"
+                },
+                "location": {
+                    "lat": 4.3666510581970215,
+                    "lng": -85.63334369659424,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-81578",
+                "sourceIdentifier": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                "published": "2026-08-28T16:18:29.600",
+                "lastModified": "2026-08-31T18:10:25.583",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An improper access control vulnerability exists in the web management interface of PaperCut MF and PaperCut NG. Under specific\u00a0conditions, unauthenticated remote requests targeting administrative functions can trigger backend actions prior to the  completion of access validation checks. This allows an unauthenticated remote attacker to modify certain system configurations."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "affectedData": [
+                            {
+                                "vendor": "PaperCut",
+                                "product": "PaperCut MF/NG",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "24.1.10, 25.0.13, 26.0.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "LOW",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "LOW",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-31T15:25:24.506491Z",
+                                "id": "CVE-2026-81578",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-08-31",
+                "cisaActionDue": "2026-09-14",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-305"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/",
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4"
+                    },
+                    {
+                        "url": "https://github.com/rapid7/metasploit-framework/pull/21842",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81578",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003930000",
+                    "percentile": "0.323970000"
+                },
+                "location": {
+                    "lat": 4.366661071777344,
+                    "lng": -85.6333384513855,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2023-49105",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2023-11-21T22:15:08.613",
@@ -192,11 +478,11 @@
                 ],
                 "epss": {
                     "epss": "0.432050000",
-                    "percentile": "0.986270000"
+                    "percentile": "0.986280000"
                 },
                 "location": {
-                    "lat": -20.165714025497437,
-                    "lng": -170.165709733963,
+                    "lat": 4.366668939590454,
+                    "lng": -85.63333058357239,
                     "country": "Unknown"
                 }
             }
@@ -498,7 +784,7 @@
                 ],
                 "epss": {
                     "epss": "0.005100000",
-                    "percentile": "0.414650000"
+                    "percentile": "0.414710000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -674,11 +960,11 @@
                 ],
                 "epss": {
                     "epss": "0.005790000",
-                    "percentile": "0.453200000"
+                    "percentile": "0.453260000"
                 },
                 "location": {
-                    "lat": -20.165695667266846,
-                    "lng": -170.16569471359253,
+                    "lat": 4.366680383682251,
+                    "lng": -85.63331937789917,
                     "country": "Unknown"
                 }
             }
@@ -928,8 +1214,8 @@
                     "percentile": "0.996660000"
                 },
                 "location": {
-                    "lat": -20.16568922996521,
-                    "lng": -170.16568875312805,
+                    "lat": 4.366685628890991,
+                    "lng": -85.63331413269043,
                     "country": "Unknown"
                 }
             }
@@ -1295,11 +1581,11 @@
                 ],
                 "epss": {
                     "epss": "0.087990000",
-                    "percentile": "0.948000000"
+                    "percentile": "0.948010000"
                 },
                 "location": {
-                    "lat": -20.16568398475647,
-                    "lng": -170.1656837463379,
+                    "lat": 4.366690635681152,
+                    "lng": -85.63330912590027,
                     "country": "Unknown"
                 }
             }
@@ -1652,11 +1938,11 @@
                 ],
                 "epss": {
                     "epss": "0.049620000",
-                    "percentile": "0.915660000"
+                    "percentile": "0.915690000"
                 },
                 "location": {
-                    "lat": -20.165679931640625,
-                    "lng": -170.16567969322205,
+                    "lat": 4.366695165634155,
+                    "lng": -85.63330459594727,
                     "country": "Unknown"
                 }
             }
@@ -2288,7 +2574,7 @@
                 ],
                 "epss": {
                     "epss": "0.095180000",
-                    "percentile": "0.950890000"
+                    "percentile": "0.950910000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -2549,11 +2835,11 @@
                 ],
                 "epss": {
                     "epss": "0.016060000",
-                    "percentile": "0.741390000"
+                    "percentile": "0.741480000"
                 },
                 "location": {
-                    "lat": -20.16567087173462,
-                    "lng": -170.16567087173462,
+                    "lat": 4.366705417633057,
+                    "lng": -85.63329458236694,
                     "country": "Unknown"
                 }
             }
@@ -2907,7 +3193,7 @@
                 ],
                 "epss": {
                     "epss": "0.528450000",
-                    "percentile": "0.988920000"
+                    "percentile": "0.988930000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3076,8 +3362,8 @@
                     "percentile": "0.996850000"
                 },
                 "location": {
-                    "lat": -20.165661811828613,
-                    "lng": -170.1656618118286,
+                    "lat": 4.366714954376221,
+                    "lng": -85.63328504562378,
                     "country": "Unknown"
                 }
             }
@@ -3273,7 +3559,7 @@
                 ],
                 "epss": {
                     "epss": "0.420200000",
-                    "percentile": "0.985910000"
+                    "percentile": "0.985920000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -3431,8 +3717,8 @@
                     "percentile": "0.973300000"
                 },
                 "location": {
-                    "lat": -20.165652990341187,
-                    "lng": -170.1656529903412,
+                    "lat": 4.3667237758636475,
+                    "lng": -85.63327622413635,
                     "country": "Unknown"
                 }
             }
@@ -3677,11 +3963,11 @@
                 ],
                 "epss": {
                     "epss": "0.018270000",
-                    "percentile": "0.772910000"
+                    "percentile": "0.773010000"
                 },
                 "location": {
-                    "lat": -20.165648937225342,
-                    "lng": -170.16564869880676,
+                    "lat": 4.366727828979492,
+                    "lng": -85.63327169418335,
                     "country": "Unknown"
                 }
             }
@@ -3926,11 +4212,11 @@
                 ],
                 "epss": {
                     "epss": "0.015540000",
-                    "percentile": "0.733840000"
+                    "percentile": "0.733930000"
                 },
                 "location": {
-                    "lat": -20.165644884109497,
-                    "lng": -170.16564464569092,
+                    "lat": 4.366732120513916,
+                    "lng": -85.6332676410675,
                     "country": "Unknown"
                 }
             }
@@ -4096,11 +4382,11 @@
                 ],
                 "epss": {
                     "epss": "0.164100000",
-                    "percentile": "0.967470000"
+                    "percentile": "0.967490000"
                 },
                 "location": {
-                    "lat": -20.165640354156494,
-                    "lng": -170.16564011573792,
+                    "lat": 4.366736888885498,
+                    "lng": -85.6332631111145,
                     "country": "Unknown"
                 }
             }
@@ -5263,416 +5549,39 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-65400",
-                "sourceIdentifier": "product-security@apple.com",
-                "published": "2026-08-06T22:18:14.533",
-                "lastModified": "2026-08-19T04:17:34.547",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An authentication issue was addressed with improved state management. This issue is fixed in macOS Sequoia 15.7.9, macOS Sonoma 14.8.9, macOS Tahoe 26.6.1. An attacker on the network may be able to authenticate to Screen Sharing without valid credentials."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "product-security@apple.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Apple",
-                                "product": "macOS",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.8.9",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "15.7.9",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "26.6.1",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-08-14T00:00:00+00:00",
-                                "id": "CVE-2026-65400",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-18",
-                "cisaActionDue": "2026-08-21",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Apple macOS Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.0",
-                                        "versionEndExcluding": "14.8.9",
-                                        "matchCriteriaId": "343D2ED2-0928-434D-9D9E-968A6365DDFE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndExcluding": "15.7.9",
-                                        "matchCriteriaId": "E0FAFB32-637E-4BE3-8A5D-ABB145B1E28B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "26.0",
-                                        "versionEndExcluding": "26.6.1",
-                                        "matchCriteriaId": "31BB841D-2EFD-42A5-9387-685A27D3094E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.apple.com/en-us/148170",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/148171",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://support.apple.com/en-us/148172",
-                        "source": "product-security@apple.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://seclists.org/fulldisclosure/2026/Aug/36",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List"
-                        ]
-                    },
-                    {
-                        "url": "http://seclists.org/fulldisclosure/2026/Aug/37",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://advisories.ncsc.nl/2026/ncsc-2026-0280.html",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65400",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.099050000",
-                    "percentile": "0.952300000"
-                },
-                "location": {
-                    "lat": 37.3349,
-                    "lng": -122.009,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-62593",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2025-11-26T23:15:47.927",
-                "lastModified": "2026-08-18T04:16:40.860",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Ray is an AI compute engine. Prior to version 2.52.0, developers working with Ray as a development tool can be exploited via a critical RCE vulnerability exploitable via Firefox and Safari. This vulnerability is due to an insufficient guard against browser-based attacks, as the current defense uses the User-Agent header starting with the string \"Mozilla\" as a defense mechanism. This defense is insufficient as the fetch specification allows the User-Agent header to be modified. Combined with a DNS rebinding attack against the browser, and this vulnerability is exploitable against a developer running Ray who inadvertently visits a malicious website, or is served a malicious advertisement (malvertising). This issue has been patched in version 2.52.0."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "affectedData": [
-                            {
-                                "vendor": "ray-project",
-                                "product": "ray",
-                                "versions": [
-                                    {
-                                        "version": "< 2.52.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security-advisories@github.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.4,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "PASSIVE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-08-17T00:00:00+00:00",
-                                "id": "CVE-2025-62593",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-17",
-                "cisaActionDue": "2026-08-20",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Ray-Project Ray Code Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-94"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-352"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:anyscale:ray:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "2.52.0",
-                                        "matchCriteriaId": "EEAA235D-B305-4247-8840-CCABC90D54C1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/ray-project/ray/commit/70e7c72780bdec075dba6cad1afe0832772bfe09",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Exploit",
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.bitsight.com/blog/rondodox-botnet-infrastructure-analysis",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-62593",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.168880000",
-                    "percentile": "0.968240000"
-                },
-                "location": {
-                    "lat": -20.165621757507324,
-                    "lng": -170.16562175750732,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-82078",
+            "vendorProject": "PaperCut",
+            "product": "NG/MF",
+            "vulnerabilityName": "PaperCut NG/MF Unsafe Reflection Vulnerability",
+            "dateAdded": "2026-08-31",
+            "shortDescription": "PaperCut NG/MF contains an unsafe reflection vulnerability that allows an attacker to manipulate system configuration parameters and execute arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process. This vulnerability can be chained with CVE-2026-81578.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-14",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/?lid=2oneu2wt0ct4 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-82078",
+            "cwes": [
+                "CWE-470"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-81578",
+            "vendorProject": "PaperCut",
+            "product": "NG/MF",
+            "vulnerabilityName": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-08-31",
+            "shortDescription": "PaperCut NG/MF contains a missing authentication for critical function vulnerability which allows an unauthenticated remote attacker to modify certain system configurations. This vulnerability can be chained with CVE-2026-82078.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-14",
+            "knownRansomwareCampaignUse": "Unknown",
+            "notes": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-81578",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2023-49105",
             "vendorProject": "ownCloud",
@@ -30704,7 +30613,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-30T15:42:21.093195",
+    "last_updated": "2026-08-31T18:25:45.871638",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
