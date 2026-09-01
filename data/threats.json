@@ -5,8 +5,8 @@
                 "id": "CVE-2026-82078",
                 "sourceIdentifier": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
                 "published": "2026-08-28T16:18:31.240",
-                "lastModified": "2026-08-31T18:10:30.273",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-09-01T04:18:02.160",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -79,11 +79,33 @@
                             }
                         }
                     ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.1,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.3,
+                            "impactScore": 6.0
+                        }
+                    ],
                     "ssvcV203": [
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-08-31T15:25:19.545218Z",
+                                "timestamp": "2026-08-28T00:00:00+00:00",
                                 "id": "CVE-2026-82078",
                                 "options": [
                                     {
@@ -118,27 +140,92 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "24.1.9",
+                                        "matchCriteriaId": "F2AF3AB4-FD10-4DE1-B906-011F45948BD0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.0.2",
+                                        "versionEndExcluding": "25.0.12",
+                                        "matchCriteriaId": "8F6ED0B8-62DC-4CF9-9810-2CCB824FBCA8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.0.2",
+                                        "versionEndExcluding": "26.0.4",
+                                        "matchCriteriaId": "51E91B81-E311-4BB9-A753-671F0C59E7F7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "24.1.9",
+                                        "matchCriteriaId": "44FCDCDE-4126-4F4F-89FC-D44924F45C82"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.0.2",
+                                        "versionEndExcluding": "25.0.12",
+                                        "matchCriteriaId": "9E727ABD-0007-424D-AB07-FB7816E43792"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.0.2",
+                                        "versionEndExcluding": "26.0.4",
+                                        "matchCriteriaId": "3938B71A-CB14-4017-A037-7D5F08DAFB13"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/",
-                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4"
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://github.com/rapid7/metasploit-framework/pull/21842",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-82078",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.004620000",
-                    "percentile": "0.382550000"
+                    "epss": "0.009260000",
+                    "percentile": "0.580220000"
                 },
                 "location": {
-                    "lat": 4.3666510581970215,
-                    "lng": -85.63334369659424,
+                    "lat": -18.29807710647583,
+                    "lng": 11.70192837715149,
                     "country": "Unknown"
                 }
             }
@@ -148,8 +235,8 @@
                 "id": "CVE-2026-81578",
                 "sourceIdentifier": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
                 "published": "2026-08-28T16:18:29.600",
-                "lastModified": "2026-08-31T18:10:25.583",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-09-01T04:18:01.990",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -222,11 +309,33 @@
                             }
                         }
                     ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
                     "ssvcV203": [
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-08-31T15:25:24.506491Z",
+                                "timestamp": "2026-08-28T00:00:00+00:00",
                                 "id": "CVE-2026-81578",
                                 "options": [
                                     {
@@ -261,27 +370,92 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "24.1.9",
+                                        "matchCriteriaId": "F2AF3AB4-FD10-4DE1-B906-011F45948BD0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.0.2",
+                                        "versionEndExcluding": "25.0.12",
+                                        "matchCriteriaId": "8F6ED0B8-62DC-4CF9-9810-2CCB824FBCA8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.0.2",
+                                        "versionEndExcluding": "26.0.4",
+                                        "matchCriteriaId": "51E91B81-E311-4BB9-A753-671F0C59E7F7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "24.1.9",
+                                        "matchCriteriaId": "44FCDCDE-4126-4F4F-89FC-D44924F45C82"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.0.2",
+                                        "versionEndExcluding": "25.0.12",
+                                        "matchCriteriaId": "9E727ABD-0007-424D-AB07-FB7816E43792"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "26.0.2",
+                                        "versionEndExcluding": "26.0.4",
+                                        "matchCriteriaId": "3938B71A-CB14-4017-A037-7D5F08DAFB13"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/",
-                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4"
+                        "source": "eb41dac7-0af8-4f84-9f6d-0272772514f4",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://github.com/rapid7/metasploit-framework/pull/21842",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81578",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Patch",
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.003930000",
-                    "percentile": "0.323970000"
+                    "epss": "0.007710000",
+                    "percentile": "0.531340000"
                 },
                 "location": {
-                    "lat": 4.366661071777344,
-                    "lng": -85.6333384513855,
+                    "lat": -18.29806089401245,
+                    "lng": 11.701940059661865,
                     "country": "Unknown"
                 }
             }
@@ -481,8 +655,8 @@
                     "percentile": "0.986280000"
                 },
                 "location": {
-                    "lat": 4.366668939590454,
-                    "lng": -85.63333058357239,
+                    "lat": -18.29805278778076,
+                    "lng": 11.701947450637817,
                     "country": "Unknown"
                 }
             }
@@ -784,7 +958,7 @@
                 ],
                 "epss": {
                     "epss": "0.005100000",
-                    "percentile": "0.414710000"
+                    "percentile": "0.415020000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -960,11 +1134,11 @@
                 ],
                 "epss": {
                     "epss": "0.005790000",
-                    "percentile": "0.453260000"
+                    "percentile": "0.453570000"
                 },
                 "location": {
-                    "lat": 4.366680383682251,
-                    "lng": -85.63331937789917,
+                    "lat": -18.298041820526123,
+                    "lng": 11.701958417892456,
                     "country": "Unknown"
                 }
             }
@@ -1211,11 +1385,11 @@
                 ],
                 "epss": {
                     "epss": "0.836330000",
-                    "percentile": "0.996660000"
+                    "percentile": "0.996670000"
                 },
                 "location": {
-                    "lat": 4.366685628890991,
-                    "lng": -85.63331413269043,
+                    "lat": -18.298036336898804,
+                    "lng": 11.701964139938354,
                     "country": "Unknown"
                 }
             }
@@ -1581,11 +1755,11 @@
                 ],
                 "epss": {
                     "epss": "0.087990000",
-                    "percentile": "0.948010000"
+                    "percentile": "0.948050000"
                 },
                 "location": {
-                    "lat": 4.366690635681152,
-                    "lng": -85.63330912590027,
+                    "lat": -18.298031091690063,
+                    "lng": 11.701969146728516,
                     "country": "Unknown"
                 }
             }
@@ -1938,11 +2112,11 @@
                 ],
                 "epss": {
                     "epss": "0.049620000",
-                    "percentile": "0.915690000"
+                    "percentile": "0.915750000"
                 },
                 "location": {
-                    "lat": 4.366695165634155,
-                    "lng": -85.63330459594727,
+                    "lat": -18.298026084899902,
+                    "lng": 11.701973915100098,
                     "country": "Unknown"
                 }
             }
@@ -2574,7 +2748,7 @@
                 ],
                 "epss": {
                     "epss": "0.095180000",
-                    "percentile": "0.950910000"
+                    "percentile": "0.950950000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -2835,11 +3009,11 @@
                 ],
                 "epss": {
                     "epss": "0.016060000",
-                    "percentile": "0.741480000"
+                    "percentile": "0.741650000"
                 },
                 "location": {
-                    "lat": 4.366705417633057,
-                    "lng": -85.63329458236694,
+                    "lat": -18.298016786575317,
+                    "lng": 11.701983451843262,
                     "country": "Unknown"
                 }
             }
@@ -3193,7 +3367,7 @@
                 ],
                 "epss": {
                     "epss": "0.528450000",
-                    "percentile": "0.988930000"
+                    "percentile": "0.988940000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3358,12 +3532,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.845540000",
-                    "percentile": "0.996850000"
+                    "epss": "0.867770000",
+                    "percentile": "0.997290000"
                 },
                 "location": {
-                    "lat": 4.366714954376221,
-                    "lng": -85.63328504562378,
+                    "lat": -18.298007011413574,
+                    "lng": 11.701993227005005,
                     "country": "Unknown"
                 }
             }
@@ -3714,11 +3888,11 @@
                 ],
                 "epss": {
                     "epss": "0.205280000",
-                    "percentile": "0.973300000"
+                    "percentile": "0.973330000"
                 },
                 "location": {
-                    "lat": 4.3667237758636475,
-                    "lng": -85.63327622413635,
+                    "lat": -18.29799771308899,
+                    "lng": 11.70200252532959,
                     "country": "Unknown"
                 }
             }
@@ -3963,11 +4137,11 @@
                 ],
                 "epss": {
                     "epss": "0.018270000",
-                    "percentile": "0.773010000"
+                    "percentile": "0.773160000"
                 },
                 "location": {
-                    "lat": 4.366727828979492,
-                    "lng": -85.63327169418335,
+                    "lat": -18.297992944717407,
+                    "lng": 11.702007055282593,
                     "country": "Unknown"
                 }
             }
@@ -4212,11 +4386,11 @@
                 ],
                 "epss": {
                     "epss": "0.015540000",
-                    "percentile": "0.733930000"
+                    "percentile": "0.734070000"
                 },
                 "location": {
-                    "lat": 4.366732120513916,
-                    "lng": -85.6332676410675,
+                    "lat": -18.297988414764404,
+                    "lng": 11.702011823654175,
                     "country": "Unknown"
                 }
             }
@@ -4382,11 +4556,11 @@
                 ],
                 "epss": {
                     "epss": "0.164100000",
-                    "percentile": "0.967490000"
+                    "percentile": "0.967510000"
                 },
                 "location": {
-                    "lat": 4.366736888885498,
-                    "lng": -85.6332631111145,
+                    "lat": -18.297983407974243,
+                    "lng": 11.702016592025757,
                     "country": "Unknown"
                 }
             }
@@ -4917,7 +5091,7 @@
                 ],
                 "epss": {
                     "epss": "0.726950000",
-                    "percentile": "0.994030000"
+                    "percentile": "0.994040000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5342,7 +5516,7 @@
                 ],
                 "epss": {
                     "epss": "0.458780000",
-                    "percentile": "0.987140000"
+                    "percentile": "0.987150000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -5541,7 +5715,7 @@
                 ],
                 "epss": {
                     "epss": "0.396520000",
-                    "percentile": "0.985130000"
+                    "percentile": "0.985140000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -30613,7 +30787,7 @@
             ]
         }
     ],
-    "last_updated": "2026-08-31T18:25:45.871638",
+    "last_updated": "2026-09-01T15:45:23.608510",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
