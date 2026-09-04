@@ -209,11 +209,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.563860000"
+                    "percentile": "0.564130000"
                 },
                 "location": {
-                    "lat": 9.579914808273315,
-                    "lng": 39.57991909980774,
+                    "lat": 9.598759651184082,
+                    "lng": -80.40123581886292,
                     "country": "Unknown"
                 }
             }
@@ -223,8 +223,8 @@
                 "id": "CVE-2026-48710",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-05-26T22:16:44.020",
-                "lastModified": "2026-09-03T13:05:54.397",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-09-04T13:19:55.517",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1049,6 +1049,24 @@
                             },
                             {
                                 "vendor": "Red Hat",
+                                "product": "Red Hat Satellite 6.19",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://catalog.redhat.com/software/containers/",
+                                "packageName": "satellite/iop-vulnerability-engine-rhel9",
+                                "cpes": [
+                                    "cpe:/a:redhat:satellite:6.19::el9"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1788190224",
+                                        "lessThan": "*",
+                                        "versionType": "rpm",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Red Hat",
                                 "product": "Exploit Intelligence",
                                 "defaultStatus": "affected",
                                 "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
@@ -1579,6 +1597,78 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:ai_inference_server:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.3.0",
+                                        "versionEndIncluding": "3.3.5",
+                                        "matchCriteriaId": "3BB03728-80D6-488F-A961-883B77B055EA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:ansible_automation_platform:2.6:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "49F4FF35-8D34-4A57-AA85-0953FF95A2DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:ansible_automation_platform:2.7:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DC59D996-1B24-462E-AB21-FFD53F909B40"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:migration_toolkit_for_applications:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "8.2.0",
+                                        "matchCriteriaId": "4EE14B60-A259-41E7-A799-BB01D1DDF4A5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:openshift_ai:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.3",
+                                        "versionEndExcluding": "3.3.5",
+                                        "matchCriteriaId": "84CC25BD-1C5F-4BBE-AE16-C424788B82E3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:openshift_ai:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.4",
+                                        "versionEndExcluding": "3.4.2",
+                                        "matchCriteriaId": "F1672580-DC29-4486-AB27-B86A37BE7BD1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:openshift_lightspeed:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C34B05C8-C19C-497F-8E1D-8F6039CDB185"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:satellite:6.17:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "342183ED-1495-4481-9164-B3ED8424B618"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:satellite:6.18:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C2205338-7476-46DC-ABB2-52F0BBAAD01D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:redhat:satellite:6.19:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BCFB23DD-F6A0-4CDB-98E8-E072C104ED4B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:redhat:enterprise_linux_ai:3.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "531FF57A-65AE-482C-9A43-D1F2ECAD6ED0"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -1639,96 +1729,166 @@
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:22992",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:22993",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:23346",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:24866",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:26226",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:30088",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:30089",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:34456",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:34526",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:34532",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:37275",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:43038",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:44696",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:51357",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:60520",
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://access.redhat.com/errata/RHSA-2026:63337",
                         "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
                     },
                     {
                         "url": "https://access.redhat.com/security/cve/CVE-2026-48710",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481742",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-48710.json",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48710",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
                     },
                     {
                         "url": "https://www.wiz.io/blog/ai-infrastructure-honeypot",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https:/www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Broken Link"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.110420000",
-                    "percentile": "0.956050000"
+                    "epss": "0.362570000",
+                    "percentile": "0.983720000"
                 },
                 "location": {
-                    "lat": 9.579927921295166,
-                    "lng": 39.5799286365509,
+                    "lat": 9.598773002624512,
+                    "lng": -80.40122652053833,
                     "country": "Unknown"
                 }
             }
@@ -1894,11 +2054,11 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.784600000"
+                    "percentile": "0.784770000"
                 },
                 "location": {
-                    "lat": 9.579934120178223,
-                    "lng": 39.5799343585968,
+                    "lat": 9.598779201507568,
+                    "lng": -80.40122032165527,
                     "country": "Unknown"
                 }
             }
@@ -2109,11 +2269,11 @@
                 ],
                 "epss": {
                     "epss": "0.076660000",
-                    "percentile": "0.941690000"
+                    "percentile": "0.941750000"
                 },
                 "location": {
-                    "lat": 9.579938888549805,
-                    "lng": 39.579939126968384,
+                    "lat": 9.598784446716309,
+                    "lng": -80.40121531486511,
                     "country": "Unknown"
                 }
             }
@@ -2311,11 +2471,11 @@
                 ],
                 "epss": {
                     "epss": "0.118450000",
-                    "percentile": "0.958000000"
+                    "percentile": "0.958040000"
                 },
                 "location": {
-                    "lat": 9.579943180084229,
-                    "lng": 39.57994341850281,
+                    "lat": 9.59878921508789,
+                    "lng": -80.40121054649353,
                     "country": "Unknown"
                 }
             }
@@ -2550,11 +2710,11 @@
                 ],
                 "epss": {
                     "epss": "0.007100000",
-                    "percentile": "0.511150000"
+                    "percentile": "0.511510000"
                 },
                 "location": {
-                    "lat": 9.57994794845581,
-                    "lng": 39.57994818687439,
+                    "lat": 9.598793268203735,
+                    "lng": -80.40120649337769,
                     "country": "Unknown"
                 }
             }
@@ -2785,11 +2945,11 @@
                 ],
                 "epss": {
                     "epss": "0.016250000",
-                    "percentile": "0.745020000"
+                    "percentile": "0.745220000"
                 },
                 "location": {
-                    "lat": 9.57995319366455,
-                    "lng": 39.57995319366455,
+                    "lat": 9.59879755973816,
+                    "lng": -80.40120244026184,
                     "country": "Unknown"
                 }
             }
@@ -3014,12 +3174,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.009260000",
-                    "percentile": "0.580910000"
+                    "epss": "0.016910000",
+                    "percentile": "0.755270000"
                 },
                 "location": {
-                    "lat": 9.579957723617554,
-                    "lng": 39.579957723617554,
+                    "lat": 9.598801612854004,
+                    "lng": -80.40119814872742,
                     "country": "Unknown"
                 }
             }
@@ -3244,12 +3404,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.007710000",
-                    "percentile": "0.532020000"
+                    "epss": "0.016170000",
+                    "percentile": "0.743930000"
                 },
                 "location": {
-                    "lat": 9.579962253570557,
-                    "lng": 39.57996225357056,
+                    "lat": 9.598805665969849,
+                    "lng": -80.40119409561157,
                     "country": "Unknown"
                 }
             }
@@ -3446,11 +3606,11 @@
                 ],
                 "epss": {
                     "epss": "0.432050000",
-                    "percentile": "0.986310000"
+                    "percentile": "0.986330000"
                 },
                 "location": {
-                    "lat": 9.57996654510498,
-                    "lng": 39.57996678352356,
+                    "lat": 9.59881043434143,
+                    "lng": -80.40118932723999,
                     "country": "Unknown"
                 }
             }
@@ -3752,7 +3912,7 @@
                 ],
                 "epss": {
                     "epss": "0.005100000",
-                    "percentile": "0.415740000"
+                    "percentile": "0.416180000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -3928,11 +4088,11 @@
                 ],
                 "epss": {
                     "epss": "0.005790000",
-                    "percentile": "0.454370000"
+                    "percentile": "0.454770000"
                 },
                 "location": {
-                    "lat": 9.57997465133667,
-                    "lng": 39.57997488975525,
+                    "lat": 9.598818302154541,
+                    "lng": -80.40118169784546,
                     "country": "Unknown"
                 }
             }
@@ -4182,8 +4342,8 @@
                     "percentile": "0.996680000"
                 },
                 "location": {
-                    "lat": 9.579979419708252,
-                    "lng": 39.57997941970825,
+                    "lat": 9.598823070526123,
+                    "lng": -80.40117597579956,
                     "country": "Unknown"
                 }
             }
@@ -4549,11 +4709,11 @@
                 ],
                 "epss": {
                     "epss": "0.087990000",
-                    "percentile": "0.948150000"
+                    "percentile": "0.948190000"
                 },
                 "location": {
-                    "lat": 9.579984188079834,
-                    "lng": 39.57998442649841,
+                    "lat": 9.598828077316284,
+                    "lng": -80.40117192268372,
                     "country": "Unknown"
                 }
             }
@@ -4906,11 +5066,11 @@
                 ],
                 "epss": {
                     "epss": "0.049620000",
-                    "percentile": "0.915920000"
+                    "percentile": "0.915990000"
                 },
                 "location": {
-                    "lat": 9.579988718032837,
-                    "lng": 39.57998871803284,
+                    "lat": 9.598832607269287,
+                    "lng": -80.40116715431213,
                     "country": "Unknown"
                 }
             }
@@ -5542,7 +5702,7 @@
                 ],
                 "epss": {
                     "epss": "0.095180000",
-                    "percentile": "0.951030000"
+                    "percentile": "0.951060000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -5803,11 +5963,11 @@
                 ],
                 "epss": {
                     "epss": "0.016060000",
-                    "percentile": "0.742100000"
+                    "percentile": "0.742300000"
                 },
                 "location": {
-                    "lat": 9.580034494400024,
-                    "lng": 39.58003497123718,
+                    "lat": 9.598840713500977,
+                    "lng": -80.40115880966187,
                     "country": "Unknown"
                 }
             }
@@ -6161,7 +6321,7 @@
                 ],
                 "epss": {
                     "epss": "0.528450000",
-                    "percentile": "0.988950000"
+                    "percentile": "0.988960000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -6327,11 +6487,11 @@
                 ],
                 "epss": {
                     "epss": "0.867770000",
-                    "percentile": "0.997300000"
+                    "percentile": "0.997310000"
                 },
                 "location": {
-                    "lat": 9.580047130584717,
-                    "lng": 39.580047369003296,
+                    "lat": 9.598849058151245,
+                    "lng": -80.40115070343018,
                     "country": "Unknown"
                 }
             }
@@ -6527,7 +6687,7 @@
                 ],
                 "epss": {
                     "epss": "0.420200000",
-                    "percentile": "0.985960000"
+                    "percentile": "0.985970000"
                 },
                 "location": {
                     "lat": 37.5295,
@@ -33403,7 +33563,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-03T15:27:56.457132",
+    "last_updated": "2026-09-04T15:25:48.983110",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
