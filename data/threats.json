@@ -2,6 +2,154 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-85046",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2026-09-03T20:17:24.210",
+                "lastModified": "2026-09-05T04:18:05.170",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "chrome-cve-admin@google.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Google",
+                                "product": "Chrome",
+                                "versions": [
+                                    {
+                                        "version": "152.0.7977.82",
+                                        "lessThan": "152.0.7977.82",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-03T00:00:00+00:00",
+                                "id": "CVE-2026-85046",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-04",
+                "cisaActionDue": "2026-09-18",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "chrome-cve-admin@google.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-843"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "152.0.7977.82",
+                                        "matchCriteriaId": "E7133861-8AAD-49BB-9137-9D737B466E1E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://issues.chromium.org/issues/542403045",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.004620000",
+                    "percentile": "0.384230000"
+                },
+                "location": {
+                    "lat": 37.422,
+                    "lng": -122.0841,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-59822",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-07-08T20:16:57.683",
@@ -212,8 +360,8 @@
                     "percentile": "0.564130000"
                 },
                 "location": {
-                    "lat": 9.598759651184082,
-                    "lng": -80.40123581886292,
+                    "lat": 13.994397163391113,
+                    "lng": -136.005597114563,
                     "country": "Unknown"
                 }
             }
@@ -223,8 +371,8 @@
                 "id": "CVE-2026-48710",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-05-26T22:16:44.020",
-                "lastModified": "2026-09-04T13:19:55.517",
-                "vulnStatus": "Modified",
+                "lastModified": "2026-09-04T15:59:29.557",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1834,7 +1982,10 @@
                     },
                     {
                         "url": "https://access.redhat.com/errata/RHSA-2026:63337",
-                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://access.redhat.com/security/cve/CVE-2026-48710",
@@ -1887,8 +2038,8 @@
                     "percentile": "0.983720000"
                 },
                 "location": {
-                    "lat": 9.598773002624512,
-                    "lng": -80.40122652053833,
+                    "lat": 13.99441146850586,
+                    "lng": -136.00558733940125,
                     "country": "Unknown"
                 }
             }
@@ -2057,8 +2208,8 @@
                     "percentile": "0.784770000"
                 },
                 "location": {
-                    "lat": 9.598779201507568,
-                    "lng": -80.40122032165527,
+                    "lat": 13.994417905807495,
+                    "lng": -136.00558185577393,
                     "country": "Unknown"
                 }
             }
@@ -2272,8 +2423,8 @@
                     "percentile": "0.941750000"
                 },
                 "location": {
-                    "lat": 9.598784446716309,
-                    "lng": -80.40121531486511,
+                    "lat": 13.994422435760498,
+                    "lng": -136.0055775642395,
                     "country": "Unknown"
                 }
             }
@@ -2474,8 +2625,8 @@
                     "percentile": "0.958040000"
                 },
                 "location": {
-                    "lat": 9.59878921508789,
-                    "lng": -80.40121054649353,
+                    "lat": 13.99442744255066,
+                    "lng": -136.00557231903076,
                     "country": "Unknown"
                 }
             }
@@ -2713,8 +2864,8 @@
                     "percentile": "0.511510000"
                 },
                 "location": {
-                    "lat": 9.598793268203735,
-                    "lng": -80.40120649337769,
+                    "lat": 13.994431495666504,
+                    "lng": -136.00556826591492,
                     "country": "Unknown"
                 }
             }
@@ -2948,8 +3099,8 @@
                     "percentile": "0.745220000"
                 },
                 "location": {
-                    "lat": 9.59879755973816,
-                    "lng": -80.40120244026184,
+                    "lat": 13.994436025619507,
+                    "lng": -136.0055639743805,
                     "country": "Unknown"
                 }
             }
@@ -3178,8 +3329,8 @@
                     "percentile": "0.755270000"
                 },
                 "location": {
-                    "lat": 9.598801612854004,
-                    "lng": -80.40119814872742,
+                    "lat": 13.994439840316772,
+                    "lng": -136.00556015968323,
                     "country": "Unknown"
                 }
             }
@@ -3408,8 +3559,8 @@
                     "percentile": "0.743930000"
                 },
                 "location": {
-                    "lat": 9.598805665969849,
-                    "lng": -80.40119409561157,
+                    "lat": 13.994443893432617,
+                    "lng": -136.00555610656738,
                     "country": "Unknown"
                 }
             }
@@ -3609,8 +3760,8 @@
                     "percentile": "0.986330000"
                 },
                 "location": {
-                    "lat": 9.59881043434143,
-                    "lng": -80.40118932723999,
+                    "lat": 13.994447708129883,
+                    "lng": -136.00555229187012,
                     "country": "Unknown"
                 }
             }
@@ -4091,8 +4242,8 @@
                     "percentile": "0.454770000"
                 },
                 "location": {
-                    "lat": 9.598818302154541,
-                    "lng": -80.40118169784546,
+                    "lat": 13.994454622268677,
+                    "lng": -136.00554513931274,
                     "country": "Unknown"
                 }
             }
@@ -4342,8 +4493,8 @@
                     "percentile": "0.996680000"
                 },
                 "location": {
-                    "lat": 9.598823070526123,
-                    "lng": -80.40117597579956,
+                    "lat": 13.99445915222168,
+                    "lng": -136.00554060935974,
                     "country": "Unknown"
                 }
             }
@@ -4712,8 +4863,8 @@
                     "percentile": "0.948190000"
                 },
                 "location": {
-                    "lat": 9.598828077316284,
-                    "lng": -80.40117192268372,
+                    "lat": 13.994463205337524,
+                    "lng": -136.00553679466248,
                     "country": "Unknown"
                 }
             }
@@ -5069,8 +5220,8 @@
                     "percentile": "0.915990000"
                 },
                 "location": {
-                    "lat": 9.598832607269287,
-                    "lng": -80.40116715431213,
+                    "lat": 13.99446725845337,
+                    "lng": -136.00553274154663,
                     "country": "Unknown"
                 }
             }
@@ -5966,8 +6117,8 @@
                     "percentile": "0.742300000"
                 },
                 "location": {
-                    "lat": 9.598840713500977,
-                    "lng": -80.40115880966187,
+                    "lat": 13.994474411010742,
+                    "lng": -136.00552558898926,
                     "country": "Unknown"
                 }
             }
@@ -6490,214 +6641,30 @@
                     "percentile": "0.997310000"
                 },
                 "location": {
-                    "lat": 9.598849058151245,
-                    "lng": -80.40115070343018,
+                    "lat": 13.994481086730957,
+                    "lng": -136.00551891326904,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-21962",
-                "sourceIdentifier": "secalert_us@oracle.com",
-                "published": "2026-01-20T22:15:59.110",
-                "lastModified": "2026-08-25T04:18:11.067",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Vulnerability in the Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in product of Oracle Fusion Middleware (component: Weblogic Server Proxy Plug-in for Apache HTTP Server, Weblogic Server Proxy Plug-in for IIS).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in.  While the vulnerability is in Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in accessible data as well as  unauthorized access to critical data or complete access to all Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in accessible data. Note: Affected version for Weblogic Server Proxy Plug-in for IIS is 12.2.1.4.0 only. CVSS 3.1 Base Score 10.0 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N)."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad en el producto Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in de Oracle Fusion Middleware (componente: Weblogic Server Proxy Plug-in para Servidor HTTP Apache, Weblogic Server Proxy Plug-in para IIS). Las versiones compatibles afectadas son 12.2.1.4.0, 14.1.1.0.0 y 14.1.2.0.0. Una vulnerabilidad f\u00e1cilmente explotable permite a un atacante no autenticado con acceso de red v\u00eda HTTP comprometer Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in. Aunque la vulnerabilidad est\u00e1 en Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in, los ataques pueden impactar significativamente productos adicionales (cambio de alcance). Los ataques exitosos de esta vulnerabilidad pueden resultar en acceso no autorizado de creaci\u00f3n, eliminaci\u00f3n o modificaci\u00f3n de datos cr\u00edticos o de todos los datos accesibles por Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in, as\u00ed como acceso no autorizado a datos cr\u00edticos o acceso completo a todos los datos accesibles por Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in. Nota: La versi\u00f3n afectada para Weblogic Server Proxy Plug-in para IIS es solo 12.2.1.4.0. Puntuaci\u00f3n Base CVSS 3.1 10.0 (impactos en la Confidencialidad e Integridad). Vector CVSS: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N)."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "secalert_us@oracle.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Oracle Corporation",
-                                "product": "Oracle HTTP Server, Oracle Weblogic Server Proxy Plug-in",
-                                "versions": [
-                                    {
-                                        "version": "12.2.1.4.0",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14.1.1.0.0",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14.1.2.0.0",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "secalert_us@oracle.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.8
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-01-21T00:00:00+00:00",
-                                "id": "CVE-2026-21962",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-24",
-                "cisaActionDue": "2026-08-27",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-284"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:http_server:12.2.1.4.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AD04BEE5-E9A8-4584-A68C-0195CE9C402C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:http_server:14.1.1.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "24404505-FD69-4844-8253-053776E1CC1D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:http_server:14.1.2.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "49A6B4CB-3C5C-446A-902D-3C4824CA24D0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:weblogic_server_proxy_plug-in:12.2.1.4.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5E29C004-51D7-4BBE-B28A-EE6B7B10F89F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:weblogic_server_proxy_plug-in:14.1.1.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6E726C52-A697-4A3B-AA34-F88FF8FE5DEB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:oracle:weblogic_server_proxy_plug-in:14.1.2.0.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A6C22A45-61D1-43D3-A187-993FBA4485F0"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://www.oracle.com/security-alerts/cpujan2026.html",
-                        "source": "secalert_us@oracle.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/Ashwesker/Ashwesker-CVE-2026-21962/issues/1",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Broken Link",
-                            "Not Applicable"
-                        ]
-                    },
-                    {
-                        "url": "https://web.archive.org/web/20260129165916/https://github.com/Ashwesker/Ashwesker-CVE-2026-21962/issues/1",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Issue Tracking"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21962",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://x.com/0xacb/status/2015473216844620280",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Not Applicable"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.420200000",
-                    "percentile": "0.985970000"
-                },
-                "location": {
-                    "lat": 37.5295,
-                    "lng": -122.253,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-85046",
+            "vendorProject": "Google",
+            "product": "Chromium V8",
+            "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+            "dateAdded": "2026-09-04",
+            "shortDescription": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-18",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
+            "cwes": [
+                "CWE-843"
+            ]
+        },
         {
             "cveID": "CVE-2026-59822",
             "vendorProject": "BerriAI",
@@ -20540,7 +20507,7 @@
             "shortDescription": "Microsoft Windows Common Log File System (CLFS) driver contains an unspecified vulnerability that allows for privilege escalation.",
             "requiredAction": "Apply updates per vendor instructions.",
             "dueDate": "2022-10-05",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "forensicTriage": "No",
             "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-37969;  https://nvd.nist.gov/vuln/detail/CVE-2022-37969",
             "cwes": [
@@ -26885,7 +26852,7 @@
             "shortDescription": "An access of resource using incompatible type vulnerability exists within Adobe Flash Player that allows an attacker to perform remote code execution.",
             "requiredAction": "The impacted product is end-of-life and should be disconnected if still in use.",
             "dueDate": "2022-03-24",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "forensicTriage": "No",
             "notes": "https://nvd.nist.gov/vuln/detail/CVE-2016-4117",
             "cwes": []
@@ -33563,7 +33530,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-04T15:25:48.983110",
+    "last_updated": "2026-09-05T14:13:00.732724",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
