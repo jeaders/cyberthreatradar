@@ -5,8 +5,8 @@
                 "id": "CVE-2026-85046",
                 "sourceIdentifier": "chrome-cve-admin@google.com",
                 "published": "2026-09-03T20:17:24.210",
-                "lastModified": "2026-09-06T02:17:19.167",
-                "vulnStatus": "Modified",
+                "lastModified": "2026-09-08T14:55:04.093",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -111,6 +111,22 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:v8:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "15.3.48",
+                                        "matchCriteriaId": "62F85713-22F2-43E2-B84B-F4E9E0B56490"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -131,19 +147,34 @@
                     },
                     {
                         "url": "https://github.com/Serotav/Writeups/blob/77556c57999805fa7815a114da51d91cf24fbea9/v8/When_Sorting_Leads_To_Confusion.md",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://github.com/v8/v8/commit/e0562d87ad9c17042b581582c99237d798572e67",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Patch"
+                        ]
                     },
                     {
                         "url": "https://news.ycombinator.com/item?id=49570669",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://serotav.github.io/Writeups/v8/when-sorting-leads-to-confusion/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046",
@@ -155,7 +186,7 @@
                 ],
                 "epss": {
                     "epss": "0.011620000",
-                    "percentile": "0.651520000"
+                    "percentile": "0.651680000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -373,11 +404,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.564650000"
+                    "percentile": "0.564800000"
                 },
                 "location": {
-                    "lat": 23.83197832107544,
-                    "lng": -6.168017148971558,
+                    "lat": 27.911692142486572,
+                    "lng": -2.0883030891418457,
                     "country": "Unknown"
                 }
             }
@@ -2051,11 +2082,11 @@
                 ],
                 "epss": {
                     "epss": "0.362570000",
-                    "percentile": "0.983750000"
+                    "percentile": "0.983760000"
                 },
                 "location": {
-                    "lat": 23.831989526748657,
-                    "lng": -6.1680097579956055,
+                    "lat": 27.911702871322632,
+                    "lng": -2.088296413421631,
                     "country": "Unknown"
                 }
             }
@@ -2221,11 +2252,11 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.785140000"
+                    "percentile": "0.785260000"
                 },
                 "location": {
-                    "lat": 23.83199715614319,
-                    "lng": -6.168002605438232,
+                    "lat": 27.911708116531372,
+                    "lng": -2.088291883468628,
                     "country": "Unknown"
                 }
             }
@@ -2436,11 +2467,11 @@
                 ],
                 "epss": {
                     "epss": "0.076660000",
-                    "percentile": "0.941870000"
+                    "percentile": "0.941910000"
                 },
                 "location": {
-                    "lat": 23.83200240135193,
-                    "lng": -6.167997598648071,
+                    "lat": 27.911712169647217,
+                    "lng": -2.088287830352783,
                     "country": "Unknown"
                 }
             }
@@ -2638,11 +2669,11 @@
                 ],
                 "epss": {
                     "epss": "0.118450000",
-                    "percentile": "0.958120000"
+                    "percentile": "0.958150000"
                 },
                 "location": {
-                    "lat": 23.83200693130493,
-                    "lng": -6.167992830276489,
+                    "lat": 27.91171646118164,
+                    "lng": -2.0882833003997803,
                     "country": "Unknown"
                 }
             }
@@ -2877,11 +2908,11 @@
                 ],
                 "epss": {
                     "epss": "0.007100000",
-                    "percentile": "0.512200000"
+                    "percentile": "0.512400000"
                 },
                 "location": {
-                    "lat": 23.832011938095093,
-                    "lng": -6.167987823486328,
+                    "lat": 27.9117214679718,
+                    "lng": -2.0882785320281982,
                     "country": "Unknown"
                 }
             }
@@ -3112,11 +3143,11 @@
                 ],
                 "epss": {
                     "epss": "0.016250000",
-                    "percentile": "0.745670000"
+                    "percentile": "0.745820000"
                 },
                 "location": {
-                    "lat": 23.83201766014099,
-                    "lng": -6.167982339859009,
+                    "lat": 27.911725521087646,
+                    "lng": -2.0882744789123535,
                     "country": "Unknown"
                 }
             }
@@ -3342,11 +3373,11 @@
                 ],
                 "epss": {
                     "epss": "0.016910000",
-                    "percentile": "0.755670000"
+                    "percentile": "0.755810000"
                 },
                 "location": {
-                    "lat": 23.832021951675415,
-                    "lng": -6.167978048324585,
+                    "lat": 27.91172981262207,
+                    "lng": -2.0882697105407715,
                     "country": "Unknown"
                 }
             }
@@ -3572,11 +3603,11 @@
                 ],
                 "epss": {
                     "epss": "0.016170000",
-                    "percentile": "0.744370000"
+                    "percentile": "0.744510000"
                 },
                 "location": {
-                    "lat": 23.83202600479126,
-                    "lng": -6.167973518371582,
+                    "lat": 27.911734342575073,
+                    "lng": -2.0882656574249268,
                     "country": "Unknown"
                 }
             }
@@ -3776,8 +3807,8 @@
                     "percentile": "0.986350000"
                 },
                 "location": {
-                    "lat": 23.832030773162842,
-                    "lng": -6.167969226837158,
+                    "lat": 27.911738395690918,
+                    "lng": -2.088261365890503,
                     "country": "Unknown"
                 }
             }
@@ -4079,7 +4110,7 @@
                 ],
                 "epss": {
                     "epss": "0.005100000",
-                    "percentile": "0.416950000"
+                    "percentile": "0.417170000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4255,11 +4286,11 @@
                 ],
                 "epss": {
                     "epss": "0.005790000",
-                    "percentile": "0.455540000"
+                    "percentile": "0.455760000"
                 },
                 "location": {
-                    "lat": 23.83203959465027,
-                    "lng": -6.1679604053497314,
+                    "lat": 27.91174578666687,
+                    "lng": -2.08825421333313,
                     "country": "Unknown"
                 }
             }
@@ -4506,11 +4537,11 @@
                 ],
                 "epss": {
                     "epss": "0.836330000",
-                    "percentile": "0.996680000"
+                    "percentile": "0.996670000"
                 },
                 "location": {
-                    "lat": 23.832045316696167,
-                    "lng": -6.167954683303833,
+                    "lat": 27.911749601364136,
+                    "lng": -2.0882503986358643,
                     "country": "Unknown"
                 }
             }
@@ -4876,11 +4907,11 @@
                 ],
                 "epss": {
                     "epss": "0.087990000",
-                    "percentile": "0.948290000"
+                    "percentile": "0.948330000"
                 },
                 "location": {
-                    "lat": 23.83204984664917,
-                    "lng": -6.16795015335083,
+                    "lat": 27.91175365447998,
+                    "lng": -2.0882463455200195,
                     "country": "Unknown"
                 }
             }
@@ -5233,11 +5264,11 @@
                 ],
                 "epss": {
                     "epss": "0.049620000",
-                    "percentile": "0.916140000"
+                    "percentile": "0.916190000"
                 },
                 "location": {
-                    "lat": 23.832053899765015,
-                    "lng": -6.167945623397827,
+                    "lat": 27.911757469177246,
+                    "lng": -2.088242530822754,
                     "country": "Unknown"
                 }
             }
@@ -5869,7 +5900,7 @@
                 ],
                 "epss": {
                     "epss": "0.095180000",
-                    "percentile": "0.951150000"
+                    "percentile": "0.951180000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -6130,11 +6161,11 @@
                 ],
                 "epss": {
                     "epss": "0.016060000",
-                    "percentile": "0.742730000"
+                    "percentile": "0.742880000"
                 },
                 "location": {
-                    "lat": 23.832062482833862,
-                    "lng": -6.167937278747559,
+                    "lat": 27.911765813827515,
+                    "lng": -2.0882341861724854,
                     "country": "Unknown"
                 }
             }
@@ -6488,7 +6519,7 @@
                 ],
                 "epss": {
                     "epss": "0.528450000",
-                    "percentile": "0.988960000"
+                    "percentile": "0.988970000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -6657,8 +6688,8 @@
                     "percentile": "0.997300000"
                 },
                 "location": {
-                    "lat": 23.832069873809814,
-                    "lng": -6.1679298877716064,
+                    "lat": 27.911772966384888,
+                    "lng": -2.0882270336151123,
                     "country": "Unknown"
                 }
             }
@@ -33546,7 +33577,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-07T16:51:06.596599",
+    "last_updated": "2026-09-08T15:39:12.037172",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
