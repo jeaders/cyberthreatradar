@@ -2,6 +2,518 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-86060",
+                "sourceIdentifier": "cvd@cert.pl",
+                "published": "2026-09-05T20:17:18.703",
+                "lastModified": "2026-09-11T12:52:16.507",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "RouterOS contains an argument-handling flaw in the SSH login\npath involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask\u00a0to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to reach the RouterOS login helper.This issue was fixed in versions:\u00a06.49.21 (Long-term),\u00a07.23.4 (Long-term)\u00a0and\u00a07.24.2 (Stable)"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "affectedData": [
+                            {
+                                "vendor": "Mikrotik",
+                                "product": "RouterOS",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "7.24",
+                                        "lessThan": "7.24.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.23.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.0.0",
+                                        "lessThan": "6.49.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "cvd@cert.pl",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.2,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "PRESENT",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-08T00:00:00+00:00",
+                                "id": "CVE-2026-86060",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-10",
+                "cisaActionDue": "2026-09-13",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-88"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.0",
+                                        "versionEndExcluding": "6.49.21",
+                                        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.23.4",
+                                        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.24",
+                                        "versionEndExcluding": "7.24.2",
+                                        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86060",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006890000",
+                    "percentile": "0.507380000"
+                },
+                "location": {
+                    "lat": -13.934749364852905,
+                    "lng": -163.9347448348999,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-67277",
+                "sourceIdentifier": "cvd@cert.pl",
+                "published": "2026-09-05T20:17:18.120",
+                "lastModified": "2026-09-11T12:52:29.533",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions:\u00a06.49.21 (Long-term),\u00a07.23.4 (Long-term)\u00a0and\u00a07.24.2 (Stable)"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "affectedData": [
+                            {
+                                "vendor": "Mikrotik",
+                                "product": "RouterOS",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "7.24",
+                                        "lessThan": "7.24.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.23.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.0.0",
+                                        "lessThan": "6.49.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "cvd@cert.pl",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "LOW",
+                                "vulnIntegrityImpact": "NONE",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+                                "baseScore": 8.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.2
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-08T00:00:00+00:00",
+                                "id": "CVE-2026-67277",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-10",
+                "cisaActionDue": "2026-09-13",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.0",
+                                        "versionEndExcluding": "6.49.21",
+                                        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.23.4",
+                                        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.24",
+                                        "versionEndExcluding": "7.24.2",
+                                        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67277",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.007480000",
+                    "percentile": "0.527890000"
+                },
+                "location": {
+                    "lat": -13.934736967086792,
+                    "lng": -163.93473601341248,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-19490",
                 "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
                 "published": "2026-08-19T13:17:45.000",
@@ -243,12 +755,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.060020000",
-                    "percentile": "0.928910000"
+                    "epss": "0.055970000",
+                    "percentile": "0.924450000"
                 },
                 "location": {
-                    "lat": -2.0944607257843018,
-                    "lng": 87.90554428100586,
+                    "lat": -13.934731245040894,
+                    "lng": -163.93473100662231,
                     "country": "Unknown"
                 }
             }
@@ -597,8 +1109,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.016960000",
-                    "percentile": "0.757860000"
+                    "epss": "0.024030000",
+                    "percentile": "0.830860000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -745,8 +1257,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.007640000",
-                    "percentile": "0.533020000"
+                    "epss": "0.008590000",
+                    "percentile": "0.563750000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -1543,8 +2055,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.746970000",
-                    "percentile": "0.994700000"
+                    "epss": "0.757520000",
+                    "percentile": "0.994910000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2669,7 +3181,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.810320000"
+                    "percentile": "0.810480000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -2958,7 +3470,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.481880000"
+                    "percentile": "0.482220000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3163,11 +3675,11 @@
                 ],
                 "epss": {
                     "epss": "0.007440000",
-                    "percentile": "0.526310000"
+                    "percentile": "0.526670000"
                 },
                 "location": {
-                    "lat": -2.0944252014160156,
-                    "lng": 87.9055757522583,
+                    "lat": -13.934708833694458,
+                    "lng": -163.93470859527588,
                     "country": "Unknown"
                 }
             }
@@ -3579,7 +4091,7 @@
                 ],
                 "epss": {
                     "epss": "0.005720000",
-                    "percentile": "0.454180000"
+                    "percentile": "0.454570000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -3774,7 +4286,7 @@
                 ],
                 "epss": {
                     "epss": "0.012600000",
-                    "percentile": "0.678510000"
+                    "percentile": "0.678760000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -3992,11 +4504,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.566810000"
+                    "percentile": "0.567160000"
                 },
                 "location": {
-                    "lat": -2.094412088394165,
-                    "lng": 87.90558815002441,
+                    "lat": -13.93469786643982,
+                    "lng": -163.93469762802124,
                     "country": "Unknown"
                 }
             }
@@ -5670,11 +6182,11 @@
                 ],
                 "epss": {
                     "epss": "0.362570000",
-                    "percentile": "0.983850000"
+                    "percentile": "0.983860000"
                 },
                 "location": {
-                    "lat": -2.094406843185425,
-                    "lng": 87.90559339523315,
+                    "lat": -13.934693336486816,
+                    "lng": -163.93469309806824,
                     "country": "Unknown"
                 }
             }
@@ -5840,11 +6352,11 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.786470000"
+                    "percentile": "0.786640000"
                 },
                 "location": {
-                    "lat": -2.094402551651001,
-                    "lng": 87.905597448349,
+                    "lat": -13.93468976020813,
+                    "lng": -163.93468952178955,
                     "country": "Unknown"
                 }
             }
@@ -6055,11 +6567,11 @@
                 ],
                 "epss": {
                     "epss": "0.076660000",
-                    "percentile": "0.942250000"
+                    "percentile": "0.942290000"
                 },
                 "location": {
-                    "lat": -2.0943970680236816,
-                    "lng": 87.90560340881348,
+                    "lat": -13.934686183929443,
+                    "lng": -163.93468594551086,
                     "country": "Unknown"
                 }
             }
@@ -6257,11 +6769,11 @@
                 ],
                 "epss": {
                     "epss": "0.118450000",
-                    "percentile": "0.958400000"
+                    "percentile": "0.958430000"
                 },
                 "location": {
-                    "lat": -2.0943875312805176,
-                    "lng": 87.90561270713806,
+                    "lat": -13.934682369232178,
+                    "lng": -163.9346821308136,
                     "country": "Unknown"
                 }
             }
@@ -6496,11 +7008,11 @@
                 ],
                 "epss": {
                     "epss": "0.046670000",
-                    "percentile": "0.912090000"
+                    "percentile": "0.912170000"
                 },
                 "location": {
-                    "lat": -2.094381332397461,
-                    "lng": 87.90561890602112,
+                    "lat": -13.934678792953491,
+                    "lng": -163.9346785545349,
                     "country": "Unknown"
                 }
             }
@@ -6731,11 +7243,11 @@
                 ],
                 "epss": {
                     "epss": "0.085050000",
-                    "percentile": "0.947060000"
+                    "percentile": "0.947110000"
                 },
                 "location": {
-                    "lat": -2.0943751335144043,
-                    "lng": 87.90562510490417,
+                    "lat": -13.934674978256226,
+                    "lng": -163.93467473983765,
                     "country": "Unknown"
                 }
             }
@@ -6961,11 +7473,11 @@
                 ],
                 "epss": {
                     "epss": "0.016910000",
-                    "percentile": "0.757200000"
+                    "percentile": "0.757390000"
                 },
                 "location": {
-                    "lat": -2.0943360328674316,
-                    "lng": 87.9056646823883,
+                    "lat": -13.93467116355896,
+                    "lng": -163.93467092514038,
                     "country": "Unknown"
                 }
             }
@@ -7191,524 +7703,49 @@
                 ],
                 "epss": {
                     "epss": "0.016170000",
-                    "percentile": "0.745950000"
+                    "percentile": "0.746140000"
                 },
                 "location": {
-                    "lat": -2.094329595565796,
-                    "lng": 87.90567064285278,
+                    "lat": -13.934667825698853,
+                    "lng": -163.93466758728027,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2023-49105",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2023-11-21T22:15:08.613",
-                "lastModified": "2026-08-28T12:21:09.753",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An issue was discovered in ownCloud owncloud/core before 10.13.1. An attacker can access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured. This occurs because pre-signed URLs can be accepted even when no signing-key is configured for the owner of the files. The earliest affected version is 10.6.0."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Se descubri\u00f3 un problema en ownCloud owncloud/core antes de la versi\u00f3n 10.13.1. Un atacante puede acceder, modificar o eliminar cualquier archivo sin autenticaci\u00f3n si conoce el nombre de usuario de la v\u00edctima y la v\u00edctima no tiene una clave de firma configurada. Esto ocurre porque las URL prefirmadas se pueden aceptar incluso cuando no se configura ninguna clave de firma para el propietario de los archivos. La primera versi\u00f3n afectada es la 10.6.0."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@mitre.org",
-                        "affectedData": [
-                            {
-                                "vendor": "n/a",
-                                "product": "n/a",
-                                "versions": [
-                                    {
-                                        "version": "n/a",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "cve@mitre.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2023-11-27T00:00:00+00:00",
-                                "id": "CVE-2023-49105",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-27",
-                "cisaActionDue": "2026-08-30",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "ownCloud Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:owncloud:owncloud_server:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.6.0",
-                                        "versionEndExcluding": "10.13.1",
-                                        "matchCriteriaId": "C9361F71-3BBC-4E79-9607-AD83017DD232"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://owncloud.com/security-advisories/webdav-api-authentication-bypass-using-pre-signed-urls/",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://owncloud.org/security",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://owncloud.com/security-advisories/webdav-api-authentication-bypass-using-pre-signed-urls/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://owncloud.org/security",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Product"
-                        ]
-                    },
-                    {
-                        "url": "https://hunt.io/blog/chinese-speaking-operator-philippine-nuclear-naval-contractor",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-49105",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.432050000",
-                    "percentile": "0.986420000"
-                },
-                "location": {
-                    "lat": -2.0943241119384766,
-                    "lng": 87.9056761264801,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-53362",
-                "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                "published": "2026-07-04T12:17:02.113",
-                "lastModified": "2026-08-28T20:18:10.133",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: account for fraggap on the paged allocation path\n\nIn __ip6_append_data(), when the paged-allocation branch is taken\n(MSG_MORE / NETIF_F_SG / large fraglen), alloclen and pagedlen are\ncomputed as\n\n\talloclen = fragheaderlen + transhdrlen;\n\tpagedlen = datalen - transhdrlen;\n\ndatalen already includes fraggap (datalen = length + fraggap). When\nfraggap is non-zero, this is not the first skb and transhdrlen is zero.\nThe fraggap bytes carried over from the previous skb are copied just past\nthe fragment headers in the new skb's linear area. The linear area is\ntherefore undersized by fraggap bytes while pagedlen is overstated by the\nsame amount, and the copy writes past skb->end into the trailing\nskb_shared_info.\n\nAn unprivileged user can trigger this via a UDPv6 socket using\nMSG_MORE together with MSG_SPLICE_PAGES.\n\nThe bad accounting was introduced by commit 773ba4fe9104 (\"ipv6:\navoid partial copy for zc\"). Before commit ce650a166335 (\"udp6: Fix\n__ip6_append_data()'s handling of MSG_SPLICE_PAGES\"), the negative\ncopy value caused -EINVAL to be returned. That later commit allowed\nMSG_SPLICE_PAGES to proceed in this case, making the corruption\ntriggerable.\n\nThe non-paged branch sets alloclen to fraglen, which already accounts\nfor fraggap because datalen does. Bring the paged branch in line by\nadding fraggap to alloclen and subtracting it from pagedlen.\n\nAfter this adjustment, copy no longer collapses to -fraggap on the\npaged path, so remove the stale comment describing that old arithmetic.\nSince a negative copy is no longer expected for a valid MSG_SPLICE_PAGES\ncase, remove the MSG_SPLICE_PAGES exception from the negative copy check."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "affectedData": [
-                            {
-                                "vendor": "Linux",
-                                "product": "Linux",
-                                "defaultStatus": "unaffected",
-                                "programFiles": [
-                                    "net/ipv6/ip6_output.c"
-                                ],
-                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
-                                "versions": [
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "14200d435af9a9eeb444f529fc2f689a236b7962",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "65fb14cbebb0cd0eff903a22d33537ddc8b95769",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "46f201f8b4c39633a1fa3dc12459f506d470993d",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "6374fb9edf72c67a118a2c214a0dddd04c921e0a",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "e9eacf19281ea2498b36291b56c9606118c2d74e",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "773ba4fe9104a64a54d1c00f0fb6ffb95def2b03",
-                                        "lessThan": "736b380e28d0480c7bc3e022f1950f31fe53a7c5",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Linux",
-                                "product": "Linux",
-                                "defaultStatus": "affected",
-                                "programFiles": [
-                                    "net/ipv6/ip6_output.c"
-                                ],
-                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
-                                "versions": [
-                                    {
-                                        "version": "6.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "6.0",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.1.177",
-                                        "lessThanOrEqual": "6.1.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.6.144",
-                                        "lessThanOrEqual": "6.6.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.12.95",
-                                        "lessThanOrEqual": "6.12.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.18.38",
-                                        "lessThanOrEqual": "6.18.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "7.1.3",
-                                        "lessThanOrEqual": "7.1.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "7.2",
-                                        "lessThanOrEqual": "*",
-                                        "versionType": "original_commit_for_fix",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-08-28T03:55:26.491246Z",
-                                "id": "CVE-2026-53362",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-08-27",
-                "cisaActionDue": "2026-08-30",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Linux Kernel Unspecified Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-787"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-122"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0",
-                                        "versionEndExcluding": "6.1.177",
-                                        "matchCriteriaId": "E1C3142A-8469-4087-A10A-726FF6961047"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.2",
-                                        "versionEndExcluding": "6.6.144",
-                                        "matchCriteriaId": "C8AD3BC8-C843-423C-B9DB-CB52F67F578E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.7",
-                                        "versionEndExcluding": "6.12.95",
-                                        "matchCriteriaId": "4E206B86-E0E3-4394-A93F-39F2D50A8AA8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.13",
-                                        "versionEndExcluding": "6.18.38",
-                                        "matchCriteriaId": "FA591B28-5D62-449E-BDBE-3C9391BF070A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.19",
-                                        "versionEndExcluding": "7.1.3",
-                                        "matchCriteriaId": "9526B150-E2B3-4C6F-8AE5-1AF92B75AD9E"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://git.kernel.org/stable/c/14200d435af9a9eeb444f529fc2f689a236b7962",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/46f201f8b4c39633a1fa3dc12459f506d470993d",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/6374fb9edf72c67a118a2c214a0dddd04c921e0a",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/65fb14cbebb0cd0eff903a22d33537ddc8b95769",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/736b380e28d0480c7bc3e022f1950f31fe53a7c5",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/e9eacf19281ea2498b36291b56c9606118c2d74e",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-53362",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.005100000",
-                    "percentile": "0.418940000"
-                },
-                "location": {
-                    "lat": 45.5231,
-                    "lng": -122.6765,
-                    "country": "Global"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-86060",
+            "vendorProject": "MikroTik",
+            "product": "RouterOS",
+            "vulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+            "dateAdded": "2026-09-10",
+            "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-13",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": " ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
+            "cwes": [
+                "CWE-88"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-67277",
+            "vendorProject": "MikroTik",
+            "product": "RouterOS",
+            "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-09-10",
+            "shortDescription": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-13",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-67277",
+            "cwes": [
+                "CWE-306"
+            ]
+        },
         {
             "cveID": "CVE-2026-19490",
             "vendorProject": "Citrix",
@@ -8471,7 +8508,7 @@
             "shortDescription": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-08-01",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "forensicTriage": "No",
             "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20316",
             "cwes": [
@@ -34721,7 +34758,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-10T15:28:47.696697",
+    "last_updated": "2026-09-11T15:30:26.963909",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
