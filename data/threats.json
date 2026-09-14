@@ -155,11 +155,11 @@
                 ],
                 "epss": {
                     "epss": "0.006910000",
-                    "percentile": "0.508410000"
+                    "percentile": "0.508680000"
                 },
                 "location": {
-                    "lat": -18.305425882339478,
-                    "lng": 131.69457840919495,
+                    "lat": -11.489516258239746,
+                    "lng": -41.4895122051239,
                     "country": "Unknown"
                 }
             }
@@ -330,11 +330,11 @@
                 ],
                 "epss": {
                     "epss": "0.008860000",
-                    "percentile": "0.572480000"
+                    "percentile": "0.572710000"
                 },
                 "location": {
-                    "lat": -18.305413722991943,
-                    "lng": 131.69458723068237,
+                    "lat": -11.489503145217896,
+                    "lng": -41.48950242996216,
                     "country": "Unknown"
                 }
             }
@@ -537,11 +537,11 @@
                 ],
                 "epss": {
                     "epss": "0.009200000",
-                    "percentile": "0.582990000"
+                    "percentile": "0.583220000"
                 },
                 "location": {
-                    "lat": -18.305408000946045,
-                    "lng": 131.69459223747253,
+                    "lat": -11.489497423171997,
+                    "lng": -41.48949718475342,
                     "country": "Unknown"
                 }
             }
@@ -551,8 +551,8 @@
                 "id": "CVE-2026-85706",
                 "sourceIdentifier": "cve@gitlab.com",
                 "published": "2026-09-12T03:16:30.473",
-                "lastModified": "2026-09-12T11:16:33.373",
-                "vulnStatus": "Received",
+                "lastModified": "2026-09-14T14:22:15.323",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -658,27 +658,91 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "18.7.0",
+                                        "versionEndExcluding": "19.1.8",
+                                        "matchCriteriaId": "8308AEE0-FFC1-48F0-8E66-E3D6E3EF301E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "18.7.0",
+                                        "versionEndExcluding": "19.1.8",
+                                        "matchCriteriaId": "D19F6592-4940-46BE-A140-BCD284B0EC37"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "19.2.0",
+                                        "versionEndExcluding": "19.2.6",
+                                        "matchCriteriaId": "4A6AAECA-E557-43EF-B109-B92D1281E48B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "19.2.0",
+                                        "versionEndExcluding": "19.2.6",
+                                        "matchCriteriaId": "8598AF82-D212-4B5D-ABC3-C12C9B217BF3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "19.3.0",
+                                        "versionEndExcluding": "19.3.2",
+                                        "matchCriteriaId": "198FF0EF-1A45-484F-9268-F7821E006BA8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "19.3.0",
+                                        "versionEndExcluding": "19.3.2",
+                                        "matchCriteriaId": "03B1901F-AAF4-421E-B704-5345CB840DEF"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748",
-                        "source": "cve@gitlab.com"
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
                     },
                     {
                         "url": "https://hackerone.com/reports/3909881",
-                        "source": "cve@gitlab.com"
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85706",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.011640000",
-                    "percentile": "0.654580000"
+                    "epss": "0.111150000",
+                    "percentile": "0.956840000"
                 },
                 "location": {
-                    "lat": -18.305404663085938,
-                    "lng": 131.69459533691406,
+                    "lat": -11.489492177963257,
+                    "lng": -41.48949193954468,
                     "country": "Unknown"
                 }
             }
@@ -930,11 +994,11 @@
                 ],
                 "epss": {
                     "epss": "0.010200000",
-                    "percentile": "0.614390000"
+                    "percentile": "0.614600000"
                 },
                 "location": {
-                    "lat": -18.305400609970093,
-                    "lng": 131.6945996284485,
+                    "lat": -11.489487886428833,
+                    "lng": -41.489487648010254,
                     "country": "Unknown"
                 }
             }
@@ -1186,11 +1250,11 @@
                 ],
                 "epss": {
                     "epss": "0.008560000",
-                    "percentile": "0.563310000"
+                    "percentile": "0.563570000"
                 },
                 "location": {
-                    "lat": -18.30539631843567,
-                    "lng": 131.69460368156433,
+                    "lat": -11.489483833312988,
+                    "lng": -41.48948359489441,
                     "country": "Unknown"
                 }
             }
@@ -1439,11 +1503,11 @@
                 ],
                 "epss": {
                     "epss": "0.055970000",
-                    "percentile": "0.924570000"
+                    "percentile": "0.924610000"
                 },
                 "location": {
-                    "lat": -18.305392026901245,
-                    "lng": 131.69460821151733,
+                    "lat": -11.489479780197144,
+                    "lng": -41.489479541778564,
                     "country": "Unknown"
                 }
             }
@@ -1793,7 +1857,7 @@
                 ],
                 "epss": {
                     "epss": "0.024030000",
-                    "percentile": "0.831160000"
+                    "percentile": "0.831260000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -1941,7 +2005,7 @@
                 ],
                 "epss": {
                     "epss": "0.008590000",
-                    "percentile": "0.564390000"
+                    "percentile": "0.564640000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -3864,7 +3928,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.810800000"
+                    "percentile": "0.810910000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -4153,7 +4217,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.482830000"
+                    "percentile": "0.483090000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4358,11 +4422,11 @@
                 ],
                 "epss": {
                     "epss": "0.007440000",
-                    "percentile": "0.527330000"
+                    "percentile": "0.527580000"
                 },
                 "location": {
-                    "lat": -18.30536723136902,
-                    "lng": 131.69463276863098,
+                    "lat": -11.489458084106445,
+                    "lng": -41.489457845687866,
                     "country": "Unknown"
                 }
             }
@@ -4774,7 +4838,7 @@
                 ],
                 "epss": {
                     "epss": "0.005720000",
-                    "percentile": "0.455120000"
+                    "percentile": "0.455360000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4969,7 +5033,7 @@
                 ],
                 "epss": {
                     "epss": "0.012600000",
-                    "percentile": "0.679290000"
+                    "percentile": "0.679470000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5187,11 +5251,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.567800000"
+                    "percentile": "0.568040000"
                 },
                 "location": {
-                    "lat": -18.30535626411438,
-                    "lng": 131.6946439743042,
+                    "lat": -11.489447355270386,
+                    "lng": -41.48944711685181,
                     "country": "Unknown"
                 }
             }
@@ -6865,11 +6929,11 @@
                 ],
                 "epss": {
                     "epss": "0.362570000",
-                    "percentile": "0.983880000"
+                    "percentile": "0.983900000"
                 },
                 "location": {
-                    "lat": -18.305352449417114,
-                    "lng": 131.69464778900146,
+                    "lat": -11.48944354057312,
+                    "lng": -41.48944354057312,
                     "country": "Unknown"
                 }
             }
@@ -7035,11 +7099,11 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.787000000"
+                    "percentile": "0.787110000"
                 },
                 "location": {
-                    "lat": -18.30534839630127,
-                    "lng": 131.6946518421173,
+                    "lat": -11.489439725875854,
+                    "lng": -41.489439725875854,
                     "country": "Unknown"
                 }
             }
@@ -7250,11 +7314,11 @@
                 ],
                 "epss": {
                     "epss": "0.076660000",
-                    "percentile": "0.942390000"
+                    "percentile": "0.942430000"
                 },
                 "location": {
-                    "lat": -18.305344820022583,
-                    "lng": 131.69465517997742,
+                    "lat": -11.489436388015747,
+                    "lng": -41.48943614959717,
                     "country": "Unknown"
                 }
             }
@@ -7452,11 +7516,11 @@
                 ],
                 "epss": {
                     "epss": "0.118450000",
-                    "percentile": "0.958500000"
+                    "percentile": "0.958520000"
                 },
                 "location": {
-                    "lat": -18.305341005325317,
-                    "lng": 131.69465899467468,
+                    "lat": -11.48943305015564,
+                    "lng": -41.48943281173706,
                     "country": "Unknown"
                 }
             }
@@ -34572,7 +34636,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-13T15:17:27.261417",
+    "last_updated": "2026-09-14T17:14:36.428417",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
