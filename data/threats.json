@@ -2,6 +2,284 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-76461",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-09-14T17:17:51.113",
+                "lastModified": "2026-09-15T12:47:32.497",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the email parsing of Cisco AsyncOS Software for Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.\r\n\r\nThis vulnerability is due to insufficient validation in the email parsing logic. An attacker could exploit this vulnerability by sending a crafted email message that contains malicious SQL statements through an affected device. A successful exploit could allow the attacker to execute arbitrary SQL statements, leading to command execution with root privileges on the underlying operating system."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Email",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "14.0.0-698",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.5.1-277",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.0.0-392",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "14.2.0-620",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.0.5-007",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "13.5.4-038",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "14.2.1-020",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "14.3.0-032",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.0.0-104",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.0.1-030",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.5.0-048",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.5.1-055",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.5.2-018",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.0-050",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.0.3-002",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.0-054",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.5.3-022",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.1-017",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.5.4-012",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.4-016",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "15.0.5-016",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.2-112",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "16.0.3-044",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-14T00:00:00+00:00",
+                                "id": "CVE-2026-76461",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-14",
+                "cisaActionDue": "2026-09-17",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco Secure Email Gateway SQL Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "15.5.5-014",
+                                        "matchCriteriaId": "E78A2134-478B-4F8A-AE74-C1D85C8426F5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "16.0",
+                                        "versionEndExcluding": "16.0.4-302",
+                                        "matchCriteriaId": "930177FE-C639-42C2-ACB2-16DA3D1E4F1C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "16.5",
+                                        "versionEndExcluding": "16.5.0-780",
+                                        "matchCriteriaId": "44348B0F-6723-4FC1-81CD-F204BBC15F76"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c100v:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5B6FBC8A-8187-4903-B786-6CF341C142B5"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c300v:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "68864429-9730-43E9-96C3-20B9035BB291"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c600v:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B52D8B2B-E9AE-4B02-87BD-9CF9FA95906A"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c195:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7B1322B8-1CF9-4B17-9A58-38788051ED4F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c395:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "139A640B-1957-4953-AA88-9D373A5152D1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c695:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F08EA2AD-618B-4834-A52D-73F6A4502DF1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76461",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.021620000",
+                    "percentile": "0.812390000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-84869",
                 "sourceIdentifier": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
                 "published": "2026-09-08T20:18:51.147",
@@ -155,11 +433,11 @@
                 ],
                 "epss": {
                     "epss": "0.006910000",
-                    "percentile": "0.508680000"
+                    "percentile": "0.509450000"
                 },
                 "location": {
-                    "lat": -11.489516258239746,
-                    "lng": -41.4895122051239,
+                    "lat": -20.818238973617554,
+                    "lng": -170.81823420524597,
                     "country": "Unknown"
                 }
             }
@@ -330,11 +608,11 @@
                 ],
                 "epss": {
                     "epss": "0.008860000",
-                    "percentile": "0.572710000"
+                    "percentile": "0.573420000"
                 },
                 "location": {
-                    "lat": -11.489503145217896,
-                    "lng": -41.48950242996216,
+                    "lat": -20.818228006362915,
+                    "lng": -170.81822752952576,
                     "country": "Unknown"
                 }
             }
@@ -537,11 +815,11 @@
                 ],
                 "epss": {
                     "epss": "0.009200000",
-                    "percentile": "0.583220000"
+                    "percentile": "0.583930000"
                 },
                 "location": {
-                    "lat": -11.489497423171997,
-                    "lng": -41.48949718475342,
+                    "lat": -20.818223476409912,
+                    "lng": -170.81822299957275,
                     "country": "Unknown"
                 }
             }
@@ -737,12 +1015,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.111150000",
-                    "percentile": "0.956840000"
+                    "epss": "0.119570000",
+                    "percentile": "0.958870000"
                 },
                 "location": {
-                    "lat": -11.489492177963257,
-                    "lng": -41.48949193954468,
+                    "lat": -20.818217992782593,
+                    "lng": -170.8182179927826,
                     "country": "Unknown"
                 }
             }
@@ -993,12 +1271,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.010200000",
-                    "percentile": "0.614600000"
+                    "epss": "0.010570000",
+                    "percentile": "0.626350000"
                 },
                 "location": {
-                    "lat": -11.489487886428833,
-                    "lng": -41.489487648010254,
+                    "lat": -20.818214416503906,
+                    "lng": -170.81821417808533,
                     "country": "Unknown"
                 }
             }
@@ -1249,12 +1527,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.008560000",
-                    "percentile": "0.563570000"
+                    "epss": "0.008690000",
+                    "percentile": "0.568320000"
                 },
                 "location": {
-                    "lat": -11.489483833312988,
-                    "lng": -41.48948359489441,
+                    "lat": -20.81821036338806,
+                    "lng": -170.81821036338806,
                     "country": "Unknown"
                 }
             }
@@ -1503,11 +1781,11 @@
                 ],
                 "epss": {
                     "epss": "0.055970000",
-                    "percentile": "0.924610000"
+                    "percentile": "0.924750000"
                 },
                 "location": {
-                    "lat": -11.489479780197144,
-                    "lng": -41.489479541778564,
+                    "lat": -20.818206548690796,
+                    "lng": -170.8182065486908,
                     "country": "Unknown"
                 }
             }
@@ -1857,7 +2135,7 @@
                 ],
                 "epss": {
                     "epss": "0.024030000",
-                    "percentile": "0.831260000"
+                    "percentile": "0.831540000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2004,8 +2282,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.008590000",
-                    "percentile": "0.564640000"
+                    "epss": "0.009970000",
+                    "percentile": "0.608370000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -2803,7 +3081,7 @@
                 ],
                 "epss": {
                     "epss": "0.757520000",
-                    "percentile": "0.994930000"
+                    "percentile": "0.994940000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3928,7 +4206,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.810910000"
+                    "percentile": "0.811250000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -4217,7 +4495,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.483090000"
+                    "percentile": "0.483830000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4422,11 +4700,11 @@
                 ],
                 "epss": {
                     "epss": "0.007440000",
-                    "percentile": "0.527580000"
+                    "percentile": "0.528370000"
                 },
                 "location": {
-                    "lat": -11.489458084106445,
-                    "lng": -41.489457845687866,
+                    "lat": -20.818183422088623,
+                    "lng": -170.81818342208862,
                     "country": "Unknown"
                 }
             }
@@ -4838,7 +5116,7 @@
                 ],
                 "epss": {
                     "epss": "0.005720000",
-                    "percentile": "0.455360000"
+                    "percentile": "0.456180000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5032,8 +5310,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012600000",
-                    "percentile": "0.679470000"
+                    "epss": "0.014620000",
+                    "percentile": "0.721760000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5251,11 +5529,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.568040000"
+                    "percentile": "0.568780000"
                 },
                 "location": {
-                    "lat": -11.489447355270386,
-                    "lng": -41.48944711685181,
+                    "lat": -20.81817317008972,
+                    "lng": -170.81817293167114,
                     "country": "Unknown"
                 }
             }
@@ -6929,11 +7207,11 @@
                 ],
                 "epss": {
                     "epss": "0.362570000",
-                    "percentile": "0.983900000"
+                    "percentile": "0.983920000"
                 },
                 "location": {
-                    "lat": -11.48944354057312,
-                    "lng": -41.48944354057312,
+                    "lat": -20.818169593811035,
+                    "lng": -170.81816935539246,
                     "country": "Unknown"
                 }
             }
@@ -7099,11 +7377,11 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.787110000"
+                    "percentile": "0.787510000"
                 },
                 "location": {
-                    "lat": -11.489439725875854,
-                    "lng": -41.489439725875854,
+                    "lat": -20.81816577911377,
+                    "lng": -170.81816577911377,
                     "country": "Unknown"
                 }
             }
@@ -7314,219 +7592,33 @@
                 ],
                 "epss": {
                     "epss": "0.076660000",
-                    "percentile": "0.942430000"
+                    "percentile": "0.942540000"
                 },
                 "location": {
-                    "lat": -11.489436388015747,
-                    "lng": -41.48943614959717,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-9586",
-                "sourceIdentifier": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                "published": "2026-07-17T17:17:18.150",
-                "lastModified": "2026-09-03T13:06:25.427",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "An unauthenticated SQL injection vulnerability exists in Sangoma Switchvox SMB Edition 8.3 (104997).\u00a0The /pa endpoint processes XML\u00a0content beginning with <PolycomIPPhone> and\u00a0directly concatenates the user-controlled PhoneIP value into PostgreSQL queries without sanitization or parameterization.\u00a0An unauthenticated remote attacker can execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                        "affectedData": [
-                            {
-                                "vendor": "Sangoma",
-                                "product": "Switchvox SMB Edition",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "8.3 (104997)",
-                                        "lessThan": "8.4.0.2",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-01T00:00:00+00:00",
-                                "id": "CVE-2026-9586",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-02",
-                "cisaActionDue": "2026-09-05",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Sangoma Switchvox SQL Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-89"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:sangoma:switchvox:*:*:*:*:on-premises:*:*:*",
-                                        "versionStartIncluding": "8.2.2.1",
-                                        "versionEndExcluding": "8.4.0.2",
-                                        "matchCriteriaId": "A9E8D249-C33B-4FC1-8EF2-3FD26AA15547"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://labs.sra.io/posts/switchvox/",
-                        "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026",
-                        "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/#",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-9586",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.118450000",
-                    "percentile": "0.958520000"
-                },
-                "location": {
-                    "lat": -11.48943305015564,
-                    "lng": -41.48943281173706,
+                    "lat": -20.818162202835083,
+                    "lng": -170.81816220283508,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-76461",
+            "vendorProject": "Cisco",
+            "product": "Secure Email Gateway",
+            "vulnerabilityName": "Cisco Secure Email Gateway SQL Injection Vulnerability",
+            "dateAdded": "2026-09-14",
+            "shortDescription": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-17",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76461",
+            "cwes": [
+                "CWE-89"
+            ]
+        },
         {
             "cveID": "CVE-2026-84869",
             "vendorProject": "ConnectWise",
@@ -34636,7 +34728,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-14T17:14:36.428417",
+    "last_updated": "2026-09-15T15:54:25.599382",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
