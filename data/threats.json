@@ -2,6 +2,121 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-58704",
+                "sourceIdentifier": "dsap-vuln-management@google.com",
+                "published": "2026-09-15T19:17:32.297",
+                "lastModified": "2026-09-16T15:17:38.783",
+                "vulnStatus": "Received",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In Cellular Modem, there is a possible permission bypass due to a logic error in the code. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "dsap-vuln-management@google.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Google",
+                                "product": "Android",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "Android kernel",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.0,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.1,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-16T14:40:04.611590Z",
+                                "id": "CVE-2026-58704",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-285"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-693"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-09-01",
+                        "source": "dsap-vuln-management@google.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-58704",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.001120000",
+                    "percentile": "0.015640000"
+                },
+                "location": {
+                    "lat": 6.933223009109497,
+                    "lng": 36.93322801589966,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-76461",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-09-14T17:17:51.113",
@@ -268,8 +383,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.021620000",
-                    "percentile": "0.812390000"
+                    "epss": "0.020090000",
+                    "percentile": "0.798620000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -433,11 +548,11 @@
                 ],
                 "epss": {
                     "epss": "0.006910000",
-                    "percentile": "0.509450000"
+                    "percentile": "0.511130000"
                 },
                 "location": {
-                    "lat": -20.818238973617554,
-                    "lng": -170.81823420524597,
+                    "lat": 6.9332404136657715,
+                    "lng": 36.93324089050293,
                     "country": "Unknown"
                 }
             }
@@ -608,11 +723,11 @@
                 ],
                 "epss": {
                     "epss": "0.008860000",
-                    "percentile": "0.573420000"
+                    "percentile": "0.574880000"
                 },
                 "location": {
-                    "lat": -20.818228006362915,
-                    "lng": -170.81822752952576,
+                    "lat": 6.933245897293091,
+                    "lng": 36.93324613571167,
                     "country": "Unknown"
                 }
             }
@@ -815,11 +930,11 @@
                 ],
                 "epss": {
                     "epss": "0.009200000",
-                    "percentile": "0.583930000"
+                    "percentile": "0.585400000"
                 },
                 "location": {
-                    "lat": -20.818223476409912,
-                    "lng": -170.81822299957275,
+                    "lat": 6.9332499504089355,
+                    "lng": 36.933249950408936,
                     "country": "Unknown"
                 }
             }
@@ -1016,11 +1131,11 @@
                 ],
                 "epss": {
                     "epss": "0.119570000",
-                    "percentile": "0.958870000"
+                    "percentile": "0.959010000"
                 },
                 "location": {
-                    "lat": -20.818217992782593,
-                    "lng": -170.8182179927826,
+                    "lat": 6.933254241943359,
+                    "lng": 36.93325448036194,
                     "country": "Unknown"
                 }
             }
@@ -1272,11 +1387,11 @@
                 ],
                 "epss": {
                     "epss": "0.010570000",
-                    "percentile": "0.626350000"
+                    "percentile": "0.627730000"
                 },
                 "location": {
-                    "lat": -20.818214416503906,
-                    "lng": -170.81821417808533,
+                    "lat": 6.933257818222046,
+                    "lng": 36.933258056640625,
                     "country": "Unknown"
                 }
             }
@@ -1528,11 +1643,11 @@
                 ],
                 "epss": {
                     "epss": "0.008690000",
-                    "percentile": "0.568320000"
+                    "percentile": "0.569840000"
                 },
                 "location": {
-                    "lat": -20.81821036338806,
-                    "lng": -170.81821036338806,
+                    "lat": 6.933261156082153,
+                    "lng": 36.93326139450073,
                     "country": "Unknown"
                 }
             }
@@ -1781,11 +1896,11 @@
                 ],
                 "epss": {
                     "epss": "0.055970000",
-                    "percentile": "0.924750000"
+                    "percentile": "0.925040000"
                 },
                 "location": {
-                    "lat": -20.818206548690796,
-                    "lng": -170.8182065486908,
+                    "lat": 6.933264970779419,
+                    "lng": 36.93326497077942,
                     "country": "Unknown"
                 }
             }
@@ -2135,7 +2250,7 @@
                 ],
                 "epss": {
                     "epss": "0.024030000",
-                    "percentile": "0.831540000"
+                    "percentile": "0.832150000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2283,7 +2398,7 @@
                 ],
                 "epss": {
                     "epss": "0.009970000",
-                    "percentile": "0.608370000"
+                    "percentile": "0.609790000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -3081,7 +3196,7 @@
                 ],
                 "epss": {
                     "epss": "0.757520000",
-                    "percentile": "0.994940000"
+                    "percentile": "0.994960000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -4206,7 +4321,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.811250000"
+                    "percentile": "0.811950000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -4495,7 +4610,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.483830000"
+                    "percentile": "0.485580000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4700,11 +4815,11 @@
                 ],
                 "epss": {
                     "epss": "0.007440000",
-                    "percentile": "0.528370000"
+                    "percentile": "0.530050000"
                 },
                 "location": {
-                    "lat": -20.818183422088623,
-                    "lng": -170.81818342208862,
+                    "lat": 6.933286666870117,
+                    "lng": 36.93328666687012,
                     "country": "Unknown"
                 }
             }
@@ -5116,7 +5231,7 @@
                 ],
                 "epss": {
                     "epss": "0.005720000",
-                    "percentile": "0.456180000"
+                    "percentile": "0.458020000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -5311,7 +5426,7 @@
                 ],
                 "epss": {
                     "epss": "0.014620000",
-                    "percentile": "0.721760000"
+                    "percentile": "0.722730000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5529,11 +5644,11 @@
                 ],
                 "epss": {
                     "epss": "0.008700000",
-                    "percentile": "0.568780000"
+                    "percentile": "0.570290000"
                 },
                 "location": {
-                    "lat": -20.81817317008972,
-                    "lng": -170.81817293167114,
+                    "lat": 6.9332966804504395,
+                    "lng": 36.93329668045044,
                     "country": "Unknown"
                 }
             }
@@ -7207,11 +7322,11 @@
                 ],
                 "epss": {
                     "epss": "0.362570000",
-                    "percentile": "0.983920000"
+                    "percentile": "0.983990000"
                 },
                 "location": {
-                    "lat": -20.818169593811035,
-                    "lng": -170.81816935539246,
+                    "lat": 6.933299779891968,
+                    "lng": 36.93329977989197,
                     "country": "Unknown"
                 }
             }
@@ -7377,232 +7492,33 @@
                 ],
                 "epss": {
                     "epss": "0.019170000",
-                    "percentile": "0.787510000"
+                    "percentile": "0.788270000"
                 },
                 "location": {
-                    "lat": -20.81816577911377,
-                    "lng": -170.81816577911377,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-82329",
-                "sourceIdentifier": "reefs@jfrog.com",
-                "published": "2026-08-28T20:20:21.293",
-                "lastModified": "2026-09-03T13:06:15.630",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "JFrog Artifactory contains an authentication weakness that, under default configuration, may allow an unauthenticated attacker with network access to obtain administrative privileges."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "affectedData": [
-                            {
-                                "vendor": "jfrog",
-                                "product": "artifactory",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "7.111.21",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.117.0",
-                                        "lessThan": "7.117.28",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.125.0",
-                                        "lessThan": "7.125.20",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.133.0",
-                                        "lessThan": "7.133.29",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.146.0",
-                                        "lessThan": "7.146.38",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.161.0",
-                                        "lessThan": "7.161.20",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "reefs@jfrog.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-02T00:00:00+00:00",
-                                "id": "CVE-2026-82329",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-02",
-                "cisaActionDue": "2026-09-05",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "JFrog Artifactory Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.111.4",
-                                        "versionEndExcluding": "7.111.21",
-                                        "matchCriteriaId": "228ED2A9-1A54-49E2-9F04-1BC7050280E1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.117.0",
-                                        "versionEndExcluding": "7.117.28",
-                                        "matchCriteriaId": "42B6DAA5-F4C7-42AC-9CE3-D2A653499DA7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.125.0",
-                                        "versionEndExcluding": "7.125.20",
-                                        "matchCriteriaId": "CFA2D1EB-856D-4001-8236-E4C98CD0CCCC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.133.0",
-                                        "versionEndExcluding": "7.133.29",
-                                        "matchCriteriaId": "A498A09A-B194-4D5C-8D30-6A388BE2D496"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.146.0",
-                                        "versionEndExcluding": "7.146.38",
-                                        "matchCriteriaId": "B9CD84FD-5435-440E-AFE3-7EB20FD5D723"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.161.0",
-                                        "versionEndExcluding": "7.161.20",
-                                        "matchCriteriaId": "1D77FF33-5D0D-4A15-B7A7-07ADD5C96883"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-82329",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.076660000",
-                    "percentile": "0.942540000"
-                },
-                "location": {
-                    "lat": -20.818162202835083,
-                    "lng": -170.81816220283508,
+                    "lat": 6.933303356170654,
+                    "lng": 36.93330359458923,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-58704",
+            "vendorProject": "Google",
+            "product": "Pixel",
+            "vulnerabilityName": "Google Pixel Improper Authorization Vulnerability",
+            "dateAdded": "2026-09-16",
+            "shortDescription": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-19",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-09-01 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-58704",
+            "cwes": [
+                "CWE-693"
+            ]
+        },
         {
             "cveID": "CVE-2026-76461",
             "vendorProject": "Cisco",
@@ -7625,7 +7541,7 @@
             "product": "ScreenConnect",
             "vulnerabilityName": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
             "dateAdded": "2026-09-11",
-            "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.",
+            "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confirmation.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-09-14",
             "knownRansomwareCampaignUse": "Unknown",
@@ -7642,7 +7558,7 @@
             "product": "Artifactory",
             "vulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability",
             "dateAdded": "2026-09-11",
-            "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token\u2019s scope.",
+            "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token\u2019s scope.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-09-25",
             "knownRansomwareCampaignUse": "Unknown",
@@ -7690,12 +7606,12 @@
             "product": "RouterOS",
             "vulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
             "dateAdded": "2026-09-10",
-            "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+            "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-09-13",
             "knownRansomwareCampaignUse": "Unknown",
             "forensicTriage": "Yes",
-            "notes": " ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
+            "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
             "cwes": [
                 "CWE-88"
             ]
@@ -7706,7 +7622,7 @@
             "product": "RouterOS",
             "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
             "dateAdded": "2026-09-10",
-            "shortDescription": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+            "shortDescription": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-09-13",
             "knownRansomwareCampaignUse": "Unknown",
@@ -34728,7 +34644,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-15T15:54:25.599382",
+    "last_updated": "2026-09-16T15:45:51.183966",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
