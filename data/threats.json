@@ -2,6 +2,885 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2025-39964",
+                "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                "published": "2025-10-13T14:15:34.737",
+                "lastModified": "2026-09-18T15:17:04.480",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: af_alg - Disallow concurrent writes in af_alg_sendmsg\n\nIssuing two writes to the same af_alg socket is bogus as the\ndata will be interleaved in an unpredictable fashion.  Furthermore,\nconcurrent writes may create inconsistencies in the internal\nsocket state.\n\nDisallow this by adding a new ctx->write field that indiciates\nexclusive ownership for writing."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "affectedData": [
+                            {
+                                "vendor": "Linux",
+                                "product": "Linux",
+                                "defaultStatus": "unaffected",
+                                "programFiles": [
+                                    "crypto/af_alg.c",
+                                    "include/crypto/if_alg.h"
+                                ],
+                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+                                "versions": [
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "0f28c4adbc4a97437874c9b669fd7958a8c6d6ce",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "e4c1ec11132ec466f7362a95f36a506ce4dc08c9",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "1f323a48e9b5ebfe6dc7d130fdf5c3c0e92a07c8",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "7c4491b5644e3a3708f3dbd7591be0a570135b84",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "9aee87da5572b3a14075f501752e209801160d3d",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "45bcf60fe49b37daab1acee57b27211ad1574042",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8ff590903d5fc7f5a0a988c38267a3d08e6393a2",
+                                        "lessThan": "1b34cbbf4f011a121ef7b2d7d6e6920a036d5285",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Linux",
+                                "product": "Linux",
+                                "defaultStatus": "affected",
+                                "programFiles": [
+                                    "crypto/af_alg.c",
+                                    "include/crypto/if_alg.h"
+                                ],
+                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+                                "versions": [
+                                    {
+                                        "version": "2.6.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "2.6.38",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "5.10.245",
+                                        "lessThanOrEqual": "5.10.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "5.15.194",
+                                        "lessThanOrEqual": "5.15.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.1.154",
+                                        "lessThanOrEqual": "6.1.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.6.108",
+                                        "lessThanOrEqual": "6.6.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.12.49",
+                                        "lessThanOrEqual": "6.12.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.16.9",
+                                        "lessThanOrEqual": "6.16.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.17",
+                                        "lessThanOrEqual": "*",
+                                        "versionType": "original_commit_for_fix",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "affectedData": [
+                            {
+                                "vendor": "Siemens",
+                                "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "V3.1.6",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "V3.1.6",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "V3.1.6",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "V3.1.6",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SIPLUS S7-1500 CPU 1518-4 PN/DP MFP",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "V3.1.6",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                                "baseScore": 3.3,
+                                "baseSeverity": "LOW",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-18T14:40:05.718549Z",
+                                "id": "CVE-2025-39964",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-362"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2.6.38",
+                                        "versionEndExcluding": "5.10.245",
+                                        "matchCriteriaId": "EC314BAD-D810-4C02-ABB3-11D90E06AEAA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.11",
+                                        "versionEndExcluding": "5.15.194",
+                                        "matchCriteriaId": "CF862263-DC8D-4324-A52A-DA1D7880B35A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.16",
+                                        "versionEndExcluding": "6.1.154",
+                                        "matchCriteriaId": "E49CD91E-FC55-45B0-BB63-9AD5F5D70CAA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.2",
+                                        "versionEndExcluding": "6.6.108",
+                                        "matchCriteriaId": "A7E8EAEE-7731-4996-9578-696255D61EA2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.7",
+                                        "versionEndExcluding": "6.12.49",
+                                        "matchCriteriaId": "CAA033E9-A2C5-4976-A83E-9804D8FB827F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.13",
+                                        "versionEndExcluding": "6.16.9",
+                                        "matchCriteriaId": "638DD910-1189-4F5E-98BF-2D436B695112"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "327D22EF-390B-454C-BD31-2ED23C998A1C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C730CD9A-D969-4A8E-9522-162AAF7C0EE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "39982C4B-716E-4B2F-8196-FA301F47807D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "340BEEA9-D70D-4290-B502-FBB1032353B1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "47E4C5C0-079F-4838-971B-8C503D48FCC2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5A4516A6-C12E-42A4-8C0E-68AEF3264504"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://git.kernel.org/stable/c/0f28c4adbc4a97437874c9b669fd7958a8c6d6ce",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/1b34cbbf4f011a121ef7b2d7d6e6920a036d5285",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/1f323a48e9b5ebfe6dc7d130fdf5c3c0e92a07c8",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/45bcf60fe49b37daab1acee57b27211ad1574042",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/7c4491b5644e3a3708f3dbd7591be0a570135b84",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/9aee87da5572b3a14075f501752e209801160d3d",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/e4c1ec11132ec466f7362a95f36a506ce4dc08c9",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-019113.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-39964",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003230000",
+                    "percentile": "0.253930000"
+                },
+                "location": {
+                    "lat": 45.5231,
+                    "lng": -122.6765,
+                    "country": "Global"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-53266",
+                "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                "published": "2026-06-25T09:16:44.643",
+                "lastModified": "2026-09-18T15:17:08.620",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: bridge: make ebt_snat ARP rewrite writable\n\nThe ebtables SNAT target keeps the Ethernet source address rewrite\nbehind skb_ensure_writable(skb, 0).  This is intentional: at the bridge\nebtables hooks the Ethernet header is addressed through\nskb_mac_header()/eth_hdr(), while skb->data points at the Ethernet\npayload.  Asking skb_ensure_writable() for ETH_HLEN bytes would check\nthe payload, not the Ethernet header, and would reintroduce the small\npacket regression fixed by commit 63137bc5882a.\n\nHowever, the optional ARP sender hardware address rewrite is different.\nIt writes through skb_store_bits() at an offset relative to skb->data:\n\n        skb_store_bits(skb, sizeof(struct arphdr), info->mac, ETH_ALEN)\n\nskb_header_pointer() only safely reads the ARP header; it does not make\nthe later sender hardware address range writable.  If that range is\nstill held in a nonlinear skb fragment backed by a splice-imported file\npage, skb_store_bits() maps the frag page and copies the new MAC address\ndirectly into it.\n\nEnsure the ARP SHA range is writable before reading the ARP header and\nbefore calling skb_store_bits()."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "affectedData": [
+                            {
+                                "vendor": "Linux",
+                                "product": "Linux",
+                                "defaultStatus": "unaffected",
+                                "programFiles": [
+                                    "net/bridge/netfilter/ebt_snat.c"
+                                ],
+                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+                                "versions": [
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "bf84ad7c7a9ede46e31afaa41a1ba06a159e8c87",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "76280b78cc9f23bdc6438e10ad6dff148ef8375b",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "b7e91939ba9be805a62a257fa4e227dffbb88fa0",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "afd64b59c3de9bbbdd3759e834fdc55cda716e0b",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "153ea96c806aea395daba907a4f88480b6ad5093",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "b18675263db1147c8e1cab625400c13a0d87bd2d",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "c9b5ff59feffb92a147a84a5aa28acd2cb8ff4c5",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "63137bc5882a1882c553d389fdeeeace86ee1741",
+                                        "lessThan": "67ba971ae02514d85818fe0c32549ab4bfa3bf49",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2f3839075a5f8dcf116c1abe35b36b018ac62445",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "51ba2945a8ef65ae437c8f9ba05f0343aa82ae5b",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "b7d23c2c87584eb429f115c078ed511be8b18e29",
+                                        "versionType": "git",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.4.73",
+                                        "lessThan": "5.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.8.17",
+                                        "lessThan": "5.9",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "5.9.2",
+                                        "lessThan": "5.10",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Linux",
+                                "product": "Linux",
+                                "defaultStatus": "affected",
+                                "programFiles": [
+                                    "net/bridge/netfilter/ebt_snat.c"
+                                ],
+                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+                                "versions": [
+                                    {
+                                        "version": "5.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "5.10",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "5.10.259",
+                                        "lessThanOrEqual": "5.10.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "5.15.210",
+                                        "lessThanOrEqual": "5.15.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.1.176",
+                                        "lessThanOrEqual": "6.1.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.6.143",
+                                        "lessThanOrEqual": "6.6.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.12.94",
+                                        "lessThanOrEqual": "6.12.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "6.18.36",
+                                        "lessThanOrEqual": "6.18.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "7.0.13",
+                                        "lessThanOrEqual": "7.0.*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "7.1",
+                                        "lessThanOrEqual": "*",
+                                        "versionType": "original_commit_for_fix",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.0,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-18T14:40:13.592810Z",
+                                "id": "CVE-2026-53266",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.4.73",
+                                        "versionEndExcluding": "5.5",
+                                        "matchCriteriaId": "886AB560-B760-44F0-AD89-3F275E4C0F58"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.8.17",
+                                        "versionEndExcluding": "5.9",
+                                        "matchCriteriaId": "BEFC3ACE-365D-48E7-9C0A-019C74CC0725"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.9.2",
+                                        "versionEndExcluding": "5.10.259",
+                                        "matchCriteriaId": "992FFB71-217E-40A6-B8BD-5AA742898F28"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.11",
+                                        "versionEndExcluding": "5.15.210",
+                                        "matchCriteriaId": "5E938CDF-D1C4-43D0-98DC-9E11B6B55801"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.16",
+                                        "versionEndExcluding": "6.1.176",
+                                        "matchCriteriaId": "C4446623-5F2B-4DD8-8666-9FAAC285A757"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.2",
+                                        "versionEndExcluding": "6.6.143",
+                                        "matchCriteriaId": "9062F1CD-CAD6-4EA2-A73F-C06D4A887B8C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.7",
+                                        "versionEndExcluding": "6.12.94",
+                                        "matchCriteriaId": "85421C0C-ABDE-4357-971C-67F9087DE1B9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.13",
+                                        "versionEndExcluding": "6.18.36",
+                                        "matchCriteriaId": "389025D2-958D-41BD-BD96-70ED1033A9F3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.19",
+                                        "versionEndExcluding": "7.0.13",
+                                        "matchCriteriaId": "6A64BF9F-3BCA-42FD-98CB-8F03474D2B1E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B1EF7059-E670-45F4-B422-54C40FA86390"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0D38F0BF-A728-4133-A358-D44A2F7EE6D6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EC732D08-5F7B-46D9-B154-E60C7F4F0A97"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E5910A9D-F60A-409A-B486-FE66BFEBA9B9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "81DFF19E-9CF8-49C6-8C36-1E4038622933"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:7.1:rc6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B0E8FC71-3952-444C-83E9-718DBBBEC615"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://git.kernel.org/stable/c/153ea96c806aea395daba907a4f88480b6ad5093",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/67ba971ae02514d85818fe0c32549ab4bfa3bf49",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/76280b78cc9f23bdc6438e10ad6dff148ef8375b",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/afd64b59c3de9bbbdd3759e834fdc55cda716e0b",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/b18675263db1147c8e1cab625400c13a0d87bd2d",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/b7e91939ba9be805a62a257fa4e227dffbb88fa0",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/bf84ad7c7a9ede46e31afaa41a1ba06a159e8c87",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://git.kernel.org/stable/c/c9b5ff59feffb92a147a84a5aa28acd2cb8ff4c5",
+                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-53266",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.001210000",
+                    "percentile": "0.021890000"
+                },
+                "location": {
+                    "lat": 45.5231,
+                    "lng": -122.6765,
+                    "country": "Global"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-58704",
                 "sourceIdentifier": "dsap-vuln-management@google.com",
                 "published": "2026-09-15T19:17:32.297",
@@ -875,6 +1754,214 @@
         },
         {
             "cve": {
+                "id": "CVE-2026-87886",
+                "sourceIdentifier": "security@acronis.com",
+                "published": "2026-09-17T23:18:53.763",
+                "lastModified": "2026-09-18T15:17:17.203",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security@acronis.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Acronis",
+                                "product": "Acronis Backup plugin for cPanel & WHM",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "unspecified",
+                                        "lessThan": "1.9.3.1021",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Acronis",
+                                "product": "Acronis Backup extension for Plesk",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "unspecified",
+                                        "lessThan": "1.8.11.638",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Acronis",
+                                "product": "Acronis Backup plugin for DirectAdmin",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "unspecified",
+                                        "lessThan": "1.2.3.238",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV30": [
+                        {
+                            "source": "security@acronis.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.0",
+                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-18T12:27:59.851837Z",
+                                "id": "CVE-2026-87886",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-16",
+                "cisaActionDue": "2026-09-19",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security@acronis.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-276"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:directadmin:*:*",
+                                        "versionEndExcluding": "1.2.3",
+                                        "matchCriteriaId": "4CB8B9F6-DAB7-4F21-B2B4-0EE01347AC1E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:plesk:*:*",
+                                        "versionEndExcluding": "1.8.11",
+                                        "matchCriteriaId": "AEA7BEC1-B14B-4ED9-8FA8-D602D612BCA2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:cpanel:*:*",
+                                        "versionEndExcluding": "1.9.3",
+                                        "matchCriteriaId": "1F03983F-EC1E-4831-BF34-69331B521543"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:-:*:*:*:cpanel:*:*",
+                                        "matchCriteriaId": "61BB35F9-D0AB-484A-8C9F-BA79DD51916B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix1:*:*:*:cpanel:*:*",
+                                        "matchCriteriaId": "C9442FB3-3ECF-49D7-9940-41F296D7D0BC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix2:*:*:*:cpanel:*:*",
+                                        "matchCriteriaId": "E892B84E-B369-4E1A-B9B6-57FBD1F96AFC"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security-advisory.acronis.com/advisories/SEC-10986",
+                        "source": "security@acronis.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87886",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": -27.810199975967407,
+                    "lng": -57.81019616127014,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-76461",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-09-14T17:17:51.113",
@@ -1309,8 +2396,8 @@
                     "percentile": "0.511130000"
                 },
                 "location": {
-                    "lat": -7.539724349975586,
-                    "lng": 82.46027970314026,
+                    "lat": -27.810187816619873,
+                    "lng": -57.810187101364136,
                     "country": "Unknown"
                 }
             }
@@ -1484,8 +2571,8 @@
                     "percentile": "0.574880000"
                 },
                 "location": {
-                    "lat": -7.5397138595581055,
-                    "lng": 82.46028757095337,
+                    "lat": -27.810182809829712,
+                    "lng": -57.81018257141113,
                     "country": "Unknown"
                 }
             }
@@ -1691,8 +2778,8 @@
                     "percentile": "0.585400000"
                 },
                 "location": {
-                    "lat": -7.539708137512207,
-                    "lng": 82.46029233932495,
+                    "lat": -27.810179233551025,
+                    "lng": -57.810178995132446,
                     "country": "Unknown"
                 }
             }
@@ -1892,8 +2979,8 @@
                     "percentile": "0.959010000"
                 },
                 "location": {
-                    "lat": -7.539702415466309,
-                    "lng": 82.46029782295227,
+                    "lat": -27.810174703598022,
+                    "lng": -57.81017446517944,
                     "country": "Unknown"
                 }
             }
@@ -2148,8 +3235,8 @@
                     "percentile": "0.627730000"
                 },
                 "location": {
-                    "lat": -7.539698123931885,
-                    "lng": 82.4603021144867,
+                    "lat": -27.810171127319336,
+                    "lng": -57.810171127319336,
                     "country": "Unknown"
                 }
             }
@@ -2404,8 +3491,8 @@
                     "percentile": "0.569840000"
                 },
                 "location": {
-                    "lat": -7.539693832397461,
-                    "lng": 82.46030640602112,
+                    "lat": -27.810166835784912,
+                    "lng": -57.81016683578491,
                     "country": "Unknown"
                 }
             }
@@ -2657,8 +3744,8 @@
                     "percentile": "0.925040000"
                 },
                 "location": {
-                    "lat": -7.539689779281616,
-                    "lng": 82.46031045913696,
+                    "lat": -27.810163259506226,
+                    "lng": -57.81016302108765,
                     "country": "Unknown"
                 }
             }
@@ -5576,8 +6663,8 @@
                     "percentile": "0.530050000"
                 },
                 "location": {
-                    "lat": -7.539665222167969,
-                    "lng": 82.46033477783203,
+                    "lat": -27.81013536453247,
+                    "lng": -57.81013536453247,
                     "country": "Unknown"
                 }
             }
@@ -5997,422 +7084,41 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-85046",
-                "sourceIdentifier": "chrome-cve-admin@google.com",
-                "published": "2026-09-03T20:17:24.210",
-                "lastModified": "2026-09-08T14:55:04.093",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "chrome-cve-admin@google.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Google",
-                                "product": "Chrome",
-                                "versions": [
-                                    {
-                                        "version": "152.0.7977.82",
-                                        "lessThan": "152.0.7977.82",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "REQUIRED",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-03T00:00:00+00:00",
-                                "id": "CVE-2026-85046",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-04",
-                "cisaActionDue": "2026-09-18",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "chrome-cve-admin@google.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-843"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "152.0.7977.82",
-                                        "matchCriteriaId": "E7133861-8AAD-49BB-9137-9D737B466E1E"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:google:v8:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "15.3.48",
-                                        "matchCriteriaId": "62F85713-22F2-43E2-B84B-F4E9E0B56490"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html",
-                        "source": "chrome-cve-admin@google.com",
-                        "tags": [
-                            "Release Notes",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://issues.chromium.org/issues/542403045",
-                        "source": "chrome-cve-admin@google.com",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/Serotav/Writeups/blob/77556c57999805fa7815a114da51d91cf24fbea9/v8/When_Sorting_Leads_To_Confusion.md",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/v8/v8/commit/e0562d87ad9c17042b581582c99237d798572e67",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://news.ycombinator.com/item?id=49570669",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Issue Tracking",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://serotav.github.io/Writeups/v8/when-sorting-leads-to-confusion/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.014620000",
-                    "percentile": "0.722730000"
-                },
-                "location": {
-                    "lat": 37.422,
-                    "lng": -122.0841,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-59822",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2026-07-08T20:16:57.683",
-                "lastModified": "2026-09-03T13:05:59.573",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, LiteLLM's MCP Streamable HTTP endpoint allowed an unauthenticated attacker to use a fabricated Authorization header to trigger an OAuth2 passthrough fallback path that replaced failed LiteLLM key validation with an empty UserAPIKeyAuth() object, allowing requests to reach MCP tooling without a valid LiteLLM key. This issue is fixed in version 1.84.0."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "affectedData": [
-                            {
-                                "vendor": "BerriAI",
-                                "product": "litellm",
-                                "versions": [
-                                    {
-                                        "version": "< 1.84.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security-advisories@github.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "LOW",
-                                "vulnAvailabilityImpact": "NONE",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-                                "baseScore": 8.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 4.2
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-02T00:00:00+00:00",
-                                "id": "CVE-2026-59822",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-02",
-                "cisaActionDue": "2026-09-16",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "BerriAI LiteLLM Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "1.84.0",
-                                        "matchCriteriaId": "0432AF82-95FD-4358-9414-7B41889CEFD2"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/BerriAI/litellm/pull/26463",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/BerriAI/litellm/releases/tag/v1.84.0",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Product",
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Mitigation",
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-59822",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.wiz.io/blog/ai-infrastructure-honeypot",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.008700000",
-                    "percentile": "0.570290000"
-                },
-                "location": {
-                    "lat": -7.539654493331909,
-                    "lng": 82.46034550666809,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2025-39964",
+            "vendorProject": "Linux",
+            "product": "Kernel",
+            "vulnerabilityName": "Linux Kernel Race Condition Vulnerability",
+            "dateAdded": "2026-09-18",
+            "shortDescription": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-21",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://git.kernel.org/stable/c/0f28c4adbc4a97437874c9b669fd7958a8c6d6ce; https://git.kernel.org/stable/c/e4c1ec11132ec466f7362a95f36a506ce4dc08c9; https://git.kernel.org/stable/c/1f323a48e9b5ebfe6dc7d130fdf5c3c0e92a07c8; https://git.kernel.org/stable/c/7c4491b5644e3a3708f3dbd7591be0a570135b84; https://git.kernel.org/stable/c/9aee87da5572b3a14075f501752e209801160d3d; https://git.kernel.org/stable/c/45bcf60fe49b37daab1acee57b27211ad1574042; https://git.kernel.org/stable/c/1b34cbbf4f011a121ef7b2d7d6e6920a036d5285 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-39964",
+            "cwes": [
+                "CWE-362"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-53266",
+            "vendorProject": "Linux",
+            "product": "Kernel",
+            "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
+            "dateAdded": "2026-09-18",
+            "shortDescription": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-21",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://git.kernel.org/stable/c/bf84ad7c7a9ede46e31afaa41a1ba06a159e8c87; https://git.kernel.org/stable/c/76280b78cc9f23bdc6438e10ad6dff148ef8375b; https://git.kernel.org/stable/c/b7e91939ba9be805a62a257fa4e227dffbb88fa0; https://git.kernel.org/stable/c/afd64b59c3de9bbbdd3759e834fdc55cda716e0b; https://git.kernel.org/stable/c/153ea96c806aea395daba907a4f88480b6ad5093; https://git.kernel.org/stable/c/b18675263db1147c8e1cab625400c13a0d87bd2d; https://git.kernel.org/stable/c/c9b5ff59feffb92a147a84a5aa28acd2cb8ff4c5; https://git.kernel.org/stable/c/67ba971ae02514d85818fe0c32549ab4bfa3bf49 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-53266",
+            "cwes": [
+                "CWE-787"
+            ]
+        },
         {
             "cveID": "CVE-2026-58704",
             "vendorProject": "Google",
@@ -33586,7 +34292,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-17T15:52:37.825766",
+    "last_updated": "2026-09-18T15:26:19.022382",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
