@@ -508,7 +508,7 @@
                 ],
                 "epss": {
                     "epss": "0.007900000",
-                    "percentile": "0.547180000"
+                    "percentile": "0.542970000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -943,7 +943,7 @@
                 ],
                 "epss": {
                     "epss": "0.002760000",
-                    "percentile": "0.202240000"
+                    "percentile": "0.201950000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -957,8 +957,8 @@
                 "id": "CVE-2025-39682",
                 "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
                 "published": "2025-09-05T18:15:44.670",
-                "lastModified": "2026-09-19T04:17:35.263",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-09-21T12:00:36.613",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1110,20 +1110,20 @@
                             "type": "Primary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
-                                "baseScore": 7.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
+                                "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
                                 "scope": "UNCHANGED",
                                 "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
+                                "integrityImpact": "HIGH",
                                 "availabilityImpact": "HIGH"
                             },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.2
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
                         }
                     ],
                     "ssvcV203": [
@@ -1238,6 +1238,34 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:simatic_cn_4100_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.0",
+                                        "matchCriteriaId": "AA9D4F6E-9336-4026-B485-4227C861B356"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:simatic_cn_4100:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "92619F5F-3679-4424-9455-3285FF1EF2F1"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -1286,16 +1314,22 @@
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-032379.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-39682",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
                     "epss": "0.012000000",
-                    "percentile": "0.667980000"
+                    "percentile": "0.663570000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -1437,7 +1471,7 @@
                 ],
                 "epss": {
                     "epss": "0.002070000",
-                    "percentile": "0.111610000"
+                    "percentile": "0.111420000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -2172,7 +2206,7 @@
                 ],
                 "epss": {
                     "epss": "0.007840000",
-                    "percentile": "0.545290000"
+                    "percentile": "0.541070000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2387,11 +2421,11 @@
                 ],
                 "epss": {
                     "epss": "0.002540000",
-                    "percentile": "0.173300000"
+                    "percentile": "0.172890000"
                 },
                 "location": {
-                    "lat": 26.98521113395691,
-                    "lng": 116.98521709442139,
+                    "lat": -2.1102192401885986,
+                    "lng": -152.11021423339844,
                     "country": "Unknown"
                 }
             }
@@ -2665,7 +2699,7 @@
                 ],
                 "epss": {
                     "epss": "0.020090000",
-                    "percentile": "0.799730000"
+                    "percentile": "0.797310000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2829,11 +2863,11 @@
                 ],
                 "epss": {
                     "epss": "0.006910000",
-                    "percentile": "0.513630000"
+                    "percentile": "0.509790000"
                 },
                 "location": {
-                    "lat": 26.985225677490234,
-                    "lng": 116.98522686958313,
+                    "lat": -2.1102044582366943,
+                    "lng": -152.11020374298096,
                     "country": "Unknown"
                 }
             }
@@ -3004,11 +3038,11 @@
                 ],
                 "epss": {
                     "epss": "0.090580000",
-                    "percentile": "0.950480000"
+                    "percentile": "0.951180000"
                 },
                 "location": {
-                    "lat": 26.985231161117554,
-                    "lng": 116.98523139953613,
+                    "lat": -2.1101977825164795,
+                    "lng": -152.1101975440979,
                     "country": "Unknown"
                 }
             }
@@ -3211,11 +3245,11 @@
                 ],
                 "epss": {
                     "epss": "0.110380000",
-                    "percentile": "0.957070000"
+                    "percentile": "0.957720000"
                 },
                 "location": {
-                    "lat": 26.9852352142334,
-                    "lng": 116.9852352142334,
+                    "lat": -2.1101930141448975,
+                    "lng": -152.11019253730774,
                     "country": "Unknown"
                 }
             }
@@ -3412,11 +3446,11 @@
                 ],
                 "epss": {
                     "epss": "0.145630000",
-                    "percentile": "0.964850000"
+                    "percentile": "0.965450000"
                 },
                 "location": {
-                    "lat": 26.9852397441864,
-                    "lng": 116.9852397441864,
+                    "lat": -2.1101877689361572,
+                    "lng": -152.11018753051758,
                     "country": "Unknown"
                 }
             }
@@ -3668,11 +3702,11 @@
                 ],
                 "epss": {
                     "epss": "0.010570000",
-                    "percentile": "0.629740000"
+                    "percentile": "0.625050000"
                 },
                 "location": {
-                    "lat": 26.985243797302246,
-                    "lng": 116.9852442741394,
+                    "lat": -2.110182285308838,
+                    "lng": -152.11018204689026,
                     "country": "Unknown"
                 }
             }
@@ -3924,11 +3958,11 @@
                 ],
                 "epss": {
                     "epss": "0.008690000",
-                    "percentile": "0.572070000"
+                    "percentile": "0.567380000"
                 },
                 "location": {
-                    "lat": 26.98524808883667,
-                    "lng": 116.98524808883667,
+                    "lat": -2.110177755355835,
+                    "lng": -152.11017751693726,
                     "country": "Unknown"
                 }
             }
@@ -4177,11 +4211,11 @@
                 ],
                 "epss": {
                     "epss": "0.055970000",
-                    "percentile": "0.925460000"
+                    "percentile": "0.926100000"
                 },
                 "location": {
-                    "lat": 26.985252380371094,
-                    "lng": 116.98525261878967,
+                    "lat": -2.1101737022399902,
+                    "lng": -152.1101734638214,
                     "country": "Unknown"
                 }
             }
@@ -4531,7 +4565,7 @@
                 ],
                 "epss": {
                     "epss": "0.024030000",
-                    "percentile": "0.833060000"
+                    "percentile": "0.831730000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -4545,7 +4579,7 @@
                 "id": "CVE-2026-87491",
                 "sourceIdentifier": "chrome-cve-admin@google.com",
                 "published": "2026-09-09T01:17:05.887",
-                "lastModified": "2026-09-10T12:49:02.630",
+                "lastModified": "2026-09-21T13:17:11.283",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -4600,7 +4634,7 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-09-09T00:00:00+00:00",
+                                "timestamp": "2026-09-10T03:55:21.039385Z",
                                 "id": "CVE-2026-87491",
                                 "options": [
                                     {
@@ -4679,7 +4713,7 @@
                 ],
                 "epss": {
                     "epss": "0.009970000",
-                    "percentile": "0.611910000"
+                    "percentile": "0.607080000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5477,7 +5511,7 @@
                 ],
                 "epss": {
                     "epss": "0.757520000",
-                    "percentile": "0.994990000"
+                    "percentile": "0.995110000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -6602,7 +6636,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.812980000"
+                    "percentile": "0.810570000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -6891,7 +6925,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.488050000"
+                    "percentile": "0.485180000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -7096,11 +7130,11 @@
                 ],
                 "epss": {
                     "epss": "0.074940000",
-                    "percentile": "0.942000000"
+                    "percentile": "0.942950000"
                 },
                 "location": {
-                    "lat": 26.98527431488037,
-                    "lng": 116.98527431488037,
+                    "lat": -2.1101489067077637,
+                    "lng": -152.11014866828918,
                     "country": "Unknown"
                 }
             }
@@ -34328,7 +34362,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-20T15:05:08.778771",
+    "last_updated": "2026-09-21T17:24:44.008784",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
