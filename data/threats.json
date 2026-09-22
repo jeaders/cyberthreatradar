@@ -2,6 +2,517 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-7273",
+                "sourceIdentifier": "security@zyxel.com.tw",
+                "published": "2026-06-16T03:16:13.557",
+                "lastModified": "2026-09-22T12:10:51.067",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through\u00a02.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security@zyxel.com.tw",
+                        "affectedData": [
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-48HPv2 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(ABTQ.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-8 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHH.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-8HP firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHI.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-10HP firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAZI.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-16 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHJ.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-24 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHL.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-24E firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHK.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-24EP firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(ABTO.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-24HPv2 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(ABTP.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Zyxel",
+                                "product": "GS1900-48 firmware",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "<= 2.90(AAHN.1)C0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security@zyxel.com.tw",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-06-17T00:00:00+00:00",
+                                "id": "CVE-2026-7273",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-21",
+                "cisaActionDue": "2026-09-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security@zyxel.com.tw",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-121"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-8_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahh.2\\)c0",
+                                        "matchCriteriaId": "7C399F4A-32C4-4482-AC09-718473463836"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-8:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "51D33F50-B5A4-4AEF-972C-7FF089C21D52"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-8hp_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahi.2\\)c0",
+                                        "matchCriteriaId": "428E979B-9FF5-4968-B399-5B8041B9C9C7"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-8hp:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "27602862-EFB7-402B-994E-254A0B210820"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-10hp_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aazi.2\\)c0",
+                                        "matchCriteriaId": "D2189FCE-CD49-4FF0-91AF-18E4032A7A70"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-10hp:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "89201505-07AF-4F9C-9304-46F2707DB9B4"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-16_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahj.2\\)c0",
+                                        "matchCriteriaId": "1064772E-0A6C-48D0-B75F-F9B649C39CE5"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-16:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5078F7A5-D03B-4D3A-9C19-57DFF4D6BF7A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-24_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahl.2\\)c0",
+                                        "matchCriteriaId": "282A3334-6A1D-4758-B315-3AD75775A9F1"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-24:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F4F55299-70D5-4CE1-A1EC-D79B469B94F7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-24e_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahk.2\\)c0",
+                                        "matchCriteriaId": "3C91378D-4A01-48BD-8EA0-86FA4CA32186"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-24e:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A6456AD6-8A1D-4D3D-AC1A-ABE442242B1B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-24ep_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(abto.2\\)c0",
+                                        "matchCriteriaId": "CC8623A8-D581-4DEB-AE4B-4865D8CC21FA"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-24ep:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B22AA8B1-11E2-408F-A1F6-0F8AF32AB131"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-24hpv2_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(abtp.2\\)c0",
+                                        "matchCriteriaId": "916252C6-288F-44E4-A029-0BE1C684D2E3"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-24hpv2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "512D9A91-8DA7-47F1-AC77-AF743F99BFF3"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-48_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(aahn.2\\)c0",
+                                        "matchCriteriaId": "74EEBA8C-D7F1-45BA-B81F-EFF85B69EFCF"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-48:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CFB7D4BF-7D17-48D3-990D-4BADAC8BD868"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:zyxel:gs1900-48hpv2_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.90\\(abtq.2\\)c0",
+                                        "matchCriteriaId": "127498BB-7415-4AC9-BF12-318A9A11D467"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:zyxel:gs1900-48hpv2:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BC74C679-6D22-47E4-AE8A-2647B1AA4276"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026",
+                        "source": "security@zyxel.com.tw",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory",
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.greynoise.io/blog/open-season-on-kapibala-attacker-steals-government-records-wordpress-exploitation",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.019870000",
+                    "percentile": "0.797200000"
+                },
+                "location": {
+                    "lat": 5.8167197704315186,
+                    "lng": -24.18327498435974,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2025-39964",
                 "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
                 "published": "2025-10-13T14:15:34.737",
@@ -508,7 +1019,7 @@
                 ],
                 "epss": {
                     "epss": "0.007900000",
-                    "percentile": "0.542970000"
+                    "percentile": "0.547440000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -943,7 +1454,7 @@
                 ],
                 "epss": {
                     "epss": "0.002760000",
-                    "percentile": "0.201950000"
+                    "percentile": "0.202290000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -1328,8 +1839,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012000000",
-                    "percentile": "0.663570000"
+                    "epss": "0.020300000",
+                    "percentile": "0.801790000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -1471,7 +1982,7 @@
                 ],
                 "epss": {
                     "epss": "0.002070000",
-                    "percentile": "0.111420000"
+                    "percentile": "0.111330000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -2206,7 +2717,7 @@
                 ],
                 "epss": {
                     "epss": "0.007840000",
-                    "percentile": "0.541070000"
+                    "percentile": "0.545540000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2421,11 +2932,11 @@
                 ],
                 "epss": {
                     "epss": "0.002540000",
-                    "percentile": "0.172890000"
+                    "percentile": "0.173080000"
                 },
                 "location": {
-                    "lat": -2.1102192401885986,
-                    "lng": -152.11021423339844,
+                    "lat": 5.816744089126587,
+                    "lng": -24.183254957199097,
                     "country": "Unknown"
                 }
             }
@@ -2699,7 +3210,7 @@
                 ],
                 "epss": {
                     "epss": "0.020090000",
-                    "percentile": "0.797310000"
+                    "percentile": "0.799900000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2863,11 +3374,11 @@
                 ],
                 "epss": {
                     "epss": "0.006910000",
-                    "percentile": "0.509790000"
+                    "percentile": "0.513920000"
                 },
                 "location": {
-                    "lat": -2.1102044582366943,
-                    "lng": -152.11020374298096,
+                    "lat": 5.816749572753906,
+                    "lng": -24.183250188827515,
                     "country": "Unknown"
                 }
             }
@@ -3038,11 +3549,11 @@
                 ],
                 "epss": {
                     "epss": "0.090580000",
-                    "percentile": "0.951180000"
+                    "percentile": "0.950540000"
                 },
                 "location": {
-                    "lat": -2.1101977825164795,
-                    "lng": -152.1101975440979,
+                    "lat": 5.816751956939697,
+                    "lng": -24.183247804641724,
                     "country": "Unknown"
                 }
             }
@@ -3245,11 +3756,11 @@
                 ],
                 "epss": {
                     "epss": "0.110380000",
-                    "percentile": "0.957720000"
+                    "percentile": "0.957110000"
                 },
                 "location": {
-                    "lat": -2.1101930141448975,
-                    "lng": -152.11019253730774,
+                    "lat": 5.816753625869751,
+                    "lng": -24.18324613571167,
                     "country": "Unknown"
                 }
             }
@@ -3445,12 +3956,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.145630000",
-                    "percentile": "0.965450000"
+                    "epss": "0.092870000",
+                    "percentile": "0.951380000"
                 },
                 "location": {
-                    "lat": -2.1101877689361572,
-                    "lng": -152.11018753051758,
+                    "lat": 5.816756248474121,
+                    "lng": -24.1832435131073,
                     "country": "Unknown"
                 }
             }
@@ -3702,11 +4213,11 @@
                 ],
                 "epss": {
                     "epss": "0.010570000",
-                    "percentile": "0.625050000"
+                    "percentile": "0.630020000"
                 },
                 "location": {
-                    "lat": -2.110182285308838,
-                    "lng": -152.11018204689026,
+                    "lat": 5.816758155822754,
+                    "lng": -24.183241367340088,
                     "country": "Unknown"
                 }
             }
@@ -3958,11 +4469,11 @@
                 ],
                 "epss": {
                     "epss": "0.008690000",
-                    "percentile": "0.567380000"
+                    "percentile": "0.572320000"
                 },
                 "location": {
-                    "lat": -2.110177755355835,
-                    "lng": -152.11017751693726,
+                    "lat": 5.816760301589966,
+                    "lng": -24.183239698410034,
                     "country": "Unknown"
                 }
             }
@@ -4211,11 +4722,11 @@
                 ],
                 "epss": {
                     "epss": "0.055970000",
-                    "percentile": "0.926100000"
+                    "percentile": "0.925520000"
                 },
                 "location": {
-                    "lat": -2.1101737022399902,
-                    "lng": -152.1101734638214,
+                    "lat": 5.816762208938599,
+                    "lng": -24.183237552642822,
                     "country": "Unknown"
                 }
             }
@@ -4565,7 +5076,7 @@
                 ],
                 "epss": {
                     "epss": "0.024030000",
-                    "percentile": "0.831730000"
+                    "percentile": "0.833210000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -4713,7 +5224,7 @@
                 ],
                 "epss": {
                     "epss": "0.009970000",
-                    "percentile": "0.607080000"
+                    "percentile": "0.612160000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5511,7 +6022,7 @@
                 ],
                 "epss": {
                     "epss": "0.757520000",
-                    "percentile": "0.995110000"
+                    "percentile": "0.994990000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -6636,7 +7147,7 @@
                 ],
                 "epss": {
                     "epss": "0.021480000",
-                    "percentile": "0.810570000"
+                    "percentile": "0.813130000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -6925,7 +7436,7 @@
                 ],
                 "epss": {
                     "epss": "0.006310000",
-                    "percentile": "0.485180000"
+                    "percentile": "0.488380000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -6933,214 +7444,25 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-86218",
-                "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-                "published": "2026-09-06T03:17:17.373",
-                "lastModified": "2026-09-09T05:18:19.490",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "N-central is vulnerable to a pre-auth remote code execution This issue affects N-central: before 2026.3.1.14."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-                        "affectedData": [
-                            {
-                                "vendor": "N-able",
-                                "product": "N-central",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "2026.3.1.14",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-07T00:00:00+00:00",
-                                "id": "CVE-2026-86218",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-08",
-                "cisaActionDue": "2026-09-11",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "N-able N-central Static Code Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-96"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:n-able:n-central:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "2026.3",
-                                        "matchCriteriaId": "6CEC2750-AFFB-40A4-97E0-88BDAC106F5E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:n-able:n-central:2026.3:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "EB21160B-DDC4-4F70-A703-E313DED8CAF2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:n-able:n-central:2026.3:hotfix1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B28786B6-1DFC-4088-B3CC-C099719EDA17"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:n-able:n-central:2026.3:hotfix2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "24B69FFD-40FD-4DE2-AC51-A2101AD28EB3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:n-able:n-central:2026.3:hotfix3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BFA703C2-2F80-4FAC-9DA8-EE33A0F0646F"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://me.n-able.com/s/security-advisory/aArVy0000002Ld3KAE/cve202686218-preauthentication-remote-code-execution",
-                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86218",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.074940000",
-                    "percentile": "0.942950000"
-                },
-                "location": {
-                    "lat": -2.1101489067077637,
-                    "lng": -152.11014866828918,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-7273",
+            "vendorProject": "Zyxel",
+            "product": "GS1900 Series Switches",
+            "vulnerabilityName": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+            "dateAdded": "2026-09-21",
+            "shortDescription": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-24",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-7273",
+            "cwes": [
+                "CWE-121"
+            ]
+        },
         {
             "cveID": "CVE-2025-39964",
             "vendorProject": "Linux",
@@ -34362,7 +34684,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-21T17:24:44.008784",
+    "last_updated": "2026-09-22T15:56:47.355253",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
