@@ -2,6 +2,1808 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-67279",
+                "sourceIdentifier": "cvd@cert.pl",
+                "published": "2026-09-05T20:17:18.390",
+                "lastModified": "2026-09-25T14:54:07.473",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions:\u00a06.49.21 (Long-term),\u00a07.23.4 (Long-term)\u00a0and\u00a07.24.2 (Stable)"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "affectedData": [
+                            {
+                                "vendor": "Mikrotik",
+                                "product": "RouterOS",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "7.24",
+                                        "lessThan": "7.24.2",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "7.23.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.0.0",
+                                        "lessThan": "6.49.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "cvd@cert.pl",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 6.9,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "LOW",
+                                "vulnIntegrityImpact": "LOW",
+                                "vulnAvailabilityImpact": "NONE",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                                "baseScore": 6.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "LOW",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 2.5
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-08T15:31:15.958392Z",
+                                "id": "CVE-2026-67279",
+                                "options": [
+                                    {
+                                        "exploitation": "poc"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-25",
+                "cisaActionDue": "2026-09-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cvd@cert.pl",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-841"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.0",
+                                        "versionEndExcluding": "6.49.21",
+                                        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.23.4",
+                                        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.24",
+                                        "versionEndExcluding": "7.24.2",
+                                        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+                        "source": "cvd@cert.pl",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.007100000",
+                    "percentile": "0.515350000"
+                },
+                "location": {
+                    "lat": -26.669541597366333,
+                    "lng": -56.66953706741333,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-65660",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-08-11T17:18:54.080",
+                "lastModified": "2026-09-25T04:17:38.433",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Enterprise Server 2016",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.5565.1001",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Server 2019",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.10417.20198",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft SharePoint Server Subscription Edition",
+                                "platforms": [
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.19725.20522",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-24T00:00:00+00:00",
+                                "id": "CVE-2026-65660",
+                                "options": [
+                                    {
+                                        "exploitation": "none"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-25",
+                "cisaActionDue": "2026-09-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Microsoft SharePoint Code Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
+                                        "versionEndExcluding": "16.0.19725.20522",
+                                        "matchCriteriaId": "D918B8DF-51D1-46F3-8B3F-E4370083BEF6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
+                                        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.012210000",
+                    "percentile": "0.674300000"
+                },
+                "location": {
+                    "lat": 47.674,
+                    "lng": -122.1215,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-5430",
+                "sourceIdentifier": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+                "published": "2026-08-06T08:16:33.240",
+                "lastModified": "2026-09-25T12:53:05.517",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+                        "affectedData": [
+                            {
+                                "vendor": "WSO2",
+                                "product": "WSO2 Universal Gateway",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "4.5.0",
+                                        "lessThan": "4.5.0.57",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.6.0",
+                                        "lessThan": "4.6.0.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "WSO2",
+                                "product": "WSO2 Traffic Manager",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "4.5.0",
+                                        "lessThan": "4.5.0.56",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.6.0",
+                                        "lessThan": "4.6.0.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "WSO2",
+                                "product": "WSO2 API Control Plane",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "4.5.0",
+                                        "lessThan": "4.5.0.58",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.6.0",
+                                        "lessThan": "4.6.0.22",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "WSO2",
+                                "product": "WSO2 API Manager",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "4.1.0",
+                                        "versionType": "custom",
+                                        "status": "unknown"
+                                    },
+                                    {
+                                        "version": "4.1.0",
+                                        "lessThan": "4.1.0.257",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.2.0",
+                                        "lessThan": "4.2.0.197",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.3.0",
+                                        "lessThan": "4.3.0.108",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.4.0",
+                                        "lessThan": "4.4.0.72",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.5.0",
+                                        "lessThan": "4.5.0.57",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "4.6.0",
+                                        "lessThan": "4.6.0.21",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "WSO2",
+                                "product": "WSO2 Carbon API Manager Rest API Utility",
+                                "defaultStatus": "unknown",
+                                "packageName": "org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.rest.api.util",
+                                "versions": [
+                                    {
+                                        "version": "9.20.74",
+                                        "lessThan": "9.20.74.401",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.28.116",
+                                        "lessThan": "9.28.116.417",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.29.120",
+                                        "lessThan": "9.29.120.236",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.30.67",
+                                        "lessThan": "9.30.67.167",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.31.86",
+                                        "lessThan": "9.31.86.158",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.32.147",
+                                        "lessThan": "9.32.147.59",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.33.106",
+                                        "lessThanOrEqual": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-24T00:00:00+00:00",
+                                "id": "CVE-2026-5430",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-24",
+                "cisaActionDue": "2026-09-27",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability ",
+                "weaknesses": [
+                    {
+                        "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-347"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_control_plane:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.5.0",
+                                        "versionEndExcluding": "4.5.0.58",
+                                        "matchCriteriaId": "5F568AE3-DBF2-41B6-B4C8-20B655067056"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_control_plane:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.6.0",
+                                        "versionEndExcluding": "4.6.0.22",
+                                        "matchCriteriaId": "7C020DC7-BD0F-4C0B-8CBC-4B93671D4CAC"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.1.0",
+                                        "versionEndExcluding": "4.1.0.257",
+                                        "matchCriteriaId": "AE140289-0624-4385-8D46-D6E5052D3B28"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.2.0",
+                                        "versionEndExcluding": "4.2.0.197",
+                                        "matchCriteriaId": "31FC9528-42DB-4E23-BCF4-674397F2E626"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.3.0",
+                                        "versionEndExcluding": "4.3.0.108",
+                                        "matchCriteriaId": "5F10E50C-D77F-4779-936C-0ADDF8B1B1F6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.4.0",
+                                        "versionEndExcluding": "4.4.0.72",
+                                        "matchCriteriaId": "8774AF32-FAEC-4EF3-8399-8E76D55A8DEB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.5.0",
+                                        "versionEndExcluding": "4.5.0.57",
+                                        "matchCriteriaId": "D4DD9A69-BED3-45B4-9521-DBCA9AEBBF6F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.6.0",
+                                        "versionEndExcluding": "4.6.0.21",
+                                        "matchCriteriaId": "07437626-95AF-4468-8479-ACC2835DF708"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:traffic_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.5.0",
+                                        "versionEndExcluding": "4.5.0.56",
+                                        "matchCriteriaId": "066D4334-A3B2-4D0D-9830-1CBE6C91B053"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:traffic_manager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.6.0",
+                                        "versionEndExcluding": "4.6.0.21",
+                                        "matchCriteriaId": "6F904CBB-EC8F-49F3-B85D-E934E785813B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:universal_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.5.0",
+                                        "versionEndExcluding": "4.5.0.57",
+                                        "matchCriteriaId": "6AA06D88-B2E9-4474-A12E-3D44FC7E6A6B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wso2:universal_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.6.0",
+                                        "versionEndExcluding": "4.6.0.21",
+                                        "matchCriteriaId": "7BD535B3-3554-4F39-AA9A-8A0178A44490"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/",
+                        "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5430",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005800000",
+                    "percentile": "0.453840000"
+                },
+                "location": {
+                    "lat": -26.66952419281006,
+                    "lng": -56.66952347755432,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-71362",
+                "sourceIdentifier": "psirt@adobe.com",
+                "published": "2026-08-11T18:18:21.610",
+                "lastModified": "2026-09-25T12:53:15.757",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Adobe Commerce is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain elevated access to sensitive resources. Exploitation of this issue does not require user interaction."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@adobe.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Adobe",
+                                "product": "Adobe Commerce",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "2.4.9-2026-jul, 2.4.8-2026-aug, 2.4.7-2026-aug, 2.4.6-2026-aug, 2.4.5-2026-aug, 2.4.4-2026-aug",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2.4.9-2026-aug, 2.4.8-2026-aug, 2.4.7-2026-aug, 2.4.6-2026-aug, 2.4.5-2026-aug, 2.4.4-2026-aug",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Adobe",
+                                "product": "Adobe Commerce B2B",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "1.5.3-2026-jul, 1.5.2-2026-jul, 1.4.2-2026-jul, 1.3.4-2026-jul, 1.3.3-2026-jul",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.5.3-2026-aug, 1.5.2-2026-aug, 1.4.2-2026-aug, 1.3.4-2026-aug, 1.3.3-2026-aug",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Adobe",
+                                "product": "Magento Open Source",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "2.4.9-2026-jul, 2.4.8-2026-jul, 2.4.7-2026-jul, 2.4.6-2026-jul",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2.4.9-2026-aug, 2.4.8-2026-aug, 2.4.7-2026-aug, 2.4.6-2026-aug",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@adobe.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                                "baseScore": 9.1,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.2
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-08-11T00:00:00+00:00",
+                                "id": "CVE-2026-71362",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-24",
+                "cisaActionDue": "2026-09-27",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
+                "weaknesses": [
+                    {
+                        "source": "psirt@adobe.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-863"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.4.4",
+                                        "matchCriteriaId": "76AAB57F-7723-44E0-B91A-9F120C849AC4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D258D9EF-94FB-41F0-A7A5-7F66FA7A0055"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4E5CF6F0-2388-4D3F-8FE1-43B8AF148564"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1C3D7164-1C5F-40BC-9EEC-B0E00CD45808"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "68AAE162-5957-42AF-BE20-40F341837FAC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D9D01159-3309-4F6B-93B0-2D89DDD33DEE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "91736E79-D8E7-4AF2-8E01-A7B4EB8AD6F4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8412C043-64E7-4DFF-A303-13A6FE113BFB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BBDA2BCF-E784-4CF3-B30D-6FF5BEE2055F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p16:*:*:*:*:*:*",
+                                        "matchCriteriaId": "00909C10-6C93-4735-94ED-18DCBD608A28"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p17:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C6F35FE6-853D-4EC6-8A4F-07F4ABD6301A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p18:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5FD50C55-E296-4F3C-8035-C1E9256D3773"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D6D6F1A7-ABB5-4EDC-9EA8-98B74518847A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CFEBDDF2-6443-4482-83B2-3CD272CF599F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6661093F-8D22-450F-BC6C-A8894A52E6A9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2515DA6D-2E74-4A05-BD29-FEEF3322BCB6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "69A1F1F7-E53C-40F3-B3D9-DC011FC353BF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6A56E96C-6CE5-442C-AA88-F0059B02B5E7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8867F510-201C-4199-8554-53DE156CE669"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "23988132-DD4E-4968-B6B8-954122F76081"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9B07F7B2-E915-4EFF-8FFC-91143CEF082E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7F5E9DB6-1386-4274-8270-2FE0F0CAF7FD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5764CC97-C866-415D-A3A1-5B5B9E1C06A6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E82D10D8-2894-4E5B-B47B-F00964DD5CDE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B044F2D9-E888-4852-8A40-DCE688860ED3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6423C754-36F9-4680-9211-60940ED63E79"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3472064A-8C79-436B-965A-96834AE8D346"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CDA8ABEB-F955-4D34-8219-C518B49F5543"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p16:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55D6A6BD-9E63-448A-A286-437EA1580CEF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p17:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5BF962FF-2CCF-48A5-AAA3-85639EAC64BB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8605E4E6-0F7D-42C8-B35B-2349A0BEFC69"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B6318F97-E59A-4425-8DC7-045C78A644F8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "324A573E-DBC8-42A0-8CB8-EDD8FBAB7115"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "54151A00-CFB8-4E6A-8E74-497CB67BF7E2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6DF0E74D-9293-4209-97D1-A3BA13C3DDE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8922D646-1A97-47ED-91C6-5A426781C98A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "952787C6-9BF1-49FB-9824-1236678E1902"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "898A8679-3C46-4718-9EDF-583ADDFCF2EC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7C7AFBB1-F9C9-4BDE-BCEF-94C9F0AC6798"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D6086841-C175-46A1-8414-71C6163A0E7A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E57889CC-3E90-46AF-9CD6-3328DD501AD1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "47A86566-DE38-4032-947D-B6181F0BC120"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B7D1D684-CE7E-4D6D-95B5-1F86A8DB6C66"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CABF5BD0-1D06-483D-91D3-A773D99EF217"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "33512239-B316-4FE7-94F0-ABD30900238B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "95FD09E4-BB76-47F4-A2B3-569B0E4CB737"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D2E0DDD1-0F4A-4F96-B25D-40A39A1A535A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A576B1B5-73A2-431E-998F-7E5458B51D6A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0E05F4AC-2A28-47E3-96DE-0E31AF73CD43"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3A9A62EE-1649-4815-8EC9-7AEF7949EB2F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E58690F9-FA9C-42A0-B4CD-91FD1197A53E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "77D01D8B-1FBC-43CA-90F9-C89D9B4D18F0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8B83729E-80AF-47CE-A70C-32BF83024A40"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "73D22D42-646D-4955-A6F9-9B7BA63DC0A9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B5D04853-0C2F-47DD-A939-3A8F6E22CB7D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:b1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6EBB0608-034B-4F07-A59B-9E6A989BA260"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:b2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B3BF9B08-84E3-4974-9DEB-F4285995D796"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:beta3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7771BEDB-05E2-430E-B2A2-E2F7574B7114"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2E05341A-C70C-4B3D-AF30-9520D6B97D30"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "010DED96-2A96-4FEF-9F20-D6633A0D7BE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4D98B52E-3B59-4327-AC7E-DDBB0ADA08F6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "95026AA9-A28B-4D94-BD77-7628429EBA30"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "83FD1220-7D46-42B2-8110-30A934144572"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3F1439CE-8A3B-414A-B974-559209FF480C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "13726DEE-FFCB-447B-9FFF-136F132F2C4C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1A9443CE-AE1F-4D66-9C88-5E2E3FD28EE6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B5E29EF8-2569-4258-A66F-E1E5F621E0D4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "141DC3FF-68ED-429D-B10F-3C61B1399513"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1EE12F4B-5607-4790-A29B-EE23383BCC1A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:beta1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6D05A958-9749-486A-A149-C21647CDCADF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:beta2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C9E12B43-AD3E-48A2-9042-5586186CA3BE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C267AF14-7BA8-4D1F-BCD9-BE3ED0DA3D25"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B4947C63-CFD9-437B-A09E-A197DCE40095"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7FB6D020-2E5C-4789-A063-2C907F3CF3FA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A607D50D-B385-41F3-B1A9-3B21F52F2386"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A3C46E6E-8812-49CA-8AF3-52459795092B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:2.4.9:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "565B7A64-30C3-408D-9AE5-86C4627E8565"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.3.3",
+                                        "matchCriteriaId": "28120C2E-10AD-4476-B6C3-BE3A43946068"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C4667AA3-4CC9-41C0-8E0C-19B0FCE1CF79"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E396FB4F-B20A-4BF9-8FBD-014A0F197F08"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2ADE32D1-2845-4030-BE1F-ECE28189D0F9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F2E771C9-86C4-455C-98D4-6F4FE7A9A822"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "491AB715-F62A-46DB-A56E-055CF7CB7BEF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6FE364A8-4780-426F-9E8A-284A31FE2623"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F9258027-8A6A-4C6A-BC6F-349B6E03D828"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "934C52C7-8751-481E-BAA7-F631C4E31F32"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p16:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D3C5847F-57AA-4ADA-8997-5D4F5FDFF50E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p17:*:*:*:*:*:*",
+                                        "matchCriteriaId": "12F8A820-8F52-4214-9EB3-DFEA5C89D738"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p18:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E6CDCE93-5FFF-4F3F-9067-B96EE93803E2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5677B7E2-FA07-4536-96A9-2C64BEFD3751"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2DCD1522-6E27-474F-9FC6-413409D6AD55"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B7968FCA-CCFD-4222-8FB8-E6E21107944F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8C175A1F-7814-4C51-A7B7-AD5140F0688F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E66CBFB3-40C3-474A-A3A3-12135F610814"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F51DFA17-1875-41A9-B141-D89BB6238B3F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5A4D10EF-9137-4DF5-A5DD-97907E8B4C02"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5CD0DC76-7181-4954-A59E-AB7BB47D0576"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1C90C433-6655-4038-9AB3-0304C1AFF360"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "374E7EDD-512A-4633-A136-01A656935334"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "89BAB227-03E6-4776-ADE4-9D9CB666EFD9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p11:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0E5ACABA-D6D6-4F29-A9DD-5A04A44ABE64"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p12:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FA80AFCE-2663-46C0-AEC0-C16C8E675E6A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p13:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EB9955CA-7E7B-40D3-A85D-58BB0D9AC897"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p14:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5D0A17AC-D433-47C2-A1AC-88291DCCECCD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p15:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7E0FD85B-E851-436D-A789-852DD26A3B56"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p16:*:*:*:*:*:*",
+                                        "matchCriteriaId": "435DFE49-8BCF-4F74-856C-141037F8666B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p17:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A99F38A8-7381-4EE7-B882-152C4CE16D61"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0E9D364A-C858-4160-8B8B-33ECF94796D9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "61559E50-581E-40FF-9FD4-10192ECFCD04"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DE3BFB41-5633-4167-B1EA-9E958BCE9DC2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F2C525D2-837D-486A-8B38-5634AE2ECE2B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6F220229-F2DF-4C9D-90A6-8B09F8BE3391"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "63AB9506-3F8E-4C2E-A859-2380431C15A6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "51B76658-EA6B-4AC9-9D9C-374C5308D069"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6E94B136-7A2C-47F0-BCE4-6BB8E776A305"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "15C638A8-EFE0-47DB-B1F9-34093AF0FC17"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CB863404-A9D7-4692-AB43-08945E669928"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p10:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A5CA3D89-11B5-40B5-BF2D-F5586A652AF6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D8CFA8F4-D57D-4D0F-88D5-00A72E3AD8DA"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A21F608C-C356-47B8-8FBB-DB28BABFC4C6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E14195F1-5016-46BE-A614-6FB4E312FC93"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9C360EA8-B18F-4327-90EF-7EED2892BE4F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p6:*:*:*:*:*:*",
+                                        "matchCriteriaId": "500E3A54-D7C7-4887-9EA6-7DF85389A831"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p7:*:*:*:*:*:*",
+                                        "matchCriteriaId": "ED6FFC1D-E921-4FF7-9928-015630613FE1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p8:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FB8CAC6E-DA06-4C82-B148-38234D4EB910"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CEC04530-DA8F-4411-8C55-9291F5CBBC8E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D855D141-7876-4F5A-91BE-6350DD379879"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "79CBDF59-EB84-44D3-81CF-5CBF943B411E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2117B163-D88E-4EB4-AEA7-F27FB732BD48"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "33E56E15-320F-4517-85C1-832A5942944C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F50271FB-D419-4F63-A4CE-ED94C202AE8E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1CFBC765-2EB4-4189-A68A-34C55D10E612"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.3:-:*:*:*:*:*:*",
+                                        "matchCriteriaId": "37EB4150-23D4-4D3E-ABA0-4D09E4112A4E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:*:*:*:*:open_source:*:*:*",
+                                        "versionEndIncluding": "2.4.6",
+                                        "matchCriteriaId": "D37DB0B8-5518-4F09-BDA2-B398B6B0A9F9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:-:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "0E06FE04-8844-4409-92D9-4972B47C921B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:b1:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "99C620F3-40ED-4D7F-B6A1-205E948FD6F5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:b2:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "FBCFE5FB-FAB7-4BF0-90AE-79F9590FD872"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:beta3:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "7EB4B9C5-513C-4039-8087-5E8880894318"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p1:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "9C77154A-DBFE-48C3-A274-03075A0DB040"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p10:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "118E249C-662C-4F66-83A5-53B32808487B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p2:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "F5AAC414-623C-444F-9BD5-EE0ACE2B2246"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p3:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "8292888D-B0B0-4DF3-8719-EA4CDCAB39D1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p4:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "9830E074-FDCF-41E9-98C7-10C20424EF4C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p5:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "9D0C8648-B39E-47C7-AA5C-3AFED22F8D40"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p6:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "082F8B60-ECC5-4C55-BBFE-A0C8A3E95590"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p7:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "A7B83AD4-3134-414A-80E3-106C3C0F975A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p8:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "FAA14D5B-ACF2-497B-ACE7-33C42682D2DF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p9:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "FCD04DB8-77E6-47FA-957C-F41530DC45E2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:-:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "00E8284F-10CD-449C-AEF1-688B8287292F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:beta1:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "59C10C74-FDB1-46EC-8F41-F3AC24AEFB7D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:beta2:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "2957B390-52C5-48D7-A6D7-709BC76B9C69"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p1:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "524F64B6-F7F7-4926-884F-E9448636007C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p2:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "9F56F919-69B6-4A77-B8CE-F13409542F14"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p3:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "F81D46F6-AEA3-4A83-A6F5-2231FD4CEC46"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p4:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "10A2F717-827A-424E-8DBA-CABED7C70A08"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p5:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "9643F300-6432-4C73-BD0E-05C76D36A53E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:magento:2.4.9:-:*:*:open_source:*:*:*",
+                                        "matchCriteriaId": "54548841-1E84-4D06-BC42-4D073713C6CB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://helpx.adobe.com/security/products/magento/apsb26-92.html",
+                        "source": "psirt@adobe.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-71362",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.896160000",
+                    "percentile": "0.997830000"
+                },
+                "location": {
+                    "lat": 37.3307,
+                    "lng": -121.894,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-93952",
                 "sourceIdentifier": "psirt@arista.com",
                 "published": "2026-09-22T08:16:43.047",
@@ -220,11 +2022,11 @@
                 ],
                 "epss": {
                     "epss": "0.008950000",
-                    "percentile": "0.577630000"
+                    "percentile": "0.578240000"
                 },
                 "location": {
-                    "lat": -25.857129096984863,
-                    "lng": -55.8571240901947,
+                    "lat": -26.669514179229736,
+                    "lng": -56.66951394081116,
                     "country": "Unknown"
                 }
             }
@@ -432,12 +2234,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012930000",
-                    "percentile": "0.690160000"
+                    "epss": "0.022260000",
+                    "percentile": "0.819960000"
                 },
                 "location": {
-                    "lat": -25.857114553451538,
-                    "lng": -55.85711359977722,
+                    "lat": -26.669509172439575,
+                    "lng": -56.669509172439575,
                     "country": "Unknown"
                 }
             }
@@ -1837,12 +3639,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.024210000",
-                    "percentile": "0.834700000"
+                    "epss": "0.196540000",
+                    "percentile": "0.973030000"
                 },
                 "location": {
-                    "lat": -25.857108116149902,
-                    "lng": -55.857107639312744,
+                    "lat": -26.66950488090515,
+                    "lng": -56.66950440406799,
                     "country": "Unknown"
                 }
             }
@@ -2917,11 +4719,11 @@
                 ],
                 "epss": {
                     "epss": "0.009880000",
-                    "percentile": "0.608470000"
+                    "percentile": "0.609040000"
                 },
                 "location": {
-                    "lat": -25.857102632522583,
-                    "lng": -55.857102394104004,
+                    "lat": -26.66950011253357,
+                    "lng": -56.66949987411499,
                     "country": "Unknown"
                 }
             }
@@ -3428,11 +5230,11 @@
                 ],
                 "epss": {
                     "epss": "0.012860000",
-                    "percentile": "0.688640000"
+                    "percentile": "0.689090000"
                 },
                 "location": {
-                    "lat": -25.857097387313843,
-                    "lng": -55.857097148895264,
+                    "lat": -26.669495344161987,
+                    "lng": -56.66949510574341,
                     "country": "Unknown"
                 }
             }
@@ -3945,7 +5747,7 @@
                 ],
                 "epss": {
                     "epss": "0.009960000",
-                    "percentile": "0.610660000"
+                    "percentile": "0.611220000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4380,7 +6182,7 @@
                 ],
                 "epss": {
                     "epss": "0.006450000",
-                    "percentile": "0.486750000"
+                    "percentile": "0.487480000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4766,7 +6568,7 @@
                 ],
                 "epss": {
                     "epss": "0.028800000",
-                    "percentile": "0.862720000"
+                    "percentile": "0.862900000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4907,8 +6709,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.003080000",
-                    "percentile": "0.209880000"
+                    "epss": "0.005910000",
+                    "percentile": "0.459890000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5643,7 +7445,7 @@
                 ],
                 "epss": {
                     "epss": "0.140260000",
-                    "percentile": "0.964230000"
+                    "percentile": "0.964270000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -5858,11 +7660,11 @@
                 ],
                 "epss": {
                     "epss": "0.002330000",
-                    "percentile": "0.126160000"
+                    "percentile": "0.126830000"
                 },
                 "location": {
-                    "lat": -25.857070446014404,
-                    "lng": -55.857069969177246,
+                    "lat": -26.669472455978394,
+                    "lng": -56.669472217559814,
                     "country": "Unknown"
                 }
             }
@@ -6135,8 +7937,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.020180000",
-                    "percentile": "0.800690000"
+                    "epss": "0.282690000",
+                    "percentile": "0.980530000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -6300,11 +8102,11 @@
                 ],
                 "epss": {
                     "epss": "0.009240000",
-                    "percentile": "0.587150000"
+                    "percentile": "0.587750000"
                 },
                 "location": {
-                    "lat": -25.8570613861084,
-                    "lng": -55.85706114768982,
+                    "lat": -26.66946578025818,
+                    "lng": -56.66946578025818,
                     "country": "Unknown"
                 }
             }
@@ -6475,11 +8277,11 @@
                 ],
                 "epss": {
                     "epss": "0.086430000",
-                    "percentile": "0.949170000"
+                    "percentile": "0.949230000"
                 },
                 "location": {
-                    "lat": -25.857057094573975,
-                    "lng": -55.857056856155396,
+                    "lat": -26.669461727142334,
+                    "lng": -56.669461488723755,
                     "country": "Unknown"
                 }
             }
@@ -6682,11 +8484,11 @@
                 ],
                 "epss": {
                     "epss": "0.098050000",
-                    "percentile": "0.953760000"
+                    "percentile": "0.953820000"
                 },
                 "location": {
-                    "lat": -25.857052326202393,
-                    "lng": -55.85705232620239,
+                    "lat": -26.66945767402649,
+                    "lng": -56.66945767402649,
                     "country": "Unknown"
                 }
             }
@@ -6922,1137 +8724,82 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.092870000",
-                    "percentile": "0.951890000"
+                    "epss": "0.914250000",
+                    "percentile": "0.998100000"
                 },
                 "location": {
-                    "lat": -25.85704779624939,
-                    "lng": -55.85704755783081,
+                    "lat": -26.669453859329224,
+                    "lng": -56.669453620910645,
                     "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-86060",
-                "sourceIdentifier": "cvd@cert.pl",
-                "published": "2026-09-05T20:17:18.703",
-                "lastModified": "2026-09-11T12:52:16.507",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "RouterOS contains an argument-handling flaw in the SSH login\npath involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask\u00a0to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to reach the RouterOS login helper.This issue was fixed in versions:\u00a06.49.21 (Long-term),\u00a07.23.4 (Long-term)\u00a0and\u00a07.24.2 (Stable)"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cvd@cert.pl",
-                        "affectedData": [
-                            {
-                                "vendor": "Mikrotik",
-                                "product": "RouterOS",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "7.24",
-                                        "lessThan": "7.24.2",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.0.0",
-                                        "lessThan": "7.23.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.0.0",
-                                        "lessThan": "6.49.21",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "cvd@cert.pl",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.2,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "PRESENT",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-08T00:00:00+00:00",
-                                "id": "CVE-2026-86060",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-10",
-                "cisaActionDue": "2026-09-13",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cvd@cert.pl",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-88"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0",
-                                        "versionEndExcluding": "6.49.21",
-                                        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0",
-                                        "versionEndExcluding": "7.23.4",
-                                        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.24",
-                                        "versionEndExcluding": "7.24.2",
-                                        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Mitigation",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86060",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.018490000",
-                    "percentile": "0.781610000"
-                },
-                "location": {
-                    "lat": -25.85704278945923,
-                    "lng": -55.85704278945923,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-67277",
-                "sourceIdentifier": "cvd@cert.pl",
-                "published": "2026-09-05T20:17:18.120",
-                "lastModified": "2026-09-11T12:52:29.533",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions:\u00a06.49.21 (Long-term),\u00a07.23.4 (Long-term)\u00a0and\u00a07.24.2 (Stable)"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cvd@cert.pl",
-                        "affectedData": [
-                            {
-                                "vendor": "Mikrotik",
-                                "product": "RouterOS",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "7.24",
-                                        "lessThan": "7.24.2",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.0.0",
-                                        "lessThan": "7.23.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "6.0.0",
-                                        "lessThan": "6.49.21",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "cvd@cert.pl",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "LOW",
-                                "vulnIntegrityImpact": "NONE",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
-                                "baseScore": 8.2,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 4.2
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-08T00:00:00+00:00",
-                                "id": "CVE-2026-67277",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-10",
-                "cisaActionDue": "2026-09-13",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cvd@cert.pl",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-306"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0",
-                                        "versionEndExcluding": "6.49.21",
-                                        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0",
-                                        "versionEndExcluding": "7.23.4",
-                                        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.24",
-                                        "versionEndExcluding": "7.24.2",
-                                        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Mitigation",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
-                        "source": "cvd@cert.pl",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67277",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.015600000",
-                    "percentile": "0.741440000"
-                },
-                "location": {
-                    "lat": -25.857038021087646,
-                    "lng": -55.85703802108765,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-19490",
-                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                "published": "2026-08-19T13:17:45.000",
-                "lastModified": "2026-09-10T12:48:10.453",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: from 14.1 through 73.32 and from 13.1 through 63.21; Gateway: from 14.1 through 73.32 and from 13.1 through 63.21."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "affectedData": [
-                            {
-                                "vendor": "NetScaler",
-                                "product": "ADC",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "14.1",
-                                        "lessThanOrEqual": "73.32",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1",
-                                        "lessThanOrEqual": "63.21",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "NetScaler",
-                                "product": "Gateway",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "14.1",
-                                        "lessThanOrEqual": "73.32",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.1",
-                                        "lessThanOrEqual": "63.21",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "LOW",
-                                "subIntegrityImpact": "LOW",
-                                "subAvailabilityImpact": "LOW",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-08-19T00:00:00+00:00",
-                                "id": "CVE-2026-19490",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-09",
-                "cisaActionDue": "2026-09-12",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-288"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-37.277",
-                                        "matchCriteriaId": "2F90F173-E24C-4189-87FF-2157DBBECE4A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-37.277",
-                                        "matchCriteriaId": "2CD7AEA1-F0D9-47E9-A4BF-6E72E2083934"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-63.21",
-                                        "matchCriteriaId": "07826E3F-A0BA-42DB-97DD-677E2F1E99B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.32",
-                                        "matchCriteriaId": "12664220-1266-43A3-A5B9-011E06C56A3E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "14.1-66.68",
-                                        "versionEndIncluding": "14.1-73.32",
-                                        "matchCriteriaId": "98857F06-6895-4454-A52D-E200D2109B19"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-63.21",
-                                        "matchCriteriaId": "0ACEC99D-8145-45D4-BFCC-ADC11999D2CF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.32",
-                                        "matchCriteriaId": "45606A9C-06AF-4A4B-80B4-CB1A29230C85"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696939",
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19490",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.070100000",
-                    "percentile": "0.939290000"
-                },
-                "location": {
-                    "lat": -25.857033014297485,
-                    "lng": -55.857032775878906,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-25249",
-                "sourceIdentifier": "psirt@fortinet.com",
-                "published": "2026-01-13T17:15:56.910",
-                "lastModified": "2026-09-10T12:47:59.933",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets"
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Una vulnerabilidad de desbordamiento de b\u00fafer basado en mont\u00edculo en Fortinet FortiOS 7.6.0 a 7.6.3, FortiOS 7.4.0 a 7.4.8, FortiOS 7.2.0 a 7.2.11, FortiOS 7.0.0 a 7.0.17, FortiOS 6.4.0 a 6.4.16, FortiSwitchManager 7.2.0 a 7.2.6, FortiSwitchManager 7.0.0 a 7.0.5 permite al atacante ejecutar c\u00f3digo o comandos no autorizados a trav\u00e9s de paquetes especialmente dise\u00f1ados."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@fortinet.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Fortinet",
-                                "product": "FortiSwitchManager",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.5:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.4:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.3:*:*:*:*:*:*:*",
-                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.2:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "7.2.2",
-                                        "lessThanOrEqual": "7.2.5",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Fortinet",
-                                "product": "FortiOS",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:o:fortinet:fortios:7.6.2:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.6.1:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.6.0:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.7:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
-                                    "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "7.6.0",
-                                        "lessThanOrEqual": "7.6.2",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.4.0",
-                                        "lessThanOrEqual": "7.4.7",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.2.4",
-                                        "lessThanOrEqual": "7.2.11",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
-                        "affectedData": [
-                            {
-                                "vendor": "Siemens",
-                                "product": "RUGGEDCOM APE1808",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "*",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@fortinet.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.2,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-01-13T00:00:00+00:00",
-                                "id": "CVE-2025-25249",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-09",
-                "cisaActionDue": "2026-09-12",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@fortinet.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-122"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-787"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.4.0",
-                                        "versionEndExcluding": "7.0.18",
-                                        "matchCriteriaId": "7B071609-D589-44A8-8E7A-010B5BAA36EE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.2.0",
-                                        "versionEndExcluding": "7.2.12",
-                                        "matchCriteriaId": "E8FAAA2E-7A53-4F6B-A9C7-1E2B4CB5F7EB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.4.0",
-                                        "versionEndExcluding": "7.4.9",
-                                        "matchCriteriaId": "2093EFE3-4B7F-4806-9850-C42B26BC64AC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.6.0",
-                                        "versionEndExcluding": "7.6.4",
-                                        "matchCriteriaId": "C1C30E0D-7F09-42D2-9EB1-E2196BD50D75"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0.0",
-                                        "versionEndExcluding": "7.0.6",
-                                        "matchCriteriaId": "F1B9AA70-BB46-403B-94C1-D94C64E22334"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.2.0",
-                                        "versionEndExcluding": "7.2.7",
-                                        "matchCriteriaId": "EE22A407-02CB-4979-A38D-9EBAFEB350F6"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:fortisase:25.1.39:*:*:*:-:*:*:*",
-                                        "matchCriteriaId": "77B84900-E96D-4E2C-8797-B1460E71874E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:fortinet:fortisase:25.1.51:*:*:*:-:*:*:*",
-                                        "matchCriteriaId": "12A8EE3F-EEAF-460D-B2DB-551509DF0814"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-084",
-                        "source": "psirt@fortinet.com",
-                        "tags": [
-                            "Vendor Advisory",
-                            "Mitigation"
-                        ]
-                    },
-                    {
-                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-864900.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://socradar.io/blog/cve-2025-25249-pivotc2-fortigate-rat/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-25249",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.038590000",
-                    "percentile": "0.897640000"
-                },
-                "location": {
-                    "lat": 37.3752,
-                    "lng": -122.0297,
-                    "country": "USA"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-67279",
+            "vendorProject": "MikroTik",
+            "product": "RouterOS",
+            "vulnerabilityName": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+            "dateAdded": "2026-09-25",
+            "shortDescription": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-28",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability/?utm_source=chatgpt.com ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-67279",
+            "cwes": [
+                "CWE-841"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-65660",
+            "vendorProject": "Microsoft",
+            "product": "SharePoint",
+            "vulnerabilityName": "Microsoft SharePoint Code Injection Vulnerability",
+            "dateAdded": "2026-09-25",
+            "shortDescription": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-28",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-65660",
+            "cwes": [
+                "CWE-94"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-5430",
+            "vendorProject": "WSO2",
+            "product": "Multiple Products",
+            "vulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability ",
+            "dateAdded": "2026-09-24",
+            "shortDescription": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. ",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-27",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/ ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
+            "cwes": [
+                "CWE-347"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-71362",
+            "vendorProject": "Adobe",
+            "product": "Commerce and Magento ",
+            "vulnerabilityName": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
+            "dateAdded": "2026-09-24",
+            "shortDescription": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction. ",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-27",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://helpx.adobe.com/security/products/magento/apsb26-92.html ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-71362",
+            "cwes": [
+                "CWE-863"
+            ]
+        },
         {
             "cveID": "CVE-2026-93952",
             "vendorProject": "Arista",
@@ -35354,7 +36101,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-24T16:08:19.847721",
+    "last_updated": "2026-09-25T16:08:18.297150",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
