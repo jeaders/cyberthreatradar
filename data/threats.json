@@ -5,7 +5,7 @@
                 "id": "CVE-2026-67279",
                 "sourceIdentifier": "cvd@cert.pl",
                 "published": "2026-09-05T20:17:18.390",
-                "lastModified": "2026-09-25T14:54:07.473",
+                "lastModified": "2026-09-26T04:17:47.273",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -117,11 +117,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-09-08T15:31:15.958392Z",
+                                "timestamp": "2026-09-25T00:00:00+00:00",
                                 "id": "CVE-2026-67279",
                                 "options": [
                                     {
-                                        "exploitation": "poc"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -236,15 +236,29 @@
                             "Exploit",
                             "Third Party Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://bishopfox.com/blog/mikrotrick-inside-the-routeros-takeover-chain",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67279",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.007100000",
-                    "percentile": "0.515350000"
+                    "epss": "0.010270000",
+                    "percentile": "0.621790000"
                 },
                 "location": {
-                    "lat": -26.669541597366333,
-                    "lng": -56.66953706741333,
+                    "lat": 6.5419676303863525,
+                    "lng": 36.54197287559509,
                     "country": "Unknown"
                 }
             }
@@ -254,8 +268,8 @@
                 "id": "CVE-2026-65660",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-08-11T17:18:54.080",
-                "lastModified": "2026-09-25T04:17:38.433",
-                "vulnStatus": "Modified",
+                "lastModified": "2026-09-26T04:17:45.630",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -346,7 +360,7 @@
                                 "id": "CVE-2026-65660",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -413,16 +427,151 @@
                             "Patch",
                             "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://blog.previdian.com/cve-2026-65660-previdian-observes-two-stage-sharepoint-exploitation-attempts/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.012210000",
-                    "percentile": "0.674300000"
+                    "epss": "0.021010000",
+                    "percentile": "0.809620000"
                 },
                 "location": {
                     "lat": 47.674,
                     "lng": -122.1215,
                     "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-87902",
+                "sourceIdentifier": "support@hackerone.com",
+                "published": "2026-09-22T17:17:28.310",
+                "lastModified": "2026-09-26T04:17:49.733",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An unauthenticated attacker can make `get_page_template()` page-template resolution include a chosen readable local `.php` file outside the active theme directories. If relevant pre-conditions for both the server and the active theme are met, this can lead to RCE."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "support@hackerone.com",
+                        "affectedData": [
+                            {
+                                "vendor": "WordPress",
+                                "product": "WordPress",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "7.1.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.1,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-25T00:00:00+00:00",
+                                "id": "CVE-2026-87902",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-25",
+                "cisaActionDue": "2026-09-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "WordPress Core Remote File Inclusion Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "support@hackerone.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-98"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
+                        "source": "support@hackerone.com"
+                    },
+                    {
+                        "url": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.181660000",
+                    "percentile": "0.971110000"
+                },
+                "location": {
+                    "lat": 6.541984558105469,
+                    "lng": 36.541985273361206,
+                    "country": "Unknown"
                 }
             }
         },
@@ -808,12 +957,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.005800000",
-                    "percentile": "0.453840000"
+                    "epss": "0.005880000",
+                    "percentile": "0.459550000"
                 },
                 "location": {
-                    "lat": -26.66952419281006,
-                    "lng": -56.66952347755432,
+                    "lat": 6.541990756988525,
+                    "lng": 36.541990995407104,
                     "country": "Unknown"
                 }
             }
@@ -1792,8 +1941,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.896160000",
-                    "percentile": "0.997830000"
+                    "epss": "0.875070000",
+                    "percentile": "0.997540000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -2022,11 +2171,11 @@
                 ],
                 "epss": {
                     "epss": "0.008950000",
-                    "percentile": "0.578240000"
+                    "percentile": "0.579000000"
                 },
                 "location": {
-                    "lat": -26.669514179229736,
-                    "lng": -56.66951394081116,
+                    "lat": 6.541999578475952,
+                    "lng": 36.54199957847595,
                     "country": "Unknown"
                 }
             }
@@ -2235,11 +2384,11 @@
                 ],
                 "epss": {
                     "epss": "0.022260000",
-                    "percentile": "0.819960000"
+                    "percentile": "0.820280000"
                 },
                 "location": {
-                    "lat": -26.669509172439575,
-                    "lng": -56.669509172439575,
+                    "lat": 6.542003631591797,
+                    "lng": 36.542003870010376,
                     "country": "Unknown"
                 }
             }
@@ -3640,11 +3789,11 @@
                 ],
                 "epss": {
                     "epss": "0.196540000",
-                    "percentile": "0.973030000"
+                    "percentile": "0.973080000"
                 },
                 "location": {
-                    "lat": -26.66950488090515,
-                    "lng": -56.66950440406799,
+                    "lat": 6.542007923126221,
+                    "lng": 36.5420081615448,
                     "country": "Unknown"
                 }
             }
@@ -4719,11 +4868,11 @@
                 ],
                 "epss": {
                     "epss": "0.009880000",
-                    "percentile": "0.609040000"
+                    "percentile": "0.609690000"
                 },
                 "location": {
-                    "lat": -26.66950011253357,
-                    "lng": -56.66949987411499,
+                    "lat": 6.542011976242065,
+                    "lng": 36.542011976242065,
                     "country": "Unknown"
                 }
             }
@@ -5229,12 +5378,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012860000",
-                    "percentile": "0.689090000"
+                    "epss": "0.025010000",
+                    "percentile": "0.840750000"
                 },
                 "location": {
-                    "lat": -26.669495344161987,
-                    "lng": -56.66949510574341,
+                    "lat": 6.542015790939331,
+                    "lng": 36.54201602935791,
                     "country": "Unknown"
                 }
             }
@@ -5747,7 +5896,7 @@
                 ],
                 "epss": {
                     "epss": "0.009960000",
-                    "percentile": "0.611220000"
+                    "percentile": "0.611860000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -6182,7 +6331,7 @@
                 ],
                 "epss": {
                     "epss": "0.006450000",
-                    "percentile": "0.487480000"
+                    "percentile": "0.488510000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -6568,7 +6717,7 @@
                 ],
                 "epss": {
                     "epss": "0.028800000",
-                    "percentile": "0.862900000"
+                    "percentile": "0.863130000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -6710,7 +6859,7 @@
                 ],
                 "epss": {
                     "epss": "0.005910000",
-                    "percentile": "0.459890000"
+                    "percentile": "0.460940000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -6724,7 +6873,7 @@
                 "id": "CVE-2026-76460",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-09-16T21:17:21.430",
-                "lastModified": "2026-09-17T12:46:31.670",
+                "lastModified": "2026-09-25T16:53:35.463",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -7400,26 +7549,6 @@
                                         "vulnerable": true,
                                         "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch6:*:*:*:*:*:*",
                                         "matchCriteriaId": "7E30ECF6-5B1D-4280-AA02-123153E68F28"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.5.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2A7003EB-C578-4C02-B768-F8C4C8421382"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.5.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "16B32F60-CEB7-4816-AA7C-3130D1053DC5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.5.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "755761D7-8DDD-4219-8E37-FA535757710A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.5.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "656248A2-92B4-40B8-8D81-1135A4F35D20"
                                     }
                                 ]
                             }
@@ -7445,7 +7574,7 @@
                 ],
                 "epss": {
                     "epss": "0.140260000",
-                    "percentile": "0.964270000"
+                    "percentile": "0.964340000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7660,11 +7789,11 @@
                 ],
                 "epss": {
                     "epss": "0.002330000",
-                    "percentile": "0.126830000"
+                    "percentile": "0.127700000"
                 },
                 "location": {
-                    "lat": -26.669472455978394,
-                    "lng": -56.669472217559814,
+                    "lat": 6.542038202285767,
+                    "lng": 36.54203820228577,
                     "country": "Unknown"
                 }
             }
@@ -7938,7 +8067,7 @@
                 ],
                 "epss": {
                     "epss": "0.282690000",
-                    "percentile": "0.980530000"
+                    "percentile": "0.980580000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -8102,11 +8231,11 @@
                 ],
                 "epss": {
                     "epss": "0.009240000",
-                    "percentile": "0.587750000"
+                    "percentile": "0.588430000"
                 },
                 "location": {
-                    "lat": -26.66946578025818,
-                    "lng": -56.66946578025818,
+                    "lat": 6.5420451164245605,
+                    "lng": 36.54204535484314,
                     "country": "Unknown"
                 }
             }
@@ -8277,11 +8406,11 @@
                 ],
                 "epss": {
                     "epss": "0.086430000",
-                    "percentile": "0.949230000"
+                    "percentile": "0.949320000"
                 },
                 "location": {
-                    "lat": -26.669461727142334,
-                    "lng": -56.669461488723755,
+                    "lat": 6.5420496463775635,
+                    "lng": 36.54204988479614,
                     "country": "Unknown"
                 }
             }
@@ -8484,252 +8613,11 @@
                 ],
                 "epss": {
                     "epss": "0.098050000",
-                    "percentile": "0.953820000"
+                    "percentile": "0.953890000"
                 },
                 "location": {
-                    "lat": -26.66945767402649,
-                    "lng": -56.66945767402649,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-85706",
-                "sourceIdentifier": "cve@gitlab.com",
-                "published": "2026-09-12T03:16:30.473",
-                "lastModified": "2026-09-24T12:52:28.143",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 18.11.12, 19.0 before 19.0.9, 19.1 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@gitlab.com",
-                        "affectedData": [
-                            {
-                                "vendor": "GitLab",
-                                "product": "GitLab",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
-                                ],
-                                "repo": "git://git@gitlab.com:gitlab-org/gitlab.git",
-                                "versions": [
-                                    {
-                                        "version": "18.7",
-                                        "lessThan": "18.11.12",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "19.0",
-                                        "lessThan": "19.0.9",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "19.1",
-                                        "lessThan": "19.1.8",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "19.2",
-                                        "lessThan": "19.2.6",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "19.3",
-                                        "lessThan": "19.3.2",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "cve@gitlab.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.8
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-12T03:55:28.970728Z",
-                                "id": "CVE-2026-85706",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-11",
-                "cisaActionDue": "2026-09-14",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cve@gitlab.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-                                        "versionStartIncluding": "18.7.0",
-                                        "versionEndExcluding": "18.11.12",
-                                        "matchCriteriaId": "16F1EDAF-FD17-4B50-B9D2-643DF2770CAA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "18.7.0",
-                                        "versionEndExcluding": "18.11.12",
-                                        "matchCriteriaId": "BFC013D4-560D-444B-A63F-6128E0CB8EC1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-                                        "versionStartIncluding": "19.0.0",
-                                        "versionEndExcluding": "19.0.9",
-                                        "matchCriteriaId": "785E6802-2B47-414C-A0D7-910EBF325B9B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "19.0.0",
-                                        "versionEndExcluding": "19.0.9",
-                                        "matchCriteriaId": "94A5B71B-5FDA-4758-9095-77AA1225282F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-                                        "versionStartIncluding": "19.1.0",
-                                        "versionEndExcluding": "19.1.8",
-                                        "matchCriteriaId": "202657EE-3BCA-4770-BD25-EA7BF5139394"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "19.1.0",
-                                        "versionEndExcluding": "19.1.8",
-                                        "matchCriteriaId": "A7AFE4A6-85DB-4CA2-AE8A-A5EC6521520C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-                                        "versionStartIncluding": "19.2.0",
-                                        "versionEndExcluding": "19.2.6",
-                                        "matchCriteriaId": "4A6AAECA-E557-43EF-B109-B92D1281E48B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "19.2.0",
-                                        "versionEndExcluding": "19.2.6",
-                                        "matchCriteriaId": "8598AF82-D212-4B5D-ABC3-C12C9B217BF3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-                                        "versionStartIncluding": "19.3.0",
-                                        "versionEndExcluding": "19.3.2",
-                                        "matchCriteriaId": "198FF0EF-1A45-484F-9268-F7821E006BA8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-                                        "versionStartIncluding": "19.3.0",
-                                        "versionEndExcluding": "19.3.2",
-                                        "matchCriteriaId": "03B1901F-AAF4-421E-B704-5345CB840DEF"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748",
-                        "source": "cve@gitlab.com",
-                        "tags": [
-                            "Broken Link"
-                        ]
-                    },
-                    {
-                        "url": "https://hackerone.com/reports/3909881",
-                        "source": "cve@gitlab.com",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85706",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory",
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.914250000",
-                    "percentile": "0.998100000"
-                },
-                "location": {
-                    "lat": -26.669453859329224,
-                    "lng": -56.669453620910645,
+                    "lat": 6.542052507400513,
+                    "lng": 36.54205274581909,
                     "country": "Unknown"
                 }
             }
@@ -8766,6 +8654,22 @@
             "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-65660",
             "cwes": [
                 "CWE-94"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-87902",
+            "vendorProject": "WordPress",
+            "product": "Core",
+            "vulnerabilityName": "WordPress Core Remote File Inclusion Vulnerability",
+            "dateAdded": "2026-09-25",
+            "shortDescription": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-28",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-87902",
+            "cwes": [
+                "CWE-98"
             ]
         },
         {
@@ -36101,7 +36005,7 @@
             ]
         }
     ],
-    "last_updated": "2026-09-25T16:08:18.297150",
+    "last_updated": "2026-09-26T15:21:51.260026",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
