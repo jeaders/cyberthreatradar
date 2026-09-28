@@ -2,6 +2,536 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-88772",
+                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                "published": "2026-09-27T17:16:56.390",
+                "lastModified": "2026-09-28T12:26:47.670",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23\u00a0leading to Remote Code Execution or Denial of Service"
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad en Citrix NetScaler ADC y Citrix NetScaler Gateway.\n\nEste problema afecta a ADC: versiones anteriores a 14.1-73.37, a 13.1-64.23, a 14.1-73.37 FIPS, y a 13.1.37.279 FIPS y NDcPP; Gateway: versiones anteriores a 14.1-73.37 y a 13.1-64.23, lo que conduce a Ejecuci\u00f3n remota de c\u00f3digo o Denegaci\u00f3n de servicio."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "affectedData": [
+                            {
+                                "vendor": "Citrix NetScaler",
+                                "product": "ADC",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.23",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37 FIPS",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1.37.279 FIPS and NDcPP",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Citrix NetScaler",
+                                "product": "Gateway",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.23",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.5,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.1,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-27T00:00:00+00:00",
+                                "id": "CVE-2026-88772",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-27",
+                "cisaActionDue": "2026-09-30",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-119"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.23",
+                                        "matchCriteriaId": "6BC2D462-9ABE-4024-8E46-8D265C0B19FB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1.37.279",
+                                        "matchCriteriaId": "2DB314FE-3886-4ABD-A820-B8A70EBB23A6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1.37.279",
+                                        "matchCriteriaId": "FCFFA1B3-87CE-4CC8-990E-D3CE0B55CD45"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.37",
+                                        "matchCriteriaId": "1CA9588A-E3EB-44FC-9515-6EB89BB8C1D6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "14.1-66.68",
+                                        "versionEndIncluding": "14.1-73.37",
+                                        "matchCriteriaId": "046FF602-D956-4961-89BF-2041A3590004"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.23",
+                                        "matchCriteriaId": "3286D2C3-EA7E-4D9C-95DE-05D462DC8B1B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.37",
+                                        "matchCriteriaId": "C77243A7-1FDB-4557-88BE-EDF3BAA56A81"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778",
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "location": {
+                    "lat": -4.598191976547241,
+                    "lng": -34.59818744659424,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-88771",
+                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                "published": "2026-09-27T17:16:56.260",
+                "lastModified": "2026-09-28T13:17:25.027",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to\u00a0an unauthenticated attacker to execute arbitrary commands."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de validaci\u00f3n de entrada inadecuada en Citrix NetScaler ADC y Citrix NetScaler Gateway.\n\nEste problema afecta a ADC en versiones anteriores a 14.1-73.37, 13.1-64.23, 14.1-73.37 FIPS, y 13.1.37.279 FIPS y NDcPP; y a Gateway en versiones anteriores a 14.1-73.37 y 13.1-64.23, lo que permite a un atacante no autenticado ejecutar comandos arbitrarios."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "affectedData": [
+                            {
+                                "vendor": "Citrix NetScaler",
+                                "product": "ADC",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.23",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37 FIPS",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1.37.279 FIPS and NDcPP",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Citrix NetScaler",
+                                "product": "Gateway",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.37",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.23",
+                                        "versionType": "patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.5,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "PRESENT",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-09-28T12:43:00.920024Z",
+                                "id": "CVE-2026-88771",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-09-27",
+                "cisaActionDue": "2026-09-30",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-20"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.23",
+                                        "matchCriteriaId": "6BC2D462-9ABE-4024-8E46-8D265C0B19FB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1.37.279",
+                                        "matchCriteriaId": "2DB314FE-3886-4ABD-A820-B8A70EBB23A6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1.37.279",
+                                        "matchCriteriaId": "FCFFA1B3-87CE-4CC8-990E-D3CE0B55CD45"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.37",
+                                        "matchCriteriaId": "1CA9588A-E3EB-44FC-9515-6EB89BB8C1D6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "14.1-66.68",
+                                        "versionEndIncluding": "14.1-73.37",
+                                        "matchCriteriaId": "046FF602-D956-4961-89BF-2041A3590004"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.23",
+                                        "matchCriteriaId": "3286D2C3-EA7E-4D9C-95DE-05D462DC8B1B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.37",
+                                        "matchCriteriaId": "C77243A7-1FDB-4557-88BE-EDF3BAA56A81"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096",
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "location": {
+                    "lat": -4.598179817199707,
+                    "lng": -34.59817910194397,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-67279",
                 "sourceIdentifier": "cvd@cert.pl",
                 "published": "2026-09-05T20:17:18.390",
@@ -252,13 +782,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.010270000",
-                    "percentile": "0.621940000"
-                },
                 "location": {
-                    "lat": 3.5789332389831543,
-                    "lng": -146.42106199264526,
+                    "lat": -4.598174095153809,
+                    "lng": -34.59817385673523,
                     "country": "Unknown"
                 }
             }
@@ -443,10 +969,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.021010000",
-                    "percentile": "0.809690000"
-                },
                 "location": {
                     "lat": 47.674,
                     "lng": -122.1215,
@@ -459,8 +981,8 @@
                 "id": "CVE-2026-87902",
                 "sourceIdentifier": "support@hackerone.com",
                 "published": "2026-09-22T17:17:28.310",
-                "lastModified": "2026-09-26T04:17:49.733",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-09-28T12:20:54.040",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -550,27 +1072,218 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "4.7.37",
+                                        "matchCriteriaId": "F1CFA516-E292-436E-9B45-BD6ACB344205"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.8",
+                                        "versionEndExcluding": "4.8.32",
+                                        "matchCriteriaId": "8EEBFAB5-8903-4D4E-9847-A50A3F840878"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.9",
+                                        "versionEndExcluding": "4.9.33",
+                                        "matchCriteriaId": "5A7719CA-2099-45E9-8E48-64EF672C76C0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.0",
+                                        "versionEndExcluding": "5.0.29",
+                                        "matchCriteriaId": "BFA3645E-7056-449B-9DEB-D9D53EB21488"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.1",
+                                        "versionEndExcluding": "5.1.26",
+                                        "matchCriteriaId": "3582671F-7248-420A-8DF7-F32742D0D2AF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.2",
+                                        "versionEndExcluding": "5.2.28",
+                                        "matchCriteriaId": "FD9C147A-9FCB-46A7-8409-4AE652986FDC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.3",
+                                        "versionEndExcluding": "5.3.25",
+                                        "matchCriteriaId": "73C13CF0-B293-47C4-93AA-F46E0323A9C1"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.4",
+                                        "versionEndExcluding": "5.4.23",
+                                        "matchCriteriaId": "7FB5AE52-9590-4B1D-BDFF-A522EFDD55DC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.5",
+                                        "versionEndExcluding": "5.5.22",
+                                        "matchCriteriaId": "72A42175-5759-47B1-8E87-ADAF0CDB73C7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.6",
+                                        "versionEndExcluding": "5.6.21",
+                                        "matchCriteriaId": "5D7C48F3-BBB2-4943-A6F2-E652997034FE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.7",
+                                        "versionEndExcluding": "5.7.19",
+                                        "matchCriteriaId": "D23FACBB-B9EC-4490-B328-24833FEF6209"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.8",
+                                        "versionEndExcluding": "5.8.17",
+                                        "matchCriteriaId": "47F4A57C-CA16-4E9A-B0C2-EBB5FCCB41B9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.9",
+                                        "versionEndExcluding": "5.9.18",
+                                        "matchCriteriaId": "83CC56B0-F56E-4862-B74E-B106092C73F0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.0",
+                                        "versionEndExcluding": "6.0.16",
+                                        "matchCriteriaId": "E3EE7487-2943-4229-8B04-8787FE730FCB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.1",
+                                        "versionEndExcluding": "6.1.14",
+                                        "matchCriteriaId": "E83A61A6-8FBC-4AF6-98E6-0152CA380AA0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.2",
+                                        "versionEndExcluding": "6.2.13",
+                                        "matchCriteriaId": "D97C90F9-83C3-4057-A7E2-61787BC24E05"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.3",
+                                        "versionEndExcluding": "6.3.12",
+                                        "matchCriteriaId": "D7DA40D7-228A-4CFF-8CC8-32321BB1D3C5"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.4",
+                                        "versionEndExcluding": "6.4.12",
+                                        "matchCriteriaId": "DDE93788-7DAB-475C-B6AE-753780DE8160"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.5",
+                                        "versionEndExcluding": "6.5.12",
+                                        "matchCriteriaId": "18808A77-C445-4D07-A364-A676F2D7FD63"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.6",
+                                        "versionEndExcluding": "6.6.9",
+                                        "matchCriteriaId": "ADEAA29A-1862-476B-8F21-684D8799589E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.7",
+                                        "versionEndExcluding": "6.7.9",
+                                        "matchCriteriaId": "D3BD738C-4601-43C1-A5BC-E5AFB0189CD9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.8",
+                                        "versionEndExcluding": "6.8.10",
+                                        "matchCriteriaId": "4A6867FC-850F-437B-8532-63A5F747D64F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.9",
+                                        "versionEndExcluding": "6.9.9",
+                                        "matchCriteriaId": "5C21A09B-5001-4F4E-A49D-4F29032AF612"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0",
+                                        "versionEndExcluding": "7.0.6",
+                                        "matchCriteriaId": "6FC26EAE-8D7D-4BF9-AACE-75C6AB13279F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.1",
+                                        "versionEndExcluding": "7.1.2",
+                                        "matchCriteriaId": "525A2372-93E8-447E-BBB7-F795C08B3E2B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-                        "source": "support@hackerone.com"
+                        "source": "support@hackerone.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.181660000",
-                    "percentile": "0.971120000"
-                },
                 "location": {
-                    "lat": 3.5789506435394287,
-                    "lng": -146.42104864120483,
+                    "lat": -4.598165512084961,
+                    "lng": -34.59816527366638,
                     "country": "Unknown"
                 }
             }
@@ -956,13 +1669,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.005880000",
-                    "percentile": "0.459810000"
-                },
                 "location": {
-                    "lat": 3.5789575576782227,
-                    "lng": -146.4210422039032,
+                    "lat": -4.598161935806274,
+                    "lng": -34.598161697387695,
                     "country": "Unknown"
                 }
             }
@@ -1940,10 +2649,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.875070000",
-                    "percentile": "0.997540000"
-                },
                 "location": {
                     "lat": 37.3307,
                     "lng": -121.894,
@@ -2169,13 +2874,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.010620000",
-                    "percentile": "0.632140000"
-                },
                 "location": {
-                    "lat": 3.578967332839966,
-                    "lng": -146.42103242874146,
+                    "lat": -4.598154544830322,
+                    "lng": -34.59815430641174,
                     "country": "Unknown"
                 }
             }
@@ -2382,13 +3083,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.022260000",
-                    "percentile": "0.820350000"
-                },
                 "location": {
-                    "lat": 3.5789713859558105,
-                    "lng": -146.4210286140442,
+                    "lat": -4.598150730133057,
+                    "lng": -34.59815049171448,
                     "country": "Unknown"
                 }
             }
@@ -3787,13 +4484,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.196540000",
-                    "percentile": "0.973090000"
-                },
                 "location": {
-                    "lat": 3.5789759159088135,
-                    "lng": -146.4210238456726,
+                    "lat": -4.598146677017212,
+                    "lng": -34.598146200180054,
                     "country": "Unknown"
                 }
             }
@@ -4866,13 +5559,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.009880000",
-                    "percentile": "0.609820000"
-                },
                 "location": {
-                    "lat": 3.5789806842803955,
-                    "lng": -146.42101907730103,
+                    "lat": -4.598142147064209,
+                    "lng": -34.59814214706421,
                     "country": "Unknown"
                 }
             }
@@ -5377,13 +6066,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.025010000",
-                    "percentile": "0.840810000"
-                },
                 "location": {
-                    "lat": 3.5789852142333984,
-                    "lng": -146.42101454734802,
+                    "lat": -4.5981385707855225,
+                    "lng": -34.59813857078552,
                     "country": "Unknown"
                 }
             }
@@ -5894,10 +6579,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.009960000",
-                    "percentile": "0.611970000"
-                },
                 "location": {
                     "lat": 45.5231,
                     "lng": -122.6765,
@@ -6329,10 +7010,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.006450000",
-                    "percentile": "0.488740000"
-                },
                 "location": {
                     "lat": 45.5231,
                     "lng": -122.6765,
@@ -6715,10 +7392,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.028800000",
-                    "percentile": "0.863160000"
-                },
                 "location": {
                     "lat": 45.5231,
                     "lng": -122.6765,
@@ -6857,10 +7530,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.005910000",
-                    "percentile": "0.461200000"
-                },
                 "location": {
                     "lat": 37.422,
                     "lng": -122.0841,
@@ -7572,10 +8241,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.140260000",
-                    "percentile": "0.964360000"
-                },
                 "location": {
                     "lat": 37.4084,
                     "lng": -121.954,
@@ -7787,13 +8452,9 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.002330000",
-                    "percentile": "0.127710000"
-                },
                 "location": {
-                    "lat": 3.579010009765625,
-                    "lng": -146.4209897518158,
+                    "lat": -4.598118305206299,
+                    "lng": -34.5981183052063,
                     "country": "Unknown"
                 }
             }
@@ -8065,10 +8726,6 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.282690000",
-                    "percentile": "0.980580000"
-                },
                 "location": {
                     "lat": 37.4084,
                     "lng": -121.954,
@@ -8229,401 +8886,47 @@
                         ]
                     }
                 ],
-                "epss": {
-                    "epss": "0.009240000",
-                    "percentile": "0.588580000"
-                },
                 "location": {
-                    "lat": 3.5790176391601562,
-                    "lng": -146.42098212242126,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-42016",
-                "sourceIdentifier": "reefs@jfrog.com",
-                "published": "2026-07-27T20:16:39.613",
-                "lastModified": "2026-09-12T04:16:32.483",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token\u2019s scope."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "affectedData": [
-                            {
-                                "vendor": "jfrog",
-                                "product": "artifactory",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "7.133.11",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "reefs@jfrog.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-                                "baseScore": 8.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.2
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-11T00:00:00+00:00",
-                                "id": "CVE-2026-42016",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-11",
-                "cisaActionDue": "2026-09-25",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-863"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionEndExcluding": "7.133.11",
-                                        "matchCriteriaId": "817DC3BE-A8A2-42D7-9407-2BA24639E9A0"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42016",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.086430000",
-                    "percentile": "0.949350000"
-                },
-                "location": {
-                    "lat": 3.5790224075317383,
-                    "lng": -146.42097759246826,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-42018",
-                "sourceIdentifier": "reefs@jfrog.com",
-                "published": "2026-08-12T18:17:29.473",
-                "lastModified": "2026-09-12T04:16:33.587",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "affectedData": [
-                            {
-                                "vendor": "jfrog",
-                                "product": "artifactory",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "7.111.20",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.117.0",
-                                        "lessThan": "7.117.27",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.125.0",
-                                        "lessThan": "7.125.19",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.133.0",
-                                        "lessThan": "7.133.28",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "7.146.0",
-                                        "lessThan": "7.146.8",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "reefs@jfrog.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-11T00:00:00+00:00",
-                                "id": "CVE-2026-42018",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-11",
-                "cisaActionDue": "2026-09-25",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "JFrog Artifactory Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "reefs@jfrog.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionEndExcluding": "7.111.20",
-                                        "matchCriteriaId": "A3362EDD-29B3-4A8E-8C6B-C1E4B6801A7F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.117.0",
-                                        "versionEndExcluding": "7.117.27",
-                                        "matchCriteriaId": "95C14B2A-24BF-4C81-A178-BBA744F9AB2A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.125.0",
-                                        "versionEndExcluding": "7.125.19",
-                                        "matchCriteriaId": "F3D1E17C-2AE8-4B30-8802-68D75F4937B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.133.0",
-                                        "versionEndExcluding": "7.133.28",
-                                        "matchCriteriaId": "3751FB76-30AC-4EB7-AAC7-7D1A6215C59B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
-                                        "versionStartIncluding": "7.146.0",
-                                        "versionEndExcluding": "7.146.8",
-                                        "matchCriteriaId": "B8DDB685-DD49-4FD8-86C4-2852EBEBD5DE"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories",
-                        "source": "reefs@jfrog.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42018",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.098050000",
-                    "percentile": "0.953910000"
-                },
-                "location": {
-                    "lat": 3.579026222229004,
-                    "lng": -146.42097353935242,
+                    "lat": -4.5981128215789795,
+                    "lng": -34.5981125831604,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-88772",
+            "vendorProject": "Citrix",
+            "product": "NetScaler",
+            "vulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+            "dateAdded": "2026-09-27",
+            "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-30",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "Running the provided IOCs in the NetScaler console may help identify indicators of exploitation. Customers must conduct forensic triage as directed by BOD 26\u201104 and follow Citrix\u2019s published guidance for mitigations. For more information, please see: https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778 ; https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096 ; https://support.citrix.com/external/article/CTX694799/steps-to-take-if-netscaler-adc-is-suspec.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88772",
+            "cwes": [
+                "CWE-119"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-88771",
+            "vendorProject": "Citrix",
+            "product": "NetScaler",
+            "vulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability",
+            "dateAdded": "2026-09-27",
+            "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-09-30",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "Running the provided IOCs in the NetScaler console may help identify indicators of exploitation. Customers must conduct forensic triage as directed by BOD 26\u201104 and follow Citrix\u2019s published guidance for mitigations. For more information, please see: https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778 ; https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096 ; https://support.citrix.com/external/article/CTX694799/steps-to-take-if-netscaler-adc-is-suspec.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88772",
+            "cwes": [
+                "CWE-119"
+            ]
+        },
         {
             "cveID": "CVE-2026-67279",
             "vendorProject": "MikroTik",
@@ -36005,10 +36308,10 @@
             ]
         }
     ],
-    "last_updated": "2026-09-27T16:00:48.658769",
+    "last_updated": "2026-09-28T18:56:36.246096",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
-        "epss": "online"
+        "epss": "offline"
     }
 }
