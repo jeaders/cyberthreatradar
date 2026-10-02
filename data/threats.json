@@ -2,6 +2,491 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-102490",
+                "sourceIdentifier": "csirt@divd.nl",
+                "published": "2026-09-30T17:16:40.707",
+                "lastModified": "2026-10-02T16:01:41.090",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "csirt@divd.nl",
+                        "affectedData": [
+                            {
+                                "vendor": "Zammad GmbH",
+                                "product": "Zammad",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux",
+                                    "Docker"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1.5.0",
+                                        "lessThan": "7.1.0-alpha",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "*",
+                                        "lessThan": "1.5.0",
+                                        "versionType": "semver",
+                                        "status": "unknown"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "csirt@divd.nl",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X",
+                                "baseScore": 9.4,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "PASSIVE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "ATTACKED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "YES",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "CONCENTRATED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-02T13:39:40.534055Z",
+                                "id": "CVE-2026-102490",
+                                "options": [
+                                    {
+                                        "exploitation": "none"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-02",
+                "cisaActionDue": "2026-10-05",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-269"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://csirt.divd.nl/CVE-2026-102490",
+                        "source": "csirt@divd.nl"
+                    },
+                    {
+                        "url": "https://csirt.divd.nl/DIVD-2026-00015",
+                        "source": "csirt@divd.nl"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.002620000",
+                    "percentile": "0.163360000"
+                },
+                "location": {
+                    "lat": 4.178682565689087,
+                    "lng": -85.82131314277649,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-102489",
+                "sourceIdentifier": "csirt@divd.nl",
+                "published": "2026-09-30T17:16:40.550",
+                "lastModified": "2026-10-02T16:01:41.090",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "csirt@divd.nl",
+                        "affectedData": [
+                            {
+                                "vendor": "Zammad GmbH",
+                                "product": "Zammad",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux",
+                                    "Docker"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "*",
+                                        "lessThan": "6.3.0",
+                                        "versionType": "semver",
+                                        "status": "unknown"
+                                    },
+                                    {
+                                        "version": "6.3.0",
+                                        "lessThan": "6.5.4",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThan": "*",
+                                        "versionType": "semver",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "csirt@divd.nl",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X",
+                                "baseScore": 9.4,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "PASSIVE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "ATTACKED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "YES",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "CONCENTRATED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-02",
+                "cisaActionDue": "2026-10-05",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability",
+                "references": [
+                    {
+                        "url": "https://csirt.divd.nl/CVE-2026-102489",
+                        "source": "csirt@divd.nl"
+                    },
+                    {
+                        "url": "https://csirt.divd.nl/DIVD-2026-00015",
+                        "source": "csirt@divd.nl"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005820000",
+                    "percentile": "0.458350000"
+                },
+                "location": {
+                    "lat": 4.17869234085083,
+                    "lng": -85.82130694389343,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-104286",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2026-10-01T20:17:24.010",
+                "lastModified": "2026-10-02T12:35:33.990",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@fortinet.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiMail",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:a:fortinet:fortimail:8.0.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.6.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.4.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortimail:7.0.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "8.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.0",
+                                        "lessThanOrEqual": "7.6.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "lessThanOrEqual": "7.4.6",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "lessThanOrEqual": "7.2.9",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThanOrEqual": "7.0.9",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@fortinet.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-01T00:00:00+00:00",
+                                "id": "CVE-2026-104286",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-01",
+                "cisaActionDue": "2026-10-04",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@fortinet.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.2.0",
+                                        "versionEndIncluding": "7.4.8",
+                                        "matchCriteriaId": "77C9CE10-1038-4100-81E0-234822E6373B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndIncluding": "7.6.6",
+                                        "matchCriteriaId": "1EA73418-A7A1-4247-BA3E-969550962E0E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "8.0.0",
+                                        "versionEndIncluding": "8.0.1",
+                                        "matchCriteriaId": "DDAF1B20-36CA-4DD4-9483-6B605001B9DA"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175",
+                        "source": "psirt@fortinet.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.017790000",
+                    "percentile": "0.774590000"
+                },
+                "location": {
+                    "lat": 37.3752,
+                    "lng": -122.0297,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-76504",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-09-30T13:17:20.247",
@@ -251,8 +736,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.010960000",
-                    "percentile": "0.643340000"
+                    "epss": "0.015750000",
+                    "percentile": "0.745720000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -266,7 +751,7 @@
                 "id": "CVE-2026-86950",
                 "sourceIdentifier": "product-security@apple.com",
                 "published": "2026-09-28T20:17:11.193",
-                "lastModified": "2026-09-30T04:18:33.497",
+                "lastModified": "2026-10-01T18:17:28.430",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -339,7 +824,7 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-09-28T00:00:00+00:00",
+                                "timestamp": "2026-09-30T03:55:58.823862Z",
                                 "id": "CVE-2026-86950",
                                 "options": [
                                     {
@@ -470,7 +955,7 @@
                 ],
                 "epss": {
                     "epss": "0.012420000",
-                    "percentile": "0.680970000"
+                    "percentile": "0.681300000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -739,11 +1224,11 @@
                 ],
                 "epss": {
                     "epss": "0.013010000",
-                    "percentile": "0.694130000"
+                    "percentile": "0.694470000"
                 },
                 "location": {
-                    "lat": -8.81789517402649,
-                    "lng": -158.81788992881775,
+                    "lat": 4.17871356010437,
+                    "lng": -85.82128620147705,
                     "country": "Unknown"
                 }
             }
@@ -1008,11 +1493,11 @@
                 ],
                 "epss": {
                     "epss": "0.010630000",
-                    "percentile": "0.633930000"
+                    "percentile": "0.634330000"
                 },
                 "location": {
-                    "lat": -8.817883729934692,
-                    "lng": -158.81788277626038,
+                    "lat": 4.178717613220215,
+                    "lng": -85.8212821483612,
                     "country": "Unknown"
                 }
             }
@@ -1271,11 +1756,11 @@
                 ],
                 "epss": {
                     "epss": "0.010270000",
-                    "percentile": "0.623160000"
+                    "percentile": "0.623600000"
                 },
                 "location": {
-                    "lat": -8.817877054214478,
-                    "lng": -158.8178768157959,
+                    "lat": 4.178722143173218,
+                    "lng": -85.82127785682678,
                     "country": "Unknown"
                 }
             }
@@ -1462,7 +1947,7 @@
                 ],
                 "epss": {
                     "epss": "0.021010000",
-                    "percentile": "0.810340000"
+                    "percentile": "0.810530000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -1777,12 +2262,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.197560000",
-                    "percentile": "0.973310000"
+                    "epss": "0.455010000",
+                    "percentile": "0.987560000"
                 },
                 "location": {
-                    "lat": -8.817867040634155,
-                    "lng": -158.81786680221558,
+                    "lat": 4.178730487823486,
+                    "lng": -85.82126951217651,
                     "country": "Unknown"
                 }
             }
@@ -2170,11 +2655,11 @@
                 ],
                 "epss": {
                     "epss": "0.005880000",
-                    "percentile": "0.461540000"
+                    "percentile": "0.462120000"
                 },
                 "location": {
-                    "lat": -8.817862033843994,
-                    "lng": -158.81786179542542,
+                    "lat": 4.178735256195068,
+                    "lng": -85.82126474380493,
                     "country": "Unknown"
                 }
             }
@@ -3383,11 +3868,11 @@
                 ],
                 "epss": {
                     "epss": "0.010620000",
-                    "percentile": "0.633420000"
+                    "percentile": "0.633810000"
                 },
                 "location": {
-                    "lat": -8.81785249710083,
-                    "lng": -158.81785225868225,
+                    "lat": 4.178743362426758,
+                    "lng": -85.82125663757324,
                     "country": "Unknown"
                 }
             }
@@ -3596,11 +4081,11 @@
                 ],
                 "epss": {
                     "epss": "0.022260000",
-                    "percentile": "0.820950000"
+                    "percentile": "0.821150000"
                 },
                 "location": {
-                    "lat": -8.817847490310669,
-                    "lng": -158.8178472518921,
+                    "lat": 4.178747177124023,
+                    "lng": -85.8212525844574,
                     "country": "Unknown"
                 }
             }
@@ -5001,11 +5486,11 @@
                 ],
                 "epss": {
                     "epss": "0.196540000",
-                    "percentile": "0.973190000"
+                    "percentile": "0.973200000"
                 },
                 "location": {
-                    "lat": -8.817842960357666,
-                    "lng": -158.8178427219391,
+                    "lat": 4.178751230239868,
+                    "lng": -85.82124876976013,
                     "country": "Unknown"
                 }
             }
@@ -6080,11 +6565,11 @@
                 ],
                 "epss": {
                     "epss": "0.075460000",
-                    "percentile": "0.943280000"
+                    "percentile": "0.943340000"
                 },
                 "location": {
-                    "lat": -8.817838191986084,
-                    "lng": -158.81783771514893,
+                    "lat": 4.178755044937134,
+                    "lng": -85.82124495506287,
                     "country": "Unknown"
                 }
             }
@@ -6591,11 +7076,11 @@
                 ],
                 "epss": {
                     "epss": "0.025010000",
-                    "percentile": "0.841400000"
+                    "percentile": "0.841580000"
                 },
                 "location": {
-                    "lat": -8.817832469940186,
-                    "lng": -158.81783246994019,
+                    "lat": 4.17875862121582,
+                    "lng": -85.8212411403656,
                     "country": "Unknown"
                 }
             }
@@ -7108,7 +7593,7 @@
                 ],
                 "epss": {
                     "epss": "0.009960000",
-                    "percentile": "0.613240000"
+                    "percentile": "0.613670000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -7542,8 +8027,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.006450000",
-                    "percentile": "0.490410000"
+                    "epss": "0.008270000",
+                    "percentile": "0.559490000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -7929,7 +8414,7 @@
                 ],
                 "epss": {
                     "epss": "0.028800000",
-                    "percentile": "0.863610000"
+                    "percentile": "0.863740000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -7937,1081 +8422,58 @@
                     "country": "Global"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-58704",
-                "sourceIdentifier": "dsap-vuln-management@google.com",
-                "published": "2026-09-15T19:17:32.297",
-                "lastModified": "2026-09-17T04:17:54.930",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "In Cellular Modem, there is a possible permission bypass due to a logic error in the code. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "dsap-vuln-management@google.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Google",
-                                "product": "Android",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "Android kernel",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "ADJACENT_NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-15T00:00:00+00:00",
-                                "id": "CVE-2026-58704",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-16",
-                "cisaActionDue": "2026-09-19",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Google Pixel Improper Authorization Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-285"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-693"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F8B9FEC8-73B6-43B8-B24E-1F7C20D91D26"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-09-01",
-                        "source": "dsap-vuln-management@google.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-58704",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.005910000",
-                    "percentile": "0.462920000"
-                },
-                "location": {
-                    "lat": 37.422,
-                    "lng": -122.0841,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-76460",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-09-16T21:17:21.430",
-                "lastModified": "2026-09-25T16:53:35.463",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Cisco",
-                                "product": "Cisco Identity Services Engine Software",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "3.1.0 p8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.1.0 p9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.2.0 p7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.1.0 p10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.5.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.2 Patch 8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.5 Patch 1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.2 Patch 9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.5 Patch 3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.5 Patch 2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.3 Patch 11",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.4 Patch 6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.2 Patch 10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.1.0 p11",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Cisco",
-                                "product": "Cisco ISE Passive Identity Connector",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "3.4.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "3.5.0",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-16T00:00:00+00:00",
-                                "id": "CVE-2026-76460",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-16",
-                "cisaActionDue": "2026-09-19",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-648"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7A789B44-7E6C-4FE9-BD40-702A871AB8AC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "93920663-445E-4456-A905-81CEC6CA1833"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DF9CCBFA-0004-48F7-B142-6FDD4B3E1081"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C91717BE-76EF-410C-970D-01C5FDC52A0B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "33DA5BB8-4CFE-44BD-9CEB-BC26577E8477"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D3AEFA85-66B5-4145-A4AD-96D1FF86B46D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7A6A0697-6A9E-48EF-82D8-36C75E0CDFDC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E939B65A-7912-4C36-8799-03A1526D7BD3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "833B438F-0869-4C0D-9952-750C00702E8D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E8B2588D-01F9-450B-B2E3-ADC4125E354E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E41016C0-19E6-4BCC-A8DD-F6C9A2B0003E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "654E946A-07C5-4036-BC54-85EF42B808DD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7932D5D5-83E1-4BEF-845A-D0783D4BB750"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1B818846-4A6E-4256-B344-281E8C786C43"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1EEC9040-9BD3-43D0-A33E-1EBD941EB65F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A44858A2-922A-425A-8B38-0C47DB911A3C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "53484A32-757B-42F8-B655-554C34222060"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0CCAC61F-C273-49B3-A631-31D3AE3EB148"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "51AEFCE6-FB4A-4B1C-A23D-83CC3CF3FBBD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B452B4F0-8510-475E-9AE8-B48FABB4D7D3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5733512D-12B5-4098-AF90-9D68217FAC27"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4ED98020-7BAF-4E5E-8B7B-22537200C283"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4C6839DC-F3A2-4133-BF60-2E678E6DD4A4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F1B9C2C1-59A4-49A0-9B74-83CCB063E55D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DFD29A0B-0D75-4EAB-BCE0-79450EC75DD0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "43F3A55D-D4FC-4D93-9513-94B64B21A2B4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F0F60A00-E952-400A-B553-BE96E7FF746F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E6C94CC4-CC08-4DAF-A606-FDAFC92720A9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BB069EA3-7B8C-42B5-8035-2EE5ED3F56E4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FF8B81A6-BF44-4E5F-B167-39F61DDCA026"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "56E0F0EC-3E66-4866-89F5-89B331F3F517"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2E3E8937-2859-4A2A-91C0-05F674EF0466"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D4B14684-EB9E-405B-85FA-B62E57CB292C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "22B752D1-9E8F-4FB7-8EEB-F9234492372B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "85A1CC7D-FE54-4AC0-B98F-972C4B1F3189"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D23905E0-E525-49B1-8E5F-4EB42D186768"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "74509498-38EF-4345-9583-CEF5C26CA1D8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CD05FF93-7B8C-4283-9DB7-E03FE98FAADF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "0F9B6A8E-E773-44A3-9266-878F0C58EB41"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D3727619-E0CA-4CA9-BE35-0C732BCF1741"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2CFB7565-3930-409C-B5DB-CE77E6ED7C42"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A388D916-D6A1-4D3A-A48A-A150F387B755"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2610FD35-BC4B-41B7-9C92-E6E5264FEE54"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3FEE4377-B238-4442-9892-28CECFB2319E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6598563B-7E32-43FB-96A7-88C53E4CE226"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "719C8E82-269D-4F21-B2B4-4CD3033A17F9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "006E0D77-534C-447F-8E97-EC0AB906D978"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AC07A742-D194-425C-945C-3977E96B61B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "00D4B446-EDCE-41DC-A03B-97D8A371B0D9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BE3B2985-AC34-4628-8564-517C48B9F475"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "97787372-9A0D-4916-A7A2-19237B84419F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2E2D9D7C-A36E-489D-A2E1-ACE9E9C399BD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3ABA57DA-78C9-489B-88E5-6E5275E53388"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2ABFB0CE-60CF-4969-A91E-186F457C8014"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B8CF7EF0-FBAA-47C7-8386-F67264CA8D0E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5F08ACD7-2867-428A-966C-6509283FCA10"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B365970F-9239-45F8-80C6-DA426FCA2E32"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5A66142F-712F-4EFA-9FC4-E499D3015DD2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "50D8B7DD-14A8-4C67-8B32-E1F9C7D9C01E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CB65DFF8-33D8-4840-8A63-7C4797FF0B51"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9CAAF565-E1CF-4002-B91C-290ECAB2F16A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "890FDA62-DED9-401B-9D44-26F3624118CD"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "604079BA-78F5-4D20-AF27-E7A9A899DA0C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "25344C6F-8EB6-4709-A51B-DCA26AA885E3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "51DE5AD0-5DFA-460D-B22D-0F5E367A9A28"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "683F2E87-9759-4A98-B7C9-489E74837D59"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "22BF8687-84E4-4609-8100-FD2408DF3247"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "19F88640-BC3E-42D2-ADDC-59114974103C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40A94055-EF01-4799-813D-7BFFDD13C685"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "3CA3315D-8A45-43F4-A0F0-094D325F285B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B3736136-9FD8-4B12-B119-EA15201224D9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch10:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FB15AE6D-F4EF-40AD-A88E-D22612AEF2A4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch11:*:*:*:*:*:*",
-                                        "matchCriteriaId": "25B8E5EB-393A-40E8-9A0D-465ECCC2A4B8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "654ED77E-22D3-4E76-9E6D-B1581F5982F0"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "A0648EE9-F042-479F-9AAB-C6B5DBC46511"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "83F3BA58-4F38-41C8-956F-38A2F44EECE4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6C30FA1D-91E2-48C5-B181-A88FDF668278"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "768215B1-80B7-40FF-8772-BA4C0B3913F5"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch7:*:*:*:*:*:*",
-                                        "matchCriteriaId": "40239DA8-43B6-466B-85B0-6D644D7027D1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch8:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9118B7ED-E678-47C3-9D17-F522D9362B2F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch9:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C2ED3257-CB9D-4FD5-A482-3648CF292128"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "CC0525FD-C4D7-4B48-BF35-1791391AB148"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "68C96F6B-51EE-4D03-9598-CBFD16DA22EF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "62F25185-D19E-4EC5-8A68-7AB669B76E90"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C457D2EC-FB63-49B7-A90E-CE67ED763BAE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch4:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6566330F-A048-44A1-9821-7A5844C82CEC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch5:*:*:*:*:*:*",
-                                        "matchCriteriaId": "1154F196-2CB3-4AC2-BE00-11A8942EA999"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch6:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7E30ECF6-5B1D-4280-AA02-123153E68F28"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.140260000",
-                    "percentile": "0.964490000"
-                },
-                "location": {
-                    "lat": 37.4084,
-                    "lng": -121.954,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-87886",
-                "sourceIdentifier": "security@acronis.com",
-                "published": "2026-09-17T23:18:53.763",
-                "lastModified": "2026-09-18T19:29:35.067",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@acronis.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Acronis",
-                                "product": "Acronis Backup plugin for cPanel & WHM",
-                                "defaultStatus": "unaffected",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "unspecified",
-                                        "lessThan": "1.9.3.1021",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Acronis",
-                                "product": "Acronis Backup extension for Plesk",
-                                "defaultStatus": "unaffected",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "unspecified",
-                                        "lessThan": "1.8.11.638",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Acronis",
-                                "product": "Acronis Backup plugin for DirectAdmin",
-                                "defaultStatus": "unaffected",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "unspecified",
-                                        "lessThan": "1.2.3.238",
-                                        "versionType": "semver",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV30": [
-                        {
-                            "source": "security@acronis.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.0",
-                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-18T12:27:59.851837Z",
-                                "id": "CVE-2026-87886",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-16",
-                "cisaActionDue": "2026-09-19",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@acronis.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-276"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:directadmin:*:*",
-                                        "versionEndExcluding": "1.2.3",
-                                        "matchCriteriaId": "4CB8B9F6-DAB7-4F21-B2B4-0EE01347AC1E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:plesk:*:*",
-                                        "versionEndExcluding": "1.8.11",
-                                        "matchCriteriaId": "AEA7BEC1-B14B-4ED9-8FA8-D602D612BCA2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:cpanel:*:*",
-                                        "versionEndExcluding": "1.9.3",
-                                        "matchCriteriaId": "1F03983F-EC1E-4831-BF34-69331B521543"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:-:*:*:*:cpanel:*:*",
-                                        "matchCriteriaId": "61BB35F9-D0AB-484A-8C9F-BA79DD51916B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix1:*:*:*:cpanel:*:*",
-                                        "matchCriteriaId": "C9442FB3-3ECF-49D7-9940-41F296D7D0BC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix2:*:*:*:cpanel:*:*",
-                                        "matchCriteriaId": "E892B84E-B369-4E1A-B9B6-57FBD1F96AFC"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://security-advisory.acronis.com/advisories/SEC-10986",
-                        "source": "security@acronis.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87886",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.002330000",
-                    "percentile": "0.128410000"
-                },
-                "location": {
-                    "lat": -8.817806482315063,
-                    "lng": -158.81780624389648,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-102490",
+            "vendorProject": "Zammad GmbH",
+            "product": "Zammad",
+            "vulnerabilityName": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+            "dateAdded": "2026-10-02",
+            "shortDescription": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-05",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+            "cwes": [
+                "CWE-269"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-102489",
+            "vendorProject": "Zammad GmbH",
+            "product": "Zammad",
+            "vulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability",
+            "dateAdded": "2026-10-02",
+            "shortDescription": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-05",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+            "cwes": [
+                "CWE-384"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-104286",
+            "vendorProject": "Fortinet",
+            "product": "FortiMail",
+            "vulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability",
+            "dateAdded": "2026-10-01",
+            "shortDescription": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-04",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
+            "cwes": [
+                "CWE-22",
+                "CWE-158"
+            ]
+        },
         {
             "cveID": "CVE-2026-76504",
             "vendorProject": "Cisco",
@@ -36457,7 +35919,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-01T17:42:36.723517",
+    "last_updated": "2026-10-02T17:01:50.510046",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
