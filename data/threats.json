@@ -5,8 +5,8 @@
                 "id": "CVE-2026-102490",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2026-09-30T17:16:40.707",
-                "lastModified": "2026-10-02T16:01:41.090",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-10-03T04:18:00.460",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -89,15 +89,37 @@
                             }
                         }
                     ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
                     "ssvcV203": [
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-10-02T13:39:40.534055Z",
+                                "timestamp": "2026-10-02T00:00:00+00:00",
                                 "id": "CVE-2026-102490",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -128,23 +150,77 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.5.0",
+                                        "versionEndExcluding": "7.1.0",
+                                        "matchCriteriaId": "F35B8C68-B265-4574-BEF5-51FC1CB4DF77"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:zammad:zammad:7.1.0:alpha:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4DD0F01F-638A-4E1E-A53A-F38EF44D196B"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:docker:docker:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "231A8A55-A319-4878-91DA-4FD91CF0549E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://csirt.divd.nl/CVE-2026-102490",
-                        "source": "csirt@divd.nl"
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://csirt.divd.nl/DIVD-2026-00015",
-                        "source": "csirt@divd.nl"
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.002620000",
-                    "percentile": "0.163360000"
+                    "epss": "0.006290000",
+                    "percentile": "0.483350000"
                 },
                 "location": {
-                    "lat": 4.178682565689087,
-                    "lng": -85.82131314277649,
+                    "lat": 13.117296695709229,
+                    "lng": -136.88269877433777,
                     "country": "Unknown"
                 }
             }
@@ -154,8 +230,8 @@
                 "id": "CVE-2026-102489",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2026-09-30T17:16:40.550",
-                "lastModified": "2026-10-02T16:01:41.090",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-10-03T04:17:56.693",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -243,29 +319,151 @@
                                 "providerUrgency": "NOT_DEFINED"
                             }
                         }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-02T00:00:00+00:00",
+                                "id": "CVE-2026-102489",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
                     ]
                 },
                 "cisaExploitAdd": "2026-10-02",
                 "cisaActionDue": "2026-10-05",
                 "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
                 "cisaVulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-384"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-384"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.3.0",
+                                        "versionEndExcluding": "6.5.4",
+                                        "matchCriteriaId": "E9D8A954-62EA-4646-AB84-2A5080544473"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0.0",
+                                        "versionEndIncluding": "7.1.3",
+                                        "matchCriteriaId": "F0888647-88A1-4B74-B55D-AB0AFDCEAF22"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:docker:docker:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "231A8A55-A319-4878-91DA-4FD91CF0549E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://csirt.divd.nl/CVE-2026-102489",
-                        "source": "csirt@divd.nl"
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://csirt.divd.nl/DIVD-2026-00015",
-                        "source": "csirt@divd.nl"
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
                     }
                 ],
                 "epss": {
-                    "epss": "0.005820000",
-                    "percentile": "0.458350000"
+                    "epss": "0.013960000",
+                    "percentile": "0.714640000"
                 },
                 "location": {
-                    "lat": 4.17869234085083,
-                    "lng": -85.82130694389343,
+                    "lat": 13.117308616638184,
+                    "lng": -136.88269066810608,
                     "country": "Unknown"
                 }
             }
@@ -475,8 +673,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.017790000",
-                    "percentile": "0.774590000"
+                    "epss": "0.022010000",
+                    "percentile": "0.819120000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -490,7 +688,7 @@
                 "id": "CVE-2026-76504",
                 "sourceIdentifier": "psirt@cisco.com",
                 "published": "2026-09-30T13:17:20.247",
-                "lastModified": "2026-10-01T04:18:19.193",
+                "lastModified": "2026-10-03T00:16:39.140",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -509,6 +707,42 @@
                                 "defaultStatus": "unknown",
                                 "versions": [
                                     {
+                                        "version": "20.1.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.099",
+                                        "status": "affected"
+                                    },
+                                    {
                                         "version": "18.3.6",
                                         "status": "affected"
                                     },
@@ -517,7 +751,35 @@
                                         "status": "affected"
                                     },
                                     {
+                                        "version": "19.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
                                         "version": "18.3.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.1.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.302",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.303",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.097",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.098",
                                         "status": "affected"
                                     },
                                     {
@@ -526,6 +788,10 @@
                                     },
                                     {
                                         "version": "18.3.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.0.1a",
                                         "status": "affected"
                                     },
                                     {
@@ -598,6 +864,1506 @@
                                     },
                                     {
                                         "version": "18.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.501_ES",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.929",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.31",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2_925",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2.1_927",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "18.4.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.2_937",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2_928",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2_929",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2.1_930",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.0.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.4.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2_937",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.0.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.1.0.02",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.1.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.1.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.4.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.2.4.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.1.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.17",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.0.18.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.2.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.0.18.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.16",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.1.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.7.1EFT2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.0.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.7.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.813",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.5.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.814",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.7.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.7.1.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.5.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.5.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.5.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.7.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.1EFT2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.23",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.25",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.27",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.29",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.31",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.10.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.33",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2.0.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.10.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.11.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.11.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3_LI_ Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.4.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.39",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.3.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.7.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.10.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.25",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.2.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.11.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.4.0.26",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.40",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.1.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.41",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4.0.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.7.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.11.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.10.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.16",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.45",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.17",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.4.0.21",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.46",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.47",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.21",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.23",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.25",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.5.1.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.3.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.26",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.3.0.51",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.3.0.29",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.6.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.13.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.13.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.4.1.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.14.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.14.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.1.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.6_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.6.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4.0.03",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.16.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.16.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.16",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.401",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.5.2.21",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.6.0.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.4_Monthly_ES5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.7_LI _Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.3_ LI _Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.501",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.7.1_LI _Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.7.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.1.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.8_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.8.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.8.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.2.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.5.4_LI_ Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.4_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.3.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.1.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.4.5_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.5.3_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.7.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.9.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.6_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4_LI_Imagess",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.10_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.2_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.6.0.5_PSIRTAUG",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4.0.5_PSIRTAUG",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.10.0.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.2.0.02",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.2.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4.1.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.2.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.6.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.18.4.1_LI_Images",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.9.10.1.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.15.6.1.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "26.1.2.1.01",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "20.12.8.2.01",
                                         "status": "affected"
                                     }
                                 ]
@@ -737,7 +2503,7 @@
                 ],
                 "epss": {
                     "epss": "0.015750000",
-                    "percentile": "0.745720000"
+                    "percentile": "0.745930000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -955,7 +2721,7 @@
                 ],
                 "epss": {
                     "epss": "0.012420000",
-                    "percentile": "0.681300000"
+                    "percentile": "0.681550000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -1224,11 +2990,11 @@
                 ],
                 "epss": {
                     "epss": "0.013010000",
-                    "percentile": "0.694470000"
+                    "percentile": "0.694700000"
                 },
                 "location": {
-                    "lat": 4.17871356010437,
-                    "lng": -85.82128620147705,
+                    "lat": 13.11732816696167,
+                    "lng": -136.88267159461975,
                     "country": "Unknown"
                 }
             }
@@ -1493,11 +3259,11 @@
                 ],
                 "epss": {
                     "epss": "0.010630000",
-                    "percentile": "0.634330000"
+                    "percentile": "0.634590000"
                 },
                 "location": {
-                    "lat": 4.178717613220215,
-                    "lng": -85.8212821483612,
+                    "lat": 13.117332696914673,
+                    "lng": -136.88266730308533,
                     "country": "Unknown"
                 }
             }
@@ -1756,11 +3522,11 @@
                 ],
                 "epss": {
                     "epss": "0.010270000",
-                    "percentile": "0.623600000"
+                    "percentile": "0.623880000"
                 },
                 "location": {
-                    "lat": 4.178722143173218,
-                    "lng": -85.82127785682678,
+                    "lat": 13.11733627319336,
+                    "lng": -136.88266348838806,
                     "country": "Unknown"
                 }
             }
@@ -1947,7 +3713,7 @@
                 ],
                 "epss": {
                     "epss": "0.021010000",
-                    "percentile": "0.810530000"
+                    "percentile": "0.810630000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2263,11 +4029,11 @@
                 ],
                 "epss": {
                     "epss": "0.455010000",
-                    "percentile": "0.987560000"
+                    "percentile": "0.987570000"
                 },
                 "location": {
-                    "lat": 4.178730487823486,
-                    "lng": -85.82126951217651,
+                    "lat": 13.117344856262207,
+                    "lng": -136.8826549053192,
                     "country": "Unknown"
                 }
             }
@@ -2655,11 +4421,11 @@
                 ],
                 "epss": {
                     "epss": "0.005880000",
-                    "percentile": "0.462120000"
+                    "percentile": "0.462530000"
                 },
                 "location": {
-                    "lat": 4.178735256195068,
-                    "lng": -85.82126474380493,
+                    "lat": 13.117348670959473,
+                    "lng": -136.88265132904053,
                     "country": "Unknown"
                 }
             }
@@ -3868,11 +5634,11 @@
                 ],
                 "epss": {
                     "epss": "0.010620000",
-                    "percentile": "0.633810000"
+                    "percentile": "0.634080000"
                 },
                 "location": {
-                    "lat": 4.178743362426758,
-                    "lng": -85.82125663757324,
+                    "lat": 13.117356538772583,
+                    "lng": -136.88264322280884,
                     "country": "Unknown"
                 }
             }
@@ -4081,11 +5847,11 @@
                 ],
                 "epss": {
                     "epss": "0.022260000",
-                    "percentile": "0.821150000"
+                    "percentile": "0.821240000"
                 },
                 "location": {
-                    "lat": 4.178747177124023,
-                    "lng": -85.8212525844574,
+                    "lat": 13.117360591888428,
+                    "lng": -136.88263940811157,
                     "country": "Unknown"
                 }
             }
@@ -5486,11 +7252,11 @@
                 ],
                 "epss": {
                     "epss": "0.196540000",
-                    "percentile": "0.973200000"
+                    "percentile": "0.973230000"
                 },
                 "location": {
-                    "lat": 4.178751230239868,
-                    "lng": -85.82124876976013,
+                    "lat": 13.117364406585693,
+                    "lng": -136.88263535499573,
                     "country": "Unknown"
                 }
             }
@@ -6565,11 +8331,11 @@
                 ],
                 "epss": {
                     "epss": "0.075460000",
-                    "percentile": "0.943340000"
+                    "percentile": "0.943390000"
                 },
                 "location": {
-                    "lat": 4.178755044937134,
-                    "lng": -85.82124495506287,
+                    "lat": 13.117368459701538,
+                    "lng": -136.8826310634613,
                     "country": "Unknown"
                 }
             }
@@ -7076,11 +8842,11 @@
                 ],
                 "epss": {
                     "epss": "0.025010000",
-                    "percentile": "0.841580000"
+                    "percentile": "0.841680000"
                 },
                 "location": {
-                    "lat": 4.17875862121582,
-                    "lng": -85.8212411403656,
+                    "lat": 13.117372512817383,
+                    "lng": -136.88262724876404,
                     "country": "Unknown"
                 }
             }
@@ -7593,7 +9359,7 @@
                 ],
                 "epss": {
                     "epss": "0.009960000",
-                    "percentile": "0.613670000"
+                    "percentile": "0.613940000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -8028,7 +9794,7 @@
                 ],
                 "epss": {
                     "epss": "0.008270000",
-                    "percentile": "0.559490000"
+                    "percentile": "0.559870000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -8414,7 +10180,7 @@
                 ],
                 "epss": {
                     "epss": "0.028800000",
-                    "percentile": "0.863740000"
+                    "percentile": "0.863820000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -35919,7 +37685,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-02T17:01:50.510046",
+    "last_updated": "2026-10-03T15:24:51.752858",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
