@@ -2,6 +2,279 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-88779",
+                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                "published": "2026-10-04T04:16:43.680",
+                "lastModified": "2026-10-05T13:35:24.663",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.41, before 13.1-64.28, before 14.1-73.41 FIPS, and before 13.1-37.282; Gateway: before 14.1-73.41 and before 13.1-64.28."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "affectedData": [
+                            {
+                                "vendor": "NetScaler",
+                                "product": "ADC",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.41",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.28",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.41 FIPS",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-37.282",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "NetScaler",
+                                "product": "Gateway",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.1-73.41",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "13.1-64.28",
+                                        "versionType": "Patch",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.7,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "NONE",
+                                "vulnIntegrityImpact": "NONE",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-04T00:00:00+00:00",
+                                "id": "CVE-2026-88779",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-04",
+                "cisaActionDue": "2026-10-07",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-119"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-37.282",
+                                        "matchCriteriaId": "3BBEE3C6-8CDE-4E13-8D7F-1DC21DE216B8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-37.282",
+                                        "matchCriteriaId": "6F6A3D5D-1861-4974-B091-26E87FB1D6B4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.28",
+                                        "matchCriteriaId": "1A3802BF-8836-4B1C-9C5E-BE6492D42847"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.41",
+                                        "matchCriteriaId": "92D219C6-E418-4AC1-9D9D-20F939914F0B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                                        "versionStartIncluding": "14.1-66.68",
+                                        "versionEndIncluding": "14.1-73.41",
+                                        "matchCriteriaId": "EBB3AD2A-AAE0-4A56-A36D-A327EB39792A"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "13.1",
+                                        "versionEndExcluding": "13.1-64.28",
+                                        "matchCriteriaId": "C4B364B5-3ED9-4C84-9D09-6C79D7A66E94"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "14.1",
+                                        "versionEndExcluding": "14.1-73.41",
+                                        "matchCriteriaId": "33BB8BC4-DFDF-4760-9C92-129615BE7831"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174",
+                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88779",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005920000",
+                    "percentile": "0.465100000"
+                },
+                "location": {
+                    "lat": 8.101529359817505,
+                    "lng": 158.10153436660767,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-102490",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2026-09-30T17:16:40.707",
@@ -216,11 +489,11 @@
                 ],
                 "epss": {
                     "epss": "0.006290000",
-                    "percentile": "0.483330000"
+                    "percentile": "0.484370000"
                 },
                 "location": {
-                    "lat": -12.649399518966675,
-                    "lng": 17.350605487823486,
+                    "lat": 8.101542711257935,
+                    "lng": 158.1015431880951,
                     "country": "Unknown"
                 }
             }
@@ -459,11 +732,11 @@
                 ],
                 "epss": {
                     "epss": "0.013960000",
-                    "percentile": "0.714650000"
+                    "percentile": "0.715180000"
                 },
                 "location": {
-                    "lat": -12.649386405944824,
-                    "lng": 17.350614309310913,
+                    "lat": 8.101547956466675,
+                    "lng": 158.10154819488525,
                     "country": "Unknown"
                 }
             }
@@ -674,7 +947,7 @@
                 ],
                 "epss": {
                     "epss": "0.022010000",
-                    "percentile": "0.819120000"
+                    "percentile": "0.819460000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2502,8 +2775,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.015750000",
-                    "percentile": "0.745930000"
+                    "epss": "0.018190000",
+                    "percentile": "0.780340000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2721,7 +2994,7 @@
                 ],
                 "epss": {
                     "epss": "0.012420000",
-                    "percentile": "0.681530000"
+                    "percentile": "0.682130000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -2990,11 +3263,11 @@
                 ],
                 "epss": {
                     "epss": "0.013010000",
-                    "percentile": "0.694690000"
+                    "percentile": "0.695270000"
                 },
                 "location": {
-                    "lat": -12.64936900138855,
-                    "lng": 17.35063123703003,
+                    "lat": 8.10156536102295,
+                    "lng": 158.10156559944153,
                     "country": "Unknown"
                 }
             }
@@ -3258,12 +3531,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.010630000",
-                    "percentile": "0.634540000"
+                    "epss": "0.010830000",
+                    "percentile": "0.640950000"
                 },
                 "location": {
-                    "lat": -12.649365186691284,
-                    "lng": 17.350635051727295,
+                    "lat": 8.101569175720215,
+                    "lng": 158.10156965255737,
                     "country": "Unknown"
                 }
             }
@@ -3522,11 +3795,11 @@
                 ],
                 "epss": {
                     "epss": "0.010270000",
-                    "percentile": "0.623850000"
+                    "percentile": "0.624470000"
                 },
                 "location": {
-                    "lat": -12.64936113357544,
-                    "lng": 17.35063910484314,
+                    "lat": 8.101574182510376,
+                    "lng": 158.10157442092896,
                     "country": "Unknown"
                 }
             }
@@ -3713,7 +3986,7 @@
                 ],
                 "epss": {
                     "epss": "0.021010000",
-                    "percentile": "0.810610000"
+                    "percentile": "0.810990000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4028,12 +4301,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.455010000",
-                    "percentile": "0.987570000"
+                    "epss": "0.461170000",
+                    "percentile": "0.987790000"
                 },
                 "location": {
-                    "lat": -12.649353265762329,
-                    "lng": 17.35064697265625,
+                    "lat": 8.101582527160645,
+                    "lng": 158.10158252716064,
                     "country": "Unknown"
                 }
             }
@@ -4421,11 +4694,11 @@
                 ],
                 "epss": {
                     "epss": "0.005880000",
-                    "percentile": "0.462500000"
+                    "percentile": "0.463480000"
                 },
                 "location": {
-                    "lat": -12.649349451065063,
-                    "lng": 17.350650787353516,
+                    "lat": 8.10158634185791,
+                    "lng": 158.1015863418579,
                     "country": "Unknown"
                 }
             }
@@ -5405,7 +5678,7 @@
                 ],
                 "epss": {
                     "epss": "0.875070000",
-                    "percentile": "0.997550000"
+                    "percentile": "0.997560000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -5634,11 +5907,11 @@
                 ],
                 "epss": {
                     "epss": "0.010620000",
-                    "percentile": "0.634020000"
+                    "percentile": "0.634750000"
                 },
                 "location": {
-                    "lat": -12.649342060089111,
-                    "lng": 17.350658416748047,
+                    "lat": 8.101597547531128,
+                    "lng": 158.10159754753113,
                     "country": "Unknown"
                 }
             }
@@ -5847,11 +6120,11 @@
                 ],
                 "epss": {
                     "epss": "0.022260000",
-                    "percentile": "0.821230000"
+                    "percentile": "0.821570000"
                 },
                 "location": {
-                    "lat": -12.649338006973267,
-                    "lng": 17.350661993026733,
+                    "lat": 8.101603507995605,
+                    "lng": 158.1016035079956,
                     "country": "Unknown"
                 }
             }
@@ -7252,11 +7525,11 @@
                 ],
                 "epss": {
                     "epss": "0.196540000",
-                    "percentile": "0.973220000"
+                    "percentile": "0.973270000"
                 },
                 "location": {
-                    "lat": -12.64933443069458,
-                    "lng": 17.35066556930542,
+                    "lat": 8.101608514785767,
+                    "lng": 158.10160851478577,
                     "country": "Unknown"
                 }
             }
@@ -8331,11 +8604,11 @@
                 ],
                 "epss": {
                     "epss": "0.075460000",
-                    "percentile": "0.943390000"
+                    "percentile": "0.943500000"
                 },
                 "location": {
-                    "lat": -12.649330854415894,
-                    "lng": 17.350669384002686,
+                    "lat": 8.101613521575928,
+                    "lng": 158.1016137599945,
                     "country": "Unknown"
                 }
             }
@@ -8842,11 +9115,11 @@
                 ],
                 "epss": {
                     "epss": "0.025010000",
-                    "percentile": "0.841680000"
+                    "percentile": "0.841950000"
                 },
                 "location": {
-                    "lat": -12.649327278137207,
-                    "lng": 17.350672960281372,
+                    "lat": 8.101617813110352,
+                    "lng": 158.10161781311035,
                     "country": "Unknown"
                 }
             }
@@ -9358,8 +9631,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.009960000",
-                    "percentile": "0.613900000"
+                    "epss": "0.012760000",
+                    "percentile": "0.689970000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -9794,393 +10067,7 @@
                 ],
                 "epss": {
                     "epss": "0.008270000",
-                    "percentile": "0.559860000"
-                },
-                "location": {
-                    "lat": 45.5231,
-                    "lng": -122.6765,
-                    "country": "Global"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2025-39682",
-                "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                "published": "2025-09-05T18:15:44.670",
-                "lastModified": "2026-09-21T12:00:36.613",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "In the Linux kernel, the following vulnerability has been resolved:\n\ntls: fix handling of zero-length records on the rx_list\n\nEach recvmsg() call must process either\n - only contiguous DATA records (any number of them)\n - one non-DATA record\n\nIf the next record has different type than what has already been\nprocessed we break out of the main processing loop. If the record\nhas already been decrypted (which may be the case for TLS 1.3 where\nwe don't know type until decryption) we queue the pending record\nto the rx_list. Next recvmsg() will pick it up from there.\n\nQueuing the skb to rx_list after zero-copy decrypt is not possible,\nsince in that case we decrypted directly to the user space buffer,\nand we don't have an skb to queue (darg.skb points to the ciphertext\nskb for access to metadata like length).\n\nOnly data records are allowed zero-copy, and we break the processing\nloop after each non-data record. So we should never zero-copy and\nthen find out that the record type has changed. The corner case\nwe missed is when the initial record comes from rx_list, and it's\nzero length."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "affectedData": [
-                            {
-                                "vendor": "Linux",
-                                "product": "Linux",
-                                "defaultStatus": "unaffected",
-                                "programFiles": [
-                                    "net/tls/tls_sw.c"
-                                ],
-                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
-                                "versions": [
-                                    {
-                                        "version": "84c61fe1a75b4255df1e1e7c054c9e6d048da417",
-                                        "lessThan": "2902c3ebcca52ca845c03182000e8d71d3a5196f",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "84c61fe1a75b4255df1e1e7c054c9e6d048da417",
-                                        "lessThan": "c09dd3773b5950e9cfb6c9b9a5f6e36d06c62677",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "84c61fe1a75b4255df1e1e7c054c9e6d048da417",
-                                        "lessThan": "3439c15ae91a517cf3c650ea15a8987699416ad9",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "84c61fe1a75b4255df1e1e7c054c9e6d048da417",
-                                        "lessThan": "29c0ce3c8cdb6dc5d61139c937f34cb888a6f42e",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "84c61fe1a75b4255df1e1e7c054c9e6d048da417",
-                                        "lessThan": "62708b9452f8eb77513115b17c4f8d1a22ebf843",
-                                        "versionType": "git",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Linux",
-                                "product": "Linux",
-                                "defaultStatus": "affected",
-                                "programFiles": [
-                                    "net/tls/tls_sw.c"
-                                ],
-                                "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
-                                "versions": [
-                                    {
-                                        "version": "6.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "6.0",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.1.149",
-                                        "lessThanOrEqual": "6.1.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.6.103",
-                                        "lessThanOrEqual": "6.6.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.12.44",
-                                        "lessThanOrEqual": "6.12.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.16.4",
-                                        "lessThanOrEqual": "6.16.*",
-                                        "versionType": "semver",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "6.17",
-                                        "lessThanOrEqual": "*",
-                                        "versionType": "original_commit_for_fix",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
-                        "affectedData": [
-                            {
-                                "vendor": "Siemens",
-                                "product": "SIMATIC CN 4100",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "V5.0",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-18T00:00:00+00:00",
-                                "id": "CVE-2025-39682",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-18",
-                "cisaActionDue": "2026-09-21",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "NVD-CWE-Other"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-754"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.0",
-                                        "versionEndExcluding": "6.1.149",
-                                        "matchCriteriaId": "DE30211F-1A6B-457E-B19D-D3E385550199"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.2",
-                                        "versionEndExcluding": "6.6.103",
-                                        "matchCriteriaId": "F2293654-7169-49B5-8D0D-EE51EF8B8E48"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.7",
-                                        "versionEndExcluding": "6.12.44",
-                                        "matchCriteriaId": "12351F24-1133-4775-960C-F2B47E81298B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "6.13",
-                                        "versionEndExcluding": "6.16.4",
-                                        "matchCriteriaId": "AFC28995-B8C3-4B68-8CB6-78E792B6629D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "327D22EF-390B-454C-BD31-2ED23C998A1C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:linux:linux_kernel:6.17:rc2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C730CD9A-D969-4A8E-9522-162AAF7C0EE9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:siemens:simatic_cn_4100_firmware:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.0",
-                                        "matchCriteriaId": "AA9D4F6E-9336-4026-B485-4227C861B356"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:siemens:simatic_cn_4100:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "92619F5F-3679-4424-9455-3285FF1EF2F1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://git.kernel.org/stable/c/2902c3ebcca52ca845c03182000e8d71d3a5196f",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/29c0ce3c8cdb6dc5d61139c937f34cb888a6f42e",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/3439c15ae91a517cf3c650ea15a8987699416ad9",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/62708b9452f8eb77513115b17c4f8d1a22ebf843",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://git.kernel.org/stable/c/c09dd3773b5950e9cfb6c9b9a5f6e36d06c62677",
-                        "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00008.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-032379.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-39682",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.028800000",
-                    "percentile": "0.863820000"
+                    "percentile": "0.560670000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -10191,6 +10078,22 @@
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-88779",
+            "vendorProject": "Citrix",
+            "product": "NetScaler",
+            "vulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+            "dateAdded": "2026-10-04",
+            "shortDescription": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-07",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174 ; https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
+            "cwes": [
+                "CWE-119"
+            ]
+        },
         {
             "cveID": "CVE-2026-102490",
             "vendorProject": "Zammad GmbH",
@@ -37685,7 +37588,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-04T16:09:31.551606",
+    "last_updated": "2026-10-06T17:35:47.026778",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
