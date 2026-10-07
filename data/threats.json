@@ -264,11 +264,11 @@
                 ],
                 "epss": {
                     "epss": "0.005920000",
-                    "percentile": "0.465100000"
+                    "percentile": "0.465930000"
                 },
                 "location": {
-                    "lat": 8.101529359817505,
-                    "lng": 158.10153436660767,
+                    "lat": -25.869868755340576,
+                    "lng": -115.8698627948761,
                     "country": "Unknown"
                 }
             }
@@ -278,7 +278,7 @@
                 "id": "CVE-2026-102490",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2026-09-30T17:16:40.707",
-                "lastModified": "2026-10-03T04:18:00.460",
+                "lastModified": "2026-10-07T17:58:50.700",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -466,6 +466,13 @@
                 ],
                 "references": [
                     {
+                        "url": "https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2",
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://csirt.divd.nl/CVE-2026-102490",
                         "source": "csirt@divd.nl",
                         "tags": [
@@ -480,6 +487,13 @@
                         ]
                     },
                     {
+                        "url": "https://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490",
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
@@ -489,11 +503,11 @@
                 ],
                 "epss": {
                     "epss": "0.006290000",
-                    "percentile": "0.484370000"
+                    "percentile": "0.485170000"
                 },
                 "location": {
-                    "lat": 8.101542711257935,
-                    "lng": 158.1015431880951,
+                    "lat": -25.869853973388672,
+                    "lng": -115.86985349655151,
                     "country": "Unknown"
                 }
             }
@@ -503,13 +517,20 @@
                 "id": "CVE-2026-102489",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2026-09-30T17:16:40.550",
-                "lastModified": "2026-10-03T04:17:56.693",
+                "lastModified": "2026-10-07T18:03:07.387",
                 "vulnStatus": "Analyzed",
-                "cveTags": [],
+                "cveTags": [
+                    {
+                        "sourceIdentifier": "csirt@divd.nl",
+                        "tags": [
+                            "unsupported-when-assigned"
+                        ]
+                    }
+                ],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions."
+                        "value": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The bug is also present in version 7.0.0 to version 7.1.2, but not exploitable due to changes in the underlying framework."
                     }
                 ],
                 "affected": [
@@ -539,9 +560,9 @@
                                     },
                                     {
                                         "version": "7.0.0",
-                                        "lessThan": "*",
+                                        "lessThan": "7.1.3",
                                         "versionType": "semver",
-                                        "status": "unaffected"
+                                        "status": "unknown"
                                     }
                                 ]
                             }
@@ -676,15 +697,8 @@
                                         "vulnerable": true,
                                         "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
                                         "versionStartIncluding": "6.3.0",
-                                        "versionEndExcluding": "6.5.4",
-                                        "matchCriteriaId": "E9D8A954-62EA-4646-AB84-2A5080544473"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0.0",
-                                        "versionEndIncluding": "7.1.3",
-                                        "matchCriteriaId": "F0888647-88A1-4B74-B55D-AB0AFDCEAF22"
+                                        "versionEndIncluding": "6.5.4",
+                                        "matchCriteriaId": "20D0A6CD-50AC-46AD-91BE-6B4DC96B405A"
                                     }
                                 ]
                             },
@@ -709,6 +723,13 @@
                 ],
                 "references": [
                     {
+                        "url": "https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2",
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://csirt.divd.nl/CVE-2026-102489",
                         "source": "csirt@divd.nl",
                         "tags": [
@@ -723,6 +744,13 @@
                         ]
                     },
                     {
+                        "url": "https://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490",
+                        "source": "csirt@divd.nl",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
@@ -732,11 +760,11 @@
                 ],
                 "epss": {
                     "epss": "0.013960000",
-                    "percentile": "0.715180000"
+                    "percentile": "0.715670000"
                 },
                 "location": {
-                    "lat": 8.101547956466675,
-                    "lng": 158.10154819488525,
+                    "lat": -25.86984634399414,
+                    "lng": -115.86984610557556,
                     "country": "Unknown"
                 }
             }
@@ -947,7 +975,7 @@
                 ],
                 "epss": {
                     "epss": "0.022010000",
-                    "percentile": "0.819460000"
+                    "percentile": "0.819770000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2776,7 +2804,7 @@
                 ],
                 "epss": {
                     "epss": "0.018190000",
-                    "percentile": "0.780340000"
+                    "percentile": "0.780720000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2994,7 +3022,7 @@
                 ],
                 "epss": {
                     "epss": "0.012420000",
-                    "percentile": "0.682130000"
+                    "percentile": "0.682680000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -3263,11 +3291,11 @@
                 ],
                 "epss": {
                     "epss": "0.013010000",
-                    "percentile": "0.695270000"
+                    "percentile": "0.695760000"
                 },
                 "location": {
-                    "lat": 8.10156536102295,
-                    "lng": 158.10156559944153,
+                    "lat": -25.869826316833496,
+                    "lng": -115.86982607841492,
                     "country": "Unknown"
                 }
             }
@@ -3532,11 +3560,11 @@
                 ],
                 "epss": {
                     "epss": "0.010830000",
-                    "percentile": "0.640950000"
+                    "percentile": "0.641560000"
                 },
                 "location": {
-                    "lat": 8.101569175720215,
-                    "lng": 158.10156965255737,
+                    "lat": -25.869822025299072,
+                    "lng": -115.8698217868805,
                     "country": "Unknown"
                 }
             }
@@ -3795,11 +3823,11 @@
                 ],
                 "epss": {
                     "epss": "0.010270000",
-                    "percentile": "0.624470000"
+                    "percentile": "0.625100000"
                 },
                 "location": {
-                    "lat": 8.101574182510376,
-                    "lng": 158.10157442092896,
+                    "lat": -25.86981701850891,
+                    "lng": -115.86981678009033,
                     "country": "Unknown"
                 }
             }
@@ -3986,7 +4014,7 @@
                 ],
                 "epss": {
                     "epss": "0.021010000",
-                    "percentile": "0.810990000"
+                    "percentile": "0.811320000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4302,11 +4330,11 @@
                 ],
                 "epss": {
                     "epss": "0.461170000",
-                    "percentile": "0.987790000"
+                    "percentile": "0.987810000"
                 },
                 "location": {
-                    "lat": 8.101582527160645,
-                    "lng": 158.10158252716064,
+                    "lat": -25.869808197021484,
+                    "lng": -115.86980819702148,
                     "country": "Unknown"
                 }
             }
@@ -4694,11 +4722,11 @@
                 ],
                 "epss": {
                     "epss": "0.005880000",
-                    "percentile": "0.463480000"
+                    "percentile": "0.464310000"
                 },
                 "location": {
-                    "lat": 8.10158634185791,
-                    "lng": 158.1015863418579,
+                    "lat": -25.86980438232422,
+                    "lng": -115.86980414390564,
                     "country": "Unknown"
                 }
             }
@@ -5907,11 +5935,11 @@
                 ],
                 "epss": {
                     "epss": "0.010620000",
-                    "percentile": "0.634750000"
+                    "percentile": "0.635360000"
                 },
                 "location": {
-                    "lat": 8.101597547531128,
-                    "lng": 158.10159754753113,
+                    "lat": -25.869795560836792,
+                    "lng": -115.86979532241821,
                     "country": "Unknown"
                 }
             }
@@ -6120,11 +6148,11 @@
                 ],
                 "epss": {
                     "epss": "0.022260000",
-                    "percentile": "0.821570000"
+                    "percentile": "0.821880000"
                 },
                 "location": {
-                    "lat": 8.101603507995605,
-                    "lng": 158.1016035079956,
+                    "lat": -25.86979103088379,
+                    "lng": -115.86979103088379,
                     "country": "Unknown"
                 }
             }
@@ -7525,11 +7553,11 @@
                 ],
                 "epss": {
                     "epss": "0.196540000",
-                    "percentile": "0.973270000"
+                    "percentile": "0.973310000"
                 },
                 "location": {
-                    "lat": 8.101608514785767,
-                    "lng": 158.10160851478577,
+                    "lat": -25.869787454605103,
+                    "lng": -115.86978721618652,
                     "country": "Unknown"
                 }
             }
@@ -8604,11 +8632,11 @@
                 ],
                 "epss": {
                     "epss": "0.075460000",
-                    "percentile": "0.943500000"
+                    "percentile": "0.943600000"
                 },
                 "location": {
-                    "lat": 8.101613521575928,
-                    "lng": 158.1016137599945,
+                    "lat": -25.869783639907837,
+                    "lng": -115.86978363990784,
                     "country": "Unknown"
                 }
             }
@@ -9115,11 +9143,11 @@
                 ],
                 "epss": {
                     "epss": "0.025010000",
-                    "percentile": "0.841950000"
+                    "percentile": "0.842230000"
                 },
                 "location": {
-                    "lat": 8.101617813110352,
-                    "lng": 158.10161781311035,
+                    "lat": -25.869779348373413,
+                    "lng": -115.86977910995483,
                     "country": "Unknown"
                 }
             }
@@ -9632,7 +9660,7 @@
                 ],
                 "epss": {
                     "epss": "0.012760000",
-                    "percentile": "0.689970000"
+                    "percentile": "0.690510000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -10067,7 +10095,7 @@
                 ],
                 "epss": {
                     "epss": "0.008270000",
-                    "percentile": "0.560670000"
+                    "percentile": "0.561330000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -37588,7 +37616,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-06T17:35:47.026778",
+    "last_updated": "2026-10-07T18:07:18.748526",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
