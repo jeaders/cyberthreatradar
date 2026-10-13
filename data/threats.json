@@ -2,6 +2,129 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-104935",
+                "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                "published": "2026-10-13T16:17:11.640",
+                "lastModified": "2026-10-13T17:26:16.840",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                        "affectedData": [
+                            {
+                                "vendor": "Ivanti",
+                                "product": "Connect Secure",
+                                "defaultStatus": "affected",
+                                "versions": [
+                                    {
+                                        "version": "25.1.3.0",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "25.1.3.1",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "22.8R2.5",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "22.7R2.14",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.7
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-13T15:42:16.582526Z",
+                                "id": "CVE-2026-104935",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-290"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935",
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104935",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "location": {
+                    "lat": 24.730336666107178,
+                    "lng": -5.269658088684082,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2015-5477",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2015-07-29T14:59:05.397",
@@ -1982,8 +2105,8 @@
                     "percentile": "0.999410000"
                 },
                 "location": {
-                    "lat": -25.783874034881592,
-                    "lng": 124.21613049507141,
+                    "lat": 24.73035216331482,
+                    "lng": -5.269647121429443,
                     "country": "Unknown"
                 }
             }
@@ -3002,8 +3125,8 @@
                     "percentile": "0.998770000"
                 },
                 "location": {
-                    "lat": -25.783860445022583,
-                    "lng": 124.21614027023315,
+                    "lat": 24.73035979270935,
+                    "lng": -5.269639730453491,
                     "country": "Unknown"
                 }
             }
@@ -3207,11 +3330,11 @@
                 ],
                 "epss": {
                     "epss": "0.036090000",
-                    "percentile": "0.892110000"
+                    "percentile": "0.892300000"
                 },
                 "location": {
-                    "lat": -25.783855199813843,
-                    "lng": 124.21614503860474,
+                    "lat": 24.73036527633667,
+                    "lng": -5.269634485244751,
                     "country": "Unknown"
                 }
             }
@@ -3445,11 +3568,11 @@
                 ],
                 "epss": {
                     "epss": "0.193520000",
-                    "percentile": "0.972970000"
+                    "percentile": "0.973010000"
                 },
                 "location": {
-                    "lat": -25.78385043144226,
-                    "lng": 124.21614980697632,
+                    "lat": 24.73037052154541,
+                    "lng": -5.269629240036011,
                     "country": "Unknown"
                 }
             }
@@ -3914,8 +4037,8 @@
                     "percentile": "0.999450000"
                 },
                 "location": {
-                    "lat": -25.783845901489258,
-                    "lng": 124.21615433692932,
+                    "lat": 24.73037624359131,
+                    "lng": -5.269623517990112,
                     "country": "Unknown"
                 }
             }
@@ -4184,11 +4307,11 @@
                 ],
                 "epss": {
                     "epss": "0.005920000",
-                    "percentile": "0.467700000"
+                    "percentile": "0.468530000"
                 },
                 "location": {
-                    "lat": -25.783841133117676,
-                    "lng": 124.21615934371948,
+                    "lat": 24.73038077354431,
+                    "lng": -5.269618988037109,
                     "country": "Unknown"
                 }
             }
@@ -4422,11 +4545,11 @@
                 ],
                 "epss": {
                     "epss": "0.005500000",
-                    "percentile": "0.444070000"
+                    "percentile": "0.444950000"
                 },
                 "location": {
-                    "lat": -25.783836603164673,
-                    "lng": 124.2161636352539,
+                    "lat": 24.730384588241577,
+                    "lng": -5.269615173339844,
                     "country": "Unknown"
                 }
             }
@@ -4679,11 +4802,11 @@
                 ],
                 "epss": {
                     "epss": "0.012550000",
-                    "percentile": "0.687000000"
+                    "percentile": "0.687450000"
                 },
                 "location": {
-                    "lat": -25.783833026885986,
-                    "lng": 124.21616721153259,
+                    "lat": 24.730388641357422,
+                    "lng": -5.269611358642578,
                     "country": "Unknown"
                 }
             }
@@ -4894,7 +5017,7 @@
                 ],
                 "epss": {
                     "epss": "0.022010000",
-                    "percentile": "0.820340000"
+                    "percentile": "0.820600000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -6723,7 +6846,7 @@
                 ],
                 "epss": {
                     "epss": "0.018190000",
-                    "percentile": "0.781550000"
+                    "percentile": "0.781890000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -6941,7 +7064,7 @@
                 ],
                 "epss": {
                     "epss": "0.012420000",
-                    "percentile": "0.683780000"
+                    "percentile": "0.684260000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -7210,11 +7333,11 @@
                 ],
                 "epss": {
                     "epss": "0.013010000",
-                    "percentile": "0.696790000"
+                    "percentile": "0.697250000"
                 },
                 "location": {
-                    "lat": -25.783817768096924,
-                    "lng": 124.21618223190308,
+                    "lat": 24.730405569076538,
+                    "lng": -5.269594192504883,
                     "country": "Unknown"
                 }
             }
@@ -7479,11 +7602,11 @@
                 ],
                 "epss": {
                     "epss": "0.010830000",
-                    "percentile": "0.642810000"
+                    "percentile": "0.643320000"
                 },
                 "location": {
-                    "lat": -25.783813953399658,
-                    "lng": 124.21618604660034,
+                    "lat": 24.730409383773804,
+                    "lng": -5.269590616226196,
                     "country": "Unknown"
                 }
             }
@@ -7742,11 +7865,11 @@
                 ],
                 "epss": {
                     "epss": "0.010270000",
-                    "percentile": "0.626360000"
+                    "percentile": "0.626920000"
                 },
                 "location": {
-                    "lat": -25.783809900283813,
-                    "lng": 124.21619009971619,
+                    "lat": 24.73041296005249,
+                    "lng": -5.269586801528931,
                     "country": "Unknown"
                 }
             }
@@ -7933,7 +8056,7 @@
                 ],
                 "epss": {
                     "epss": "0.021010000",
-                    "percentile": "0.812030000"
+                    "percentile": "0.812330000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8249,11 +8372,11 @@
                 ],
                 "epss": {
                     "epss": "0.399790000",
-                    "percentile": "0.986000000"
+                    "percentile": "0.986030000"
                 },
                 "location": {
-                    "lat": -25.783801794052124,
-                    "lng": 124.21619844436646,
+                    "lat": 24.730421781539917,
+                    "lng": -5.269577980041504,
                     "country": "Unknown"
                 }
             }
@@ -8641,11 +8764,11 @@
                 ],
                 "epss": {
                     "epss": "0.005880000",
-                    "percentile": "0.466120000"
+                    "percentile": "0.466960000"
                 },
                 "location": {
-                    "lat": -25.78379797935486,
-                    "lng": 124.21620225906372,
+                    "lat": 24.730424880981445,
+                    "lng": -5.269574880599976,
                     "country": "Unknown"
                 }
             }
@@ -9854,230 +9977,33 @@
                 ],
                 "epss": {
                     "epss": "0.010620000",
-                    "percentile": "0.636630000"
+                    "percentile": "0.637150000"
                 },
                 "location": {
-                    "lat": -25.783790111541748,
-                    "lng": 124.21621012687683,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-94127",
-                "sourceIdentifier": "f5sirt@f5.com",
-                "published": "2026-09-22T15:17:24.313",
-                "lastModified": "2026-09-23T14:32:07.910",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM strictly as an OAuth Client / Resource Server (without OAuth authorization server profiles configured) are not affected by this vulnerability.\n\nImpact:\nThis vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Appliance mode is also vulnerable. This is a data plane issue; there is no control plane exposure.\n\n \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "f5sirt@f5.com",
-                        "affectedData": [
-                            {
-                                "vendor": "F5",
-                                "product": "BIG-IP",
-                                "defaultStatus": "unknown",
-                                "modules": [
-                                    "APM"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "21.1.0",
-                                        "lessThan": "Hotfix-BIGIP-21.1.0.2.0.30.22-ENG",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "17.5.0",
-                                        "lessThan": "Hotfix-BIGIP-17.5.1.9.0.160.12-ENG",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "17.1.0",
-                                        "lessThan": "Hotfix-BIGIP-17.1.3.5.0.41.14-ENG",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "f5sirt@f5.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "f5sirt@f5.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-22T00:00:00+00:00",
-                                "id": "CVE-2026-94127",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-22",
-                "cisaActionDue": "2026-09-25",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "f5sirt@f5.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-122"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "17.0.0",
-                                        "versionEndIncluding": "17.1.3",
-                                        "matchCriteriaId": "E2AC01C3-F47E-4F42-A4EB-90DE63C834CC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "17.5.0",
-                                        "versionEndIncluding": "17.5.1",
-                                        "matchCriteriaId": "BD71EC53-8ABC-410F-B031-0B3288D2E8DF"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:21.1.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "8D26D424-54C1-4B2C-BBB8-C79E925BED7F"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://my.f5.com/manage/s/article/K000162605",
-                        "source": "f5sirt@f5.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-94127",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.022260000",
-                    "percentile": "0.822420000"
-                },
-                "location": {
-                    "lat": -25.78378677368164,
-                    "lng": 124.21621346473694,
+                    "lat": 24.730432271957397,
+                    "lng": -5.269567489624023,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-104935",
+            "vendorProject": "Ivanti",
+            "product": "Connect Secure",
+            "vulnerabilityName": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+            "dateAdded": "2026-10-13",
+            "shortDescription": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-16",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https:/forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935 ; https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+            "cwes": [
+                "CWE-290"
+            ]
+        },
         {
             "cveID": "CVE-2015-5477",
             "vendorProject": "ISC",
@@ -11853,7 +11779,7 @@
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-06-28",
             "knownRansomwareCampaignUse": "Known",
-            "forensicTriage": "No",
+            "forensicTriage": "Yes",
             "notes": "https://www.ptc.com/en/support/article/CS473270 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-12569",
             "cwes": [
                 "CWE-20",
@@ -37668,7 +37594,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-12T20:35:14.182883",
+    "last_updated": "2026-10-13T18:39:08.118828",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
