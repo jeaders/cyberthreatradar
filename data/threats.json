@@ -2,175 +2,32 @@
     "nvd_cves": [
         {
             "cve": {
-                "id": "CVE-2026-21589",
-                "sourceIdentifier": "security@atlassian.com",
-                "published": "2026-10-05T22:16:58.423",
-                "lastModified": "2026-10-16T14:19:49.510",
+                "id": "CVE-2026-102764",
+                "sourceIdentifier": "13061848-ea10-403d-bd75-c83a022c2891",
+                "published": "2026-10-15T21:17:00.117",
+                "lastModified": "2026-10-17T04:16:47.117",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents."
+                        "value": "The vulnerability exists within internal components of BeyondTrust\u2019s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance."
                     }
                 ],
                 "affected": [
                     {
-                        "source": "security@atlassian.com",
+                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
                         "affectedData": [
                             {
-                                "vendor": "Atlassian",
-                                "product": "Bamboo Data Center",
+                                "vendor": "BeyondTrust",
+                                "product": "Remote Support",
+                                "defaultStatus": "unaffected",
                                 "versions": [
                                     {
-                                        "version": "All other versions",
+                                        "version": "0",
+                                        "lessThanOrEqual": "26.2.3",
+                                        "versionType": "custom",
                                         "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.24 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 12.1.12 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Bitbucket Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.8 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.5.1 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.4.26 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Confluence Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.19 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.2.26 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Crowd Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.2.4 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.1.7 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.0.3 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 6.3.7 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Crucible Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 4.9.15 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Fisheye Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 4.9.15 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Jira Service Management Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 11.3.12 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.3.26 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 5.12.40 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Jira Software Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 11.3.12 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.3.26 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.12.40 and later",
-                                        "status": "unaffected"
                                     }
                                 ]
                             }
@@ -180,11 +37,11 @@
                 "metrics": {
                     "cvssMetricV40": [
                         {
-                            "source": "security@atlassian.com",
+                            "source": "13061848-ea10-403d-bd75-c83a022c2891",
                             "type": "Secondary",
                             "cvssData": {
                                 "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
                                 "baseScore": 9.3,
                                 "baseSeverity": "CRITICAL",
                                 "attackVector": "NETWORK",
@@ -193,11 +50,11 @@
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
                                 "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "NONE",
-                                "vulnAvailabilityImpact": "NONE",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
                                 "exploitMaturity": "NOT_DEFINED",
                                 "confidentialityRequirement": "NOT_DEFINED",
                                 "integrityRequirement": "NOT_DEFINED",
@@ -228,20 +85,509 @@
                             "type": "Primary",
                             "cvssData": {
                                 "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
                                 "attackVector": "NETWORK",
                                 "attackComplexity": "LOW",
                                 "privilegesRequired": "NONE",
                                 "userInteraction": "NONE",
                                 "scope": "UNCHANGED",
                                 "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
                             },
                             "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-16T00:00:00+00:00",
+                                "id": "CVE-2026-102764",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-16",
+                "cisaActionDue": "2026-10-19",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-290"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "26.2.3",
+                                        "matchCriteriaId": "A0D7C73F-5086-40AA-B153-B086CFCA79A5"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066",
+                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.beyondtrust.com/blog/entry/bt26-05",
+                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006010000",
+                    "percentile": "0.476470000"
+                },
+                "location": {
+                    "lat": -12.96024227142334,
+                    "lng": -42.9602370262146,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2025-61624",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2026-04-14T16:16:31.300",
+                "lastModified": "2026-10-17T04:16:43.363",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una limitaci\u00f3n inadecuada de un nombre de ruta a un directorio restringido ('salto de ruta') [CWE-22] vulnerabilidad en Fortinet FortiOS 7.6.0 a 7.6.4, FortiOS 7.4.0 a 7.4.9, FortiOS 7.2 todas las versiones, FortiOS 7.0 todas las versiones, FortiOS 6.4 todas las versiones, FortiPAM 1.7.0, FortiPAM 1.6 todas las versiones, FortiPAM 1.5 todas las versiones, FortiPAM 1.4 todas las versiones, FortiPAM 1.3 todas las versiones, FortiPAM 1.2 todas las versiones, FortiPAM 1.1 todas las versiones, FortiPAM 1.0 todas las versiones, FortiProxy 7.6.0 a 7.6.4, FortiProxy 7.4.0 a 7.4.11, FortiProxy 7.2 todas las versiones, FortiProxy 7.0 todas las versiones, FortiSwitchManager 7.2.0 a 7.2.7, FortiSwitchManager 7.0.0 a 7.0.6 puede permitir a un atacante autenticado con perfil de administrador y al menos permisos de lectura-escritura escribir o eliminar archivos arbitrarios a trav\u00e9s de comandos CLI espec\u00edficos."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@fortinet.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiOS",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:o:fortinet:fortios:7.6.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.6.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.6.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.6.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.6.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.19:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.18:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.17:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:7.0.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortios:6.4.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.6.0",
+                                        "lessThanOrEqual": "7.6.4",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "lessThanOrEqual": "7.4.9",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "lessThanOrEqual": "7.2.13",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThanOrEqual": "7.0.19",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.4.0",
+                                        "lessThanOrEqual": "6.4.16",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiProxy",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.6.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.6.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.6.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.6.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.6.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.4.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.23:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.22:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.21:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.20:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.19:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.18:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.17:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.16:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.15:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.14:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.13:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.12:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.11:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.10:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.9:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.8:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiproxy:7.0.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.6.0",
+                                        "lessThanOrEqual": "7.6.4",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "lessThanOrEqual": "7.4.11",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "lessThanOrEqual": "7.2.16",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThanOrEqual": "7.0.23",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiSwitchManager",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.7:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.6:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.5:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.4:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.2.0",
+                                        "lessThanOrEqual": "7.2.7",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0",
+                                        "lessThanOrEqual": "7.0.6",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "product": "FortiPAM",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:o:fortinet:fortipam:1.7.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.6.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.6.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.6.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.5.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.5.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.4.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.4.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.4.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.4.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.3.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.3.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.2.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.1.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.1.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.1.0:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.0.3:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.0.2:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.0.1:*:*:*:*:*:*:*",
+                                    "cpe:2.3:o:fortinet:fortipam:1.0.0:*:*:*:*:*:*:*"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "1.7.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.6.0",
+                                        "lessThanOrEqual": "1.6.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.5.0",
+                                        "lessThanOrEqual": "1.5.1",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.4.0",
+                                        "lessThanOrEqual": "1.4.3",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.3.0",
+                                        "lessThanOrEqual": "1.3.1",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.1.0",
+                                        "lessThanOrEqual": "1.1.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "1.0.0",
+                                        "lessThanOrEqual": "1.0.3",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "affectedData": [
+                            {
+                                "vendor": "Siemens",
+                                "product": "RUGGEDCOM APE1808",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@fortinet.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+                                "baseScore": 6.0,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 0.8,
+                            "impactScore": 5.2
+                        },
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+                                "baseScore": 6.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 5.2
                         }
                     ],
                     "ssvcV203": [
@@ -249,7 +595,7 @@
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
                                 "timestamp": "2026-10-15T00:00:00+00:00",
-                                "id": "CVE-2026-21589",
+                                "id": "CVE-2025-61624",
                                 "options": [
                                     {
                                         "exploitation": "active"
@@ -267,18 +613,18 @@
                         }
                     ]
                 },
-                "cisaExploitAdd": "2026-10-15",
-                "cisaActionDue": "2026-10-18",
+                "cisaExploitAdd": "2026-10-16",
+                "cisaActionDue": "2026-10-19",
                 "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+                "cisaVulnerabilityName": "Fortinet Multiple Products Path Traversal Vulnerability",
                 "weaknesses": [
                     {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "source": "psirt@fortinet.com",
                         "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
-                                "value": "CWE-552"
+                                "value": "CWE-22"
                             }
                         ]
                     }
@@ -292,31 +638,17 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.17.0",
-                                        "versionEndExcluding": "9.4.26",
-                                        "matchCriteriaId": "7F95E74C-C2B5-4527-9282-A9C1E6FE2770"
+                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.4.0",
+                                        "versionEndExcluding": "7.4.10",
+                                        "matchCriteriaId": "8E0DD361-4041-480A-8B5E-1E14BBDD8133"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.5.0",
-                                        "versionEndExcluding": "10.2.8",
-                                        "matchCriteriaId": "4489C580-A184-45F2-945A-74919B30770E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.3.0",
-                                        "versionEndExcluding": "10.5.1",
-                                        "matchCriteriaId": "FC3E298E-8B85-4EE6-B5BD-B9D2ECE4ACF4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_server:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "4.6.0",
-                                        "versionEndIncluding": "8.14.6",
-                                        "matchCriteriaId": "6C615C3F-17A8-4458-88C1-342B973C0FB1"
+                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndExcluding": "7.6.5",
+                                        "matchCriteriaId": "26DF2CCC-782C-4AE8-8CDE-13FFEE8676E6"
                                     }
                                 ]
                             }
@@ -330,17 +662,10 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "5.10.0",
-                                        "versionEndExcluding": "9.2.26",
-                                        "matchCriteriaId": "E935B10B-F918-41C0-890D-DB9058BC503B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.3.0",
-                                        "versionEndExcluding": "10.2.19",
-                                        "matchCriteriaId": "8ABC2EDD-401B-4065-98CA-1D6AFE8C48E7"
+                                        "criteria": "cpe:2.3:o:fortinet:fortipam:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "1.0.0",
+                                        "versionEndExcluding": "1.7.1",
+                                        "matchCriteriaId": "C8E26F28-B9CA-47D5-86B0-AA98C67D9314"
                                     }
                                 ]
                             }
@@ -354,37 +679,48 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "2.11.0",
-                                        "versionEndExcluding": "6.3.7",
-                                        "matchCriteriaId": "D7704951-4EDF-4ADD-BF1F-0E74302B4D15"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
+                                        "criteria": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
                                         "versionStartIncluding": "7.0.0",
-                                        "versionEndExcluding": "7.0.3",
-                                        "matchCriteriaId": "0C6C0576-C6B8-4B7B-A3AF-2F49C07CD087"
+                                        "versionEndExcluding": "7.4.12",
+                                        "matchCriteriaId": "92465F3D-698E-4CA6-87CB-E5A08C34067E"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.1.0",
-                                        "versionEndExcluding": "7.1.7",
-                                        "matchCriteriaId": "2DDBD17E-7209-4402-81E0-C3A77D9BADC6"
+                                        "criteria": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndExcluding": "7.6.5",
+                                        "matchCriteriaId": "026DF873-FF5C-4629-8516-350C53CE2DEA"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0.0",
+                                        "versionEndExcluding": "7.0.7",
+                                        "matchCriteriaId": "23564E7E-21B7-4936-B4F2-85CD46D64A5D"
                                     },
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
+                                        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
                                         "versionStartIncluding": "7.2.0",
-                                        "versionEndExcluding": "7.2.4",
-                                        "matchCriteriaId": "A00677AE-D4A9-486C-8D5B-FAC4CD68F17E"
+                                        "versionEndExcluding": "7.2.8",
+                                        "matchCriteriaId": "6EFEB80D-87BB-4AD3-AA9D-9F0C37F227D2"
                                     }
                                 ]
                             }
                         ]
                     },
                     {
+                        "operator": "AND",
                         "nodes": [
                             {
                                 "operator": "OR",
@@ -392,118 +728,19 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.1.0",
-                                        "versionEndExcluding": "9.12.40",
-                                        "matchCriteriaId": "8C2734C1-0626-4C2B-8E7E-1E5744931699"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.13.0",
-                                        "versionEndExcluding": "10.3.26",
-                                        "matchCriteriaId": "13B7AADD-EE93-4BE5-A12A-FC69F024276D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.4.0",
-                                        "versionEndExcluding": "11.3.12",
-                                        "matchCriteriaId": "585E5684-41A5-4882-BBE6-8CC388162DC6"
+                                        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6"
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
+                            },
                             {
                                 "operator": "OR",
                                 "negate": false,
                                 "cpeMatch": [
                                     {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_desk:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "3.1.0",
-                                        "versionEndIncluding": "4.13.27",
-                                        "matchCriteriaId": "96833142-C39A-4BEF-B636-E013C5FBF1E7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "4.14.0",
-                                        "versionEndExcluding": "5.12.40",
-                                        "matchCriteriaId": "B53D3DC2-160F-4A58-A371-AEE4A4D2EBCA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "5.13.0",
-                                        "versionEndExcluding": "10.3.26",
-                                        "matchCriteriaId": "EAB2D1C1-8AF2-49EE-AD67-5B489BD4BD6A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "10.4.0",
-                                        "versionEndExcluding": "11.3.12",
-                                        "matchCriteriaId": "7166EDE8-5D90-4B90-B770-0DBD581D10E9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0.1",
-                                        "versionEndExcluding": "10.2.24",
-                                        "matchCriteriaId": "9E8447C5-5177-4BC0-86E5-CCF9339B6C74"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "11.0.0",
-                                        "versionEndExcluding": "12.1.12",
-                                        "matchCriteriaId": "7355838B-DA4B-4399-BA98-D97CBA4F45A0"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crucible:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.9.15",
-                                        "matchCriteriaId": "157CCC63-800B-46BD-AE83-9F8C8CC481FE"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:fisheye:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.9.15",
-                                        "matchCriteriaId": "74B7DE64-7D30-4076-983A-D9814AC90B3A"
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0"
                                     }
                                 ]
                             }
@@ -512,86 +749,28 @@
                 ],
                 "references": [
                     {
-                        "url": "https://jira.atlassian.com/browse/BAM-26567",
-                        "source": "security@atlassian.com",
+                        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122",
+                        "source": "psirt@fortinet.com",
                         "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
                             "Vendor Advisory"
                         ]
                     },
                     {
-                        "url": "https://jira.atlassian.com/browse/BSERV-20604",
-                        "source": "security@atlassian.com",
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
                         "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
+                            "Third Party Advisory"
                         ]
                     },
                     {
-                        "url": "https://jira.atlassian.com/browse/CONFSERVER-104488",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/CRUC-8741",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/CWD-6610",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/FE-7583",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/JRASERVER-79546",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/JSDSERVER-16809",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+                        "url": "https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/#post-188095-_guyq53ar8k05",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "Third Party Advisory"
                         ]
                     },
                     {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21589",
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
                             "US Government Resource"
@@ -599,13 +778,44 @@
                     }
                 ],
                 "epss": {
+                    "epss": "0.005800000",
+                    "percentile": "0.465510000"
+                },
+                "location": {
+                    "lat": 37.3752,
+                    "lng": -122.0297,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-21589",
+                "sourceIdentifier": "security@atlassian.com",
+                "published": "2026-10-05T22:16:58.423",
+                "lastModified": "2026-10-16T21:17:24.280",
+                "vulnStatus": "Rejected",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Rejected reason: This CVE's publication may have been a false positive or a mistake. As a result, we have rejected this record."
+                    }
+                ],
+                "metrics": {},
+                "cisaExploitAdd": "2026-10-15",
+                "cisaActionDue": "2026-10-18",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+                "references": [],
+                "epss": {
                     "epss": "0.127110000",
                     "percentile": "0.962250000"
                 },
                 "location": {
-                    "lat": -33.8688,
-                    "lng": 151.2093,
-                    "country": "Australia"
+                    "lat": -12.96022343635559,
+                    "lng": -42.96022272109985,
+                    "country": "Unknown"
                 }
             }
         },
@@ -864,8 +1074,8 @@
                     "percentile": "0.918090000"
                 },
                 "location": {
-                    "lat": 7.156603574752808,
-                    "lng": 37.15660905838013,
+                    "lat": -12.960216760635376,
+                    "lng": -42.9602165222168,
                     "country": "Unknown"
                 }
             }
@@ -1393,8 +1603,8 @@
                     "percentile": "0.575420000"
                 },
                 "location": {
-                    "lat": 7.156618356704712,
-                    "lng": 37.15661907196045,
+                    "lat": -12.960206985473633,
+                    "lng": -42.96020698547363,
                     "country": "Unknown"
                 }
             }
@@ -3253,8 +3463,8 @@
                     "percentile": "0.680640000"
                 },
                 "location": {
-                    "lat": 7.156623125076294,
-                    "lng": 37.156623125076294,
+                    "lat": -12.960202932357788,
+                    "lng": -42.96020269393921,
                     "country": "Unknown"
                 }
             }
@@ -3452,7 +3662,7 @@
                 "id": "CVE-2026-96951",
                 "sourceIdentifier": "secure@microsoft.com",
                 "published": "2026-10-13T19:22:07.760",
-                "lastModified": "2026-10-16T04:18:44.017",
+                "lastModified": "2026-10-16T17:18:00.760",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -3537,7 +3747,7 @@
                                 "versions": [
                                     {
                                         "version": "10.0.19045.0",
-                                        "lessThan": "10.0.19044.7807",
+                                        "lessThan": "10.0.19045.7807",
                                         "versionType": "custom",
                                         "status": "affected"
                                     }
@@ -6013,8 +6223,8 @@
                     "percentile": "0.999420000"
                 },
                 "location": {
-                    "lat": 7.156635999679565,
-                    "lng": 37.156636238098145,
+                    "lat": -12.960188388824463,
+                    "lng": -42.960188150405884,
                     "country": "Unknown"
                 }
             }
@@ -7033,8 +7243,8 @@
                     "percentile": "0.998780000"
                 },
                 "location": {
-                    "lat": 7.156640529632568,
-                    "lng": 37.15664052963257,
+                    "lat": -12.960183143615723,
+                    "lng": -42.96018314361572,
                     "country": "Unknown"
                 }
             }
@@ -7241,8 +7451,8 @@
                     "percentile": "0.893220000"
                 },
                 "location": {
-                    "lat": 7.156643867492676,
-                    "lng": 37.156644105911255,
+                    "lat": -12.960178852081299,
+                    "lng": -42.96017861366272,
                     "country": "Unknown"
                 }
             }
@@ -7479,8 +7689,8 @@
                     "percentile": "0.973230000"
                 },
                 "location": {
-                    "lat": 7.1566481590271,
-                    "lng": 37.1566481590271,
+                    "lat": -12.960174322128296,
+                    "lng": -42.960174322128296,
                     "country": "Unknown"
                 }
             }
@@ -7945,8 +8155,8 @@
                     "percentile": "0.999450000"
                 },
                 "location": {
-                    "lat": 7.156652450561523,
-                    "lng": 37.15665245056152,
+                    "lat": -12.960169315338135,
+                    "lng": -42.960169315338135,
                     "country": "Unknown"
                 }
             }
@@ -8218,8 +8428,8 @@
                     "percentile": "0.471630000"
                 },
                 "location": {
-                    "lat": 7.156656980514526,
-                    "lng": 37.156656980514526,
+                    "lat": -12.960164546966553,
+                    "lng": -42.96016454696655,
                     "country": "Unknown"
                 }
             }
@@ -8456,8 +8666,8 @@
                     "percentile": "0.447970000"
                 },
                 "location": {
-                    "lat": 7.156660318374634,
-                    "lng": 37.156660318374634,
+                    "lat": -12.960160732269287,
+                    "lng": -42.96016049385071,
                     "country": "Unknown"
                 }
             }
@@ -8713,8 +8923,8 @@
                     "percentile": "0.690010000"
                 },
                 "location": {
-                    "lat": 7.156663656234741,
-                    "lng": 37.15666365623474,
+                    "lat": -12.960156679153442,
+                    "lng": -42.96015667915344,
                     "country": "Unknown"
                 }
             }
@@ -10980,547 +11190,41 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-88772",
-                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                "published": "2026-09-27T17:16:56.390",
-                "lastModified": "2026-09-28T12:26:47.670",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23\u00a0leading to Remote Code Execution or Denial of Service"
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad en Citrix NetScaler ADC y Citrix NetScaler Gateway.\n\nEste problema afecta a ADC: versiones anteriores a 14.1-73.37, a 13.1-64.23, a 14.1-73.37 FIPS, y a 13.1.37.279 FIPS y NDcPP; Gateway: versiones anteriores a 14.1-73.37 y a 13.1-64.23, lo que conduce a Ejecuci\u00f3n remota de c\u00f3digo o Denegaci\u00f3n de servicio."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "affectedData": [
-                            {
-                                "vendor": "Citrix NetScaler",
-                                "product": "ADC",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1-64.23",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37 FIPS",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1.37.279 FIPS and NDcPP",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Citrix NetScaler",
-                                "product": "Gateway",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1-64.23",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.5,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.2,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-27T00:00:00+00:00",
-                                "id": "CVE-2026-88772",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-27",
-                "cisaActionDue": "2026-09-30",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-119"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-64.23",
-                                        "matchCriteriaId": "6BC2D462-9ABE-4024-8E46-8D265C0B19FB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1.37.279",
-                                        "matchCriteriaId": "2DB314FE-3886-4ABD-A820-B8A70EBB23A6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1.37.279",
-                                        "matchCriteriaId": "FCFFA1B3-87CE-4CC8-990E-D3CE0B55CD45"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.37",
-                                        "matchCriteriaId": "1CA9588A-E3EB-44FC-9515-6EB89BB8C1D6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "14.1-66.68",
-                                        "versionEndIncluding": "14.1-73.37",
-                                        "matchCriteriaId": "046FF602-D956-4961-89BF-2041A3590004"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-64.23",
-                                        "matchCriteriaId": "3286D2C3-EA7E-4D9C-95DE-05D462DC8B1B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.37",
-                                        "matchCriteriaId": "C77243A7-1FDB-4557-88BE-EDF3BAA56A81"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778",
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.013010000",
-                    "percentile": "0.699710000"
-                },
-                "location": {
-                    "lat": 7.156676769256592,
-                    "lng": 37.15667676925659,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-88771",
-                "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                "published": "2026-09-27T17:16:56.260",
-                "lastModified": "2026-09-29T04:18:01.603",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to\u00a0an unauthenticated attacker to execute arbitrary commands."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Vulnerabilidad de validaci\u00f3n de entrada inadecuada en Citrix NetScaler ADC y Citrix NetScaler Gateway.\n\nEste problema afecta a ADC en versiones anteriores a 14.1-73.37, 13.1-64.23, 14.1-73.37 FIPS, y 13.1.37.279 FIPS y NDcPP; y a Gateway en versiones anteriores a 14.1-73.37 y 13.1-64.23, lo que permite a un atacante no autenticado ejecutar comandos arbitrarios."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "affectedData": [
-                            {
-                                "vendor": "Citrix NetScaler",
-                                "product": "ADC",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1-64.23",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37 FIPS",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1.37.279 FIPS and NDcPP",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Citrix NetScaler",
-                                "product": "Gateway",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "14.1-73.37",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "0",
-                                        "lessThan": "13.1-64.23",
-                                        "versionType": "patch",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.5,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "PRESENT",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-09-27T00:00:00+00:00",
-                                "id": "CVE-2026-88771",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-09-27",
-                "cisaActionDue": "2026-09-30",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-20"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-64.23",
-                                        "matchCriteriaId": "6BC2D462-9ABE-4024-8E46-8D265C0B19FB"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1.37.279",
-                                        "matchCriteriaId": "2DB314FE-3886-4ABD-A820-B8A70EBB23A6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1.37.279",
-                                        "matchCriteriaId": "FCFFA1B3-87CE-4CC8-990E-D3CE0B55CD45"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.37",
-                                        "matchCriteriaId": "1CA9588A-E3EB-44FC-9515-6EB89BB8C1D6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
-                                        "versionStartIncluding": "14.1-66.68",
-                                        "versionEndIncluding": "14.1-73.37",
-                                        "matchCriteriaId": "046FF602-D956-4961-89BF-2041A3590004"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "13.1",
-                                        "versionEndExcluding": "13.1-64.23",
-                                        "matchCriteriaId": "3286D2C3-EA7E-4D9C-95DE-05D462DC8B1B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "14.1",
-                                        "versionEndExcluding": "14.1-73.37",
-                                        "matchCriteriaId": "C77243A7-1FDB-4557-88BE-EDF3BAA56A81"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096",
-                        "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.010830000",
-                    "percentile": "0.646160000"
-                },
-                "location": {
-                    "lat": 7.15667986869812,
-                    "lng": 37.15667986869812,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-102764",
+            "vendorProject": "BeyondTrust",
+            "product": "Remote Support",
+            "vulnerabilityName": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+            "dateAdded": "2026-10-16",
+            "shortDescription": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-19",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+            "cwes": [
+                "CWE-290"
+            ]
+        },
+        {
+            "cveID": "CVE-2025-61624",
+            "vendorProject": "Fortinet",
+            "product": "Multiple Products",
+            "vulnerabilityName": "Fortinet Multiple Products Path Traversal Vulnerability",
+            "dateAdded": "2026-10-16",
+            "shortDescription": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-19",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+            "cwes": [
+                "CWE-22"
+            ]
+        },
         {
             "cveID": "CVE-2026-21589",
             "vendorProject": "Atlassian",
@@ -39224,7 +38928,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-16T15:45:52.468043",
+    "last_updated": "2026-10-17T14:38:29.206586",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
