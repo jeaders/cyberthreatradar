@@ -2,6 +2,368 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-114625",
+                "sourceIdentifier": "psirt@arista.com",
+                "published": "2026-10-22T21:17:16.870",
+                "lastModified": "2026-10-24T04:18:17.510",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nOn an affected system, any authenticated user can gain operator privileges and masquerade as a local \"superuser operator\" user. This includes access to functionality that is intended for internal use only and which is not intended to be remotely accessible.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@arista.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Arista Networks",
+                                "product": "VeloCloud Orchestrator",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "VeloCloud Orchestrator On-Prem"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "5.2.0",
+                                        "lessThan": "5.2.3.18",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.1.0",
+                                        "lessThan": "6.1.3.10",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "6.4.0",
+                                        "lessThan": "6.4.2.12",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.4,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@arista.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.9,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.1,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-22T00:00:00+00:00",
+                                "id": "CVE-2026-114625",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-23",
+                "cisaActionDue": "2026-10-26",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@arista.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.2.0",
+                                        "versionEndExcluding": "5.2.3.18",
+                                        "matchCriteriaId": "46BB8543-8607-4BB0-BC80-9321641F517D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.1.0",
+                                        "versionEndExcluding": "6.1.3.10",
+                                        "matchCriteriaId": "60421072-88C7-423A-BD84-DC4DB9202EE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.4.0",
+                                        "versionEndExcluding": "6.4.2.12",
+                                        "matchCriteriaId": "E8098C92-A608-440C-B70D-B0F7DC2B15EE"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199",
+                        "source": "psirt@arista.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114625",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.008130000",
+                    "percentile": "0.566130000"
+                },
+                "location": {
+                    "lat": -11.871594190597534,
+                    "lng": 18.12841033935547,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-110447",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-10-14T03:17:20.683",
+                "lastModified": "2026-10-24T04:18:17.157",
+                "vulnStatus": "Deferred",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Collabora",
+                                "product": "Collabora Online - Built-in CODE Server",
+                                "defaultStatus": "affected",
+                                "collectionURL": "https://apps.nextcloud.com",
+                                "packageName": "richdocumentscode",
+                                "repo": "https://github.com/CollaboraOnline/richdocumentscode",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "26.4.303",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.2,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "PRESENT",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-23T00:00:00+00:00",
+                                "id": "CVE-2026-110447",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-23",
+                "cisaActionDue": "2026-10-26",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Collabora Online \u2013 Built-in CODE Server OS Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/CollaboraOnline/richdocumentscode/issues/354",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.022850000",
+                    "percentile": "0.830620000"
+                },
+                "location": {
+                    "lat": -11.871583938598633,
+                    "lng": 18.128416538238525,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-106931",
                 "sourceIdentifier": "vultures@jpcert.or.jp",
                 "published": "2026-10-14T05:16:42.633",
@@ -450,11 +812,11 @@
                 ],
                 "epss": {
                     "epss": "0.011700000",
-                    "percentile": "0.671730000"
+                    "percentile": "0.672050000"
                 },
                 "location": {
-                    "lat": -3.449002504348755,
-                    "lng": -93.44899725914001,
+                    "lat": -11.871577262878418,
+                    "lng": 18.12842297554016,
                     "country": "Unknown"
                 }
             }
@@ -688,11 +1050,11 @@
                 ],
                 "epss": {
                     "epss": "0.008160000",
-                    "percentile": "0.566770000"
+                    "percentile": "0.567120000"
                 },
                 "location": {
-                    "lat": -3.448988914489746,
-                    "lng": -93.44898819923401,
+                    "lat": -11.871572732925415,
+                    "lng": 18.128427505493164,
                     "country": "Unknown"
                 }
             }
@@ -919,11 +1281,11 @@
                 ],
                 "epss": {
                     "epss": "0.004550000",
-                    "percentile": "0.385600000"
+                    "percentile": "0.385900000"
                 },
                 "location": {
-                    "lat": -3.448981761932373,
-                    "lng": -93.4489815235138,
+                    "lat": -11.871567964553833,
+                    "lng": 18.128432273864746,
                     "country": "Unknown"
                 }
             }
@@ -1150,11 +1512,11 @@
                 ],
                 "epss": {
                     "epss": "0.004650000",
-                    "percentile": "0.393250000"
+                    "percentile": "0.393580000"
                 },
                 "location": {
-                    "lat": -3.448976755142212,
-                    "lng": -93.44897627830505,
+                    "lat": -11.871564149856567,
+                    "lng": 18.128435850143433,
                     "country": "Unknown"
                 }
             }
@@ -1381,11 +1743,11 @@
                 ],
                 "epss": {
                     "epss": "0.004550000",
-                    "percentile": "0.385590000"
+                    "percentile": "0.385900000"
                 },
                 "location": {
-                    "lat": -3.44897198677063,
-                    "lng": -93.44897174835205,
+                    "lat": -11.871559858322144,
+                    "lng": 18.128440141677856,
                     "country": "Unknown"
                 }
             }
@@ -1575,11 +1937,11 @@
                 ],
                 "epss": {
                     "epss": "0.002380000",
-                    "percentile": "0.140210000"
+                    "percentile": "0.140630000"
                 },
                 "location": {
-                    "lat": -3.4489657878875732,
-                    "lng": -93.448965549469,
+                    "lat": -11.871556282043457,
+                    "lng": 18.128443717956543,
                     "country": "Unknown"
                 }
             }
@@ -1774,11 +2136,11 @@
                 ],
                 "epss": {
                     "epss": "0.011800000",
-                    "percentile": "0.674570000"
+                    "percentile": "0.674870000"
                 },
                 "location": {
-                    "lat": -3.4489595890045166,
-                    "lng": -93.44895958900452,
+                    "lat": -11.871552228927612,
+                    "lng": 18.128448009490967,
                     "country": "Unknown"
                 }
             }
@@ -2363,7 +2725,7 @@
                 ],
                 "epss": {
                     "epss": "0.010810000",
-                    "percentile": "0.648660000"
+                    "percentile": "0.648960000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -2972,7 +3334,7 @@
                 ],
                 "epss": {
                     "epss": "0.127110000",
-                    "percentile": "0.962630000"
+                    "percentile": "0.962670000"
                 },
                 "location": {
                     "lat": -33.8688,
@@ -3236,8 +3598,8 @@
                     "percentile": "0.985680000"
                 },
                 "location": {
-                    "lat": -3.4489448070526123,
-                    "lng": -93.44894480705261,
+                    "lat": -11.871540546417236,
+                    "lng": 18.128459692001343,
                     "country": "Unknown"
                 }
             }
@@ -3505,7 +3867,7 @@
                 ],
                 "epss": {
                     "epss": "0.015730000",
-                    "percentile": "0.752310000"
+                    "percentile": "0.752550000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3762,11 +4124,11 @@
                 ],
                 "epss": {
                     "epss": "0.057940000",
-                    "percentile": "0.930980000"
+                    "percentile": "0.931060000"
                 },
                 "location": {
-                    "lat": -3.4489362239837646,
-                    "lng": -93.44893622398376,
+                    "lat": -11.871532917022705,
+                    "lng": 18.128467559814453,
                     "country": "Unknown"
                 }
             }
@@ -5622,11 +5984,11 @@
                 ],
                 "epss": {
                     "epss": "0.012150000",
-                    "percentile": "0.683610000"
+                    "percentile": "0.683880000"
                 },
                 "location": {
-                    "lat": -3.4489312171936035,
-                    "lng": -93.4489312171936,
+                    "lat": -11.871528625488281,
+                    "lng": 18.12847137451172,
                     "country": "Unknown"
                 }
             }
@@ -5810,7 +6172,7 @@
                 ],
                 "epss": {
                     "epss": "0.259820000",
-                    "percentile": "0.979840000"
+                    "percentile": "0.979870000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -6394,7 +6756,7 @@
                 ],
                 "epss": {
                     "epss": "0.015120000",
-                    "percentile": "0.742850000"
+                    "percentile": "0.743120000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -8382,11 +8744,11 @@
                 ],
                 "epss": {
                     "epss": "0.994090000",
-                    "percentile": "0.999420000"
+                    "percentile": "0.999430000"
                 },
                 "location": {
-                    "lat": -3.4489169120788574,
-                    "lng": -93.44891667366028,
+                    "lat": -11.871517419815063,
+                    "lng": 18.128482580184937,
                     "country": "Unknown"
                 }
             }
@@ -9405,8 +9767,8 @@
                     "percentile": "0.998790000"
                 },
                 "location": {
-                    "lat": -3.4489121437072754,
-                    "lng": -93.44891214370728,
+                    "lat": -11.871513366699219,
+                    "lng": 18.12848687171936,
                     "country": "Unknown"
                 }
             }
@@ -9610,721 +9972,49 @@
                 ],
                 "epss": {
                     "epss": "0.036090000",
-                    "percentile": "0.894370000"
+                    "percentile": "0.894490000"
                 },
                 "location": {
-                    "lat": -3.4489076137542725,
-                    "lng": -93.44890761375427,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2021-3199",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2021-01-26T18:16:28.507",
-                "lastModified": "2026-10-09T14:20:47.350",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "Directory traversal with remote code execution can occur in /upload in ONLYOFFICE Document Server before 5.6.3, when JWT is used, via a /.. sequence in an image upload parameter."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Un salto de directorio con ejecuci\u00f3n de c\u00f3digo remota puede ocurrir en /upload en ONLYOFFICE Document Server versiones anteriores a 5.6.3, cuando es usado JWT, por medio de una secuencia /.. en un par\u00e1metro de carga de imagen"
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@mitre.org",
-                        "affectedData": [
-                            {
-                                "vendor": "n/a",
-                                "product": "n/a",
-                                "versions": [
-                                    {
-                                        "version": "n/a",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        },
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                                "baseScore": 7.5,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "LOW",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "PARTIAL",
-                                "integrityImpact": "PARTIAL",
-                                "availabilityImpact": "PARTIAL"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 10.0,
-                            "impactScore": 6.4,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": false
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-08T00:00:00+00:00",
-                                "id": "CVE-2021-3199",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-08",
-                "cisaActionDue": "2026-10-11",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-22"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:onlyoffice:document_server:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "5.6.3",
-                                        "matchCriteriaId": "226FAC46-5D2C-4685-AA75-0EEB5BA85178"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Release Notes",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Release Notes",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.201360000",
-                    "percentile": "0.974540000"
-                },
-                "location": {
-                    "lat": -3.4489030838012695,
-                    "lng": -93.44890308380127,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2015-3306",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2015-05-18T15:59:10.743",
-                "lastModified": "2026-10-09T16:17:18.210",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "El m\u00f3dulo mod_copy en ProFTPD 1.3.5 permite a atacantes remotos leer y escribir en ficheros arbitrarios a trav\u00e9s de los comandos site cpfr y site cpto."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@mitre.org",
-                        "affectedData": [
-                            {
-                                "vendor": "n/a",
-                                "product": "n/a",
-                                "versions": [
-                                    {
-                                        "version": "n/a",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
-                                "baseScore": 10.0,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "LOW",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 10.0,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": false
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-09T03:55:32.860386Z",
-                                "id": "CVE-2015-3306",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-08",
-                "cisaActionDue": "2026-10-11",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "ProFTPD Improper Access Control Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "nvd@nist.gov",
-                        "type": "Primary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-284"
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-284"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:20:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FF47C9F0-D8DA-4B55-89EB-9B2C9383ADB9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:21:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "56BDB5A0-0839-4A20-A003-B8CD56F48171"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:22:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "253C303A-E577-4488-93E6-68A8DD942C38"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:opensuse:tumbleweed:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "107C84EE-5E5C-4C36-A6DA-295144A527E9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:-:*:*",
-                                        "matchCriteriaId": "CCE4946A-773A-443D-B5E3-839E637C3360"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:sap:*:*",
-                                        "matchCriteriaId": "C2F7F7D2-6E82-4FB4-8C44-3C7DEF123173"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:proftpd:proftpd:1.3.5:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9A5C227B-70A9-46C9-927B-915962D7A35B"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.debian.org/security/2015/dsa-3263",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/74238",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/36742/",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/36803/",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Broken Link",
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "http://www.debian.org/security/2015/dsa-3263",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "http://www.securityfocus.com/bid/74238",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/36742/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit"
-                        ]
-                    },
-                    {
-                        "url": "https://www.exploit-db.com/exploits/36803/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Exploit"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2015-3306",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.994970000",
-                    "percentile": "0.999460000"
-                },
-                "location": {
-                    "lat": -3.4488987922668457,
-                    "lng": -93.44889879226685,
+                    "lat": -11.871509552001953,
+                    "lng": 18.128490447998047,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-114625",
+            "vendorProject": "Arista",
+            "product": "VeloCloud Orchestrator",
+            "vulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+            "dateAdded": "2026-10-23",
+            "shortDescription": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-26",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
+            "cwes": [
+                "CWE-89"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-110447",
+            "vendorProject": "Collabora",
+            "product": "Collabora Online \u2013 Built-in CODE Server",
+            "vulnerabilityName": "Collabora Online \u2013 Built-in CODE Server OS Command Injection Vulnerability",
+            "dateAdded": "2026-10-23",
+            "shortDescription": "Collabora Collabora Online \u2013 Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-10-26",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516 ; https://github.com/CollaboraOnline/online/security/advisories/GHSA-g3vx-3m76-fghh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+            "cwes": [
+                "CWE-78"
+            ]
+        },
         {
             "cveID": "CVE-2026-106931",
             "vendorProject": "EG Secure Solutions",
@@ -38156,7 +37846,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-23T16:07:44.072315",
+    "last_updated": "2026-10-24T15:03:31.543605",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
