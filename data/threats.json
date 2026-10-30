@@ -2,6 +2,1295 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-97229",
+                "sourceIdentifier": "cve@gitlab.com",
+                "published": "2026-10-13T02:17:00.840",
+                "lastModified": "2026-10-30T10:36:26.950",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@gitlab.com",
+                        "affectedData": [
+                            {
+                                "vendor": "GitLab",
+                                "product": "GitLab",
+                                "defaultStatus": "unaffected",
+                                "cpes": [
+                                    "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+                                ],
+                                "repo": "https://gitlab.com/gitlab-org/gitlab",
+                                "versions": [
+                                    {
+                                        "version": "19.2",
+                                        "lessThan": "19.2.8",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.3",
+                                        "lessThan": "19.3.5",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "19.4",
+                                        "lessThan": "19.4.2",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@gitlab.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 10.0,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-13T00:00:00+00:00",
+                                "id": "CVE-2026-97229",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-29",
+                "cisaActionDue": "2026-11-01",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@gitlab.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-190"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "19.2.0",
+                                        "versionEndExcluding": "19.2.8",
+                                        "matchCriteriaId": "A938C22D-FD14-48A6-B46F-CCA9AC8EBC9F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "19.2.0",
+                                        "versionEndExcluding": "19.2.8",
+                                        "matchCriteriaId": "EC585668-21D1-41DF-A4FB-17DD48AB9F12"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "19.3.0",
+                                        "versionEndExcluding": "19.3.5",
+                                        "matchCriteriaId": "1304F38C-8780-4412-AE0B-D0B65319E8E6"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "19.3.0",
+                                        "versionEndExcluding": "19.3.5",
+                                        "matchCriteriaId": "75C2C2EE-4DF9-4AB5-9E15-2EC799667C6C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                                        "versionStartIncluding": "19.4.0",
+                                        "versionEndExcluding": "19.4.2",
+                                        "matchCriteriaId": "5FD2476C-E11F-4215-A329-C3B189B6611F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                                        "versionStartIncluding": "19.4.0",
+                                        "versionEndExcluding": "19.4.2",
+                                        "matchCriteriaId": "FAAF2A38-5C01-490C-A191-8532B58C246B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/",
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686",
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Broken Link"
+                        ]
+                    },
+                    {
+                        "url": "https://hackerone.com/reports/4055749",
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://hackerone.com/reports/4058589",
+                        "source": "cve@gitlab.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.265690000",
+                    "percentile": "0.980150000"
+                },
+                "location": {
+                    "lat": 21.874659776687622,
+                    "lng": -8.125335693359375,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-76418",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-10-28T20:18:47.063",
+                "lastModified": "2026-10-30T10:36:01.130",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "9.16.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.1.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.2.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.15",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.3.23",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.39",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.46",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.27",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.18",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.53",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.55",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.39",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.3.56",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.42",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.48",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.27",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.55",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.57",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.24",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.21",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.61",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.31",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.29",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.2.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.62",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.34",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.67",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.70",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.40",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.71",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.47",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.37",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.76",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.38",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.50",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.52",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.1.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.53",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.82",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.16",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.19.1.42",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.57",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.84",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.3.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.66",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.85",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.67",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.68",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.14",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.20",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.71",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.19",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.26",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.89",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.2.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.76",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.22",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.28",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.3.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.92",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.135",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.195",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.30",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.155",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.32",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.34",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.82",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.90",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.46",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.235",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.20.4.49",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.22.3.26",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.16.4.103",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.18.4.94",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.23.1.47",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "9.24.1.26",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco Secure Firewall Threat Defense (FTD) Software",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "7.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.0.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.1.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.5.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.3.1.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.6.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.8.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.2.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.10.1",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.2.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.10.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.3",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.0",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.4",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.9",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.11",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.7",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.4.8",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.2.12",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.6.6",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.7.13",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.0.2",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "7.0.10",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "10.1.0",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-28T00:00:00+00:00",
+                                "id": "CVE-2026-76418",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-29",
+                "cisaActionDue": "2026-11-01",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-690"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.16.4.104",
+                                        "matchCriteriaId": "805F181F-FE27-4ABF-AC29-559C6809FD27"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.18",
+                                        "versionEndExcluding": "9.18.4.96",
+                                        "matchCriteriaId": "C29AE7AB-46AA-40AC-A049-8C9C0F245501"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.19",
+                                        "versionEndExcluding": "9.20.4.50",
+                                        "matchCriteriaId": "6A4F41AE-BD2D-4DFE-85CA-241E16CA2914"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.22",
+                                        "versionEndExcluding": "9.22.3.200",
+                                        "matchCriteriaId": "DB422EAF-D8B7-48B8-8725-EC841A376092"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.23",
+                                        "versionEndExcluding": "9.23.1.48",
+                                        "matchCriteriaId": "D2C12B2A-5E17-4FB0-945A-9D276C7C1CB8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.24.1",
+                                        "versionEndExcluding": "9.24.1.27",
+                                        "matchCriteriaId": "4941C4C8-8178-4C9C-AF37-92FE80C18446"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:9.24.10:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "55397A10-5201-4F54-9640-B8F9E3903A50"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "7.0.11",
+                                        "matchCriteriaId": "60DFD7DE-3F86-4445-861E-43707945522E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.2.0",
+                                        "versionEndExcluding": "7.2.13",
+                                        "matchCriteriaId": "BA819EC0-042F-40BD-A894-5F79FEA7A950"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.3.0",
+                                        "versionEndExcluding": "7.4.9",
+                                        "matchCriteriaId": "C52DB437-B0EE-4144-8207-46AAB05E9E6E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.6.0",
+                                        "versionEndIncluding": "7.6.7",
+                                        "matchCriteriaId": "0AAD421F-AFB6-4544-9C69-13492E9A92D7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.7.0",
+                                        "versionEndExcluding": "7.7.14",
+                                        "matchCriteriaId": "5C2723CE-3F8A-424D-AEA9-6BEC6BA81998"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.0.0",
+                                        "versionEndExcluding": "10.0.3",
+                                        "matchCriteriaId": "3050C93D-1E56-4D1B-BAB9-53862EE7E0FB"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:10.1.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CE4A0681-8718-4EAE-889E-57E081D6C2C6"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.009100000",
+                    "percentile": "0.599490000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-41709",
                 "sourceIdentifier": "security@vmware.com",
                 "published": "2026-07-30T14:16:57.420",
@@ -356,8 +1645,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.007640000",
-                    "percentile": "0.553070000"
+                    "epss": "0.006890000",
+                    "percentile": "0.527180000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -2073,8 +3362,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.157190000",
-                    "percentile": "0.968540000"
+                    "epss": "0.161300000",
+                    "percentile": "0.969230000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -3189,7 +4478,7 @@
                 ],
                 "epss": {
                     "epss": "0.445790000",
-                    "percentile": "0.987650000"
+                    "percentile": "0.987670000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -3203,8 +4492,8 @@
                 "id": "CVE-2026-111497",
                 "sourceIdentifier": "cve-coordination@google.com",
                 "published": "2026-10-22T14:17:37.190",
-                "lastModified": "2026-10-28T17:47:31.370",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-10-30T11:17:32.020",
+                "vulnStatus": "Undergoing Analysis",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -3239,6 +4528,141 @@
                                         "version": "1.2.0",
                                         "lessThan": "1.2.1",
                                         "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "affectedData": [
+                            {
+                                "vendor": "Siemens",
+                                "product": "Cloud Connector Configurator",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Common Configurator\u00a0(CC on IEM)",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Common Configurator on Device\u00a0(CC on Edge)",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Data Flow Monitoring",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Databus Configurator",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Edge OPC UA Server Configurator",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Flow Creator Configurator",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Industrial Edge Hub",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Industrial Edge Management Cloud",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "RUGGEDCOM APE1808",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
                                         "status": "affected"
                                     }
                                 ]
@@ -3856,6 +5280,14 @@
                         ]
                     },
                     {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-898633.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
                         "url": "https://ellio.tech/en/blog/node2shell-cve-2026-111497-rce-on-stock-nodejs-builds/",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
@@ -3872,7 +5304,7 @@
                 ],
                 "epss": {
                     "epss": "0.826410000",
-                    "percentile": "0.996650000"
+                    "percentile": "0.996660000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5818,8 +7250,8 @@
                     "percentile": "0.999980000"
                 },
                 "location": {
-                    "lat": -8.546613931655884,
-                    "lng": 81.4533908367157,
+                    "lat": 21.874694108963013,
+                    "lng": -8.125304937362671,
                     "country": "Unknown"
                 }
             }
@@ -7826,8 +9258,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": -8.54660439491272,
-                    "lng": 81.45339679718018,
+                    "lat": 21.874699115753174,
+                    "lng": -8.125300645828247,
                     "country": "Unknown"
                 }
             }
@@ -8043,11 +9475,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.634940000"
+                    "percentile": "0.635410000"
                 },
                 "location": {
-                    "lat": -8.546598196029663,
-                    "lng": 81.45340204238892,
+                    "lat": 21.874703407287598,
+                    "lng": -8.125296354293823,
                     "country": "Unknown"
                 }
             }
@@ -8057,7 +9489,7 @@
                 "id": "CVE-2026-110447",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-10-14T03:17:20.683",
-                "lastModified": "2026-10-26T16:48:12.087",
+                "lastModified": "2026-10-30T16:32:46.647",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -8204,9 +9636,9 @@
                                 "cpeMatch": [
                                     {
                                         "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:collabora:online:*:*:*:*:*:nextcloud:*:*",
+                                        "criteria": "cpe:2.3:a:collabora:collabora_online_-_built-in_code_server:*:*:*:*:*:nextcloud:*:*",
                                         "versionEndExcluding": "26.4.303",
-                                        "matchCriteriaId": "6BDFA17C-DAF4-4762-9169-4591A4073024"
+                                        "matchCriteriaId": "429A74FB-ABCE-4740-8240-27BBE73BB09E"
                                     }
                                 ]
                             }
@@ -8238,11 +9670,11 @@
                 ],
                 "epss": {
                     "epss": "0.733070000",
-                    "percentile": "0.994590000"
+                    "percentile": "0.994600000"
                 },
                 "location": {
-                    "lat": -8.546592473983765,
-                    "lng": 81.45340776443481,
+                    "lat": 21.8747079372406,
+                    "lng": -8.12529182434082,
                     "country": "Unknown"
                 }
             }
@@ -8697,11 +10129,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.848550000"
+                    "percentile": "0.848770000"
                 },
                 "location": {
-                    "lat": -8.546587705612183,
-                    "lng": 81.45341229438782,
+                    "lat": 21.874711990356445,
+                    "lng": -8.125287771224976,
                     "country": "Unknown"
                 }
             }
@@ -8935,11 +10367,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.782450000"
+                    "percentile": "0.782790000"
                 },
                 "location": {
-                    "lat": -8.546583652496338,
-                    "lng": 81.45341634750366,
+                    "lat": 21.874716758728027,
+                    "lng": -8.125283241271973,
                     "country": "Unknown"
                 }
             }
@@ -9166,11 +10598,11 @@
                 ],
                 "epss": {
                     "epss": "0.016370000",
-                    "percentile": "0.762750000"
+                    "percentile": "0.763100000"
                 },
                 "location": {
-                    "lat": -8.546579360961914,
-                    "lng": 81.45342063903809,
+                    "lat": 21.874720096588135,
+                    "lng": -8.125279664993286,
                     "country": "Unknown"
                 }
             }
@@ -9397,11 +10829,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.801660000"
+                    "percentile": "0.801950000"
                 },
                 "location": {
-                    "lat": -8.546575784683228,
-                    "lng": 81.45342445373535,
+                    "lat": 21.874722957611084,
+                    "lng": -8.125276565551758,
                     "country": "Unknown"
                 }
             }
@@ -9628,11 +11060,11 @@
                 ],
                 "epss": {
                     "epss": "0.018210000",
-                    "percentile": "0.786990000"
+                    "percentile": "0.787310000"
                 },
                 "location": {
-                    "lat": -8.546571969985962,
-                    "lng": 81.45342803001404,
+                    "lat": 21.87472677230835,
+                    "lng": -8.12527322769165,
                     "country": "Unknown"
                 }
             }
@@ -9822,11 +11254,11 @@
                 ],
                 "epss": {
                     "epss": "0.009670000",
-                    "percentile": "0.616620000"
+                    "percentile": "0.617100000"
                 },
                 "location": {
-                    "lat": -8.546567916870117,
-                    "lng": 81.45343208312988,
+                    "lat": 21.874730348587036,
+                    "lng": -8.125269651412964,
                     "country": "Unknown"
                 }
             }
@@ -10021,11 +11453,11 @@
                 ],
                 "epss": {
                     "epss": "0.189500000",
-                    "percentile": "0.972930000"
+                    "percentile": "0.972970000"
                 },
                 "location": {
-                    "lat": -8.546538352966309,
-                    "lng": 81.45346236228943,
+                    "lat": 21.874733924865723,
+                    "lng": -8.125265836715698,
                     "country": "Unknown"
                 }
             }
@@ -10610,7 +12042,7 @@
                 ],
                 "epss": {
                     "epss": "0.013430000",
-                    "percentile": "0.712900000"
+                    "percentile": "0.713320000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -11953,1009 +13385,46 @@
                     "percentile": "0.996440000"
                 },
                 "location": {
-                    "lat": -8.546526670455933,
-                    "lng": 81.45347356796265,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-76519",
-                "sourceIdentifier": "psirt@cisco.com",
-                "published": "2026-10-14T17:19:10.747",
-                "lastModified": "2026-10-15T13:47:19.470",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Cisco",
-                                "product": "Cisco Secure Email",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "14.0.0-698",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.5.1-277",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.0.0-392",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14.2.0-620",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.0.5-007",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "13.5.4-038",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14.2.1-020",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "14.3.0-032",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.0-104",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.1-030",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.5.0-048",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.5.1-055",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.5.2-018",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.0-050",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.3-002",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.0-054",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.5.3-022",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.1-017",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.5.4-012",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.4-016",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "15.0.5-016",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.2-112",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "16.0.3-044",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "psirt@cisco.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-14T00:00:00+00:00",
-                                "id": "CVE-2026-76519",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-14",
-                "cisaActionDue": "2026-10-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "psirt@cisco.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-23"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "15.0",
-                                        "versionEndExcluding": "15.5.5-014",
-                                        "matchCriteriaId": "652A6E01-3966-4EB3-AF8C-59D8FD64012F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "16.0",
-                                        "versionEndExcluding": "16.5.0-780",
-                                        "matchCriteriaId": "48814B81-D798-4DAA-B8B5-6956CB5B34C9"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c100v:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5B6FBC8A-8187-4903-B786-6CF341C142B5"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c300v:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "68864429-9730-43E9-96C3-20B9035BB291"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c600v:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B52D8B2B-E9AE-4B02-87BD-9CF9FA95906A"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c195:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7B1322B8-1CF9-4B17-9A58-38788051ED4F"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c395:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "139A640B-1957-4953-AA88-9D373A5152D1"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c695:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F08EA2AD-618B-4834-A52D-73F6A4502DF1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp",
-                        "source": "psirt@cisco.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.021520000",
-                    "percentile": "0.821010000"
-                },
-                "location": {
-                    "lat": 37.4084,
-                    "lng": -121.954,
-                    "country": "USA"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-105133",
-                "sourceIdentifier": "cna@vuldb.com",
-                "published": "2026-10-04T07:16:33.087",
-                "lastModified": "2026-10-26T18:07:09.000",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability was detected in Ahsay AhsayCBS up to 9.15.2.69/10.3.4.44. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 9.15.2.70 and 10.3.4.45 is able to mitigate this issue. It is recommended to upgrade the affected component. The initial patch did not fix the security vulnerability properly. An update of the CVE entry to reflect this became necessary."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cna@vuldb.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Ahsay",
-                                "product": "AhsayCBS",
-                                "cpes": [
-                                    "cpe:2.3:a:ahsay:ahsaycbs:*:*:*:*:*:*:*:*"
-                                ],
-                                "modules": [
-                                    "API"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "9.15.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.11",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.12",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.13",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.14",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.15",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.16",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.17",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.18",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.19",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.20",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.21",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.22",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.23",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.24",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.25",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.26",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.27",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.28",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.29",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.30",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.31",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.32",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.33",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.34",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.35",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.36",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.37",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.38",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.39",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.40",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.41",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.42",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.43",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.44",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.45",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.46",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.47",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.48",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.49",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.50",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.51",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.52",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.53",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.54",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.55",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.56",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.57",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.58",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.59",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.60",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.61",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.62",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.63",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.64",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.65",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.66",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.67",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.68",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.69",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.11",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.12",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.13",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.14",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.15",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.16",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.17",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.18",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.19",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.20",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.21",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.22",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.23",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.24",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.25",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.26",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.27",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.28",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.29",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.30",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.31",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.32",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.33",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.34",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.35",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.36",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.37",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.38",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.39",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.40",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.41",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.42",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.43",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.44",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.70",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "10.3.4.45",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 6.9,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "LOW",
-                                "vulnIntegrityImpact": "LOW",
-                                "vulnAvailabilityImpact": "LOW",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-                                "baseScore": 7.3,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "LOW",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "LOW"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.4
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                                "baseScore": 7.5,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "LOW",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "PARTIAL",
-                                "integrityImpact": "PARTIAL",
-                                "availabilityImpact": "PARTIAL"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 10.0,
-                            "impactScore": 6.4,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": false
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-14T00:00:00+00:00",
-                                "id": "CVE-2026-105133",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-14",
-                "cisaActionDue": "2026-10-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Ahsay AhsayCBS Improper Authentication Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cna@vuldb.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-287"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "9.15.2.70",
-                                        "matchCriteriaId": "D6A20B7D-F0A0-45EC-B5BC-C3CDE88FE850"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.1.0",
-                                        "versionEndExcluding": "10.3.4.45",
-                                        "matchCriteriaId": "20845190-89C7-44CE-A749-495EB194808C"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://vuldb.com/cve/CVE-2026-105133",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/submit/942688",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/vuln/413350",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/vuln/413350/cti",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Permissions Required",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.huntress.com/blog/ahsaycbs-flaws-exploit",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105133",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.794700000",
-                    "percentile": "0.996020000"
-                },
-                "location": {
-                    "lat": -8.54651951789856,
-                    "lng": 81.45348072052002,
+                    "lat": 21.874744176864624,
+                    "lng": -8.125255584716797,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-97229",
+            "vendorProject": "GitLab",
+            "product": "Community Edition and Enterprise Edition",
+            "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+            "dateAdded": "2026-10-29",
+            "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-01",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "Other products can potentially be affected by the same underlying Ruby/Onigmo Integer Overflow issue in CI/CD Regular Expression Compiler. For more information please see: https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves ; https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+            "cwes": [
+                "CWE-190"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-76418",
+            "vendorProject": "Cisco",
+            "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+            "vulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+            "dateAdded": "2026-10-29",
+            "shortDescription": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-01",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+            "cwes": [
+                "CWE-690"
+            ]
+        },
         {
             "cveID": "CVE-2026-41709",
             "vendorProject": "Broadcom",
@@ -40924,7 +41393,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-29T17:46:32.462371",
+    "last_updated": "2026-10-30T17:27:08.237286",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
