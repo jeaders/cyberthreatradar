@@ -2,11 +2,189 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-111357",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-10-15T21:17:13.190",
+                "lastModified": "2026-10-31T04:18:16.040",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Ivanti Connect Secure 22.8R2.4 mishandles the manner in which the dsinvoked broker trusts DSCache configuration data, leading to privilege escalation to root, as exploited in the wild in October 2026."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Ivanti",
+                                "product": "Connect Secure",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "22.8R2.4",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.0,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.0,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-10-15T00:00:00+00:00",
+                                "id": "CVE-2026-111357",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-30",
+                "cisaActionDue": "2026-11-02",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-829"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.1.0.0",
+                                        "versionEndExcluding": "25.1.1.3",
+                                        "matchCriteriaId": "B04FDDB3-6879-4C9B-AB2D-6A54884797E0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "56FEC223-8FF7-4A05-9577-CFFE0AA6526C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5569D323-6ADF-4B16-822D-FBA6760356C3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF4D400F-49DA-4C5F-8F63-5A15738360AE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9CA7EF35-D0BC-4714-A38A-91660BE1BA55"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F22EC396-A447-4175-8A30-C8DC10ACFFE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8B173211-BFCF-40E7-8651-4E8C4CEFAFFF"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111357",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005330000",
+                    "percentile": "0.450290000"
+                },
+                "location": {
+                    "lat": 40.5247,
+                    "lng": -111.8638,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-97229",
                 "sourceIdentifier": "cve@gitlab.com",
                 "published": "2026-10-13T02:17:00.840",
-                "lastModified": "2026-10-30T10:36:26.950",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-10-31T00:16:52.007",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -197,6 +375,14 @@
                         ]
                     },
                     {
+                        "url": "https://github.com/rapid7/metasploit-framework/pull/22017",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                    },
+                    {
+                        "url": "https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
@@ -205,12 +391,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.265690000",
-                    "percentile": "0.980150000"
+                    "epss": "0.273000000",
+                    "percentile": "0.980600000"
                 },
                 "location": {
-                    "lat": 21.874659776687622,
-                    "lng": -8.125335693359375,
+                    "lat": -9.053561925888062,
+                    "lng": -159.05355715751648,
                     "country": "Unknown"
                 }
             }
@@ -1279,8 +1465,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.009100000",
-                    "percentile": "0.599490000"
+                    "epss": "0.008210000",
+                    "percentile": "0.573060000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1646,7 +1832,7 @@
                 ],
                 "epss": {
                     "epss": "0.006890000",
-                    "percentile": "0.527180000"
+                    "percentile": "0.527560000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -3363,7 +3549,7 @@
                 ],
                 "epss": {
                     "epss": "0.161300000",
-                    "percentile": "0.969230000"
+                    "percentile": "0.969270000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4478,7 +4664,7 @@
                 ],
                 "epss": {
                     "epss": "0.445790000",
-                    "percentile": "0.987670000"
+                    "percentile": "0.987690000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -4492,8 +4678,8 @@
                 "id": "CVE-2026-111497",
                 "sourceIdentifier": "cve-coordination@google.com",
                 "published": "2026-10-22T14:17:37.190",
-                "lastModified": "2026-10-30T11:17:32.020",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-10-30T20:30:11.670",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -4537,6 +4723,110 @@
                     {
                         "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
                         "affectedData": [
+                            {
+                                "vendor": "Siemens",
+                                "product": "Heliox Dual Port 60kW",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Heliox Flex Pro",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SICHARGE FLEX",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "SICHARGE UC",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Sifinity Go",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Sifinity Setup",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "VersiCharge AC Series",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "VersiCloud",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
                             {
                                 "vendor": "Siemens",
                                 "product": "Cloud Connector Configurator",
@@ -5156,6 +5446,83 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:common_configurator:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1F93AD0A-C29E-4FA6-A18B-1F0D03CC900C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:data_flow_monitoring:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "508960FA-9D4A-4D2A-AAD7-7B7F4F0A7718"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:edge_opc_ua_server_configurator:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "13D7B958-EEB6-422A-9C04-5DE59EC9CA11"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:flow_creator_configurator:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C869C4D8-EF92-4256-8347-119B413A5554"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:industrial_edge_cloud_connector_configurator:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "689172E8-3F11-4E87-852E-846F583D2E4F"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:industrial_edge_databus_configurator:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B2A6C3C9-3BC3-434B-92C0-5A4B3CC1E30C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:industrial_edge_hub:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "70BA5718-0A9F-4B7D-9175-D6719B795363"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:industrial_edge_management_cloud:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4EA7E869-9428-4D5E-95C0-F19B6BC1BFA9"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -5280,12 +5647,25 @@
                         ]
                     },
                     {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-898633.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://ellio.tech/en/blog/node2shell-cve-2026-111497-rce-on-stock-nodejs-builds/",
@@ -5318,8 +5698,8 @@
                 "id": "CVE-2026-109618",
                 "sourceIdentifier": "security@php.net",
                 "published": "2026-10-21T14:17:09.357",
-                "lastModified": "2026-10-29T17:30:09.610",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-10-30T19:18:07.373",
+                "vulnStatus": "Undergoing Analysis",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -5374,7 +5754,709 @@
                         "affectedData": [
                             {
                                 "vendor": "Siemens",
+                                "product": "AX4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "CADRA",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Capital",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Designcenter",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Designcenter X",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "DFMExpress",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "HyperLynx",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Insights Hub",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Connect Electronics",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Connect MOM",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Core",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Foundation",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Pharma",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Intelligence",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Intra Plant Logistics",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Quality",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter RDnL",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter X",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Pro Essentials",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Pro Student Edition",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Professional",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Professional - XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Standard - XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Standard & Standard Plus",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Polarion",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "QuadView",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
                                 "product": "RUGGEDCOM APE1808",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Flomaster",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Flux",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Simlab",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Solid Edge",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Solid Edge",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Supply Chain Suite",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter Product Cost Management",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter Visualization",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Tecnomatix Plant Simulation",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "TestWay",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Valor NPI",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xcargo",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Designer",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Enterprise",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Enterprise XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition IC Packaging",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Layout Browser",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "AMIS TS",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "blueplanet 360 NX3 M6 WM OD IISX",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "blueplanet 360 NX3 M6 WM OD IISX - S",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Energy Engage V2.0SP9",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Energy Engage V3.1SP1",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 7",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power TG",
                                 "defaultStatus": "unknown",
                                 "versions": [
                                     {
@@ -7217,6 +8299,14 @@
                         ]
                     },
                     {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
                         "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
                         "tags": [
@@ -7250,8 +8340,8 @@
                     "percentile": "0.999980000"
                 },
                 "location": {
-                    "lat": 21.874694108963013,
-                    "lng": -8.125304937362671,
+                    "lat": -9.053533554077148,
+                    "lng": -159.05353260040283,
                     "country": "Unknown"
                 }
             }
@@ -7261,8 +8351,8 @@
                 "id": "CVE-2026-109619",
                 "sourceIdentifier": "security@php.net",
                 "published": "2026-10-21T14:17:09.823",
-                "lastModified": "2026-10-28T04:17:54.320",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-10-30T19:18:07.753",
+                "vulnStatus": "Undergoing Analysis",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -7317,7 +8407,722 @@
                         "affectedData": [
                             {
                                 "vendor": "Siemens",
+                                "product": "AX4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "CADRA",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Capital",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Designcenter",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Designcenter X",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "DFMExpress",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "HyperLynx",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Insights Hub",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Connect Electronics",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Connect MOM",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Core",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Foundation",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Execution Pharma",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Intelligence",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Intra Plant Logistics",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter Quality",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter RDnL",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Opcenter X",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Pro Essentials",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Pro Student Edition",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Professional",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Professional - XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Standard - XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "PADS Standard & Standard Plus",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Polarion",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "QuadView",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
                                 "product": "RUGGEDCOM APE1808",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Flomaster",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Flux",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Simcenter Simlab",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Solid Edge",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Solid Edge",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Supply Chain Suite",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter Product Cost Management",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Teamcenter Visualization",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Tecnomatix Plant Simulation",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "TestWay",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Valor NPI",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xcargo",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Designer",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Enterprise",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Enterprise XCR",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition IC Packaging",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Xpedition Layout Browser",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "AMIS TS",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "blueplanet 360 NX3 M6 WM OD IISX",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "blueplanet 360 NX3 M6 WM OD IISX - S",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Energy Engage V2.0SP9",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Energy Engage V3.1SP1",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 3",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 4",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power 7",
+                                "defaultStatus": "unknown",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "*",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Siemens",
+                                "product": "Spectrum Power TG",
                                 "defaultStatus": "unknown",
                                 "versions": [
                                     {
@@ -9225,6 +11030,14 @@
                         ]
                     },
                     {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
+                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                    },
+                    {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
                         "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
                         "tags": [
@@ -9258,8 +11071,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": 21.874699115753174,
-                    "lng": -8.125300645828247,
+                    "lat": -9.053528547286987,
+                    "lng": -159.0535283088684,
                     "country": "Unknown"
                 }
             }
@@ -9475,11 +11288,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.635410000"
+                    "percentile": "0.635830000"
                 },
                 "location": {
-                    "lat": 21.874703407287598,
-                    "lng": -8.125296354293823,
+                    "lat": -9.0535249710083,
+                    "lng": -159.05352473258972,
                     "country": "Unknown"
                 }
             }
@@ -9670,11 +11483,11 @@
                 ],
                 "epss": {
                     "epss": "0.733070000",
-                    "percentile": "0.994600000"
+                    "percentile": "0.994610000"
                 },
                 "location": {
-                    "lat": 21.8747079372406,
-                    "lng": -8.12529182434082,
+                    "lat": -9.053520917892456,
+                    "lng": -159.05352067947388,
                     "country": "Unknown"
                 }
             }
@@ -10129,11 +11942,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.848770000"
+                    "percentile": "0.848980000"
                 },
                 "location": {
-                    "lat": 21.874711990356445,
-                    "lng": -8.125287771224976,
+                    "lat": -9.053516864776611,
+                    "lng": -159.05351662635803,
                     "country": "Unknown"
                 }
             }
@@ -10367,11 +12180,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.782790000"
+                    "percentile": "0.783050000"
                 },
                 "location": {
-                    "lat": 21.874716758728027,
-                    "lng": -8.125283241271973,
+                    "lat": -9.053513050079346,
+                    "lng": -159.05351281166077,
                     "country": "Unknown"
                 }
             }
@@ -10598,11 +12411,11 @@
                 ],
                 "epss": {
                     "epss": "0.016370000",
-                    "percentile": "0.763100000"
+                    "percentile": "0.763400000"
                 },
                 "location": {
-                    "lat": 21.874720096588135,
-                    "lng": -8.125279664993286,
+                    "lat": -9.05350947380066,
+                    "lng": -159.05350923538208,
                     "country": "Unknown"
                 }
             }
@@ -10829,11 +12642,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.801950000"
+                    "percentile": "0.802200000"
                 },
                 "location": {
-                    "lat": 21.874722957611084,
-                    "lng": -8.125276565551758,
+                    "lat": -9.053506135940552,
+                    "lng": -159.05350589752197,
                     "country": "Unknown"
                 }
             }
@@ -11060,11 +12873,11 @@
                 ],
                 "epss": {
                     "epss": "0.018210000",
-                    "percentile": "0.787310000"
+                    "percentile": "0.787580000"
                 },
                 "location": {
-                    "lat": 21.87472677230835,
-                    "lng": -8.12527322769165,
+                    "lat": -9.053502798080444,
+                    "lng": -159.05350255966187,
                     "country": "Unknown"
                 }
             }
@@ -11254,11 +13067,11 @@
                 ],
                 "epss": {
                     "epss": "0.009670000",
-                    "percentile": "0.617100000"
+                    "percentile": "0.617540000"
                 },
                 "location": {
-                    "lat": 21.874730348587036,
-                    "lng": -8.125269651412964,
+                    "lat": -9.053499221801758,
+                    "lng": -159.05349898338318,
                     "country": "Unknown"
                 }
             }
@@ -11453,11 +13266,11 @@
                 ],
                 "epss": {
                     "epss": "0.189500000",
-                    "percentile": "0.972970000"
+                    "percentile": "0.973010000"
                 },
                 "location": {
-                    "lat": 21.874733924865723,
-                    "lng": -8.125265836715698,
+                    "lat": -9.05349588394165,
+                    "lng": -159.05349564552307,
                     "country": "Unknown"
                 }
             }
@@ -12042,7 +13855,7 @@
                 ],
                 "epss": {
                     "epss": "0.013430000",
-                    "percentile": "0.713320000"
+                    "percentile": "0.713690000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -12050,1349 +13863,43 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-21589",
-                "sourceIdentifier": "security@atlassian.com",
-                "published": "2026-10-05T22:16:58.423",
-                "lastModified": "2026-10-29T13:17:09.847",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "Esta es una vulnerabilidad en Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible y Fisheye. Esta vulnerabilidad de Acceso Arbitrario a Archivos permite a un atacante no autenticado acceder a archivos espec\u00edficos dentro del directorio ra\u00edz de la aplicaci\u00f3n web en las versiones afectadas. La explotaci\u00f3n requiere conocimiento previo del nombre y la ruta exactos del archivo objetivo; esta vulnerabilidad no permite a los atacantes enumerar o listar el contenido del directorio. En algunas configuraciones, puede haber archivos sensibles que la hacen altamente severa. Esta vulnerabilidad permite a un atacante remoto no autenticado acceder a archivos espec\u00edficos dentro del directorio ra\u00edz de la aplicaci\u00f3n web en las versiones afectadas. La vulnerabilidad debe abordarse para las versiones afectadas de:\n-- Bitbucket Data Center, introducida en la versi\u00f3n 4.6.0 o posteriores, con versiones corregidas: 9.4.26, 10.2.8, 10.5.1\n-- Confluence Data Center, introducida en la versi\u00f3n 5.10.0 o posteriores, con versiones corregidas: 9.2.26, 10.2.19\n-- Crowd Data Center, introducida en la versi\u00f3n 2.11.0 o posteriores, con versiones corregidas: 6.3.7, 7.0.3, 7.1.7, 7.2.4\n-- Jira Software Data Center, introducida en la versi\u00f3n 7.1.0 o posteriores, con versiones corregidas: 9.12.40, 10.3.26, 11.3.12\n-- Jira Service Management Data Center, introducida en la versi\u00f3n 3.1.0 o posteriores, con versiones corregidas: 5.12.40, 10.3.26, 11.3.12\n-- Bamboo Data Center, versiones 7.0.1 o posteriores, con versiones corregidas: 10.2.24, 12.1.12\n-- Crucible, con versiones corregidas: 4.9.15\n-- Fisheye, con versi\u00f3n corregida: 4.9.15\n-- La explotaci\u00f3n requiere conocimiento previo del nombre y la ruta exactos del archivo objetivo. La vulnerabilidad no incluye la capacidad de enumerar o listar el contenido del directorio."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@atlassian.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Bamboo Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.24 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 12.1.12 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Bitbucket Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.8 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.5.1 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.4.26 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Confluence Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.2.19 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.2.26 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Crowd Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.2.4 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.1.7 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 7.0.3 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 6.3.7 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Crucible Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 4.9.15 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Fisheye Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 4.9.15 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Jira Service Management Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 11.3.12 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.3.26 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 5.12.40 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "Atlassian",
-                                "product": "Jira Software Data Center",
-                                "versions": [
-                                    {
-                                        "version": "All other versions",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "Patch version 11.3.12 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 10.3.26 and later",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "Patch version 9.12.40 and later",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "security@atlassian.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "NONE",
-                                "vulnAvailabilityImpact": "NONE",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-                                "baseScore": 7.5,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "NONE",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 3.6
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-16T03:56:41.309201Z",
-                                "id": "CVE-2026-21589",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-15",
-                "cisaActionDue": "2026-10-18",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-552"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.17.0",
-                                        "versionEndExcluding": "9.4.26",
-                                        "matchCriteriaId": "7F95E74C-C2B5-4527-9282-A9C1E6FE2770"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.5.0",
-                                        "versionEndExcluding": "10.2.8",
-                                        "matchCriteriaId": "4489C580-A184-45F2-945A-74919B30770E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.3.0",
-                                        "versionEndExcluding": "10.5.1",
-                                        "matchCriteriaId": "FC3E298E-8B85-4EE6-B5BD-B9D2ECE4ACF4"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bitbucket_server:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "4.6.0",
-                                        "versionEndIncluding": "8.14.6",
-                                        "matchCriteriaId": "6C615C3F-17A8-4458-88C1-342B973C0FB1"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "5.10.0",
-                                        "versionEndExcluding": "9.2.26",
-                                        "matchCriteriaId": "E935B10B-F918-41C0-890D-DB9058BC503B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.3.0",
-                                        "versionEndExcluding": "10.2.19",
-                                        "matchCriteriaId": "8ABC2EDD-401B-4065-98CA-1D6AFE8C48E7"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "2.11.0",
-                                        "versionEndExcluding": "6.3.7",
-                                        "matchCriteriaId": "D7704951-4EDF-4ADD-BF1F-0E74302B4D15"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0.0",
-                                        "versionEndExcluding": "7.0.3",
-                                        "matchCriteriaId": "0C6C0576-C6B8-4B7B-A3AF-2F49C07CD087"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.1.0",
-                                        "versionEndExcluding": "7.1.7",
-                                        "matchCriteriaId": "2DDBD17E-7209-4402-81E0-C3A77D9BADC6"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.2.0",
-                                        "versionEndExcluding": "7.2.4",
-                                        "matchCriteriaId": "A00677AE-D4A9-486C-8D5B-FAC4CD68F17E"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.1.0",
-                                        "versionEndExcluding": "9.12.40",
-                                        "matchCriteriaId": "8C2734C1-0626-4C2B-8E7E-1E5744931699"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.13.0",
-                                        "versionEndExcluding": "10.3.26",
-                                        "matchCriteriaId": "13B7AADD-EE93-4BE5-A12A-FC69F024276D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.4.0",
-                                        "versionEndExcluding": "11.3.12",
-                                        "matchCriteriaId": "585E5684-41A5-4882-BBE6-8CC388162DC6"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_desk:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "3.1.0",
-                                        "versionEndIncluding": "4.13.27",
-                                        "matchCriteriaId": "96833142-C39A-4BEF-B636-E013C5FBF1E7"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "4.14.0",
-                                        "versionEndExcluding": "5.12.40",
-                                        "matchCriteriaId": "B53D3DC2-160F-4A58-A371-AEE4A4D2EBCA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "5.13.0",
-                                        "versionEndExcluding": "10.3.26",
-                                        "matchCriteriaId": "EAB2D1C1-8AF2-49EE-AD67-5B489BD4BD6A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-                                        "versionStartIncluding": "10.4.0",
-                                        "versionEndExcluding": "11.3.12",
-                                        "matchCriteriaId": "7166EDE8-5D90-4B90-B770-0DBD581D10E9"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "7.0.1",
-                                        "versionEndExcluding": "10.2.24",
-                                        "matchCriteriaId": "9E8447C5-5177-4BC0-86E5-CCF9339B6C74"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "11.0.0",
-                                        "versionEndExcluding": "12.1.12",
-                                        "matchCriteriaId": "7355838B-DA4B-4399-BA98-D97CBA4F45A0"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:crucible:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.9.15",
-                                        "matchCriteriaId": "157CCC63-800B-46BD-AE83-9F8C8CC481FE"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:atlassian:fisheye:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.9.15",
-                                        "matchCriteriaId": "74B7DE64-7D30-4076-983A-D9814AC90B3A"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://jira.atlassian.com/browse/BAM-26567",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/BSERV-20604",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/CONFSERVER-104488",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/CRUC-8741",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/CWD-6610",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/FE-7583",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/JRASERVER-79546",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://jira.atlassian.com/browse/JSDSERVER-16809",
-                        "source": "security@atlassian.com",
-                        "tags": [
-                            "Issue Tracking",
-                            "Mitigation",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21589",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.994770000",
-                    "percentile": "0.999430000"
-                },
-                "location": {
-                    "lat": -33.8688,
-                    "lng": 151.2093,
-                    "country": "Australia"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-105134",
-                "sourceIdentifier": "cna@vuldb.com",
-                "published": "2026-10-04T07:16:33.480",
-                "lastModified": "2026-10-26T18:06:57.930",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A flaw has been found in Ahsay AhsayCBS up to 9.15.2.69/10.3.4.44. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 9.15.2.70 and 10.3.4.45 is able to resolve this issue. Upgrading the affected component is advised. The initial patch did not fix the security vulnerability properly. An update of the CVE entry to reflect this became necessary."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cna@vuldb.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Ahsay",
-                                "product": "AhsayCBS",
-                                "cpes": [
-                                    "cpe:2.3:a:ahsay:ahsaycbs:*:*:*:*:*:*:*:*"
-                                ],
-                                "modules": [
-                                    "Replication Receiver"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "9.15.2.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.11",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.12",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.13",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.14",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.15",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.16",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.17",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.18",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.19",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.20",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.21",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.22",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.23",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.24",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.25",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.26",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.27",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.28",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.29",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.30",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.31",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.32",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.33",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.34",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.35",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.36",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.37",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.38",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.39",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.40",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.41",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.42",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.43",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.44",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.45",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.46",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.47",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.48",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.49",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.50",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.51",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.52",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.53",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.54",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.55",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.56",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.57",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.58",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.59",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.60",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.61",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.62",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.63",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.64",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.65",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.66",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.67",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.68",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.69",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.0",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.1",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.2",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.3",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.4",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.5",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.6",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.7",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.8",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.9",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.10",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.11",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.12",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.13",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.14",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.15",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.16",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.17",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.18",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.19",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.20",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.21",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.22",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.23",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.24",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.25",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.26",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.27",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.28",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.29",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.30",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.31",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.32",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.33",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.34",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.35",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.36",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.37",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.38",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.39",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.40",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.41",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.42",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.43",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "10.3.4.44",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.15.2.70",
-                                        "status": "unaffected"
-                                    },
-                                    {
-                                        "version": "10.3.4.45",
-                                        "status": "unaffected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "HIGH",
-                                "subIntegrityImpact": "HIGH",
-                                "subAvailabilityImpact": "HIGH",
-                                "exploitMaturity": "ATTACKED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-                                "baseScore": 10.0,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "CHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 6.0
-                        }
-                    ],
-                    "cvssMetricV2": [
-                        {
-                            "source": "cna@vuldb.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "2.0",
-                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
-                                "baseScore": 10.0,
-                                "accessVector": "NETWORK",
-                                "accessComplexity": "LOW",
-                                "authentication": "NONE",
-                                "confidentialityImpact": "COMPLETE",
-                                "integrityImpact": "COMPLETE",
-                                "availabilityImpact": "COMPLETE"
-                            },
-                            "baseSeverity": "HIGH",
-                            "exploitabilityScore": 10.0,
-                            "impactScore": 10.0,
-                            "acInsufInfo": false,
-                            "obtainAllPrivilege": false,
-                            "obtainUserPrivilege": false,
-                            "obtainOtherPrivilege": false,
-                            "userInteractionRequired": false
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-14T00:00:00+00:00",
-                                "id": "CVE-2026-105134",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-14",
-                "cisaActionDue": "2026-10-17",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Ahsay AhsayCBS Command Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cna@vuldb.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-77"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-78"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "9.15.2.70",
-                                        "matchCriteriaId": "D6A20B7D-F0A0-45EC-B5BC-C3CDE88FE850"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "10.1.0",
-                                        "versionEndExcluding": "10.3.4.45",
-                                        "matchCriteriaId": "20845190-89C7-44CE-A749-495EB194808C"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://vuldb.com/cve/CVE-2026-105134",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/submit/942743",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/vuln/413351",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Permissions Required",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://vuldb.com/vuln/413351/cti",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Permissions Required",
-                            "VDB Entry"
-                        ]
-                    },
-                    {
-                        "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.huntress.com/blog/ahsaycbs-flaws-exploit",
-                        "source": "cna@vuldb.com",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105134",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.817630000",
-                    "percentile": "0.996440000"
-                },
-                "location": {
-                    "lat": 21.874744176864624,
-                    "lng": -8.125255584716797,
-                    "country": "Unknown"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-118527",
+            "vendorProject": "Ivanti",
+            "product": "Connect Secure",
+            "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+            "dateAdded": "2026-10-30",
+            "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-13",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+            "cwes": [
+                "CWE-340"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-111357",
+            "vendorProject": "Ivanti",
+            "product": "Connect Secure",
+            "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+            "dateAdded": "2026-10-30",
+            "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-02",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US ; https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111357",
+            "cwes": [
+                "CWE-306",
+                "CWE-862",
+                "CWE-345"
+            ]
+        },
         {
             "cveID": "CVE-2026-97229",
             "vendorProject": "GitLab",
@@ -41393,7 +41900,7 @@
             ]
         }
     ],
-    "last_updated": "2026-10-30T17:27:08.237286",
+    "last_updated": "2026-10-31T16:30:31.577299",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
