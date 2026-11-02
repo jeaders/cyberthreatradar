@@ -169,7 +169,7 @@
                 ],
                 "epss": {
                     "epss": "0.005330000",
-                    "percentile": "0.450240000"
+                    "percentile": "0.450140000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -183,8 +183,8 @@
                 "id": "CVE-2026-97229",
                 "sourceIdentifier": "cve@gitlab.com",
                 "published": "2026-10-13T02:17:00.840",
-                "lastModified": "2026-10-31T00:16:52.007",
-                "vulnStatus": "Modified",
+                "lastModified": "2026-11-02T13:30:16.800",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -342,6 +342,37 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.3.0",
+                                        "versionEndExcluding": "3.3.13",
+                                        "matchCriteriaId": "822BFBA1-8011-481F-AB12-A4659A198702"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "3.4.0",
+                                        "versionEndExcluding": "3.4.12",
+                                        "matchCriteriaId": "74D2C27C-A166-48E7-ACCB-546BE5A232EC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "4.0.0",
+                                        "versionEndExcluding": "4.0.8",
+                                        "matchCriteriaId": "76DE6415-3A05-4233-805C-1F48CC6CA1D8"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -376,11 +407,18 @@
                     },
                     {
                         "url": "https://github.com/rapid7/metasploit-framework/pull/22017",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Issue Tracking",
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229",
@@ -392,11 +430,11 @@
                 ],
                 "epss": {
                     "epss": "0.273000000",
-                    "percentile": "0.980610000"
+                    "percentile": "0.980600000"
                 },
                 "location": {
-                    "lat": -14.732372522354126,
-                    "lng": -164.73236751556396,
+                    "lat": 6.252771377563477,
+                    "lng": -23.747223377227783,
                     "country": "Unknown"
                 }
             }
@@ -1466,7 +1504,7 @@
                 ],
                 "epss": {
                     "epss": "0.008210000",
-                    "percentile": "0.573070000"
+                    "percentile": "0.572990000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1832,7 +1870,7 @@
                 ],
                 "epss": {
                     "epss": "0.006890000",
-                    "percentile": "0.527500000"
+                    "percentile": "0.527380000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -3549,7 +3587,7 @@
                 ],
                 "epss": {
                     "epss": "0.161300000",
-                    "percentile": "0.969270000"
+                    "percentile": "0.969280000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -5684,7 +5722,7 @@
                 ],
                 "epss": {
                     "epss": "0.826410000",
-                    "percentile": "0.996660000"
+                    "percentile": "0.996670000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -5698,8 +5736,8 @@
                 "id": "CVE-2026-109618",
                 "sourceIdentifier": "security@php.net",
                 "published": "2026-10-21T14:17:09.357",
-                "lastModified": "2026-10-30T19:18:07.373",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-11-02T14:52:09.430",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -8257,6 +8295,120 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F595238B-DADB-47C6-A080-0ED08C2AD8AB"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3B340780-E6A9-4FB0-A131-B177CC1F0C1E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F087AAC6-F14D-4C22-8437-2372677D8BDE"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B7A6B581-C514-4E07-ABCD-FDE1399C11B7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:energy_engage:2.0:service_pack9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D09A129E-0EFD-46D1-9991-66803604FC5E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:energy_engage:3.1:service_pack1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3C71DADE-DA90-43B8-ADA7-1A396A7034E7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_4:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3D40B786-1DB0-444A-86F5-C4C8785E1DE7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_7:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "24683BF6-BEE0-48E6-92C6-89B20569FE92"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_tg:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C257A2CE-2F13-491D-A993-0C4F19F8720E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:amis_ts:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "99E7DE5D-421E-4537-834B-E76E370DA202"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -8300,11 +8452,17 @@
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
@@ -8340,8 +8498,8 @@
                     "percentile": "0.999980000"
                 },
                 "location": {
-                    "lat": -14.732338190078735,
-                    "lng": -164.73233699798584,
+                    "lat": 6.252806901931763,
+                    "lng": -23.747191905975342,
                     "country": "Unknown"
                 }
             }
@@ -8351,8 +8509,8 @@
                 "id": "CVE-2026-109619",
                 "sourceIdentifier": "security@php.net",
                 "published": "2026-10-21T14:17:09.823",
-                "lastModified": "2026-10-30T19:18:07.753",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-11-02T14:52:13.527",
+                "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -10923,6 +11081,125 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:amis_ts:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "99E7DE5D-421E-4537-834B-E76E370DA202"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F087AAC6-F14D-4C22-8437-2372677D8BDE"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B7A6B581-C514-4E07-ABCD-FDE1399C11B7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:energy_engage:2.0:service_pack9:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D09A129E-0EFD-46D1-9991-66803604FC5E"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:energy_engage:3.1:service_pack1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3C71DADE-DA90-43B8-ADA7-1A396A7034E7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_3:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5DB3EB0B-E784-4CC2-A055-AC13F8E84FC8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_4:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3D40B786-1DB0-444A-86F5-C4C8785E1DE7"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_7:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "24683BF6-BEE0-48E6-92C6-89B20569FE92"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:siemens:spectrum_power_tg:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C257A2CE-2F13-491D-A993-0C4F19F8720E"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx_firmware:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F595238B-DADB-47C6-A080-0ED08C2AD8AB"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3B340780-E6A9-4FB0-A131-B177CC1F0C1E"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "references": [
@@ -11031,11 +11308,17 @@
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
-                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+                        "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
                     },
                     {
                         "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
@@ -11071,8 +11354,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": -14.732332229614258,
-                    "lng": -164.73233199119568,
+                    "lat": 6.252813339233398,
+                    "lng": -23.747186422348022,
                     "country": "Unknown"
                 }
             }
@@ -11288,11 +11571,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.635790000"
+                    "percentile": "0.635730000"
                 },
                 "location": {
-                    "lat": -14.732326745986938,
-                    "lng": -164.73232650756836,
+                    "lat": 6.2528181076049805,
+                    "lng": -23.74718165397644,
                     "country": "Unknown"
                 }
             }
@@ -11486,8 +11769,8 @@
                     "percentile": "0.994610000"
                 },
                 "location": {
-                    "lat": -14.732321739196777,
-                    "lng": -164.7323215007782,
+                    "lat": 6.2528235912323,
+                    "lng": -23.7471764087677,
                     "country": "Unknown"
                 }
             }
@@ -11942,11 +12225,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.848980000"
+                    "percentile": "0.848970000"
                 },
                 "location": {
-                    "lat": -14.732316732406616,
-                    "lng": -164.73231649398804,
+                    "lat": 6.252828359603882,
+                    "lng": -23.747171640396118,
                     "country": "Unknown"
                 }
             }
@@ -12180,11 +12463,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.783040000"
+                    "percentile": "0.783030000"
                 },
                 "location": {
-                    "lat": -14.732311964035034,
-                    "lng": -164.73231172561646,
+                    "lat": 6.252832651138306,
+                    "lng": -23.747166872024536,
                     "country": "Unknown"
                 }
             }
@@ -12411,11 +12694,11 @@
                 ],
                 "epss": {
                     "epss": "0.016370000",
-                    "percentile": "0.763400000"
+                    "percentile": "0.763370000"
                 },
                 "location": {
-                    "lat": -14.732307434082031,
-                    "lng": -164.73230719566345,
+                    "lat": 6.252837181091309,
+                    "lng": -23.747162580490112,
                     "country": "Unknown"
                 }
             }
@@ -12642,11 +12925,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.802210000"
+                    "percentile": "0.802180000"
                 },
                 "location": {
-                    "lat": -14.732303142547607,
-                    "lng": -164.73230290412903,
+                    "lat": 6.252840995788574,
+                    "lng": -23.747158765792847,
                     "country": "Unknown"
                 }
             }
@@ -12876,8 +13159,8 @@
                     "percentile": "0.787590000"
                 },
                 "location": {
-                    "lat": -14.732299089431763,
-                    "lng": -164.73229908943176,
+                    "lat": 6.252845287322998,
+                    "lng": -23.747154712677002,
                     "country": "Unknown"
                 }
             }
@@ -13067,11 +13350,11 @@
                 ],
                 "epss": {
                     "epss": "0.009670000",
-                    "percentile": "0.617540000"
+                    "percentile": "0.617490000"
                 },
                 "location": {
-                    "lat": -14.732294082641602,
-                    "lng": -164.73229384422302,
+                    "lat": 6.252849340438843,
+                    "lng": -23.747150659561157,
                     "country": "Unknown"
                 }
             }
@@ -13266,11 +13549,11 @@
                 ],
                 "epss": {
                     "epss": "0.189500000",
-                    "percentile": "0.973010000"
+                    "percentile": "0.972990000"
                 },
                 "location": {
-                    "lat": -14.732289552688599,
-                    "lng": -164.73228931427002,
+                    "lat": 6.252853155136108,
+                    "lng": -23.747146606445312,
                     "country": "Unknown"
                 }
             }
@@ -13855,7 +14138,7 @@
                 ],
                 "epss": {
                     "epss": "0.013430000",
-                    "percentile": "0.713690000"
+                    "percentile": "0.713590000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -41900,7 +42183,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-01T17:24:27.602967",
+    "last_updated": "2026-11-02T21:02:51.719620",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
