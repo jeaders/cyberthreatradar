@@ -2,6 +2,176 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-118527",
+                "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                "published": "2026-11-03T15:17:24.920",
+                "lastModified": "2026-11-03T17:48:12.873",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Use of predictable filenames in Ivanti Connect Secure before versions 25.1.1.3 and 22.8R2.6 allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                        "affectedData": [
+                            {
+                                "vendor": "Ivanti",
+                                "product": "Connect Secure",
+                                "defaultStatus": "affected",
+                                "versions": [
+                                    {
+                                        "version": "25.1.1.3",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "22.8R2.6",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                                "baseScore": 4.3,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-03T15:32:15.250213Z",
+                                "id": "CVE-2026-118527",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-10-30",
+                "cisaActionDue": "2026-11-13",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-340"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "25.1.0.0",
+                                        "versionEndExcluding": "25.1.1.3",
+                                        "matchCriteriaId": "B04FDDB3-6879-4C9B-AB2D-6A54884797E0"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "56FEC223-8FF7-4A05-9577-CFFE0AA6526C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.1:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5569D323-6ADF-4B16-822D-FBA6760356C3"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.2:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FF4D400F-49DA-4C5F-8F63-5A15738360AE"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.3:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9CA7EF35-D0BC-4714-A38A-91660BE1BA55"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.4:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F22EC396-A447-4175-8A30-C8DC10ACFFE9"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.5:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8B173211-BFCF-40E7-8651-4E8C4CEFAFFF"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US",
+                        "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-118527",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "location": {
+                    "lat": 40.5247,
+                    "lng": -111.8638,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-111357",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-10-15T21:17:13.190",
@@ -169,7 +339,7 @@
                 ],
                 "epss": {
                     "epss": "0.005330000",
-                    "percentile": "0.450140000"
+                    "percentile": "0.450640000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -429,12 +599,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.273000000",
-                    "percentile": "0.980600000"
+                    "epss": "0.276920000",
+                    "percentile": "0.980890000"
                 },
                 "location": {
-                    "lat": 6.252771377563477,
-                    "lng": -23.747223377227783,
+                    "lat": -13.679996013641357,
+                    "lng": -163.67999148368835,
                     "country": "Unknown"
                 }
             }
@@ -1504,7 +1674,7 @@
                 ],
                 "epss": {
                     "epss": "0.008210000",
-                    "percentile": "0.572990000"
+                    "percentile": "0.573420000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1870,7 +2040,7 @@
                 ],
                 "epss": {
                     "epss": "0.006890000",
-                    "percentile": "0.527380000"
+                    "percentile": "0.527830000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -3587,7 +3757,7 @@
                 ],
                 "epss": {
                     "epss": "0.161300000",
-                    "percentile": "0.969280000"
+                    "percentile": "0.969320000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -4702,7 +4872,7 @@
                 ],
                 "epss": {
                     "epss": "0.445790000",
-                    "percentile": "0.987690000"
+                    "percentile": "0.987700000"
                 },
                 "location": {
                     "lat": 37.3307,
@@ -8498,8 +8668,8 @@
                     "percentile": "0.999980000"
                 },
                 "location": {
-                    "lat": 6.252806901931763,
-                    "lng": -23.747191905975342,
+                    "lat": -13.67996883392334,
+                    "lng": -163.6799681186676,
                     "country": "Unknown"
                 }
             }
@@ -11354,8 +11524,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": 6.252813339233398,
-                    "lng": -23.747186422348022,
+                    "lat": -13.679964065551758,
+                    "lng": -163.67996382713318,
                     "country": "Unknown"
                 }
             }
@@ -11571,11 +11741,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.635730000"
+                    "percentile": "0.636140000"
                 },
                 "location": {
-                    "lat": 6.2528181076049805,
-                    "lng": -23.74718165397644,
+                    "lat": -13.679959535598755,
+                    "lng": -163.67995953559875,
                     "country": "Unknown"
                 }
             }
@@ -11766,11 +11936,11 @@
                 ],
                 "epss": {
                     "epss": "0.733070000",
-                    "percentile": "0.994610000"
+                    "percentile": "0.994620000"
                 },
                 "location": {
-                    "lat": 6.2528235912323,
-                    "lng": -23.7471764087677,
+                    "lat": -13.67995572090149,
+                    "lng": -163.6799557209015,
                     "country": "Unknown"
                 }
             }
@@ -12225,11 +12395,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.848970000"
+                    "percentile": "0.849170000"
                 },
                 "location": {
-                    "lat": 6.252828359603882,
-                    "lng": -23.747171640396118,
+                    "lat": -13.679951667785645,
+                    "lng": -163.67995166778564,
                     "country": "Unknown"
                 }
             }
@@ -12463,11 +12633,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.783030000"
+                    "percentile": "0.783280000"
                 },
                 "location": {
-                    "lat": 6.252832651138306,
-                    "lng": -23.747166872024536,
+                    "lat": -13.679948091506958,
+                    "lng": -163.67994785308838,
                     "country": "Unknown"
                 }
             }
@@ -12694,11 +12864,11 @@
                 ],
                 "epss": {
                     "epss": "0.016370000",
-                    "percentile": "0.763370000"
+                    "percentile": "0.763650000"
                 },
                 "location": {
-                    "lat": 6.252837181091309,
-                    "lng": -23.747162580490112,
+                    "lat": -13.679944515228271,
+                    "lng": -163.6799442768097,
                     "country": "Unknown"
                 }
             }
@@ -12925,11 +13095,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.802180000"
+                    "percentile": "0.802420000"
                 },
                 "location": {
-                    "lat": 6.252840995788574,
-                    "lng": -23.747158765792847,
+                    "lat": -13.679941177368164,
+                    "lng": -163.67994093894958,
                     "country": "Unknown"
                 }
             }
@@ -13155,12 +13325,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.018210000",
-                    "percentile": "0.787590000"
+                    "epss": "0.118860000",
+                    "percentile": "0.961070000"
                 },
                 "location": {
-                    "lat": 6.252845287322998,
-                    "lng": -23.747154712677002,
+                    "lat": -13.679937362670898,
+                    "lng": -163.67993712425232,
                     "country": "Unknown"
                 }
             }
@@ -13350,11 +13520,11 @@
                 ],
                 "epss": {
                     "epss": "0.009670000",
-                    "percentile": "0.617490000"
+                    "percentile": "0.617860000"
                 },
                 "location": {
-                    "lat": 6.252849340438843,
-                    "lng": -23.747150659561157,
+                    "lat": -13.679934024810791,
+                    "lng": -163.6799337863922,
                     "country": "Unknown"
                 }
             }
@@ -13549,11 +13719,11 @@
                 ],
                 "epss": {
                     "epss": "0.189500000",
-                    "percentile": "0.972990000"
+                    "percentile": "0.973040000"
                 },
                 "location": {
-                    "lat": 6.252853155136108,
-                    "lng": -23.747146606445312,
+                    "lat": -13.679930210113525,
+                    "lng": -163.67992997169495,
                     "country": "Unknown"
                 }
             }
@@ -14138,7 +14308,7 @@
                 ],
                 "epss": {
                     "epss": "0.013430000",
-                    "percentile": "0.713590000"
+                    "percentile": "0.713930000"
                 },
                 "location": {
                     "lat": 37.3752,
@@ -42183,7 +42353,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-02T21:02:51.719620",
+    "last_updated": "2026-11-03T18:48:23.001161",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
