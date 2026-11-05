@@ -2,6 +2,504 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2024-27834",
+                "sourceIdentifier": "product-security@apple.com",
+                "published": "2024-05-14T15:13:06.953",
+                "lastModified": "2026-11-05T12:56:20.313",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The issue was addressed with improved checks. This issue is fixed in Safari 17.5, iOS 16.7.8 and iPadOS 16.7.8, iOS 17.5 and iPadOS 17.5, macOS Sonoma 14.5, tvOS 17.5, watchOS 10.5. An attacker with arbitrary read and write capability may be able to bypass Pointer Authentication."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "El problema se solucion\u00f3 con controles mejorados. Este problema se solucion\u00f3 en iOS 17.5 y iPadOS 17.5, tvOS 17.5, Safari 17.5, watchOS 10.5, macOS Sonoma 14.5. Un atacante con capacidad de lectura y escritura arbitraria puede eludir la autenticaci\u00f3n de puntero."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "product-security@apple.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Apple",
+                                "product": "Safari",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "17.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Apple",
+                                "product": "iOS and iPadOS",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "16.7.8",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "0",
+                                        "lessThan": "17.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Apple",
+                                "product": "macOS",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "14.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Apple",
+                                "product": "tvOS",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "17.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Apple",
+                                "product": "watchOS",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "10.5",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 3.6
+                        },
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                                "baseScore": 5.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-04T00:00:00+00:00",
+                                "id": "CVE-2024-27834",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-04",
+                "cisaActionDue": "2026-11-18",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "NVD-CWE-noinfo"
+                            }
+                        ]
+                    },
+                    {
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-287"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:apple:safari:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "17.5",
+                                        "matchCriteriaId": "D80D1AA1-D37A-4ABD-87A0-2C3B12EDA955"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "16.7.8",
+                                        "matchCriteriaId": "732206AE-D798-41FB-8D91-F796820F912D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.0",
+                                        "versionEndExcluding": "17.5",
+                                        "matchCriteriaId": "0C520138-1984-4369-8615-09FF57F0BB70"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "16.7.8",
+                                        "matchCriteriaId": "0EDF6AF0-A238-47E5-9A9D-F6FDB832DD8C"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "17.0",
+                                        "versionEndExcluding": "17.5",
+                                        "matchCriteriaId": "DEC0ACF3-F486-4536-8415-A176C68CE183"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "14.5",
+                                        "matchCriteriaId": "018F7001-D2CD-4A28-853F-749408A7D1AF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "17.5",
+                                        "matchCriteriaId": "003383BF-F06C-4300-908D-D1C8498C6BCD"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.5",
+                                        "matchCriteriaId": "CC4B1E01-BE73-48F8-9BD5-32F7C57EB45A"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:webkitgtk:webkitgtk:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.44.2",
+                                        "matchCriteriaId": "AA94B870-B434-4F05-B149-71C7F45683D4"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:wpewebkit:wpe_webkit:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.44.2",
+                                        "matchCriteriaId": "F141E2F3-8281-4400-BE1E-D48F174EA615"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:39:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B8EDB836-4E6A-4B71-B9B2-AA3E03E0F646"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fedoraproject:fedora:40:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CA277A6C-83EC-4536-9125-97B84C4FAF59"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.apple.com/en-us/120896",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/120898",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/120901",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/120902",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/120903",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/120905",
+                        "source": "product-security@apple.com",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "http://seclists.org/fulldisclosure/2024/May/10",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://seclists.org/fulldisclosure/2024/May/12",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://seclists.org/fulldisclosure/2024/May/16",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://seclists.org/fulldisclosure/2024/May/17",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://seclists.org/fulldisclosure/2024/May/9",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2024/05/21/1",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ADCLQW54XN37VJZNYD3UKCYATJFIMYXG/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WKIXADCW3O4R2OOSDZGPU55XQFE6NA3M/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/HT214101",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/HT214102",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/HT214103",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/HT214104",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/en-us/HT214106",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/kb/HT214100",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/kb/HT214102",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/kb/HT214104",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://support.apple.com/kb/HT214106",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Vendor Advisory",
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-27834",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    },
+                    {
+                        "url": "https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.014140000",
+                    "percentile": "0.728290000"
+                },
+                "location": {
+                    "lat": 37.3349,
+                    "lng": -122.009,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-119977",
                 "sourceIdentifier": "security@wordfence.com",
                 "published": "2026-10-31T06:16:34.550",
@@ -500,12 +998,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.010200000",
-                    "percentile": "0.635140000"
+                    "epss": "0.011570000",
+                    "percentile": "0.671840000"
                 },
                 "location": {
-                    "lat": -2.442774534225464,
-                    "lng": 27.55722975730896,
+                    "lat": -29.008666515350342,
+                    "lng": -59.008644342422485,
                     "country": "Unknown"
                 }
             }
@@ -675,7 +1173,7 @@
                 ],
                 "epss": {
                     "epss": "0.008220000",
-                    "percentile": "0.574290000"
+                    "percentile": "0.574550000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -853,7 +1351,7 @@
                 ],
                 "epss": {
                     "epss": "0.005330000",
-                    "percentile": "0.451390000"
+                    "percentile": "0.451620000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -1114,11 +1612,11 @@
                 ],
                 "epss": {
                     "epss": "0.652200000",
-                    "percentile": "0.992560000"
+                    "percentile": "0.992570000"
                 },
                 "location": {
-                    "lat": -2.4427525997161865,
-                    "lng": 27.55724835395813,
+                    "lat": -29.008629322052002,
+                    "lng": -59.008628368377686,
                     "country": "Unknown"
                 }
             }
@@ -2188,7 +2686,7 @@
                 ],
                 "epss": {
                     "epss": "0.008210000",
-                    "percentile": "0.574070000"
+                    "percentile": "0.574330000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2554,7 +3052,7 @@
                 ],
                 "epss": {
                     "epss": "0.006890000",
-                    "percentile": "0.528510000"
+                    "percentile": "0.528810000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -4271,7 +4769,7 @@
                 ],
                 "epss": {
                     "epss": "0.161300000",
-                    "percentile": "0.969370000"
+                    "percentile": "0.969390000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -9281,8 +9779,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": -2.4427289962768555,
-                    "lng": 27.557271242141724,
+                    "lat": -29.008606433868408,
+                    "lng": -59.00860619544983,
                     "country": "Unknown"
                 }
             }
@@ -12202,8 +12700,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": -2.44272518157959,
-                    "lng": 27.55727505683899,
+                    "lat": -29.0086030960083,
+                    "lng": -59.00860285758972,
                     "country": "Unknown"
                 }
             }
@@ -12419,11 +12917,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.636730000"
+                    "percentile": "0.636990000"
                 },
                 "location": {
-                    "lat": -2.442721366882324,
-                    "lng": 27.557278871536255,
+                    "lat": -29.008599281311035,
+                    "lng": -59.008599281311035,
                     "country": "Unknown"
                 }
             }
@@ -12617,8 +13115,8 @@
                     "percentile": "0.994630000"
                 },
                 "location": {
-                    "lat": -2.442716598510742,
-                    "lng": 27.557283401489258,
+                    "lat": -29.008595943450928,
+                    "lng": -59.00859570503235,
                     "country": "Unknown"
                 }
             }
@@ -13073,11 +13571,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.849450000"
+                    "percentile": "0.849570000"
                 },
                 "location": {
-                    "lat": -2.4427130222320557,
-                    "lng": 27.557287216186523,
+                    "lat": -29.008592128753662,
+                    "lng": -59.00859212875366,
                     "country": "Unknown"
                 }
             }
@@ -13311,11 +13809,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.783680000"
+                    "percentile": "0.783840000"
                 },
                 "location": {
-                    "lat": -2.44270920753479,
-                    "lng": 27.55729103088379,
+                    "lat": -29.008588314056396,
+                    "lng": -59.00858807563782,
                     "country": "Unknown"
                 }
             }
@@ -13541,12 +14039,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.016370000",
-                    "percentile": "0.764070000"
+                    "epss": "0.107240000",
+                    "percentile": "0.958390000"
                 },
                 "location": {
-                    "lat": -2.4427053928375244,
-                    "lng": 27.557294845581055,
+                    "lat": -29.00858497619629,
+                    "lng": -59.00858473777771,
                     "country": "Unknown"
                 }
             }
@@ -13773,11 +14271,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.802780000"
+                    "percentile": "0.802930000"
                 },
                 "location": {
-                    "lat": -2.442701578140259,
-                    "lng": 27.55729866027832,
+                    "lat": -29.008581161499023,
+                    "lng": -59.00858116149902,
                     "country": "Unknown"
                 }
             }
@@ -14004,11 +14502,11 @@
                 ],
                 "epss": {
                     "epss": "0.118860000",
-                    "percentile": "0.961140000"
+                    "percentile": "0.961170000"
                 },
                 "location": {
-                    "lat": -2.4426982402801514,
-                    "lng": 27.557301998138428,
+                    "lat": -29.008577585220337,
+                    "lng": -59.00857758522034,
                     "country": "Unknown"
                 }
             }
@@ -14198,216 +14696,33 @@
                 ],
                 "epss": {
                     "epss": "0.009670000",
-                    "percentile": "0.618430000"
+                    "percentile": "0.618680000"
                 },
                 "location": {
-                    "lat": -2.442694664001465,
-                    "lng": 27.557305335998535,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-102764",
-                "sourceIdentifier": "13061848-ea10-403d-bd75-c83a022c2891",
-                "published": "2026-10-15T21:17:00.117",
-                "lastModified": "2026-10-17T04:16:47.117",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "The vulnerability exists within internal components of BeyondTrust\u2019s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                        "affectedData": [
-                            {
-                                "vendor": "BeyondTrust",
-                                "product": "Remote Support",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThanOrEqual": "26.2.3",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 9.3,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "nvd@nist.gov",
-                            "type": "Primary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-16T00:00:00+00:00",
-                                "id": "CVE-2026-102764",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-16",
-                "cisaActionDue": "2026-10-19",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-290"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
-                                        "versionEndIncluding": "26.2.3",
-                                        "matchCriteriaId": "A0D7C73F-5086-40AA-B153-B086CFCA79A5"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066",
-                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                        "tags": [
-                            "Permissions Required"
-                        ]
-                    },
-                    {
-                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
-                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    },
-                    {
-                        "url": "https://www.beyondtrust.com/blog/entry/bt26-05",
-                        "source": "13061848-ea10-403d-bd75-c83a022c2891",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.779940000",
-                    "percentile": "0.995740000"
-                },
-                "location": {
-                    "lat": -2.442690849304199,
-                    "lng": 27.5573091506958,
+                    "lat": -29.00857448577881,
+                    "lng": -59.00857448577881,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2024-27834",
+            "vendorProject": "Apple",
+            "product": "Multiple Products",
+            "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability",
+            "dateAdded": "2026-11-04",
+            "shortDescription": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-18",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://support.apple.com/en-us/120896 ; https://support.apple.com/en-us/120898 ; https://support.apple.com/en-us/120901 ; https://support.apple.com/en-us/120902 ; https://support.apple.com/en-us/120903 ; https://support.apple.com/en-us/120905 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2024-27834",
+            "cwes": [
+                "CWE-287"
+            ]
+        },
         {
             "cveID": "CVE-2026-119977",
             "vendorProject": "WordPress",
@@ -42458,7 +42773,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-04T19:03:37.909972",
+    "last_updated": "2026-11-05T19:14:11.843430",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
