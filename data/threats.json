@@ -2,6 +2,129 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-19868",
+                "sourceIdentifier": "PSIRT@sonicwall.com",
+                "published": "2026-11-06T19:17:48.437",
+                "lastModified": "2026-11-07T05:19:01.300",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA)."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "PSIRT@sonicwall.com",
+                        "affectedData": [
+                            {
+                                "vendor": "SonicWall",
+                                "product": "SonicOS",
+                                "defaultStatus": "unknown",
+                                "platforms": [
+                                    "Gen7",
+                                    "Gen8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.3.3-7015 and older versions",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8.2.2-8015 and older versions",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 4.7
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-06T00:00:00+00:00",
+                                "id": "CVE-2026-19868",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-06",
+                "cisaActionDue": "2026-11-20",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "PSIRT@sonicwall.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-308"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014",
+                        "source": "PSIRT@sonicwall.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006210000",
+                    "percentile": "0.500270000"
+                },
+                "location": {
+                    "lat": -0.9365131855010986,
+                    "lng": 29.063490629196167,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2024-27834",
                 "sourceIdentifier": "product-security@apple.com",
                 "published": "2024-05-14T15:13:06.953",
@@ -489,7 +612,7 @@
                 ],
                 "epss": {
                     "epss": "0.015020000",
-                    "percentile": "0.744150000"
+                    "percentile": "0.744570000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -999,11 +1122,11 @@
                 ],
                 "epss": {
                     "epss": "0.011570000",
-                    "percentile": "0.672090000"
+                    "percentile": "0.672580000"
                 },
                 "location": {
-                    "lat": 2.3215255737304688,
-                    "lng": 92.32153034210205,
+                    "lat": -0.936500072479248,
+                    "lng": 29.06350064277649,
                     "country": "Unknown"
                 }
             }
@@ -1173,7 +1296,7 @@
                 ],
                 "epss": {
                     "epss": "0.008220000",
-                    "percentile": "0.574870000"
+                    "percentile": "0.575450000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -1351,7 +1474,7 @@
                 ],
                 "epss": {
                     "epss": "0.005330000",
-                    "percentile": "0.451920000"
+                    "percentile": "0.452460000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -1612,11 +1735,11 @@
                 ],
                 "epss": {
                     "epss": "0.652200000",
-                    "percentile": "0.992580000"
+                    "percentile": "0.992590000"
                 },
                 "location": {
-                    "lat": 2.3215460777282715,
-                    "lng": 92.32154679298401,
+                    "lat": -0.9364938735961914,
+                    "lng": 29.063506364822388,
                     "country": "Unknown"
                 }
             }
@@ -2686,7 +2809,7 @@
                 ],
                 "epss": {
                     "epss": "0.008210000",
-                    "percentile": "0.574640000"
+                    "percentile": "0.575230000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3052,7 +3175,7 @@
                 ],
                 "epss": {
                     "epss": "0.006890000",
-                    "percentile": "0.529130000"
+                    "percentile": "0.529760000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -4769,7 +4892,7 @@
                 ],
                 "epss": {
                     "epss": "0.161300000",
-                    "percentile": "0.969420000"
+                    "percentile": "0.969460000"
                 },
                 "location": {
                     "lat": 45.5231,
@@ -10468,8 +10591,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": 2.3215696811676025,
-                    "lng": 92.32157015800476,
+                    "lat": -0.93648362159729,
+                    "lng": 29.06351661682129,
                     "country": "Unknown"
                 }
             }
@@ -14039,8 +14162,8 @@
                     "percentile": "0.999990000"
                 },
                 "location": {
-                    "lat": 2.3215739727020264,
-                    "lng": 92.3215742111206,
+                    "lat": -0.9364814758300781,
+                    "lng": 29.0635187625885,
                     "country": "Unknown"
                 }
             }
@@ -14256,11 +14379,11 @@
                 ],
                 "epss": {
                     "epss": "0.010250000",
-                    "percentile": "0.637260000"
+                    "percentile": "0.637750000"
                 },
                 "location": {
-                    "lat": 2.321577548980713,
-                    "lng": 92.32157778739929,
+                    "lat": -0.9364800453186035,
+                    "lng": 29.063519954681396,
                     "country": "Unknown"
                 }
             }
@@ -14454,8 +14577,8 @@
                     "percentile": "0.994640000"
                 },
                 "location": {
-                    "lat": 2.321582078933716,
-                    "lng": 92.3215823173523,
+                    "lat": -0.9364786148071289,
+                    "lng": 29.06352162361145,
                     "country": "Unknown"
                 }
             }
@@ -14910,11 +15033,11 @@
                 ],
                 "epss": {
                     "epss": "0.025280000",
-                    "percentile": "0.849680000"
+                    "percentile": "0.849910000"
                 },
                 "location": {
-                    "lat": 2.3215861320495605,
-                    "lng": 92.32158613204956,
+                    "lat": -0.9364771842956543,
+                    "lng": 29.063523054122925,
                     "country": "Unknown"
                 }
             }
@@ -15148,11 +15271,11 @@
                 ],
                 "epss": {
                     "epss": "0.017850000",
-                    "percentile": "0.784000000"
+                    "percentile": "0.784350000"
                 },
                 "location": {
-                    "lat": 2.321589946746826,
-                    "lng": 92.3215901851654,
+                    "lat": -0.9364757537841797,
+                    "lng": 29.06352424621582,
                     "country": "Unknown"
                 }
             }
@@ -15379,11 +15502,11 @@
                 ],
                 "epss": {
                     "epss": "0.107240000",
-                    "percentile": "0.958420000"
+                    "percentile": "0.958480000"
                 },
                 "location": {
-                    "lat": 2.3215935230255127,
-                    "lng": 92.32159376144409,
+                    "lat": -0.9364745616912842,
+                    "lng": 29.063525438308716,
                     "country": "Unknown"
                 }
             }
@@ -15610,11 +15733,11 @@
                 ],
                 "epss": {
                     "epss": "0.019490000",
-                    "percentile": "0.803060000"
+                    "percentile": "0.803390000"
                 },
                 "location": {
-                    "lat": 2.32159686088562,
-                    "lng": 92.3215970993042,
+                    "lat": -0.9364736080169678,
+                    "lng": 29.06352663040161,
                     "country": "Unknown"
                 }
             }
@@ -15841,211 +15964,33 @@
                 ],
                 "epss": {
                     "epss": "0.118860000",
-                    "percentile": "0.961200000"
+                    "percentile": "0.961260000"
                 },
                 "location": {
-                    "lat": 2.3216004371643066,
-                    "lng": 92.3216004371643,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-110936",
-                "sourceIdentifier": "productcert@siemens.com",
-                "published": "2026-10-15T15:17:30.383",
-                "lastModified": "2026-10-21T13:10:11.553",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "A vulnerability has been identified in Siemens Software Center (All versions < V4.0.9.8). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "productcert@siemens.com",
-                        "affectedData": [
-                            {
-                                "vendor": "Siemens",
-                                "product": "Siemens Software Center",
-                                "defaultStatus": "unknown",
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "V4.0.9.8",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV40": [
-                        {
-                            "source": "productcert@siemens.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "4.0",
-                                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-                                "baseScore": 8.4,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "attackRequirements": "NONE",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "vulnConfidentialityImpact": "HIGH",
-                                "vulnIntegrityImpact": "HIGH",
-                                "vulnAvailabilityImpact": "HIGH",
-                                "subConfidentialityImpact": "NONE",
-                                "subIntegrityImpact": "NONE",
-                                "subAvailabilityImpact": "NONE",
-                                "exploitMaturity": "NOT_DEFINED",
-                                "confidentialityRequirement": "NOT_DEFINED",
-                                "integrityRequirement": "NOT_DEFINED",
-                                "availabilityRequirement": "NOT_DEFINED",
-                                "modifiedAttackVector": "NOT_DEFINED",
-                                "modifiedAttackComplexity": "NOT_DEFINED",
-                                "modifiedAttackRequirements": "NOT_DEFINED",
-                                "modifiedPrivilegesRequired": "NOT_DEFINED",
-                                "modifiedUserInteraction": "NOT_DEFINED",
-                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
-                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-                                "Safety": "NOT_DEFINED",
-                                "Automatable": "NOT_DEFINED",
-                                "Recovery": "NOT_DEFINED",
-                                "valueDensity": "NOT_DEFINED",
-                                "vulnerabilityResponseEffort": "NOT_DEFINED",
-                                "providerUrgency": "NOT_DEFINED"
-                            }
-                        }
-                    ],
-                    "cvssMetricV31": [
-                        {
-                            "source": "productcert@siemens.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 6.7,
-                                "baseSeverity": "MEDIUM",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 0.8,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-20T00:00:00+00:00",
-                                "id": "CVE-2026-110936",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-20",
-                "cisaActionDue": "2026-11-03",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "productcert@siemens.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-427"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:siemens:software_center:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "4.0.9.8",
-                                        "matchCriteriaId": "D830F690-89A4-4D6A-84B0-A840528CF933"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html",
-                        "source": "productcert@siemens.com",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Patch",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110936",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.009670000",
-                    "percentile": "0.618990000"
-                },
-                "location": {
-                    "lat": 2.321603775024414,
-                    "lng": 92.321604013443,
+                    "lat": -0.9364726543426514,
+                    "lng": 29.063527584075928,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-19868",
+            "vendorProject": "SonicWall",
+            "product": "SonicOS SSLVPN",
+            "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+            "dateAdded": "2026-11-06",
+            "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-20",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
+            "cwes": [
+                "CWE-308"
+            ]
+        },
         {
             "cveID": "CVE-2024-27834",
             "vendorProject": "Apple",
@@ -44112,7 +44057,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-06T18:40:48.618438",
+    "last_updated": "2026-11-07T17:09:41.534464",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
