@@ -1,5 +1,2640 @@
 {
-    "nvd_cves": [],
+    "nvd_cves": [
+        {
+            "cve": {
+                "id": "CVE-2026-114713",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-11-08T03:16:33.410",
+                "lastModified": "2026-11-14T05:18:24.417",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "UnrealIRCd",
+                                "product": "UnrealIRCd",
+                                "defaultStatus": "unaffected",
+                                "modules": [
+                                    "labeled-response"
+                                ],
+                                "programFiles": [
+                                    "src/modules/labeled-response.c"
+                                ],
+                                "programRoutines": [
+                                    {
+                                        "name": "labeled_response_mtag_is_ok()"
+                                    }
+                                ],
+                                "repo": "https://github.com/unrealircd/unrealircd",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "6.2.7.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 4.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-12T00:00:00+00:00",
+                                "id": "CVE-2026-114713",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-13",
+                "cisaActionDue": "2026-11-16",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-140"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://forums.unrealircd.org/viewtopic.php?t=9487",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://www.unrealircd.org/",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://www.unrealircd.org/index/news",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "http://www.openwall.com/lists/oss-security/2026/11/08/1",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114713",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005080000",
+                    "percentile": "0.438750000"
+                },
+                "location": {
+                    "lat": 26.883475303649902,
+                    "lng": -63.11652064323425,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-123039",
+                "sourceIdentifier": "cve@checkpoint.com",
+                "published": "2026-11-12T14:17:24.233",
+                "lastModified": "2026-11-14T05:18:31.413",
+                "vulnStatus": "Undergoing Analysis",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "affectedData": [
+                            {
+                                "vendor": "checkpoint",
+                                "product": "Quantum Security Gateway",
+                                "versions": [
+                                    {
+                                        "version": "R82.10 with Jumbo Hotfix Take 50 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82.20 with Jumbo Hotfix Take 10 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82 with Jumbo Hotfix Take 130 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.20 with Jumbo Hotfix Take 173 or below",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "checkpoint",
+                                "product": "Quantum Security Management",
+                                "versions": [
+                                    {
+                                        "version": "R82.10 with Jumbo Hotfix Take 50 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82.20 with Jumbo Hotfix Take 10 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R82 with Jumbo Hotfix Take 130 or below",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "R81.20 with Jumbo Hotfix Take 173 or below",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@checkpoint.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "LOCAL",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-13T00:00:00+00:00",
+                                "id": "CVE-2026-123039",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-13",
+                "cisaActionDue": "2026-11-16",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@checkpoint.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-732"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-862"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.checkpoint.com/results/sk/sk1000362",
+                        "source": "cve@checkpoint.com"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123039",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.021910000",
+                    "percentile": "0.827360000"
+                },
+                "location": {
+                    "lat": 26.883484363555908,
+                    "lng": -63.116514444351196,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-124194",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2026-11-10T19:20:48.180",
+                "lastModified": "2026-11-11T05:19:35.990",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft 365 Apps for Enterprise",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.1",
+                                        "lessThan": "https://aka.ms/OfficeSecurityReleases",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft Office LTSC 2021",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.1",
+                                        "lessThan": "16.0.14334.21048",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Microsoft",
+                                "product": "Microsoft Office LTSC 2024",
+                                "platforms": [
+                                    "32-bit Systems",
+                                    "x64-based Systems"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "16.0.0",
+                                        "lessThan": "16.0.17932.21140",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "secure@microsoft.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                                "baseScore": 6.5,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-09T00:00:00+00:00",
+                                "id": "CVE-2026-124194",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "secure@microsoft.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-356"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x64:*",
+                                        "matchCriteriaId": "3259EBFE-AE2D-48B8-BE9A-E22BBDB31378"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x86:*",
+                                        "matchCriteriaId": "CD25F492-9272-4836-832C-8439EBE64CCF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_2021:-:*:*:*:ltsc:-:x64:*",
+                                        "matchCriteriaId": "1D518075-3362-4D15-93B1-0E6C61518D16"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_2021:-:*:*:*:ltsc:-:x86:*",
+                                        "matchCriteriaId": "1059BEC6-C30B-4F0F-A878-5267A21CBD85"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_2024:-:*:*:*:ltsc:-:x64:*",
+                                        "matchCriteriaId": "55A9AFDA-D77B-4CC7-ACE5-3A2ABDA257D8"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:office_2024:-:*:*:*:ltsc:-:x86:*",
+                                        "matchCriteriaId": "8887D177-26A3-4008-89B6-50A9E9830F13"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-124194",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.016200000",
+                    "percentile": "0.764700000"
+                },
+                "location": {
+                    "lat": 47.674,
+                    "lng": -122.1215,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-111793",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-10-16T19:17:05.680",
+                "lastModified": "2026-11-11T05:19:21.073",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Openwave Webtop Media Transcoder does not enforce administrator-defined file type restrictions to restrict the file-types to be converted. This may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Openwave Messaging (Ireland) Limited",
+                                "product": "Webtop Media Transcoder",
+                                "defaultStatus": "unaffected",
+                                "platforms": [
+                                    "Linux"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "1.1.22.0",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                                "baseScore": 4.3,
+                                "baseSeverity": "MEDIUM",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "LOW"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 1.4
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-10T00:00:00+00:00",
+                                "id": "CVE-2026-111793",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-669"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:openwave:webtop_media_transcoder:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.1.22.0",
+                                        "matchCriteriaId": "3648EF22-BE01-47AC-94BC-0C92499BCD77"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/GISOpenwave/security-advisories-public/blob/main/CAN-2026-2032674.md",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://openwave.ai",
+                        "source": "cve@mitre.org",
+                        "tags": [
+                            "Product"
+                        ]
+                    },
+                    {
+                        "url": "https://jvn.jp/en/vu/JVNVU93403064/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111793",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.006380000",
+                    "percentile": "0.511400000"
+                },
+                "location": {
+                    "lat": 26.8834969997406,
+                    "lng": -63.11650276184082,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-20320",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2026-08-19T17:18:40.433",
+                "lastModified": "2026-11-13T21:17:46.853",
+                "vulnStatus": "Modified",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the Open Client Interface (OCI) XML Parser of Cisco BroadWorks could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system. \r\n\r This vulnerability exists because XML entries are improperly parsed due to external entity resolution being allowed by default. An attacker could exploit this vulnerability by sending a crafted XML message to the Open Client Interface &ndash; Provisioning (OCI-P) service. A successful exploit could allow the attacker to view sensitive files from the filesystem with the privileges of the Cisco BroadWorks user."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Cisco",
+                                "product": "Cisco BroadWorks",
+                                "versions": [
+                                    {
+                                        "version": "N/A",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@cisco.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 3.6
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-10T00:00:00+00:00",
+                                "id": "CVE-2026-20320",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@cisco.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-611"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:broadworks_application_delivery_platform:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "ri.2026.07",
+                                        "matchCriteriaId": "642652DB-982D-4EAC-8241-05123D621B78"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:broadworks_application_server:*:*:*:*:release_independent:*:*:*",
+                                        "versionEndExcluding": "2026.0",
+                                        "matchCriteriaId": "36D4F82F-4377-4564-B29B-2407268516A2"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:broadworks_profile_server:*:*:*:*:release_independent:*:*:*",
+                                        "versionEndExcluding": "2026.07",
+                                        "matchCriteriaId": "7D599E22-8EE5-4BC3-8444-7643F1C1AD4B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cisco:broadworks_xtended_services_platform:*:*:*:*:release_independent:*:*:*",
+                                        "versionEndExcluding": "2026.07",
+                                        "matchCriteriaId": "2F17FFA8-A16C-4051-B21A-103F63DDD080"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-bworks-xxe-uwUd7CEt",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20320",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.009760000",
+                    "percentile": "0.626550000"
+                },
+                "location": {
+                    "lat": 37.4084,
+                    "lng": -121.954,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-111560",
+                "sourceIdentifier": "mandiant-cve@google.com",
+                "published": "2026-11-02T13:17:35.190",
+                "lastModified": "2026-11-12T13:48:08.640",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "mandiant-cve@google.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Email Security Gateway (ESG)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "9.4.0.27",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "6.4.0",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Web Application Firewall (WAF)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "11.0.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Web Security Gateway (WSG)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "16.1.100.100",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Message Archiver (BMA)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "5.5.4.0",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            },
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda WAF Control Center (WCC)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThanOrEqual": "2.2.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "mandiant-cve@google.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 8.6,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 7.2,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 1.2,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-02T00:00:00+00:00",
+                                "id": "CVE-2026-111560",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-13",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "mandiant-cve@google.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_300_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.029",
+                                        "matchCriteriaId": "61F03D55-0E60-4749-88F5-469F09E968C5"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_300:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "824DAE15-3628-4346-947E-C33FA46AADE6"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_400_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.029",
+                                        "matchCriteriaId": "6C346C60-06C7-4165-8672-E64A80AD1EBE"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_400:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "ACD3DD62-D690-47F9-8416-61AD78B33699"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_600_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.029",
+                                        "matchCriteriaId": "396FE4FF-2E75-44CC-A214-989AB4DD45B5"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_600:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6C507D86-2E68-44A4-A31C-EEF9A6BBEE54"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_800_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.029",
+                                        "matchCriteriaId": "40AE10DF-0D65-464A-8A80-058083D54BB4"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "74D999D5-6CE5-49F7-A0C5-0B44704FEE45"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_900_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.029",
+                                        "matchCriteriaId": "EEAD80CE-06EF-433E-BF8B-A15115B2B6D1"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_900:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FFA6EA4B-B0FF-437B-A48E-F11D0CD5EB2B"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:barracuda:web_application_firewall:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "12.3.1.002",
+                                        "matchCriteriaId": "23FD0CA6-2E68-4AF7-96DD-6B4A45CEF6E7"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:web_security_gateway_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "15.0.0.009",
+                                        "matchCriteriaId": "75F6E04A-7FF7-4C8B-96D9-A089AFEE79A1"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:web_security_gateway_310vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F9374F87-4C06-4D2C-9F27-A33A333801E8"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:web_security_gateway_410vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C05D33C2-17C2-4193-AF86-4B61D68FECFE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:web_security_gateway_610vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "28BA3136-1BCF-4723-B747-45656D38DB08"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_1010:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FAD9934A-B99D-4E78-A021-FE94D0EE96E0"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_1011:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4C2D783C-7ADF-4269-969D-0AFB3D173F56"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_210:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B4DE6F2E-F000-45AE-A12B-0DDE758B26FF"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_310:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "61989305-578E-4CD4-9EAE-8193EC9492CB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_410:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6119407D-2AF0-49C8-9FB3-B23BC7E5FF1E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_610:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "01B384B5-374A-4970-97BA-996ED59BD6CA"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_610b:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "375413CE-ADFB-46E1-AC0A-575EC77EF613"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_810:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DEDB29A8-8FA9-4935-AFDA-4C086DF373CC"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_810b:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "883B8140-AC0C-4E06-8AFA-FD432846DAAB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:web_security_gateway_910:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3820E1CA-9C55-4A67-A267-B82ADCACA047"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:load_balancer_adc_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "6.4",
+                                        "matchCriteriaId": "265A9F4A-057B-45FA-A3B7-16C2320F94BD"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:load_balancer_adc_340vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "316BDFAF-E543-4002-9EC9-384FA8A9F11D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:load_balancer_adc_440vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "61904407-D537-4B82-8E4E-0D7048A5D703"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:load_balancer_adc_540vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "EFFE99E3-7269-4837-AA6F-9BCB02EC1EE6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:load_balancer_adc_640vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DEFDA361-8382-4799-B71C-56E2C20B0F90"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_340:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5EC33966-DD8C-4105-A0C3-284EDE9E8148"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_440:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AE5163D9-C460-419A-BE3B-1634B8840555"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_540:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2855353A-DBAC-417C-AD5E-51EDC23DE4DE"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_640:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "965AB2CA-BCB3-4F66-AAB8-1DD9D42C9E3E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_641:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "849722F2-F246-47E1-9EB6-772032BD08CB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_642:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0687854F-5CBE-42E7-BCA8-60BA6C830C91"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_840:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7E37172F-38BF-491B-9BE7-445E50713307"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_841:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E390E29D-A865-4C5B-A0B1-5F01BEAF5BE6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:load_balancer_adc_842:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C5B83B27-D92B-4C36-9BB9-5D93A89B674D"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:message_archiver_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.5.4.002",
+                                        "matchCriteriaId": "578EBE23-DA2D-43E2-872E-70391A91E05C"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_1050vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "CD0979DE-E1E5-4CCD-B1AA-113A0F509364"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_150vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1E097696-A900-4F05-96AD-850FE759EF56"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_350vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "5966C95E-9014-4CE2-8388-00790B786116"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_450vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9C755098-9FF0-4758-BB7B-3D5654F64163"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_650vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "14395A4B-7165-4A92-8847-30D96458ED9D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_850vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "F9D9EE8B-6315-4727-A54B-18CE7CBD5EA2"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:barracuda:message_archiver_950vx:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BEEBA880-2EA2-4AE9-B400-81A60DB8ECC2"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_1050:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "46B3127B-A978-4D5B-920B-24E9E956BE58"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_150:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "06C50612-48B2-4367-99C7-9624CED4B458"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_350:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6C64FB15-1542-4518-AC9C-49771644E415"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_450:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "014BCAC4-CC73-436F-93DE-5D5A9D6141EB"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_650:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C7C1F0CC-A63E-4DE8-91C7-B1F9C6B86636"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_850:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "E327073C-FE62-4083-A7D8-084C7815F2A1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:message_archiver_950:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "BACAF10E-F5F3-416A-BCD8-D13C92F6649D"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md",
+                        "source": "mandiant-cve@google.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection",
+                        "source": "mandiant-cve@google.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111560",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.090820000",
+                    "percentile": "0.953770000"
+                },
+                "location": {
+                    "lat": 26.88350558280945,
+                    "lng": -63.11649417877197,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-116606",
+                "sourceIdentifier": "mandiant-cve@google.com",
+                "published": "2026-11-02T13:17:37.017",
+                "lastModified": "2026-11-12T11:34:22.650",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance\u2019s global configuration."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "mandiant-cve@google.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Barracuda Networks",
+                                "product": "Barracuda Email Security Gateway (ESG)",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "9.4.0.030",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "mandiant-cve@google.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "NONE",
+                                "subIntegrityImpact": "NONE",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-02T00:00:00+00:00",
+                                "id": "CVE-2026-116606",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-13",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "mandiant-cve@google.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-288"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_300_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.030",
+                                        "matchCriteriaId": "454E2349-F911-44FD-A9C4-7BE721DDCA03"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_300:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "824DAE15-3628-4346-947E-C33FA46AADE6"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_400_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.030",
+                                        "matchCriteriaId": "BAA128A3-FF66-4E05-B31E-47F73C9C1565"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_400:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "ACD3DD62-D690-47F9-8416-61AD78B33699"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_600_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.030",
+                                        "matchCriteriaId": "199B5F00-5C48-40D5-881C-D7868B0A51E8"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_600:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6C507D86-2E68-44A4-A31C-EEF9A6BBEE54"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_800_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.030",
+                                        "matchCriteriaId": "1661D779-1816-4F91-B972-BF2097B4A436"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "74D999D5-6CE5-49F7-A0C5-0B44704FEE45"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:barracuda:email_security_gateway_900_firmware:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "9.4.0.030",
+                                        "matchCriteriaId": "D1B1D8A6-5E3F-4D5A-AD0A-7C853A9B0AEB"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:barracuda:email_security_gateway_900:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "FFA6EA4B-B0FF-437B-A48E-F11D0CD5EB2B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md",
+                        "source": "mandiant-cve@google.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection",
+                        "source": "mandiant-cve@google.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116606",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.109470000",
+                    "percentile": "0.959560000"
+                },
+                "location": {
+                    "lat": 26.883509874343872,
+                    "lng": -63.11649012565613,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-125350",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2026-11-10T18:17:35.237",
+                "lastModified": "2026-11-11T05:19:38.220",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)"
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "chrome-cve-admin@google.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Google",
+                                "product": "Chrome",
+                                "versions": [
+                                    {
+                                        "version": "157.0.8103.50",
+                                        "lessThan": "157.0.8103.50",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                                "baseScore": 8.8,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "REQUIRED",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 2.8,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-09T00:00:00+00:00",
+                                "id": "CVE-2026-125350",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-10",
+                "cisaActionDue": "2026-11-24",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Google Chromium Use-After-Free Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "chrome-cve-admin@google.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-416"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "157.0.8103.50",
+                                        "matchCriteriaId": "6670B19D-D9FF-4276-B04E-F35E8F3BB029"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Release Notes",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://issues.chromium.org/issues/582442907",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-125350",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.009620000",
+                    "percentile": "0.621810000"
+                },
+                "location": {
+                    "lat": 37.422,
+                    "lng": -122.0841,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-116779",
+                "sourceIdentifier": "security-advisories@github.com",
+                "published": "2026-11-05T20:17:44.790",
+                "lastModified": "2026-11-10T05:17:57.830",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.3, sofia_presence_handle_sip_i_message() split the To user of an inbound SIP MESSAGE on a plus sign and treated the left side as a chat protocol selector. Selecting the api chat proto reached switch_api_execute(), allowing a peer whose MESSAGE was accepted to run FreeSWITCH API commands, including operating-system command sinks, with the daemon's privileges. Inbound chat is enabled on the stock internal and external profiles, and any authenticated profile account is sufficient; stock directory users without password material can also remove that barrier in affected configurations. The flaw permits configuration and credential disclosure, arbitrary call control, and command execution, and exploitation has been observed in the wild. This issue is fixed in version 1.11.3."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "affectedData": [
+                            {
+                                "vendor": "signalwire",
+                                "product": "freeswitch",
+                                "versions": [
+                                    {
+                                        "version": "< 1.11.3",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "security-advisories@github.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-06T00:00:00+00:00",
+                                "id": "CVE-2026-116779",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-09",
+                "cisaActionDue": "2026-11-12",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security-advisories@github.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-77"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-749"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:freeswitch:freeswitch:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "1.11.3",
+                                        "matchCriteriaId": "FABBABC9-CD91-486F-8E9E-16692A1A45BB"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/signalwire/freeswitch/commit/7015f6a73ab3d67fed5fbfc277ecfb88a74c2a86",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/signalwire/freeswitch/pull/3135",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/signalwire/freeswitch/releases/tag/v1.11.3",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/signalwire/freeswitch/security/advisories/GHSA-mg63-h38w-8p9p",
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116779",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.024730000",
+                    "percentile": "0.847930000"
+                },
+                "location": {
+                    "lat": 26.883517026901245,
+                    "lng": -63.116482973098755,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-123218",
+                "sourceIdentifier": "psirt@us.ibm.com",
+                "published": "2026-11-07T04:17:28.900",
+                "lastModified": "2026-11-10T13:49:00.563",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "psirt@us.ibm.com",
+                        "affectedData": [
+                            {
+                                "vendor": "IBM",
+                                "product": "Aspera Faspex",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "5.0.0",
+                                        "lessThanOrEqual": "5.0.19",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "psirt@us.ibm.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-09T00:00:00+00:00",
+                                "id": "CVE-2026-123218",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-09",
+                "cisaActionDue": "2026-11-12",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "psirt@us.ibm.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-863"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ibm:aspera_faspex:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.0.0",
+                                        "versionEndExcluding": "5.0.19.1",
+                                        "matchCriteriaId": "CA93A2D7-D967-470E-B484-3234D8DF4A42"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.ibm.com/support/pages/node/7295921",
+                        "source": "psirt@us.ibm.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123218",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005350000",
+                    "percentile": "0.456910000"
+                },
+                "location": {
+                    "lat": 41.1225,
+                    "lng": -73.7125,
+                    "country": "USA"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-19868",
+                "sourceIdentifier": "PSIRT@sonicwall.com",
+                "published": "2026-11-06T19:17:48.437",
+                "lastModified": "2026-11-09T19:42:13.887",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA)."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "PSIRT@sonicwall.com",
+                        "affectedData": [
+                            {
+                                "vendor": "SonicWall",
+                                "product": "SonicOS",
+                                "defaultStatus": "unknown",
+                                "platforms": [
+                                    "Gen7",
+                                    "Gen8"
+                                ],
+                                "versions": [
+                                    {
+                                        "version": "7.3.3-7015 and older versions",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "8.2.2-8015 and older versions",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                                "baseScore": 7.5,
+                                "baseSeverity": "HIGH",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "HIGH",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "LOW",
+                                "availabilityImpact": "NONE"
+                            },
+                            "exploitabilityScore": 2.2,
+                            "impactScore": 4.7
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-06T00:00:00+00:00",
+                                "id": "CVE-2026-19868",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "partial"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-06",
+                "cisaActionDue": "2026-11-20",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "PSIRT@sonicwall.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-308"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sonicos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "7.3.4-7015",
+                                        "matchCriteriaId": "639FC5E5-9895-4770-9663-0DCC1DB9CC2D"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_270:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "50F3A318-F082-4BDD-80EA-51DB15D3458C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_470:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "09CAD976-F02B-40D6-9584-B8146A5A2EA1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_870:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9079ED9F-0458-4EA8-8E89-5D3D4CA8096F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_2700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8D8B0C7A-FD65-47CA-A625-150A90EFA7A1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_3700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A69E000B-5806-46FD-A233-4E2CC9DD38D2"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_4700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8DF4A322-7CC7-4AB9-B10E-FFF34DF2182D"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_5700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4C15FED5-C48C-47CF-9645-0563D77883C1"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_6700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A884B1BB-F201-4C77-9F6E-B8A884DCD4C2"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nssp_10700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7C3BA5A3-1160-4793-A8D6-40B9D264BCC4"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nssp_11700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6739DEA3-06FF-4FEB-9931-0DB27F63B70E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nssp_13700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0250EDF9-0AEF-4711-8EF6-D447CF48BCAF"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nssp_15700:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "7D6CF3CF-256C-4C04-8BDF-B16398CD0459"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz270:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "70340DD4-687B-402C-85AF-C2B80D0F1600"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz270w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "52847BA2-470B-4078-A79B-52095DB9214B"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz370:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "9853AE3A-B0EA-4249-AA7D-1F2051C9BF91"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz370w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4DBDD10C-F89D-4051-BC70-67B41167FF9B"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz470:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "6C23940E-2F9D-447B-A740-42035ED5D400"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz470w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "90C790AD-C40E-4527-8F83-D278282A9600"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz570:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "C7DF76E0-8E3D-4E0D-A3BB-F5AE05A4C7C9"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz570p:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "352DFCF9-E333-41C0-8033-91265768FD8E"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz570w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4C882C38-9DA5-4C03-BB23-AB2B448E3307"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz670:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AEEA6065-48D3-4EC7-BD94-CBAE3D1010FF"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "AND",
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:sonicwall:sonicos:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "8.2.2-8015",
+                                        "matchCriteriaId": "5A473DAB-8000-444D-BEA2-3B0B38E8375E"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_l:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0E181C4C-8FB3-492A-8202-9C48EC07B76F"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_m:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "2D8A8488-D765-4F6F-93CF-61E188B1B7D6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_s:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "0372B9D5-9774-4CF5-8D3A-7131B0A03061"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:a:sonicwall:nsv_xs:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "855302DC-3FD6-48EE-BD9F-789AEBB3A518"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_2800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "559FE8B8-E5E1-4E74-98AF-79AF0ECF9064"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_3800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "3ED8014A-C7A4-4624-8D50-A9844871C1B6"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_4800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "1BDD4AB6-878B-41BE-BA33-6A2ECE2BC85B"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:nsa_5800:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "D28BF416-D019-438B-954E-FB94697DC011"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz280:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "56EC904E-4FCA-4B35-B188-639AE688DD14"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz280w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "4B1618BE-A465-4E2F-BB7F-79E0AA930B1C"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz380:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "83B9556B-0A33-4A27-B9E2-00F47969A566"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz380w:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "72D94F4D-CEC8-473B-A49C-466F6F7274D3"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz480:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "DCFE3403-6A5B-4735-9248-99297A2E4461"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz580:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AAEE386F-5FE4-4F21-AD34-33B862AAD1CC"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz680:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "AE6BC579-21A1-4C2F-B655-73B14C3409A7"
+                                    },
+                                    {
+                                        "vulnerable": false,
+                                        "criteria": "cpe:2.3:h:sonicwall:tz80:-:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "129CC10F-E822-4BF7-9EB5-0D702020CB0C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014",
+                        "source": "PSIRT@sonicwall.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.005320000",
+                    "percentile": "0.455240000"
+                },
+                "location": {
+                    "lat": 26.883524656295776,
+                    "lng": -63.116475343704224,
+                    "country": "Unknown"
+                }
+            }
+        }
+    ],
     "cisa_kev": [
         {
             "cveID": "CVE-2026-114713",
@@ -28280,10 +30915,10 @@
             ]
         }
     ],
-    "last_updated": "2026-11-14T17:27:54.246781",
+    "last_updated": "2026-11-15T18:14:08.145367",
     "api_status": {
-        "nvd": "offline",
+        "nvd": "online",
         "cisa": "online",
-        "epss": "offline"
+        "epss": "online"
     }
 }
