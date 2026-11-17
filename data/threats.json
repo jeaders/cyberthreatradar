@@ -2,6 +2,246 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-115731",
+                "sourceIdentifier": "security@puppet.com",
+                "published": "2026-11-03T21:17:01.867",
+                "lastModified": "2026-11-17T20:06:44.430",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Deserialization of untrusted data in the report-processing code of Puppet, as used by Puppet Server, in the affected releases, allows a client that holds any CA-signed agent certificate to execute arbitrary code on the Puppet Server as its service user by submitting a report containing a crafted rich-data type via PUT request. Where the certificate authority autosigns requests without strong verification, an unauthenticated network attacker can obtain such a certificate."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "security@puppet.com",
+                        "affectedData": [
+                            {
+                                "vendor": "Perforce",
+                                "product": "Puppet Enterprise",
+                                "defaultStatus": "affected",
+                                "versions": [
+                                    {
+                                        "version": "2023.8.0",
+                                        "lessThan": "2023.8.13",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2025.0.0",
+                                        "lessThan": "2025.12.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2026.0.0",
+                                        "lessThan": "2026.0.1",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "2023.8.13",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "2025.12.1",
+                                        "status": "unaffected"
+                                    },
+                                    {
+                                        "version": "2026.0.1",
+                                        "status": "unaffected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "security@puppet.com",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.4,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "HIGH",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "HIGH",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "cvssMetricV31": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                                "baseScore": 9.9,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "LOW",
+                                "userInteraction": "NONE",
+                                "scope": "CHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.1,
+                            "impactScore": 6.0
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-17T18:42:05.364600Z",
+                                "id": "CVE-2026-115731",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-17",
+                "cisaActionDue": "2026-12-01",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "security@puppet.com",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            },
+                            {
+                                "lang": "en",
+                                "value": "CWE-502"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:puppet:puppet:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "8.0.0",
+                                        "versionEndExcluding": "8.22.2",
+                                        "matchCriteriaId": "6A138AC3-4177-4C42-9530-EBB416F47E7D"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:puppet:puppet:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "9.0.0",
+                                        "versionEndExcluding": "9.1.3",
+                                        "matchCriteriaId": "864BD7AA-269B-4627-A895-985FCCFC63FF"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:puppet:puppet_enterprise:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2023.8.0",
+                                        "versionEndExcluding": "2023.8.13",
+                                        "matchCriteriaId": "09887096-FE8C-4C34-BFD5-9D47027C939B"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:puppet:puppet_enterprise:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "2025.0.0",
+                                        "versionEndExcluding": "2025.12.1",
+                                        "matchCriteriaId": "E94883C6-3004-4F1B-B0C5-A6F4FA843C05"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:puppet:puppet_enterprise:2026.0.0:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "8116D86A-03E4-4566-8D4C-614AA178B48A"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution",
+                        "source": "security@puppet.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-115731",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "US Government Resource"
+                        ]
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003660000",
+                    "percentile": "0.308820000"
+                },
+                "location": {
+                    "lat": 28.74454641342163,
+                    "lng": -121.25544810295105,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-114713",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-08T03:16:33.410",
@@ -187,12 +427,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.005080000",
-                    "percentile": "0.438720000"
+                    "epss": "0.004670000",
+                    "percentile": "0.410100000"
                 },
                 "location": {
-                    "lat": 21.252061367034912,
-                    "lng": -128.74793410301208,
+                    "lat": 28.74455952644348,
+                    "lng": -121.25543928146362,
                     "country": "Unknown"
                 }
             }
@@ -1736,12 +1976,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.021910000",
-                    "percentile": "0.827410000"
+                    "epss": "0.019380000",
+                    "percentile": "0.804860000"
                 },
                 "location": {
-                    "lat": 21.252070903778076,
-                    "lng": -128.7479283809662,
+                    "lat": 28.74456548690796,
+                    "lng": -121.25543427467346,
                     "country": "Unknown"
                 }
             }
@@ -1937,7 +2177,7 @@
                 ],
                 "epss": {
                     "epss": "0.016200000",
-                    "percentile": "0.764770000"
+                    "percentile": "0.764980000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -2095,11 +2335,11 @@
                 ],
                 "epss": {
                     "epss": "0.006380000",
-                    "percentile": "0.511510000"
+                    "percentile": "0.511860000"
                 },
                 "location": {
-                    "lat": 21.252077102661133,
-                    "lng": -128.7479226589203,
+                    "lat": 28.744574546813965,
+                    "lng": -121.25542545318604,
                     "country": "Unknown"
                 }
             }
@@ -2259,7 +2499,7 @@
                 ],
                 "epss": {
                     "epss": "0.009760000",
-                    "percentile": "0.626610000"
+                    "percentile": "0.626900000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -2925,11 +3165,11 @@
                 ],
                 "epss": {
                     "epss": "0.090820000",
-                    "percentile": "0.953780000"
+                    "percentile": "0.953820000"
                 },
                 "location": {
-                    "lat": 21.252081155776978,
-                    "lng": -128.74791884422302,
+                    "lat": 28.744581699371338,
+                    "lng": -121.25541830062866,
                     "country": "Unknown"
                 }
             }
@@ -3241,11 +3481,11 @@
                 ],
                 "epss": {
                     "epss": "0.109470000",
-                    "percentile": "0.959570000"
+                    "percentile": "0.959610000"
                 },
                 "location": {
-                    "lat": 21.252082347869873,
-                    "lng": -128.74791741371155,
+                    "lat": 28.744585275650024,
+                    "lng": -121.25541472434998,
                     "country": "Unknown"
                 }
             }
@@ -3389,7 +3629,7 @@
                 ],
                 "epss": {
                     "epss": "0.009620000",
-                    "percentile": "0.621880000"
+                    "percentile": "0.622170000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -3558,11 +3798,11 @@
                 ],
                 "epss": {
                     "epss": "0.005170000",
-                    "percentile": "0.445430000"
+                    "percentile": "0.445740000"
                 },
                 "location": {
-                    "lat": 21.252086639404297,
-                    "lng": -128.74791312217712,
+                    "lat": 28.74459218978882,
+                    "lng": -121.2554075717926,
                     "country": "Unknown"
                 }
             }
@@ -3865,11 +4105,11 @@
                 ],
                 "epss": {
                     "epss": "0.189000000",
-                    "percentile": "0.973410000"
+                    "percentile": "0.973440000"
                 },
                 "location": {
-                    "lat": 21.25208830833435,
-                    "lng": -128.74791169166565,
+                    "lat": 28.744596004486084,
+                    "lng": -121.25540375709534,
                     "country": "Unknown"
                 }
             }
@@ -4033,11 +4273,11 @@
                 ],
                 "epss": {
                     "epss": "0.024730000",
-                    "percentile": "0.847940000"
+                    "percentile": "0.848070000"
                 },
                 "location": {
-                    "lat": 21.252089738845825,
-                    "lng": -128.74790978431702,
+                    "lat": 28.74459981918335,
+                    "lng": -121.25540018081665,
                     "country": "Unknown"
                 }
             }
@@ -4187,7 +4427,7 @@
                 ],
                 "epss": {
                     "epss": "0.005350000",
-                    "percentile": "0.456970000"
+                    "percentile": "0.457280000"
                 },
                 "location": {
                     "lat": 41.1225,
@@ -4554,11 +4794,11 @@
                 ],
                 "epss": {
                     "epss": "0.005320000",
-                    "percentile": "0.455270000"
+                    "percentile": "0.455570000"
                 },
                 "location": {
-                    "lat": 21.252093076705933,
-                    "lng": -128.7479064464569,
+                    "lat": 28.744606494903564,
+                    "lng": -121.25539350509644,
                     "country": "Unknown"
                 }
             }
@@ -5052,7 +5292,7 @@
                 ],
                 "epss": {
                     "epss": "0.015020000",
-                    "percentile": "0.747300000"
+                    "percentile": "0.747490000"
                 },
                 "location": {
                     "lat": 37.3349,
@@ -5561,12 +5801,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.011990000",
-                    "percentile": "0.686700000"
+                    "epss": "0.015860000",
+                    "percentile": "0.760240000"
                 },
                 "location": {
-                    "lat": 21.25209641456604,
-                    "lng": -128.74790334701538,
+                    "lat": 28.74461340904236,
+                    "lng": -121.25538659095764,
                     "country": "Unknown"
                 }
             }
@@ -5736,7 +5976,7 @@
                 ],
                 "epss": {
                     "epss": "0.008220000",
-                    "percentile": "0.578860000"
+                    "percentile": "0.579190000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -5914,7 +6154,7 @@
                 ],
                 "epss": {
                     "epss": "0.005330000",
-                    "percentile": "0.455730000"
+                    "percentile": "0.456030000"
                 },
                 "location": {
                     "lat": 40.5247,
@@ -6178,8 +6418,8 @@
                     "percentile": "0.993690000"
                 },
                 "location": {
-                    "lat": 21.25210213661194,
-                    "lng": -128.74789786338806,
+                    "lat": 28.74462389945984,
+                    "lng": -121.25537610054016,
                     "country": "Unknown"
                 }
             }
@@ -7249,7 +7489,7 @@
                 ],
                 "epss": {
                     "epss": "0.008210000",
-                    "percentile": "0.578620000"
+                    "percentile": "0.578950000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -7257,375 +7497,26 @@
                     "country": "USA"
                 }
             }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-41709",
-                "sourceIdentifier": "security@vmware.com",
-                "published": "2026-07-30T14:16:57.420",
-                "lastModified": "2026-10-29T17:29:11.590",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "VMware ESX contains an insufficient logging vulnerability.\u00a0A malicious administrator could exploit this issue to perform certain operations without them being logged."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security@vmware.com",
-                        "affectedData": [
-                            {
-                                "vendor": "VMware",
-                                "product": "Cloud Foundation",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "9.1.x.x",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.0.x.x",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "5.x",
-                                        "lessThan": "5.2.4",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "VMware",
-                                "product": "vSphere Foundation",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "9.1.x.x",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.0.x.x",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "VMware",
-                                "product": "ESX",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "9.1.x.x",
-                                        "lessThan": "ESXi-9.1.0.0-25370933",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "9.0.x.x",
-                                        "lessThan": "ESXi-9.0.2.0100-25595025",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "8.0",
-                                        "lessThan": "ESXi80U3j-25429389",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            },
-                            {
-                                "vendor": "VMware",
-                                "product": "Telco Cloud Platform",
-                                "defaultStatus": "unaffected",
-                                "versions": [
-                                    {
-                                        "version": "5.1.x",
-                                        "status": "affected"
-                                    },
-                                    {
-                                        "version": "5.0.x",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "security@vmware.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
-                                "baseScore": 2.7,
-                                "baseSeverity": "LOW",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "HIGH",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "NONE",
-                                "integrityImpact": "LOW",
-                                "availabilityImpact": "NONE"
-                            },
-                            "exploitabilityScore": 1.2,
-                            "impactScore": 1.4
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-10-28T00:00:00+00:00",
-                                "id": "CVE-2026-41709",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "partial"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-10-28",
-                "cisaActionDue": "2026-11-11",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security@vmware.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-778"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "9.0.0",
-                                        "versionEndExcluding": "9.0.2.0100",
-                                        "matchCriteriaId": "D7DC2815-CD13-42DC-96E5-412CFB768A6A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7A1A402A-9262-4B97-A0B7-E5AE045E394D"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:a:*:*:*:*:*:*",
-                                        "matchCriteriaId": "FE44B379-9943-4DD1-8514-26F87482AFA8"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:b:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2A797377-8945-4D75-AA68-A768855E5842"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:c:*:*:*:*:*:*",
-                                        "matchCriteriaId": "79D84D76-54BE-49E9-905C-7D65B4B42D68"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:d:*:*:*:*:*:*",
-                                        "matchCriteriaId": "E3BC5C77-258A-4920-B217-396212056B14"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:e:*:*:*:*:*:*",
-                                        "matchCriteriaId": "17D484EB-037C-46E2-ADDF-846B3A02843F"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:f:*:*:*:*:*:*",
-                                        "matchCriteriaId": "9E689385-7521-4A7A-B81E-DD84A3B58238"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:g:*:*:*:*:*:*",
-                                        "matchCriteriaId": "69E59579-57D6-40BA-98FA-28D3C41BA222"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "2F8767F7-7C3D-457D-9EAC-E8A30796F751"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_1a:*:*:*:*:*:*",
-                                        "matchCriteriaId": "29AF8474-2D7A-4C5A-82B9-7A873AD90C2E"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_1c:*:*:*:*:*:*",
-                                        "matchCriteriaId": "7781A2CA-D927-48CD-9932-AE42B7BA1EFE"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_1d:*:*:*:*:*:*",
-                                        "matchCriteriaId": "18FD08C9-5895-4BF4-BBE0-C2DDA5F6B836"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2:*:*:*:*:*:*",
-                                        "matchCriteriaId": "360C1B71-5360-4379-B0DE-63BB8F5E6DA2"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2b:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B16ED7C1-9881-452A-8BE0-EDDEAEFE3D7B"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2c:*:*:*:*:*:*",
-                                        "matchCriteriaId": "ED92209F-FBD6-43F9-9A15-3842B139FCC9"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2d:*:*:*:*:*:*",
-                                        "matchCriteriaId": "C37C4F29-E18F-439B-83A2-16457D04BEE1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2e:*:*:*:*:*:*",
-                                        "matchCriteriaId": "934CDD6F-E611-4693-AD30-12F35E10A75C"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_2f:*:*:*:*:*:*",
-                                        "matchCriteriaId": "5E33AE07-0F0F-4030-B62A-65DD086648D1"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3:*:*:*:*:*:*",
-                                        "matchCriteriaId": "6B701151-1B57-4E2D-A9AB-586FACEA2385"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3b:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4230B9AA-9E0C-4AE2-814D-8DD641394879"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3c:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F2FA150B-93E4-44D2-BF6D-347085A95776"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3d:*:*:*:*:*:*",
-                                        "matchCriteriaId": "12356603-13A5-4CC7-813A-7FF3DFC21A95"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3e:*:*:*:*:*:*",
-                                        "matchCriteriaId": "F0EBA616-FA2A-4A2D-918E-2D32579DA1F3"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3f:*:*:*:*:*:*",
-                                        "matchCriteriaId": "B275C1D0-9CFF-46DF-9630-1DD7CA060A6A"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3g:*:*:*:*:*:*",
-                                        "matchCriteriaId": "D47EDD24-7244-471B-8752-37AA7BAA38DC"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3h:*:*:*:*:*:*",
-                                        "matchCriteriaId": "BEA3431E-7C96-435E-8771-C76386374568"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:o:vmware:esxi:8.0:update_3i:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4802C03A-C3BC-4295-BE05-6E569E9FEB8A"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:vmware:cloud_foundation:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "5.0",
-                                        "versionEndExcluding": "5.2.4",
-                                        "matchCriteriaId": "E1B59BCD-58B0-4E47-8990-80B03443DB1C"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:vmware:telco_cloud_platform:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "5.0",
-                                        "versionEndExcluding": "5.2",
-                                        "matchCriteriaId": "97FFC2CA-34F4-4822-93F1-0D645075462B"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:a:vmware:vsphere_foundation:-:*:*:*:*:*:*:*",
-                                        "matchCriteriaId": "03AD0AB7-45A3-4DC7-923D-1166346EEA12"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
-                        "source": "security@vmware.com",
-                        "tags": [
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41709",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.006890000",
-                    "percentile": "0.533140000"
-                },
-                "location": {
-                    "lat": 37.4024,
-                    "lng": -122.1481,
-                    "country": "USA"
-                }
-            }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-115731",
+            "vendorProject": "Perforce",
+            "product": "Puppet Enterprise",
+            "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+            "dateAdded": "2026-11-17",
+            "shortDescription": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet\u2019s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-12-01",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "No",
+            "notes": "https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
+            "cwes": [
+                "CWE-502",
+                "CWE-94"
+            ]
+        },
         {
             "cveID": "CVE-2026-114713",
             "vendorProject": "UnrealIRCd",
@@ -10066,7 +9957,7 @@
         },
         {
             "cveID": "CVE-2026-48558",
-            "vendorProject": "SimpleHelp ",
+            "vendorProject": "SimpleHelp",
             "product": "SimpleHelp",
             "vulnerabilityName": "SimpleHelp Authentication Bypass Vulnerability",
             "dateAdded": "2026-06-29",
@@ -10848,7 +10739,7 @@
         },
         {
             "cveID": "CVE-2024-57728",
-            "vendorProject": "SimpleHelp ",
+            "vendorProject": "SimpleHelp",
             "product": "SimpleHelp",
             "vulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
             "dateAdded": "2026-04-24",
@@ -10864,7 +10755,7 @@
         },
         {
             "cveID": "CVE-2024-57726",
-            "vendorProject": "SimpleHelp ",
+            "vendorProject": "SimpleHelp",
             "product": "SimpleHelp",
             "vulnerabilityName": "SimpleHelp Missing Authorization Vulnerability",
             "dateAdded": "2026-04-24",
@@ -12643,7 +12534,7 @@
         },
         {
             "cveID": "CVE-2025-66644",
-            "vendorProject": "Array Networks ",
+            "vendorProject": "Array Networks",
             "product": "ArrayOS AG",
             "vulnerabilityName": "Array Networks ArrayOS AG OS Command Injection Vulnerability",
             "dateAdded": "2025-12-08",
@@ -15776,7 +15667,7 @@
         },
         {
             "cveID": "CVE-2024-57727",
-            "vendorProject": "SimpleHelp ",
+            "vendorProject": "SimpleHelp",
             "product": "SimpleHelp",
             "vulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
             "dateAdded": "2025-02-13",
@@ -16540,7 +16431,7 @@
         },
         {
             "cveID": "CVE-2023-28461",
-            "vendorProject": "Array Networks ",
+            "vendorProject": "Array Networks",
             "product": "AG/vxAG ArrayOS",
             "vulnerabilityName": "Array Networks AG and vxAG ArrayOS Missing Authentication for Critical Function Vulnerability",
             "dateAdded": "2024-11-25",
@@ -35905,7 +35796,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-16T21:25:02.045967",
+    "last_updated": "2026-11-17T20:13:11.614229",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
