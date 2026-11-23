@@ -2,6 +2,279 @@
     "nvd_cves": [
         {
             "cve": {
+                "id": "CVE-2026-133968",
+                "sourceIdentifier": "cve@mitre.org",
+                "published": "2026-11-20T19:18:51.670",
+                "lastModified": "2026-11-23T21:16:58.763",
+                "vulnStatus": "Received",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "cve@mitre.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Project-MONIA",
+                                "product": "MONAI Label",
+                                "defaultStatus": "unaffected",
+                                "packageURL": "pkg:pypi/monailabel",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "0.8.6",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV31": [
+                        {
+                            "source": "cve@mitre.org",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "3.1",
+                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                                "baseScore": 9.8,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "privilegesRequired": "NONE",
+                                "userInteraction": "NONE",
+                                "scope": "UNCHANGED",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "availabilityImpact": "HIGH"
+                            },
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 5.9
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-23T20:42:05.606837Z",
+                                "id": "CVE-2026-133968",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "yes"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-23",
+                "cisaActionDue": "2026-11-26",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "cve@mitre.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-24"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://github.com/Project-MONAI/MONAILabel/pull/1915",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382",
+                        "source": "cve@mitre.org"
+                    },
+                    {
+                        "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133968",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.036640000",
+                    "percentile": "0.899210000"
+                },
+                "location": {
+                    "lat": -1.867678165435791,
+                    "lng": 28.132325887680054,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-134624",
+                "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                "published": "2026-11-22T19:16:32.163",
+                "lastModified": "2026-11-23T21:17:00.677",
+                "vulnStatus": "Received",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "affectedData": [
+                            {
+                                "vendor": "N-able",
+                                "product": "MailAssure",
+                                "defaultStatus": "unaffected",
+                                "versions": [
+                                    {
+                                        "version": "0",
+                                        "lessThan": "20261121.1943",
+                                        "versionType": "custom",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV40": [
+                        {
+                            "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                            "type": "Secondary",
+                            "cvssData": {
+                                "version": "4.0",
+                                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                                "baseScore": 9.3,
+                                "baseSeverity": "CRITICAL",
+                                "attackVector": "NETWORK",
+                                "attackComplexity": "LOW",
+                                "attackRequirements": "NONE",
+                                "privilegesRequired": "HIGH",
+                                "userInteraction": "NONE",
+                                "vulnConfidentialityImpact": "HIGH",
+                                "vulnIntegrityImpact": "HIGH",
+                                "vulnAvailabilityImpact": "NONE",
+                                "subConfidentialityImpact": "HIGH",
+                                "subIntegrityImpact": "HIGH",
+                                "subAvailabilityImpact": "NONE",
+                                "exploitMaturity": "NOT_DEFINED",
+                                "confidentialityRequirement": "NOT_DEFINED",
+                                "integrityRequirement": "NOT_DEFINED",
+                                "availabilityRequirement": "NOT_DEFINED",
+                                "modifiedAttackVector": "NOT_DEFINED",
+                                "modifiedAttackComplexity": "NOT_DEFINED",
+                                "modifiedAttackRequirements": "NOT_DEFINED",
+                                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                                "modifiedUserInteraction": "NOT_DEFINED",
+                                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                                "Safety": "NOT_DEFINED",
+                                "Automatable": "NOT_DEFINED",
+                                "Recovery": "NOT_DEFINED",
+                                "valueDensity": "NOT_DEFINED",
+                                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                                "providerUrgency": "NOT_DEFINED"
+                            }
+                        }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-23T20:42:12.465162Z",
+                                "id": "CVE-2026-134624",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
+                    ]
+                },
+                "cisaExploitAdd": "2026-11-23",
+                "cisaActionDue": "2026-11-26",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-918"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA",
+                        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-134624",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.003540000",
+                    "percentile": "0.296900000"
+                },
+                "location": {
+                    "lat": -1.8676676750183105,
+                    "lng": 28.132333278656006,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
                 "id": "CVE-2026-129448",
                 "sourceIdentifier": "security@apache.org",
                 "published": "2026-11-17T11:17:28.190",
@@ -162,7 +435,7 @@
                 ],
                 "epss": {
                     "epss": "0.054590000",
-                    "percentile": "0.929390000"
+                    "percentile": "0.929400000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -585,7 +858,7 @@
                 ],
                 "epss": {
                     "epss": "0.035260000",
-                    "percentile": "0.895300000"
+                    "percentile": "0.895330000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -738,8 +1011,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.007140000",
-                    "percentile": "0.546030000"
+                    "epss": "0.009020000",
+                    "percentile": "0.606440000"
                 },
                 "location": {
                     "lat": 49.2933,
@@ -1259,7 +1532,7 @@
                 ],
                 "epss": {
                     "epss": "0.021870000",
-                    "percentile": "0.828750000"
+                    "percentile": "0.828790000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -1520,7 +1793,7 @@
                 ],
                 "epss": {
                     "epss": "0.031290000",
-                    "percentile": "0.881880000"
+                    "percentile": "0.881910000"
                 },
                 "location": {
                     "lat": 25.0478,
@@ -1821,12 +2094,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.780040000",
-                    "percentile": "0.995810000"
+                    "epss": "0.827990000",
+                    "percentile": "0.996780000"
                 },
                 "location": {
-                    "lat": 2.177727222442627,
-                    "lng": -87.82226824760437,
+                    "lat": -1.8676338195800781,
+                    "lng": 28.1323664188385,
                     "country": "Unknown"
                 }
             }
@@ -1995,8 +2268,8 @@
                     "percentile": "0.984480000"
                 },
                 "location": {
-                    "lat": 2.1777377128601074,
-                    "lng": -87.82226133346558,
+                    "lat": -1.8676292896270752,
+                    "lng": 28.132370948791504,
                     "country": "Unknown"
                 }
             }
@@ -2195,8 +2468,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.038130000",
-                    "percentile": "0.903140000"
+                    "epss": "0.058740000",
+                    "percentile": "0.933950000"
                 },
                 "location": {
                     "lat": 33.4484,
@@ -2435,12 +2708,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.012310000",
-                    "percentile": "0.696970000"
+                    "epss": "0.128390000",
+                    "percentile": "0.963920000"
                 },
                 "location": {
-                    "lat": 2.1777472496032715,
-                    "lng": -87.82225251197815,
+                    "lat": -1.8676209449768066,
+                    "lng": 28.132379055023193,
                     "country": "Unknown"
                 }
             }
@@ -2450,7 +2723,7 @@
                 "id": "CVE-2026-114713",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-08T03:16:33.410",
-                "lastModified": "2026-11-16T12:51:36.280",
+                "lastModified": "2026-11-23T14:10:29.030",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -2624,20 +2897,29 @@
                         ]
                     },
                     {
+                        "url": "http://www.openwall.com/lists/oss-security/2026/11/23/16",
+                        "source": "af854a3a-2127-422b-91ae-364da2661108",
+                        "tags": [
+                            "Mailing List",
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
                         "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114713",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "US Government Resource"
+                            "US Government Resource",
+                            "Third Party Advisory"
                         ]
                     }
                 ],
                 "epss": {
                     "epss": "0.011480000",
-                    "percentile": "0.676530000"
+                    "percentile": "0.676610000"
                 },
                 "location": {
-                    "lat": 2.1777522563934326,
-                    "lng": -87.82224750518799,
+                    "lat": -1.8676166534423828,
+                    "lng": 28.132383584976196,
                     "country": "Unknown"
                 }
             }
@@ -4182,11 +4464,11 @@
                 ],
                 "epss": {
                     "epss": "0.032690000",
-                    "percentile": "0.887150000"
+                    "percentile": "0.887160000"
                 },
                 "location": {
-                    "lat": 2.1777570247650146,
-                    "lng": -87.82224297523499,
+                    "lat": -1.8676118850708008,
+                    "lng": 28.1323881149292,
                     "country": "Unknown"
                 }
             }
@@ -4381,8 +4663,8 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.019390000",
-                    "percentile": "0.806590000"
+                    "epss": "0.248940000",
+                    "percentile": "0.979590000"
                 },
                 "location": {
                     "lat": 47.674,
@@ -4540,11 +4822,11 @@
                 ],
                 "epss": {
                     "epss": "0.011720000",
-                    "percentile": "0.682420000"
+                    "percentile": "0.682500000"
                 },
                 "location": {
-                    "lat": 2.177765130996704,
-                    "lng": -87.8222348690033,
+                    "lat": -1.8676021099090576,
+                    "lng": 28.132397890090942,
                     "country": "Unknown"
                 }
             }
@@ -4704,7 +4986,7 @@
                 ],
                 "epss": {
                     "epss": "0.016820000",
-                    "percentile": "0.775600000"
+                    "percentile": "0.775660000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -5373,8 +5655,8 @@
                     "percentile": "0.992390000"
                 },
                 "location": {
-                    "lat": 2.177772283554077,
-                    "lng": -87.82222771644592,
+                    "lat": -1.8675928115844727,
+                    "lng": 28.132407188415527,
                     "country": "Unknown"
                 }
             }
@@ -5689,8 +5971,8 @@
                     "percentile": "0.995060000"
                 },
                 "location": {
-                    "lat": 2.1777758598327637,
-                    "lng": -87.82222390174866,
+                    "lat": -1.8675882816314697,
+                    "lng": 28.13241171836853,
                     "country": "Unknown"
                 }
             }
@@ -5834,7 +6116,7 @@
                 ],
                 "epss": {
                     "epss": "0.068000000",
-                    "percentile": "0.941560000"
+                    "percentile": "0.941580000"
                 },
                 "location": {
                     "lat": 37.422,
@@ -6006,489 +6288,46 @@
                     "percentile": "0.973510000"
                 },
                 "location": {
-                    "lat": 2.177783727645874,
-                    "lng": -87.82221627235413,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-123158",
-                "sourceIdentifier": "cve@mitre.org",
-                "published": "2026-11-05T16:17:47.110",
-                "lastModified": "2026-11-10T13:48:52.110",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux."
-                    },
-                    {
-                        "lang": "es",
-                        "value": "sshd en OpenSSH anterior a la versi\u00f3n 10.6p2 en Linux, cuando se utiliza musl libc sin PAM, carece de una soluci\u00f3n alternativa para una omisi\u00f3n de autenticaci\u00f3n de contrase\u00f1a (relacionado con la mala interpretaci\u00f3n de si una cadena est\u00e1 destinada a ser un hash de contrase\u00f1a). Para algunas configuraciones de cuentas, cualquier contrase\u00f1a entre 256 y 1024 caracteres tiene \u00e9xito. Un ejemplo de plataforma que utiliza musl libc sin PAM es Alpine Linux."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "cve@mitre.org",
-                        "affectedData": [
-                            {
-                                "vendor": "OpenBSD",
-                                "product": "OpenSSH",
-                                "defaultStatus": "unaffected",
-                                "platforms": [
-                                    "Linux"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "10.6p2",
-                                        "versionType": "custom",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "cve@mitre.org",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 8.1,
-                                "baseSeverity": "HIGH",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "HIGH",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 2.2,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-11-05T00:00:00+00:00",
-                                "id": "CVE-2026-123158",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "no"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-11-09",
-                "cisaActionDue": "2026-11-12",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "cve@mitre.org",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-394"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "operator": "AND",
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "10.6",
-                                        "matchCriteriaId": "09209468-5A53-45C0-8698-8C668E53EBEA"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:openbsd:openssh:10.6:-:*:*:*:*:*:*",
-                                        "matchCriteriaId": "4C93748B-FD1E-4BD4-9D18-0D4D2BD9C518"
-                                    },
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:openbsd:openssh:10.6:p1:*:*:*:*:*:*",
-                                        "matchCriteriaId": "AD8BE997-294C-4E7A-A714-6FCED9884258"
-                                    }
-                                ]
-                            },
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "3.21.10",
-                                        "matchCriteriaId": "70B1C408-9879-44A0-ADA0-5E0B0B3447EA"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "3.22.0",
-                                        "versionEndExcluding": "3.22.8",
-                                        "matchCriteriaId": "D4963B56-DEDA-43CE-B636-6715C4C3C1EE"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "3.23.0",
-                                        "versionEndExcluding": "3.23.8",
-                                        "matchCriteriaId": "3C30A060-F2D9-4A44-A839-7CE86E222A88"
-                                    },
-                                    {
-                                        "vulnerable": false,
-                                        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
-                                        "versionStartIncluding": "3.24.0",
-                                        "versionEndExcluding": "3.24.4",
-                                        "matchCriteriaId": "3A5F114B-8B24-43BB-AF9C-F2AB8A12F3B0"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/leonjza/sshhole-lab",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/predkambrij/sshhole-repro",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Exploit",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://hachyderm.io/@damienmiller/117563026759098135",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Mailing List",
-                            "Vendor Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://news.ycombinator.com/item?id=50377976",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Issue Tracking"
-                        ]
-                    },
-                    {
-                        "url": "https://news.ycombinator.com/item?id=50378228",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Issue Tracking"
-                        ]
-                    },
-                    {
-                        "url": "https://www.openssh.org/releasenotes.html#10.6p2",
-                        "source": "cve@mitre.org",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "http://www.openwall.com/lists/oss-security/2026/11/09/27",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Mailing List"
-                        ]
-                    },
-                    {
-                        "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/coollabsio/coolify/discussions/12484",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/google/goonami-scanner/pull/277",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/panubo/docker-sshd/issues/93",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://news.ycombinator.com/item?id=50379704",
-                        "source": "af854a3a-2127-422b-91ae-364da2661108",
-                        "tags": [
-                            "Issue Tracking"
-                        ]
-                    },
-                    {
-                        "url": "https://isc.sans.edu/diary.html?storyid=33498",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Not Applicable"
-                        ]
-                    },
-                    {
-                        "url": "https://sshhole.com",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://sshole.events.greynoise.io/",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123158",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.955380000",
-                    "percentile": "0.998710000"
-                },
-                "location": {
-                    "lat": 2.1777873039245605,
-                    "lng": -87.82221269607544,
-                    "country": "Unknown"
-                }
-            }
-        },
-        {
-            "cve": {
-                "id": "CVE-2026-116779",
-                "sourceIdentifier": "security-advisories@github.com",
-                "published": "2026-11-05T20:17:44.790",
-                "lastModified": "2026-11-10T05:17:57.830",
-                "vulnStatus": "Analyzed",
-                "cveTags": [],
-                "descriptions": [
-                    {
-                        "lang": "en",
-                        "value": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.3, sofia_presence_handle_sip_i_message() split the To user of an inbound SIP MESSAGE on a plus sign and treated the left side as a chat protocol selector. Selecting the api chat proto reached switch_api_execute(), allowing a peer whose MESSAGE was accepted to run FreeSWITCH API commands, including operating-system command sinks, with the daemon's privileges. Inbound chat is enabled on the stock internal and external profiles, and any authenticated profile account is sufficient; stock directory users without password material can also remove that barrier in affected configurations. The flaw permits configuration and credential disclosure, arbitrary call control, and command execution, and exploitation has been observed in the wild. This issue is fixed in version 1.11.3."
-                    }
-                ],
-                "affected": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "affectedData": [
-                            {
-                                "vendor": "signalwire",
-                                "product": "freeswitch",
-                                "versions": [
-                                    {
-                                        "version": "< 1.11.3",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "metrics": {
-                    "cvssMetricV31": [
-                        {
-                            "source": "security-advisories@github.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.1",
-                                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                                "baseScore": 9.8,
-                                "baseSeverity": "CRITICAL",
-                                "attackVector": "NETWORK",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "NONE",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH"
-                            },
-                            "exploitabilityScore": 3.9,
-                            "impactScore": 5.9
-                        }
-                    ],
-                    "ssvcV203": [
-                        {
-                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                            "ssvcData": {
-                                "timestamp": "2026-11-06T00:00:00+00:00",
-                                "id": "CVE-2026-116779",
-                                "options": [
-                                    {
-                                        "exploitation": "active"
-                                    },
-                                    {
-                                        "automatable": "yes"
-                                    },
-                                    {
-                                        "technicalImpact": "total"
-                                    }
-                                ],
-                                "role": "CISA Coordinator",
-                                "version": "2.0.3"
-                            }
-                        }
-                    ]
-                },
-                "cisaExploitAdd": "2026-11-09",
-                "cisaActionDue": "2026-11-12",
-                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-                "cisaVulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability",
-                "weaknesses": [
-                    {
-                        "source": "security-advisories@github.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-77"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-78"
-                            },
-                            {
-                                "lang": "en",
-                                "value": "CWE-749"
-                            }
-                        ]
-                    }
-                ],
-                "configurations": [
-                    {
-                        "nodes": [
-                            {
-                                "operator": "OR",
-                                "negate": false,
-                                "cpeMatch": [
-                                    {
-                                        "vulnerable": true,
-                                        "criteria": "cpe:2.3:a:freeswitch:freeswitch:*:*:*:*:*:*:*:*",
-                                        "versionEndExcluding": "1.11.3",
-                                        "matchCriteriaId": "FABBABC9-CD91-486F-8E9E-16692A1A45BB"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "references": [
-                    {
-                        "url": "https://github.com/signalwire/freeswitch/commit/7015f6a73ab3d67fed5fbfc277ecfb88a74c2a86",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/signalwire/freeswitch/pull/3135",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Patch"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/signalwire/freeswitch/releases/tag/v1.11.3",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Release Notes"
-                        ]
-                    },
-                    {
-                        "url": "https://github.com/signalwire/freeswitch/security/advisories/GHSA-mg63-h38w-8p9p",
-                        "source": "security-advisories@github.com",
-                        "tags": [
-                            "Mitigation",
-                            "Third Party Advisory"
-                        ]
-                    },
-                    {
-                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116779",
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "tags": [
-                            "US Government Resource"
-                        ]
-                    }
-                ],
-                "epss": {
-                    "epss": "0.441120000",
-                    "percentile": "0.987840000"
-                },
-                "location": {
-                    "lat": 2.177791118621826,
-                    "lng": -87.82220888137817,
+                    "lat": -1.8675799369812012,
+                    "lng": 28.132420301437378,
                     "country": "Unknown"
                 }
             }
         }
     ],
     "cisa_kev": [
+        {
+            "cveID": "CVE-2026-133968",
+            "vendorProject": "Project MONAI",
+            "product": "MONAI Label",
+            "vulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability",
+            "dateAdded": "2026-11-23",
+            "shortDescription": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-26",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94 ; https://github.com/Project-MONAI/MONAILabel/pull/1915 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+            "cwes": [
+                "CWE-24"
+            ]
+        },
+        {
+            "cveID": "CVE-2026-134624",
+            "vendorProject": "N-able",
+            "product": "MailAssure",
+            "vulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+            "dateAdded": "2026-11-23",
+            "shortDescription": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+            "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+            "dueDate": "2026-11-26",
+            "knownRansomwareCampaignUse": "Unknown",
+            "forensicTriage": "Yes",
+            "notes": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-134624",
+            "cwes": [
+                "CWE-918"
+            ]
+        },
         {
             "cveID": "CVE-2026-129448",
             "vendorProject": "Apache",
@@ -6562,7 +6401,7 @@
             "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
             "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
             "dueDate": "2026-11-21",
-            "knownRansomwareCampaignUse": "Unknown",
+            "knownRansomwareCampaignUse": "Known",
             "forensicTriage": "Yes",
             "notes": "https://www.synology.com/zh-tw/security/advisory/Synology_SA_24_20 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2024-10441",
             "cwes": [
@@ -34914,7 +34753,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-22T18:49:45.664560",
+    "last_updated": "2026-11-23T23:03:39.512899",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
