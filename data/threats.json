@@ -5,7 +5,7 @@
                 "id": "CVE-2026-103406",
                 "sourceIdentifier": "sirt@juniper.net",
                 "published": "2026-10-28T17:17:25.830",
-                "lastModified": "2026-11-25T18:21:06.383",
+                "lastModified": "2026-11-26T05:18:07.963",
                 "vulnStatus": "Analyzed",
                 "cveTags": [],
                 "descriptions": [
@@ -73,14 +73,14 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-25T15:15:11.579452Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-103406",
                                 "options": [
                                     {
                                         "exploitation": "active"
                                     },
                                     {
-                                        "automatable": "no"
+                                        "automatable": "yes"
                                     },
                                     {
                                         "technicalImpact": "total"
@@ -157,12 +157,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.008600000",
-                    "percentile": "0.560190000"
+                    "epss": "0.015350000",
+                    "percentile": "0.751570000"
                 },
                 "location": {
-                    "lat": -26.332063913345337,
-                    "lng": -56.33205842971802,
+                    "lat": -16.85842204093933,
+                    "lng": -166.85841846466064,
                     "country": "Unknown"
                 }
             }
@@ -172,8 +172,8 @@
                 "id": "CVE-2026-133469",
                 "sourceIdentifier": "security-advisories@github.com",
                 "published": "2026-11-23T17:17:31.780",
-                "lastModified": "2026-11-25T18:05:19.490",
-                "vulnStatus": "Undergoing Analysis",
+                "lastModified": "2026-11-26T05:18:22.960",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -243,11 +243,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-23T18:25:22.157847Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-133469",
                                 "options": [
                                     {
-                                        "exploitation": "poc"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -262,6 +262,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
                 "weaknesses": [
                     {
                         "source": "security-advisories@github.com",
@@ -278,35 +282,106 @@
                         ]
                     }
                 ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:xen-orchestra:xen_orchestra_server:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.211.2",
+                                        "matchCriteriaId": "3E8C03C0-024B-4FCE-9164-372D69DF0200"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:xen-orchestra:xen_orchestra_server:*:*:*:*:*:*:*:*",
+                                        "versionStartExcluding": "5.213.0",
+                                        "versionEndExcluding": "5.213.1",
+                                        "matchCriteriaId": "7D118D93-DCC7-4D05-98CE-8F09513BA40C"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:xen-orchestra:xen_orchestra:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "6.9.2",
+                                        "matchCriteriaId": "EF6FEDF9-B26A-49F6-BF12-907EBF34C1BC"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:xen-orchestra:xen_orchestra:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "6.10.0",
+                                        "versionEndExcluding": "6.10.1",
+                                        "matchCriteriaId": "DE776431-41F9-43B3-BA1F-369EEA783964"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "references": [
                     {
                         "url": "https://docs.vates.tech/security-advisories/advisories/2026/vates-sa-2026-062",
-                        "source": "security-advisories@github.com"
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Mitigation",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://github.com/vatesfr/xen-orchestra/commit/50166fe3a49c02069d35ba9046ca4a1f77f4e11d",
-                        "source": "security-advisories@github.com"
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Patch"
+                        ]
                     },
                     {
                         "url": "https://github.com/vatesfr/xen-orchestra/pull/10748",
-                        "source": "security-advisories@github.com"
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Issue Tracking",
+                            "Patch"
+                        ]
                     },
                     {
                         "url": "https://github.com/vatesfr/xen-orchestra/security/advisories/GHSA-2r3w-c2vx-fv5g",
-                        "source": "security-advisories@github.com"
+                        "source": "security-advisories@github.com",
+                        "tags": [
+                            "Exploit",
+                            "Vendor Advisory"
+                        ]
                     },
                     {
                         "url": "https://github.com/vatesfr/xen-orchestra/security/advisories/GHSA-2r3w-c2vx-fv5g",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                        "tags": [
+                            "Exploit",
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133469",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.011010000",
-                    "percentile": "0.652580000"
+                    "epss": "0.317680000",
+                    "percentile": "0.987000000"
                 },
                 "location": {
-                    "lat": -26.332051992416382,
-                    "lng": -56.332051277160645,
+                    "lat": -16.858410596847534,
+                    "lng": -166.8584098815918,
                     "country": "Unknown"
                 }
             }
@@ -316,8 +391,8 @@
                 "id": "CVE-2025-41450",
                 "sourceIdentifier": "d7ff35af-cf88-454c-bab9-af60602f10f8",
                 "published": "2025-05-08T10:15:18.380",
-                "lastModified": "2026-11-25T20:24:42.883",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:07.057",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -396,11 +471,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-10-19T19:12:01.666467Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2025-41450",
                                 "options": [
                                     {
-                                        "exploitation": "poc"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -415,6 +490,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-12-09",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
                 "weaknesses": [
                     {
                         "source": "d7ff35af-cf88-454c-bab9-af60602f10f8",
@@ -469,18 +548,22 @@
                         "url": "https://github.com/msuiche/fromagegate",
                         "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                         "tags": [
-                            "Third Party Advisory",
-                            "Exploit"
+                            "Exploit",
+                            "Third Party Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-41450",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.005130000",
-                    "percentile": "0.370310000"
+                    "epss": "0.042710000",
+                    "percentile": "0.918570000"
                 },
                 "location": {
-                    "lat": -26.332045793533325,
-                    "lng": -56.332045555114746,
+                    "lat": -16.858404397964478,
+                    "lng": -166.8584041595459,
                     "country": "Unknown"
                 }
             }
@@ -490,8 +573,8 @@
                 "id": "CVE-2023-25914",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2023-08-21T21:15:08.970",
-                "lastModified": "2026-06-17T05:42:15.393",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:17:48.717",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -514,27 +597,6 @@
                                 "versions": [
                                     {
                                         "version": "< 3.3",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "affectedData": [
-                            {
-                                "vendor": "danfoss",
-                                "product": "ak-sm_800a",
-                                "defaultStatus": "unknown",
-                                "cpes": [
-                                    "cpe:2.3:h:danfoss:ak-sm_800a:-:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThan": "3.3",
-                                        "versionType": "custom",
                                         "status": "affected"
                                     }
                                 ]
@@ -589,11 +651,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2025-07-02T14:46:32.023415Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2023-25914",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -608,6 +670,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Danfoss AK-SM 800A Series Path Traversal Vulnerability",
                 "weaknesses": [
                     {
                         "source": "csirt@divd.nl",
@@ -688,15 +754,19 @@
                         "tags": [
                             "Third Party Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-25914",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.010780000",
-                    "percentile": "0.645850000"
+                    "epss": "0.018450000",
+                    "percentile": "0.795690000"
                 },
                 "location": {
-                    "lat": -26.33204197883606,
-                    "lng": -56.33204174041748,
+                    "lat": -16.858400583267212,
+                    "lng": -166.8584005832672,
                     "country": "Unknown"
                 }
             }
@@ -706,8 +776,8 @@
                 "id": "CVE-2023-25915",
                 "sourceIdentifier": "csirt@divd.nl",
                 "published": "2023-08-21T21:15:09.170",
-                "lastModified": "2026-06-17T05:42:15.520",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:17:53.213",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -730,27 +800,6 @@
                                 "versions": [
                                     {
                                         "version": "< 3.3",
-                                        "status": "affected"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-                        "affectedData": [
-                            {
-                                "vendor": "danfoss",
-                                "product": "ak-sm_800a_firmware",
-                                "defaultStatus": "unaffected",
-                                "cpes": [
-                                    "cpe:2.3:o:danfoss:ak-sm_800a_firmware:-:*:*:*:*:*:*:*"
-                                ],
-                                "versions": [
-                                    {
-                                        "version": "0",
-                                        "lessThanOrEqual": "3.3",
-                                        "versionType": "custom",
                                         "status": "affected"
                                     }
                                 ]
@@ -805,11 +854,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2024-10-03T19:42:57.224088Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2023-25915",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -824,6 +873,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
                 "weaknesses": [
                     {
                         "source": "csirt@divd.nl",
@@ -904,15 +957,19 @@
                         "tags": [
                             "Third Party Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-25915",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.014310000",
-                    "percentile": "0.732350000"
+                    "epss": "0.024850000",
+                    "percentile": "0.853310000"
                 },
                 "location": {
-                    "lat": -26.332037687301636,
-                    "lng": -56.332037687301636,
+                    "lat": -16.858397245407104,
+                    "lng": -166.85839700698853,
                     "country": "Unknown"
                 }
             }
@@ -922,8 +979,8 @@
                 "id": "CVE-2026-133324",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-19T17:18:53.017",
-                "lastModified": "2026-11-25T20:23:03.367",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:22.280",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -978,11 +1035,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-19T18:45:11.346894Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-133324",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -997,6 +1054,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mitel MiCollab Not Failing Securely Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@mitre.org",
@@ -1032,18 +1093,26 @@
                         "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
                         "source": "cve@mitre.org",
                         "tags": [
-                            "Vendor Advisory",
-                            "Mitigation"
+                            "Mitigation",
+                            "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133324",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.004140000",
-                    "percentile": "0.273000000"
+                    "epss": "0.008320000",
+                    "percentile": "0.548080000"
                 },
                 "location": {
-                    "lat": -26.33203387260437,
-                    "lng": -56.33203363418579,
+                    "lat": -16.85839343070984,
+                    "lng": -166.85839319229126,
                     "country": "Unknown"
                 }
             }
@@ -1053,8 +1122,8 @@
                 "id": "CVE-2026-133275",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-19T16:21:31.033",
-                "lastModified": "2026-11-25T20:23:23.440",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:20.573",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1109,11 +1178,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-19T18:55:14.630149Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-133275",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -1128,6 +1197,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@mitre.org",
@@ -1163,18 +1236,26 @@
                         "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
                         "source": "cve@mitre.org",
                         "tags": [
-                            "Vendor Advisory",
-                            "Mitigation"
+                            "Mitigation",
+                            "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133275",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.003150000",
-                    "percentile": "0.168600000"
+                    "epss": "0.007710000",
+                    "percentile": "0.520580000"
                 },
                 "location": {
-                    "lat": -26.332030057907104,
-                    "lng": -56.332030057907104,
+                    "lat": -16.85839009284973,
+                    "lng": -166.85838985443115,
                     "country": "Unknown"
                 }
             }
@@ -1184,8 +1265,8 @@
                 "id": "CVE-2026-133311",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-19T17:18:52.740",
-                "lastModified": "2026-11-25T20:23:13.953",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:21.543",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1240,11 +1321,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-24T03:38:51.666621Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-133311",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "no"
@@ -1259,6 +1340,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-12-09",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mitel MiCollab Weak Authentication Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@mitre.org",
@@ -1297,15 +1382,23 @@
                             "Mitigation",
                             "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133311",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.003960000",
-                    "percentile": "0.253700000"
+                    "epss": "0.009850000",
+                    "percentile": "0.611870000"
                 },
                 "location": {
-                    "lat": -26.332026720046997,
-                    "lng": -56.33202648162842,
+                    "lat": -16.858386754989624,
+                    "lng": -166.85838651657104,
                     "country": "Unknown"
                 }
             }
@@ -1315,8 +1408,8 @@
                 "id": "CVE-2026-133303",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-19T17:18:51.670",
-                "lastModified": "2026-11-25T20:23:20.250",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:21.160",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1386,12 +1479,38 @@
                             "exploitabilityScore": 3.9,
                             "impactScore": 5.9
                         }
+                    ],
+                    "ssvcV203": [
+                        {
+                            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+                            "ssvcData": {
+                                "timestamp": "2026-11-25T00:00:00+00:00",
+                                "id": "CVE-2026-133303",
+                                "options": [
+                                    {
+                                        "exploitation": "active"
+                                    },
+                                    {
+                                        "automatable": "no"
+                                    },
+                                    {
+                                        "technicalImpact": "total"
+                                    }
+                                ],
+                                "role": "CISA Coordinator",
+                                "version": "2.0.3"
+                            }
+                        }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mitel MiCollab XML Injection Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@mitre.org",
-                        "type": "Primary",
+                        "type": "Secondary",
                         "description": [
                             {
                                 "lang": "en",
@@ -1426,15 +1545,23 @@
                             "Mitigation",
                             "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133303",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.005150000",
-                    "percentile": "0.371110000"
+                    "epss": "0.013260000",
+                    "percentile": "0.710780000"
                 },
                 "location": {
-                    "lat": -26.33202314376831,
-                    "lng": -56.33202266693115,
+                    "lat": -16.858383417129517,
+                    "lng": -166.85838317871094,
                     "country": "Unknown"
                 }
             }
@@ -1444,8 +1571,8 @@
                 "id": "CVE-2026-133323",
                 "sourceIdentifier": "cve@mitre.org",
                 "published": "2026-11-19T17:18:52.880",
-                "lastModified": "2026-11-25T20:23:07.210",
-                "vulnStatus": "Analyzed",
+                "lastModified": "2026-11-26T05:18:21.963",
+                "vulnStatus": "Modified",
                 "cveTags": [],
                 "descriptions": [
                     {
@@ -1520,11 +1647,11 @@
                         {
                             "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
                             "ssvcData": {
-                                "timestamp": "2026-11-25T15:40:40.794648Z",
+                                "timestamp": "2026-11-25T00:00:00+00:00",
                                 "id": "CVE-2026-133323",
                                 "options": [
                                     {
-                                        "exploitation": "none"
+                                        "exploitation": "active"
                                     },
                                     {
                                         "automatable": "yes"
@@ -1539,6 +1666,10 @@
                         }
                     ]
                 },
+                "cisaExploitAdd": "2026-11-25",
+                "cisaActionDue": "2026-11-28",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Mitel MiCollab OS Command Injection Vulnerability",
                 "weaknesses": [
                     {
                         "source": "cve@mitre.org",
@@ -1577,15 +1708,23 @@
                             "Mitigation",
                             "Vendor Advisory"
                         ]
+                    },
+                    {
+                        "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+                    },
+                    {
+                        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133323",
+                        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
                     }
                 ],
                 "epss": {
-                    "epss": "0.025460000",
-                    "percentile": "0.857250000"
+                    "epss": "0.056280000",
+                    "percentile": "0.937130000"
                 },
                 "location": {
-                    "lat": -26.332020044326782,
-                    "lng": -56.33202004432678,
+                    "lat": -16.858379125595093,
+                    "lng": -166.8583791255951,
                     "country": "Unknown"
                 }
             }
@@ -1845,12 +1984,12 @@
                     }
                 ],
                 "epss": {
-                    "epss": "0.007840000",
-                    "percentile": "0.525430000"
+                    "epss": "0.010550000",
+                    "percentile": "0.638220000"
                 },
                 "location": {
-                    "lat": -26.33201575279236,
-                    "lng": -56.33201575279236,
+                    "lat": -16.85837483406067,
+                    "lng": -166.85837483406067,
                     "country": "Unknown"
                 }
             }
@@ -2049,11 +2188,92 @@
                 ],
                 "epss": {
                     "epss": "0.042920000",
-                    "percentile": "0.918900000"
+                    "percentile": "0.918970000"
                 },
                 "location": {
-                    "lat": -26.332010984420776,
-                    "lng": -56.332010984420776,
+                    "lat": -16.858370304107666,
+                    "lng": -166.8583700656891,
+                    "country": "Unknown"
+                }
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2026-132165",
+                "sourceIdentifier": "mlhess@drupal.org",
+                "published": "2026-11-26T01:17:10.290",
+                "lastModified": "2026-11-26T01:17:10.290",
+                "vulnStatus": "Received",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13."
+                    }
+                ],
+                "affected": [
+                    {
+                        "source": "mlhess@drupal.org",
+                        "affectedData": [
+                            {
+                                "vendor": "Drupal",
+                                "product": "Drupal core",
+                                "collectionURL": "https://www.drupal.org/project/drupal",
+                                "repo": "https://git.drupalcode.org/project/drupal",
+                                "versions": [
+                                    {
+                                        "version": "0.0.0",
+                                        "lessThan": "10.6.22",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.0.0",
+                                        "lessThan": "11.3.22",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    },
+                                    {
+                                        "version": "11.4.0",
+                                        "lessThan": "11.4.13",
+                                        "versionType": "semver",
+                                        "status": "affected"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {},
+                "cisaExploitAdd": "2026-11-24",
+                "cisaActionDue": "2026-11-27",
+                "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+                "cisaVulnerabilityName": "Drupal Core Remote Code Execution Vulnerability",
+                "weaknesses": [
+                    {
+                        "source": "mlhess@drupal.org",
+                        "type": "Secondary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.drupal.org/sa-core-2026-017",
+                        "source": "mlhess@drupal.org"
+                    }
+                ],
+                "epss": {
+                    "epss": "0.110530000",
+                    "percentile": "0.966270000"
+                },
+                "location": {
+                    "lat": -16.858367919921875,
+                    "lng": -166.85836791992188,
                     "country": "Unknown"
                 }
             }
@@ -2220,11 +2440,11 @@
                 ],
                 "epss": {
                     "epss": "0.271570000",
-                    "percentile": "0.984950000"
+                    "percentile": "0.984980000"
                 },
                 "location": {
-                    "lat": -26.33200716972351,
-                    "lng": -56.33200693130493,
+                    "lat": -16.85836410522461,
+                    "lng": -166.85836386680603,
                     "country": "Unknown"
                 }
             }
@@ -2405,11 +2625,11 @@
                 ],
                 "epss": {
                     "epss": "0.017930000",
-                    "percentile": "0.788890000"
+                    "percentile": "0.789060000"
                 },
                 "location": {
-                    "lat": -26.332002639770508,
-                    "lng": -56.33200240135193,
+                    "lat": -16.858360528945923,
+                    "lng": -166.85836029052734,
                     "country": "Unknown"
                 }
             }
@@ -2999,7 +3219,7 @@
                 ],
                 "epss": {
                     "epss": "0.050090000",
-                    "percentile": "0.930120000"
+                    "percentile": "0.930170000"
                 },
                 "location": {
                     "lat": 37.4024,
@@ -3153,7 +3373,7 @@
                 ],
                 "epss": {
                     "epss": "0.011020000",
-                    "percentile": "0.652860000"
+                    "percentile": "0.653080000"
                 },
                 "location": {
                     "lat": 49.2933,
@@ -3673,7 +3893,7 @@
                 ],
                 "epss": {
                     "epss": "0.011160000",
-                    "percentile": "0.656850000"
+                    "percentile": "0.657100000"
                 },
                 "location": {
                     "lat": 37.4084,
@@ -3934,7 +4154,7 @@
                 ],
                 "epss": {
                     "epss": "0.027600000",
-                    "percentile": "0.869850000"
+                    "percentile": "0.869960000"
                 },
                 "location": {
                     "lat": 25.0478,
@@ -32611,7 +32831,7 @@
             ]
         }
     ],
-    "last_updated": "2026-11-25T20:50:16.110375",
+    "last_updated": "2026-11-26T20:42:22.543096",
     "api_status": {
         "nvd": "online",
         "cisa": "online",
